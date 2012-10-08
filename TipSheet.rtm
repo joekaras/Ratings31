@@ -1,0 +1,536 @@
+object ppTipSheetReport: TppReport
+  AutoStop = False
+  DataPipeline = plRacesReport
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Orientation = poLandscape
+  PrinterSetup.PaperName = 'Legal'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.mmMarginBottom = 53
+  PrinterSetup.mmMarginLeft = 53
+  PrinterSetup.mmMarginRight = 53
+  PrinterSetup.mmMarginTop = 53
+  PrinterSetup.mmPaperHeight = 215900
+  PrinterSetup.mmPaperWidth = 355601
+  PrinterSetup.PaperSize = 5
+  Template.FileName = 'C:\Ratings31\TipSheet.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  AllowPrintToFile = True
+  CachePages = True
+  DeviceType = 'PDFFile'
+  ModalCancelDialog = False
+  ModalPreview = False
+  OutlineSettings.CreateNode = False
+  OutlineSettings.CreatePageNodes = False
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  Left = 312
+  Top = 216
+  Version = '7.04'
+  mmColumnWidth = 203200
+  DataPipelineName = 'plRacesReport'
+  object ppHeaderBand1: TppHeaderBand
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5080
+    mmPrintPosition = 0
+    object RaceDate: TppDBText
+      UserName = 'RaceDate'
+      DataField = 'RaceDate'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Consolas'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 4953
+      mmLeft = 83185
+      mmTop = 0
+      mmWidth = 25400
+      BandType = 0
+    end
+    object lblTitle: TppLabel
+      UserName = 'lblTitle'
+      Caption = 'ROB AND BOB SHEETS'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Consolas'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4953
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 41910
+      BandType = 0
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      AutoSize = True
+      DataField = 'TrkCode'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Andale Mono'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 4995
+      mmLeft = 66040
+      mmTop = 0
+      mmWidth = 8128
+      BandType = 0
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 12065
+    mmPrintPosition = 0
+    object ppDBText14: TppDBText
+      UserName = 'DBText14'
+      DataField = 'LatePaceSheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3810
+      mmLeft = 192617
+      mmTop = 1058
+      mmWidth = 19262
+      BandType = 4
+    end
+    object lblErlPace: TppLabel
+      UserName = 'lblPowerOrder2'
+      Caption = 'Early:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      mmHeight = 3810
+      mmLeft = 130387
+      mmTop = 1058
+      mmWidth = 6562
+      BandType = 4
+    end
+    object ErlPaceSheetOrder: TppDBText
+      UserName = 'ErlPaceSheetOrder'
+      AutoSize = True
+      DataField = 'ErlPaceSheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3768
+      mmLeft = 137795
+      mmTop = 1058
+      mmWidth = 5673
+      BandType = 4
+    end
+    object lblMidPace: TppLabel
+      UserName = 'lblMidPace'
+      Caption = 'Mid:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      mmHeight = 3810
+      mmLeft = 158327
+      mmTop = 1058
+      mmWidth = 4868
+      BandType = 4
+    end
+    object WagerSheetOrder: TppDBText
+      UserName = 'WagerSheetOrder'
+      AutoSize = True
+      DataField = 'WagerSheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3768
+      mmLeft = 107315
+      mmTop = 1058
+      mmWidth = 5673
+      BandType = 4
+    end
+    object ppDBText18: TppDBText
+      UserName = 'DBText18'
+      AutoSize = True
+      DataField = 'MidPaceSheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3768
+      mmLeft = 163830
+      mmTop = 1058
+      mmWidth = 5673
+      BandType = 4
+    end
+    object ppLabel14: TppLabel
+      UserName = 'Label3'
+      Caption = 'Late:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      mmHeight = 3810
+      mmLeft = 186267
+      mmTop = 1058
+      mmWidth = 5715
+      BandType = 4
+    end
+    object ppLabel11: TppLabel
+      UserName = 'Label11'
+      Caption = 'Power:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      mmHeight = 3810
+      mmLeft = 98637
+      mmTop = 1058
+      mmWidth = 8043
+      BandType = 4
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      AutoSize = True
+      DataField = 'RaceNbr'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3768
+      mmLeft = 7620
+      mmTop = 1058
+      mmWidth = 1439
+      BandType = 4
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      AutoSize = True
+      DataField = 'Surface'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3768
+      mmLeft = 10160
+      mmTop = 1058
+      mmWidth = 1863
+      BandType = 4
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      AutoSize = True
+      DataField = 'DistanceDesc'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3768
+      mmLeft = 12912
+      mmTop = 1058
+      mmWidth = 4318
+      BandType = 4
+    end
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      Pen.Width = 2
+      ParentWidth = True
+      Weight = 1.200000047683716000
+      mmHeight = 212
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 355495
+      BandType = 4
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      AutoSize = True
+      DataField = 'RaceDesc'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Andale Mono'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3598
+      mmLeft = 29845
+      mmTop = 1058
+      mmWidth = 13674
+      BandType = 4
+    end
+    object ppDBText7: TppDBText
+      UserName = 'WagerSheetOrder1'
+      AutoSize = True
+      BlankWhenZero = True
+      DataField = 'NbrDebutStarters'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3768
+      mmLeft = 85302
+      mmTop = 1058
+      mmWidth = 1439
+      BandType = 4
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      AutoSize = True
+      BlankWhenZero = True
+      DataField = 'NbrDebutTwoStarters'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3768
+      mmLeft = 95462
+      mmTop = 1058
+      mmWidth = 1439
+      BandType = 4
+    end
+    object ppDBText10: TppDBText
+      UserName = 'DBText10'
+      AutoSize = True
+      DataField = 'NbrStarters'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3768
+      mmLeft = 73448
+      mmTop = 1058
+      mmWidth = 1439
+      BandType = 4
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'Starters'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      mmHeight = 3810
+      mmLeft = 62442
+      mmTop = 1058
+      mmWidth = 9102
+      BandType = 4
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Debut'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      mmHeight = 3768
+      mmLeft = 76835
+      mmTop = 1058
+      mmWidth = 6900
+      BandType = 4
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label4'
+      Caption = 'Turf'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = []
+      mmHeight = 3768
+      mmLeft = 88477
+      mmTop = 1058
+      mmWidth = 4614
+      BandType = 4
+    end
+    object ppDBText9: TppDBText
+      UserName = 'WagerSheetOrder2'
+      AutoSize = True
+      DataField = 'PowerGapOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3302
+      mmLeft = 107739
+      mmTop = 5927
+      mmWidth = 5165
+      BandType = 4
+    end
+    object ppDBText11: TppDBText
+      UserName = 'ErlPaceSheetOrder1'
+      AutoSize = True
+      DataField = 'ErlPaceGapOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3302
+      mmLeft = 137795
+      mmTop = 5927
+      mmWidth = 5165
+      BandType = 4
+    end
+    object ppDBText12: TppDBText
+      UserName = 'DBText12'
+      AutoSize = True
+      DataField = 'MidPaceGapOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3302
+      mmLeft = 164254
+      mmTop = 5927
+      mmWidth = 5165
+      BandType = 4
+    end
+    object ppDBText13: TppDBText
+      UserName = 'DBText13'
+      DataField = 'LatePaceGapOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3302
+      mmLeft = 193464
+      mmTop = 5927
+      mmWidth = 19262
+      BandType = 4
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label5'
+      Caption = 'R#'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 0
+      mmTop = 1058
+      mmWidth = 3598
+      BandType = 4
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'TrkCode'
+    DataPipeline = plRacesReport
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'plRacesReport'
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 5715
+      mmPrintPosition = 0
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        AutoSize = True
+        DataField = 'TrkCode'
+        DataPipeline = plRacesReport
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 9
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'plRacesReport'
+        mmHeight = 3768
+        mmLeft = 847
+        mmTop = 1270
+        mmWidth = 4784
+        BandType = 3
+        GroupNo = 0
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      mmBottomOffset = 0
+      mmHeight = 4022
+      mmPrintPosition = 0
+    end
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

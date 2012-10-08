@@ -1,0 +1,518 @@
+object ppContestReport: TppReport
+  AutoStop = False
+  DataPipeline = plRacesReport
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'Letter (8 1/2 x 11 in)'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 279401
+  PrinterSetup.mmPaperWidth = 215900
+  PrinterSetup.PaperSize = 1
+  Template.FileName = 'D:\Ratings31\ContestSheet.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  AllowPrintToFile = True
+  CachePages = True
+  DeviceType = 'Printer'
+  ModalCancelDialog = False
+  ModalPreview = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  Left = 264
+  Top = 104
+  Version = '7.04'
+  mmColumnWidth = 203200
+  DataPipelineName = 'plRacesReport'
+  object ppHeaderBand1: TppHeaderBand
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'TrkCode'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 5027
+      mmLeft = 104246
+      mmTop = 0
+      mmWidth = 11113
+      BandType = 0
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'RaceDate'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 5027
+      mmLeft = 116417
+      mmTop = 0
+      mmWidth = 21167
+      BandType = 0
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'SystemVariable1'
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 5027
+      mmLeft = 187061
+      mmTop = 0
+      mmWidth = 13758
+      BandType = 0
+    end
+    object ppLabel24: TppLabel
+      UserName = 'Label24'
+      Caption = 'Joes Selections'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 5045
+      mmLeft = 65352
+      mmTop = 0
+      mmWidth = 31997
+      BandType = 0
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 3969
+    mmPrintPosition = 0
+    object TotalRatingReport: TppSubReport
+      UserName = 'TotalRatingReport'
+      ExpandAll = False
+      KeepTogether = True
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentPrinterSetup = False
+      ParentWidth = False
+      TraverseAllData = False
+      DataPipelineName = 'plEntries'
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 115094
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      object ppChildReport12: TppChildReport
+        AutoStop = False
+        DataPipeline = plEntries
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'Letter (8 1/2 x 11 in)'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.mmMarginBottom = 6350
+        PrinterSetup.mmMarginLeft = 6350
+        PrinterSetup.mmMarginRight = 6350
+        PrinterSetup.mmMarginTop = 6350
+        PrinterSetup.mmPaperHeight = 279401
+        PrinterSetup.mmPaperWidth = 215900
+        PrinterSetup.PaperSize = 1
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Left = 408
+        Top = 288
+        Version = '7.04'
+        mmColumnWidth = 266701
+        DataPipelineName = 'plEntries'
+        object ppTitleBand12: TppTitleBand
+          mmBottomOffset = 0
+          mmHeight = 11906
+          mmPrintPosition = 0
+        end
+        object ppDetailBand13: TppDetailBand
+          mmBottomOffset = 0
+          mmHeight = 2910
+          mmPrintPosition = 0
+          object ppDBText5: TppDBText
+            UserName = 'ProgramNbr'
+            ShiftWithParent = True
+            DataField = 'ProgramNbr'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2963
+            mmLeft = 5292
+            mmTop = 0
+            mmWidth = 6350
+            BandType = 4
+          end
+          object HorseName: TppDBText
+            UserName = 'HorseName'
+            ShiftWithParent = True
+            DataField = 'HorseName'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2963
+            mmLeft = 12700
+            mmTop = 0
+            mmWidth = 22648
+            BandType = 4
+          end
+          object ppDBText4: TppDBText
+            UserName = 'DBText4'
+            ShiftWithParent = True
+            DataField = 'DebutIndicator'
+            DataPipeline = plEntries
+            DisplayFormat = 'AA'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2963
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 3810
+            BandType = 4
+          end
+        end
+        object raCodeModule2: TraCodeModule
+          ProgramStream = {
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+            486F7273654E616D654F6E5072696E740B50726F6772616D54797065070B7474
+            50726F63656475726506536F7572636506E070726F63656475726520486F7273
+            654E616D654F6E5072696E743B0D0A626567696E0D0A0D0A2020486F7273654E
+            616D652E466F6E742E426F6C64203A3D2046616C73653B0D0A20206966202870
+            6C456E74726965735B274973436C61696D6564416E645570275D203D20547275
+            6529206F72200D0A202020202028706C456E74726965735B2749734C61796F66
+            66416E645570275D203D205472756529207468656E20626567696E0D0A202020
+            2020486F7273654E616D652E466F6E742E426F6C64203A3D20547275653B0D0A
+            2020656E643B0D0A20200D0A656E643B0D0A0D436F6D706F6E656E744E616D65
+            0609486F7273654E616D65094576656E744E616D6506074F6E5072696E740745
+            76656E74494402200000}
+        end
+      end
+    end
+    object ppSubReport2: TppSubReport
+      UserName = 'MudReport'
+      ExpandAll = False
+      KeepTogether = True
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentPrinterSetup = False
+      ParentWidth = False
+      TraverseAllData = False
+      DataPipelineName = 'plMudEntries'
+      mmHeight = 4022
+      mmLeft = 117475
+      mmTop = 0
+      mmWidth = 42069
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      object ppChildReport2: TppChildReport
+        AutoStop = False
+        DataPipeline = plMudEntries
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'Letter (8 1/2 x 11 in)'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.mmMarginBottom = 6350
+        PrinterSetup.mmMarginLeft = 6350
+        PrinterSetup.mmMarginRight = 6350
+        PrinterSetup.mmMarginTop = 6350
+        PrinterSetup.mmPaperHeight = 279401
+        PrinterSetup.mmPaperWidth = 215900
+        PrinterSetup.PaperSize = 1
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Left = 432
+        Top = 312
+        Version = '7.04'
+        mmColumnWidth = 0
+        DataPipelineName = 'plMudEntries'
+        object ppTitleBand2: TppTitleBand
+          mmBottomOffset = 0
+          mmHeight = 11906
+          mmPrintPosition = 0
+          object ppLabel12: TppLabel
+            UserName = 'Label16'
+            ShiftWithParent = True
+            AutoSize = False
+            Caption = 'Mud Pedigree'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2836
+            mmLeft = 265
+            mmTop = 5821
+            mmWidth = 39688
+            BandType = 1
+          end
+          object ppLabel13: TppLabel
+            UserName = 'Label1'
+            AutoSize = False
+            Caption = 'P#'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2910
+            mmLeft = 265
+            mmTop = 8996
+            mmWidth = 9260
+            BandType = 1
+          end
+          object ppLabel15: TppLabel
+            UserName = 'Label19'
+            AutoSize = False
+            Caption = 'HORSE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 2910
+            mmLeft = 10583
+            mmTop = 8996
+            mmWidth = 10848
+            BandType = 1
+          end
+          object ppLabel16: TppLabel
+            UserName = 'Label20'
+            AutoSize = False
+            Caption = 'RTG'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2910
+            mmLeft = 22225
+            mmTop = 8996
+            mmWidth = 7673
+            BandType = 1
+          end
+          object ppLabel17: TppLabel
+            UserName = 'Label30'
+            AutoSize = False
+            Caption = 'M/L'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2910
+            mmLeft = 32015
+            mmTop = 8996
+            mmWidth = 7938
+            BandType = 1
+          end
+        end
+        object ppDetailBand3: TppDetailBand
+          mmBottomOffset = 0
+          mmHeight = 2963
+          mmPrintPosition = 0
+          object ppShape8: TppShape
+            UserName = 'Shape2'
+            ParentHeight = True
+            mmHeight = 2963
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 41910
+            BandType = 4
+          end
+          object ppDBText15: TppDBText
+            UserName = 'DBText19'
+            DataField = 'MudIndicator'
+            DataPipeline = plMudEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plMudEntries'
+            mmHeight = 3316
+            mmLeft = 265
+            mmTop = 0
+            mmWidth = 3704
+            BandType = 4
+          end
+          object ppDBText16: TppDBText
+            UserName = 'DBText20'
+            DataField = 'ProgramNbr'
+            DataPipeline = plMudEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plMudEntries'
+            mmHeight = 3316
+            mmLeft = 4022
+            mmTop = 0
+            mmWidth = 6138
+            BandType = 4
+          end
+          object ppDBText17: TppDBText
+            UserName = 'DBText21'
+            DataField = 'HorseName'
+            DataPipeline = plMudEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plMudEntries'
+            mmHeight = 3034
+            mmLeft = 10795
+            mmTop = 0
+            mmWidth = 9948
+            BandType = 4
+          end
+          object ppDBText18: TppDBText
+            UserName = 'DBText22'
+            DataField = 'MudRating'
+            DataPipeline = plMudEntries
+            DisplayFormat = '#0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plMudEntries'
+            mmHeight = 2963
+            mmLeft = 22648
+            mmTop = 0
+            mmWidth = 7832
+            BandType = 4
+          end
+          object ppDBText24: TppDBText
+            UserName = 'DBText23'
+            DataField = 'MorningLineDesc'
+            DataPipeline = plMudEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plMudEntries'
+            mmHeight = 2910
+            mmLeft = 31750
+            mmTop = 0
+            mmWidth = 7938
+            BandType = 4
+          end
+        end
+        object raCodeModule5: TraCodeModule
+          ProgramStream = {00}
+        end
+      end
+    end
+  end
+  object ppGroup2: TppGroup
+    BreakName = 'TrkCode'
+    DataPipeline = plRacesReport
+    OutlineSettings.CreateNode = True
+    NewPage = True
+    UserName = 'Group2'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'plRacesReport'
+    object ppGroupHeaderBand2: TppGroupHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'RaceDate'
+    DataPipeline = plRacesReport
+    OutlineSettings.CreateNode = True
+    NewPage = True
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'plRacesReport'
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+    object ppGroupFooterBand3: TppGroupFooterBand
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object raCodeModule4: TraCodeModule
+    ProgramStream = {00}
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

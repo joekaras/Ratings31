@@ -1,0 +1,989 @@
+object ppTipSheetReport: TppReport
+  AutoStop = False
+  DataPipeline = plRacesReport
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'Letter 8 '#189' x 11 in'
+  PrinterSetup.PrinterName = 'Dell Laser Printer 1700n'
+  PrinterSetup.mmMarginBottom = 23
+  PrinterSetup.mmMarginLeft = 0
+  PrinterSetup.mmMarginRight = 0
+  PrinterSetup.mmMarginTop = 0
+  PrinterSetup.mmPaperHeight = 279401
+  PrinterSetup.mmPaperWidth = 215900
+  PrinterSetup.PaperSize = 1
+  Template.FileName = 'C:\Ratings31\ValueSheet.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  AllowPrintToFile = True
+  CachePages = True
+  DeviceType = 'PDFFile'
+  ModalCancelDialog = False
+  ModalPreview = False
+  OutlineSettings.CreateNode = False
+  OutlineSettings.CreatePageNodes = False
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  Left = 280
+  Top = 8
+  Version = '7.04'
+  mmColumnWidth = 203200
+  DataPipelineName = 'plRacesReport'
+  object ppDetailBand1: TppDetailBand
+    mmBottomOffset = 0
+    mmHeight = 21590
+    mmPrintPosition = 53
+    object ppDBText14: TppDBText
+      UserName = 'DBText14'
+      AutoSize = True
+      DataField = 'LatePaceSheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3302
+      mmLeft = 193252
+      mmTop = 1058
+      mmWidth = 22013
+      BandType = 4
+    end
+    object lblErlPace: TppLabel
+      UserName = 'lblPowerOrder2'
+      AutoSize = False
+      Caption = 'Early:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      mmHeight = 3260
+      mmLeft = 128694
+      mmTop = 1058
+      mmWidth = 5927
+      BandType = 4
+    end
+    object ErlPaceSheetOrder: TppDBText
+      UserName = 'ErlPaceSheetOrder'
+      AutoSize = True
+      DataField = 'ErlPaceSheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3387
+      mmLeft = 137160
+      mmTop = 1058
+      mmWidth = 17568
+      BandType = 4
+    end
+    object lblMidPace: TppLabel
+      UserName = 'lblMidPace'
+      Caption = 'Mid:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      mmHeight = 3260
+      mmLeft = 157269
+      mmTop = 1058
+      mmWidth = 4784
+      BandType = 4
+    end
+    object ppDBText18: TppDBText
+      UserName = 'DBText18'
+      AutoSize = True
+      DataField = 'MidPaceSheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3387
+      mmLeft = 164465
+      mmTop = 1058
+      mmWidth = 17357
+      BandType = 4
+    end
+    object ppLabel14: TppLabel
+      UserName = 'Label3'
+      Caption = 'Late:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      mmHeight = 3260
+      mmLeft = 184785
+      mmTop = 1058
+      mmWidth = 5588
+      BandType = 4
+    end
+    object ppLabel11: TppLabel
+      UserName = 'Label11'
+      Caption = 'Power:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      mmHeight = 3175
+      mmLeft = 97579
+      mmTop = 1058
+      mmWidth = 7832
+      BandType = 4
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      AutoSize = True
+      DataField = 'RaceNbr'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3810
+      mmLeft = 12912
+      mmTop = 847
+      mmWidth = 3598
+      BandType = 4
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'Surface'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3810
+      mmLeft = 17780
+      mmTop = 847
+      mmWidth = 2963
+      BandType = 4
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      DataField = 'DistanceDesc'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3810
+      mmLeft = 22648
+      mmTop = 847
+      mmWidth = 28575
+      BandType = 4
+    end
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      Pen.Width = 2
+      ParentWidth = True
+      Weight = 1.200000047683716000
+      mmHeight = 212
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 215900
+      BandType = 4
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      DataField = 'RaceDesc'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3810
+      mmLeft = 22648
+      mmTop = 5927
+      mmWidth = 28787
+      BandType = 4
+    end
+    object txtDebut: TppDBText
+      UserName = 'txtDebut'
+      BlankWhenZero = True
+      DataField = 'NbrDebutStarters'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      Visible = False
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3387
+      mmLeft = 81915
+      mmTop = 5715
+      mmWidth = 3810
+      BandType = 4
+    end
+    object txtDebutTurf: TppDBText
+      UserName = 'txtDebutTurf'
+      BlankWhenZero = True
+      DataField = 'NbrTurfDebutStarters'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      Visible = False
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3387
+      mmLeft = 92922
+      mmTop = 5715
+      mmWidth = 3810
+      BandType = 4
+    end
+    object txtSts: TppDBText
+      UserName = 'txtSts'
+      AutoSize = True
+      DataField = 'NbrStarters'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3387
+      mmLeft = 69850
+      mmTop = 5715
+      mmWidth = 3810
+      BandType = 4
+    end
+    object Starters: TppLabel
+      UserName = 'Starters'
+      Caption = 'Starters'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      mmHeight = 3175
+      mmLeft = 57785
+      mmTop = 5715
+      mmWidth = 8890
+      BandType = 4
+    end
+    object lblDebut: TppLabel
+      UserName = 'lblDebut'
+      Caption = 'Debut'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      Visible = False
+      mmHeight = 3387
+      mmLeft = 74718
+      mmTop = 5715
+      mmWidth = 6350
+      BandType = 4
+    end
+    object lblDebutTurf: TppLabel
+      UserName = 'lblDebutTurf'
+      Caption = 'Turf'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      Visible = False
+      mmHeight = 3387
+      mmLeft = 86995
+      mmTop = 5715
+      mmWidth = 4233
+      BandType = 4
+    end
+    object ppDBText9: TppDBText
+      UserName = 'WagerSheetOrder2'
+      AutoSize = True
+      DataField = 'PowerGapOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 2963
+      mmLeft = 107315
+      mmTop = 5715
+      mmWidth = 14605
+      BandType = 4
+    end
+    object ppDBText11: TppDBText
+      UserName = 'ErlPaceSheetOrder1'
+      AutoSize = True
+      DataField = 'ErlPaceGapOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 2963
+      mmLeft = 137160
+      mmTop = 5715
+      mmWidth = 15875
+      BandType = 4
+    end
+    object ppDBText12: TppDBText
+      UserName = 'DBText12'
+      AutoSize = True
+      DataField = 'MidPaceGapOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 2963
+      mmLeft = 164465
+      mmTop = 5715
+      mmWidth = 16722
+      BandType = 4
+    end
+    object ppDBText13: TppDBText
+      UserName = 'DBText13'
+      AutoSize = True
+      DataField = 'LatePaceGapOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 2963
+      mmLeft = 193252
+      mmTop = 5715
+      mmWidth = 17357
+      BandType = 4
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label5'
+      Caption = 'R#'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 8890
+      mmTop = 847
+      mmWidth = 3387
+      BandType = 4
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Caption = 'Gap'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      mmHeight = 2752
+      mmLeft = 101600
+      mmTop = 5927
+      mmWidth = 3810
+      BandType = 4
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Caption = 'Gap'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      mmHeight = 2752
+      mmLeft = 130810
+      mmTop = 5927
+      mmWidth = 3810
+      BandType = 4
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label4'
+      Caption = 'Gap'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      mmHeight = 2752
+      mmLeft = 158327
+      mmTop = 5927
+      mmWidth = 3810
+      BandType = 4
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label6'
+      Caption = 'Gap'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      mmHeight = 2752
+      mmLeft = 186479
+      mmTop = 5927
+      mmWidth = 3810
+      BandType = 4
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      AutoSize = True
+      DataField = 'TrkCode'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3810
+      mmLeft = 1693
+      mmTop = 847
+      mmWidth = 6350
+      BandType = 4
+    end
+    object ppDBText5: TppDBText
+      UserName = 'txtDebut1'
+      AutoSize = True
+      BlankWhenZero = True
+      DataField = 'BetLine'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3387
+      mmLeft = 423
+      mmTop = 17780
+      mmWidth = 214419
+      BandType = 4
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      DataField = 'EstTimeOfRace'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3725
+      mmLeft = 1905
+      mmTop = 5927
+      mmWidth = 18373
+      BandType = 4
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label7'
+      Caption = 'T/J'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      mmHeight = 2963
+      mmLeft = 102447
+      mmTop = 10160
+      mmWidth = 2963
+      BandType = 4
+    end
+    object ppLabel7: TppLabel
+      UserName = 'Starters1'
+      Caption = '1st'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      mmHeight = 4911
+      mmLeft = 2328
+      mmTop = 11007
+      mmWidth = 5038
+      BandType = 4
+    end
+    object ppLabel8: TppLabel
+      UserName = 'Label8'
+      Caption = '3rd'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      mmHeight = 4911
+      mmLeft = 57785
+      mmTop = 11007
+      mmWidth = 5419
+      BandType = 4
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label9'
+      Caption = '2nd'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      mmHeight = 4911
+      mmLeft = 31115
+      mmTop = 11007
+      mmWidth = 6181
+      BandType = 4
+    end
+    object ppDBText10: TppDBText
+      UserName = 'DBText10'
+      AutoSize = True
+      DataField = 'TrainerSheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 2963
+      mmLeft = 137160
+      mmTop = 9948
+      mmWidth = 16722
+      BandType = 4
+    end
+    object TurfSheetOrder: TppDBText
+      UserName = 'TurfSheetOrder'
+      AutoSize = True
+      DataField = 'TurfSheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      Visible = False
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 2963
+      mmLeft = 193252
+      mmTop = 9948
+      mmWidth = 13970
+      BandType = 4
+    end
+    object ppLabel10: TppLabel
+      UserName = 'lblT'
+      Caption = 'Trn'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      mmHeight = 2963
+      mmLeft = 131445
+      mmTop = 10160
+      mmWidth = 3175
+      BandType = 4
+    end
+    object ppLabel12: TppLabel
+      UserName = 'lblTurfSheetOrder'
+      Caption = 'Turf'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Visible = False
+      mmHeight = 2963
+      mmLeft = 186267
+      mmTop = 10160
+      mmWidth = 4022
+      BandType = 4
+    end
+    object ppLabel13: TppLabel
+      UserName = 'lblMaidenSheetOrder'
+      Caption = 'MDN'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Visible = False
+      mmHeight = 2963
+      mmLeft = 157480
+      mmTop = 10160
+      mmWidth = 4657
+      BandType = 4
+    end
+    object MaidenSheetOrder: TppDBText
+      UserName = 'MaidenSheetOrder'
+      AutoSize = True
+      DataField = 'MaidenSheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      Visible = False
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 2963
+      mmLeft = 164465
+      mmTop = 9948
+      mmWidth = 16933
+      BandType = 4
+    end
+    object ppLabel15: TppLabel
+      UserName = 'Label15'
+      Caption = 'Hospital'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      mmHeight = 3260
+      mmLeft = 57362
+      mmTop = 423
+      mmWidth = 9229
+      BandType = 4
+    end
+    object ppDBText8: TppDBText
+      UserName = 'WagerSheetOrder1'
+      AutoSize = True
+      DataField = 'TodaysWagerOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3387
+      mmLeft = 69850
+      mmTop = 423
+      mmWidth = 26670
+      BandType = 4
+    end
+    object TrainerJockeySheetOrder: TppDBText
+      UserName = 'TrainerJockeySheetOrder'
+      AutoSize = True
+      DataField = 'TrainerJockeySheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 2963
+      mmLeft = 107315
+      mmTop = 9948
+      mmWidth = 22860
+      BandType = 4
+    end
+    object ppDBText15: TppDBText
+      UserName = 'DBText15'
+      DataField = 'WagerSheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3387
+      mmLeft = 107315
+      mmTop = 1058
+      mmWidth = 20955
+      BandType = 4
+    end
+    object ppDBText19: TppDBText
+      UserName = 'DBText101'
+      AutoSize = True
+      DataField = 'OwnerSheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 2879
+      mmLeft = 137795
+      mmTop = 14182
+      mmWidth = 16214
+      BandType = 4
+    end
+    object ppDBText20: TppDBText
+      UserName = 'TrainerJockeySheetOrder1'
+      AutoSize = True
+      DataField = 'JockeySheetOrder'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 2879
+      mmLeft = 107315
+      mmTop = 14182
+      mmWidth = 16595
+      BandType = 4
+    end
+    object ppLabel16: TppLabel
+      UserName = 'Label16'
+      Caption = 'Jky'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      mmHeight = 2752
+      mmLeft = 102024
+      mmTop = 14393
+      mmWidth = 3387
+      BandType = 4
+    end
+    object ppLabel17: TppLabel
+      UserName = 'lblT1'
+      Caption = 'Trn'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Narrow'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      mmHeight = 2963
+      mmLeft = 131445
+      mmTop = 14182
+      mmWidth = 3175
+      BandType = 4
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'TrkCode'
+    DataPipeline = plRacesReport
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    ReprintOnSubsequentPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'plRacesReport'
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Visible = False
+      mmBottomOffset = 0
+      mmHeight = 3810
+      mmPrintPosition = 0
+      object ppDBText16: TppDBText
+        UserName = 'DBText16'
+        AutoSize = True
+        DataField = 'TrkCode'
+        DataPipeline = plRacesReport
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'plRacesReport'
+        mmHeight = 3810
+        mmLeft = 83185
+        mmTop = 0
+        mmWidth = 15028
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppDBText17: TppDBText
+        UserName = 'DBText17'
+        AutoSize = True
+        DataField = 'RaceDate'
+        DataPipeline = plRacesReport
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 9
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'plRacesReport'
+        mmHeight = 3725
+        mmLeft = 103294
+        mmTop = 0
+        mmWidth = 11769
+        BandType = 3
+        GroupNo = 0
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object daDataModule1: TdaDataModule
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650613
+      7478744465627574547572664F6E5072696E740B50726F6772616D5479706507
+      0B747450726F63656475726506536F7572636506D970726F6365647572652074
+      78744465627574547572664F6E5072696E743B0D0A626567696E0D0A69662028
+      706C52616365735265706F72745B2753757266616365275D203D202754272920
+      2020202020207468656E20626567696E0D0A2020202020202074787444656275
+      74547572662E56697369626C65203A3D20547275653B0D0A20202020656E6420
+      656C736520626567696E0D0A202020202020207478744465627574547572662E
+      56697369626C65203A3D2046616C73653B2020200D0A0D0A20202020656E643B
+      0D0A20200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060C7478
+      74446562757454757266094576656E744E616D6506074F6E5072696E74074576
+      656E74494402200001060F5472614576656E7448616E646C65720B50726F6772
+      616D4E616D6506136C626C4465627574547572664F6E5072696E740B50726F67
+      72616D54797065070B747450726F63656475726506536F7572636506D870726F
+      636564757265206C626C4465627574547572664F6E5072696E743B0D0A626567
+      696E0D0A2069662028706C52616365735265706F72745B275375726661636527
+      5D203D2027542729202020202020207468656E20626567696E0D0A2020202020
+      20206C626C4465627574547572662E56697369626C65203A3D20547275653B0D
+      0A20202020656E6420656C736520626567696E0D0A202020202020206C626C44
+      65627574547572662E56697369626C65203A3D2046616C73653B2020200D0A0D
+      0A20202020656E643B0D0A0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E
+      616D65060C6C626C446562757454757266094576656E744E616D6506074F6E50
+      72696E74074576656E74494402200001060F5472614576656E7448616E646C65
+      720B50726F6772616D4E616D65060F6C626C44656275744F6E5072696E740B50
+      726F6772616D54797065070B747450726F63656475726506536F7572636506F5
+      70726F636564757265206C626C44656275744F6E5072696E743B0D0A62656769
+      6E0D0A0D0A69662028706C52616365735265706F72745B275261636554797065
+      275D203D20274D5357272920206F720D0A20202020202028706C526163657352
+      65706F72745B275261636554797065275D203D20274D434C2729207468656E20
+      626567696E0D0A202020202020206C626C44656275742E56697369626C65203A
+      3D20547275653B0D0A20202020656E6420656C736520626567696E0D0A202020
+      202020206C626C44656275742E56697369626C65203A3D2046616C73653B2020
+      200D0A0D0A20202020656E643B0D0A656E643B0D0A0D436F6D706F6E656E744E
+      616D6506086C626C4465627574094576656E744E616D6506074F6E5072696E74
+      074576656E74494402200001060F5472614576656E7448616E646C65720B5072
+      6F6772616D4E616D65060F74787444656275744F6E5072696E740B50726F6772
+      616D54797065070B747450726F63656475726506536F7572636506FB70726F63
+      65647572652074787444656275744F6E5072696E743B0D0A626567696E0D0A0D
+      0A69662028706C52616365735265706F72745B275261636554797065275D203D
+      20274D5357272920206F720D0A20202020202028706C52616365735265706F72
+      745B275261636554797065275D203D20274D434C2729207468656E2062656769
+      6E0D0A2020202020202074787444656275742E56697369626C65203A3D205472
+      75653B0D0A20202020656E6420656C736520626567696E0D0A20202020202020
+      74787444656275742E56697369626C65203A3D2046616C73653B2020200D0A0D
+      0A20202020656E643B0D0A202020200D0A656E643B0D0A0D436F6D706F6E656E
+      744E616D6506087478744465627574094576656E744E616D6506074F6E507269
+      6E74074576656E74494402200001060F5472614576656E7448616E646C65720B
+      50726F6772616D4E616D6506174D616964656E53686565744F726465724F6E50
+      72696E740B50726F6772616D54797065070B747450726F63656475726506536F
+      757263650C1101000070726F636564757265204D616964656E53686565744F72
+      6465724F6E5072696E743B0D0A626567696E0D0A0D0A2020202069662028706C
+      52616365735265706F72745B275261636554797065275D203D20274D53572729
+      20206F720D0A20202020202028706C52616365735265706F72745B2752616365
+      54797065275D203D20274D434C2729207468656E20626567696E0D0A20202020
+      2020204D616964656E53686565744F726465722E56697369626C65203A3D2054
+      7275653B0D0A20202020656E6420656C736520626567696E0D0A202020202020
+      204D616964656E53686565744F726465722E56697369626C65203A3D2046616C
+      73653B2020200D0A20202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F
+      6E656E744E616D6506104D616964656E53686565744F72646572094576656E74
+      4E616D6506074F6E5072696E74074576656E74494402200001060F5472614576
+      656E7448616E646C65720B50726F6772616D4E616D65061A6C626C4D61696465
+      6E53686565744F726465724F6E5072696E740B50726F6772616D54797065070B
+      747450726F63656475726506536F757263650C1C01000070726F636564757265
+      206C626C4D616964656E53686565744F726465724F6E5072696E743B0D0A6265
+      67696E0D0A0D0A2020202069662028706C52616365735265706F72745B275261
+      636554797065275D203D20274D5357272920206F720D0A20202020202028706C
+      52616365735265706F72745B275261636554797065275D203D20274D434C2729
+      207468656E20626567696E0D0A202020202020206C626C4D616964656E536865
+      65744F726465722E56697369626C65203A3D20547275653B0D0A20202020656E
+      6420656C736520626567696E0D0A202020202020206C626C4D616964656E5368
+      6565744F726465722E56697369626C65203A3D2046616C73653B2020200D0A0D
+      0A20202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D
+      6506136C626C4D616964656E53686565744F72646572094576656E744E616D65
+      06074F6E5072696E74074576656E74494402200001060F5472614576656E7448
+      616E646C65720B50726F6772616D4E616D6506155475726653686565744F7264
+      65724F6E5072696E740B50726F6772616D54797065070B747450726F63656475
+      726506536F7572636506DE70726F636564757265205475726653686565744F72
+      6465724F6E5072696E743B0D0A626567696E0D0A2020202069662028706C5261
+      6365735265706F72745B2753757266616365275D203D20275427292020202020
+      20207468656E20626567696E0D0A2020202020205475726653686565744F7264
+      65722E56697369626C65203A3D20547275653B0D0A20202020656E6420656C73
+      6520626567696E0D0A202020202020205475726653686565744F726465722E56
+      697369626C65203A3D2046616C73653B2020200D0A20202020656E643B0D0A20
+      200D0A656E643B0D0A0D436F6D706F6E656E744E616D65060E54757266536865
+      65744F72646572094576656E744E616D6506074F6E5072696E74074576656E74
+      494402200001060F5472614576656E7448616E646C65720B50726F6772616D4E
+      616D6506186C626C5475726653686565744F726465724F6E5072696E740B5072
+      6F6772616D54797065070B747450726F63656475726506536F7572636506E870
+      726F636564757265206C626C5475726653686565744F726465724F6E5072696E
+      743B0D0A626567696E0D0A2020202069662028706C52616365735265706F7274
+      5B2753757266616365275D203D2027542729202020202020207468656E206265
+      67696E0D0A202020202020206C626C5475726653686565744F726465722E5669
+      7369626C65203A3D20547275653B0D0A20202020656E6420656C736520626567
+      696E0D0A202020202020206C626C5475726653686565744F726465722E566973
+      69626C65203A3D2046616C73653B2020200D0A0D0A20202020656E643B0D0A0D
+      0A656E643B0D0A0D436F6D706F6E656E744E616D6506116C626C547572665368
+      6565744F72646572094576656E744E616D6506074F6E5072696E74074576656E
+      74494402200001060F5472614576656E7448616E646C65720B50726F6772616D
+      4E616D65061A44425465787431304F6E44726177436F6D6D616E64436C69636B
+      0B50726F6772616D54797065070B747450726F63656475726506536F75726365
+      064D70726F6365647572652044425465787431304F6E44726177436F6D6D616E
+      64436C69636B286144726177436F6D6D616E643A20544F626A656374293B0D0A
+      626567696E0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060844
+      42546578743130094576656E744E616D6506124F6E44726177436F6D6D616E64
+      436C69636B074576656E74494402550000}
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

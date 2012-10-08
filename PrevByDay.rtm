@@ -1,0 +1,4329 @@
+object ppLast90DaysReport: TppReport
+  AutoStop = False
+  DataPipeline = plPrevDayHH
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Orientation = poLandscape
+  PrinterSetup.PaperName = 'Letter (8 1/2 x 11 in)'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 215900
+  PrinterSetup.mmPaperWidth = 279401
+  PrinterSetup.PaperSize = 1
+  Template.FileName = 'D:\Ratings31\PrevByDay.rtm'
+  Template.Format = ftASCII
+  Units = utPrinterPixels
+  AllowPrintToFile = True
+  CachePages = True
+  DeviceType = 'Printer'
+  ModalCancelDialog = False
+  ModalPreview = False
+  OutlineSettings.CreateNode = False
+  OutlineSettings.CreatePageNodes = False
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  Left = 264
+  Top = 120
+  Version = '7.04'
+  mmColumnWidth = 203200
+  DataPipelineName = 'plPrevDayHH'
+  object ppHeaderBand1: TppHeaderBand
+    mmBottomOffset = 0
+    mmHeight = 13494
+    mmPrintPosition = 0
+    object ppLabel2: TppLabel
+      UserName = 'lblTrkCode'
+      Caption = 'Trk'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 1588
+      mmTop = 10319
+      mmWidth = 4498
+      BandType = 0
+    end
+    object ppLabel3: TppLabel
+      UserName = 'lblRaceNbr'
+      Caption = 'R#'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 8467
+      mmTop = 10319
+      mmWidth = 2910
+      BandType = 0
+    end
+    object ppLabel4: TppLabel
+      UserName = 'lblProgNbr'
+      Caption = 'P#'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 15346
+      mmTop = 10319
+      mmWidth = 2910
+      BandType = 0
+    end
+    object ppLabel5: TppLabel
+      UserName = 'lblHorse'
+      Caption = 'Horse'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 19050
+      mmTop = 10319
+      mmWidth = 7408
+      BandType = 0
+    end
+    object ppLabel6: TppLabel
+      UserName = 'lblML'
+      Caption = 'M/L'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 42069
+      mmTop = 10319
+      mmWidth = 4498
+      BandType = 0
+    end
+    object ppLabel7: TppLabel
+      UserName = 'lbl5Choices'
+      Caption = 'Top Choices'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 2822
+      mmLeft = 105569
+      mmTop = 10319
+      mmWidth = 16298
+      BandType = 0
+    end
+    object ppLabel8: TppLabel
+      UserName = 'lblFinPos'
+      Caption = 'Fin'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 47890
+      mmTop = 10319
+      mmWidth = 4498
+      BandType = 0
+    end
+    object ppLabel9: TppLabel
+      UserName = 'lblOdds'
+      Caption = 'Odds'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 55563
+      mmTop = 10319
+      mmWidth = 5821
+      BandType = 0
+    end
+    object ppLabel11: TppLabel
+      UserName = 'lblFinishNbrs'
+      Caption = 'Finish '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 128059
+      mmTop = 10054
+      mmWidth = 14023
+      BandType = 0
+    end
+    object ppLabel13: TppLabel
+      UserName = 'lblExa'
+      Caption = 'Exacta'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 187855
+      mmTop = 10319
+      mmWidth = 8996
+      BandType = 0
+    end
+    object ppLabel14: TppLabel
+      UserName = 'lblQui'
+      Caption = 'Quinella'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 201084
+      mmTop = 10319
+      mmWidth = 11906
+      BandType = 0
+    end
+    object ppLabel15: TppLabel
+      UserName = 'lblPk3'
+      Caption = 'Pick 3'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 237861
+      mmTop = 10319
+      mmWidth = 8996
+      BandType = 0
+    end
+    object ppLabel10: TppLabel
+      UserName = 'lblDD'
+      Caption = 'Double'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 219869
+      mmTop = 10319
+      mmWidth = 8996
+      BandType = 0
+    end
+    object ppLabel12: TppLabel
+      UserName = 'lblPk4'
+      Caption = 'Pick 4'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 256382
+      mmTop = 10319
+      mmWidth = 8996
+      BandType = 0
+    end
+    object ppLabel19: TppLabel
+      UserName = 'lblTri'
+      Caption = 'Trifecta'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 168011
+      mmTop = 10319
+      mmWidth = 11906
+      BandType = 0
+    end
+    object ppLabel18: TppLabel
+      UserName = 'lblSfc'
+      Caption = 'Superfecta'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2646
+      mmLeft = 146315
+      mmTop = 10319
+      mmWidth = 14817
+      BandType = 0
+    end
+    object ppLabel1: TppLabel
+      UserName = 'lblWinNbrs'
+      AutoSize = False
+      Caption = 'Winner'#39's Win/Place/Show Prices'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2910
+      mmLeft = 63236
+      mmTop = 10319
+      mmWidth = 40746
+      BandType = 0
+    end
+    object lblReportTitle: TppLabel
+      UserName = 'lblReportTitle'
+      AutoSize = False
+      Caption = 'Hospital Form Results'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 14
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 5821
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 149225
+      BandType = 0
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'sysPage'
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 14
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 5821
+      mmLeft = 236273
+      mmTop = 0
+      mmWidth = 25665
+      BandType = 0
+    end
+    object varStartDate: TppLabel
+      UserName = 'lblStartDate'
+      Caption = 'lblStartDate'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 14
+      Font.Style = [fsBold]
+      Transparent = True
+      Visible = False
+      mmHeight = 5821
+      mmLeft = 177271
+      mmTop = 0
+      mmWidth = 25400
+      BandType = 0
+    end
+    object varEndDate: TppLabel
+      UserName = 'lblEndDate'
+      Caption = 'EndDate'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 14
+      Font.Style = [fsBold]
+      Transparent = True
+      Visible = False
+      mmHeight = 5821
+      mmLeft = 203200
+      mmTop = 0
+      mmWidth = 21431
+      BandType = 0
+    end
+    object varFldName: TppDBText
+      UserName = 'FldName'
+      AutoSize = True
+      DataField = 'TrkCode'
+      DataPipeline = plPrevDayHH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 14
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayHH'
+      mmHeight = 5821
+      mmLeft = 148766
+      mmTop = 0
+      mmWidth = 9984
+      BandType = 0
+    end
+    object ppDBText1: TppDBText
+      UserName = 'FldName1'
+      AutoSize = True
+      DataField = 'MorningLineTo1'
+      DataPipeline = plPrevDayHH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 14
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayHH'
+      mmHeight = 5821
+      mmLeft = 164201
+      mmTop = 0
+      mmWidth = 2752
+      BandType = 0
+    end
+  end
+  object DetailBand: TppDetailBand
+    Visible = False
+    mmBottomOffset = 0
+    mmHeight = 9260
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      UserName = 'Shape1'
+      ParentHeight = True
+      ParentWidth = True
+      mmHeight = 9260
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 266701
+      BandType = 4
+    end
+    object dbRaceNbr: TppDBText
+      OnPrint = dbRaceNbrPrint
+      UserName = 'RaceNbr'
+      DataField = 'RaceNbr'
+      DataPipeline = plPrevDayHH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayHH'
+      mmHeight = 2625
+      mmLeft = 7144
+      mmTop = 0
+      mmWidth = 4233
+      BandType = 4
+    end
+    object dbHorseName: TppDBText
+      OnPrint = dbHorseNamePrint
+      UserName = 'HorseName'
+      DataField = 'HorseName'
+      DataPipeline = plPrevDayHH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'plPrevDayHH'
+      mmHeight = 2625
+      mmLeft = 19050
+      mmTop = 0
+      mmWidth = 19050
+      BandType = 4
+    end
+    object dbTrkCode: TppDBText
+      OnPrint = dbTrkCodePrint
+      UserName = 'TrkCode'
+      DataField = 'TrkCode'
+      DataPipeline = plPrevDayHH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayHH'
+      mmHeight = 2625
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 6085
+      BandType = 4
+    end
+    object dbProgramNbr: TppDBText
+      OnPrint = dbProgramNbrPrint
+      UserName = 'ProgramNbr'
+      DataField = 'ProgramNbr'
+      DataPipeline = plPrevDayHH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayHH'
+      mmHeight = 2625
+      mmLeft = 13758
+      mmTop = 0
+      mmWidth = 4233
+      BandType = 4
+    end
+    object dbFinishPos: TppDBText
+      OnPrint = dbFinishPosPrint
+      UserName = 'FinishPos'
+      BlankWhenZero = True
+      DataField = 'FinishPos'
+      DataPipeline = plPrevDayHH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayHH'
+      mmHeight = 2646
+      mmLeft = 47625
+      mmTop = 0
+      mmWidth = 4763
+      BandType = 4
+    end
+    object dbOdds: TppDBText
+      OnPrint = dbOddsPrint
+      UserName = 'Odds'
+      BlankWhenZero = True
+      DataField = 'Odds'
+      DataPipeline = plPrevDayHH
+      DisplayFormat = '##0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayHH'
+      mmHeight = 2646
+      mmLeft = 53446
+      mmTop = 0
+      mmWidth = 7938
+      BandType = 4
+    end
+    object dbML: TppDBText
+      OnPrint = dbMLPrint
+      UserName = 'ML'
+      DataField = 'MorningLineDesc'
+      DataPipeline = plPrevDayHH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayHH'
+      mmHeight = 2293
+      mmLeft = 39159
+      mmTop = 0
+      mmWidth = 7408
+      BandType = 4
+    end
+    object dbExactaPayout: TppDBText
+      OnPrint = dbExactaPayoutPrint
+      UserName = 'ExactaPayout'
+      BlankWhenZero = True
+      DataField = 'ExactaPayout'
+      DataPipeline = plPrevDayRH
+      DisplayFormat = '####0.#0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2646
+      mmLeft = 186532
+      mmTop = 0
+      mmWidth = 10319
+      BandType = 4
+    end
+    object FinishNbrs: TppDBText
+      OnPrint = FinishNbrsPrint
+      UserName = 'FinishNbrs'
+      OnGetText = FinishNbrsGetText
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 8
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 3704
+      mmLeft = 123296
+      mmTop = 0
+      mmWidth = 18785
+      BandType = 4
+    end
+    object dbTrifectaPayout: TppDBText
+      OnPrint = dbTrifectaPayoutPrint
+      UserName = 'TrifectaPayout'
+      BlankWhenZero = True
+      DataField = 'TrifectaPayout'
+      DataPipeline = plPrevDayRH
+      DisplayFormat = '######0.#0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2625
+      mmLeft = 167746
+      mmTop = 0
+      mmWidth = 12171
+      BandType = 4
+    end
+    object dbQuinellaPayout: TppDBText
+      OnPrint = dbQuinellaPayoutPrint
+      UserName = 'QuinellaPayout'
+      BlankWhenZero = True
+      DataField = 'QuinellaPayout'
+      DataPipeline = plPrevDayRH
+      DisplayFormat = '####0.#0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2646
+      mmLeft = 202671
+      mmTop = 0
+      mmWidth = 10319
+      BandType = 4
+    end
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      ParentHeight = True
+      Position = lpLeft
+      Style = lsDouble
+      Weight = 0.750000000000000000
+      mmHeight = 9260
+      mmLeft = 121709
+      mmTop = 0
+      mmWidth = 529
+      BandType = 4
+    end
+    object ppLine3: TppLine
+      UserName = 'Line3'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 9260
+      mmLeft = 213519
+      mmTop = 0
+      mmWidth = 265
+      BandType = 4
+    end
+    object ppLine4: TppLine
+      UserName = 'Line4'
+      ParentHeight = True
+      Position = lpRight
+      Style = lsDouble
+      Weight = 0.750000000000000000
+      mmHeight = 9260
+      mmLeft = 142875
+      mmTop = 0
+      mmWidth = 794
+      BandType = 4
+    end
+    object ppLine5: TppLine
+      UserName = 'Line5'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 9260
+      mmLeft = 162190
+      mmTop = 0
+      mmWidth = 265
+      BandType = 4
+    end
+    object ppLine6: TppLine
+      UserName = 'Line6'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 9260
+      mmLeft = 181240
+      mmTop = 0
+      mmWidth = 265
+      BandType = 4
+    end
+    object ppLine7: TppLine
+      UserName = 'Line7'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 9260
+      mmLeft = 197115
+      mmTop = 0
+      mmWidth = 265
+      BandType = 4
+    end
+    object ppLine8: TppLine
+      UserName = 'Line8'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 9260
+      mmLeft = 12435
+      mmTop = 0
+      mmWidth = 265
+      BandType = 4
+    end
+    object ppLine9: TppLine
+      UserName = 'Line9'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 9260
+      mmLeft = 47096
+      mmTop = 0
+      mmWidth = 265
+      BandType = 4
+    end
+    object dbDailyDoublePayout: TppDBText
+      OnPrint = dbDailyDoublePayoutPrint
+      UserName = 'DailyDoublePayoutFirstRace'
+      BlankWhenZero = True
+      DataField = 'DailyDoublePayoutFirstRace'
+      DataPipeline = plPrevDayRH
+      DisplayFormat = '######0.#0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2646
+      mmLeft = 218546
+      mmTop = 0
+      mmWidth = 10319
+      BandType = 4
+    end
+    object dbPick4Payout: TppDBText
+      OnPrint = dbPick4PayoutPrint
+      UserName = 'Pick4Payout'
+      BlankWhenZero = True
+      DataField = 'Pick4PayoutFirstRace'
+      DataPipeline = plPrevDayRH
+      DisplayFormat = '######0.#0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2646
+      mmLeft = 253207
+      mmTop = 0
+      mmWidth = 12171
+      BandType = 4
+    end
+    object ppLine11: TppLine
+      UserName = 'Line11'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 9260
+      mmLeft = 229659
+      mmTop = 0
+      mmWidth = 265
+      BandType = 4
+    end
+    object ppLine12: TppLine
+      UserName = 'Line12'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 9260
+      mmLeft = 248444
+      mmTop = 0
+      mmWidth = 265
+      BandType = 4
+    end
+    object dbSuperfectaPayout: TppDBText
+      OnPrint = dbSuperfectaPayoutPrint
+      UserName = 'SuperfectaPayout'
+      BlankWhenZero = True
+      DataField = 'SuperfectaPayout'
+      DataPipeline = plPrevDayRH
+      DisplayFormat = '######0.#0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2625
+      mmLeft = 148696
+      mmTop = 0
+      mmWidth = 12435
+      BandType = 4
+    end
+    object dbPick4Wager: TppDBText
+      OnPrint = dbPick4WagerPrint
+      UserName = 'Pick4Wager'
+      OnGetText = dbPick4WagerGetText
+      BlankWhenZero = True
+      DataField = 'Pick4WagerFirstRace'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2667
+      mmLeft = 249503
+      mmTop = 0
+      mmWidth = 2910
+      BandType = 4
+    end
+    object dbPick3Wager: TppDBText
+      OnPrint = dbPick3WagerPrint
+      UserName = 'Pick3Wager'
+      OnGetText = dbPick3WagerGetText
+      BlankWhenZero = True
+      DataField = 'Pick3WagerFirstRace'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2625
+      mmLeft = 230717
+      mmTop = 0
+      mmWidth = 2910
+      BandType = 4
+    end
+    object dbDailyDoubleWager: TppDBText
+      OnPrint = dbDailyDoubleWagerPrint
+      UserName = 'DailyDoubleWager'
+      OnGetText = dbDailyDoubleWagerGetText
+      BlankWhenZero = True
+      DataField = 'DailyDoubleWagerFirstRace'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2667
+      mmLeft = 214842
+      mmTop = 0
+      mmWidth = 2910
+      BandType = 4
+    end
+    object dbQuinellaWager: TppDBText
+      OnPrint = dbQuinellaWagerPrint
+      UserName = 'QuinellaWager'
+      OnGetText = dbQuinellaWagerGetText
+      BlankWhenZero = True
+      DataField = 'QuinellaWager'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2667
+      mmLeft = 198702
+      mmTop = 0
+      mmWidth = 2910
+      BandType = 4
+    end
+    object dbExactaWager: TppDBText
+      OnPrint = dbExactaWagerPrint
+      UserName = 'ExactaWager'
+      OnGetText = dbExactaWagerGetText
+      BlankWhenZero = True
+      DataField = 'ExactaWager'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2646
+      mmLeft = 182827
+      mmTop = 0
+      mmWidth = 3175
+      BandType = 4
+    end
+    object dbTrifectaWager: TppDBText
+      OnPrint = dbTrifectaWagerPrint
+      UserName = 'TrifectaWager'
+      OnGetText = dbTrifectaWagerGetText
+      BlankWhenZero = True
+      DataField = 'TrifectaWager'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2625
+      mmLeft = 163777
+      mmTop = 0
+      mmWidth = 2910
+      BandType = 4
+    end
+    object dbSuperfectaWager: TppDBText
+      OnPrint = dbSuperfectaWagerPrint
+      UserName = 'SuperfectaWager'
+      OnGetText = dbSuperfectaWagerGetText
+      BlankWhenZero = True
+      DataField = 'SuperfectaWager'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2625
+      mmLeft = 144198
+      mmTop = 0
+      mmWidth = 3175
+      BandType = 4
+    end
+    object ppLine13: TppLine
+      UserName = 'Line13'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 9260
+      mmLeft = 104775
+      mmTop = 0
+      mmWidth = 265
+      BandType = 4
+    end
+    object dbWinPayout: TppDBText
+      OnPrint = dbWinPayoutPrint
+      UserName = 'WinPayout'
+      BlankWhenZero = True
+      DataField = 'WinPayout'
+      DataPipeline = plPrevDayRH
+      DisplayFormat = '###.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2328
+      mmLeft = 81227
+      mmTop = 0
+      mmWidth = 6879
+      BandType = 4
+    end
+    object dbSheetOrder: TppDBText
+      OnPrint = dbSheetOrderPrint
+      UserName = 'SheetOrder'
+      DataField = 'WagerFinalOrder'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2328
+      mmLeft = 105834
+      mmTop = 0
+      mmWidth = 15081
+      BandType = 4
+    end
+    object ppLine2: TppLine
+      UserName = 'Line2'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 9260
+      mmLeft = 61648
+      mmTop = 0
+      mmWidth = 265
+      BandType = 4
+    end
+    object dbWinNbrs: TppDBText
+      OnPrint = dbWinNbrsPrint
+      UserName = 'WinNbrs'
+      BlankWhenZero = True
+      DataField = 'WinNbrs'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2328
+      mmLeft = 62442
+      mmTop = 0
+      mmWidth = 17992
+      BandType = 4
+    end
+    object dbWinPlcPayout: TppDBText
+      OnPrint = dbWinPlcPayoutPrint
+      UserName = 'WinPlcPayout'
+      BlankWhenZero = True
+      DataField = 'WinPlcPayout'
+      DataPipeline = plPrevDayRH
+      DisplayFormat = '###.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2328
+      mmLeft = 89165
+      mmTop = 0
+      mmWidth = 6879
+      BandType = 4
+    end
+    object dbWinShoPayout: TppDBText
+      OnPrint = dbWinShoPayoutPrint
+      UserName = 'WinShoPayout'
+      BlankWhenZero = True
+      DataField = 'WinShoPayout'
+      DataPipeline = plPrevDayRH
+      DisplayFormat = '###.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2328
+      mmLeft = 97102
+      mmTop = 0
+      mmWidth = 6879
+      BandType = 4
+    end
+    object dbPick3Payout: TppDBText
+      OnPrint = dbPick3PayoutPrint
+      UserName = 'Pick3Payout'
+      BlankWhenZero = True
+      DataField = 'Pick3PayoutFirstRace'
+      DataPipeline = plPrevDayRH
+      DisplayFormat = '######0.#0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2646
+      mmLeft = 235215
+      mmTop = 0
+      mmWidth = 12171
+      BandType = 4
+    end
+    object dbDDFirstRace: TppDBText
+      OnPrint = dbDDFirstRacePrint
+      UserName = 'dbDDFirstRace'
+      BlankWhenZero = True
+      DataField = 'DDFirstRace'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2646
+      mmLeft = 218546
+      mmTop = 2910
+      mmWidth = 10319
+      BandType = 4
+    end
+    object dbPick3: TppDBText
+      OnPrint = dbPick3Print
+      UserName = 'Pick3'
+      BlankWhenZero = True
+      DataField = 'Pick3FirstRace'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2646
+      mmLeft = 230982
+      mmTop = 3175
+      mmWidth = 16404
+      BandType = 4
+    end
+    object dbPick4: TppDBText
+      OnPrint = dbPick4Print
+      UserName = 'Pick4'
+      BlankWhenZero = True
+      DataField = 'Pick4FirstRace'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2646
+      mmLeft = 250032
+      mmTop = 2910
+      mmWidth = 15346
+      BandType = 4
+    end
+    object dbDailyDoubleNbrsFirstRace: TppDBText
+      OnPrint = dbDailyDoubleNbrsFirstRacePrint
+      UserName = 'dbDailyDoubleNbrsFirstRace'
+      BlankWhenZero = True
+      DataField = 'DailyDoubleNbrsFirstRace'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2646
+      mmLeft = 218546
+      mmTop = 5821
+      mmWidth = 10319
+      BandType = 4
+    end
+    object dbPick3Nbrs: TppDBText
+      OnPrint = dbPick3NbrsPrint
+      UserName = 'Pick3Nbrs'
+      BlankWhenZero = True
+      DataField = 'Pick3NbrsFirstRace'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2646
+      mmLeft = 230982
+      mmTop = 6085
+      mmWidth = 16404
+      BandType = 4
+    end
+    object dbPick4Nbrs: TppDBText
+      OnPrint = dbPick4NbrsPrint
+      UserName = 'Pick4Nbrs'
+      BlankWhenZero = True
+      DataField = 'Pick4NbrsFirstRace'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2646
+      mmLeft = 250032
+      mmTop = 5821
+      mmWidth = 15346
+      BandType = 4
+    end
+    object ppLabel31: TppLabel
+      UserName = 'Label1'
+      Caption = 'Pk'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      Transparent = True
+      mmHeight = 2328
+      mmLeft = 214313
+      mmTop = 3175
+      mmWidth = 2540
+      BandType = 4
+    end
+    object ppLabel32: TppLabel
+      UserName = 'Label32'
+      Caption = 'Fin'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      Transparent = True
+      mmHeight = 2328
+      mmLeft = 214313
+      mmTop = 5821
+      mmWidth = 3810
+      BandType = 4
+    end
+    object dbPlcNbrs: TppDBText
+      OnPrint = dbPlcNbrsPrint
+      UserName = 'PlcNbrs'
+      BlankWhenZero = True
+      DataField = 'PlcNbrs'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2328
+      mmLeft = 62442
+      mmTop = 3175
+      mmWidth = 17992
+      BandType = 4
+    end
+    object dbShoNbrs: TppDBText
+      OnPrint = dbShoNbrsPrint
+      UserName = 'ShoNbrs'
+      BlankWhenZero = True
+      DataField = 'ShoNbrs'
+      DataPipeline = plPrevDayRH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2328
+      mmLeft = 62442
+      mmTop = 6085
+      mmWidth = 17992
+      BandType = 4
+    end
+    object dbPlcPayout: TppDBText
+      OnPrint = dbPlcPayoutPrint
+      UserName = 'PlcPayout'
+      BlankWhenZero = True
+      DataField = 'PlcPayout'
+      DataPipeline = plPrevDayRH
+      DisplayFormat = '###.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2328
+      mmLeft = 89165
+      mmTop = 3175
+      mmWidth = 6879
+      BandType = 4
+    end
+    object dbPlcShoPayout: TppDBText
+      OnPrint = dbPlcShoPayoutPrint
+      UserName = 'PlcShoPayout'
+      BlankWhenZero = True
+      DataField = 'PlcShoPayout'
+      DataPipeline = plPrevDayRH
+      DisplayFormat = '###.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2328
+      mmLeft = 97102
+      mmTop = 3175
+      mmWidth = 6879
+      BandType = 4
+    end
+    object dbShoPayout: TppDBText
+      OnPrint = dbShoPayoutPrint
+      UserName = 'ShoPayout'
+      BlankWhenZero = True
+      DataField = 'ShoPayout'
+      DataPipeline = plPrevDayRH
+      DisplayFormat = '###.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayRH'
+      mmHeight = 2328
+      mmLeft = 97102
+      mmTop = 6085
+      mmWidth = 6879
+      BandType = 4
+    end
+    object dbRaceDate: TppDBText
+      OnPrint = dbRaceDatePrint
+      UserName = 'TrkCode1'
+      DataField = 'RaceDate'
+      DataPipeline = plPrevDayHH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayHH'
+      mmHeight = 2381
+      mmLeft = 265
+      mmTop = 3175
+      mmWidth = 11906
+      BandType = 4
+    end
+    object dbRaceType: TppDBText
+      OnPrint = dbRaceTypePrint
+      UserName = 'RaceType'
+      DataField = 'RaceType'
+      DataPipeline = plPrevDayHH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'plPrevDayHH'
+      mmHeight = 2646
+      mmLeft = 529
+      mmTop = 6085
+      mmWidth = 6085
+      BandType = 4
+    end
+    object dbDaysLast: TppDBText
+      OnPrint = dbDaysLastPrint
+      UserName = 'DaysLast'
+      DataField = 'DaysLast'
+      DataPipeline = plPrevDayHH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'plPrevDayHH'
+      mmHeight = 2646
+      mmLeft = 7673
+      mmTop = 6085
+      mmWidth = 4233
+      BandType = 4
+    end
+    object dbMorningLineTo1: TppDBText
+      OnPrint = dbMLPrint
+      UserName = 'ML1'
+      DataField = 'MorningLineTo1'
+      DataPipeline = plPrevDayHH
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 6
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      Visible = False
+      DataPipelineName = 'plPrevDayHH'
+      mmHeight = 2381
+      mmLeft = 37571
+      mmTop = 3175
+      mmWidth = 7408
+      BandType = 4
+    end
+  end
+  object grp2: TppGroup
+    AfterGroupBreak = grp2AfterGroupBreak
+    BreakName = 'TrkCode'
+    DataPipeline = plPrevDayHH
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    UserName = 'grp2'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'plPrevDayHH'
+    object grp2Header: TppGroupHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 2646
+      mmPrintPosition = 0
+    end
+    object grp0Footer: TppGroupFooterBand
+      AfterGenerate = grp0FooterAfterGenerate
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'MorningLineTo1'
+    DataPipeline = plPrevDayHH
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'plPrevDayHH'
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      mmBottomOffset = 0
+      mmHeight = 151871
+      mmPrintPosition = 0
+      object varWins: TppVariable
+        UserName = 'vWins'
+        CalcOrder = 0
+        DataType = dtInteger
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varWinsCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 53446
+        mmTop = 5556
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblWins: TppLabel
+        UserName = 'lblWins'
+        Caption = 'Wins'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1852
+        mmTop = 5292
+        mmWidth = 6879
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPlcs: TppVariable
+        UserName = 'vPlcs'
+        CalcOrder = 1
+        DataType = dtInteger
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varPlcsCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 52917
+        mmTop = 10054
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel20: TppLabel
+        UserName = 'lblPlcs'
+        Caption = 'Places'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1852
+        mmTop = 9790
+        mmWidth = 10054
+        BandType = 5
+        GroupNo = 1
+      end
+      object varWinPct: TppVariable
+        UserName = 'vWinPct'
+        CalcOrder = 2
+        DataType = dtDouble
+        DisplayFormat = '0 %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varWinPctCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 49477
+        mmTop = 19579
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblWinPct: TppLabel
+        UserName = 'lblWinPct'
+        Caption = 'Win Pct'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1852
+        mmTop = 19315
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object varShos: TppVariable
+        UserName = 'vShos'
+        CalcOrder = 3
+        DataType = dtInteger
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 52917
+        mmTop = 14817
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblShos: TppLabel
+        UserName = 'lblShos'
+        Caption = 'Shows'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1852
+        mmTop = 14552
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblAvgOdds: TppLabel
+        UserName = 'lblAvgOdds'
+        Caption = 'Avg Win Odds To $1'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1852
+        mmTop = 24077
+        mmWidth = 33073
+        BandType = 5
+        GroupNo = 1
+      end
+      object varAvgOdds: TppVariable
+        UserName = 'vAvgOdds'
+        CalcOrder = 4
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varAvgOddsCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 47890
+        mmTop = 24606
+        mmWidth = 13494
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblTotalOdds: TppLabel
+        UserName = 'lblTotalOdds'
+        Caption = 'Total Odds To 1$'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 2117
+        mmTop = 28840
+        mmWidth = 26988
+        BandType = 5
+        GroupNo = 1
+      end
+      object varTotalOdds: TppVariable
+        UserName = 'vTotalOdds'
+        CalcOrder = 5
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varTotalOddsCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 44450
+        mmTop = 28840
+        mmWidth = 16933
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppShape4: TppShape
+        UserName = 'Shape4'
+        mmHeight = 33338
+        mmLeft = 794
+        mmTop = 794
+        mmWidth = 61648
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblStarts: TppLabel
+        UserName = 'lblStarts'
+        Caption = 'Starts '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 2117
+        mmTop = 1588
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object varStarts: TppVariable
+        UserName = 'vStarts'
+        CalcOrder = 6
+        DataType = dtInteger
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varStartsCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 50006
+        mmTop = 1852
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object imgWin: TppShape
+        UserName = 'imgWin'
+        mmHeight = 20108
+        mmLeft = 265
+        mmTop = 35454
+        mmWidth = 61913
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel24: TppLabel
+        UserName = 'lblWinWagered'
+        Caption = '$2 Win Wagered'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 2117
+        mmTop = 37306
+        mmWidth = 23813
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel25: TppLabel
+        UserName = 'lblWinPayout'
+        Caption = '$2 Win Payouts'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 2117
+        mmTop = 42333
+        mmWidth = 23813
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel26: TppLabel
+        UserName = 'lblWinPL'
+        Caption = '$2 Win P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 2117
+        mmTop = 47096
+        mmWidth = 16933
+        BandType = 5
+        GroupNo = 1
+      end
+      object varWinWagered: TppVariable
+        UserName = 'vWinWagered'
+        CalcOrder = 7
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varWinWageredCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 42863
+        mmTop = 37306
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object varWinPayout: TppVariable
+        UserName = 'vWinPayout'
+        CalcOrder = 8
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varWinPayoutCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 48948
+        mmTop = 42069
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object varWinPL: TppVariable
+        UserName = 'vWinPL'
+        CalcOrder = 9
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        OnCalc = varWinPLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 51329
+        mmTop = 47096
+        mmWidth = 10054
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel33: TppLabel
+        UserName = 'lblWinPLPct'
+        Caption = 'P/L %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 2117
+        mmTop = 52388
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object varWinPLPct: TppVariable
+        UserName = 'vWinPLPct'
+        CalcOrder = 10
+        DataType = dtDouble
+        DisplayFormat = '0 %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varWinPLPctCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 45773
+        mmTop = 52652
+        mmWidth = 15346
+        BandType = 5
+        GroupNo = 1
+      end
+      object imgSfc: TppShape
+        UserName = 'imgSfc'
+        mmHeight = 32808
+        mmLeft = 125942
+        mmTop = 1588
+        mmWidth = 61913
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblSfcWagered: TppLabel
+        UserName = 'lblSfcWagered'
+        Caption = '$2 Superfecta Wagered'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127794
+        mmTop = 3440
+        mmWidth = 35454
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblSfcPayout: TppLabel
+        UserName = 'lblSfcPayout'
+        Caption = '$2 Superfecta Payouts'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127794
+        mmTop = 7673
+        mmWidth = 37042
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblSfcPL: TppLabel
+        UserName = 'Label301'
+        Caption = '$2 Superfecta P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127794
+        mmTop = 11906
+        mmWidth = 28840
+        BandType = 5
+        GroupNo = 1
+      end
+      object varSfcPL: TppVariable
+        UserName = 'vSfcPL'
+        CalcOrder = 11
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        OnCalc = varSfcPLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 176742
+        mmTop = 13229
+        mmWidth = 10054
+        BandType = 5
+        GroupNo = 1
+      end
+      object varSfcPayout: TppVariable
+        UserName = 'vSfcPayout'
+        CalcOrder = 12
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varSfcPayoutCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 174890
+        mmTop = 8996
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object varSfcWagered: TppVariable
+        UserName = 'vSfcWagered'
+        CalcOrder = 13
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varSfcWageredCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 168275
+        mmTop = 3704
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object imgDD: TppShape
+        UserName = 'imgDD'
+        mmHeight = 33073
+        mmLeft = 191823
+        mmTop = 1588
+        mmWidth = 61913
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblDDWagered: TppLabel
+        UserName = 'Label401'
+        Caption = '$2 Double Wagered'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 193940
+        mmTop = 3175
+        mmWidth = 28840
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblDDPayout: TppLabel
+        UserName = 'lblDDPayout'
+        Caption = '$2 Double Payouts'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193940
+        mmTop = 8467
+        mmWidth = 28840
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblDDPL: TppLabel
+        UserName = 'lblDDPL'
+        Caption = '$2 Double P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193940
+        mmTop = 12965
+        mmWidth = 21960
+        BandType = 5
+        GroupNo = 1
+      end
+      object varDDPL: TppVariable
+        UserName = 'vDDPL'
+        CalcOrder = 14
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        OnCalc = varDDPLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 244475
+        mmTop = 12965
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object varDDPayout: TppVariable
+        UserName = 'vDDPayout'
+        CalcOrder = 15
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varDDPayoutCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 242888
+        mmTop = 8731
+        mmWidth = 10054
+        BandType = 5
+        GroupNo = 1
+      end
+      object varDDWagered: TppVariable
+        UserName = 'vDDWagered'
+        CalcOrder = 16
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varDDWageredCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 236009
+        mmTop = 3704
+        mmWidth = 16933
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel39: TppLabel
+        UserName = 'lblSfcPLPct'
+        Caption = 'P/L %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127794
+        mmTop = 16140
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object varSfcPLPct: TppVariable
+        UserName = 'vSfcPLPct'
+        CalcOrder = 17
+        DataType = dtDouble
+        DisplayFormat = '0 %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varSfcPLPctCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 171450
+        mmTop = 17463
+        mmWidth = 15346
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel36: TppLabel
+        UserName = 'lblDDPLPct'
+        Caption = 'P/L %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193940
+        mmTop = 17463
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object varDDPLPct: TppVariable
+        UserName = 'vDDPLPct'
+        CalcOrder = 18
+        DataType = dtDouble
+        DisplayFormat = '0 %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varDDPLPctCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 239713
+        mmTop = 17727
+        mmWidth = 13494
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblDDAvgPayout: TppLabel
+        UserName = 'lblDDPLPct1'
+        Caption = 'Avg Payout'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193675
+        mmTop = 30427
+        mmWidth = 16933
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel49: TppLabel
+        UserName = 'Label49'
+        Caption = 'Number Of Wagers'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193940
+        mmTop = 21960
+        mmWidth = 26988
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel50: TppLabel
+        UserName = 'Label50'
+        Caption = 'Win Pct'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193675
+        mmTop = 26458
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object varDDNbrWagers: TppVariable
+        UserName = 'vDDNbrWagers'
+        CalcOrder = 19
+        DataType = dtInteger
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varDDNbrWagersCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 232569
+        mmTop = 22225
+        mmWidth = 20373
+        BandType = 5
+        GroupNo = 1
+      end
+      object varDDWinPct: TppVariable
+        UserName = 'vDDWinPct'
+        CalcOrder = 20
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varDDWinPctCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 237596
+        mmTop = 26458
+        mmWidth = 15346
+        BandType = 5
+        GroupNo = 1
+      end
+      object varDDAvgPayout: TppVariable
+        UserName = 'varDDAvgPayout'
+        CalcOrder = 21
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varDDAvgPayoutCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 229130
+        mmTop = 30692
+        mmWidth = 23813
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel45: TppLabel
+        UserName = 'Label45'
+        Caption = 'Number Of Wagers'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127794
+        mmTop = 20373
+        mmWidth = 26988
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel60: TppLabel
+        UserName = 'Label60'
+        Caption = 'Win Pct'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127794
+        mmTop = 24606
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel61: TppLabel
+        UserName = 'Label61'
+        Caption = 'Avg Payout'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 127794
+        mmTop = 29633
+        mmWidth = 16933
+        BandType = 5
+        GroupNo = 1
+      end
+      object varSfcAvgPayout: TppVariable
+        UserName = 'varSfcAvgPayout'
+        CalcOrder = 22
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 161396
+        mmTop = 30427
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+      end
+      object varSfcWinPct: TppVariable
+        UserName = 'varSfcWinPct'
+        CalcOrder = 23
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 166423
+        mmTop = 25665
+        mmWidth = 20373
+        BandType = 5
+        GroupNo = 1
+      end
+      object varSfcNbrWagers: TppVariable
+        UserName = 'varSfcNbrWagers'
+        CalcOrder = 24
+        DataType = dtInteger
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 161396
+        mmTop = 20902
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+      end
+      object imgPk3: TppShape
+        UserName = 'imgDD1'
+        mmHeight = 32808
+        mmLeft = 192352
+        mmTop = 35719
+        mmWidth = 61913
+        BandType = 5
+        GroupNo = 1
+      end
+      object imgTri: TppShape
+        UserName = 'imgTri'
+        mmHeight = 32808
+        mmLeft = 126471
+        mmTop = 35719
+        mmWidth = 61913
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblTriWagered: TppLabel
+        UserName = 'lblTriWagered'
+        Caption = '$2 Trifecta Wagered'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 128323
+        mmTop = 37042
+        mmWidth = 32279
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblTriPayout: TppLabel
+        UserName = 'lblTriPayout'
+        Caption = '$2 Trifecta Payouts'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 128323
+        mmTop = 41275
+        mmWidth = 32279
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblTriPL: TppLabel
+        UserName = 'lblTriPL'
+        Caption = '$2 Trifecta P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 128323
+        mmTop = 45508
+        mmWidth = 30692
+        BandType = 5
+        GroupNo = 1
+      end
+      object varTriPL: TppVariable
+        UserName = 'vTriPL'
+        CalcOrder = 25
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        OnCalc = varTriPLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 177271
+        mmTop = 46038
+        mmWidth = 10054
+        BandType = 5
+        GroupNo = 1
+      end
+      object varTriPayout: TppVariable
+        UserName = 'vTriPayout'
+        CalcOrder = 26
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varTriPayoutCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 175419
+        mmTop = 41275
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object varTriWagered: TppVariable
+        UserName = 'vTriWagered'
+        CalcOrder = 27
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varTriWageredCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 168805
+        mmTop = 36513
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblPk3Wagered: TppLabel
+        UserName = 'lblPk3Wagered'
+        Caption = '$2 Pick 3 Wagered'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193940
+        mmTop = 36777
+        mmWidth = 28840
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblPk3Payout: TppLabel
+        UserName = 'lblPk3Payout'
+        Caption = '$2 Pick 3 Payouts'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193940
+        mmTop = 41010
+        mmWidth = 28840
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblPk3PL: TppLabel
+        UserName = 'lblPk3PL'
+        Caption = '$2 Pick 3 P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193940
+        mmTop = 46038
+        mmWidth = 21960
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk3PL: TppVariable
+        UserName = 'vPk3PL'
+        CalcOrder = 28
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        OnCalc = varPk3PLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 243417
+        mmTop = 45773
+        mmWidth = 10054
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk3Payout: TppVariable
+        UserName = 'vPk3Payout'
+        CalcOrder = 29
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varPk3PayoutCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 241565
+        mmTop = 41275
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk3Wagered: TppVariable
+        UserName = 'vPk3Wagered'
+        CalcOrder = 30
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varPk3WageredCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 234950
+        mmTop = 37306
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object varTriPLPct: TppVariable
+        UserName = 'vTriPLPct'
+        CalcOrder = 31
+        DataType = dtDouble
+        DisplayFormat = '0 %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varTriPLPctCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 171980
+        mmTop = 50536
+        mmWidth = 15346
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel40: TppLabel
+        UserName = 'lblTriPLPct'
+        Caption = 'P/L %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 128323
+        mmTop = 49742
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel37: TppLabel
+        UserName = 'lblPk3PLPct'
+        Caption = 'P/L %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193940
+        mmTop = 50536
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk3PLPct: TppVariable
+        UserName = 'vPk3PLPct'
+        CalcOrder = 32
+        DataType = dtDouble
+        DisplayFormat = '0 %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varPk3PLPctCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 238125
+        mmTop = 50800
+        mmWidth = 15346
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel16: TppLabel
+        UserName = 'Label16'
+        Caption = 'Number Of Wagers'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193940
+        mmTop = 55298
+        mmWidth = 26988
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel21: TppLabel
+        UserName = 'Label501'
+        Caption = 'Win Pct'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193940
+        mmTop = 59796
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel22: TppLabel
+        UserName = 'Label22'
+        Caption = 'Avg Payout'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193940
+        mmTop = 64294
+        mmWidth = 16933
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk3NbrWagers: TppVariable
+        UserName = 'vDDNbrWagers1'
+        CalcOrder = 33
+        DataType = dtInteger
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 233098
+        mmTop = 55563
+        mmWidth = 20373
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk3WinPct: TppVariable
+        UserName = 'vPk3WinPct'
+        CalcOrder = 34
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 236538
+        mmTop = 59796
+        mmWidth = 16933
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk3AvgPayout: TppVariable
+        UserName = 'vPk3AvgPayout'
+        CalcOrder = 35
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 231511
+        mmTop = 64294
+        mmWidth = 21960
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel57: TppLabel
+        UserName = 'Label57'
+        Caption = 'Number Of Wagers'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 128323
+        mmTop = 53975
+        mmWidth = 26988
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel58: TppLabel
+        UserName = 'Label58'
+        Caption = 'Win Pct'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 128323
+        mmTop = 59267
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel59: TppLabel
+        UserName = 'Label59'
+        Caption = 'Avg Payout'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 128323
+        mmTop = 63765
+        mmWidth = 16933
+        BandType = 5
+        GroupNo = 1
+      end
+      object varTriAvgPayout: TppVariable
+        UserName = 'varTriAvgPayout'
+        CalcOrder = 36
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 161925
+        mmTop = 64558
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+      end
+      object varTriWinPct: TppVariable
+        UserName = 'varTriWinPct'
+        CalcOrder = 37
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 166952
+        mmTop = 59531
+        mmWidth = 20373
+        BandType = 5
+        GroupNo = 1
+      end
+      object varTriNbrWagers: TppVariable
+        UserName = 'varTriNbrWagers'
+        CalcOrder = 38
+        DataType = dtInteger
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 161925
+        mmTop = 55033
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+      end
+      object imgPlc: TppShape
+        UserName = 'imgPlc'
+        mmHeight = 20108
+        mmLeft = 0
+        mmTop = 56621
+        mmWidth = 61913
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel28: TppLabel
+        UserName = 'lblPlcWagered'
+        Caption = '$2 Place Wagered'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1058
+        mmTop = 57944
+        mmWidth = 26988
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel29: TppLabel
+        UserName = 'lblPlcPayout'
+        Caption = '$2 Place Payouts'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1058
+        mmTop = 62706
+        mmWidth = 26988
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel30: TppLabel
+        UserName = 'lblPlcPL'
+        Caption = '$2 Place P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1058
+        mmTop = 67469
+        mmWidth = 20373
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPlcWagered: TppVariable
+        UserName = 'vPlcWagered'
+        CalcOrder = 39
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varPlcWageredCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 41804
+        mmTop = 57944
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPlcPayout: TppVariable
+        UserName = 'vPlcPayout'
+        CalcOrder = 40
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varPlcPayoutCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 48419
+        mmTop = 62706
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPlcPL: TppVariable
+        UserName = 'vPlcPL'
+        CalcOrder = 41
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        OnCalc = varPlcPLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 50271
+        mmTop = 67469
+        mmWidth = 10054
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel34: TppLabel
+        UserName = 'lblPlcPLPct'
+        Caption = 'P/L %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1058
+        mmTop = 72231
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPlcPLPct: TppVariable
+        UserName = 'vPlcPLPct'
+        CalcOrder = 42
+        DataType = dtDouble
+        DisplayFormat = '0 %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varPlcPLPctCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 44715
+        mmTop = 72496
+        mmWidth = 15346
+        BandType = 5
+        GroupNo = 1
+      end
+      object imgExa: TppShape
+        UserName = 'imgExa'
+        mmHeight = 32808
+        mmLeft = 125677
+        mmTop = 70644
+        mmWidth = 61913
+        BandType = 5
+        GroupNo = 1
+      end
+      object imgPk4: TppShape
+        UserName = 'imgDD2'
+        mmHeight = 32808
+        mmLeft = 191559
+        mmTop = 70644
+        mmWidth = 61913
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblPk4Wagered: TppLabel
+        UserName = 'lblPk4Wagered'
+        Caption = '$2 Pick 4 Wagered'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193146
+        mmTop = 71438
+        mmWidth = 28840
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk4Wagered: TppVariable
+        UserName = 'vPk4Wagered'
+        CalcOrder = 43
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varPk4WageredCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 233892
+        mmTop = 71702
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblExaWagered: TppLabel
+        UserName = 'lblExaWagered'
+        Caption = '$2 Exacta Wagered'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127529
+        mmTop = 71438
+        mmWidth = 28840
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblExaPayout: TppLabel
+        UserName = 'lblExaPayout'
+        Caption = '$2 Exacta Payouts'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127529
+        mmTop = 75936
+        mmWidth = 28840
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblExaPL: TppLabel
+        UserName = 'lblExaPL'
+        Caption = '$2 Exacta P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127529
+        mmTop = 80433
+        mmWidth = 21960
+        BandType = 5
+        GroupNo = 1
+      end
+      object varExaPL: TppVariable
+        UserName = 'vExaPL'
+        CalcOrder = 44
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        OnCalc = varExaPLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 176477
+        mmTop = 81227
+        mmWidth = 10054
+        BandType = 5
+        GroupNo = 1
+      end
+      object varExaPayout: TppVariable
+        UserName = 'vExaPayout'
+        CalcOrder = 45
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varExaPayoutCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 174625
+        mmTop = 76465
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object varExaWagered: TppVariable
+        UserName = 'vExaWagered'
+        CalcOrder = 46
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varExaWageredCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 168011
+        mmTop = 71702
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblPk4Payout: TppLabel
+        UserName = 'lblPk4Payout'
+        Caption = '$2 Pick 4 Payouts'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193146
+        mmTop = 75671
+        mmWidth = 28840
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblPk4PL: TppLabel
+        UserName = 'lblPk4PL'
+        Caption = '$2 Pick 4 P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193146
+        mmTop = 79904
+        mmWidth = 21960
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel42: TppLabel
+        UserName = 'lblExaPLPct'
+        Caption = 'P/L %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127794
+        mmTop = 85196
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object varExaPLPct: TppVariable
+        UserName = 'vExaPLPct'
+        CalcOrder = 47
+        DataType = dtDouble
+        DisplayFormat = '0 %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varExaPLPctCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 171186
+        mmTop = 85990
+        mmWidth = 15346
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel38: TppLabel
+        UserName = 'lblPk4PLPct'
+        Caption = 'P/L %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193146
+        mmTop = 84138
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk4PLPct: TppVariable
+        UserName = 'vPk4PLPct'
+        CalcOrder = 48
+        DataType = dtDouble
+        DisplayFormat = '0 %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varPk4PLPctCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 237067
+        mmTop = 84667
+        mmWidth = 15346
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel27: TppLabel
+        UserName = 'Label27'
+        Caption = 'Win Pct'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193411
+        mmTop = 92604
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel43: TppLabel
+        UserName = 'Label43'
+        Caption = 'Avg Payout'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 193411
+        mmTop = 97102
+        mmWidth = 16933
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk4NbrWagers: TppVariable
+        UserName = 'varPk4NbrWagers'
+        CalcOrder = 49
+        DataType = dtInteger
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 227278
+        mmTop = 88636
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk4WinPct: TppVariable
+        UserName = 'varPk4WinPct'
+        CalcOrder = 50
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 232305
+        mmTop = 92869
+        mmWidth = 20373
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk4AvgPayout: TppVariable
+        UserName = 'varPk4AvgPayout'
+        CalcOrder = 51
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 227278
+        mmTop = 97896
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel23: TppLabel
+        UserName = 'Label23'
+        Caption = 'Number Of Wagers'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 193146
+        mmTop = 88371
+        mmWidth = 26988
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel51: TppLabel
+        UserName = 'Label51'
+        Caption = 'Number Of Wagers'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127529
+        mmTop = 89429
+        mmWidth = 26988
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel52: TppLabel
+        UserName = 'Label52'
+        Caption = 'Win Pct'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 127794
+        mmTop = 93398
+        mmWidth = 12435
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel53: TppLabel
+        UserName = 'Label53'
+        Caption = 'Avg Payout'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 127794
+        mmTop = 98690
+        mmWidth = 16933
+        BandType = 5
+        GroupNo = 1
+      end
+      object varExaNbrWagers: TppVariable
+        UserName = 'varExaNbrWagers'
+        CalcOrder = 52
+        DataType = dtInteger
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 161132
+        mmTop = 90488
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+      end
+      object varExaWinPct: TppVariable
+        UserName = 'varExaWinPct'
+        CalcOrder = 53
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 166159
+        mmTop = 95250
+        mmWidth = 20373
+        BandType = 5
+        GroupNo = 1
+      end
+      object varExaAvgPayout: TppVariable
+        UserName = 'varExaAvgPayout'
+        CalcOrder = 54
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 161132
+        mmTop = 99484
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk4Payout: TppVariable
+        UserName = 'vPk4Payout'
+        CalcOrder = 55
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varPk4PayoutCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 239713
+        mmTop = 75936
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk4PL: TppVariable
+        UserName = 'vPk4PL'
+        CalcOrder = 56
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        OnCalc = varPk4PLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 241036
+        mmTop = 79904
+        mmWidth = 10054
+        BandType = 5
+        GroupNo = 1
+      end
+      object imgSho: TppShape
+        UserName = 'imgSho'
+        mmHeight = 20108
+        mmLeft = 529
+        mmTop = 78052
+        mmWidth = 61913
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel46: TppLabel
+        UserName = 'lblShoWagered'
+        Caption = '$2 Show Wagered'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1323
+        mmTop = 79375
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel47: TppLabel
+        UserName = 'lblShoPayout'
+        Caption = '$2 Show Payouts'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1323
+        mmTop = 84138
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel48: TppLabel
+        UserName = 'lblShoPL'
+        Caption = '$2 Show P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1323
+        mmTop = 89165
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object varShoWagered: TppVariable
+        UserName = 'vShoWagered'
+        CalcOrder = 57
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varShoWageredCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 42069
+        mmTop = 79375
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object varShoPayout: TppVariable
+        UserName = 'vShoPayout'
+        CalcOrder = 58
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varShoPayoutCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 48683
+        mmTop = 84138
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object varShoPL: TppVariable
+        UserName = 'vShoPL'
+        CalcOrder = 59
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        OnCalc = varShoPLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 50536
+        mmTop = 89165
+        mmWidth = 10054
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel35: TppLabel
+        UserName = 'lblShoPLPct'
+        Caption = 'P/L %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1058
+        mmTop = 93663
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object varShoPLPct: TppVariable
+        UserName = 'vShoPLPct'
+        CalcOrder = 60
+        DataType = dtDouble
+        DisplayFormat = '0 %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varShoPLPctCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 44715
+        mmTop = 93927
+        mmWidth = 15346
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppShape3: TppShape
+        UserName = 'Shape3'
+        mmHeight = 40746
+        mmLeft = 1058
+        mmTop = 100013
+        mmWidth = 61648
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel17: TppLabel
+        UserName = 'lblWPSPL'
+        Caption = 'WPS P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1588
+        mmTop = 102129
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object varWPSPL: TppVariable
+        UserName = 'varWPSPL'
+        CalcOrder = 61
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varWPSPLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 47096
+        mmTop = 102394
+        mmWidth = 13494
+        BandType = 5
+        GroupNo = 1
+      end
+      object varTriSfcPL: TppVariable
+        UserName = 'varTriSfcPL'
+        CalcOrder = 62
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varTriSfcPLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 42069
+        mmTop = 107686
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblTriSfcPL: TppLabel
+        UserName = 'lblTriSfcPL'
+        Caption = 'Tri/Sfc P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1588
+        mmTop = 107421
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblExaQuiPL: TppLabel
+        UserName = 'lblExaQuiPL'
+        Caption = 'Exa/Qui P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1588
+        mmTop = 112713
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblDDPk3PL: TppLabel
+        UserName = 'lblDDPk3PL'
+        Caption = 'DD/Pk3 P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1588
+        mmTop = 118004
+        mmWidth = 16933
+        BandType = 5
+        GroupNo = 1
+      end
+      object varExaQuiPL: TppVariable
+        UserName = 'varExaQuiPL'
+        CalcOrder = 63
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varExaQuiPLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 42069
+        mmTop = 112977
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object varDDPk3PL: TppVariable
+        UserName = 'varDDPk3PL'
+        CalcOrder = 64
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varDDPk3PLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 43656
+        mmTop = 118269
+        mmWidth = 16933
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblPk4Pk6PL: TppLabel
+        UserName = 'lblPk4Pk6PL'
+        Caption = 'Pk4/Pk6 P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1588
+        mmTop = 124090
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object varPk4Pk6PL: TppVariable
+        UserName = 'varPk4Pk6PL'
+        CalcOrder = 65
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varPk4Pk6PLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 42069
+        mmTop = 124354
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object varTotalPL: TppVariable
+        UserName = 'vTotalPL'
+        CalcOrder = 66
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        OnCalc = varTotalPLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 47096
+        mmTop = 129646
+        mmWidth = 13494
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel44: TppLabel
+        UserName = 'lblTotalPL'
+        Caption = 'Total P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1588
+        mmTop = 129646
+        mmWidth = 15346
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblFilter: TppLabel
+        UserName = 'lblFilter'
+        AutoSize = False
+        Caption = 'lblFilter'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        Visible = False
+        WordWrap = True
+        mmHeight = 6350
+        mmLeft = 0
+        mmTop = 143140
+        mmWidth = 262996
+        BandType = 5
+        GroupNo = 1
+      end
+      object W: TppLabel
+        UserName = 'lblTotalPL1'
+        Caption = 'W/DD/PK3 P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 1588
+        mmTop = 135202
+        mmWidth = 20373
+        BandType = 5
+        GroupNo = 1
+      end
+      object varWinDDPk3PL: TppVariable
+        UserName = 'vWinDDPk3PL'
+        CalcOrder = 67
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        OnCalc = varWinDDPk3PLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 42069
+        mmTop = 134938
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object imgQui: TppShape
+        UserName = 'imgQui'
+        mmHeight = 32808
+        mmLeft = 125677
+        mmTop = 105040
+        mmWidth = 61913
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblQuiWagered: TppLabel
+        UserName = 'lblQuiWagered'
+        Caption = '$2 Quinella Wagered'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127529
+        mmTop = 106363
+        mmWidth = 32279
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblQuiPayout: TppLabel
+        UserName = 'lblQuiPayout'
+        Caption = '$2 Quinella Payouts'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127529
+        mmTop = 110596
+        mmWidth = 32279
+        BandType = 5
+        GroupNo = 1
+      end
+      object lblQuiPL: TppLabel
+        UserName = 'lblQuiPL'
+        Caption = '$2 Quinella P/L'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127000
+        mmTop = 114829
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+      end
+      object varQuiPL: TppVariable
+        UserName = 'vQuiPL'
+        CalcOrder = 68
+        DataType = dtDouble
+        DisplayFormat = '$#,0.00;($#,0.00)'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        OnCalc = varQuiPLCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 176742
+        mmTop = 115359
+        mmWidth = 10054
+        BandType = 5
+        GroupNo = 1
+      end
+      object varQuiPayout: TppVariable
+        UserName = 'vQuiPayout'
+        CalcOrder = 69
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varQuiPayoutCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 174890
+        mmTop = 111125
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object varQuiWagered: TppVariable
+        UserName = 'vQuiWagered'
+        CalcOrder = 70
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varQuiWageredCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 168275
+        mmTop = 106892
+        mmWidth = 18521
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel41: TppLabel
+        UserName = 'lblQuiPLPct'
+        Caption = 'P/L %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127529
+        mmTop = 119063
+        mmWidth = 8467
+        BandType = 5
+        GroupNo = 1
+      end
+      object varQuiPLPct: TppVariable
+        UserName = 'vQuiPLPct'
+        CalcOrder = 71
+        DataType = dtDouble
+        DisplayFormat = '0 %'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        OnCalc = varQuiPLPctCalc
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 171450
+        mmTop = 119592
+        mmWidth = 15346
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel54: TppLabel
+        UserName = 'Label54'
+        Caption = 'Number Of Wagers'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127529
+        mmTop = 123296
+        mmWidth = 26988
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel55: TppLabel
+        UserName = 'Label55'
+        Caption = 'Win Pct'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 127529
+        mmTop = 127529
+        mmWidth = 11906
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel56: TppLabel
+        UserName = 'Label56'
+        Caption = 'Avg Payout'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 127265
+        mmTop = 132821
+        mmWidth = 16933
+        BandType = 5
+        GroupNo = 1
+      end
+      object varQuiAvgPayout: TppVariable
+        UserName = 'varQuiAvgPayout'
+        CalcOrder = 72
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 161661
+        mmTop = 133615
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+      end
+      object varQuiWinPct: TppVariable
+        UserName = 'varQuiWinPct'
+        CalcOrder = 73
+        DataType = dtDouble
+        DisplayFormat = '#######.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 166159
+        mmTop = 128852
+        mmWidth = 20373
+        BandType = 5
+        GroupNo = 1
+      end
+      object varQuiNbrWagers: TppVariable
+        UserName = 'varQuiNbrWagers'
+        CalcOrder = 74
+        DataType = dtInteger
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 161396
+        mmTop = 123825
+        mmWidth = 25400
+        BandType = 5
+        GroupNo = 1
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060A54726150726F6772616D094368696C645479706502150E497346756E63
+      74696F6E54797065090B50726F6772616D4E616D65060C436F6D70757465504C
+      5063740B50726F6772616D54797065070A747446756E6374696F6E06536F7572
+      6365068966756E6374696F6E20436F6D70757465504C506374202866576F6E3A
+      646F75626C653B66576167657265643A646F75626C65293A646F75626C653B0D
+      0A626567696E0D0A20200D0A202020526573756C74203A3D20282866576F6E20
+      2D20665761676572656429202F20665761676572656429202A203130303B0D0A
+      2020200D0A656E643B0D0A0D0A0000}
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

@@ -1,0 +1,4019 @@
+object ppShortValueReport: TppReport
+  AutoStop = False
+  DataPipeline = plRacesReport
+  PageLimit = 30
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'Letter'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.mmMarginBottom = 635
+  PrinterSetup.mmMarginLeft = 635
+  PrinterSetup.mmMarginRight = 635
+  PrinterSetup.mmMarginTop = 635
+  PrinterSetup.mmPaperHeight = 279401
+  PrinterSetup.mmPaperWidth = 215900
+  PrinterSetup.PaperSize = 1
+  Template.FileName = 'C:\Ratings31\ShortValueSheet.rtm'
+  Template.Format = ftASCII
+  Units = utPrinterPixels
+  AllowPrintToFile = True
+  DeviceType = 'PDFFile'
+  ModalCancelDialog = False
+  ModalPreview = False
+  OutlineSettings.CreateNode = False
+  OutlineSettings.CreatePageNodes = False
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = False
+  Left = 224
+  Top = 128
+  Version = '7.04'
+  mmColumnWidth = 203200
+  DataPipelineName = 'plRacesReport'
+  object ppHeaderBand1: TppHeaderBand
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 4233
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      DataField = 'TrkCode'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Andale Mono'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3937
+      mmLeft = 106680
+      mmTop = 0
+      mmWidth = 10583
+      BandType = 0
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'RaceDate'
+      DataPipeline = plRacesReport
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Andale Mono'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'plRacesReport'
+      mmHeight = 3937
+      mmLeft = 118322
+      mmTop = 0
+      mmWidth = 25400
+      BandType = 0
+    end
+    object ppLabel24: TppLabel
+      UserName = 'Label24'
+      Caption = 'THE HOSPITAL FORM'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Andale Mono'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3937
+      mmLeft = 65523
+      mmTop = 0
+      mmWidth = 36703
+      BandType = 0
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'SystemVariable1'
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Andale Mono'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 196321
+      mmTop = 0
+      mmWidth = 12965
+      BandType = 0
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 6350
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'TotalRatingReport1'
+      ExpandAll = False
+      KeepTogether = True
+      NewPrintJob = False
+      OutlineSettings.CreateNode = False
+      ParentPrinterSetup = False
+      TraverseAllData = False
+      DataPipelineName = 'plEntries'
+      mmHeight = 6350
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 214630
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      object ppChildReport12: TppChildReport
+        AutoStop = False
+        DataPipeline = plEntries
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.PaperName = 'Letter'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.mmMarginBottom = 635
+        PrinterSetup.mmMarginLeft = 635
+        PrinterSetup.mmMarginRight = 635
+        PrinterSetup.mmMarginTop = 635
+        PrinterSetup.mmPaperHeight = 279401
+        PrinterSetup.mmPaperWidth = 215900
+        PrinterSetup.PaperSize = 1
+        Template.FileName = 'D:\Ratings31\HospitalSheetSub.rtm'
+        Template.Format = ftASCII
+        Units = utPrinterPixels
+        Left = 408
+        Top = 288
+        Version = '7.04'
+        mmColumnWidth = 266701
+        DataPipelineName = 'plEntries'
+        object aTitleBand: TppTitleBand
+          PrintHeight = phDynamic
+          mmBottomOffset = 0
+          mmHeight = 24342
+          mmPrintPosition = 0
+          object ppShape9: TppShape
+            UserName = 'Shape9'
+            ParentWidth = True
+            mmHeight = 10848
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 214630
+            BandType = 1
+          end
+          object RaceDesc: TppDBText
+            UserName = 'RaceDesc'
+            AutoSize = True
+            DataField = 'RaceDesc'
+            DataPipeline = plRacesReport
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Consolas'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'plRacesReport'
+            mmHeight = 3725
+            mmLeft = 43392
+            mmTop = 0
+            mmWidth = 11853
+            BandType = 1
+          end
+          object ppLabel5: TppLabel
+            UserName = 'Label2'
+            AutoSize = False
+            Caption = 'P#'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2910
+            mmLeft = 0
+            mmTop = 11113
+            mmWidth = 3969
+            BandType = 1
+          end
+          object ppLabel6: TppLabel
+            UserName = 'Label6'
+            AutoSize = False
+            Caption = 'HORSE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 2371
+            mmLeft = 4498
+            mmTop = 13758
+            mmWidth = 16404
+            BandType = 1
+          end
+          object ppLabel10: TppLabel
+            UserName = 'Label10'
+            AutoSize = False
+            Caption = 'JOCKEY'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 2910
+            mmLeft = 35190
+            mmTop = 11113
+            mmWidth = 8996
+            BandType = 1
+          end
+          object ppLabel14: TppLabel
+            UserName = 'Label14'
+            AutoSize = False
+            Caption = 'M/L'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 125677
+            mmTop = 11113
+            mmWidth = 3704
+            BandType = 1
+          end
+          object ppLabel8: TppLabel
+            UserName = 'Label8'
+            AutoSize = False
+            Caption = 'TRAINER'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 2910
+            mmLeft = 22225
+            mmTop = 11113
+            mmWidth = 12171
+            BandType = 1
+          end
+          object ppLabel27: TppLabel
+            UserName = 'Label27'
+            Caption = '------PACE-----'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2381
+            mmLeft = 55033
+            mmTop = 10848
+            mmWidth = 11377
+            BandType = 1
+          end
+          object ppLabel28: TppLabel
+            UserName = 'Label28'
+            Caption = 'T/J'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 39688
+            mmTop = 14288
+            mmWidth = 2646
+            BandType = 1
+          end
+          object ppLabel29: TppLabel
+            UserName = 'Label29'
+            AutoSize = False
+            Caption = 'ALL'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 43127
+            mmTop = 14288
+            mmWidth = 3704
+            BandType = 1
+          end
+          object ppLabel20: TppLabel
+            UserName = 'Label20'
+            AutoSize = False
+            Caption = 'L/R'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2381
+            mmLeft = 4498
+            mmTop = 16140
+            mmWidth = 5027
+            BandType = 1
+          end
+          object ppLabel9: TppLabel
+            UserName = 'Label9'
+            AutoSize = False
+            Caption = 'MD SEX AGE BRED'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 2371
+            mmLeft = 4498
+            mmTop = 11113
+            mmWidth = 16404
+            BandType = 1
+          end
+          object ppLabel11: TppLabel
+            UserName = 'Label101'
+            AutoSize = False
+            Caption = 'LAST JKY'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 2910
+            mmLeft = 35190
+            mmTop = 20373
+            mmWidth = 10583
+            BandType = 1
+          end
+          object ppLabel30: TppLabel
+            UserName = 'Label30'
+            Caption = '---------------TRAINER---------------'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 67469
+            mmTop = 10848
+            mmWidth = 18521
+            BandType = 1
+          end
+          object ppLabel37: TppLabel
+            UserName = 'lblERL'
+            Caption = 'ERL'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 55033
+            mmTop = 13758
+            mmWidth = 3440
+            BandType = 1
+          end
+          object ppLabel38: TppLabel
+            UserName = 'lblSTR'
+            Caption = 'STR'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 62971
+            mmTop = 13758
+            mmWidth = 3440
+            BandType = 1
+          end
+          object ppLabel41: TppLabel
+            UserName = 'Label41'
+            Caption = 'ALL'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2455
+            mmLeft = 31274
+            mmTop = 14288
+            mmWidth = 3387
+            BandType = 1
+          end
+          object ppLabel12: TppLabel
+            UserName = 'Label12'
+            Caption = 'L30'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 2381
+            mmLeft = 22225
+            mmTop = 14288
+            mmWidth = 2910
+            BandType = 1
+          end
+          object ppLabel7: TppLabel
+            UserName = 'lblMID'
+            Caption = 'MID'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 58738
+            mmTop = 13758
+            mmWidth = 3175
+            BandType = 1
+          end
+          object ppLabel32: TppLabel
+            UserName = 'Label32'
+            Caption = 'TRF'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 78317
+            mmTop = 13758
+            mmWidth = 3440
+            BandType = 1
+          end
+          object ppLabel26: TppLabel
+            UserName = 'Label26'
+            Caption = 'CLM'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 82021
+            mmTop = 13758
+            mmWidth = 3704
+            BandType = 1
+          end
+          object ppLabel19: TppLabel
+            UserName = 'Label19'
+            Caption = '2ND'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 70908
+            mmTop = 14023
+            mmWidth = 3704
+            BandType = 1
+          end
+          object ppLabel18: TppLabel
+            UserName = 'Label18'
+            Caption = '1ST'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 67204
+            mmTop = 14023
+            mmWidth = 3175
+            BandType = 1
+          end
+          object ppLabel35: TppLabel
+            UserName = 'Label35'
+            AutoSize = False
+            Caption = 'SC'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 75406
+            mmTop = 13758
+            mmWidth = 2646
+            BandType = 1
+          end
+          object ppLabel36: TppLabel
+            UserName = 'Label36'
+            AutoSize = False
+            Caption = 'DC'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 75406
+            mmTop = 16933
+            mmWidth = 2910
+            BandType = 1
+          end
+          object ppLabel15: TppLabel
+            UserName = 'Label15'
+            AutoSize = False
+            Caption = 'L30'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 35190
+            mmTop = 14288
+            mmWidth = 3704
+            BandType = 1
+          end
+          object ppLabel13: TppLabel
+            UserName = 'Label13'
+            AutoSize = False
+            Caption = 'LS'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 46831
+            mmTop = 11113
+            mmWidth = 2910
+            BandType = 1
+          end
+          object ppLabel60: TppLabel
+            UserName = 'Label60'
+            AutoSize = False
+            Caption = '2YO'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 71173
+            mmTop = 20373
+            mmWidth = 3440
+            BandType = 1
+          end
+          object ppLabel17: TppLabel
+            UserName = 'Label17'
+            Caption = 'CLS'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 2381
+            mmLeft = 26458
+            mmTop = 14288
+            mmWidth = 3440
+            BandType = 1
+          end
+          object ppLabel44: TppLabel
+            UserName = 'Label44'
+            Caption = 'ON'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 82815
+            mmTop = 16933
+            mmWidth = 2910
+            BandType = 1
+          end
+          object ppLabel46: TppLabel
+            UserName = 'Label46'
+            Caption = 'OFF'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2117
+            mmLeft = 82815
+            mmTop = 20373
+            mmWidth = 2910
+            BandType = 1
+          end
+          object ppLabel48: TppLabel
+            UserName = 'Label48'
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2117
+            mmLeft = 68527
+            mmTop = 17463
+            mmWidth = 794
+            BandType = 1
+          end
+          object ppLabel47: TppLabel
+            UserName = 'Label47'
+            Caption = 'RANKINGS'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2074
+            mmLeft = 22066
+            mmTop = 17198
+            mmWidth = 7832
+            BandType = 1
+          end
+          object ppLabel57: TppLabel
+            UserName = 'Label57'
+            AutoSize = False
+            Caption = 'OWNER'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 2117
+            mmLeft = 4233
+            mmTop = 18785
+            mmWidth = 16404
+            BandType = 1
+          end
+          object RaceCondition: TppDBMemo
+            UserName = 'RaceConditions'
+            CharWrap = True
+            DataField = 'RaceCondition'
+            DataPipeline = plRacesReport
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'plRacesReport'
+            mmHeight = 6085
+            mmLeft = 0
+            mmTop = 4233
+            mmWidth = 214048
+            BandType = 1
+            mmBottomOffset = 0
+            mmOverFlowOffset = 0
+            mmStopPosition = 0
+            mmLeading = 0
+          end
+          object ppLabel61: TppLabel
+            UserName = 'Label503'
+            Caption = 'Dam Sire'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 87577
+            mmTop = 14023
+            mmWidth = 7938
+            BandType = 1
+          end
+          object ppLabel62: TppLabel
+            UserName = 'Label62'
+            Caption = 'RANKINGS'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 2117
+            mmLeft = 35190
+            mmTop = 17198
+            mmWidth = 7938
+            BandType = 1
+          end
+          object ppLabel22: TppLabel
+            UserName = 'Label22'
+            AutoSize = False
+            Caption = 'BS'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 51065
+            mmTop = 11113
+            mmWidth = 2910
+            BandType = 1
+          end
+          object ppLabel33: TppLabel
+            UserName = 'Label33'
+            AutoSize = False
+            Caption = 'RTE'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 75406
+            mmTop = 19844
+            mmWidth = 2910
+            BandType = 1
+          end
+          object ppLabel3: TppLabel
+            UserName = 'lblERL1'
+            Caption = 'RS'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2381
+            mmLeft = 55033
+            mmTop = 20638
+            mmWidth = 1852
+            BandType = 1
+          end
+          object ppLabel54: TppLabel
+            UserName = 'Label54'
+            Caption = 'ESP'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2381
+            mmLeft = 55033
+            mmTop = 17198
+            mmWidth = 2646
+            BandType = 1
+          end
+          object lblPick3: TppLabel
+            UserName = 'lblPick3'
+            Caption = 'Pick 3:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Consolas'
+            Font.Size = 8
+            Font.Style = []
+            Transparent = True
+            Visible = False
+            mmHeight = 3440
+            mmLeft = 146844
+            mmTop = 11642
+            mmWidth = 10848
+            BandType = 1
+          end
+          object Pick3: TppDBText
+            UserName = 'Pick3'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'RaceAutoInc'
+            DataPipeline = plRacesReport
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Consolas'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plRacesReport'
+            mmHeight = 3387
+            mmLeft = 173832
+            mmTop = 11642
+            mmWidth = 1524
+            BandType = 1
+          end
+          object ppLabel50: TppLabel
+            UserName = 'Label50'
+            Caption = 'POWER'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 47096
+            mmTop = 20373
+            mmWidth = 6879
+            BandType = 1
+          end
+          object ppLabel51: TppLabel
+            UserName = 'Label401'
+            Caption = 'Total Starters:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Consolas'
+            Font.Size = 9
+            Font.Style = []
+            mmHeight = 3704
+            mmLeft = 146844
+            mmTop = 15346
+            mmWidth = 25400
+            BandType = 1
+          end
+          object ppDBText3: TppDBText
+            UserName = 'DBText3'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'NbrStarters'
+            DataPipeline = plRacesReport
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Consolas'
+            Font.Size = 9
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            DataPipelineName = 'plRacesReport'
+            mmHeight = 3725
+            mmLeft = 173832
+            mmTop = 15346
+            mmWidth = 1693
+            BandType = 1
+          end
+          object ppDBText4: TppDBText
+            UserName = 'DBText4'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'PostTimes'
+            DataPipeline = plRacesReport
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Consolas'
+            Font.Size = 8
+            Font.Style = []
+            ParentDataPipeline = False
+            DataPipelineName = 'plRacesReport'
+            mmHeight = 3440
+            mmLeft = 173832
+            mmTop = 19579
+            mmWidth = 37042
+            BandType = 1
+          end
+          object ppLabel25: TppLabel
+            UserName = 'Label25'
+            Caption = 'Post Times:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Consolas'
+            Font.Size = 9
+            Font.Style = []
+            mmHeight = 3704
+            mmLeft = 146844
+            mmTop = 19579
+            mmWidth = 18521
+            BandType = 1
+          end
+          object ppDBText6: TppDBText
+            UserName = 'RaceDesc1'
+            AutoSize = True
+            DataField = 'RaceNbr'
+            DataPipeline = plRacesReport
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Consolas'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'plRacesReport'
+            mmHeight = 3725
+            mmLeft = 22490
+            mmTop = 0
+            mmWidth = 1693
+            BandType = 1
+          end
+          object ppDBText7: TppDBText
+            UserName = 'DBText7'
+            DataField = 'TrkCode'
+            DataPipeline = plRacesReport
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Andale Mono'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'plRacesReport'
+            mmHeight = 3440
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 10583
+            BandType = 1
+          end
+          object ppLabel23: TppLabel
+            UserName = 'Label3'
+            Caption = 'RACE#'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Consolas'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 3704
+            mmLeft = 11906
+            mmTop = 0
+            mmWidth = 8467
+            BandType = 1
+          end
+          object ppLabel39: TppLabel
+            UserName = 'lblTURF'
+            Caption = 'lblTurf'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Consolas'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 3704
+            mmLeft = 25929
+            mmTop = 0
+            mmWidth = 11906
+            BandType = 1
+          end
+          object ppLabel21: TppLabel
+            UserName = 'Label21'
+            Caption = 'W/R'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2371
+            mmLeft = 2054
+            mmTop = 21431
+            mmWidth = 2709
+            BandType = 1
+          end
+          object ppLabel31: TppLabel
+            UserName = 'Label31'
+            Caption = 'E/R'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2381
+            mmLeft = 6879
+            mmTop = 21431
+            mmWidth = 2117
+            BandType = 1
+          end
+          object ppDBText9: TppDBText
+            UserName = 'RaceDesc2'
+            AutoSize = True
+            DataField = 'EstTimeOfRace'
+            DataPipeline = plRacesReport
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Consolas'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'plRacesReport'
+            mmHeight = 3704
+            mmLeft = 103717
+            mmTop = 0
+            mmWidth = 28575
+            BandType = 1
+          end
+          object ppLabel49: TppLabel
+            UserName = 'Label49'
+            Caption = 'Post Time:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Consolas'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            mmHeight = 3704
+            mmLeft = 83079
+            mmTop = 0
+            mmWidth = 16933
+            BandType = 1
+          end
+          object ppLabel1: TppLabel
+            UserName = 'Label1'
+            Caption = 'Sire Name'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2381
+            mmLeft = 87577
+            mmTop = 11113
+            mmWidth = 8467
+            BandType = 1
+          end
+          object lblSireTurf: TppLabel
+            UserName = 'lblSireTurf'
+            Caption = 'TURF TY LY'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            Transparent = True
+            Visible = False
+            mmHeight = 2381
+            mmLeft = 98161
+            mmTop = 11113
+            mmWidth = 7673
+            BandType = 1
+          end
+          object lblSire1st: TppLabel
+            UserName = 'lblSire1st'
+            Caption = 'Curr TY LY'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            Transparent = True
+            mmHeight = 2381
+            mmLeft = 107686
+            mmTop = 11113
+            mmWidth = 6879
+            BandType = 1
+          end
+          object lblSire2yo: TppLabel
+            UserName = 'lblSire2yo'
+            Caption = '2yo  TY LY'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            Transparent = True
+            Visible = False
+            mmHeight = 2381
+            mmLeft = 116417
+            mmTop = 11113
+            mmWidth = 6879
+            BandType = 1
+          end
+          object ppLine3: TppLine
+            UserName = 'Line3'
+            ParentWidth = True
+            Position = lpBottom
+            Weight = 0.750000000000000000
+            mmHeight = 794
+            mmLeft = 0
+            mmTop = 23548
+            mmWidth = 214630
+            BandType = 1
+          end
+          object ppLabel34: TppLabel
+            UserName = 'Label34'
+            Caption = 'HORSE RECORDS  -  STARTS/WINS'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2709
+            mmLeft = 87368
+            mmTop = 18785
+            mmWidth = 32173
+            BandType = 1
+          end
+          object ppLabel42: TppLabel
+            UserName = 'Label42'
+            Caption = 'MSP'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2381
+            mmLeft = 59002
+            mmTop = 17198
+            mmWidth = 2910
+            BandType = 1
+          end
+          object ppLabel43: TppLabel
+            UserName = 'Label43'
+            Caption = 'QSP'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2381
+            mmLeft = 59267
+            mmTop = 20638
+            mmWidth = 2646
+            BandType = 1
+          end
+        end
+        object aDetailBand: TppDetailBand
+          PrintHeight = phDynamic
+          mmBottomOffset = 0
+          mmHeight = 15610
+          mmPrintPosition = 0
+          object TurfStarts: TppDBText
+            UserName = 'TurfStarts'
+            ShiftWithParent = True
+            AutoSize = True
+            BlankWhenZero = True
+            DataField = 'TurfStarts'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2201
+            mmLeft = 116448
+            mmTop = 10054
+            mmWidth = 2879
+            BandType = 4
+          end
+          object ProgramNbr: TppDBText
+            UserName = 'ProgramNbr'
+            ShiftWithParent = True
+            DataField = 'ProgramNbr'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 3246
+            mmLeft = 265
+            mmTop = 0
+            mmWidth = 3969
+            BandType = 4
+          end
+          object HorseName: TppDBText
+            UserName = 'HorseName'
+            ShiftWithParent = True
+            DataField = 'HorseName'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 3175
+            mmLeft = 265
+            mmTop = 3440
+            mmWidth = 11906
+            BandType = 4
+          end
+          object Trainer: TppDBText
+            UserName = 'Trainer'
+            ShiftWithParent = True
+            DataField = 'Trainer'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2540
+            mmLeft = 22437
+            mmTop = 0
+            mmWidth = 12277
+            BandType = 4
+          end
+          object Jockey: TppDBText
+            UserName = 'Jockey'
+            ShiftWithParent = True
+            DataField = 'Jockey'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2540
+            mmLeft = 35719
+            mmTop = 0
+            mmWidth = 8467
+            BandType = 4
+          end
+          object Med: TppDBText
+            UserName = 'Med'
+            ShiftWithParent = True
+            DataField = 'Med'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 4763
+            mmTop = 0
+            mmWidth = 4763
+            BandType = 4
+          end
+          object Pace: TppDBText
+            UserName = 'EarlyPace'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'EarlyPace'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 3387
+            mmLeft = 55573
+            mmTop = 0
+            mmWidth = 2371
+            BandType = 4
+          end
+          object TotalTrnWinPct: TppDBText
+            UserName = 'TotalTrnWinPct'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TotalTrnOddsWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 31485
+            mmTop = 2910
+            mmWidth = 3175
+            BandType = 4
+          end
+          object TotalTrnJkyWinPct: TppDBText
+            UserName = 'TotalTrnJkyWinPct'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TotalTrnJkyWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 39158
+            mmTop = 2910
+            mmWidth = 3175
+            BandType = 4
+          end
+          object TotalJky30WinPct: TppDBText
+            UserName = 'TotalJky30WinPct'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TotalJky30WinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 35454
+            mmTop = 2910
+            mmWidth = 3440
+            BandType = 4
+          end
+          object ppLine2: TppLine
+            UserName = 'Line2'
+            ParentHeight = True
+            Position = lpRight
+            Weight = 0.750000000000000000
+            mmHeight = 15610
+            mmLeft = 124354
+            mmTop = 0
+            mmWidth = 265
+            BandType = 4
+          end
+          object Sex: TppDBText
+            UserName = 'Sex'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'Sex'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 10319
+            mmTop = 0
+            mmWidth = 1693
+            BandType = 4
+          end
+          object Age: TppDBText
+            UserName = 'Age'
+            ShiftWithParent = True
+            DataField = 'Age'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 12965
+            mmTop = 0
+            mmWidth = 3440
+            BandType = 4
+          end
+          object ppLine5: TppLine
+            UserName = 'Line5'
+            ParentHeight = True
+            Position = lpRight
+            Weight = 0.750000000000000000
+            mmHeight = 15610
+            mmLeft = 66411
+            mmTop = 0
+            mmWidth = 529
+            BandType = 4
+          end
+          object ppLine6: TppLine
+            UserName = 'Line6'
+            ParentHeight = True
+            Position = lpRight
+            Weight = 0.750000000000000000
+            mmHeight = 15610
+            mmLeft = 86254
+            mmTop = 0
+            mmWidth = 265
+            BandType = 4
+          end
+          object ppLine7: TppLine
+            UserName = 'Line7'
+            ParentHeight = True
+            Position = lpRight
+            Weight = 0.750000000000000000
+            mmHeight = 15610
+            mmLeft = 21167
+            mmTop = 0
+            mmWidth = 794
+            BandType = 4
+          end
+          object ppDBText13: TppDBText
+            UserName = 'LatePace'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'LatePace'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 3387
+            mmLeft = 63246
+            mmTop = 0
+            mmWidth = 2371
+            BandType = 4
+          end
+          object LastJockey: TppDBText
+            UserName = 'DBText101'
+            ShiftWithParent = True
+            DataField = 'LastJockey'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2381
+            mmLeft = 35454
+            mmTop = 9525
+            mmWidth = 8996
+            BandType = 4
+          end
+          object BredIn: TppDBText
+            UserName = 'BredIn'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'BredIn'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 3387
+            mmLeft = 19050
+            mmTop = 0
+            mmWidth = 1693
+            BandType = 4
+          end
+          object TotalTrnDebutWinPct: TppDBText
+            UserName = 'TotalTrnDebutWinPct'
+            ShiftWithParent = True
+            DataField = 'TotalTrn1stWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 67469
+            mmTop = 0
+            mmWidth = 3440
+            BandType = 4
+          end
+          object TotalTrn30WinPct: TppDBText
+            UserName = 'TotalTrn30WinPct'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TotalTrn30WinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 22490
+            mmTop = 2910
+            mmWidth = 3175
+            BandType = 4
+          end
+          object MidPace: TppDBText
+            UserName = 'MiddlePace'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'MiddlePace'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 3387
+            mmLeft = 59541
+            mmTop = 0
+            mmWidth = 2371
+            BandType = 4
+          end
+          object TotalJkyWinPct: TppDBText
+            UserName = 'TotalJkyWinPct'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TotalJkyOddsWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 42863
+            mmTop = 2910
+            mmWidth = 3175
+            BandType = 4
+          end
+          object ppLine8: TppLine
+            UserName = 'Line8'
+            ParentHeight = True
+            Position = lpRight
+            Weight = 0.750000000000000000
+            mmHeight = 15610
+            mmLeft = 46302
+            mmTop = 0
+            mmWidth = 265
+            BandType = 4
+          end
+          object ppLine10: TppLine
+            UserName = 'Line10'
+            ParentHeight = True
+            Position = lpRight
+            Weight = 0.750000000000000000
+            mmHeight = 15610
+            mmLeft = 34925
+            mmTop = 0
+            mmWidth = 265
+            BandType = 4
+          end
+          object TotalTrnTurfWinPct: TppDBText
+            UserName = 'TotalTrnTurfWinPct'
+            ShiftWithParent = True
+            DataField = 'TotalTrnTurfWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 78846
+            mmTop = 0
+            mmWidth = 3440
+            BandType = 4
+          end
+          object TotalTrnAftClmWinPct: TppDBText
+            UserName = 'TotalTrnAftClmWinPct'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TotalTrnAftClmWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 82815
+            mmTop = 0
+            mmWidth = 3175
+            BandType = 4
+          end
+          object TotalTrnDebutTwoWinPct: TppDBText
+            UserName = 'TotalTrnDebutTwoWinPct'
+            ShiftWithParent = True
+            DataField = 'TotalTrnDebutTwoWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 71173
+            mmTop = 0
+            mmWidth = 3440
+            BandType = 4
+          end
+          object SurfaceChange: TppVariable
+            UserName = 'varSc'
+            AutoSize = False
+            CalcOrder = 0
+            DataType = dtInteger
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2910
+            mmLeft = 74877
+            mmTop = 0
+            mmWidth = 3175
+            BandType = 4
+          end
+          object DistanceChange: TppVariable
+            UserName = 'varDC'
+            AutoSize = False
+            CalcOrder = 1
+            DataType = dtInteger
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2910
+            mmLeft = 74877
+            mmTop = 4233
+            mmWidth = 3175
+            BandType = 4
+          end
+          object LastSpeed: TppDBText
+            UserName = 'LastSpeed'
+            ShiftWithParent = True
+            AutoSize = True
+            BlankWhenZero = True
+            DataField = 'LastSpeed'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 3387
+            mmLeft = 47371
+            mmTop = 0
+            mmWidth = 2371
+            BandType = 4
+          end
+          object lblErlPos: TppLabel
+            UserName = 'lblErlPos'
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 56356
+            mmTop = 3440
+            mmWidth = 1058
+            BandType = 4
+          end
+          object lblMidPos: TppLabel
+            UserName = 'lblMidPos'
+            AutoSize = False
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 59796
+            mmTop = 3440
+            mmWidth = 1323
+            BandType = 4
+          end
+          object lblLatePos: TppLabel
+            UserName = 'lblLatePos'
+            Caption = '*'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 63765
+            mmTop = 3440
+            mmWidth = 1323
+            BandType = 4
+          end
+          object ppLine14: TppLine
+            UserName = 'Line14'
+            Pen.Width = 0
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.200000002980232200
+            mmHeight = 15610
+            mmLeft = 54504
+            mmTop = 0
+            mmWidth = 265
+            BandType = 4
+          end
+          object LastComment2: TppDBText
+            UserName = 'LastComment2'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'LastComment2'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 4
+            Font.Style = [fsBold]
+            DataPipelineName = 'plEntries'
+            mmHeight = 1863
+            mmLeft = 131234
+            mmTop = 2117
+            mmWidth = 16087
+            BandType = 4
+          end
+          object TotalTrn2yoWinPct: TppDBText
+            UserName = 'TotalTrn2yoWinPct'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TotalTrn2yoWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 71173
+            mmTop = 8202
+            mmWidth = 3440
+            BandType = 4
+          end
+          object ppLine18: TppLine
+            UserName = 'Line18'
+            ParentHeight = True
+            Position = lpRight
+            Weight = 0.750000000000000000
+            mmHeight = 15610
+            mmLeft = 130175
+            mmTop = 0
+            mmWidth = 529
+            BandType = 4
+          end
+          object TrnClmWinPct: TppDBText
+            UserName = 'TrnCls'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TrnTodayWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 26988
+            mmTop = 2910
+            mmWidth = 3175
+            BandType = 4
+          end
+          object Equip: TppDBText
+            UserName = 'Equip'
+            ShiftWithParent = True
+            DataField = 'Equip'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2646
+            mmLeft = 17463
+            mmTop = 3704
+            mmWidth = 3704
+            BandType = 4
+          end
+          object Weight: TppDBText
+            UserName = 'Weight'
+            ShiftWithParent = True
+            DataField = 'Weight'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2646
+            mmLeft = 12965
+            mmTop = 3704
+            mmWidth = 4233
+            BandType = 4
+          end
+          object TotalTrnFirstJuiceWinPct: TppDBText
+            UserName = 'TotalTrnFirstJuiceWinPct'
+            ShiftWithParent = True
+            DataField = 'TotalTrnFirstJuiceWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 67469
+            mmTop = 4233
+            mmWidth = 3440
+            BandType = 4
+          end
+          object TotalTrnBlinkersOnWinPct: TppDBText
+            UserName = 'TotalTrnBlinkersOnWinPct'
+            ShiftWithParent = True
+            DataField = 'TotalTrnBlinkersOnWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 82815
+            mmTop = 4233
+            mmWidth = 3175
+            BandType = 4
+          end
+          object TotalTrnBlinkersOffWinPct: TppDBText
+            UserName = 'TotalTrnBlinkersOffWinPct'
+            ShiftWithParent = True
+            DataField = 'TotalTrnBlinkersOffWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 82815
+            mmTop = 8202
+            mmWidth = 3175
+            BandType = 4
+          end
+          object TrnWinsRank: TppDBText
+            UserName = 'TrnWinsRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TrnWinsRank'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 22490
+            mmTop = 6350
+            mmWidth = 3175
+            BandType = 4
+          end
+          object TrnEarningsRank: TppDBText
+            UserName = 'TrnEarningsRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TrnEarningsRank'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 31485
+            mmTop = 6350
+            mmWidth = 3175
+            BandType = 4
+          end
+          object JkyWinsRank: TppDBText
+            UserName = 'JkyWinsRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'JkyWinsRank'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 35719
+            mmTop = 6350
+            mmWidth = 3175
+            BandType = 4
+          end
+          object JkyEarningsRank: TppDBText
+            UserName = 'JkyEarningsRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'JkyEarningsRank'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 42863
+            mmTop = 6350
+            mmWidth = 3175
+            BandType = 4
+          end
+          object OwnWinsRank: TppDBText
+            UserName = 'OwnWinsRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'OwnWinsRank'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2646
+            mmLeft = 1058
+            mmTop = 12171
+            mmWidth = 3175
+            BandType = 4
+          end
+          object OwnEarningsRank: TppDBText
+            UserName = 'OwnEarningsRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'OwnEarningsRank'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2646
+            mmLeft = 12435
+            mmTop = 12435
+            mmWidth = 3175
+            BandType = 4
+          end
+          object OwnerName: TppDBText
+            UserName = 'OwnerName'
+            ShiftWithParent = True
+            DataField = 'Owner'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 0
+            mmTop = 9790
+            mmWidth = 20638
+            BandType = 4
+          end
+          object TurfIndicator: TppDBText
+            UserName = 'TurfIndicator'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TurfIndicator'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 78846
+            mmTop = 4233
+            mmWidth = 3440
+            BandType = 4
+          end
+          object DebutIndicator: TppDBText
+            UserName = 'DebutIndicator'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'DebutIndicator'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 67469
+            mmTop = 8202
+            mmWidth = 3440
+            BandType = 4
+          end
+          object TrnTrackRank: TppDBText
+            UserName = 'TrnTrackRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TrnTrackRank'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 26988
+            mmTop = 6350
+            mmWidth = 3175
+            BandType = 4
+          end
+          object JkyTrackRank: TppDBText
+            UserName = 'JkyTrackRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'JkyTrackRank'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 39158
+            mmTop = 6350
+            mmWidth = 3175
+            BandType = 4
+          end
+          object RouteIndicator: TppDBText
+            UserName = 'RouteIndicator'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'RouteIndicator'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2910
+            mmLeft = 74877
+            mmTop = 8202
+            mmWidth = 3175
+            BandType = 4
+          end
+          object ppLine15: TppLine
+            UserName = 'Line15'
+            Pen.Style = psDot
+            Weight = 0.750000000000000000
+            mmHeight = 265
+            mmLeft = 66940
+            mmTop = 3440
+            mmWidth = 19315
+            BandType = 4
+          end
+          object LatePaceAdvantage: TppDBText
+            UserName = 'LatePaceAdvantage'
+            ShiftWithParent = True
+            AutoSize = True
+            BlankWhenZero = True
+            DataField = 'LatePaceAdvantage'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2381
+            mmLeft = 63765
+            mmTop = 6615
+            mmWidth = 1323
+            BandType = 4
+          end
+          object SireTurfThisYearRank: TppDBText
+            UserName = 'SireTurfThisYearRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'SireTurfThisYearRank'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 98161
+            mmTop = 0
+            mmWidth = 2646
+            BandType = 4
+          end
+          object SireTurfLastYearRank: TppDBText
+            UserName = 'SireTurfLastYearRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'SireTurfLastYearRank'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 103188
+            mmTop = 0
+            mmWidth = 2646
+            BandType = 4
+          end
+          object SireJuvenileThisYearRank: TppDBText
+            UserName = 'SireJuvenileThisYearRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'SireJuvenileThisYearRank'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 116417
+            mmTop = 0
+            mmWidth = 2646
+            BandType = 4
+          end
+          object SireJuvenileLastYearRank: TppDBText
+            UserName = 'SireJuvenileLastYearRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'SireJuvenileLastYearRank'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 120650
+            mmTop = 0
+            mmWidth = 2646
+            BandType = 4
+          end
+          object SireGeneralThisYearRank: TppDBText
+            UserName = 'SireGeneralThisYearRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'SireGeneralThisYearRank'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 107686
+            mmTop = 0
+            mmWidth = 2646
+            BandType = 4
+          end
+          object BackSpeed: TppDBText
+            UserName = 'BackSpeed'
+            ShiftWithParent = True
+            AutoSize = True
+            BlankWhenZero = True
+            DataField = 'BackSpeed'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 3387
+            mmLeft = 51604
+            mmTop = 0
+            mmWidth = 2371
+            BandType = 4
+          end
+          object Last2Comment2: TppDBText
+            UserName = 'Last2Comment2'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'Last2Comment2'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 4
+            Font.Style = [fsBold]
+            DataPipelineName = 'plEntries'
+            mmHeight = 1863
+            mmLeft = 131234
+            mmTop = 7673
+            mmWidth = 16933
+            BandType = 4
+          end
+          object varWork: TppVariable
+            UserName = 'varWork'
+            ShiftWithParent = True
+            CalcOrder = 2
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'PrestigeCondensed'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            mmHeight = 2117
+            mmLeft = 22225
+            mmTop = 9790
+            mmWidth = 10319
+            BandType = 4
+          end
+          object ppLine4: TppLine
+            UserName = 'Line4'
+            Pen.Style = psDot
+            Weight = 0.750000000000000000
+            mmHeight = 265
+            mmLeft = 66940
+            mmTop = 7408
+            mmWidth = 19050
+            BandType = 4
+          end
+          object Last3Comment2: TppDBText
+            UserName = 'Last3Comment2'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'Last3Comment2'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 4
+            Font.Style = [fsBold]
+            DataPipelineName = 'plEntries'
+            mmHeight = 1863
+            mmLeft = 130969
+            mmTop = 13229
+            mmWidth = 15240
+            BandType = 4
+          end
+          object layoffline1: TppLine
+            UserName = 'layoffline1'
+            Pen.Style = psDash
+            Weight = 0.750000000000000000
+            mmHeight = 265
+            mmLeft = 130704
+            mmTop = 4498
+            mmWidth = 78581
+            BandType = 4
+          end
+          object layoffline2: TppLine
+            UserName = 'layoffline2'
+            Pen.Style = psDash
+            Weight = 0.750000000000000000
+            mmHeight = 265
+            mmLeft = 130704
+            mmTop = 10319
+            mmWidth = 78581
+            BandType = 4
+          end
+          object ppLine12: TppLine
+            UserName = 'Line12'
+            Pen.Style = psInsideFrame
+            ParentWidth = True
+            Position = lpBottom
+            Weight = 0.750000000000000000
+            mmHeight = 265
+            mmLeft = 0
+            mmTop = 15409
+            mmWidth = 214630
+            BandType = 4
+          end
+          object ppLine20: TppLine
+            UserName = 'Line20'
+            Pen.Style = psDot
+            Weight = 0.750000000000000000
+            mmHeight = 265
+            mmLeft = 67469
+            mmTop = 11642
+            mmWidth = 18785
+            BandType = 4
+          end
+          object LastRaceDesc: TppDBText
+            UserName = 'LastRaceDesc'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'LastRaceDesc'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 4
+            Font.Style = [fsBold]
+            DataPipelineName = 'plEntries'
+            mmHeight = 1863
+            mmLeft = 131234
+            mmTop = 0
+            mmWidth = 77047
+            BandType = 4
+          end
+          object Last3RaceDesc: TppDBText
+            UserName = 'Last3RaceDesc'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'Last3RaceDesc'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 4
+            Font.Style = [fsBold]
+            DataPipelineName = 'plEntries'
+            mmHeight = 1863
+            mmLeft = 130969
+            mmTop = 10848
+            mmWidth = 66040
+            BandType = 4
+          end
+          object Last2RaceDesc: TppDBText
+            UserName = 'Last2RaceDesc'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'Last2RaceDesc'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 4
+            Font.Style = [fsBold]
+            DataPipelineName = 'plEntries'
+            mmHeight = 1863
+            mmLeft = 131234
+            mmTop = 5027
+            mmWidth = 77047
+            BandType = 4
+          end
+          object TurfWins: TppDBText
+            UserName = 'TurfWins'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'TurfWins'
+            DataPipeline = plEntries
+            DisplayFormat = '##0'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2371
+            mmLeft = 120597
+            mmTop = 9790
+            mmWidth = 847
+            BandType = 4
+          end
+          object MudStarts: TppDBText
+            UserName = 'MudStarts'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'MudStarts'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2371
+            mmLeft = 106045
+            mmTop = 9790
+            mmWidth = 847
+            BandType = 4
+          end
+          object MudWins: TppDBText
+            UserName = 'MudWins'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'MudWins'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2371
+            mmLeft = 108691
+            mmTop = 9790
+            mmWidth = 847
+            BandType = 4
+          end
+          object TrkStarts: TppDBText
+            UserName = 'TrkStarts'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'TrkStarts'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2371
+            mmLeft = 93081
+            mmTop = 9790
+            mmWidth = 847
+            BandType = 4
+          end
+          object ppDBText15: TppDBText
+            UserName = 'TrkWins'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'TrkWins'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2371
+            mmLeft = 95726
+            mmTop = 9790
+            mmWidth = 847
+            BandType = 4
+          end
+          object ppLabel40: TppLabel
+            UserName = 'Label203'
+            Caption = 'Track'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            mmHeight = 2709
+            mmLeft = 87048
+            mmTop = 9525
+            mmWidth = 4572
+            BandType = 4
+          end
+          object ppLabel67: TppLabel
+            UserName = 'Label67'
+            Caption = 'Mud'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            mmHeight = 2381
+            mmLeft = 99484
+            mmTop = 9790
+            mmWidth = 3440
+            BandType = 4
+          end
+          object SireGeneralLastYearRank: TppDBText
+            UserName = 'SireGeneralLastYearRank'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'SireGeneralLastYearRank'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 111919
+            mmTop = 0
+            mmWidth = 2646
+            BandType = 4
+          end
+          object ppLine16: TppLine
+            UserName = 'Line16'
+            Pen.Style = psDot
+            Weight = 0.750000000000000000
+            mmHeight = 265
+            mmLeft = 87048
+            mmTop = 5556
+            mmWidth = 36777
+            BandType = 4
+          end
+          object DaysLast: TppDBText
+            UserName = 'DaysLast'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'DaysLast'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2371
+            mmLeft = 7208
+            mmTop = 6879
+            mmWidth = 1524
+            BandType = 4
+          end
+          object KSP1stCall: TppDBText
+            UserName = 'KSP1stCall'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'KSP1stCall'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2381
+            mmLeft = 55298
+            mmTop = 6615
+            mmWidth = 2646
+            BandType = 4
+          end
+          object AngleDesc: TppDBText
+            UserName = 'AngleDesc'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'AngleDesc'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Consolas'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            DataPipelineName = 'plEntries'
+            mmHeight = 2032
+            mmLeft = 22225
+            mmTop = 12700
+            mmWidth = 53340
+            BandType = 4
+          end
+          object KSP2ndCall: TppDBText
+            UserName = 'KSP2ndCall'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'KSP2ndCall'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2381
+            mmLeft = 59796
+            mmTop = 6615
+            mmWidth = 2646
+            BandType = 4
+          end
+          object lblOnTurf: TppLabel
+            UserName = 'lblOnTurf'
+            Caption = 'Turf '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            Transparent = True
+            Visible = False
+            mmHeight = 2381
+            mmLeft = 112448
+            mmTop = 9790
+            mmWidth = 2910
+            BandType = 4
+          end
+          object Power: TppDBText
+            UserName = 'Power'
+            ShiftWithParent = True
+            AutoSize = True
+            BlankWhenZero = True
+            DataField = 'Power'
+            DataPipeline = plEntries
+            DisplayFormat = '##0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            DataPipelineName = 'plEntries'
+            mmHeight = 3387
+            mmLeft = 47540
+            mmTop = 3969
+            mmWidth = 6435
+            BandType = 4
+          end
+          object ppDBText5: TppDBText
+            UserName = 'SireName1'
+            ShiftWithParent = True
+            DataField = 'DamSire'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2381
+            mmLeft = 87048
+            mmTop = 2910
+            mmWidth = 8731
+            BandType = 4
+          end
+          object SireName: TppDBText
+            UserName = 'SireName'
+            ShiftWithParent = True
+            DataField = 'Sire'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2381
+            mmLeft = 87048
+            mmTop = 0
+            mmWidth = 10054
+            BandType = 4
+          end
+          object ppDBText8: TppDBText
+            UserName = 'Weight1'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'Color'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2371
+            mmLeft = 12965
+            mmTop = 6879
+            mmWidth = 4403
+            BandType = 4
+          end
+          object ML: TppDBText
+            UserName = 'MorningLineDesc'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'MorningLineDesc'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 7
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 3387
+            mmLeft = 127127
+            mmTop = 0
+            mmWidth = 3048
+            BandType = 4
+          end
+          object ppLabel16: TppLabel
+            UserName = 'Label16'
+            Caption = 'Route'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 99484
+            mmTop = 6085
+            mmWidth = 4763
+            BandType = 4
+          end
+          object ppDBText10: TppDBText
+            UserName = 'TrkStarts1'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'RouteStarts'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2371
+            mmLeft = 106045
+            mmTop = 6350
+            mmWidth = 847
+            BandType = 4
+          end
+          object ppDBText11: TppDBText
+            UserName = 'DBText11'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'RouteWins'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2371
+            mmLeft = 108691
+            mmTop = 6350
+            mmWidth = 847
+            BandType = 4
+          end
+          object ppDBText12: TppDBText
+            UserName = 'MiddlePaceAdvantage1'
+            ShiftWithParent = True
+            AutoSize = True
+            BlankWhenZero = True
+            DataField = 'QSP1stCallRunStyle'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2381
+            mmLeft = 60590
+            mmTop = 9790
+            mmWidth = 1588
+            BandType = 4
+          end
+          object ppLabel2: TppLabel
+            UserName = 'Label4'
+            Caption = 'Sprint'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 112448
+            mmTop = 6085
+            mmWidth = 4498
+            BandType = 4
+          end
+          object ppDBText14: TppDBText
+            UserName = 'DBText14'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'SprintStarts'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2371
+            mmLeft = 118481
+            mmTop = 6350
+            mmWidth = 847
+            BandType = 4
+          end
+          object ppDBText16: TppDBText
+            UserName = 'DBText16'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'SprintWins'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2371
+            mmLeft = 120597
+            mmTop = 6350
+            mmWidth = 847
+            BandType = 4
+          end
+          object ppLabel4: TppLabel
+            UserName = 'Label5'
+            Caption = 'Life'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            mmHeight = 2709
+            mmLeft = 87048
+            mmTop = 6085
+            mmWidth = 2709
+            BandType = 4
+          end
+          object ppDBText17: TppDBText
+            UserName = 'TrkStarts2'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'LifeStarts'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2371
+            mmLeft = 93081
+            mmTop = 6350
+            mmWidth = 847
+            BandType = 4
+          end
+          object ppDBText18: TppDBText
+            UserName = 'TrkWins1'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'LifeWins'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2371
+            mmLeft = 95726
+            mmTop = 6350
+            mmWidth = 847
+            BandType = 4
+          end
+          object ppDBText19: TppDBText
+            UserName = 'MorningLineDesc1'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'TodaysWagerWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2709
+            mmLeft = 128059
+            mmTop = 8996
+            mmWidth = 2032
+            BandType = 4
+          end
+          object ppDBText20: TppDBText
+            UserName = 'LatePaceAdvantage1'
+            ShiftWithParent = True
+            AutoSize = True
+            BlankWhenZero = True
+            DataField = 'QSP1stCall'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2381
+            mmLeft = 56621
+            mmTop = 9790
+            mmWidth = 1323
+            BandType = 4
+          end
+        end
+        object ppSummaryWagerTypeBand: TppSummaryBand
+          PrintHeight = phDynamic
+          mmBottomOffset = 0
+          mmHeight = 3969
+          mmPrintPosition = 0
+          object dbWagerType: TppDBMemo
+            UserName = 'dbWagerType'
+            CharWrap = False
+            DataField = 'BetLine'
+            DataPipeline = plRacesReport
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 8
+            Font.Style = [fsBold]
+            ParentDataPipeline = False
+            Stretch = True
+            Transparent = True
+            DataPipelineName = 'plRacesReport'
+            mmHeight = 3969
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 212990
+            BandType = 7
+            mmBottomOffset = 0
+            mmOverFlowOffset = 0
+            mmStopPosition = 0
+            mmLeading = 0
+          end
+        end
+        object raCodeModule1: TraCodeModule
+          ProgramStream = {
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+            4561726C79506163654F6E5072696E740B50726F6772616D54797065070B7474
+            50726F63656475726506536F757263650C3E02000070726F6365647572652045
+            61726C79506163654F6E5072696E743B0D0A626567696E0D0A0D0A2020202020
+            204561726C79506163652E466F6E742E426F6C64203A3D2046616C73653B0D0A
+            2020202020204561726C79506163652E466F6E742E556E6465726C696E65203A
+            3D2046616C73653B0D0A2020202020200D0A09696620706C456E74726965735B
+            274561726C795061636552616E6B275D203D2031207468656E20626567696E0D
+            0A092020204561726C79506163652E466F6E742E426F6C64203A3D2054727565
+            3B0D0A202020202020202020696620706C456E74726965735B27497346726F6E
+            74446F75626C654C696E6572275D207468656E20626567696E0D0A0920202020
+            20204561726C79506163652E466F6E742E556E6465726C696E65203A3D205472
+            75653B0D0A202020202020202020656E643B200D0A202020202020656E643B20
+            0D0A0D0A09696620706C456E74726965735B274561726C795061636552616E6B
+            275D203D2031207468656E20626567696E0D0A092020204561726C7950616365
+            2E466F6E742E426F6C64203A3D20547275653B0D0A2020202020202020206966
+            20706C456E74726965735B274973547269706C654C696E6572275D207468656E
+            20626567696E0D0A092020202020204561726C79506163652E466F6E742E556E
+            6465726C696E65203A3D20547275653B0D0A202020202020202020656E643B20
+            0D0A202020202020656E643B200D0A0920202020202020202020202020202020
+            2020202020202020200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D
+            6506094561726C7950616365094576656E744E616D6506074F6E5072696E7407
+            4576656E74494402200001060F5472614576656E7448616E646C65720B50726F
+            6772616D4E616D650617546F74616C4A6B79333057696E5063744F6E5072696E
+            740B50726F6772616D54797065070B747450726F63656475726506536F757263
+            650CD901000070726F63656475726520546F74616C4A6B79333057696E506374
+            4F6E5072696E743B0D0A626567696E0D0A0D0A202020202020696620706C456E
+            74726965735B27546F74616C4A6B79333057696E50637452616E6B275D203D20
+            31207468656E20626567696E0D0A20202020202020202020546F74616C4A6B79
+            333057696E5063742E466F6E742E556E6465726C696E65203A3D20547275653B
+            0D0A202020202020656E6420656C736520626567696E0D0A2020202020202020
+            2020546F74616C4A6B79333057696E5063742E466F6E742E556E6465726C696E
+            65203A3D2046616C73653B0D0A202020202020656E643B200D0A202020202020
+            0D0A202020202020696620706C456E74726965735B27546F74616C4A6B793330
+            57696E506374275D203E20706C456E74726965735B27546F74616C4A6B795769
+            6E506374275D207468656E20626567696E0D0A20202020202009546F74616C4A
+            6B79333057696E5063742E466F6E742E426F6C64203A3D20547275653B0D0A20
+            2020202020656E6420656C73652020626567696E0D0A0909546F74616C4A6B79
+            333057696E5063742E466F6E742E426F6C64203A3D2046616C73653B0D0A2020
+            20202020656E643B2020200D0A2020202020200D0A0D0A0D0A656E643B0D0A0D
+            436F6D706F6E656E744E616D650610546F74616C4A6B79333057696E50637409
+            4576656E744E616D6506074F6E5072696E74074576656E74494402200001060F
+            5472614576656E7448616E646C65720B50726F6772616D4E616D650615546F74
+            616C54726E57696E5063744F6E5072696E740B50726F6772616D54797065070B
+            747450726F63656475726506536F7572636506D570726F63656475726520546F
+            74616C54726E57696E5063744F6E5072696E743B0D0A626567696E0D0A096966
+            20706C456E74726965735B27546F74616C54726E57696E50637452616E6B275D
+            203D2031207468656E20626567696E0D0A09202020546F74616C54726E57696E
+            5063742E466F6E742E426F6C64203A3D20547275653B0D0A202020202020656E
+            6420656C736520626567696E0D0A09202020546F74616C54726E57696E506374
+            2E466F6E742E426F6C64203A3D2046616C73653B0D0A202020202020656E643B
+            200D0A656E643B0D0A0D436F6D706F6E656E744E616D65060E546F74616C5472
+            6E57696E506374094576656E744E616D6506074F6E5072696E74074576656E74
+            494402200001060F5472614576656E7448616E646C65720B50726F6772616D4E
+            616D650618546F74616C54726E4A6B7957696E5063744F6E5072696E740B5072
+            6F6772616D54797065070B747450726F63656475726506536F757263650CCF01
+            000070726F63656475726520546F74616C54726E4A6B7957696E5063744F6E50
+            72696E743B0D0A626567696E0D0A0D0A09696620706C456E74726965735B2754
+            6F74616C54726E4A6B7957696E506374275D203E20706C456E74726965735B27
+            546F74616C54726E57696E506374275D207468656E20626567696E0D0A202020
+            20202009546F74616C54726E4A6B7957696E5063742E466F6E742E426F6C6420
+            3A3D20547275653B0D0A202020202020656E6420656C73652020626567696E0D
+            0A0909546F74616C54726E4A6B7957696E5063742E466F6E742E426F6C64203A
+            3D2046616C73653B0D0A202020202020656E643B2020200D0A20202020200D0A
+            202020202020696620706C456E74726965735B27546F74616C54726E4A6B7957
+            696E50637452616E6B275D203D2031207468656E20626567696E0D0A09202020
+            546F74616C54726E4A6B7957696E5063742E466F6E742E556E6465726C696E65
+            203A3D20547275653B0D0A202020202020656E6420656C736520626567696E0D
+            0A2020202009202020546F74616C54726E4A6B7957696E5063742E466F6E742E
+            556E6465726C696E65203A3D2046616C73650D0A202020202020656E643B200D
+            0A2020202020200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506
+            11546F74616C54726E4A6B7957696E506374094576656E744E616D6506074F6E
+            5072696E74074576656E74494402200001060F5472614576656E7448616E646C
+            65720B50726F6772616D4E616D65061B546F74616C54726E416674436C6D5769
+            6E5063744F6E5072696E740B50726F6772616D54797065070B747450726F6365
+            6475726506536F757263650CBF01000070726F63656475726520546F74616C54
+            726E416674436C6D57696E5063744F6E5072696E743B0D0A626567696E0D0A0D
+            0A202020202020696620706C456E74726965735B274C617374436C61696D6564
+            275D203D20274327207468656E20626567696E0D0A0909546F74616C54726E41
+            6674436C6D57696E5063742E56697369626C65203A3D20547275653B0D0A0965
+            6E6420656C736520626567696E0D0A0909546F74616C54726E416674436C6D57
+            696E5063742E56697369626C65203A3D2046616C73653B0D0A09656E643B0D0A
+            0D0A202020202020696620706C456E74726965735B27546F74616C54726E4166
+            74436C6D57696E506374275D203E20706C456E74726965735B27546F74616C54
+            726E57696E506374275D207468656E20626567696E0D0A20202020202009546F
+            74616C54726E416674436C6D57696E5063742E466F6E742E426F6C64203A3D20
+            547275653B0D0A202020202020656E6420656C73652020626567696E0D0A0909
+            546F74616C54726E416674436C6D57696E5063742E466F6E742E426F6C64203A
+            3D2046616C73653B0D0A202020202020656E643B2020200D0A2020202020200D
+            0A2020202020200D0A656E643B0D0A0D436F6D706F6E656E744E616D65061454
+            6F74616C54726E416674436C6D57696E506374094576656E744E616D6506074F
+            6E5072696E74074576656E74494402200001060F5472614576656E7448616E64
+            6C65720B50726F6772616D4E616D65061D546F74616C54726E44656275745477
+            6F57696E5063744F6E5072696E740B50726F6772616D54797065070B74745072
+            6F63656475726506536F757263650CC301000070726F63656475726520546F74
+            616C54726E446562757454776F57696E5063744F6E5072696E743B0D0A626567
+            696E0D0A0D0A202020202020696620706C456E74726965735B27446562757449
+            6E64696361746F72275D203D20272A2A27207468656E20626567696E0D0A0909
+            546F74616C54726E446562757454776F57696E5063742E56697369626C65203A
+            3D20547275653B0D0A09656E6420656C736520626567696E0D0A0909546F7461
+            6C54726E446562757454776F57696E5063742E56697369626C65203A3D204661
+            6C73653B0D0A09656E643B0D0A0D0A202020202020696620706C456E74726965
+            735B27546F74616C54726E446562757454776F57696E506374275D203E20706C
+            456E74726965735B27546F74616C54726E57696E506374275D207468656E2062
+            6567696E0D0A20202020202009546F74616C54726E446562757454776F57696E
+            5063742E466F6E742E426F6C64203A3D20547275653B0D0A202020202020656E
+            6420656C73652020626567696E0D0A0909546F74616C54726E44656275745477
+            6F57696E5063742E466F6E742E426F6C64203A3D2046616C73653B0D0A202020
+            202020656E643B2020200D0A0D0A0D0A656E643B0D0A0D436F6D706F6E656E74
+            4E616D650616546F74616C54726E446562757454776F57696E50637409457665
+            6E744E616D6506074F6E5072696E74074576656E74494402200001060F547261
+            4576656E7448616E646C65720B50726F6772616D4E616D65061A546F74616C54
+            726E446562757457696E5063744F6E5072696E740B50726F6772616D54797065
+            070B747450726F63656475726506536F757263650CB801000070726F63656475
+            726520546F74616C54726E446562757457696E5063744F6E5072696E743B0D0A
+            626567696E0D0A0D0A202020202020696620706C456E74726965735B27446562
+            7574496E64696361746F72275D203D20272A27207468656E20626567696E0D0A
+            09202020546F74616C54726E446562757457696E5063742E56697369626C6520
+            3A3D20547275653B0D0A09656E6420656C736520626567696E0D0A0920202054
+            6F74616C54726E446562757457696E5063742E56697369626C65203A3D204661
+            6C73653B0D0A09656E643B0D0A0D0A202020202020696620706C456E74726965
+            735B27546F74616C54726E446562757457696E506374275D203E20706C456E74
+            726965735B27546F74616C54726E57696E506374275D207468656E2062656769
+            6E0D0A20202020202009546F74616C54726E446562757457696E5063742E466F
+            6E742E426F6C64203A3D20547275653B0D0A202020202020656E6420656C7365
+            2020626567696E0D0A0909546F74616C54726E446562757457696E5063742E46
+            6F6E742E426F6C64203A3D2046616C73653B0D0A202020202020656E643B2020
+            200D0A2020202020200D0A656E643B0D0A0D436F6D706F6E656E744E616D6506
+            13546F74616C54726E446562757457696E506374094576656E744E616D650607
+            4F6E5072696E74074576656E74494402200001060F5472614576656E7448616E
+            646C65720B50726F6772616D4E616D650619546F74616C54726E547572665769
+            6E5063744F6E5072696E740B50726F6772616D54797065070B747450726F6365
+            6475726506536F757263650CB401000070726F63656475726520546F74616C54
+            726E5475726657696E5063744F6E5072696E743B0D0A626567696E0D0A202020
+            20696620706C52616365735265706F72745B2753757266616365275D203D2027
+            5427207468656E20626567696E0D0A20202009546F74616C54726E5475726657
+            696E5063742E56697369626C65203A3D20547275653B0D0A202020656E642065
+            6C736520626567696E0D0A20202009546F74616C54726E5475726657696E5063
+            742E56697369626C65203A3D2046616C73653B0D0A202020656E643B0D0A2020
+            200D0A202020202020696620706C456E74726965735B27546F74616C54726E54
+            75726657696E506374275D203E20706C456E74726965735B27546F74616C5472
+            6E57696E506374275D207468656E20626567696E0D0A20202020202009546F74
+            616C54726E5475726657696E5063742E466F6E742E426F6C64203A3D20547275
+            653B0D0A202020202020656E6420656C73652020626567696E0D0A0909546F74
+            616C54726E5475726657696E5063742E466F6E742E426F6C64203A3D2046616C
+            73653B0D0A202020202020656E643B2020200D0A2020202020200D0A0D0A656E
+            643B0D0A0D436F6D706F6E656E744E616D650612546F74616C54726E54757266
+            57696E506374094576656E744E616D6506074F6E5072696E74074576656E7449
+            4402200001060F5472614576656E7448616E646C65720B50726F6772616D4E61
+            6D65060E76617253634F6E476574546578740B50726F6772616D54797065070B
+            747450726F63656475726506536F757263650C3E03000070726F636564757265
+            2076617253634F6E476574546578742876617220546578743A20537472696E67
+            293B0D0A766172200D0A73506374203A20737472696E673B0D0A626567696E0D
+            0A20202073506374203A3D202730273B0D0A20202076617253632E466F6E742E
+            426F6C64203A3D2046616C73653B0D0A2020202020202020202020200D0A2020
+            20696620202828706C456E74726965735B27497354757266546F44697274275D
+            203D205472756529207468656E20626567696E0D0A2020202020696620706C45
+            6E74726965735B2754726E54757266546F4469727457696E506374275D207468
+            656E20626567696E0D0A2020200920202073506374203A3D20496E74546F5374
+            7228706C456E74726965735B2754726E54757266546F4469727457696E506374
+            275D293B0D0A2020202020656E643B2020202020202020200D0A202020656E64
+            3B0D0A2020200D0A202020696620202828706C456E74726965735B2749734469
+            7274546F54757266275D203D205472756529207468656E20626567696E0D0A20
+            20202020696620706C456E74726965735B2754726E44697274546F5475726657
+            696E506374275D203E2030207468656E20626567696E0D0A2020200920202073
+            506374203A3D20496E74546F53747228706C456E74726965735B2754726E4469
+            7274546F5475726657696E506374275D293B0D0A2020202020656E643B202020
+            2020202020200D0A202020656E643B0D0A2020200D0A2020200D0A2020202020
+            20696620537472546F496E74287350637429203E20706C456E74726965735B27
+            546F74616C54726E57696E506374275D207468656E20626567696E0D0A092009
+            76617253632E466F6E742E426F6C64203A3D20547275653B0D0A202020202020
+            656E6420656C73652020626567696E0D0A090976617253632E466F6E742E426F
+            6C64203A3D2046616C73653B0D0A202020202020656E643B2020200D0A202020
+            2020200D0A2020202020696620537472546F496E74287350637429203E203020
+            7468656E20626567696E0D0A200954657874203A3D20735063743B0D0A202020
+            656E6420656C736520626567696E0D0A20200954657874203A3D2027273B0D0A
+            202020656E643B0D0A0D0A0D0A656E643B0D0A0D0A0D436F6D706F6E656E744E
+            616D6506057661725363094576656E744E616D6506094F6E4765745465787407
+            4576656E74494402350001060F5472614576656E7448616E646C65720B50726F
+            6772616D4E616D65060E76617244434F6E476574546578740B50726F6772616D
+            54797065070B747450726F63656475726506536F757263650C1E03000070726F
+            6365647572652076617244434F6E476574546578742876617220546578743A20
+            537472696E67293B0D0A766172200D0A73506374203A20737472696E673B0D0A
+            626567696E0D0A20202073506374203A3D202730273B0D0A2020207661724463
+            2E466F6E742E426F6C64203A3D2046616C73653B0D0A20202020202020202020
+            20200D0A202020696620202828706C456E74726965735B274973527465546F53
+            7072275D203D205472756529207468656E20626567696E0D0A20202020202069
+            6620706C456E74726965735B2754726E527465546F53707257696E506374275D
+            203E2030207468656E20626567696E0D0A20202020202020202073506374203A
+            3D20496E74546F53747228706C456E74726965735B2754726E527465546F5370
+            7257696E506374275D293B0D0A202020202020656E643B200D0A202020656E64
+            3B0D0A2020200D0A2020206966202828706C456E74726965735B274973537072
+            546F527465275D203D205472756529207468656E20626567696E0D0A20202020
+            2020696620706C456E74726965735B2754726E537072546F52746557696E5063
+            74275D203E2030207468656E20626567696E0D0A202020202020202020735063
+            74203A3D20496E74546F53747228706C456E74726965735B2754726E53707254
+            6F52746557696E506374275D293B0D0A202020202020656E643B2020200D0A20
+            2020656E643B0D0A2020200D0A202020696620537472546F496E742873506374
+            29203E20706C456E74726965735B27546F74616C54726E57696E506374275D20
+            7468656E20626567696E0D0A0976617244632E466F6E742E426F6C64203A3D20
+            547275653B0D0A202020656E6420656C73652020626567696E0D0A0976617244
+            632E466F6E742E426F6C64203A3D2046616C73653B0D0A202020656E643B2020
+            200D0A2020202020200D0A2020202020696620537472546F496E742873506374
+            29203E2030207468656E20626567696E0D0A200954657874203A3D2073506374
+            3B0D0A202020656E6420656C736520626567696E0D0A20200954657874203A3D
+            2027273B0D0A202020656E643B0D0A0D0A0D0A656E643B0D0A0D0A0D436F6D70
+            6F6E656E744E616D6506057661724443094576656E744E616D6506094F6E4765
+            7454657874074576656E74494402350001060F5472614576656E7448616E646C
+            65720B50726F6772616D4E616D650617546F74616C54726E333057696E506374
+            4F6E5072696E740B50726F6772616D54797065070B747450726F636564757265
+            06536F757263650CBB01000070726F63656475726520546F74616C54726E3330
+            57696E5063744F6E5072696E743B0D0A626567696E0D0A0D0A09696620706C45
+            6E74726965735B27546F74616C54726E333057696E50637452616E6B275D203D
+            2031207468656E20626567696E0D0A09202020546F74616C54726E333057696E
+            5063742E466F6E742E556E6465726C696E65203A3D20547275653B0D0A202020
+            202020656E6420656C736520626567696E0D0A09202020546F74616C54726E33
+            3057696E5063742E466F6E742E556E6465724C696E65203A3D2046616C73653B
+            0D0A202020202020656E643B200D0A0D0A202009696620706C456E7472696573
+            5B27546F74616C54726E333057696E506374275D203E20706C456E7472696573
+            5B27546F74616C54726E57696E506374275D207468656E20626567696E0D0A20
+            202020202009546F74616C54726E333057696E5063742E466F6E742E426F6C64
+            203A3D20547275653B0D0A202020202020656E6420656C73652020626567696E
+            0D0A0909546F74616C54726E333057696E5063742E466F6E742E426F6C64203A
+            3D2046616C73653B0D0A202020202020656E643B2020200D0A2020202020200D
+            0A656E643B0D0A0D436F6D706F6E656E744E616D650610546F74616C54726E33
+            3057696E506374094576656E744E616D6506074F6E5072696E74074576656E74
+            494402200001060F5472614576656E7448616E646C65720B50726F6772616D4E
+            616D6506114D6964646C65506163654F6E5072696E740B50726F6772616D5479
+            7065070B747450726F63656475726506536F757263650C0003000070726F6365
+            64757265204D6964646C65506163654F6E5072696E743B0D0A626567696E0D0A
+            0D0A094D6964646C65506163652E466F6E742E556E6465726C696E65203A3D20
+            46616C73653B0D0A2020202020204D6964646C65506163652E466F6E742E426F
+            6C64203A3D2046616C73653B0D0A2020202020200D0A09696620706C456E7472
+            6965735B274D6964646C655061636552616E6B275D203D2031207468656E2062
+            6567696E0D0A092020204D6964646C65506163652E466F6E742E426F6C64203A
+            3D20547275653B0D0A202020202020202020696620706C456E74726965735B27
+            497346726F6E74446F75626C654C696E6572275D207468656E20626567696E0D
+            0A092020202020204D6964646C65506163652E466F6E742E556E6465726C696E
+            65203A3D20547275653B0D0A202020202020202020656E643B200D0A20202020
+            2020656E643B200D0A0D0A09696620706C456E74726965735B274D6964646C65
+            5061636552616E6B275D203D2031207468656E20626567696E0D0A092020204D
+            6964646C65506163652E466F6E742E426F6C64203A3D20547275653B0D0A2020
+            20202020202020696620706C456E74726965735B2749734261636B446F75626C
+            654C696E6572275D207468656E20626567696E0D0A092020202020204D696464
+            6C65506163652E466F6E742E556E6465726C696E65203A3D20547275653B0D0A
+            202020202020202020656E643B200D0A202020202020656E643B200D0A0D0A09
+            696620706C456E74726965735B274D6964646C655061636552616E6B275D203D
+            2031207468656E20626567696E0D0A092020204D6964646C65506163652E466F
+            6E742E426F6C64203A3D20547275653B0D0A202020202020202020696620706C
+            456E74726965735B274973547269706C654C696E6572275D207468656E206265
+            67696E0D0A092020202020204D6964646C65506163652E466F6E742E556E6465
+            726C696E65203A3D20547275653B0D0A202020202020202020656E643B200D0A
+            202020202020656E643B200D0A2020202020200D0A656E643B0D0A0D436F6D70
+            6F6E656E744E616D65060A4D6964646C6550616365094576656E744E616D6506
+            074F6E5072696E74074576656E74494402200001060F5472614576656E744861
+            6E646C65720B50726F6772616D4E616D65060F4C617465506163654F6E507269
+            6E740B50726F6772616D54797065070B747450726F63656475726506536F7572
+            63650C2102000070726F636564757265204C617465506163654F6E5072696E74
+            3B0D0A626567696E0D0A094C617465506163652E466F6E742E426F6C64203A3D
+            2046616C73653B0D0A2020202020204C617465506163652E466F6E742E556E64
+            65726C696E65203A3D2046616C73653B0D0A2020202020200D0A09696620706C
+            456E74726965735B274C6174655061636552616E6B275D203D2031207468656E
+            20626567696E0D0A2020200920204C617465506163652E466F6E742E426F6C64
+            203A3D20547275653B0D0A2020202020202020696620706C456E74726965735B
+            2749734261636B446F75626C654C696E6572275D207468656E20626567696E0D
+            0A092020202020204C617465506163652E466F6E742E556E6465726C696E6520
+            3A3D20547275653B0D0A202020202020202020656E643B200D0A202020202020
+            656E643B200D0A2020202020200D0A09696620706C456E74726965735B274C61
+            74655061636552616E6B275D203D2031207468656E20626567696E0D0A202020
+            0920204C617465506163652E466F6E742E426F6C64203A3D20547275653B0D0A
+            2020202020202020696620706C456E74726965735B274973547269706C654C69
+            6E6572275D207468656E20626567696E0D0A092020202020204C617465506163
+            652E466F6E742E556E6465726C696E65203A3D20547275653B0D0A2020202020
+            20202020656E643B200D0A202020202020656E643B200D0A2020202020200D0A
+            0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506084C61746550616365
+            094576656E744E616D6506074F6E5072696E74074576656E7449440220000106
+            0F5472614576656E7448616E646C65720B50726F6772616D4E616D650615546F
+            74616C4A6B7957696E5063744F6E5072696E740B50726F6772616D5479706507
+            0B747450726F63656475726506536F7572636506DE70726F6365647572652054
+            6F74616C4A6B7957696E5063744F6E5072696E743B0D0A626567696E0D0A0D0A
+            202020696620706C456E74726965735B27546F74616C4A6B7957696E50637452
+            616E6B275D203D2031207468656E20626567696E0D0A202020202020546F7461
+            6C4A6B7957696E5063742E466F6E742E426F6C64203A3D20547275653B0D0A20
+            2020656E6420656C736520626567696E0D0A202020202020546F74616C4A6B79
+            57696E5063742E466F6E742E426F6C64203A3D2046616C73653B0D0A20202020
+            656E643B200D0A202020200D0A656E643B0D0A0D436F6D706F6E656E744E616D
+            65060E546F74616C4A6B7957696E506374094576656E744E616D6506074F6E50
+            72696E74074576656E74494402200001060F5472614576656E7448616E646C65
+            720B50726F6772616D4E616D6506104C61737453706565644F6E5072696E740B
+            50726F6772616D54797065070B747450726F63656475726506536F757263650C
+            2B01000070726F636564757265204C61737453706565644F6E5072696E743B0D
+            0A626567696E0D0A0D0A20202020696620706C456E74726965735B274C617374
+            537065656452616E6B275D203D2031207468656E20626567696E0D0A09202020
+            4C61737453706565642E466F6E742E426F6C64203A3D20547275653B0D0A2020
+            202020202020204C61737453706565642E466F6E742E556E6465726C696E6520
+            3A3D20547275653B0D0A20202020656E6420656C736520626567696E0D0A0920
+            20204C61737453706565642E466F6E742E426F6C64203A3D2046616C73653B0D
+            0A2020202020202020204C61737453706565642E466F6E742E556E6465726C69
+            6E65203A3D2046616C73653B0D0A202020656E643B200D0A0D0A2020200D0A20
+            20200D0A2020200D0A656E643B0D0A0D436F6D706F6E656E744E616D6506094C
+            6173745370656564094576656E744E616D6506074F6E5072696E74074576656E
+            74494402200001060F5472614576656E7448616E646C65720B50726F6772616D
+            4E616D6506126C626C45726C506F734F6E476574546578740B50726F6772616D
+            54797065070B747450726F63656475726506536F757263650C2801000070726F
+            636564757265206C626C45726C506F734F6E4765745465787428766172205465
+            78743A20537472696E67293B0D0A626567696E0D0A0D0A202054657874203A3D
+            202720273B0D0A20200D0A2020696620706C456E74726965735B274561726C79
+            50616365506F73275D203C3E2039393939207468656E20626567696E0D0A2020
+            2020696620706C456E74726965735B274561726C7950616365506F73275D203C
+            3E2030207468656E20626567696E0D0A092020696620706C456E74726965735B
+            274561726C7950616365506F7352616E6B275D203D2031207468656E20626567
+            696E0D0A0909202054657874203A3D20272A273B0D0A092020656E643B0D0A20
+            202020656E643B0D0A2020656E643B0D0A0D0A202020200D0A20200D0A0D0A65
+            6E643B0D0A0D436F6D706F6E656E744E616D6506096C626C45726C506F730945
+            76656E744E616D6506094F6E47657454657874074576656E7449440235000106
+            0F5472614576656E7448616E646C65720B50726F6772616D4E616D6506126C62
+            6C4D6964506F734F6E476574546578740B50726F6772616D54797065070B7474
+            50726F63656475726506536F757263650C3901000070726F636564757265206C
+            626C4D6964506F734F6E476574546578742876617220546578743A2053747269
+            6E67293B0D0A626567696E0D0A0D0A202054657874203A3D202720273B0D0A0D
+            0A2020696620706C456E74726965735B274D6964646C6550616365506F73275D
+            203C3E2039393939207468656E20626567696E0D0A2020202020696620706C45
+            6E74726965735B274D6964646C6550616365506F73275D203C3E203020746865
+            6E20626567696E0D0A2020202020202020696620706C456E74726965735B274D
+            6964646C6550616365506F7352616E6B275D203D2031207468656E2062656769
+            6E0D0A202020202020202020202054657874203A3D20272A273B0D0A20202020
+            20202020656E643B0D0A2020202020656E643B0D0A2020656E643B2020202020
+            20200D0A0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506096C62
+            6C4D6964506F73094576656E744E616D6506094F6E4765745465787407457665
+            6E74494402350001060F5472614576656E7448616E646C65720B50726F677261
+            6D4E616D6506136C626C4C617465506F734F6E476574546578740B50726F6772
+            616D54797065070B747450726F63656475726506536F757263650C2C01000070
+            726F636564757265206C626C4C617465506F734F6E4765745465787428766172
+            20546578743A20537472696E67293B0D0A626567696E0D0A200D0A2020546578
+            74203A3D202720273B0D0A20200D0A2020696620706C456E74726965735B274C
+            61746550616365506F73275D203C3E2039393939207468656E20626567696E0D
+            0A2020202020696620706C456E74726965735B274C61746550616365506F7327
+            5D203C3E2030207468656E20626567696E0D0A2020202020202020696620706C
+            456E74726965735B274C61746550616365506F7352616E6B275D203D20312074
+            68656E20626567696E0D0A2009202020202054657874203A3D20272A273B0D0A
+            2020202020202020656E643B0D0A2020202020656E643B0D0A2020656E643B0D
+            0A0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060A6C626C4C61
+            7465506F73094576656E744E616D6506094F6E47657454657874074576656E74
+            494402350001060F5472614576656E7448616E646C65720B50726F6772616D4E
+            616D650618546F74616C54726E32796F57696E5063744F6E5072696E740B5072
+            6F6772616D54797065070B747450726F63656475726506536F757263650CA501
+            000070726F63656475726520546F74616C54726E32796F57696E5063744F6E50
+            72696E743B0D0A626567696E0D0A202020696620706C456E74726965735B2741
+            6765275D203D2032207468656E20626567696E0D0A20202009546F74616C5472
+            6E32596F57696E5063742E56697369626C65203A3D20547275653B0D0A202020
+            656E6420656C736520626567696E0D0A202020202020546F74616C54726E3259
+            6F57696E5063742E56697369626C65203A3D2046616C73653B0D0A202020656E
+            643B0D0A2020200D0A202020202020696620706C456E74726965735B27546F74
+            616C54726E32796F57696E506374275D203E20706C456E74726965735B27546F
+            74616C54726E57696E506374275D207468656E20626567696E0D0A2020202020
+            2009546F74616C54726E32796F57696E5063742E466F6E742E426F6C64203A3D
+            20547275653B0D0A202020202020656E6420656C73652020626567696E0D0A09
+            09546F74616C54726E32796F57696E5063742E466F6E742E426F6C64203A3D20
+            46616C73653B0D0A202020202020656E643B2020200D0A2020202020200D0A0D
+            0A656E643B0D0A0D436F6D706F6E656E744E616D650611546F74616C54726E32
+            796F57696E506374094576656E744E616D6506074F6E5072696E74074576656E
+            74494402200001060F5472614576656E7448616E646C65720B50726F6772616D
+            4E616D65060F54726E436C734F6E476574546578740B50726F6772616D547970
+            65070B747450726F63656475726506536F757263650C0F04000070726F636564
+            7572652054726E436C734F6E476574546578742876617220546578743A205374
+            72696E67293B0D0A766172200D0A73506374203A20737472696E673B0D0A6265
+            67696E2020202020202020202020202020202020202020202020202020202020
+            202020202020202020202020202020202020202020200D0A2020207350637420
+            3A3D2027273B0D0A0D0A20202069662028706C52616365735265706F72745B27
+            5261636554797065275D203D20274D53572729207468656E20626567696E0D0A
+            20202020202073506374203A3D20496E74546F53747228706C456E7472696573
+            5B2754726E4D646E57696E506374275D293B0D0A202020656E643B0D0A0D0A20
+            202069662028706C52616365735265706F72745B275261636554797065275D20
+            3D20274D434C2729207468656E20626567696E0D0A2020202020207350637420
+            3A3D20496E74546F53747228706C456E74726965735B2754726E4D646E57696E
+            506374275D293B0D0A202020656E643B0D0A2020200D0A20202069662028706C
+            52616365735265706F72745B275261636554797065275D203D2027434C4D2729
+            207468656E20626567696E0D0A20202020202073506374203A3D20496E74546F
+            53747228706C456E74726965735B2754726E436C6D57696E506374275D293B0D
+            0A202020656E643B0D0A0D0A20202069662028706C52616365735265706F7274
+            5B275261636554797065275D203D20274F434C4D2729207468656E2062656769
+            6E0D0A20202020202073506374203A3D20496E74546F53747228706C456E7472
+            6965735B2754726E436C6D57696E506374275D293B0D0A202020656E643B0D0A
+            2020200D0A20202069662028706C52616365735265706F72745B275261636554
+            797065275D203D2027414C572729207468656E20626567696E0D0A2020202020
+            2073506374203A3D20496E74546F53747228706C456E74726965735B2754726E
+            416C7757696E506374275D293B0D0A202020656E643B0D0A2020200D0A202020
+            69662073506374203D202727207468656E20626567696E0D0A20202020202073
+            506374203A3D20496E74546F53747228706C456E74726965735B2754726E5374
+            6B57696E506374275D293B0D0A202020656E643B2020200D0A2020200D0A0D0A
+            2020200D0A202020202020696620537472546F496E74287350637429203E2070
+            6C456E74726965735B27546F74616C54726E57696E506374275D207468656E20
+            626567696E0D0A09200954726E436C732E466F6E742E426F6C64203A3D205472
+            75653B0D0A202020202020656E6420656C73652020626567696E0D0A09095472
+            6E436C732E466F6E742E426F6C64203A3D2046616C73653B0D0A202020202020
+            656E643B2020200D0A20202054657874203A3D20735063743B0D0A2020202020
+            200D0A656E643B0D0A0D436F6D706F6E656E744E616D65060654726E436C7309
+            4576656E744E616D6506094F6E47657454657874074576656E74494402350001
+            060F5472614576656E7448616E646C65720B50726F6772616D4E616D65060E54
+            7261696E65724F6E5072696E740B50726F6772616D54797065070B747450726F
+            63656475726506536F757263650C8401000070726F6365647572652054726169
+            6E65724F6E5072696E743B0D0A626567696E0D0A202020202020202020200D0A
+            202020547261696E65722E466F6E742E426F6C64203A3D2046616C73653B0D0A
+            202020547261696E65722E466F6E742E556E6465726C696E65203A3D2046616C
+            73653B0D0A2020200D0A2020206966202828706C456E74726965735B2754726E
+            57696E7352616E6B275D203E3D20312920616E642028706C456E74726965735B
+            2754726E57696E7352616E6B275D203C3D2035302929206F720D0A2020202020
+            202828706C456E74726965735B2754726E4561726E696E677352616E6B275D20
+            3E3D20312920616E642028706C456E74726965735B2754726E4561726E696E67
+            7352616E6B275D203C3D2035302929207468656E20626567696E0D0A20202020
+            2020547261696E65722E466F6E742E426F6C64203A3D20547275653B0D0A2020
+            20202020547261696E65722E466F6E742E556E6465726C696E65203A3D205472
+            75653B0D0A202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E74
+            4E616D650607547261696E6572094576656E744E616D6506074F6E5072696E74
+            074576656E74494402200001060F5472614576656E7448616E646C65720B5072
+            6F6772616D4E616D65060D4A6F636B65794F6E5072696E740B50726F6772616D
+            54797065070B747450726F63656475726506536F7572636506F470726F636564
+            757265204A6F636B65794F6E5072696E743B0D0A626567696E0D0A2020204A6F
+            636B65792E466F6E742E426F6C64203A3D2046616C73653B0D0A2020204A6F63
+            6B65792E466F6E742E556E6465726C696E65203A3D2046616C73653B0D0A2020
+            202020202020200D0A202020696620706C456E74726965735B27497353757065
+            724A6F636B6579275D207468656E20626567696E0D0A2020202020204A6F636B
+            65792E466F6E742E426F6C64203A3D20547275653B0D0A2020202020204A6F63
+            6B65792E466F6E742E556E6465726C696E65203A3D20547275653B0D0A202020
+            656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506064A6F
+            636B6579094576656E744E616D6506074F6E5072696E74074576656E74494402
+            200001060F5472614576656E7448616E646C65720B50726F6772616D4E616D65
+            061F546F74616C54726E46697273744A7569636557696E5063744F6E5072696E
+            740B50726F6772616D54797065070B747450726F63656475726506536F757263
+            650CC901000070726F63656475726520546F74616C54726E46697273744A7569
+            636557696E5063744F6E5072696E743B0D0A626567696E0D0A0D0A2020202054
+            6F74616C54726E46697273744A7569636557696E5063742E56697369626C6520
+            3A3D2046616C73653B0D0A20202020696620706C456E74726965735B27497346
+            6972737454696D654A75696365275D203D2054727565207468656E2062656769
+            6E0D0A202020200920546F74616C54726E46697273744A7569636557696E5063
+            742E56697369626C65203A3D20547275653B0D0A20202020656E643B0D0A2020
+            20200D0A202020202020696620706C456E74726965735B27546F74616C54726E
+            46697273744A7569636557696E506374275D203E20706C456E74726965735B27
+            546F74616C54726E57696E506374275D207468656E20626567696E0D0A202020
+            20202009546F74616C54726E46697273744A7569636557696E5063742E466F6E
+            742E426F6C64203A3D20547275653B0D0A202020202020656E6420656C736520
+            20626567696E0D0A0909546F74616C54726E46697273744A7569636557696E50
+            63742E466F6E742E426F6C64203A3D2046616C73653B0D0A202020202020656E
+            643B2020200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65061854
+            6F74616C54726E46697273744A7569636557696E506374094576656E744E616D
+            6506074F6E5072696E74074576656E74494402200001060F5472614576656E74
+            48616E646C65720B50726F6772616D4E616D65061F546F74616C54726E426C69
+            6E6B6572734F6E57696E5063744F6E5072696E740B50726F6772616D54797065
+            070B747450726F63656475726506536F757263650CC401000070726F63656475
+            726520546F74616C54726E426C696E6B6572734F6E57696E5063744F6E507269
+            6E743B0D0A626567696E0D0A0D0A20202020546F74616C54726E426C696E6B65
+            72734F6E57696E5063742E56697369626C65203A3D2046616C73653B0D0A2020
+            2020696620706C456E74726965735B274973426C696E6B6572734F6E275D203D
+            2054727565207468656E20626567696E0D0A202020200920546F74616C54726E
+            426C696E6B6572734F6E57696E5063742E56697369626C65203A3D2054727565
+            3B0D0A20202020656E643B0D0A202020200D0A20202020696620706C456E7472
+            6965735B27546F74616C54726E426C696E6B6572734F6E57696E506374275D20
+            3E20706C456E74726965735B27546F74616C54726E57696E506374275D207468
+            656E20626567696E0D0A2020202009546F74616C54726E426C696E6B6572734F
+            6E57696E5063742E466F6E742E426F6C64203A3D20547275653B0D0A20202020
+            656E6420656C73652020626567696E0D0A09546F74616C54726E426C696E6B65
+            72734F6E57696E5063742E466F6E742E426F6C64203A3D2046616C73653B0D0A
+            20202020656E643B2020200D0A2020202020200D0A0D0A656E643B0D0A0D436F
+            6D706F6E656E744E616D650618546F74616C54726E426C696E6B6572734F6E57
+            696E506374094576656E744E616D6506074F6E5072696E74074576656E744944
+            02200001060F5472614576656E7448616E646C65720B50726F6772616D4E616D
+            650620546F74616C54726E426C696E6B6572734F666657696E5063744F6E5072
+            696E740B50726F6772616D54797065070B747450726F63656475726506536F75
+            7263650CC801000070726F63656475726520546F74616C54726E426C696E6B65
+            72734F666657696E5063744F6E5072696E743B0D0A626567696E0D0A0D0A2020
+            2020546F74616C54726E426C696E6B6572734F666657696E5063742E56697369
+            626C65203A3D2046616C73653B0D0A20202020696620706C456E74726965735B
+            274973426C696E6B6572734F6666275D203D2054727565207468656E20626567
+            696E0D0A202020200920546F74616C54726E426C696E6B6572734F6E57696E50
+            63742E56697369626C65203A3D20547275653B0D0A20202020656E643B0D0A20
+            2020200D0A20202020696620706C456E74726965735B27546F74616C54726E42
+            6C696E6B6572734F666657696E506374275D203E20706C456E74726965735B27
+            546F74616C54726E57696E506374275D207468656E20626567696E0D0A202020
+            2009546F74616C54726E426C696E6B6572734F666657696E5063742E466F6E74
+            2E426F6C64203A3D20547275653B0D0A20202020656E6420656C736520206265
+            67696E0D0A09546F74616C54726E426C696E6B6572734F666657696E5063742E
+            466F6E742E426F6C64203A3D2046616C73653B0D0A20202020656E643B202020
+            0D0A202020200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D650619
+            546F74616C54726E426C696E6B6572734F666657696E506374094576656E744E
+            616D6506074F6E5072696E74074576656E74494402200001060F547261457665
+            6E7448616E646C65720B50726F6772616D4E616D6506164D6F726E696E674C69
+            6E65446573634F6E5072696E740B50726F6772616D54797065070B747450726F
+            63656475726506536F7572636506C970726F636564757265204D6F726E696E67
+            4C696E65446573634F6E5072696E743B0D0A626567696E0D0A0D0A2020204D6F
+            726E696E674C696E65446573632E466F6E742E426F6C64203A3D2046616C7365
+            3B0D0A20202069662020706C456E74726965735B274D6F726E696E674C696E65
+            546F3152616E6B275D203D2031207468656E20626567696E0D0A202020202020
+            4D6F726E696E674C696E65446573632E466F6E742E426F6C64203A3D20547275
+            653B0D0A202020656E643B0D0A2020200D0A656E643B0D0A0D436F6D706F6E65
+            6E744E616D65060F4D6F726E696E674C696E6544657363094576656E744E616D
+            6506074F6E5072696E74074576656E74494402200001060F5472614576656E74
+            48616E646C65720B50726F6772616D4E616D65061253756D6D6172794265666F
+            72655072696E740B50726F6772616D54797065070B747450726F636564757265
+            06536F75726365063670726F6365647572652053756D6D6172794265666F7265
+            5072696E743B0D0A626567696E0D0A0D0A2020200D0A200D0A656E643B0D0A0D
+            436F6D706F6E656E744E616D65060753756D6D617279094576656E744E616D65
+            060B4265666F72655072696E74074576656E74494402180001060F5472614576
+            656E7448616E646C65720B50726F6772616D4E616D6506104F776E65724E616D
+            654F6E5072696E740B50726F6772616D54797065070B747450726F6365647572
+            6506536F757263650C1001000070726F636564757265204F776E65724E616D65
+            4F6E5072696E743B0D0A626567696E0D0A202020202020202020200D0A202020
+            4F776E65724E616D652E466F6E742E426F6C64203A3D2046616C73653B0D0A20
+            20204F776E65724E616D652E466F6E742E556E6465726C696E65203A3D204661
+            6C73653B0D0A2020202020202020200D0A202020696620706C456E7472696573
+            5B27497353757065724F776E6572275D207468656E20626567696E0D0A202020
+            2020204F776E65724E616D652E466F6E742E426F6C64203A3D20547275653B0D
+            0A2020202020204F776E65724E616D652E466F6E742E556E6465726C696E6520
+            3A3D20547275653B0D0A202020656E643B0D0A0D0A0D0A656E643B0D0A0D436F
+            6D706F6E656E744E616D6506094F776E65724E616D65094576656E744E616D65
+            06074F6E5072696E74074576656E74494402200001060F5472614576656E7448
+            616E646C65720B50726F6772616D4E616D65061454757266496E64696361746F
+            724F6E5072696E740B50726F6772616D54797065070B747450726F6365647572
+            6506536F7572636506C570726F6365647572652054757266496E64696361746F
+            724F6E5072696E743B0D0A626567696E0D0A2020696620706C52616365735265
+            706F72745B2753757266616365275D203D20275427207468656E20626567696E
+            0D0A2020200954757266496E64696361746F722E56697369626C65203A3D2054
+            7275653B0D0A202020656E6420656C736520626567696E0D0A20202009547572
+            66496E64696361746F722E56697369626C65203A3D2046616C73653B0D0A2020
+            20656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060D54
+            757266496E64696361746F72094576656E744E616D6506074F6E5072696E7407
+            4576656E74494402200001060F5472614576656E7448616E646C65720B50726F
+            6772616D4E616D6506154465627574496E64696361746F724F6E5072696E740B
+            50726F6772616D54797065070B747450726F63656475726506536F7572636506
+            E470726F636564757265204465627574496E64696361746F724F6E5072696E74
+            3B0D0A626567696E0D0A0D0A2020204465627574496E64696361746F722E5669
+            7369626C65203A3D2046616C73653B0D0A20202069662028706C526163657352
+            65706F72745B275261636554797065275D203D20274D53572729206F72202870
+            6C52616365735265706F72745B275261636554797065275D203D20274D434C27
+            2920207468656E20626567696E0D0A092020204465627574496E64696361746F
+            722E56697369626C65203A3D20547275653B0D0A202020656E643B0D0A0D0A65
+            6E643B0D0A0D436F6D706F6E656E744E616D65060E4465627574496E64696361
+            746F72094576656E744E616D6506074F6E5072696E74074576656E7449440220
+            0001060F5472614576656E7448616E646C65720B50726F6772616D4E616D6506
+            15526F757465496E64696361746F724F6E5072696E740B50726F6772616D5479
+            7065070B747450726F63656475726506536F757263650C2601000070726F6365
+            6475726520526F757465496E64696361746F724F6E5072696E743B0D0A626567
+            696E0D0A20202020202020202020202020202020202020202020200D0A202020
+            526F757465496E64696361746F722E56697369626C65203A3D2046616C73653B
+            0D0A2020200D0A20202069662028706C52616365735265706F72745B27526F75
+            7465496E64696361746F72275D203C3E2027272920207468656E20626567696E
+            0D0A20202020202069662028706C52616365735265706F72745B274973526F75
+            746552616365275D203D20547275652920207468656E20626567696E0D0A0920
+            2020526F757465496E64696361746F722E56697369626C65203A3D2054727565
+            3B0D0A202020202020656E643B200D0A202020656E643B0D0A0D0A656E643B0D
+            0A0D436F6D706F6E656E744E616D65060E526F757465496E64696361746F7209
+            4576656E744E616D6506074F6E5072696E74074576656E74494402200001060F
+            5472614576656E7448616E646C65720B50726F6772616D4E616D65061B536972
+            6554757266546869735965617252616E6B4F6E5072696E740B50726F6772616D
+            54797065070B747450726F63656475726506536F757263650C4C01000070726F
+            636564757265205369726554757266546869735965617252616E6B4F6E507269
+            6E743B0D0A626567696E0D0A0D0A20696620706C52616365735265706F72745B
+            2753757266616365275D203D20275427207468656E20626567696E0D0A202020
+            205369726554757266546869735965617252616E6B2E56697369626C65203A3D
+            2020547275653B0D0A20656E6420656C736520626567696E0D0A202020202053
+            69726554757266546869735965617252616E6B2E56697369626C65203A3D2020
+            46616C73653B0D0A20656E643B0D0A20696620706C456E74726965735B275369
+            726554757266546869735965617252616E6B275D203E20313030207468656E20
+            626567696E0D0A202020205369726554757266546869735965617252616E6B2E
+            56697369626C65203A3D202046616C73653B0D0A2020656E643B0D0A20200D0A
+            200D0A656E643B0D0A0D436F6D706F6E656E744E616D65061453697265547572
+            66546869735965617252616E6B094576656E744E616D6506074F6E5072696E74
+            074576656E74494402200001060F5472614576656E7448616E646C65720B5072
+            6F6772616D4E616D65061B53697265547572664C6173745965617252616E6B4F
+            6E5072696E740B50726F6772616D54797065070B747450726F63656475726506
+            536F757263650C4E01000070726F6365647572652053697265547572664C6173
+            745965617252616E6B4F6E5072696E743B0D0A626567696E0D0A0D0A20696620
+            706C52616365735265706F72745B2753757266616365275D203D202754272074
+            68656E20626567696E0D0A2020202053697265547572664C6173745965617252
+            616E6B2E56697369626C65203A3D2020547275653B0D0A20656E6420656C7365
+            20626567696E0D0A202020202053697265547572664C6173745965617252616E
+            6B2E56697369626C65203A3D202046616C73653B0D0A20656E643B0D0A202020
+            696620706C456E74726965735B2753697265547572664C617374596561725261
+            6E6B275D203E20313030207468656E20626567696E0D0A202020205369726554
+            7572664C6173745965617252616E6B2E56697369626C65203A3D202046616C73
+            653B0D0A2020656E643B0D0A0D0A0D0A200D0A656E643B0D0A0D436F6D706F6E
+            656E744E616D65061453697265547572664C6173745965617252616E6B094576
+            656E744E616D6506074F6E5072696E74074576656E74494402200001060F5472
+            614576656E7448616E646C65720B50726F6772616D4E616D65061E5369726547
+            656E6572616C546869735965617252616E6B4F6E5072696E740B50726F677261
+            6D54797065070B747450726F63656475726506536F757263650C8F0100007072
+            6F636564757265205369726547656E6572616C546869735965617252616E6B4F
+            6E5072696E743B0D0A626567696E0D0A0D0A202069662028706C526163657352
+            65706F72745B275261636554797065275D203D20274D53572729206F72202870
+            6C52616365735265706F72745B275261636554797065275D203D20274D434C27
+            2920207468656E20626567696E0D0A202020205369726547656E6572616C5468
+            69735965617252616E6B2E56697369626C65203A3D2020547275653B0D0A2020
+            656E6420656C736520626567696E0D0A202020205369726567656E6572616C54
+            6869735965617252616E6B2E56697369626C65203A3D202046616C73653B0D0A
+            2020656E643B0D0A20200D0A202020696620706C456E74726965735B27536972
+            6547656E6572616C546869735965617252616E6B275D203E2031303020746865
+            6E20626567696E0D0A202020205369726547656E6572616C5468697359656172
+            52616E6B2E56697369626C65203A3D202046616C73653B0D0A2020656E643B0D
+            0A20200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D650617536972
+            6547656E6572616C546869735965617252616E6B094576656E744E616D650607
+            4F6E5072696E74074576656E74494402200001060F5472614576656E7448616E
+            646C65720B50726F6772616D4E616D65061F536972654A7576656E696C655468
+            69735965617252616E6B4F6E5072696E740B50726F6772616D54797065070B74
+            7450726F63656475726506536F757263650C5301000070726F63656475726520
+            536972654A7576656E696C65546869735965617252616E6B4F6E5072696E743B
+            0D0A626567696E0D0A0D0A20696620706C456E74726965735B27416765275D20
+            3D2032207468656E20626567696E0D0A20202020536972654A7576656E696C65
+            546869735965617252616E6B2E56697369626C65203A3D2020547275653B0D0A
+            20656E6420656C736520626567696E0D0A20202020536972654A7576656E696C
+            65546869735965617252616E6B2E56697369626C65203A3D202046616C73653B
+            0D0A20656E643B0D0A200D0A20696620706C456E74726965735B27536972654A
+            7576656E696C65546869735965617252616E6B275D203E20313030207468656E
+            20626567696E0D0A20202020536972654A7576656E696C655468697359656172
+            52616E6B2E56697369626C65203A3D202046616C73653B0D0A20656E643B0D0A
+            200D0A656E643B0D0A0D436F6D706F6E656E744E616D650618536972654A7576
+            656E696C65546869735965617252616E6B094576656E744E616D6506074F6E50
+            72696E74074576656E74494402200001060F5472614576656E7448616E646C65
+            720B50726F6772616D4E616D65061F536972654A7576656E696C654C61737459
+            65617252616E6B4F6E5072696E740B50726F6772616D54797065070B74745072
+            6F63656475726506536F757263650C6301000070726F63656475726520536972
+            654A7576656E696C654C6173745965617252616E6B4F6E5072696E743B0D0A62
+            6567696E0D0A0D0A202020696620706C456E74726965735B27416765275D203D
+            2032207468656E20626567696E0D0A202020202020536972654A7576656E696C
+            654C6173745965617252616E6B2E56697369626C65203A3D2020547275653B0D
+            0A202020656E6420656C736520626567696E0D0A202020202020536972654A75
+            76656E696C654C6173745965617252616E6B2E56697369626C65203A3D202046
+            616C73653B0D0A202020656E643B0D0A2020200D0A202020696620706C456E74
+            726965735B27536972654A7576656E696C654C6173745965617252616E6B275D
+            203E20313030207468656E20626567696E0D0A2020202020536972654A757665
+            6E696C654C6173745965617252616E6B2E56697369626C65203A3D202046616C
+            73653B0D0A202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E74
+            4E616D650618536972654A7576656E696C654C6173745965617252616E6B0945
+            76656E744E616D6506074F6E5072696E74074576656E74494402200001060F54
+            72614576656E7448616E646C65720B50726F6772616D4E616D65061076617257
+            6F726B4F6E476574546578740B50726F6772616D54797065070B747450726F63
+            656475726506536F75726365066570726F63656475726520766172576F726B4F
+            6E476574546578742876617220546578743A20537472696E67293B0D0A626567
+            696E0D0A0D0A202054657874203A3D20706C456E74726965735B27576F726B4C
+            696E6531275D3B0D0A20200D0A656E643B0D0A0D436F6D706F6E656E744E616D
+            650607766172576F726B094576656E744E616D6506094F6E4765745465787407
+            4576656E74494402350001060F5472614576656E7448616E646C65720B50726F
+            6772616D4E616D650611547572665374617274734F6E5072696E740B50726F67
+            72616D54797065070B747450726F63656475726506536F7572636506BC70726F
+            63656475726520547572665374617274734F6E5072696E743B0D0A626567696E
+            0D0A0D0A20696620706C52616365735265706F72745B2753757266616365275D
+            203D20275427207468656E20626567696E0D0A20202020547572665374617274
+            732E56697369626C65203A3D20547275653B0D0A20656E6420656C7365206265
+            67696E0D0A20202020547572665374617274732E56697369626C65203A3D2046
+            616C73653B0D0A20656E643B2020200D0A0D0A656E643B0D0A0D436F6D706F6E
+            656E744E616D65060A54757266537461727473094576656E744E616D6506074F
+            6E5072696E74074576656E74494402200001060F5472614576656E7448616E64
+            6C65720B50726F6772616D4E616D65060F5475726657696E734F6E5072696E74
+            0B50726F6772616D54797065070B747450726F63656475726506536F75726365
+            06B970726F636564757265205475726657696E734F6E5072696E743B0D0A6265
+            67696E0D0A0D0A20696620706C52616365735265706F72745B27537572666163
+            65275D203D20275427207468656E20626567696E0D0A20202020547572665769
+            6E732E56697369626C65203A3D20547275653B0D0A20656E6420656C73652062
+            6567696E0D0A20202020205475726657696E732E56697369626C65203A3D2046
+            616C73653B0D0A20656E643B2020200D0A0D0A0D0A656E643B0D0A0D436F6D70
+            6F6E656E744E616D6506085475726657696E73094576656E744E616D6506074F
+            6E5072696E74074576656E74494402200001060F5472614576656E7448616E64
+            6C65720B50726F6772616D4E616D6506104261636B53706565644F6E5072696E
+            740B50726F6772616D54797065070B747450726F63656475726506536F757263
+            650C1501000070726F636564757265204261636B53706565644F6E5072696E74
+            3B0D0A626567696E0D0A0D0A202020696620706C456E74726965735B27426163
+            6B537065656452616E6B275D203D2031207468656E20626567696E0D0A202020
+            2020204261636B53706565642E466F6E742E426F6C64203A3D20547275653B0D
+            0A2020202020204261636B53706565642E466F6E742E556E6465726C696E6520
+            3A3D20547275653B0D0A202020656E6420656C736520626567696E0D0A094261
+            636B53706565642E466F6E742E426F6C64203A3D2046616C73653B0D0A202020
+            2020204261636B53706565642E466F6E742E556E6465726C696E65203A3D2046
+            616C73653B0D0A202020656E643B0D0A2020200D0A656E643B0D0A0D436F6D70
+            6F6E656E744E616D6506094261636B5370656564094576656E744E616D650607
+            4F6E5072696E74074576656E74494402200001060F5472614576656E7448616E
+            646C65720B50726F6772616D4E616D6506114B535031737443616C6C4F6E5072
+            696E740B50726F6772616D54797065070B747450726F63656475726506536F75
+            7263650CE601000070726F636564757265204B535031737443616C6C4F6E5072
+            696E743B0D0A626567696E0D0A0D0A202020202020696620706C456E74726965
+            735B274B535031737443616C6C275D203D2039393939207468656E2062656769
+            6E0D0A2020202020202020204B535031737443616C6C2E56697369626C65203A
+            3D2046616C73653B0D0A202020202020656E6420656C736520626567696E0D0A
+            2020202020202020204B535031737443616C6C2E56697369626C65203A3D2054
+            7275653B0D0A202020202020656E643B0D0A2020202020200D0A202020202020
+            0D0A09696620706C456E74726965735B274B535031737443616C6C52616E6B27
+            5D203D2031207468656E20626567696E0D0A2020202020202020204B53503173
+            7443616C6C2E466F6E742E426F6C64203A3D20547275653B0D0A202020202020
+            2020204B535031737443616C6C2E466F6E742E556E6465726C696E65203A3D20
+            547275653B0D0A202020202020656E6420656C736520626567696E0D0A202020
+            2020202020204B535031737443616C6C2E466F6E742E426F6C64203A3D204661
+            6C73653B0D0A2020202020202020204B535031737443616C6C2E466F6E742E55
+            6E6465726C696E65203A3D2046616C73653B0D0A202020202020656E643B0D0A
+            2020202020200D0A656E643B0D0A0D436F6D706F6E656E744E616D65060A4B53
+            5031737443616C6C094576656E744E616D6506074F6E5072696E74074576656E
+            74494402200001060F5472614576656E7448616E646C65720B50726F6772616D
+            4E616D65060F446179734C6173744F6E5072696E740B50726F6772616D547970
+            65070B747450726F63656475726506536F757263650CA901000070726F636564
+            75726520446179734C6173744F6E5072696E743B0D0A626567696E0D0A0D0A09
+            446179734C6173742E466F6E742E426F6C64203A3D2046616C73653B0D0A0944
+            6179734C6173742E466F6E742E556E6465726C696E65203A3D2046616C73653B
+            0D0A0D0A202020202020696620706C456E74726965735B27446179734C617374
+            275D203E203435207468656E20626567696E0D0A202020202020202020446179
+            734C6173742E466F6E742E426F6C64203A3D20547275653B0D0A202020202020
+            202020446179734C6173742E466F6E742E556E6465726C696E65203A3D204661
+            6C73653B0D0A202020202020656E643B0D0A2020202020202020200D0A202020
+            202020696620706C456E74726965735B27446179734C617374275D203E203132
+            30207468656E20626567696E0D0A202020202020202020446179734C6173742E
+            466F6E742E426F6C64203A3D20547275653B0D0A202020202020202020446179
+            734C6173742E466F6E742E556E6465726C696E65203A3D20547275653B0D0A20
+            2020202020656E643B0D0A0D0A2020202020200D0A2020202020200D0A656E64
+            3B0D0A0D436F6D706F6E656E744E616D650608446179734C617374094576656E
+            744E616D6506074F6E5072696E74074576656E74494402200001060F54726145
+            76656E7448616E646C65720B50726F6772616D4E616D65061E5369726547656E
+            6572616C4C6173745965617252616E6B4F6E5072696E740B50726F6772616D54
+            797065070B747450726F63656475726506536F757263650C8E01000070726F63
+            6564757265205369726547656E6572616C4C6173745965617252616E6B4F6E50
+            72696E743B0D0A626567696E0D0A0D0A2069662028706C52616365735265706F
+            72745B275261636554797065275D203D20274D53572729206F722028706C5261
+            6365735265706F72745B275261636554797065275D203D20274D434C27292020
+            7468656E20626567696E0D0A202020205369726547656E6572616C4C61737459
+            65617252616E6B2E56697369626C65203A3D2020547275653B0D0A2020656E64
+            20656C736520626567696E0D0A202020205369726567656E6572616C4C617374
+            5965617252616E6B2E56697369626C65203A3D202046616C73653B0D0A202065
+            6E643B0D0A20200D0A202020696620706C456E74726965735B27536972654765
+            6E6572616C4C6173745965617252616E6B275D203E20313030207468656E2062
+            6567696E0D0A202020205369726547656E6572616C4C6173745965617252616E
+            6B2E56697369626C65203A3D202046616C73653B0D0A2020656E643B0D0A2020
+            0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D650617536972654765
+            6E6572616C4C6173745965617252616E6B094576656E744E616D6506074F6E50
+            72696E74074576656E74494402200001060F5472614576656E7448616E646C65
+            720B50726F6772616D4E616D65060F6C626C5069636B334F6E5072696E740B50
+            726F6772616D54797065070B747450726F63656475726506536F7572636506C9
+            70726F636564757265206C626C5069636B334F6E5072696E743B0D0A62656769
+            6E0D0A20202020206966205472696D28706C52616365735265706F72745B2750
+            69636B33275D29203C3E202727207468656E20626567696E0D0A202020202020
+            20206C626C5069636B332E56697369626C65203A3D20547275653B0D0A202020
+            2020656E6420656C736520626567696E0D0A20202020202020206C626C506963
+            6B332E56697369626C65203A3D2046616C73653B0D0A2020202020656E643B0D
+            0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506086C626C5069636B
+            33094576656E744E616D6506074F6E5072696E74074576656E74494402200001
+            060F5472614576656E7448616E646C65720B50726F6772616D4E616D65060C50
+            69636B334F6E5072696E740B50726F6772616D54797065070B747450726F6365
+            6475726506536F7572636506C070726F636564757265205069636B334F6E5072
+            696E743B0D0A626567696E0D0A20202020206966205472696D28706C52616365
+            735265706F72745B275069636B33275D29203C3E202727207468656E20626567
+            696E0D0A20202020202020205069636B332E56697369626C65203A3D20547275
+            653B0D0A2020202020656E6420656C736520626567696E0D0A20202020202020
+            205069636B332E56697369626C65203A3D2046616C73653B0D0A202020202065
+            6E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D650605506963
+            6B33094576656E744E616D6506074F6E5072696E74074576656E744944022000
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650611
+            4B5350326E6443616C6C4F6E5072696E740B50726F6772616D54797065070B74
+            7450726F63656475726506536F757263650CEE01000070726F63656475726520
+            4B5350326E6443616C6C4F6E5072696E743B0D0A626567696E0D0A2020202020
+            696620706C456E74726965735B274B5350326E6443616C6C275D203D20393939
+            39207468656E20626567696E0D0A2020202020202020204B5350326E6443616C
+            6C2E56697369626C65203A3D2046616C73653B0D0A202020202020656E642065
+            6C736520626567696E0D0A2020202020202020204B5350326E6443616C6C2E56
+            697369626C65203A3D20547275653B0D0A202020202020656E643B0D0A202020
+            2020200D0A2020202020200D0A09696620706C456E74726965735B274B535032
+            6E6443616C6C52616E6B275D203D2031207468656E20626567696E0D0A202020
+            2020202020204B5350326E6443616C6C2E466F6E742E426F6C64203A3D205472
+            75653B0D0A2020202020202020204B5350326E6443616C6C2E466F6E742E556E
+            6465726C696E65203A3D20547275653B0D0A2020202020202020200D0A202020
+            202020656E6420656C736520626567696E0D0A2020202020202020204B535032
+            6E6443616C6C2E466F6E742E426F6C64203A3D2046616C73653B0D0A20202020
+            20202020204B5350326E6443616C6C2E466F6E742E556E6465726C696E65203A
+            3D2046616C73653B0D0A202020202020656E643B0D0A2020202020200D0A656E
+            643B0D0A0D436F6D706F6E656E744E616D65060A4B5350326E6443616C6C0945
+            76656E744E616D6506074F6E5072696E74074576656E74494402200001060F54
+            72614576656E7448616E646C65720B50726F6772616D4E616D6506106C626C4F
+            6E547572664F6E5072696E740B50726F6772616D54797065070B747450726F63
+            656475726506536F7572636506BA70726F636564757265206C626C4F6E547572
+            664F6E5072696E743B0D0A626567696E0D0A20696620706C5261636573526570
+            6F72745B2753757266616365275D203D20275427207468656E20626567696E0D
+            0A202020206C626C4F6E547572662E56697369626C65203A3D2020547275653B
+            0D0A20656E6420656C736520626567696E0D0A20202020206C626C4F6E547572
+            662E56697369626C65203A3D202046616C73653B0D0A20656E643B0D0A200D0A
+            0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506096C626C4F6E547572
+            66094576656E744E616D6506074F6E5072696E74074576656E74494402200001
+            060F5472614576656E7448616E646C65720B50726F6772616D4E616D65060C50
+            6F7765724F6E5072696E740B50726F6772616D54797065070B747450726F6365
+            6475726506536F757263650C0601000070726F63656475726520506F7765724F
+            6E5072696E743B0D0A626567696E0D0A0D0A20202020696620706C456E747269
+            65735B27506F77657252616E6B275D203D2031207468656E20626567696E0D0A
+            09202020506F7765722E466F6E742E426F6C64203A3D20547275653B0D0A2020
+            20202020202020506F7765722E466F6E742E556E6465726C696E65203A3D2054
+            7275653B0D0A20202020656E6420656C736520626567696E0D0A09202020506F
+            7765722E466F6E742E426F6C64203A3D2046616C73653B0D0A20202020202020
+            2020506F7765722E466F6E742E556E6465726C696E65203A3D2046616C73653B
+            0D0A202020656E643B200D0A0D0A0D0A656E643B0D0A0D436F6D706F6E656E74
+            4E616D650605506F776572094576656E744E616D6506074F6E5072696E740745
+            76656E74494402200001060F5472614576656E7448616E646C65720B50726F67
+            72616D4E616D6506124F776E57696E7352616E6B4F6E5072696E740B50726F67
+            72616D54797065070B747450726F63656475726506536F7572636506BA70726F
+            636564757265204F776E57696E7352616E6B4F6E5072696E743B0D0A62656769
+            6E0D0A204F776E57696E7352616E6B2E56697369626C65203A3D20547275653B
+            0D0A2020202020202020200D0A20202069662028706C456E74726965735B274F
+            776E57696E7352616E6B275D203D203939393929207468656E20626567696E0D
+            0A2020202020204F776E57696E7352616E6B2E56697369626C65203A3D204661
+            6C73653B0D0A202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E
+            744E616D65060B4F776E57696E7352616E6B094576656E744E616D6506074F6E
+            5072696E74074576656E74494402200001060F5472614576656E7448616E646C
+            65720B50726F6772616D4E616D6506164F776E4561726E696E677352616E6B4F
+            6E5072696E740B50726F6772616D54797065070B747450726F63656475726506
+            536F7572636506CE70726F636564757265204F776E4561726E696E677352616E
+            6B4F6E5072696E743B0D0A626567696E0D0A0D0A2020204F776E4561726E696E
+            677352616E6B2E56697369626C65203A3D20547275653B0D0A20202020202020
+            20200D0A20202069662028706C456E74726965735B274F776E4561726E696E67
+            7352616E6B275D203D203939393929207468656E20626567696E0D0A20202020
+            20204F776E4561726E696E677352616E6B2E56697369626C65203A3D2046616C
+            73653B0D0A202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E74
+            4E616D65060F4F776E4561726E696E677352616E6B094576656E744E616D6506
+            074F6E5072696E74074576656E74494402200001060F5472614576656E744861
+            6E646C65720B50726F6772616D4E616D6506106C626C545552464F6E47657454
+            6578740B50726F6772616D54797065070B747450726F63656475726506536F75
+            7263650C4701000070726F636564757265206C626C545552464F6E4765745465
+            78742876617220546578743A20537472696E67293B0D0A626567696E0D0A0D0A
+            09696620706C52616365735265706F72745B2753757266616365275D203D2027
+            5427207468656E20626567696E0D0A2020090954657874203A3D202754757266
+            273B0D0A202020202020656E643B0D0A09696620706C52616365735265706F72
+            745B2753757266616365275D203D20274127207468656E20626567696E0D0A20
+            20090954657874203A3D2027506F6C79273B0D0A202020202020656E643B0D0A
+            202020202020696620706C52616365735265706F72745B275375726661636527
+            5D203D20274427207468656E20626567696E0D0A2020090954657874203A3D20
+            2744495254273B0D0A202020202020656E643B0D0A2020202020200D0A0D0A20
+            20202020200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506076C
+            626C54555246094576656E744E616D6506094F6E47657454657874074576656E
+            74494402350000}
+        end
+      end
+    end
+  end
+  object raCodeModule2: TraCodeModule
+    ProgramStream = {00}
+  end
+  object ppParameterList1: TppParameterList
+  end
+end
