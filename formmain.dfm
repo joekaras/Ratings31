@@ -48,15 +48,15 @@ object MainForm: TMainForm
   end
   object pgCtrlMain: TcxPageControl
     Left = 0
-    Top = 25
+    Top = 28
     Width = 1368
-    Height = 667
-    ActivePage = cxTabSheet2
+    Height = 664
+    ActivePage = tabDaily
     Align = alClient
     LookAndFeel.Kind = lfStandard
     LookAndFeel.NativeStyle = False
     TabOrder = 2
-    ClientRectBottom = 665
+    ClientRectBottom = 662
     ClientRectLeft = 2
     ClientRectRight = 1366
     ClientRectTop = 25
@@ -64,8 +64,8 @@ object MainForm: TMainForm
       Caption = 'Daily'
       object lblLocalPath: TLabel
         Left = 0
-        Top = 1016
-        Width = 1916
+        Top = 584
+        Width = 1364
         Height = 26
         Align = alBottom
         AutoSize = False
@@ -78,8 +78,8 @@ object MainForm: TMainForm
       end
       object lblServerPath: TLabel
         Left = 0
-        Top = 1042
-        Width = 1916
+        Top = 610
+        Width = 1364
         Height = 27
         Align = alBottom
         AutoSize = False
@@ -1935,7 +1935,7 @@ object MainForm: TMainForm
     DockControlHeights = (
       0
       0
-      25
+      28
       0)
     object File1: TdxBarSubItem
       Caption = 'File'

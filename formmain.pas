@@ -10957,7 +10957,7 @@ var
    iIdx: integer;
    bClearTotals: boolean;
 
-begin
+begin                   
    //try
 //      UpdateTodaysWagerWinPct(dm.tblRaces, dm.tblEntries, dm.tblFinalOrder, dm.tblTrainerCategory, pnlPrgBar, prgBar, staBar, BATCH_SIZE, True, STAT_DAYS, NORMAL_ORDER);
 //   except
@@ -18621,17 +18621,17 @@ begin
    dm.tblRaces.ExportTable(sFileName, ',', True);
    dm.tblRaces.Active := False;
 
-   dm.tblRankingStats.Active := True;
-   dm.tblRankingStats.First();
-   sFileName := EXPORT_REPORT_PATH + 'RANK' + sBaseFileName;
-   dm.tblRankingStats.ExportTable(sFileName, ',', True);
-   dm.tblRankingStats.Active := False;
+//   dm.tblRankingStats.Active := True;
+//   dm.tblRankingStats.First();
+//   sFileName := EXPORT_REPORT_PATH + 'RANK' + sBaseFileName;
+//   dm.tblRankingStats.ExportTable(sFileName, ',', True);
+//   dm.tblRankingStats.Active := False;
 
-   dm.tblRankingStatsByTrk.Active := True;
-   dm.tblRankingStatsByTrk.First();
-   sFileName := EXPORT_REPORT_PATH + 'RANKBYTRK' + sBaseFileName;
-   dm.tblRankingStatsByTrk.ExportTable(sFileName, ',', True);
-   dm.tblRankingStatsByTrk.Active := False;
+//   dm.tblRankingStatsByTrk.Active := True;
+//   dm.tblRankingStatsByTrk.First();
+//   sFileName := EXPORT_REPORT_PATH + 'RANKBYTRK' + sBaseFileName;
+//   dm.tblRankingStatsByTrk.ExportTable(sFileName, ',', True);
+//   dm.tblRankingStatsByTrk.Active := False;
 
    CreatePTCWagers(dm.tblRaces, dm.tblEntries, dm.tblPTCTrack, dm.tblPTCWager, pnlPrgBar, prgBar, staBar, BATCH_SIZE);
 

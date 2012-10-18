@@ -1,4 +1,4 @@
-h:
+
 cd \ratings31
 pause
 del ??.txt
