@@ -238,6 +238,7 @@ begin
                      if (UpperCase(tblE.TableName) = 'ENTRY') then begin
                         tblE.FieldByName('FinalOrderKey').AsString := tblF.FieldByName('OrderKey').AsString;
                         tblE.FieldByName('FinalOrderWinPct').AsFloat := tblF.FieldByName('WinPct').AsFloat;
+                        tblE.FieldByName('FinalOrderValueBet').AsFloat := tblF.FieldByName('ValueBet').AsFloat;
                      end;
 
                      if (tblF.FieldByName('Starts').AsInteger > 29) then begin

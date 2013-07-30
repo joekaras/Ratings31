@@ -1,0 +1,11 @@
+SELECT 
+  Entry.QSP1stCall,
+  Entry.QSP1stCallRank,
+  Entry.QSP2ndCall,
+  Entry.QSP2ndCallRank,
+  Entry.KSP1stCall,
+  Entry.KSP1stCallRank,
+  Entry.KSP2ndCall,
+  Entry.KSP2ndCallRank
+FROM
+  Entry

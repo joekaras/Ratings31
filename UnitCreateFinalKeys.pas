@@ -1140,7 +1140,7 @@ begin
 
    finally
       CloseTable(dm.tblFinalOrder);
-      ClearPrgStatusBars();
+      ClearPrgStatusBars();                                                                                                                                  
    end;
 end;
 

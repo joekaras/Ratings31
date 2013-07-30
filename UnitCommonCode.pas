@@ -309,8 +309,10 @@ const
 
 //   FTP_HOST = '64.202.163.74';
    FTP_HOST = 'ksklimited.com';
-   FTP_USERNAME = 'JoeKarasKSK';
-   FTP_PASSWORD = 'Only1Time';
+   FTP_USERNAME = 'JoeKarasKSK@ksklimited.com';
+//   FTP_USERNAME = 'JoeKarasKSK';
+//   FTP_PASSWORD = 'Only1Time';
+   FTP_PASSWORD = 'Only1TimeHostGatorFTP';  
 
    //   FTP_HOST = '64.202.163.74';
    JIM_FTP_HOST = 'www.onlinefolder.com';

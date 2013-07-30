@@ -4854,17 +4854,17 @@ begin
                on E: Exception do hLog.AddToLog(E.Message, msevException);
             end;
 
-            try
-               Update_FinalOrder_WinPct(dm.tblRaces, dm.tblEntries, dm.tblFinalOrder, pnlPrgBar, prgBar, staBar, BATCH_SIZE, False, RANKING_DAYS);
-            except
-               on E: Exception do hLog.AddToLog(E.Message, msevException);
-            end;
-
-            try
-               Update_FinalOrder_WinPctRank(dm.tblRaces, dm.tblEntries, pnlPrgBar, prgBar, staBar, BATCH_SIZE, False, RANKING_DAYS);
-            except
-               on E: Exception do hLog.AddToLog(E.Message, msevException);
-            end;
+            //  try
+  //               Update_FinalOrder_WinPct(dm.tblRaces, dm.tblEntries, dm.tblFinalOrder, pnlPrgBar, prgBar, staBar, BATCH_SIZE, False, RANKING_DAYS);
+  //            except
+  //               on E: Exception do hLog.AddToLog(E.Message, msevException);
+  //            end;
+  //
+  //            try
+  //               Update_FinalOrder_WinPctRank(dm.tblRaces, dm.tblEntries, pnlPrgBar, prgBar, staBar, BATCH_SIZE, False, RANKING_DAYS);
+  //            except
+  //               on E: Exception do hLog.AddToLog(E.Message, msevException);
+  //            end;
 
             try
                UpdatePaceAdvantage(dm.tblRaces, dm.tblEntries, pnlPrgBar, prgBar, staBar, 100);
@@ -6733,32 +6733,37 @@ begin
    //
    hLog.AddToLog('Create Reports ', msevOperation);
 
-
-
    //
-   if chkCreateExportFiles.Checked then begin
-      ExportFiles(Sender);
-      //  try
-  //         hLog.AddToLog('Delete Export Files ', msevOperation);
-  //         iAttributes := faAnyFile;
-  //         sSearch := EXPORT_REPORT_PATH + '*.csv';
-  //         if FindFirst(sSearch, iAttributes, tsFile) = 0 then begin
-  //            begin
-  //               repeat
-  //                  sFileName := Trim(tsFile.Name);
-  //                  VCLZip.FilesList.Add(sFileName);
-  //               until FindNext(tsFile) <> 0;
-  //               FindClose(tsFile);
-  //            end;
-  //         end;
-  //      except
-  //         FindClose(tsFile);
-  //         exit;
-  //      end;
-  //      VCLZip.Zip;
+   try
+      if chkCreateExportFiles.Checked then begin
+         ExportFiles(Sender);
+         FTPExport(FTP_EXPORT_DIR, EXPORT_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD)
+      end;
+   except
    end;
 
-   //
+
+   //  try
+   //         hLog.AddToLog('Delete Export Files ', msevOperation);
+   //         iAttributes := faAnyFile;
+   //         sSearch := EXPORT_REPORT_PATH + '*.csv';
+   //         if FindFirst(sSearch, iAttributes, tsFile) = 0 then begin
+   //            begin
+   //               repeat
+   //                  sFileName := Trim(tsFile.Name);
+   //                  VCLZip.FilesList.Add(sFileName);
+   //               until FindNext(tsFile) <> 0;
+   //               FindClose(tsFile);
+   //            end;
+   //         end;
+   //      except
+   //         FindClose(tsFile);
+   //         exit;
+   //      end;
+   //      VCLZip.Zip;
+   //  end;
+
+      //
    if chkCreateTipReport.Checked then begin
       hLog.AddToLog('Create TSN Reports - Start', msevOperation);
       try
@@ -7488,9 +7493,9 @@ begin
    DeleteFTPSheets(FTP_TIP_REPORT_DIR, PDF_TIP_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
    //   DeleteFTPSheets(FTP_GIMMICK_REPORT_DIR, PDF_GIMMICK_REPORT_PATH);
    DeleteFTPSheets(FTP_VALUE_REPORT_DIR, PDF_VALUE_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
-   DeleteFTPSheets(FTP_SELECTION_REPORT_DIR, PDF_SELECTION_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
+   //DeleteFTPSheets(FTP_SELECTION_REPORT_DIR, PDF_SELECTION_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
    //   DeleteFTPSheets(FTP_ANGLE_REPORT_DIR, PDF_ANGLE_REPORT_PATH);
-   DeleteFTPSheets(FTP_WAGER_REPORT_DIR, PDF_WAGER_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
+   //DeleteFTPSheets(FTP_WAGER_REPORT_DIR, PDF_WAGER_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
    DeleteFTPExport(FTP_EXPORT_DIR, EXPORT_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
 
 end;
@@ -7524,9 +7529,9 @@ begin
    end;
 
    //
-   if chkFTPGimmickReport.Checked then begin
-      FTPSheets(FTP_GIMMICK_REPORT_DIR, PDF_GIMMICK_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
-   end;
+   //if chkFTPGimmickReport.Checked then begin
+  //    FTPSheets(FTP_GIMMICK_REPORT_DIR, PDF_GIMMICK_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
+  // end;
 
    //
    if chkFTPValueReport.Checked then begin
@@ -7535,19 +7540,19 @@ begin
 
 
    //
-   if chkFTPSelectionReport.Checked then begin
-      FTPSheets(FTP_SELECTION_REPORT_DIR, PDF_SELECTION_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
-   end;
+   //if chkFTPSelectionReport.Checked then begin
+   //   FTPSheets(FTP_SELECTION_REPORT_DIR, PDF_SELECTION_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
+  // end;
 
 
-   if chkFTPAngleReport.Checked then begin
-      FTPSheets(FTP_ANGLE_REPORT_DIR, PDF_ANGLE_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
-   end;
+  // if chkFTPAngleReport.Checked then begin
+  //    FTPSheets(FTP_ANGLE_REPORT_DIR, PDF_ANGLE_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
+  // end;
 
    //
-   if chkFTPWagerReport.Checked then begin
-      FTPSheets(FTP_WAGER_REPORT_DIR, PDF_WAGER_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
-   end;
+   //if chkFTPWagerReport.Checked then begin
+    //  FTPSheets(FTP_WAGER_REPORT_DIR, PDF_WAGER_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD);
+  // end;
 
    if chkFTPExportFiles.Checked then begin
       FTPExport(FTP_EXPORT_DIR, EXPORT_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD)
@@ -8877,7 +8882,6 @@ begin
   //                  on E: Exception do hLog.AddToLog(E.Message, msevException);
   //               end;
 
-
                iniFile.WriteInteger('Processing', 'ResultsProcessed', 1);
                gbSuppressTimerOn := False;
                TimerOn(True);
@@ -8896,17 +8900,17 @@ begin
             DecodeTime(Present, wHour, wMin, wSec, wMSec);
 
 
-            if (wHour > 10) then begin
+            if (wHour > 9) then begin
                hLog.AddToLog('Late Changes', msevOperation);
 
                TimerOn(False);
                gbSuppressTimerOn := True;
 
-               if ((wHour >= 11) and (wHour <= 16)) then begin
+               if ((wHour >= 10) and (wHour <= 16)) then begin
                   btnProcessLateScratchesClick(Sender);
                end;
 
-               if ((wHour >= 18) and (wHour <= 22)) then begin
+               if ((wHour >= 10) and (wHour <= 22)) then begin
                   btnProcessLateScratchesClick(Sender);
                end;
 
@@ -9208,21 +9212,14 @@ begin
          end;
          //
 
-        // if (DayOfTheWeek(edtOverrideDate.Date) = DayTuesday) then begin
-//            try
-//               Create_FO_PK_SK_DK_Keys(BATCH_SIZE, CREATE_ALL_TRUE, ONE_DAY_FALSE, FINAL_ORDER_DAYS, FINAL_ORDER_DAYS);
-//               Create_FinalOrder_Key(BATCH_SIZE, ONE_DAY_FALSE, FINAL_ORDER_DAYS, FINAL_ORDER_DAYS);
-//            except
-//               on E: Exception do hLog.AddToLog(E.Message, msevException);
-//            end;
-//         end else begin
-//            try
-//               Create_FO_PK_SK_DK_Keys(BATCH_SIZE, CREATE_ALL_FALSE, ONE_DAY_FALSE, FINAL_ORDER_DAYS, FINAL_ORDER_DAYS);
-//               Create_FinalOrder_Key(BATCH_SIZE, ONE_DAY_TRUE, FINAL_ORDER_DAYS, FINAL_ORDER_DAYS);
-//            except
-//               on E: Exception do hLog.AddToLog(E.Message, msevException);
-//            end;
-//         end;
+         if (DayOfTheWeek(edtOverrideDate.Date) = DayTuesday) then begin
+            try
+               Create_FO_PK_SK_DK_Keys(BATCH_SIZE, True, False, FINAL_ORDER_DAYS, FINAL_ORDER_DAYS * 100);
+               Create_FinalOrder_Key(BATCH_SIZE, ONE_DAY_FALSE, FINAL_ORDER_DAYS, FINAL_ORDER_DAYS);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+         end;
 
          edtOverrideDate.Date := Now();
 
@@ -9956,7 +9953,7 @@ begin
          dm.tblDam.Post();
          Application.ProcessMessages();
       end;
-   end;      
+   end;
 end;
 
 procedure TMainForm.FldDam();
@@ -10798,18 +10795,18 @@ begin
    hLog.AddToLog('ProcessTodays', msevOperation);
    TimerOn(False);
 
-//   try
-//      btnStartOfDayClick(Sender);
-//   except
-//      on E: Exception do hLog.AddToLog(E.Message, msevException);
-//   end;
-//
-//   try
-//      ImportTSNHistory(Sender);
-//   except
-//      on E: Exception do hLog.AddToLog(E.Message, msevException);
-//   end;
-//
+   //   try
+   //      btnStartOfDayClick(Sender);
+   //   except
+   //      on E: Exception do hLog.AddToLog(E.Message, msevException);
+   //   end;
+   //
+   //   try
+   //      ImportTSNHistory(Sender);
+   //   except
+   //      on E: Exception do hLog.AddToLog(E.Message, msevException);
+   //   end;
+   //
    try
       ImportTSNForToday(Sender);
    except
@@ -10957,7 +10954,7 @@ var
    iIdx: integer;
    bClearTotals: boolean;
 
-begin                   
+begin
    //try
 //      UpdateTodaysWagerWinPct(dm.tblRaces, dm.tblEntries, dm.tblFinalOrder, dm.tblTrainerCategory, pnlPrgBar, prgBar, staBar, BATCH_SIZE, True, STAT_DAYS, NORMAL_ORDER);
 //   except
@@ -10969,20 +10966,20 @@ begin
 //   except
 //      on E: Exception do hLog.AddToLog(E.Message, msevException);
 //   end;
-    gbOpenCloseFiles := True;
-    CloseTable(dm.tblRaces);
-    CloseTable(dm.tblEntries);
-    CloseTable(dm.tblGimmicks);
-    try
-       UpdateGimmicks(dm.tblRaces, dm.tblEntries, dm.tblGimmicks, pnlPrgBar, prgBar, staBar, 100);
-    except
-       on E: Exception do hLog.AddToLog(E.Message, msevException);
-    end;
-    OpenTable(dm.tblRaces);
-    OpenTable(dm.tblEntries);
-    OpenTable(dm.tblGimmicks);
-    gbOpenCloseFiles := False;
-    exit;
+   gbOpenCloseFiles := True;
+   CloseTable(dm.tblRaces);
+   CloseTable(dm.tblEntries);
+   CloseTable(dm.tblGimmicks);
+   try
+      UpdateGimmicks(dm.tblRaces, dm.tblEntries, dm.tblGimmicks, pnlPrgBar, prgBar, staBar, 100);
+   except
+      on E: Exception do hLog.AddToLog(E.Message, msevException);
+   end;
+   OpenTable(dm.tblRaces);
+   OpenTable(dm.tblEntries);
+   OpenTable(dm.tblGimmicks);
+   gbOpenCloseFiles := False;
+   exit;
    // try
  //      UpdateOddsProbability(dm.tblRaces, dm.tblEntries, dm.tblFinalOrder, pnlPrgBar, prgBar, staBar, BATCH_SIZE);
  //   except
@@ -17973,17 +17970,17 @@ begin
                on E: Exception do hLog.AddToLog(E.Message, msevException);
             end;
 
-            try
-               Update_FinalOrder_WinPct(dm.tblRaces, dm.tblEntries, dm.tblFinalOrder, pnlPrgBar, prgBar, staBar, BATCH_SIZE, False, RANKING_DAYS);
-            except
-               on E: Exception do hLog.AddToLog(E.Message, msevException);
-            end;
-
-            try
-               Update_FinalOrder_WinPctRank(dm.tblRaces, dm.tblEntries, pnlPrgBar, prgBar, staBar, BATCH_SIZE, False, RANKING_DAYS);
-            except
-               on E: Exception do hLog.AddToLog(E.Message, msevException);
-            end;
+            //      try
+      //               Update_FinalOrder_WinPct(dm.tblRaces, dm.tblEntries, dm.tblFinalOrder, pnlPrgBar, prgBar, staBar, BATCH_SIZE, False, RANKING_DAYS);
+      //            except
+      //               on E: Exception do hLog.AddToLog(E.Message, msevException);
+      //            end;
+      //
+      //            try
+      //               Update_FinalOrder_WinPctRank(dm.tblRaces, dm.tblEntries, pnlPrgBar, prgBar, staBar, BATCH_SIZE, False, RANKING_DAYS);
+      //            except
+      //               on E: Exception do hLog.AddToLog(E.Message, msevException);
+      //            end;
 
 
             try
@@ -18602,7 +18599,7 @@ begin
 end;
 
 procedure TMainForm.ExportFiles(Sender: TObject);
-var                                            
+var
    sFileName: string;
    sBaseFileName: string;
 begin
@@ -18621,17 +18618,17 @@ begin
    dm.tblRaces.ExportTable(sFileName, ',', True);
    dm.tblRaces.Active := False;
 
-//   dm.tblRankingStats.Active := True;
-//   dm.tblRankingStats.First();
-//   sFileName := EXPORT_REPORT_PATH + 'RANK' + sBaseFileName;
-//   dm.tblRankingStats.ExportTable(sFileName, ',', True);
-//   dm.tblRankingStats.Active := False;
+   dm.tblRankingStats.Active := True;
+   dm.tblRankingStats.First();
+   sFileName := EXPORT_REPORT_PATH + 'RANK' + '.csv';
+   dm.tblRankingStats.ExportTable(sFileName, ',', True);
+   dm.tblRankingStats.Active := False;
 
-//   dm.tblRankingStatsByTrk.Active := True;
-//   dm.tblRankingStatsByTrk.First();
-//   sFileName := EXPORT_REPORT_PATH + 'RANKBYTRK' + sBaseFileName;
-//   dm.tblRankingStatsByTrk.ExportTable(sFileName, ',', True);
-//   dm.tblRankingStatsByTrk.Active := False;
+   dm.tblRankingStatsByTrk.Active := True;
+   dm.tblRankingStatsByTrk.First();
+   sFileName := EXPORT_REPORT_PATH + 'RANKBYTRK' + '.csv';
+   dm.tblRankingStatsByTrk.ExportTable(sFileName, ',', True);
+   dm.tblRankingStatsByTrk.Active := False;
 
    CreatePTCWagers(dm.tblRaces, dm.tblEntries, dm.tblPTCTrack, dm.tblPTCWager, pnlPrgBar, prgBar, staBar, BATCH_SIZE);
 

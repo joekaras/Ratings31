@@ -381,7 +381,7 @@ begin
                if (tblE.GotoKey()) then begin
                   tblE.Delete();
                end else begin
-                  hLog.AddToLog(sName, msevOperation);
+                  hLog.AddToLog(sName2, msevOperation);
                end;
             end;
 
@@ -391,7 +391,7 @@ begin
                if (tblE.GotoKey()) then begin
                   tblE.Delete();
                end else begin
-                  hLog.AddToLog(sName, msevOperation);
+                  hLog.AddToLog(sName3, msevOperation);
                end;
             end;
 
@@ -401,7 +401,7 @@ begin
                if (tblE.GotoKey()) then begin
                   tblE.Delete();
                end else begin
-                  hLog.AddToLog(sName, msevOperation);
+                  hLog.AddToLog(sName4, msevOperation);
                end;
 
             end;
@@ -412,7 +412,7 @@ begin
                if (tblE.GotoKey()) then begin
                   tblE.Delete();
                end else begin
-                  hLog.AddToLog(sName, msevOperation);
+                  hLog.AddToLog(sName5, msevOperation);
                end;
             end;
 
@@ -422,7 +422,7 @@ begin
                if (tblE.GotoKey()) then begin
                   tblE.Delete();
                end else begin
-                  hLog.AddToLog(sName, msevOperation);
+                  hLog.AddToLog(sName6, msevOperation);
                end;
             end;
 
@@ -432,7 +432,7 @@ begin
                if (tblE.GotoKey()) then begin
                   tblE.Delete();
                end else begin
-                  hLog.AddToLog(sName, msevOperation);
+                  hLog.AddToLog(sName7, msevOperation);
                end;
             end;
 
@@ -442,7 +442,7 @@ begin
                if (tblE.GotoKey()) then begin
                   tblE.Delete();
                end else begin
-                  hLog.AddToLog(sName, msevOperation);
+                  hLog.AddToLog(sName8, msevOperation);
                end;
             end;
 
@@ -452,7 +452,7 @@ begin
                if (tblE.GotoKey()) then begin
                   tblE.Delete();
                end else begin
-                  hLog.AddToLog(sName, msevOperation);
+                  hLog.AddToLog(sName9, msevOperation);
                end;
             end;
 
@@ -463,7 +463,7 @@ begin
                if (tblE.GotoKey()) then begin
                   tblE.Delete();
                end else begin
-                  hLog.AddToLog(sName, msevOperation);
+                  hLog.AddToLog(sName10, msevOperation);
                end;
             end;
 
@@ -473,7 +473,7 @@ begin
                if (tblE.GotoKey()) then begin
                   tblE.Delete();
                end else begin
-                  hLog.AddToLog(sName, msevOperation);
+                  hLog.AddToLog(sName11, msevOperation);
                end;
             end;
 
@@ -483,7 +483,7 @@ begin
                if (tblE.GotoKey()) then begin
                   tblE.Delete();
                end else begin
-                  hLog.AddToLog(sName, msevOperation);
+                  hLog.AddToLog(sName12, msevOperation);
                end;
             end;
 
@@ -493,7 +493,7 @@ begin
                if (tblE.GotoKey()) then begin
                   tblE.Delete();
                end else begin
-                  hLog.AddToLog(sName, msevOperation);
+                  hLog.AddToLog(sName13, msevOperation);
                end;
             end;
 
@@ -601,7 +601,7 @@ var
          FreeAndNil(lstSplit);
       end;
 
-   end;
+   end;                                                           
 
    procedure SetupKey();
    begin
@@ -726,7 +726,7 @@ begin
                      tblE.FieldByName('Jockey').Value := sNewValue;
                      tblE.Post();
                   end else begin
-                     hLog.AddToLog('No Horse Found' + sName, msevOperation);
+                     //hLog.AddToLog('No Horse Found' + sName, msevOperation);
                   end;
                end;
 
@@ -738,7 +738,7 @@ begin
                      tblE.FieldByName('Trainer').Value := sNewValue;
                      tblE.Post();
                   end else begin
-                     hLog.AddToLog('No Horse Found' + sName, msevOperation);
+                    // hLog.AddToLog('No Horse Found' + sName, msevOperation);
                   end;
                end;
 

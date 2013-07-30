@@ -1,0 +1,1 @@
+CREATE INDEX "ByTrkCodeMorningLineTo1" ON "PrevWeekHH" ("TrkCode","MorningLineTo1");

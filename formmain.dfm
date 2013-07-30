@@ -1,8 +1,8 @@
 object MainForm: TMainForm
-  Left = 410
-  Top = 199
-  Width = 1376
-  Height = 780
+  Left = 332
+  Top = 211
+  Width = 1280
+  Height = 866
   Caption = 'KSK Ratings 3.1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -20,8 +20,8 @@ object MainForm: TMainForm
   TextHeight = 16
   object staBar: TStatusBar
     Left = 0
-    Top = 692
-    Width = 1368
+    Top = 778
+    Width = 1272
     Height = 19
     Panels = <>
     ParentShowHint = False
@@ -30,8 +30,8 @@ object MainForm: TMainForm
   end
   object pnlPrgBar: TPanel
     Left = 0
-    Top = 711
-    Width = 1368
+    Top = 797
+    Width = 1272
     Height = 36
     Align = alBottom
     BorderStyle = bsSingle
@@ -48,24 +48,24 @@ object MainForm: TMainForm
   end
   object pgCtrlMain: TcxPageControl
     Left = 0
-    Top = 28
-    Width = 1368
-    Height = 664
-    ActivePage = tabDaily
+    Top = 25
+    Width = 1272
+    Height = 753
+    ActivePage = cxTabSheet2
     Align = alClient
     LookAndFeel.Kind = lfStandard
     LookAndFeel.NativeStyle = False
     TabOrder = 2
-    ClientRectBottom = 662
+    ClientRectBottom = 751
     ClientRectLeft = 2
-    ClientRectRight = 1366
+    ClientRectRight = 1270
     ClientRectTop = 25
     object tabDaily: TcxTabSheet
       Caption = 'Daily'
       object lblLocalPath: TLabel
         Left = 0
-        Top = 584
-        Width = 1364
+        Top = 670
+        Width = 1268
         Height = 26
         Align = alBottom
         AutoSize = False
@@ -78,8 +78,8 @@ object MainForm: TMainForm
       end
       object lblServerPath: TLabel
         Left = 0
-        Top = 610
-        Width = 1364
+        Top = 696
+        Width = 1268
         Height = 27
         Align = alBottom
         AutoSize = False
@@ -935,7 +935,7 @@ object MainForm: TMainForm
         Left = 0
         Top = 0
         Width = 236
-        Height = 895
+        Height = 726
         Align = alLeft
         TabOrder = 0
         object btnAnalysisFinalOrderForm: TButton
@@ -1935,7 +1935,7 @@ object MainForm: TMainForm
     DockControlHeights = (
       0
       0
-      28
+      25
       0)
     object File1: TdxBarSubItem
       Caption = 'File'

@@ -165,6 +165,8 @@ var
    s10fPaceFigure: string;
    sLatePaceFigure: string;
    sLastSpeedRating: string;
+   sLast2SpeedRating: string;
+   sLast3SpeedRating: string;
 
    sPP2fPaceFigure: string;
    sPP4fPaceFigure: string;
@@ -559,6 +561,8 @@ begin
             s10fPaceFigure := StringListTrim(lstS[806 - 1]);
             sLatePaceFigure := StringListTrim(lstS[816 - 1]);
             sLastSpeedRating := StringListTrim(lstS[846 - 1]);
+            sLast2SpeedRating := StringListTrim(lstS[847 - 1]);
+            sLast3SpeedRating := StringListTrim(lstS[848 - 1]);
 
             sTSNRunStyle := StringListTrim(lstS[210 - 1]);
             sEarlySpeedPoints := StringListTrim(lstS[211 - 1]);
@@ -1261,6 +1265,8 @@ begin
 
                tblE.FieldByName('BackClass').AsFloat := fBackClass;
                tblE.FieldByName('LastSpeed').AsInteger := atoi(sLastSpeedRating);
+               tblE.FieldByName('Last2Speed').AsInteger := atoi(sLast2SpeedRating);
+               tblE.FieldByName('Last3Speed').AsInteger := atoi(sLast3SpeedRating);
 
                tblE.FieldByName('BackSpeed').AsInteger := 0;
                if (tblR.FieldByName('Surface').AsString = 'T') then begin
