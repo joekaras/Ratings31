@@ -322,6 +322,7 @@ const
 
    FTP_TIP_REPORT_DIR = 'tipsheets';
    FTP_HOSPITAL_REPORT_DIR = 'altsheets';
+   FTP_HOSPITAL_REPORT2_DIR = 'altsheets2';
    FTP_GIMMICK_REPORT_DIR = 'gimmicksheets';
    FTP_VALUE_REPORT_DIR = 'valuesheets';
    FTP_ANGLE_REPORT_DIR = 'anglesheets';
@@ -1267,6 +1268,7 @@ var
 
    PDF_TIP_REPORT_PATH: string;
    PDF_HOSPITAL_REPORT_PATH: string;
+   PDF_HOSPITAL_REPORT2_PATH: string;
    PDF_GIMMICK_REPORT_PATH: string;
    PDF_VALUE_REPORT_PATH: string;
    PDF_ANGLE_REPORT_PATH: string;

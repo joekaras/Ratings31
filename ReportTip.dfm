@@ -1,6 +1,6 @@
 object TipReportForm: TTipReportForm
-  Left = 556
-  Top = 297
+  Left = 66
+  Top = 239
   Width = 703
   Height = 360
   HorzScrollBar.Position = 161
@@ -4977,7 +4977,7 @@ object TipReportForm: TTipReportForm
     PrinterSetup.PaperSize = 1
     Template.FileName = 'C:\Ratings31\ValueSheet.rtm'
     Template.Format = ftASCII
-    Units = utScreenPixels
+    Units = utPrinterPixels
     AllowPrintToFile = True
     CachePages = True
     DeviceType = 'PDFFile'
@@ -4996,7 +4996,7 @@ object TipReportForm: TTipReportForm
     DataPipelineName = 'plRacesReport'
     object ppDetailBand1: TppDetailBand
       mmBottomOffset = 0
-      mmHeight = 27305
+      mmHeight = 20320
       mmPrintPosition = 53
       object ppDBText14: TppDBText
         UserName = 'DBText14'
@@ -5014,7 +5014,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 193252
         mmTop = 1058
-        mmWidth = 22013
+        mmWidth = 7535
         BandType = 4
       end
       object lblErlPace: TppLabel
@@ -5047,7 +5047,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 137160
         mmTop = 1058
-        mmWidth = 20278
+        mmWidth = 7535
         BandType = 4
       end
       object lblMidPace: TppLabel
@@ -5079,7 +5079,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 164465
         mmTop = 1058
-        mmWidth = 21209
+        mmWidth = 7535
         BandType = 4
       end
       object ppLabel14: TppLabel
@@ -5125,7 +5125,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3725
         mmLeft = 12912
         mmTop = 847
-        mmWidth = 10668
+        mmWidth = 1439
         BandType = 4
       end
       object ppDBText3: TppDBText
@@ -5143,7 +5143,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3725
         mmLeft = 17780
         mmTop = 847
-        mmWidth = 9525
+        mmWidth = 1863
         BandType = 4
       end
       object ppDBText4: TppDBText
@@ -5161,7 +5161,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3725
         mmLeft = 22648
         mmTop = 847
-        mmWidth = 16976
+        mmWidth = 3768
         BandType = 4
       end
       object ppLine1: TppLine
@@ -5190,7 +5190,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3725
         mmLeft = 22648
         mmTop = 5927
-        mmWidth = 12361
+        mmWidth = 11853
         BandType = 4
       end
       object txtDebut: TppDBText
@@ -5250,9 +5250,9 @@ object TipReportForm: TTipReportForm
         TextAlignment = taRightJustified
         DataPipelineName = 'plRacesReport'
         mmHeight = 3302
-        mmLeft = 61764
+        mmLeft = 72348
         mmTop = 5715
-        mmWidth = 11896
+        mmWidth = 1312
         BandType = 4
       end
       object Starters: TppLabel
@@ -5332,7 +5332,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 2879
         mmLeft = 137160
         mmTop = 5080
-        mmWidth = 15960
+        mmWidth = 14563
         BandType = 4
       end
       object ppDBText12: TppDBText
@@ -5350,7 +5350,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 2879
         mmLeft = 164465
         mmTop = 5080
-        mmWidth = 16722
+        mmWidth = 14563
         BandType = 4
       end
       object ppDBText13: TppDBText
@@ -5369,7 +5369,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 2879
         mmLeft = 193252
         mmTop = 5080
-        mmWidth = 17314
+        mmWidth = 14563
         BandType = 4
       end
       object ppLabel4: TppLabel
@@ -5458,7 +5458,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3725
         mmLeft = 1693
         mmTop = 847
-        mmWidth = 10583
+        mmWidth = 5207
         BandType = 4
       end
       object ppDBText5: TppDBText
@@ -5475,8 +5475,8 @@ object TipReportForm: TTipReportForm
         DataPipelineName = 'plRacesReport'
         mmHeight = 2879
         mmLeft = 423
-        mmTop = 23495
-        mmWidth = 6773
+        mmTop = 16298
+        mmWidth = 99949
         BandType = 4
       end
       object ppDBText7: TppDBText
@@ -5494,21 +5494,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3725
         mmLeft = 1905
         mmTop = 5927
-        mmWidth = 19177
-        BandType = 4
-      end
-      object ppLabel6: TppLabel
-        UserName = 'Label7'
-        Caption = 'T/J'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 7
-        Font.Style = [fsBold]
-        mmHeight = 2963
-        mmLeft = 102447
-        mmTop = 16087
-        mmWidth = 2963
+        mmWidth = 15071
         BandType = 4
       end
       object ppLabel7: TppLabel
@@ -5516,13 +5502,13 @@ object TipReportForm: TTipReportForm
         Caption = '1st'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
+        Font.Name = 'Courier New'
         Font.Size = 12
         Font.Style = [fsBold]
-        mmHeight = 4911
+        mmHeight = 4826
         mmLeft = 2328
         mmTop = 11007
-        mmWidth = 5038
+        mmWidth = 7620
         BandType = 4
       end
       object ppLabel8: TppLabel
@@ -5530,13 +5516,13 @@ object TipReportForm: TTipReportForm
         Caption = '3rd'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
+        Font.Name = 'Courier New'
         Font.Size = 12
         Font.Style = [fsBold]
-        mmHeight = 4911
-        mmLeft = 57785
+        mmHeight = 4868
+        mmLeft = 51012
         mmTop = 11007
-        mmWidth = 5419
+        mmWidth = 7620
         BandType = 4
       end
       object ppLabel9: TppLabel
@@ -5544,113 +5530,13 @@ object TipReportForm: TTipReportForm
         Caption = '2nd'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
+        Font.Name = 'Courier New'
         Font.Size = 12
         Font.Style = [fsBold]
-        mmHeight = 4911
-        mmLeft = 31115
+        mmHeight = 4868
+        mmLeft = 26670
         mmTop = 11007
-        mmWidth = 6181
-        BandType = 4
-      end
-      object ppDBText10: TppDBText
-        UserName = 'DBText10'
-        AutoSize = True
-        DataField = 'TrainerSheetOrder'
-        DataPipeline = plRacesReport
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 7
-        Font.Style = []
-        Transparent = True
-        DataPipelineName = 'plRacesReport'
-        mmHeight = 2879
-        mmLeft = 137160
-        mmTop = 16087
-        mmWidth = 16679
-        BandType = 4
-      end
-      object TurfSheetOrder: TppDBText
-        UserName = 'TurfSheetOrder'
-        AutoSize = True
-        DataField = 'TurfSheetOrder'
-        DataPipeline = plRacesReport
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 7
-        Font.Style = []
-        Transparent = True
-        Visible = False
-        DataPipelineName = 'plRacesReport'
-        mmHeight = 2879
-        mmLeft = 193252
-        mmTop = 16087
-        mmWidth = 13885
-        BandType = 4
-      end
-      object ppLabel10: TppLabel
-        UserName = 'lblT'
-        Caption = 'Trn'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 7
-        Font.Style = [fsBold]
-        mmHeight = 2963
-        mmLeft = 131445
-        mmTop = 16087
-        mmWidth = 3175
-        BandType = 4
-      end
-      object ppLabel12: TppLabel
-        UserName = 'lblTurfSheetOrder'
-        Caption = 'Turf'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 7
-        Font.Style = [fsBold]
-        Visible = False
-        mmHeight = 2963
-        mmLeft = 186267
-        mmTop = 16087
-        mmWidth = 4022
-        BandType = 4
-      end
-      object ppLabel13: TppLabel
-        UserName = 'lblMaidenSheetOrder'
-        Caption = 'MDN'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 7
-        Font.Style = [fsBold]
-        Visible = False
-        mmHeight = 2963
-        mmLeft = 157480
-        mmTop = 16087
-        mmWidth = 4657
-        BandType = 4
-      end
-      object MaidenSheetOrder: TppDBText
-        UserName = 'MaidenSheetOrder'
-        AutoSize = True
-        DataField = 'MaidenSheetOrder'
-        DataPipeline = plRacesReport
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 7
-        Font.Style = []
-        Transparent = True
-        Visible = False
-        DataPipelineName = 'plRacesReport'
-        mmHeight = 2879
-        mmLeft = 164465
-        mmTop = 16087
-        mmWidth = 16891
+        mmWidth = 7620
         BandType = 4
       end
       object ppLabel15: TppLabel
@@ -5682,25 +5568,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 69850
         mmTop = 423
-        mmWidth = 20532
-        BandType = 4
-      end
-      object TrainerJockeySheetOrder: TppDBText
-        UserName = 'TrainerJockeySheetOrder'
-        AutoSize = True
-        DataField = 'TrainerJockeySheetOrder'
-        DataPipeline = plRacesReport
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 7
-        Font.Style = []
-        Transparent = True
-        DataPipelineName = 'plRacesReport'
-        mmHeight = 2879
-        mmLeft = 107315
-        mmTop = 15875
-        mmWidth = 22945
+        mmWidth = 11684
         BandType = 4
       end
       object ppDBText15: TppDBText
@@ -5718,70 +5586,6 @@ object TipReportForm: TTipReportForm
         mmLeft = 107315
         mmTop = 1058
         mmWidth = 20955
-        BandType = 4
-      end
-      object ppDBText19: TppDBText
-        UserName = 'DBText101'
-        AutoSize = True
-        DataField = 'OwnerSheetOrder'
-        DataPipeline = plRacesReport
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 7
-        Font.Style = []
-        Transparent = True
-        DataPipelineName = 'plRacesReport'
-        mmHeight = 2879
-        mmLeft = 137160
-        mmTop = 19897
-        mmWidth = 16214
-        BandType = 4
-      end
-      object ppDBText20: TppDBText
-        UserName = 'TrainerJockeySheetOrder1'
-        AutoSize = True
-        DataField = 'JockeySheetOrder'
-        DataPipeline = plRacesReport
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 7
-        Font.Style = []
-        Transparent = True
-        DataPipelineName = 'plRacesReport'
-        mmHeight = 2879
-        mmLeft = 107315
-        mmTop = 20108
-        mmWidth = 16595
-        BandType = 4
-      end
-      object ppLabel16: TppLabel
-        UserName = 'Label16'
-        Caption = 'Jky'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 7
-        Font.Style = [fsBold]
-        mmHeight = 2752
-        mmLeft = 102024
-        mmTop = 20320
-        mmWidth = 3387
-        BandType = 4
-      end
-      object ppLabel17: TppLabel
-        UserName = 'lblT1'
-        Caption = 'Own'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
-        Font.Size = 7
-        Font.Style = [fsBold]
-        mmHeight = 2836
-        mmLeft = 131445
-        mmTop = 20108
-        mmWidth = 4360
         BandType = 4
       end
       object ppLabel18: TppLabel
@@ -5828,7 +5632,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 2879
         mmLeft = 137160
         mmTop = 12700
-        mmWidth = 19431
+        mmWidth = 12531
         BandType = 4
       end
       object ppDBText22: TppDBText
@@ -5846,7 +5650,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 137160
         mmTop = 8678
-        mmWidth = 24299
+        mmWidth = 7535
         BandType = 4
       end
       object ppLabel20: TppLabel
@@ -5892,7 +5696,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 2879
         mmLeft = 164465
         mmTop = 12700
-        mmWidth = 20193
+        mmWidth = 12531
         BandType = 4
       end
       object ppDBText24: TppDBText
@@ -5910,7 +5714,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 164465
         mmTop = 8678
-        mmWidth = 25231
+        mmWidth = 7535
         BandType = 4
       end
       object ppLabel22: TppLabel
@@ -5957,7 +5761,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 2879
         mmLeft = 193252
         mmTop = 12700
-        mmWidth = 20786
+        mmWidth = 12531
         BandType = 4
       end
       object ppDBText26: TppDBText
@@ -5976,7 +5780,21 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 193252
         mmTop = 8678
-        mmWidth = 26035
+        mmWidth = 7535
+        BandType = 4
+      end
+      object ppLabel6: TppLabel
+        UserName = 'Label7'
+        Caption = '4th'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 12
+        Font.Style = [fsBold]
+        mmHeight = 4868
+        mmLeft = 75353
+        mmTop = 11007
+        mmWidth = 7620
         BandType = 4
       end
     end
@@ -6010,7 +5828,7 @@ object TipReportForm: TTipReportForm
           mmHeight = 3725
           mmLeft = 83185
           mmTop = 0
-          mmWidth = 10583
+          mmWidth = 5207
           BandType = 3
           GroupNo = 0
         end
@@ -6029,7 +5847,7 @@ object TipReportForm: TTipReportForm
           mmHeight = 3725
           mmLeft = 103294
           mmTop = 0
-          mmWidth = 11769
+          mmWidth = 12954
           BandType = 3
           GroupNo = 0
         end
@@ -6039,8 +5857,6 @@ object TipReportForm: TTipReportForm
         mmHeight = 0
         mmPrintPosition = 0
       end
-    end
-    object daDataModule1: TdaDataModule
     end
     object raCodeModule1: TraCodeModule
       ProgramStream = {
@@ -6090,65 +5906,7 @@ object TipReportForm: TTipReportForm
         74787444656275742E56697369626C65203A3D2046616C73653B2020200D0A0D
         0A20202020656E643B0D0A202020200D0A656E643B0D0A0D436F6D706F6E656E
         744E616D6506087478744465627574094576656E744E616D6506074F6E507269
-        6E74074576656E74494402200001060F5472614576656E7448616E646C65720B
-        50726F6772616D4E616D6506174D616964656E53686565744F726465724F6E50
-        72696E740B50726F6772616D54797065070B747450726F63656475726506536F
-        757263650C1101000070726F636564757265204D616964656E53686565744F72
-        6465724F6E5072696E743B0D0A626567696E0D0A0D0A2020202069662028706C
-        52616365735265706F72745B275261636554797065275D203D20274D53572729
-        20206F720D0A20202020202028706C52616365735265706F72745B2752616365
-        54797065275D203D20274D434C2729207468656E20626567696E0D0A20202020
-        2020204D616964656E53686565744F726465722E56697369626C65203A3D2054
-        7275653B0D0A20202020656E6420656C736520626567696E0D0A202020202020
-        204D616964656E53686565744F726465722E56697369626C65203A3D2046616C
-        73653B2020200D0A20202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F
-        6E656E744E616D6506104D616964656E53686565744F72646572094576656E74
-        4E616D6506074F6E5072696E74074576656E74494402200001060F5472614576
-        656E7448616E646C65720B50726F6772616D4E616D65061A6C626C4D61696465
-        6E53686565744F726465724F6E5072696E740B50726F6772616D54797065070B
-        747450726F63656475726506536F757263650C1C01000070726F636564757265
-        206C626C4D616964656E53686565744F726465724F6E5072696E743B0D0A6265
-        67696E0D0A0D0A2020202069662028706C52616365735265706F72745B275261
-        636554797065275D203D20274D5357272920206F720D0A20202020202028706C
-        52616365735265706F72745B275261636554797065275D203D20274D434C2729
-        207468656E20626567696E0D0A202020202020206C626C4D616964656E536865
-        65744F726465722E56697369626C65203A3D20547275653B0D0A20202020656E
-        6420656C736520626567696E0D0A202020202020206C626C4D616964656E5368
-        6565744F726465722E56697369626C65203A3D2046616C73653B2020200D0A0D
-        0A20202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D
-        6506136C626C4D616964656E53686565744F72646572094576656E744E616D65
-        06074F6E5072696E74074576656E74494402200001060F5472614576656E7448
-        616E646C65720B50726F6772616D4E616D6506155475726653686565744F7264
-        65724F6E5072696E740B50726F6772616D54797065070B747450726F63656475
-        726506536F7572636506DE70726F636564757265205475726653686565744F72
-        6465724F6E5072696E743B0D0A626567696E0D0A2020202069662028706C5261
-        6365735265706F72745B2753757266616365275D203D20275427292020202020
-        20207468656E20626567696E0D0A2020202020205475726653686565744F7264
-        65722E56697369626C65203A3D20547275653B0D0A20202020656E6420656C73
-        6520626567696E0D0A202020202020205475726653686565744F726465722E56
-        697369626C65203A3D2046616C73653B2020200D0A20202020656E643B0D0A20
-        200D0A656E643B0D0A0D436F6D706F6E656E744E616D65060E54757266536865
-        65744F72646572094576656E744E616D6506074F6E5072696E74074576656E74
-        494402200001060F5472614576656E7448616E646C65720B50726F6772616D4E
-        616D6506186C626C5475726653686565744F726465724F6E5072696E740B5072
-        6F6772616D54797065070B747450726F63656475726506536F7572636506E870
-        726F636564757265206C626C5475726653686565744F726465724F6E5072696E
-        743B0D0A626567696E0D0A2020202069662028706C52616365735265706F7274
-        5B2753757266616365275D203D2027542729202020202020207468656E206265
-        67696E0D0A202020202020206C626C5475726653686565744F726465722E5669
-        7369626C65203A3D20547275653B0D0A20202020656E6420656C736520626567
-        696E0D0A202020202020206C626C5475726653686565744F726465722E566973
-        69626C65203A3D2046616C73653B2020200D0A0D0A20202020656E643B0D0A0D
-        0A656E643B0D0A0D436F6D706F6E656E744E616D6506116C626C547572665368
-        6565744F72646572094576656E744E616D6506074F6E5072696E74074576656E
-        74494402200001060F5472614576656E7448616E646C65720B50726F6772616D
-        4E616D65061A44425465787431304F6E44726177436F6D6D616E64436C69636B
-        0B50726F6772616D54797065070B747450726F63656475726506536F75726365
-        064D70726F6365647572652044425465787431304F6E44726177436F6D6D616E
-        64436C69636B286144726177436F6D6D616E643A20544F626A656374293B0D0A
-        626567696E0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060844
-        42546578743130094576656E744E616D6506124F6E44726177436F6D6D616E64
-        436C69636B074576656E74494402550000}
+        6E74074576656E74494402200000}
     end
     object ppParameterList1: TppParameterList
     end

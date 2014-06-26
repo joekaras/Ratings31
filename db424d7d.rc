@@ -1,0 +1,26 @@
+1 VERSIONINFO
+FILEVERSION 4, 24, 0, 1
+PRODUCTVERSION 4, 24, 0, 1
+FILEOS 4
+FILETYPE 1
+{
+   BLOCK "StringFileInfo"
+   {
+      BLOCK "040904E4"
+      {
+         VALUE "CompanyName", "Elevate Software\000"
+         VALUE "FileDescription", "DBISAM VCL Client-Server with Source\000"
+         VALUE "FileVersion", "4.24 Build 1\000"
+         VALUE "InternalName", "DBISAM VCL Client-Server with Source - Release 4.24 - Build 1\000"
+         VALUE "LegalCopyright", "Copyright © 2006 Elevate Software, Inc.\000"
+         VALUE "OriginalFileName", "424d7d.bpl\000"
+         VALUE "ProductName", "DBISAM VCL Client-Server with Source\000"
+         VALUE "ProductVersion", "4.24\000"
+         VALUE "Comments", "\000"
+      }
+   }
+   BLOCK "VarFileInfo"
+   {
+      VALUE "Translation", 0x409, 1252
+   }
+}

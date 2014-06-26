@@ -1,0 +1,1 @@
+copy RatingDamSireAW.sql + RatingDamSireMud.sql +RatingDamSireRoute.sql +RatingDamSireSprint.sql +RatingJockey.sql +RatingJockeyOwner.sql +RatingJockeyTrack.sql +RatingSireAW.sql +RatingSireMud.sql +RatingSireRoute.sql +RatingSireSprint.sql +RatingSireTurf.sql +RatingTrainer.sql +RatingTrainerJockey.sql +RatingTrainerOwner.sql + RatingTrainerTrack.sql RatingAll.sql

@@ -42,9 +42,7 @@ var
    iFPPos: integer;
 
    iRaceNbr: integer;
-   iLineLen: integer;
-   iLineType: integer;
-
+  
    sFinishPos: string;
    sOfficialFinishPos: string;
 
@@ -924,15 +922,20 @@ begin
                               wMin := atow(RightStr(StringListTrim(lstPostTimes[1]), 2));
                               iEndPos := SmartPos(':', StringListTrim(lstPostTimes[1]));
                               wHour := atow(CopyStr(StringListTrim(lstPostTimes[1]), 1, iEndPos - 1));
-                              if ((wHour >= 0) and (wHour <= 10)) then begin
-                                 wHour := wHour + 12;
-                              end;
-
-                              if ((wHour >= 0) and (wHour <= 11)) then begin
-                                 if ((sTrack = 'EVD') or (sTrack = 'FP')) then begin
+                              if (wHour > 0) then begin
+                                 if (wHour <= 10) then begin
                                     wHour := wHour + 12;
                                  end;
                               end;
+
+                              if (wHour > 0) then begin
+                                 if (wHour <= 11) then begin
+                                    if ((sTrack = 'EVD') or (sTrack = 'FP')) then begin
+                                       wHour := wHour + 12;
+                                    end;
+                                 end;
+                              end;
+
                               if (sTrack = 'IND') then begin
                                  wHour := wHour - 1;
                               end;
@@ -953,11 +956,14 @@ begin
 
 
                      DecodeTime(tblR.FieldByName('EstTimeOfRace').AsDateTime, wHour, wMin, wSec, wMSec);
-                     if ((wHour >= 0) and (wHour <= 9)) then begin
-                        wHour := wHour + 24;
-                        sAMPM := sm.Str(wHour, 2) + ':';
-                     end else begin
-                        sAMPM := sm.Str(wHour, 2) + ':';
+
+                     if (wHour > 0) then begin
+                        if (wHour <= 9) then begin
+                           wHour := wHour + 24;
+                           sAMPM := sm.Str(wHour, 2) + ':';
+                        end else begin
+                           sAMPM := sm.Str(wHour, 2) + ':';
+                        end;
                      end;
 
                      if (wHour > 12) then begin
@@ -2055,6 +2061,56 @@ begin
                   end;
 
 
+                  if (tblE.FieldByName('IsFirstTimeJuice').AsBoolean = True) then begin
+                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 1;
+                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 1;
+                     //tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat;
+
+                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
+                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
+                     //tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat;
+                 end;
+
+                  if (tblE.FieldByName('IsBlinkersOn').AsBoolean = True) then begin
+                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 2;
+                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 2;
+                     //tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat;
+
+                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
+                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
+                     //tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat;
+                  end;
+
+                  if (tblE.FieldByName('IsBlinkersOff').AsBoolean = True) then begin
+                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat - 1;
+                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat - 1;
+                     tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat + 1;
+
+                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
+                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
+                     tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat -0.9;
+                  end;
+
+                  if (tblE.FieldByName('LifeStarts').AsInteger = 1) then begin
+                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 3;
+                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 3;
+                     tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat + 2;
+
+                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
+                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
+                     tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat -0.9;
+                  end;
+
+                  if (tblE.FieldByName('LifeStarts').AsInteger = 2) then begin
+                     //tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 3;
+                     //tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 3;
+                     tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat + 1;
+
+                     //tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
+                     //tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
+                     tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat -0.9;
+                  end;
+                  
 
                   if (tblR.FieldByName('Surface').AsString <> 'T') then begin
                      tblTC.IndexName := '';

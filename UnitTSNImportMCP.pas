@@ -747,7 +747,7 @@ var
    sjockeyDistanceOnTurfLabel: string;
    // 1368
    sjockeyDistanceOnTurfStarts: string;
-   // 1369                                
+   // 1369
    sjockeyDistanceOnTurfWins: string;
    // 1370
    sjockeyDistanceOnTurfPlaces: string;
@@ -3263,7 +3263,10 @@ begin
                tblE.FieldByName('LifePlcs').AsInteger := atoi(slifePlaces);
                tblE.FieldByName('LifeShos').AsInteger := atoi(slifeShows);
                tblE.FieldByName('LifeEarnings').AsInteger := atoi(slifeEarnings);
-               tblE.FieldByName('LifeEPS').AsInteger := 0;
+
+               if atoi(slifeStarts) > 0 then begin
+                  tblE.FieldByName('LifeEPS').AsInteger := atoi(slifeEarnings) div atoi(slifeStarts);
+               end;
 
                tblE.FieldByName('DebutIndicator').AsString := '';
                if atoi(slifeStarts) = 0 then begin
@@ -3282,7 +3285,10 @@ begin
                tblE.FieldByName('TurfPlcs').AsInteger := atoi(sturfPlaces);
                tblE.FieldByName('TurfShos').AsInteger := atoi(sturfShows);
                tblE.FieldByName('TurfEarnings').AsInteger := atoi(sturfEarnings);
-               tblE.FieldByName('TurfEPS').AsInteger := 0;
+
+               if atoi(sturfStarts) > 0 then begin
+                  tblE.FieldByName('TurfEPS').AsInteger := atoi(sTurfEarnings) div atoi(sTurfStarts);
+               end;
                if atoi(sturfStarts) = 0 then begin
                   tblE.FieldByName('TurfIndicator').AsString := '*';
                end;
@@ -3297,7 +3303,9 @@ begin
                tblE.FieldByName('MudPlcs').AsInteger := atoi(swetPlaces);
                tblE.FieldByName('MudShos').AsInteger := atoi(swetShows);
                tblE.FieldByName('MudEarnings').AsInteger := atoi(swetEarnings);
-               tblE.FieldByName('MudEPS').AsInteger := 0;
+               if atoi(sWetStarts) > 0 then begin
+                  tblE.FieldByName('MudEPS').AsInteger := atoi(sWetEarnings) div atoi(sWetStarts);
+               end;
                if atoi(swetStarts) = 0 then begin
                   tblE.FieldByName('MudIndicator').AsString := '*';
                end;
@@ -3310,7 +3318,10 @@ begin
                tblE.FieldByName('TrkPlcs').AsInteger := atoi(strackPlaces);
                tblE.FieldByName('TrkShos').AsInteger := atoi(strackShows);
                tblE.FieldByName('TrkEarnings').AsInteger := atoi(strackEarnings);
-               tblE.FieldByName('TrkEPS').AsInteger := 0;
+
+               if atoi(strackStarts) > 0 then begin
+                  tblE.FieldByName('TrkEPS').AsInteger := atoi(sTrackEarnings) div atoi(sTrackStarts);
+               end;
 
                tblE.FieldByName('RouteIndicator').AsString := '';
                if tblR.FieldByName('DistanceInFurlongs').AsFloat >= 8 then begin
@@ -4160,11 +4171,11 @@ begin
                end;
                tblE.FieldByName('TJ365Starts').AsFloat := fStarts;
                tblE.FieldByName('TJ365WinPct').AsFloat := fWinPct;
-               
+
                if (fStarts > 16) then begin
                   tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TJMeetWinPct').AsFloat;
                end;
-               
+
                tblE.Post();
             end;
 

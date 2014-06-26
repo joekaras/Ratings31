@@ -1,0 +1,12 @@
+:Base bdetran.hlp
+:Title BDE Databse Transfer Utility
+1 BDE Databse Transfer Utility
+2 Popup
+2 Before You Begin
+3 dBase Expression Indexes=dBase_Expression_Indexes
+3 dBase Typed Binary BLOB Fields=dBase_Typed_Binary_BLOB_Fields
+3 OLE BLOB Fields=OLE_BLOB_Fields
+3 Encrypted Tables=Encrypted_Tables
+2 Using the Utility
+3 "What's This" Help=Whats_This_Help
+3 Step-By-Step Instructions=Step_By_Step_Instructions

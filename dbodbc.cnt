@@ -1,0 +1,7 @@
+:Base dbodbc.hlp
+:Title ODBC Driver
+1 ODBC Driver
+2 Before You Begin
+3 Application Compatibility=Application_Compatibility
+3 Configuring a Data Source=Configuring _Data_Source
+3 Registry Entries=Registry_Entries

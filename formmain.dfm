@@ -1,8 +1,8 @@
 object MainForm: TMainForm
-  Left = 332
-  Top = 211
-  Width = 1280
-  Height = 866
+  Left = 636
+  Top = 122
+  Width = 1029
+  Height = 572
   Caption = 'KSK Ratings 3.1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -20,8 +20,8 @@ object MainForm: TMainForm
   TextHeight = 16
   object staBar: TStatusBar
     Left = 0
-    Top = 778
-    Width = 1272
+    Top = 484
+    Width = 1021
     Height = 19
     Panels = <>
     ParentShowHint = False
@@ -30,8 +30,8 @@ object MainForm: TMainForm
   end
   object pnlPrgBar: TPanel
     Left = 0
-    Top = 797
-    Width = 1272
+    Top = 503
+    Width = 1021
     Height = 36
     Align = alBottom
     BorderStyle = bsSingle
@@ -49,23 +49,23 @@ object MainForm: TMainForm
   object pgCtrlMain: TcxPageControl
     Left = 0
     Top = 25
-    Width = 1272
-    Height = 753
-    ActivePage = cxTabSheet2
+    Width = 1021
+    Height = 459
+    ActivePage = tabBatch
     Align = alClient
     LookAndFeel.Kind = lfStandard
     LookAndFeel.NativeStyle = False
     TabOrder = 2
-    ClientRectBottom = 751
+    ClientRectBottom = 457
     ClientRectLeft = 2
-    ClientRectRight = 1270
+    ClientRectRight = 1019
     ClientRectTop = 25
     object tabDaily: TcxTabSheet
       Caption = 'Daily'
       object lblLocalPath: TLabel
         Left = 0
-        Top = 670
-        Width = 1268
+        Top = 513
+        Width = 1216
         Height = 26
         Align = alBottom
         AutoSize = False
@@ -78,8 +78,8 @@ object MainForm: TMainForm
       end
       object lblServerPath: TLabel
         Left = 0
-        Top = 696
-        Width = 1268
+        Top = 539
+        Width = 1216
         Height = 27
         Align = alBottom
         AutoSize = False
@@ -3185,6 +3185,7 @@ object MainForm: TMainForm
     Top = 208
   end
   object MadExceptionHandler1: TMadExceptionHandler
+    OnException = MadExceptionHandler1Exception
     Left = 784
     Top = 288
   end

@@ -1,0 +1,48 @@
+:Base dbsys.hlp
+:Title Database System Utility
+1 Database System Utility
+2 Popup
+2 Before You Begin
+3 Performing Actions on Tables and Query Result Sets=Performing_Actions
+3 Multiple Selections in Table Open and Save Dialogs=Multiple_Selections_Dialogs
+3 Opening Tables Exclusively=Opening_Tables_Exclusively
+3 Record Numbers=Record_Numbers
+3 Record Counts=Record_Counts
+3 Alter Backup Data=Alter_Backup_Data
+3 Upgrade Backup Data=Upgrade_Backup_Data
+3 Empyting, Copying, Renaming, Deleting Tables=Empyting_Copying_Renaming
+2 Using the Utility
+3 Configuring System Options=Configuring_System_Options
+3 Creating a New Table=Creating_New_Table
+3 Creating a New SQL Query=Creating_SQL_Query
+3 Opening an Existing Table=Opening_Existing_Table
+3 Closing an Open Table=Closing_Open_Table
+3 Locking Open Table=Locking_Open_Table
+3 Unlocking Open Table=Unlocking_Open_Table
+3 Starting a Transaction=Starting_Transaction
+3 Committing a Transaction=Committing_Transaction
+3 Rolling Back a Transaction=Rolling_Back_Transaction
+3 Changing the Active Index Order=Changing_Active_Index_Order
+3 Searching for a Record Using the Active Index Order=Searching_Record_Active_Index
+3 Finding a Record Using an Expression=Finding_Record_Using_Expressio
+3 Moving to a Specific Logical Record Number=Moving_Logical_Record_Number
+3 Setting a Range Using the Active Index Order=Setting_Range_Active_Index
+3 Setting an Expression Filter=Setting_Expression_Filter
+3 Importing Data from a Text File=Importing_Text_Data
+3 Exporting Data to a Text File=Exporting_Text_Data
+3 Loading Data from a File Stream=Loading_File_Stream
+3 Saving Data to a File Stream=Saving_File_Stream
+3 Flushing the Buffers in a Table=Flushing_Buffers
+3 Altering Tables=Altering_Tables
+3 Verifying Tables=Verifying_Tables
+3 Repairing Corrupted Tables=Repairing_Corrupted_Tables
+3 Optimizing Tables=Optimizing_Tables
+3 Emptying Tables=Emptying_Tables
+3 Copying Tables=Copying_Tables
+3 Renaming Tables=Renaming_Tables
+3 Deleting Tables=Deleting_Tables
+3 Reverse Engineering Tables=Reverse_Engineering_Tables
+3 Reading Version Information from Tables=Reading_Version_Information
+3 Upgrading Tables=Upgrading_Tables
+3 Backing Up Databases=Backing_Up_Database
+3 Restoring Databases=Restoring_Database

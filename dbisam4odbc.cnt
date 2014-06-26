@@ -1,0 +1,9 @@
+:Base dbisam4odbc.hlp
+:Title DBISAM Version 4 ODBC Driver Manual
+1 DBISAM Version 4 ODBC Driver Manual
+2 Before You Begin
+3 Application Compatibility=Application_Compatibility
+2 Using the ODBC Driver
+3 Configuring a Data Source=Configuring_Data_Source
+3 Registry Entries=Registry_Entries
+3 Connection Strings=Connection_Strings

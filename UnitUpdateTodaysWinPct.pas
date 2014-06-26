@@ -241,7 +241,7 @@ begin
                         tblE.FieldByName('FinalOrderValueBet').AsFloat := tblF.FieldByName('ValueBet').AsFloat;
                      end;
 
-                     if (tblF.FieldByName('Starts').AsInteger > 29) then begin
+                     if (tblF.FieldByName('Starts').AsInteger >= 16) then begin
                         if (UpperCase(tblE.TableName) = 'ENTRY') then begin
                            tblE.FieldByName('TodaysWagerOrderKey').AsString := sTodaysKey;
                         end;
@@ -264,7 +264,7 @@ begin
                   tblF.FieldByName('OrderKey').AsString := sTodaysKey;
                   if (tblF.GotoKey()) then begin
 
-                     if (tblF.FieldByName('Starts').AsInteger > 29) then begin
+                     if (tblF.FieldByName('Starts').AsInteger >= 16) then begin
                         if (tblF.FieldByName('WinPct').AsFloat > fSaveWinPct) then begin
 
                            if (UpperCase(tblE.TableName) = 'ENTRY') then begin
@@ -303,7 +303,7 @@ begin
                         tblF.FieldByName('OrderKey').AsString := sTodaysKey;
                         if (tblF.GotoKey()) then begin
 
-                           if (tblF.FieldByName('Starts').AsInteger > 29) then begin
+                           if (tblF.FieldByName('Starts').AsInteger >= 16) then begin
                               if (tblF.FieldByName('WinPct').AsFloat > fSaveWinPct) then begin
                                  if (UpperCase(tblE.TableName) = 'ENTRY') then begin
                                     tblE.FieldByName('TodaysWagerOrderKey').AsString := sTodaysKey;
@@ -329,7 +329,7 @@ begin
                         tblF.FieldByName('OrderKey').AsString := sTodaysKey;
                         if (tblF.GotoKey()) then begin
 
-                           if (tblF.FieldByName('Starts').AsInteger > 29) then begin
+                           if (tblF.FieldByName('Starts').AsInteger >= 16) then begin
                               if (tblF.FieldByName('WinPct').AsFloat > fSaveWinPct) then begin
                                  if (UpperCase(tblE.TableName) = 'ENTRY') then begin
                                     tblE.FieldByName('TodaysWagerOrderKey').AsString := sTodaysKey;
@@ -366,7 +366,7 @@ begin
 
 
                if (tblE.FieldByName('DaysLast').AsInteger > 90) then begin
-                  if (tblE.FieldByName('TotalTrn46To120Starts').AsInteger > 29) then begin
+                  if (tblE.FieldByName('TotalTrn46To120Starts').AsInteger >= 16) then begin
                      if (tblE.FieldByName('TotalTrn46To120WinPct').AsFloat > fSaveWinPct) then begin
                         tblE.FieldByName('TodaysWagerStarts').AsFloat := tblE.FieldByName('TotalTrn46To120Starts').AsFloat;
                         tblE.FieldByName('TodaysWagerWinPct').AsFloat := tblE.FieldByName('TotalTrn46To120WinPct').AsFloat;
@@ -390,7 +390,7 @@ begin
                      tblTC.FieldByName('Category').AsString := '1st time str';
 
                      if (tblTC.GotoKey()) then begin
-                        if (tblTC.FieldByName('Starts').AsInteger > 29) then begin
+                        if (tblTC.FieldByName('Starts').AsInteger >= 16) then begin
                            if (tblTC.FieldByName('WinPct').AsFloat > fSaveWinPct) then begin
                               tblE.FieldByName('TodaysWagerOrderKey').AsString := 'TrnDebut';
                               tblE.FieldByName('TotalTrnDebutWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
@@ -413,7 +413,7 @@ begin
                      tblTC.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
                      tblTC.FieldByName('Category').AsString := '2nd career race';
                      if (tblTC.GotoKey()) then begin
-                        if (tblTC.FieldByName('Starts').AsInteger > 29) then begin
+                        if (tblTC.FieldByName('Starts').AsInteger >= 16) then begin
                            if (tblTC.FieldByName('WinPct').AsFloat > fSaveWinPct) then begin
                               tblE.FieldByName('TodaysWagerOrderKey').AsString := 'TrnTwoDebut';
                               tblE.FieldByName('TotalTrnDebutTwoWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;

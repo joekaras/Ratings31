@@ -1,0 +1,75 @@
+[Query Panel]
+ttlFilter=Choose records where @ of the following apply
+ttlBracket=@ of the following apply
+ttlAll=all
+ttlAny=any
+ttlNone=none
+ttlNotAll=not all
+ttlAddBracket=Add &Bracket
+ttlAddCond=Add &Condition
+ttlDelRow=&Delete Current Row
+ttlEnableDisable=&Enable/Disable Row
+ttlClickToAdd=Click here to add new condition
+ttlSubQueryCaption=Sub-query
+ttlResultField=Result Field
+ttlAnd=and
+ttlOr=or
+ttlConstant=Constant value
+ttlParameter=Parameter
+ttlCustomCond=Add custom condition
+
+[Result Fields Editor]
+ttlRFETitle=Result Fields Editor
+ttlFields=&Available fields
+ttlResFields=Result fields
+ttlMakeFldHint=Create result field
+ttlDelFldHint=Delete result field
+ttlNewFldHint=New result field
+ttlAddRFldHint=Add to result field
+ttlSubRFldHint=Subtract from result field
+ttlMulRFldHint=Multiply by result field
+ttlDivRFldHint=Divide by result field
+ttlSortRFldHint=Sort result field
+ttlNotSorted=Not Sorted
+ttlAscending=Ascending
+ttlDescending=Descending
+ttlSortCaption=Sorted fields
+ttlSortingColName=Sorting type
+ttlFieldNmColName=Field Name
+ttlFieldExprColName=Expression
+ttlMgsDeleteField=Delete Field "%s"?
+ttlOkBtnCaption=OK
+ttlCancelBtnCaption=Cancel
+ttlAsIs=as is
+ttlJustSorting=just sorting
+ttlAddBtnCaption=&Add
+ttlAddBtnHint=Add result field
+ttlHelpBtnCaption=&Help
+ttlSUMCaption=SUM
+ttlCOUNTCaption=COUNT
+ttlMINCaption=MIN
+ttlMAXCaption=MAX
+ttlAVERAGECaption=AVERAGE
+
+
+[Main]
+QueryName=
+Version=3.5
+Options=
+
+[Description]
+AllByTrkCodeFinishPos
+
+[UserData]
+
+[RFields]
+Count=0
+Version=3.5
+JustSorting=1
+
+[Row]
+Enabled=1
+RowType=1
+LinkType=0
+RowCount=0
+
