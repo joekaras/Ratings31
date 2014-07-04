@@ -348,6 +348,28 @@ begin
             end;
          end;
          
+         //
+         sTodaysKey := GetMorningLineKeyPower(dm.tblRH, dm.tblHH);
+         if (sTodaysKey <> '') then begin
+            dm.tblFinalOrder.IndexName := '';
+            dm.tblFinalOrder.SetKey();
+            dm.tblFinalOrder.FieldByName('OrderKey').AsString := sTodaysKey;
+            if (dm.tblFinalOrder.GotoKey()) then begin
+               dm.tblFinalOrder.Edit();
+               dm.tblFinalOrder.FieldByName('BaseKey').AsString := 'ML-PW';
+               dm.tblFinalOrder.FieldByName('TrkKey').AsString := dm.tblRH.FieldByName('TrkCode').AsString;
+               SummaryFlds(dm.tblHH, dm.tblFinalOrder);
+               dm.tblFinalOrder.Post();
+            end else begin
+               dm.tblFinalOrder.Append();
+               dm.tblFinalOrder.FieldByName('OrderKey').AsString := sTodaysKey;
+               dm.tblFinalOrder.FieldByName('BaseKey').AsString := 'ML-PW';
+               dm.tblFinalOrder.FieldByName('TrkKey').AsString := dm.tblRH.FieldByName('TrkCode').AsString;
+               SummaryFlds(dm.tblHH, dm.tblFinalOrder);
+               dm.tblFinalOrder.Post();
+            end;
+         end;
+         
          
          //
          sTrainer := Trim(dm.tblHH.FieldByName('Trainer').AsString);

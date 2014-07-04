@@ -82,6 +82,7 @@ type
     ppDBText17: TppDBText;
     ppGroupFooterBand1: TppGroupFooterBand;
     raCodeModule1: TraCodeModule;
+    ppLabel6: TppLabel;
       procedure FormCreate(Sender: TObject);
       procedure FormDestroy(Sender: TObject);
       procedure btnCreatePdfClick(Sender: TObject);

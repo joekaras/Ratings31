@@ -13,6 +13,7 @@ function GetFinalOrderKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 function GetElimKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 function GetElim2Key(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 function GetMorningLineKeyTrkCodePower(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+function GetMorningLineKeyPower(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 function GetMorningLineKeyTrkCodeRaceType(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 
 //function GetDefaultOrderKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
@@ -98,7 +99,6 @@ uses DatRatings, FastStrings, FastStringFuncs, ESBDates,
 function GetMorningLineKeyTrkCodePower(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 var
    sBaseKey: string;
-
 begin
 
    sBaseKey := '';
@@ -118,11 +118,57 @@ begin
       sBaseKey := Format('%-3s', [tblR.FieldByName('TrkCode').AsString]) + '/' + sBaseKey;
       if ((tblE.FieldByName('PowerRank').AsInteger > 0) and
          (tblE.FieldByName('PowerRank').AsInteger <= 8)) then begin
-         sBaseKey := sBaseKey + '-P-' + sm.str(tblE.FieldByName('PowerRank').AsInteger, 2);
+         sBaseKey := sBaseKey + '-PL-' + sm.str(tblE.FieldByName('PowerRank').AsInteger, 2);
+         if ((tblE.FieldByName('LatePaceRank').AsInteger > 0) and
+            (tblE.FieldByName('LatePaceRank').AsInteger <= 4)) then begin
+            sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('LatePaceRank').AsInteger, 2);
+         end else begin
+            sBaseKey := sBaseKey + '/' + sm.str(99, 2);
+         end
       end else begin
-         sBaseKey := sBaseKey + '-P-' + sm.str(99, 2);
+         sBaseKey := sBaseKey + '/' + sm.str(99, 2);
+         sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('LatePaceRank').AsInteger, 2);
+
       end;
 
+
+   end;
+
+   Result := sBaseKey;
+end;
+
+function GetMorningLineKeyPower(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+var
+   sBaseKey: string;
+begin
+
+   sBaseKey := '';
+
+   tblR.IndexName := '';
+   tblR.SetKey();
+   tblR.FieldByName('TrkCode').Value := tblE.FieldByName('TrkCode').Value;
+   tblR.FieldByName('RaceDate').Value := tblE.FieldByName('RaceDate').Value;
+   tblR.FieldByName('RaceNbr').Value := tblE.FieldByName('RaceNbr').Value;
+
+   if tblR.GotoKey() then begin
+
+      sBaseKey := tblE.FieldByName('MorningLineDesc').AsString;
+      sBaseKey := FastReplace(sBaseKey, 'B', '', True);
+      sBaseKey := FastReplace(sBaseKey, '+', '', True);
+      sBaseKey := FastReplace(sBaseKey, 'L', '', True);
+      if ((tblE.FieldByName('PowerRank').AsInteger > 0) and
+         (tblE.FieldByName('PowerRank').AsInteger <= 8)) then begin
+         sBaseKey := sBaseKey + '-PL-' + sm.str(tblE.FieldByName('PowerRank').AsInteger, 2);
+         if ((tblE.FieldByName('LatePaceRank').AsInteger > 0) and
+            (tblE.FieldByName('LatePaceRank').AsInteger <= 4)) then begin
+            sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('LatePaceRank').AsInteger, 2);
+         end else begin
+            sBaseKey := sBaseKey + '/' + sm.str(99, 2);
+         end
+      end else begin
+         sBaseKey := sBaseKey + '/' + sm.str(99, 2);
+         sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('LatePaceRank').AsInteger, 2);
+      end;
    end;
 
    Result := sBaseKey;
@@ -173,18 +219,29 @@ begin
 
       sBaseKey := '';
       if ((tblE.FieldByName('PowerRank').AsInteger > 0) and
-         (tblE.FieldByName('PowerRank').AsInteger <= 4)) then begin
+         (tblE.FieldByName('PowerRank').AsInteger < 4)) then begin
          sBaseKey := sBaseKey + tblE.FieldByName('Trainer').AsString;
-         sBaseKey := sBaseKey + '-P-' + sm.str(tblE.FieldByName('PowerRank').AsInteger, 2);
+         sBaseKey := sBaseKey + '-PL-' + sm.str(tblE.FieldByName('PowerRank').AsInteger, 2);
+         if ((tblE.FieldByName('LatePacePosRank').AsInteger > 0) and
+            (tblE.FieldByName('LatePacePosRank').AsInteger <= 4)) then begin
+            sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('LatePacePosRank').AsInteger, 2);
+         end else begin
+            sBaseKey := sBaseKey + '/' + sm.str(99, 2);
+         end;
       end else begin
          sBaseKey := sBaseKey + tblE.FieldByName('Trainer').AsString;
-         sBaseKey := sBaseKey + '-P-' + sm.str(99, 2);
+         sBaseKey := sBaseKey + '-PL-' + sm.str(99, 2);
+         if ((tblE.FieldByName('LatePacePosRank').AsInteger > 0) and
+            (tblE.FieldByName('LatePacePosRank').AsInteger <= 4)) then begin
+            sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('LatePacePosRank').AsInteger, 2);
+         end else begin
+            sBaseKey := sBaseKey + '/' + sm.str(99, 2);
+         end;
       end;
 
+      Result := sBaseKey;
+
    end;
-
-   Result := sBaseKey;
-
 end;
 
 function GetSpeedRankTrkCodeSurfaceDistanceSpeedCount(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
@@ -951,6 +1008,35 @@ begin
    bNoKSP := True;
    bNoKSP2 := True;
 
+   if (tblR.FieldByName('RaceType').AsString = 'MSW') or (tblR.FieldByName('RaceType').AsString = 'MCL') then begin
+      if (tblE.FieldByName('DebutIndicator').AsString = '*') then begin
+         sBaseKey := sBaseKey + 'SOME';
+         Result := sBaseKey;
+         exit;
+      end;
+
+      if (tblE.FieldByName('DebutIndicator').AsString = '**') then begin
+         sBaseKey := sBaseKey + 'SOME';
+         Result := sBaseKey;
+         exit;
+      end;
+   end;
+
+   if (tblR.FieldByName('Surface').AsString = 'T') then begin
+      if (tblE.FieldByName('TurfIndicator').AsString = '*') then begin
+         sBaseKey := sBaseKey + 'SOME';
+         Result := sBaseKey;
+         exit;
+      end;
+
+      if (tblE.FieldByName('TurfIndicator').AsString = '**') then begin
+         sBaseKey := sBaseKey + 'SOME';
+         Result := sBaseKey;
+         exit;
+      end;
+   end;
+
+   
    //
    bBadPower := False;
    if (tblE.FieldByName('Power').AsFloat > 0.00) then begin
@@ -1056,6 +1142,35 @@ begin
 
    bBadPower := True;
    bBadSpeed := True;
+   
+   if (tblR.FieldByName('RaceType').AsString = 'MSW') or (tblR.FieldByName('RaceType').AsString = 'MCL') then begin
+      if (tblE.FieldByName('DebutIndicator').AsString = '*') then begin
+         sBaseKey := sBaseKey + 'SOME2';
+         Result := sBaseKey;
+         exit;
+      end;
+
+      if (tblE.FieldByName('DebutIndicator').AsString = '**') then begin
+         sBaseKey := sBaseKey + 'SOME2';
+         Result := sBaseKey;
+         exit;
+      end;
+   end;
+
+   if (tblR.FieldByName('Surface').AsString = 'T') then begin
+      if (tblE.FieldByName('TurfIndicator').AsString = '*') then begin
+         sBaseKey := sBaseKey + 'SOME2';
+         Result := sBaseKey;
+         exit;
+      end;
+
+      if (tblE.FieldByName('TurfIndicator').AsString = '**') then begin
+         sBaseKey := sBaseKey + 'SOME2';
+         Result := sBaseKey;
+         exit;
+      end;
+   end;
+
 
 
    if ((tblE.FieldByName('LastSpeedRank').AsInteger >= 1) and

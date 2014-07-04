@@ -5502,13 +5502,13 @@ object TipReportForm: TTipReportForm
         Caption = '1st'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
+        Font.Name = 'Courier New'
         Font.Size = 12
         Font.Style = [fsBold]
-        mmHeight = 4911
+        mmHeight = 4826
         mmLeft = 2328
         mmTop = 11007
-        mmWidth = 5038
+        mmWidth = 7620
         BandType = 4
       end
       object ppLabel8: TppLabel
@@ -5516,13 +5516,13 @@ object TipReportForm: TTipReportForm
         Caption = '3rd'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
+        Font.Name = 'Courier New'
         Font.Size = 12
         Font.Style = [fsBold]
-        mmHeight = 4911
-        mmLeft = 57785
+        mmHeight = 4868
+        mmLeft = 51012
         mmTop = 11007
-        mmWidth = 5419
+        mmWidth = 7620
         BandType = 4
       end
       object ppLabel9: TppLabel
@@ -5530,13 +5530,13 @@ object TipReportForm: TTipReportForm
         Caption = '2nd'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
-        Font.Name = 'Arial Narrow'
+        Font.Name = 'Courier New'
         Font.Size = 12
         Font.Style = [fsBold]
-        mmHeight = 4911
-        mmLeft = 31115
+        mmHeight = 4868
+        mmLeft = 26670
         mmTop = 11007
-        mmWidth = 6181
+        mmWidth = 7620
         BandType = 4
       end
       object ppLabel15: TppLabel
@@ -5781,6 +5781,20 @@ object TipReportForm: TTipReportForm
         mmLeft = 193252
         mmTop = 8678
         mmWidth = 7535
+        BandType = 4
+      end
+      object ppLabel6: TppLabel
+        UserName = 'Label7'
+        Caption = '4th'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Courier New'
+        Font.Size = 12
+        Font.Style = [fsBold]
+        mmHeight = 4868
+        mmLeft = 75353
+        mmTop = 11007
+        mmWidth = 7620
         BandType = 4
       end
     end

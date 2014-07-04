@@ -1,6 +1,6 @@
 object TipReportForm: TTipReportForm
-  Left = 66
-  Top = 239
+  Left = 76
+  Top = 297
   Width = 703
   Height = 360
   HorzScrollBar.Position = 161
