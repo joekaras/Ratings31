@@ -8,7 +8,7 @@ uses
    DBISAMTb, Db, StdCtrls, ComCtrls, ExtCtrls,
    ztvBase, ztvUnRAR, ztvUnLHA, ztvRegister,
    Menus, iniFiles, IdLogEvent, IdLogFile, IDFTPCommon,
-   ztvZip, IdIOHandler, dxBar, StrMan,          
+   ztvZip, IdIOHandler, dxBar, StrMan,
    cxPc, cxControls, cxCheckBox, cxContainer, cxEdit, cxTextEdit,
    cxMaskEdit, cxDropDownEdit, dxBarExtItems, cxButtons,
    cxLookAndFeelPainters, cxGridLevel,
@@ -537,10 +537,10 @@ type
       procedure btnResultsExportClick(Sender: TObject);
       procedure Button87Click(Sender: TObject);
       procedure btnCreatePTCFileClick(Sender: TObject);
-    procedure MadExceptionHandler1ExceptAction(action: TExceptAction;
-      const exceptIntf: IMEException; var handled: Boolean);
-    procedure MadExceptionHandler1Exception(const exceptIntf: IMEException;
-      var handled: Boolean);
+      procedure MadExceptionHandler1ExceptAction(action: TExceptAction;
+         const exceptIntf: IMEException; var handled: Boolean);
+      procedure MadExceptionHandler1Exception(const exceptIntf: IMEException;
+         var handled: Boolean);
 
 
    private
@@ -847,7 +847,7 @@ implementation
 
 uses DatRatings, FastStrings, FastStringFuncs, ESBDates,
    FormEntry, FormFinalOrder, stStat, ESBRtns, ESBMaths,
-   FormConnection, FormRanking, ReportTip, ReportHospital, ReportHospital2,ReportGimmick,
+   FormConnection, FormRanking, ReportTip, ReportHospital, ReportHospital2, ReportGimmick,
    ReportValue, ReportSelection, FormOptions, ReportWager,
    ReportContest, HDataModule,
    Math, UnitDBRoutines, UnitSetRanking,
@@ -1526,7 +1526,7 @@ begin
             sPastOdds := ' ' + sPastOdds;
          end;
 
-         if Length(sPastPosFinCall) = 0 then begin                            
+         if Length(sPastPosFinCall) = 0 then begin
             sPastPosFinCall := ' ' + sPastPosFinCall;
          end;
 
@@ -4074,7 +4074,7 @@ begin
       if (PDF_HOSPITAL_REPORT2_PATH = 'ERROR') then begin
          iniFile.WriteString('Paths', 'PdfHospitalReport2Path', 'd:\RatingsReports\PdfHospitalReport2\');
       end;
-      
+
       PDF_HARNESS_REPORT_PATH := iniFile.ReadString('Paths', 'PdfHarnessReportPath', 'ERROR');
       if (PDF_HARNESS_REPORT_PATH = 'ERROR') then begin
          iniFile.WriteString('Paths', 'PdfHarnessReportPath', 'd:\RatingsReports\PdfHarnessReport\');
@@ -6746,7 +6746,7 @@ begin
    try
       if chkCreateExportFiles.Checked then begin
          ExportFiles(Sender);
-       //  FTPExport(FTP_EXPORT_DIR, EXPORT_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD)
+         //  FTPExport(FTP_EXPORT_DIR, EXPORT_REPORT_PATH, FTP_HOST, FTP_USERNAME, FTP_PASSWORD)
       end;
    except
    end;
@@ -6823,7 +6823,7 @@ begin
          on E: Exception do hLog.AddToLog(E.Message, msevException);
       end;
       hLog.AddToLog('Create Hospital2 Reports - End', msevOperation);
-   end;   
+   end;
    //
    if chkCreateGimmickReport.Checked then begin
       hLog.AddToLog('Create Gimmick Reports ', msevOperation);
@@ -8904,34 +8904,9 @@ begin
                   on E: Exception do hLog.AddToLog(E.Message, msevException);
                end;
 
-               //  try
-  //                  btnCreatePreviousDayTablesClick(Sender);
-  //               except
-  //                  on E: Exception do hLog.AddToLog(E.Message, msevException);
-  //               end;
-  //
-  //
-  //               try
-  //                  btnDeleteResultReportsClick(Sender);
-  //               except
-  //                  on E: Exception do hLog.AddToLog(E.Message, msevException);
-  //               end;
-  //
-  //               try
-  //                  //                  chkBasicResultsReportsPropertiesChange(Sender);
-  //                  btnCreateResultReportsClick(Sender);
-  //               except
-  //                  on E: Exception do hLog.AddToLog(E.Message, msevException);
-  //               end;
-  //
-  //               try
-  //                  btnFTPResultReportsClick(Sender);
-  //                  //                  FTPSheets(FTP_RESULTS_REPORT_DIR, PDF_RESULTS_REPORT_PATH);
-  //               except
-  //                  on E: Exception do hLog.AddToLog(E.Message, msevException);
-  //               end;
 
-               
+
+
                iniFile.WriteInteger('Processing', 'ResultsProcessed', 1);
                gbSuppressTimerOn := False;
                TimerOn(True);
@@ -8944,38 +8919,7 @@ begin
          end;
       end;
 
-      if sLocation = 'Home' then begin
-         try
-            Present := Now;
-            DecodeTime(Present, wHour, wMin, wSec, wMSec);
 
-
-            if (wHour > 9) then begin
-               hLog.AddToLog('Late Changes', msevOperation);
-
-               TimerOn(False);
-               gbSuppressTimerOn := True;
-
-               if ((wHour >= 10) and (wHour <= 16)) then begin
-                  btnProcessLateScratchesClick(Sender);
-               end;
-
-               if ((wHour >= 10) and (wHour <= 22)) then begin
-                  btnProcessLateScratchesClick(Sender);
-               end;
-
-               gbSuppressTimerOn := False;
-               hLog.AddToLog('Home After 1 Processing End', msevOperation);
-               Application.Terminate;
-            end;
-         except
-            //
-            on E: Exception do begin
-               hLog.AddToLog(E.Message, msevException);
-               Application.Terminate;
-            end;
-         end;
-      end;
 
       if sLocation = 'Home' then begin
          try
@@ -9010,11 +8954,6 @@ begin
                      on E: Exception do hLog.AddToLog(E.Message, msevException);
                   end;
 
-                  try
-                     btnProcessLateChangesClick(sender);
-                  except
-                     on E: Exception do hLog.AddToLog(E.Message, msevException);
-                  end;
 
                   ImportTSNForToday(Sender);
 
@@ -9044,9 +8983,56 @@ begin
                   on E: Exception do hLog.AddToLog(E.Message, msevException);
                end;
 
+
+               edtOverrideDate.Date := Now();
+
+               btnStartOfDayClick(Sender);
+               ImportTSNHistory(Sender);
+
                try
-                  //btnDeleteAllFTPReportClick(Sender);
-                  //btnFTPReportsClick(Sender);
+                  btnDownloadTSNLSCClick(Sender);
+               except
+                  on E: Exception do hLog.AddToLog(E.Message, msevException);
+               end;
+
+
+               try
+                  btnProcessLateChangesClick(sender);
+               except
+                  on E: Exception do hLog.AddToLog(E.Message, msevException);
+               end;
+
+               ImportTSNForToday(Sender);
+
+               gbSuppressTimerOn := False;
+               iniFile.WriteInteger('Processing', 'LastHourProcessed', 14);
+               hLog.AddToLog('Home After 1 Processing End', msevOperation);
+               TimerOn(True);
+               Application.Terminate;
+            end;
+         except
+            on E: Exception do hLog.AddToLog(E.Message, msevException);
+         end;
+      end;
+
+      if sLocation = 'Home' then begin
+         try
+            Present := Now;
+            DecodeTime(Present, wHour, wMin, wSec, wMSec);
+
+
+            if ((wHour >= 10) and (wHour < 21)) then begin
+
+               hLog.AddToLog('Home After 1 Processing Start', msevOperation);
+
+               TimerOn(False);
+               gbSuppressTimerOn := True;
+
+
+
+               try
+                  edtOverrideDate.Date := Now();
+                  FreeAndNil(iniFile);
                except
                   on E: Exception do hLog.AddToLog(E.Message, msevException);
                end;
@@ -9062,6 +9048,7 @@ begin
                   on E: Exception do hLog.AddToLog(E.Message, msevException);
                end;
 
+
                try
                   btnProcessLateChangesClick(sender);
                except
@@ -9073,7 +9060,6 @@ begin
                gbSuppressTimerOn := False;
                iniFile.WriteInteger('Processing', 'LastHourProcessed', 14);
                hLog.AddToLog('Home After 1 Processing End', msevOperation);
-               //btnReProcessDaysClick(Sender);
                TimerOn(True);
                Application.Terminate;
             end;
@@ -9182,8 +9168,29 @@ begin
          except
             on E: Exception do hLog.AddToLog(E.Message, msevException);
          end;
+         
+         try
+            edtOverrideDate.Date := Now();
+            edtOverrideDate.Date := edtOverrideDate.Date + 1;
 
-        
+            btnStartOfDayClick(Sender);
+            ImportTSNHistory(Sender);
+            ImportTSNForToday(Sender);
+
+            chkCreateExportFiles.Checked := True;
+            chkCreateTipReport.Checked := True;
+            chkCreateWagerReport.Checked := False;
+            chkCreateContestReport.Checked := False;
+            chkCreateHospitalReport.Checked := True;
+            chkCreateValueReport.Checked := True;
+            btnCreateReportsClick(Sender);
+
+         except
+            on E: Exception do hLog.AddToLog(E.Message, msevException);
+         end;
+
+
+
 
          // Processs Today
          try
@@ -9210,8 +9217,6 @@ begin
             chkFTPHospitalReport.Checked := True;
             chkFTPValueReport.Checked := True;
 
-            //btnDeleteAllFTPReportClick(Sender);
-            //btnFTPReportsClick(Sender);
          except
             on E: Exception do hLog.AddToLog(E.Message, msevException);
          end;
@@ -9973,7 +9978,7 @@ begin
 
    if (dm.tblDam.GotoKey()) then begin
       dm.tblDam.Edit();
-      FldDam();                                           
+      FldDam();
       dm.tblDam.Post();
       Application.ProcessMessages();
    end else begin
@@ -18643,6 +18648,49 @@ begin
    dm.tblEntries.ExportTable(sFileName, ',', True);
    dm.tblEntries.Active := False;
 
+   dm.tblTrainerJockeySummary.Active := True;
+   dm.tblTrainerJockeySummary.First();
+   sFileName := EXPORT_REPORT_PATH + 'TJ' + sBaseFileName;
+   dm.tblTrainerJockeySummary.ExportTable(sFileName, ',', True);
+   dm.tblTrainerJockeySummary.Active := False;
+
+   dm.tblTrainerOwnerSummary.Active := True;
+   dm.tblTrainerOwnerSummary.First();
+   sFileName := EXPORT_REPORT_PATH + 'TO' + sBaseFileName;
+   dm.tblTrainerOwnerSummary.ExportTable(sFileName, ',', True);
+   dm.tblTrainerOwnerSummary.Active := False;
+
+   dm.tblTrainerSummary.Active := True;
+   dm.tblTrainerSummary.First();
+   sFileName := EXPORT_REPORT_PATH + 'TRNSUMM' + sBaseFileName;
+   dm.tblTrainerSummary.ExportTable(sFileName, ',', True);
+   dm.tblTrainerSummary.Active := False;
+
+   dm.tblTrainer.Active := True;
+   dm.tblTrainer.First();
+   sFileName := EXPORT_REPORT_PATH + 'TRN' + sBaseFileName;
+   dm.tblTrainer.ExportTable(sFileName, ',', True);
+   dm.tblTrainer.Active := False;
+
+   dm.tblJockeySummary.Active := True;
+   dm.tblJockeySummary.First();
+   sFileName := EXPORT_REPORT_PATH + 'JKYSUMM' + sBaseFileName;
+   dm.tblJockeySummary.ExportTable(sFileName, ',', True);
+   dm.tblJockeySummary.Active := False;
+
+   dm.tblJockey.Active := True;
+   dm.tblJockey.First();
+   sFileName := EXPORT_REPORT_PATH + 'JKY' + sBaseFileName;
+   dm.tblJockey.ExportTable(sFileName, ',', True);
+   dm.tblJockey.Active := False;
+
+   dm.tblTrainerCategory.Active := True;
+   dm.tblTrainerCategory.First();
+   sFileName := EXPORT_REPORT_PATH + 'TC' + sBaseFileName;
+   dm.tblTrainerCategory.ExportTable(sFileName, ',', True);
+   dm.tblTrainerCategory.Active := False;
+
+
    dm.tblRaces.Active := True;
    dm.tblRaces.First();
    sFileName := EXPORT_REPORT_PATH + 'R' + sBaseFileName;
@@ -18679,14 +18727,14 @@ begin
 end;
 
 procedure TMainForm.MadExceptionHandler1ExceptAction(action: TExceptAction;
-  const exceptIntf: IMEException; var handled: Boolean);
+   const exceptIntf: IMEException; var handled: Boolean);
 begin
-    handled := true;
-    
+   handled := true;
+
 end;
 
 procedure TMainForm.MadExceptionHandler1Exception(
-  const exceptIntf: IMEException; var handled: Boolean);
+   const exceptIntf: IMEException; var handled: Boolean);
 begin
    handled := true;
 end;

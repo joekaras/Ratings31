@@ -1,6 +1,6 @@
 object HospitalReport2Form: THospitalReport2Form
-  Left = 306
-  Top = 358
+  Left = 416
+  Top = 129
   Width = 576
   Height = 333
   Caption = 'Hospital Report'
@@ -56,9 +56,8 @@ object HospitalReport2Form: THospitalReport2Form
   end
   object dbHospitalReport2: TDBISAMDatabase
     EngineVersion = '4.24 Build 1'
-    Connected = True
     DatabaseName = 'dbHospitalReport2'
-    Directory = 'C:\RatingsData31'
+    Directory = 'd:\RatingsData31'
     KeepTablesOpen = False
     SessionName = 'Default'
     BeforeConnect = dbHospitalReport2BeforeConnect
@@ -243,7 +242,7 @@ object HospitalReport2Form: THospitalReport2Form
         ParentPrinterSetup = False
         TraverseAllData = False
         DataPipelineName = 'plEntries'
-        mmHeight = 6350
+        mmHeight = 6265
         mmLeft = 0
         mmTop = 0
         mmWidth = 214630
@@ -1304,16 +1303,15 @@ object HospitalReport2Form: THospitalReport2Form
           end
           object aDetailBand: TppDetailBand
             PrintCount = 16
-            PrintHeight = phDynamic
             mmBottomOffset = 0
-            mmHeight = 15452
+            mmHeight = 15367
             mmPrintPosition = 0
             object ppLine5: TppLine
               UserName = 'Line5'
               ParentHeight = True
               Position = lpRight
               Weight = 0.750000000000000000
-              mmHeight = 15452
+              mmHeight = 15367
               mmLeft = 66411
               mmTop = 0
               mmWidth = 529
@@ -1324,7 +1322,7 @@ object HospitalReport2Form: THospitalReport2Form
               ParentHeight = True
               Position = lpRight
               Weight = 0.750000000000000000
-              mmHeight = 15452
+              mmHeight = 15367
               mmLeft = 51012
               mmTop = 0
               mmWidth = 635
@@ -1335,7 +1333,7 @@ object HospitalReport2Form: THospitalReport2Form
               ParentHeight = True
               Position = lpRight
               Weight = 0.750000000000000000
-              mmHeight = 15452
+              mmHeight = 15367
               mmLeft = 21802
               mmTop = 0
               mmWidth = 212
@@ -1346,7 +1344,7 @@ object HospitalReport2Form: THospitalReport2Form
               ParentHeight = True
               Position = lpRight
               Weight = 0.750000000000000000
-              mmHeight = 15452
+              mmHeight = 15367
               mmLeft = 86254
               mmTop = 0
               mmWidth = 265
@@ -1357,7 +1355,7 @@ object HospitalReport2Form: THospitalReport2Form
               ParentHeight = True
               Position = lpRight
               Weight = 0.750000000000000000
-              mmHeight = 15452
+              mmHeight = 15367
               mmLeft = 121285
               mmTop = 0
               mmWidth = 212
@@ -1391,7 +1389,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 5
-              Font.Style = [fsBold, fsUnderline]
+              Font.Style = []
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2117
@@ -1569,7 +1567,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 7
-              Font.Style = [fsBold]
+              Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
@@ -1829,7 +1827,7 @@ object HospitalReport2Form: THospitalReport2Form
               ParentHeight = True
               Position = lpRight
               Weight = 0.750000000000000000
-              mmHeight = 15452
+              mmHeight = 15367
               mmLeft = 127212
               mmTop = 0
               mmWidth = 423
@@ -1970,6 +1968,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
+              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2963
               mmLeft = 67310
@@ -2036,7 +2035,7 @@ object HospitalReport2Form: THospitalReport2Form
               Weight = 0.750000000000000000
               mmHeight = 212
               mmLeft = 0
-              mmTop = 15240
+              mmTop = 15155
               mmWidth = 214630
               BandType = 4
             end
@@ -2082,7 +2081,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 6
-              Font.Style = [fsBold, fsUnderline]
+              Font.Style = []
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
               mmHeight = 2498
@@ -2136,7 +2135,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 7
-              Font.Style = [fsBold]
+              Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
@@ -2453,7 +2452,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 5
-              Font.Style = [fsBold, fsUnderline]
+              Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
@@ -2474,7 +2473,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 5
-              Font.Style = [fsBold, fsUnderline]
+              Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
@@ -8029,13 +8028,13 @@ object HospitalReport2Form: THospitalReport2Form
         Options = [ixDescending]
         Compression = icNone
       end>
-    IndexName = 'ByTodaysWagerWinPctRank'
+    IndexFieldNames = 'RangeRaceDate;TrkCode;RaceDate;RaceNbr'
     MasterFields = 'RangeRaceDate;TrkCode;RaceDate;RaceNbr'
     MasterSource = dsRacesMaster
     ReadOnly = True
     TableName = 'ENTRY.DAT'
     StoreDefs = True
-    Left = 104
+    Left = 112
     Top = 106
   end
 end

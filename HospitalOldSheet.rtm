@@ -137,7 +137,7 @@ object ppHospitalReport: TppReport
       ParentPrinterSetup = False
       TraverseAllData = False
       DataPipelineName = 'plEntries'
-      mmHeight = 6350
+      mmHeight = 6265
       mmLeft = 0
       mmTop = 0
       mmWidth = 214630
@@ -1198,16 +1198,15 @@ object ppHospitalReport: TppReport
         end
         object aDetailBand: TppDetailBand
           PrintCount = 16
-          PrintHeight = phDynamic
           mmBottomOffset = 0
-          mmHeight = 14817
+          mmHeight = 15367
           mmPrintPosition = 0
           object ppLine5: TppLine
             UserName = 'Line5'
             ParentHeight = True
             Position = lpRight
             Weight = 0.750000000000000000
-            mmHeight = 14817
+            mmHeight = 15367
             mmLeft = 66411
             mmTop = 0
             mmWidth = 529
@@ -1218,7 +1217,7 @@ object ppHospitalReport: TppReport
             ParentHeight = True
             Position = lpRight
             Weight = 0.750000000000000000
-            mmHeight = 14817
+            mmHeight = 15367
             mmLeft = 51012
             mmTop = 0
             mmWidth = 635
@@ -1229,7 +1228,7 @@ object ppHospitalReport: TppReport
             ParentHeight = True
             Position = lpRight
             Weight = 0.750000000000000000
-            mmHeight = 14817
+            mmHeight = 15367
             mmLeft = 21802
             mmTop = 0
             mmWidth = 212
@@ -1240,7 +1239,7 @@ object ppHospitalReport: TppReport
             ParentHeight = True
             Position = lpRight
             Weight = 0.750000000000000000
-            mmHeight = 14817
+            mmHeight = 15367
             mmLeft = 86254
             mmTop = 0
             mmWidth = 265
@@ -1251,7 +1250,7 @@ object ppHospitalReport: TppReport
             ParentHeight = True
             Position = lpRight
             Weight = 0.750000000000000000
-            mmHeight = 14817
+            mmHeight = 15367
             mmLeft = 121285
             mmTop = 0
             mmWidth = 212
@@ -1309,7 +1308,7 @@ object ppHospitalReport: TppReport
             mmHeight = 2117
             mmLeft = 22648
             mmTop = 5927
-            mmWidth = 7493
+            mmWidth = 5927
             BandType = 4
           end
           object Med: TppDBText
@@ -1577,7 +1576,6 @@ object ppHospitalReport: TppReport
             Font.Style = []
             TextAlignment = taRightJustified
             Transparent = True
-            Visible = False
             DataPipelineName = 'plEntries'
             mmHeight = 2963
             mmLeft = 78952
@@ -1672,7 +1670,7 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Arial Narrow'
             Font.Size = 7
-            Font.Style = [fsBold]
+            Font.Style = [fsBold, fsUnderline]
             TextAlignment = taCentered
             Transparent = True
             mmHeight = 3387
@@ -1724,7 +1722,7 @@ object ppHospitalReport: TppReport
             ParentHeight = True
             Position = lpRight
             Weight = 0.750000000000000000
-            mmHeight = 14817
+            mmHeight = 15367
             mmLeft = 127212
             mmTop = 0
             mmWidth = 423
@@ -1845,7 +1843,6 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taRightJustified
             Transparent = True
-            Visible = False
             DataPipelineName = 'plEntries'
             mmHeight = 2963
             mmLeft = 78528
@@ -1887,7 +1884,6 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taRightJustified
             Transparent = True
-            Visible = False
             DataPipelineName = 'plEntries'
             mmHeight = 2963
             mmLeft = 74930
@@ -1916,10 +1912,9 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Arial Narrow'
             Font.Size = 5
-            Font.Style = []
+            Font.Style = [fsBold, fsUnderline]
             TextAlignment = taRightJustified
             Transparent = True
-            Visible = False
             DataPipelineName = 'plEntries'
             mmHeight = 2540
             mmLeft = 102024
@@ -1935,104 +1930,8 @@ object ppHospitalReport: TppReport
             Weight = 0.750000000000000000
             mmHeight = 212
             mmLeft = 0
-            mmTop = 14605
+            mmTop = 15155
             mmWidth = 214630
-            BandType = 4
-          end
-          object TurfWins: TppDBText
-            UserName = 'TurfWins'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'TurfWins'
-            DataPipeline = plEntries
-            DisplayFormat = '##0'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2117
-            mmLeft = 111380
-            mmTop = 11218
-            mmWidth = 804
-            BandType = 4
-          end
-          object MudStarts: TppDBText
-            UserName = 'MudStarts'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'MudStarts'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2117
-            mmLeft = 108585
-            mmTop = 6562
-            mmWidth = 804
-            BandType = 4
-          end
-          object MudWins: TppDBText
-            UserName = 'MudWins'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'MudWins'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2117
-            mmLeft = 111337
-            mmTop = 6562
-            mmWidth = 804
-            BandType = 4
-          end
-          object TrkStarts: TppDBText
-            UserName = 'TrkStarts'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'TrkEPS'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2117
-            mmLeft = 99442
-            mmTop = 11218
-            mmWidth = 3217
-            BandType = 4
-          end
-          object lblTrack: TppLabel
-            UserName = 'Label203'
-            Caption = 'Track'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            Transparent = True
-            mmHeight = 2117
-            mmLeft = 86995
-            mmTop = 11218
-            mmWidth = 3598
             BandType = 4
           end
           object ppLine16: TppLine
@@ -2063,21 +1962,6 @@ object ppHospitalReport: TppReport
             mmLeft = 0
             mmTop = 11218
             mmWidth = 6350
-            BandType = 4
-          end
-          object lblOnTurf: TppLabel
-            UserName = 'lblOnTurf'
-            Caption = 'Turf '
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            Transparent = True
-            mmHeight = 2117
-            mmLeft = 104564
-            mmTop = 11430
-            mmWidth = 3006
             BandType = 4
           end
           object Power: TppDBText
@@ -2170,44 +2054,8 @@ object ppHospitalReport: TppReport
             DataPipelineName = 'plEntries'
             mmHeight = 2879
             mmLeft = 52493
-            mmTop = 10372
+            mmTop = 11642
             mmWidth = 12700
-            BandType = 4
-          end
-          object lblLife: TppLabel
-            UserName = 'Label5'
-            AutoSize = False
-            Caption = 'Life'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            Transparent = True
-            mmHeight = 2117
-            mmLeft = 86995
-            mmTop = 6562
-            mmWidth = 4022
-            BandType = 4
-          end
-          object LifeStarts: TppDBText
-            UserName = 'LifeStarts'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'LifeEPS'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2117
-            mmLeft = 99442
-            mmTop = 6562
-            mmWidth = 3217
             BandType = 4
           end
           object HorseName: TppDBText
@@ -2235,16 +2083,6 @@ object ppHospitalReport: TppReport
             mmHeight = 5292
             mmLeft = 105834
             mmTop = 0
-            mmWidth = 265
-            BandType = 4
-          end
-          object ppLine21: TppLine
-            UserName = 'Line21'
-            Position = lpRight
-            Weight = 0.750000000000000000
-            mmHeight = 8678
-            mmLeft = 103505
-            mmTop = 5715
             mmWidth = 265
             BandType = 4
           end
@@ -2278,26 +2116,6 @@ object ppHospitalReport: TppReport
             mmLeft = 47455
             mmTop = 11642
             mmWidth = 2921
-            BandType = 4
-          end
-          object TurfStarts: TppDBText
-            UserName = 'TurfStarts'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'TurfStarts'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2117
-            mmLeft = 108628
-            mmTop = 11218
-            mmWidth = 804
             BandType = 4
           end
           object OwnerName: TppDBText
@@ -2385,7 +2203,7 @@ object ppHospitalReport: TppReport
             Weight = 0.750000000000000000
             mmHeight = 212
             mmLeft = 52282
-            mmTop = 8255
+            mmTop = 11007
             mmWidth = 13547
             BandType = 4
           end
@@ -2666,141 +2484,6 @@ object ppHospitalReport: TppReport
             mmWidth = 2201
             BandType = 4
           end
-          object ppLabel47: TppLabel
-            UserName = 'Label47'
-            Caption = 'Mud'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            Transparent = True
-            mmHeight = 2117
-            mmLeft = 104564
-            mmTop = 6350
-            mmWidth = 2836
-            BandType = 4
-          end
-          object ppDBText15: TppDBText
-            UserName = 'MudStarts1'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'LifeStarts'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2117
-            mmLeft = 92075
-            mmTop = 6562
-            mmWidth = 804
-            BandType = 4
-          end
-          object ppDBText20: TppDBText
-            UserName = 'MudWins1'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'MudEPS'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2117
-            mmLeft = 118026
-            mmTop = 6562
-            mmWidth = 2413
-            BandType = 4
-          end
-          object ppDBText21: TppDBText
-            UserName = 'DBText21'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'LifeWins'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2117
-            mmLeft = 94404
-            mmTop = 6562
-            mmWidth = 804
-            BandType = 4
-          end
-          object ppDBText22: TppDBText
-            UserName = 'DBText22'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'TrkStarts'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2117
-            mmLeft = 92075
-            mmTop = 11218
-            mmWidth = 804
-            BandType = 4
-          end
-          object ppDBText23: TppDBText
-            UserName = 'DBText23'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'TrkWins'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2117
-            mmLeft = 94192
-            mmTop = 11218
-            mmWidth = 804
-            BandType = 4
-          end
-          object ppDBText24: TppDBText
-            UserName = 'DBText24'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'TurfEPS'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 5
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2117
-            mmLeft = 119635
-            mmTop = 11218
-            mmWidth = 804
-            BandType = 4
-          end
           object ppLine19: TppLine
             UserName = 'Line201'
             Pen.Style = psDot
@@ -2818,56 +2501,6 @@ object ppHospitalReport: TppReport
             mmHeight = 2117
             mmLeft = 46355
             mmTop = 12065
-            mmWidth = 212
-            BandType = 4
-          end
-          object ppLine39: TppLine
-            UserName = 'Line39'
-            Pen.Style = psDot
-            Weight = 0.750000000000000000
-            mmHeight = 265
-            mmLeft = 86784
-            mmTop = 9948
-            mmWidth = 33655
-            BandType = 4
-          end
-          object ppLine42: TppLine
-            UserName = 'Line42'
-            Position = lpRight
-            Weight = 0.750000000000000000
-            mmHeight = 2752
-            mmLeft = 95250
-            mmTop = 10583
-            mmWidth = 635
-            BandType = 4
-          end
-          object ppLine43: TppLine
-            UserName = 'Line43'
-            Position = lpRight
-            Weight = 0.750000000000000000
-            mmHeight = 2752
-            mmLeft = 95674
-            mmTop = 6562
-            mmWidth = 212
-            BandType = 4
-          end
-          object ppLine44: TppLine
-            UserName = 'Line44'
-            Position = lpRight
-            Weight = 0.750000000000000000
-            mmHeight = 2752
-            mmLeft = 113030
-            mmTop = 10795
-            mmWidth = 212
-            BandType = 4
-          end
-          object ppLine45: TppLine
-            UserName = 'Line45'
-            Position = lpRight
-            Weight = 0.750000000000000000
-            mmHeight = 2752
-            mmLeft = 113030
-            mmTop = 6562
             mmWidth = 212
             BandType = 4
           end
@@ -2904,24 +2537,6 @@ object ppHospitalReport: TppReport
             mmWidth = 2201
             BandType = 4
           end
-          object ppDBText41: TppDBText
-            UserName = 'DBText41'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'WorkLine1'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Courier New'
-            Font.Size = 5
-            Font.Style = [fsBold]
-            DataPipelineName = 'plEntries'
-            mmHeight = 2117
-            mmLeft = 128059
-            mmTop = 10372
-            mmWidth = 9525
-            BandType = 4
-          end
           object Last2Comment2: TppDBText
             UserName = 'Last2Comment2'
             ShiftWithParent = True
@@ -2934,10 +2549,10 @@ object ppHospitalReport: TppReport
             Font.Size = 5
             Font.Style = [fsBold]
             DataPipelineName = 'plEntries'
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 128059
             mmTop = 7620
-            mmWidth = 42333
+            mmWidth = 109009
             BandType = 4
           end
           object Last2RaceDesc: TppDBText
@@ -2952,7 +2567,7 @@ object ppHospitalReport: TppReport
             Font.Size = 5
             Font.Style = [fsBold]
             DataPipelineName = 'plEntries'
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 128059
             mmTop = 5080
             mmWidth = 74083
@@ -2970,10 +2585,10 @@ object ppHospitalReport: TppReport
             Font.Size = 5
             Font.Style = [fsBold]
             DataPipelineName = 'plEntries'
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 128059
             mmTop = 2328
-            mmWidth = 65617
+            mmWidth = 130175
             BandType = 4
           end
           object LastRaceDesc: TppDBText
@@ -2988,7 +2603,7 @@ object ppHospitalReport: TppReport
             Font.Size = 5
             Font.Style = [fsBold]
             DataPipelineName = 'plEntries'
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 128059
             mmTop = 0
             mmWidth = 74083
@@ -2999,86 +2614,9 @@ object ppHospitalReport: TppReport
             Pen.Style = psDot
             Weight = 0.750000000000000000
             mmHeight = 212
-            mmLeft = 131234
-            mmTop = 4657
-            mmWidth = 82762
-            BandType = 4
-          end
-          object ppDBText9: TppDBText
-            UserName = 'OwnerName1'
-            ShiftWithParent = True
-            AutoSize = True
-            DataField = 'TodaysWagerOrderKey'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 4
-            Font.Style = []
-            DataPipelineName = 'plEntries'
-            mmHeight = 1693
             mmLeft = 128059
-            mmTop = 12700
-            mmWidth = 6985
-            BandType = 4
-          end
-          object ppDBText12: TppDBText
-            UserName = 'DBText301'
-            ShiftWithParent = True
-            DataField = 'TodaysWagerStarts'
-            DataPipeline = plEntries
-            DisplayFormat = '#####'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 4
-            Font.Style = []
-            TextAlignment = taRightJustified
-            DataPipelineName = 'plEntries'
-            mmHeight = 1693
-            mmLeft = 137584
-            mmTop = 12700
-            mmWidth = 4445
-            BandType = 4
-          end
-          object ppDBText14: TppDBText
-            UserName = 'DBText14'
-            ShiftWithParent = True
-            DataField = 'TodaysWagerWinPct'
-            DataPipeline = plEntries
-            DisplayFormat = '##.#'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 4
-            Font.Style = []
-            TextAlignment = taRightJustified
-            DataPipelineName = 'plEntries'
-            mmHeight = 1693
-            mmLeft = 143722
-            mmTop = 12700
-            mmWidth = 5503
-            BandType = 4
-          end
-          object ppDBText19: TppDBText
-            UserName = 'DBText19'
-            ShiftWithParent = True
-            AutoSize = True
-            BlankWhenZero = True
-            DataField = 'BackClass'
-            DataPipeline = plEntries
-            DisplayFormat = '##0.0'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
-            Font.Size = 4
-            Font.Style = []
-            TextAlignment = taRightJustified
-            DataPipelineName = 'plEntries'
-            mmHeight = 1693
-            mmLeft = 151342
-            mmTop = 12700
-            mmWidth = 2963
+            mmTop = 4657
+            mmWidth = 85725
             BandType = 4
           end
           object ppLine1: TppLine
@@ -3089,6 +2627,518 @@ object ppHospitalReport: TppReport
             mmLeft = 128059
             mmTop = 9948
             mmWidth = 85725
+            BandType = 4
+          end
+          object TurfWins: TppDBText
+            UserName = 'TurfWins'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'TurfWins'
+            DataPipeline = plEntries
+            DisplayFormat = '##0'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 119380
+            mmTop = 9313
+            mmWidth = 804
+            BandType = 4
+          end
+          object MudStarts: TppDBText
+            UserName = 'MudStarts'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'MudStarts'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 106045
+            mmTop = 9313
+            mmWidth = 804
+            BandType = 4
+          end
+          object MudWins: TppDBText
+            UserName = 'MudWins'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'MudWins'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 108797
+            mmTop = 9313
+            mmWidth = 804
+            BandType = 4
+          end
+          object TrkStarts: TppDBText
+            UserName = 'TrkStarts'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'TrkStarts'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 93134
+            mmTop = 9313
+            mmWidth = 804
+            BandType = 4
+          end
+          object ppDBText15: TppDBText
+            UserName = 'TrkWins'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'TrkWins'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 95674
+            mmTop = 9313
+            mmWidth = 804
+            BandType = 4
+          end
+          object lblTrack: TppLabel
+            UserName = 'Label203'
+            Caption = 'Track'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            mmHeight = 2709
+            mmLeft = 86995
+            mmTop = 9313
+            mmWidth = 4572
+            BandType = 4
+          end
+          object ppLabel67: TppLabel
+            UserName = 'Label67'
+            Caption = 'Mud'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            mmHeight = 2381
+            mmLeft = 99484
+            mmTop = 9313
+            mmWidth = 3440
+            BandType = 4
+          end
+          object lblOnTurf: TppLabel
+            UserName = 'lblOnTurf'
+            Caption = 'Turf '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            Transparent = True
+            mmHeight = 2328
+            mmLeft = 112184
+            mmTop = 9525
+            mmWidth = 2963
+            BandType = 4
+          end
+          object lblRoute: TppLabel
+            UserName = 'lblRoute'
+            Caption = 'Route'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 99484
+            mmTop = 6138
+            mmWidth = 4763
+            BandType = 4
+          end
+          object RouteStarts: TppDBText
+            UserName = 'RouteStarts'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'RouteStarts'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 106045
+            mmTop = 6350
+            mmWidth = 804
+            BandType = 4
+          end
+          object RouteWins: TppDBText
+            UserName = 'RouteWins'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'RouteWins'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 108797
+            mmTop = 6350
+            mmWidth = 804
+            BandType = 4
+          end
+          object lblSprint: TppLabel
+            UserName = 'Label4'
+            Caption = 'Sprint'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            mmHeight = 2646
+            mmLeft = 111125
+            mmTop = 6138
+            mmWidth = 4498
+            BandType = 4
+          end
+          object SprintStarts: TppDBText
+            UserName = 'SprintStarts'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'SprintStarts'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 117264
+            mmTop = 6350
+            mmWidth = 804
+            BandType = 4
+          end
+          object SprintWins: TppDBText
+            UserName = 'SprintWins'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'SprintWins'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 119380
+            mmTop = 6350
+            mmWidth = 804
+            BandType = 4
+          end
+          object lblLife: TppLabel
+            UserName = 'Label5'
+            Caption = 'Life'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            Transparent = True
+            mmHeight = 2752
+            mmLeft = 87207
+            mmTop = 6138
+            mmWidth = 2752
+            BandType = 4
+          end
+          object LifeStarts: TppDBText
+            UserName = 'LifeStarts'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'LifeStarts'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 93134
+            mmTop = 6350
+            mmWidth = 804
+            BandType = 4
+          end
+          object LifeWins: TppDBText
+            UserName = 'LifeWins'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'LifeWins'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 95674
+            mmTop = 6350
+            mmWidth = 804
+            BandType = 4
+          end
+          object ppLine4: TppLine
+            UserName = 'Line19'
+            Position = lpRight
+            Weight = 0.750000000000000000
+            mmHeight = 6615
+            mmLeft = 97579
+            mmTop = 5503
+            mmWidth = 265
+            BandType = 4
+          end
+          object ppLine21: TppLine
+            UserName = 'Line21'
+            Position = lpRight
+            Weight = 0.750000000000000000
+            mmHeight = 6615
+            mmLeft = 110490
+            mmTop = 5503
+            mmWidth = 265
+            BandType = 4
+          end
+          object TurfStarts: TppDBText
+            UserName = 'TurfStarts'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'TurfStarts'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 117264
+            mmTop = 9313
+            mmWidth = 804
+            BandType = 4
+          end
+          object ppDBText9: TppDBText
+            UserName = 'Last2RaceDesc1'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'Last3RaceDesc'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            DataPipelineName = 'plEntries'
+            mmHeight = 2074
+            mmLeft = 128059
+            mmTop = 10372
+            mmWidth = 74083
+            BandType = 4
+          end
+          object ppDBText12: TppDBText
+            UserName = 'DBText12'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'Last3Comment2'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            DataPipelineName = 'plEntries'
+            mmHeight = 2074
+            mmLeft = 128059
+            mmTop = 12700
+            mmWidth = 68792
+            BandType = 4
+          end
+          object ppDBText14: TppDBText
+            UserName = 'TrkStarts1'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'TodaysWagerOrderKey'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 86995
+            mmTop = 12700
+            mmWidth = 16933
+            BandType = 4
+          end
+          object ppDBText19: TppDBText
+            UserName = 'DBText19'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'TodaysWagerStarts'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 108712
+            mmTop = 12700
+            mmWidth = 2413
+            BandType = 4
+          end
+          object ppDBText20: TppDBText
+            UserName = 'DBText20'
+            ShiftWithParent = True
+            AutoSize = True
+            DataField = 'TodaysWagerWinPct'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 5
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 116374
+            mmTop = 12700
+            mmWidth = 3641
+            BandType = 4
+          end
+          object LatePaceAdvantageWinPct: TppDBText
+            UserName = 'LatePaceAdvantageWinPct'
+            ShiftWithParent = True
+            AutoSize = True
+            BlankWhenZero = True
+            DataField = 'LatePaceAdvantage'
+            DataPipeline = plEntries
+            DisplayFormat = '##'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2498
+            mmLeft = 62653
+            mmTop = 7832
+            mmWidth = 2540
+            BandType = 4
+          end
+          object EarlyPaceAdvantageWinPct: TppDBText
+            UserName = 'EarlyPaceAdvantageWinPct'
+            ShiftWithParent = True
+            AutoSize = True
+            BlankWhenZero = True
+            DataField = 'EarlyPaceAdvantage'
+            DataPipeline = plEntries
+            DisplayFormat = '##'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2498
+            mmLeft = 53975
+            mmTop = 7832
+            mmWidth = 1566
+            BandType = 4
+          end
+          object MiddlePaceAdvantageWinPct: TppDBText
+            UserName = 'MiddlePaceAdvantageWinPct'
+            ShiftWithParent = True
+            AutoSize = True
+            BlankWhenZero = True
+            DataField = 'MiddlePaceAdvantage'
+            DataPipeline = plEntries
+            DisplayFormat = '##'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial Narrow'
+            Font.Size = 6
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2498
+            mmLeft = 58632
+            mmTop = 7832
+            mmWidth = 1566
             BandType = 4
           end
         end

@@ -1,6 +1,6 @@
 object HospitalReport2Form: THospitalReport2Form
-  Left = 306
-  Top = 358
+  Left = 416
+  Top = 129
   Width = 576
   Height = 333
   Caption = 'Hospital Report'
@@ -58,7 +58,7 @@ object HospitalReport2Form: THospitalReport2Form
     EngineVersion = '4.24 Build 1'
     Connected = True
     DatabaseName = 'dbHospitalReport2'
-    Directory = 'C:\RatingsData31'
+    Directory = 'd:\RatingsData31'
     KeepTablesOpen = False
     SessionName = 'Default'
     BeforeConnect = dbHospitalReport2BeforeConnect
@@ -85,6 +85,2506 @@ object HospitalReport2Form: THospitalReport2Form
     OnTraversal = plRacesReportTraversal
     Left = 24
     Top = 200
+    object plRacesReportppField1: TppField
+      FieldAlias = 'TrkCode'
+      FieldName = 'TrkCode'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 0
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField2: TppField
+      FieldAlias = 'RaceDate'
+      FieldName = 'RaceDate'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 1
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField3: TppField
+      FieldAlias = 'RangeRaceDate'
+      FieldName = 'RangeRaceDate'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 2
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField4: TppField
+      FieldAlias = 'RaceNbr'
+      FieldName = 'RaceNbr'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 3
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField5: TppField
+      FieldAlias = 'EstTimeOfRace'
+      FieldName = 'EstTimeOfRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 4
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField6: TppField
+      FieldAlias = 'EstTimeOfFirstRace'
+      FieldName = 'EstTimeOfFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 5
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField7: TppField
+      FieldAlias = 'LocalTimeOfRace'
+      FieldName = 'LocalTimeOfRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 6
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField8: TppField
+      FieldAlias = 'CT'
+      FieldName = 'CT'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 7
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField9: TppField
+      FieldAlias = 'Surface'
+      FieldName = 'Surface'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 8
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField10: TppField
+      FieldAlias = 'ActualSurface'
+      FieldName = 'ActualSurface'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 9
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField11: TppField
+      FieldAlias = 'AltSurface'
+      FieldName = 'AltSurface'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 10
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField12: TppField
+      FieldAlias = 'DistanceInFeet'
+      FieldName = 'DistanceInFeet'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 11
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField13: TppField
+      FieldAlias = 'DistanceInYards'
+      FieldName = 'DistanceInYards'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 12
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField14: TppField
+      FieldAlias = 'DistanceInFurlongs'
+      FieldName = 'DistanceInFurlongs'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 13
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField15: TppField
+      FieldAlias = 'DistanceDesc'
+      FieldName = 'DistanceDesc'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 14
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField16: TppField
+      FieldAlias = 'RaceType'
+      FieldName = 'RaceType'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 15
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField17: TppField
+      FieldAlias = 'TypeOfRace'
+      FieldName = 'TypeOfRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 16
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField18: TppField
+      FieldAlias = 'RaceTypeDesc'
+      FieldName = 'RaceTypeDesc'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 17
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField19: TppField
+      FieldAlias = 'RaceDesc'
+      FieldName = 'RaceDesc'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 18
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField20: TppField
+      FieldAlias = 'RaceCondition'
+      FieldName = 'RaceCondition'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 19
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField21: TppField
+      FieldAlias = 'IsTurfRace'
+      FieldName = 'IsTurfRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 20
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField22: TppField
+      FieldAlias = 'IsRouteRace'
+      FieldName = 'IsRouteRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 21
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField23: TppField
+      FieldAlias = 'IsMaidenSpecialRace'
+      FieldName = 'IsMaidenSpecialRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 22
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField24: TppField
+      FieldAlias = 'IsMaidenClaimingRace'
+      FieldName = 'IsMaidenClaimingRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 23
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField25: TppField
+      FieldAlias = 'IsMaidenOrTurfRace'
+      FieldName = 'IsMaidenOrTurfRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 24
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField26: TppField
+      FieldAlias = 'IsTwoYearOldRace'
+      FieldName = 'IsTwoYearOldRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 25
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField27: TppField
+      FieldAlias = 'IsClaimingRace'
+      FieldName = 'IsClaimingRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 26
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField28: TppField
+      FieldAlias = 'AgeSexRestriction'
+      FieldName = 'AgeSexRestriction'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 27
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField29: TppField
+      FieldAlias = 'Purse'
+      FieldName = 'Purse'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 28
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField30: TppField
+      FieldAlias = 'ClaimingPrice'
+      FieldName = 'ClaimingPrice'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 29
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField31: TppField
+      FieldAlias = 'SimulcastTrkCode'
+      FieldName = 'SimulcastTrkCode'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 30
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField32: TppField
+      FieldAlias = 'SimulcastRaceNbr'
+      FieldName = 'SimulcastRaceNbr'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 31
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField33: TppField
+      FieldAlias = 'RaceAutoInc'
+      FieldName = 'RaceAutoInc'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 32
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField34: TppField
+      FieldAlias = 'TimeDiff'
+      FieldName = 'TimeDiff'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 33
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField35: TppField
+      FieldAlias = 'IsDDRace'
+      FieldName = 'IsDDRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 34
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField36: TppField
+      FieldAlias = 'DDRaceNbr'
+      FieldName = 'DDRaceNbr'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 35
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField37: TppField
+      FieldAlias = 'IsPk3Race'
+      FieldName = 'IsPk3Race'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 36
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField38: TppField
+      FieldAlias = 'Pk3RaceNbr'
+      FieldName = 'Pk3RaceNbr'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 37
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField39: TppField
+      FieldAlias = 'IsPk4Race'
+      FieldName = 'IsPk4Race'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 38
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField40: TppField
+      FieldAlias = 'Pk4RaceNbr'
+      FieldName = 'Pk4RaceNbr'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 39
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField41: TppField
+      FieldAlias = 'IsPk6Race'
+      FieldName = 'IsPk6Race'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 40
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField42: TppField
+      FieldAlias = 'PK6RaceNbr'
+      FieldName = 'PK6RaceNbr'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 41
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField43: TppField
+      FieldAlias = 'IsTriRace'
+      FieldName = 'IsTriRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 42
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField44: TppField
+      FieldAlias = 'IsSuperRace'
+      FieldName = 'IsSuperRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 43
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField45: TppField
+      FieldAlias = 'IsQuiRace'
+      FieldName = 'IsQuiRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 44
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField46: TppField
+      FieldAlias = 'IsExaRace'
+      FieldName = 'IsExaRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 45
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField47: TppField
+      FieldAlias = 'NbrTriKey'
+      FieldName = 'NbrTriKey'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 46
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField48: TppField
+      FieldAlias = 'IsPk3Leg1'
+      FieldName = 'IsPk3Leg1'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 47
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField49: TppField
+      FieldAlias = 'IsPk4Leg1'
+      FieldName = 'IsPk4Leg1'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 48
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField50: TppField
+      FieldAlias = 'IsPk6Leg1'
+      FieldName = 'IsPk6Leg1'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 49
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField51: TppField
+      FieldAlias = 'IsPk9Leg1'
+      FieldName = 'IsPk9Leg1'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 50
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField52: TppField
+      FieldAlias = 'IsDDLeg1'
+      FieldName = 'IsDDLeg1'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 51
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField53: TppField
+      FieldAlias = 'TotalPk3Choices'
+      FieldName = 'TotalPk3Choices'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 52
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField54: TppField
+      FieldAlias = 'Pk3KeyType'
+      FieldName = 'Pk3KeyType'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 53
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField55: TppField
+      FieldAlias = 'Pk3Selected'
+      FieldName = 'Pk3Selected'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 54
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField56: TppField
+      FieldAlias = 'TotalTriChoices'
+      FieldName = 'TotalTriChoices'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 55
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField57: TppField
+      FieldAlias = 'TotalSuperChoices'
+      FieldName = 'TotalSuperChoices'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 56
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField58: TppField
+      FieldAlias = 'TotalDDChoices'
+      FieldName = 'TotalDDChoices'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 57
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField59: TppField
+      FieldAlias = 'TopLastSpeed'
+      FieldName = 'TopLastSpeed'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 58
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField60: TppField
+      FieldAlias = 'TopBackSpeed'
+      FieldName = 'TopBackSpeed'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 59
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField61: TppField
+      FieldAlias = 'TopLastClass'
+      FieldName = 'TopLastClass'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 60
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField62: TppField
+      FieldAlias = 'AltWager1'
+      FieldName = 'AltWager1'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 61
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField63: TppField
+      FieldAlias = 'AltWager2'
+      FieldName = 'AltWager2'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 62
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField64: TppField
+      FieldAlias = 'AltWager3'
+      FieldName = 'AltWager3'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 63
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField65: TppField
+      FieldAlias = 'AltWager4'
+      FieldName = 'AltWager4'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 64
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField66: TppField
+      FieldAlias = 'AltWager5'
+      FieldName = 'AltWager5'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 65
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField67: TppField
+      FieldAlias = 'AltWager6'
+      FieldName = 'AltWager6'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 66
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField68: TppField
+      FieldAlias = 'Wager1'
+      FieldName = 'Wager1'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 67
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField69: TppField
+      FieldAlias = 'Wager2'
+      FieldName = 'Wager2'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 68
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField70: TppField
+      FieldAlias = 'Wager3'
+      FieldName = 'Wager3'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 69
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField71: TppField
+      FieldAlias = 'Wager4'
+      FieldName = 'Wager4'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 70
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField72: TppField
+      FieldAlias = 'Wager5'
+      FieldName = 'Wager5'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 71
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField73: TppField
+      FieldAlias = 'Wager6'
+      FieldName = 'Wager6'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 72
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField74: TppField
+      FieldAlias = 'WagerFinalOrder'
+      FieldName = 'WagerFinalOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 73
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField75: TppField
+      FieldAlias = 'WagerSheetOrder'
+      FieldName = 'WagerSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 74
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField76: TppField
+      FieldAlias = 'TodaysWagerOrder'
+      FieldName = 'TodaysWagerOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 75
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField77: TppField
+      FieldAlias = 'Tri'
+      FieldName = 'Tri'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 76
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField78: TppField
+      FieldAlias = 'DD'
+      FieldName = 'DD'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 77
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField79: TppField
+      FieldAlias = 'Super'
+      FieldName = 'Super'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 78
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField80: TppField
+      FieldAlias = 'Exacta'
+      FieldName = 'Exacta'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 79
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField81: TppField
+      FieldAlias = 'Quinella'
+      FieldName = 'Quinella'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 80
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField82: TppField
+      FieldAlias = 'Pick3'
+      FieldName = 'Pick3'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 81
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField83: TppField
+      FieldAlias = 'Pick4'
+      FieldName = 'Pick4'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 82
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField84: TppField
+      FieldAlias = 'Pick6'
+      FieldName = 'Pick6'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 83
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField85: TppField
+      FieldAlias = 'IsPrintedOnValueSheet'
+      FieldName = 'IsPrintedOnValueSheet'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 84
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField86: TppField
+      FieldAlias = 'IsYoubetTrack'
+      FieldName = 'IsYoubetTrack'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 85
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField87: TppField
+      FieldAlias = 'WPSWagerAmt'
+      FieldName = 'WPSWagerAmt'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 86
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField88: TppField
+      FieldAlias = 'SfcWagerAmt'
+      FieldName = 'SfcWagerAmt'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 87
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField89: TppField
+      FieldAlias = 'TriWagerAmt'
+      FieldName = 'TriWagerAmt'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 88
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField90: TppField
+      FieldAlias = 'ExaWagerAmt'
+      FieldName = 'ExaWagerAmt'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 89
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField91: TppField
+      FieldAlias = 'QuiWagerAmt'
+      FieldName = 'QuiWagerAmt'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 90
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField92: TppField
+      FieldAlias = 'DDWagerAmt'
+      FieldName = 'DDWagerAmt'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 91
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField93: TppField
+      FieldAlias = 'Pk3WagerAmt'
+      FieldName = 'Pk3WagerAmt'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 92
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField94: TppField
+      FieldAlias = 'Pk4WagerAmt'
+      FieldName = 'Pk4WagerAmt'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 93
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField95: TppField
+      FieldAlias = 'Pk6WagerAmt'
+      FieldName = 'Pk6WagerAmt'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 94
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField96: TppField
+      FieldAlias = 'TopEarlyPace'
+      FieldName = 'TopEarlyPace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 95
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField97: TppField
+      FieldAlias = 'TopMiddlePace'
+      FieldName = 'TopMiddlePace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 96
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField98: TppField
+      FieldAlias = 'TopLatePace'
+      FieldName = 'TopLatePace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 97
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField99: TppField
+      FieldAlias = 'TopEarlyPacePos'
+      FieldName = 'TopEarlyPacePos'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 98
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField100: TppField
+      FieldAlias = 'TopMiddlePacePos'
+      FieldName = 'TopMiddlePacePos'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 99
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField101: TppField
+      FieldAlias = 'TopLatePacePos'
+      FieldName = 'TopLatePacePos'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 100
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField102: TppField
+      FieldAlias = 'SecondEarlyPace'
+      FieldName = 'SecondEarlyPace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 101
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField103: TppField
+      FieldAlias = 'SecondMiddlePace'
+      FieldName = 'SecondMiddlePace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 102
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField104: TppField
+      FieldAlias = 'SecondLatePace'
+      FieldName = 'SecondLatePace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 103
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField105: TppField
+      FieldAlias = 'SecondEarlyPacePos'
+      FieldName = 'SecondEarlyPacePos'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 104
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField106: TppField
+      FieldAlias = 'SecondMiddlePacePos'
+      FieldName = 'SecondMiddlePacePos'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 105
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField107: TppField
+      FieldAlias = 'SecondLatePacePos'
+      FieldName = 'SecondLatePacePos'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 106
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField108: TppField
+      FieldAlias = 'TopPower'
+      FieldName = 'TopPower'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 107
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField109: TppField
+      FieldAlias = 'SecondTopPower'
+      FieldName = 'SecondTopPower'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 108
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField110: TppField
+      FieldAlias = 'ThirdTopPower'
+      FieldName = 'ThirdTopPower'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 109
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField111: TppField
+      FieldAlias = 'FourthTopPower'
+      FieldName = 'FourthTopPower'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 110
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField112: TppField
+      FieldAlias = 'MaxWPSBet'
+      FieldName = 'MaxWPSBet'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 111
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField113: TppField
+      FieldAlias = 'MaxGimmickBet'
+      FieldName = 'MaxGimmickBet'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 112
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField114: TppField
+      FieldAlias = 'NbrStarters'
+      FieldName = 'NbrStarters'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 113
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField115: TppField
+      FieldAlias = 'NbrDebutStarters'
+      FieldName = 'NbrDebutStarters'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 114
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField116: TppField
+      FieldAlias = 'NbrDebutTwoStarters'
+      FieldName = 'NbrDebutTwoStarters'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 115
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField117: TppField
+      FieldAlias = 'NbrTurfDebutStarters'
+      FieldName = 'NbrTurfDebutStarters'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 116
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField118: TppField
+      FieldAlias = 'NbrRouteDebutStarters'
+      FieldName = 'NbrRouteDebutStarters'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 117
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField119: TppField
+      FieldAlias = 'NbrScratchedStarters'
+      FieldName = 'NbrScratchedStarters'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 118
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField120: TppField
+      FieldAlias = 'NbrRunners'
+      FieldName = 'NbrRunners'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 119
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField121: TppField
+      FieldAlias = 'OrigSurface'
+      FieldName = 'OrigSurface'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 120
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField122: TppField
+      FieldAlias = 'IsPk9Place'
+      FieldName = 'IsPk9Place'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 121
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField123: TppField
+      FieldAlias = 'Pk9RaceNbr'
+      FieldName = 'Pk9RaceNbr'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 122
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField124: TppField
+      FieldAlias = 'RaceCondition1'
+      FieldName = 'RaceCondition1'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 123
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField125: TppField
+      FieldAlias = 'RaceCondition2'
+      FieldName = 'RaceCondition2'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 124
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField126: TppField
+      FieldAlias = 'RaceCondition3'
+      FieldName = 'RaceCondition3'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 125
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField127: TppField
+      FieldAlias = 'RaceCondition4'
+      FieldName = 'RaceCondition4'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 126
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField128: TppField
+      FieldAlias = 'RaceCondition5'
+      FieldName = 'RaceCondition5'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 127
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField129: TppField
+      FieldAlias = 'RaceCondition6'
+      FieldName = 'RaceCondition6'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 128
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField130: TppField
+      FieldAlias = 'BetLine'
+      FieldName = 'BetLine'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 129
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField131: TppField
+      FieldAlias = 'RaceConditions'
+      FieldName = 'RaceConditions'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 130
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField132: TppField
+      FieldAlias = 'TrkCond'
+      FieldName = 'TrkCond'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 131
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField133: TppField
+      FieldAlias = 'OrigDistanceDesc'
+      FieldName = 'OrigDistanceDesc'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 132
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField134: TppField
+      FieldAlias = 'IsExactaMatched'
+      FieldName = 'IsExactaMatched'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 133
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField135: TppField
+      FieldAlias = 'ExactaNbrs'
+      FieldName = 'ExactaNbrs'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 134
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField136: TppField
+      FieldAlias = 'ExactaWager'
+      FieldName = 'ExactaWager'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 135
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField137: TppField
+      FieldAlias = 'ExactaPayout'
+      FieldName = 'ExactaPayout'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 136
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField138: TppField
+      FieldAlias = 'IsTrifectaMatched'
+      FieldName = 'IsTrifectaMatched'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 137
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField139: TppField
+      FieldAlias = 'TrifectaNbrs'
+      FieldName = 'TrifectaNbrs'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 138
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField140: TppField
+      FieldAlias = 'TrifectaWager'
+      FieldName = 'TrifectaWager'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 139
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField141: TppField
+      FieldAlias = 'TrifectaPayout'
+      FieldName = 'TrifectaPayout'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 140
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField142: TppField
+      FieldAlias = 'IsSuperfectaMatched'
+      FieldName = 'IsSuperfectaMatched'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 141
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField143: TppField
+      FieldAlias = 'SuperfectaNbrs'
+      FieldName = 'SuperfectaNbrs'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 142
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField144: TppField
+      FieldAlias = 'SuperfectaWager'
+      FieldName = 'SuperfectaWager'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 143
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField145: TppField
+      FieldAlias = 'SuperfectaPayout'
+      FieldName = 'SuperfectaPayout'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 144
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField146: TppField
+      FieldAlias = 'IsDailyDoubleMatchedFirstRace'
+      FieldName = 'IsDailyDoubleMatchedFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 145
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField147: TppField
+      FieldAlias = 'IsDailyDoubleMatchedLastRace'
+      FieldName = 'IsDailyDoubleMatchedLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 146
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField148: TppField
+      FieldAlias = 'DDFirstRace'
+      FieldName = 'DDFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 147
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField149: TppField
+      FieldAlias = 'DDLastRace'
+      FieldName = 'DDLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 148
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField150: TppField
+      FieldAlias = 'DailyDoubleNbrsFirstRace'
+      FieldName = 'DailyDoubleNbrsFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 149
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField151: TppField
+      FieldAlias = 'DailyDoubleNbrsLastRace'
+      FieldName = 'DailyDoubleNbrsLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 150
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField152: TppField
+      FieldAlias = 'DailyDoubleWagerFirstRace'
+      FieldName = 'DailyDoubleWagerFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 151
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField153: TppField
+      FieldAlias = 'DailyDoubleWagerLastRace'
+      FieldName = 'DailyDoubleWagerLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 152
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField154: TppField
+      FieldAlias = 'DailyDoublePayoutFirstRace'
+      FieldName = 'DailyDoublePayoutFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 153
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField155: TppField
+      FieldAlias = 'DailyDoublePayoutLastRace'
+      FieldName = 'DailyDoublePayoutLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 154
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField156: TppField
+      FieldAlias = 'IsQuinellaMatched'
+      FieldName = 'IsQuinellaMatched'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 155
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField157: TppField
+      FieldAlias = 'QuinellaNbrs'
+      FieldName = 'QuinellaNbrs'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 156
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField158: TppField
+      FieldAlias = 'QuinellaWager'
+      FieldName = 'QuinellaWager'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 157
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField159: TppField
+      FieldAlias = 'QuinellaPayout'
+      FieldName = 'QuinellaPayout'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 158
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField160: TppField
+      FieldAlias = 'IsPick3MatchedFirstRace'
+      FieldName = 'IsPick3MatchedFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 159
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField161: TppField
+      FieldAlias = 'IsPick3MatchedLastRace'
+      FieldName = 'IsPick3MatchedLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 160
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField162: TppField
+      FieldAlias = 'Pick3FirstRace'
+      FieldName = 'Pick3FirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 161
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField163: TppField
+      FieldAlias = 'Pick3LastRace'
+      FieldName = 'Pick3LastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 162
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField164: TppField
+      FieldAlias = 'Pick3NbrsFirstRace'
+      FieldName = 'Pick3NbrsFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 163
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField165: TppField
+      FieldAlias = 'Pick3NbrsLastRace'
+      FieldName = 'Pick3NbrsLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 164
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField166: TppField
+      FieldAlias = 'Pick3WagerFirstRace'
+      FieldName = 'Pick3WagerFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 165
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField167: TppField
+      FieldAlias = 'Pick3WagerLastRace'
+      FieldName = 'Pick3WagerLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 166
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField168: TppField
+      FieldAlias = 'Pick3PayoutFirstRace'
+      FieldName = 'Pick3PayoutFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 167
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField169: TppField
+      FieldAlias = 'Pick3PayoutLastRace'
+      FieldName = 'Pick3PayoutLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 168
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField170: TppField
+      FieldAlias = 'Pick3NbrsLeg1'
+      FieldName = 'Pick3NbrsLeg1'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 169
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField171: TppField
+      FieldAlias = 'Pick3NbrsLeg2'
+      FieldName = 'Pick3NbrsLeg2'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 170
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField172: TppField
+      FieldAlias = 'Pick3NbrsLeg3'
+      FieldName = 'Pick3NbrsLeg3'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 171
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField173: TppField
+      FieldAlias = 'IsPick4MatchedFirstRace'
+      FieldName = 'IsPick4MatchedFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 172
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField174: TppField
+      FieldAlias = 'IsPick4MatchedLastRace'
+      FieldName = 'IsPick4MatchedLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 173
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField175: TppField
+      FieldAlias = 'Pick4FirstRace'
+      FieldName = 'Pick4FirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 174
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField176: TppField
+      FieldAlias = 'Pick4LastRace'
+      FieldName = 'Pick4LastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 175
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField177: TppField
+      FieldAlias = 'Pick4NbrsFirstRace'
+      FieldName = 'Pick4NbrsFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 176
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField178: TppField
+      FieldAlias = 'Pick4NbrsLastRace'
+      FieldName = 'Pick4NbrsLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 177
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField179: TppField
+      FieldAlias = 'Pick4WagerFirstRace'
+      FieldName = 'Pick4WagerFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 178
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField180: TppField
+      FieldAlias = 'Pick4WagerLastRace'
+      FieldName = 'Pick4WagerLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 179
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField181: TppField
+      FieldAlias = 'Pick4PayoutFirstRace'
+      FieldName = 'Pick4PayoutFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 180
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField182: TppField
+      FieldAlias = 'Pick4PayoutLastRace'
+      FieldName = 'Pick4PayoutLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 181
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField183: TppField
+      FieldAlias = 'Pick4NbrsLeg1'
+      FieldName = 'Pick4NbrsLeg1'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 182
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField184: TppField
+      FieldAlias = 'Pick4NbrsLeg2'
+      FieldName = 'Pick4NbrsLeg2'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 183
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField185: TppField
+      FieldAlias = 'Pick4NbrsLeg3'
+      FieldName = 'Pick4NbrsLeg3'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 184
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField186: TppField
+      FieldAlias = 'Pick4NbrsLeg4'
+      FieldName = 'Pick4NbrsLeg4'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 185
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField187: TppField
+      FieldAlias = 'IsPick6MatchedFirstRace'
+      FieldName = 'IsPick6MatchedFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 186
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField188: TppField
+      FieldAlias = 'IsPick6MatchedLastRace'
+      FieldName = 'IsPick6MatchedLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 187
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField189: TppField
+      FieldAlias = 'Pick6FirstRace'
+      FieldName = 'Pick6FirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 188
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField190: TppField
+      FieldAlias = 'Pick6LastRace'
+      FieldName = 'Pick6LastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 189
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField191: TppField
+      FieldAlias = 'Pick6NbrsFirstRace'
+      FieldName = 'Pick6NbrsFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 190
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField192: TppField
+      FieldAlias = 'Pick6NbrsLastRace'
+      FieldName = 'Pick6NbrsLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 191
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField193: TppField
+      FieldAlias = 'Pick6WagerFirstRace'
+      FieldName = 'Pick6WagerFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 192
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField194: TppField
+      FieldAlias = 'Pick6WagerLastRace'
+      FieldName = 'Pick6WagerLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 193
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField195: TppField
+      FieldAlias = 'Pick6PayoutFirstRace'
+      FieldName = 'Pick6PayoutFirstRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 194
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField196: TppField
+      FieldAlias = 'Pick6PayoutLastRace'
+      FieldName = 'Pick6PayoutLastRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 195
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField197: TppField
+      FieldAlias = 'IsWinMatched'
+      FieldName = 'IsWinMatched'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 196
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField198: TppField
+      FieldAlias = 'WinNbrs'
+      FieldName = 'WinNbrs'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 197
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField199: TppField
+      FieldAlias = 'WinPayout'
+      FieldName = 'WinPayout'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 198
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField200: TppField
+      FieldAlias = 'WinPlcPayout'
+      FieldName = 'WinPlcPayout'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 199
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField201: TppField
+      FieldAlias = 'WinShoPayout'
+      FieldName = 'WinShoPayout'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 200
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField202: TppField
+      FieldAlias = 'IsPlcMatched'
+      FieldName = 'IsPlcMatched'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 201
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField203: TppField
+      FieldAlias = 'PlcNbrs'
+      FieldName = 'PlcNbrs'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 202
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField204: TppField
+      FieldAlias = 'PlcPayout'
+      FieldName = 'PlcPayout'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 203
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField205: TppField
+      FieldAlias = 'PlcShoPayout'
+      FieldName = 'PlcShoPayout'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 204
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField206: TppField
+      FieldAlias = 'IsShoMatched'
+      FieldName = 'IsShoMatched'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 205
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField207: TppField
+      FieldAlias = 'ShoNbrs'
+      FieldName = 'ShoNbrs'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 206
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField208: TppField
+      FieldAlias = 'ShoPayout'
+      FieldName = 'ShoPayout'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 207
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField209: TppField
+      FieldAlias = 'RaceShape'
+      FieldName = 'RaceShape'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 208
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField210: TppField
+      FieldAlias = 'PostTimes'
+      FieldName = 'PostTimes'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 209
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField211: TppField
+      FieldAlias = 'Is10CentSuperfectaRace'
+      FieldName = 'Is10CentSuperfectaRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 210
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField212: TppField
+      FieldAlias = 'Is50CentTrifectaRace'
+      FieldName = 'Is50CentTrifectaRace'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 211
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField213: TppField
+      FieldAlias = 'Is50CentPk3Race'
+      FieldName = 'Is50CentPk3Race'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 212
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField214: TppField
+      FieldAlias = 'Is50CentPk4Race'
+      FieldName = 'Is50CentPk4Race'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 213
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField215: TppField
+      FieldAlias = 'ET'
+      FieldName = 'ET'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 214
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField216: TppField
+      FieldAlias = 'MT'
+      FieldName = 'MT'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 215
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField217: TppField
+      FieldAlias = 'PT'
+      FieldName = 'PT'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 216
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField218: TppField
+      FieldAlias = 'IsWagerSheetSelected'
+      FieldName = 'IsWagerSheetSelected'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 217
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField219: TppField
+      FieldAlias = 'Value'
+      FieldName = 'Value'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 218
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField220: TppField
+      FieldAlias = 'IsPTCTrack'
+      FieldName = 'IsPTCTrack'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 219
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField221: TppField
+      FieldAlias = 'IsTwinSpiresTrack'
+      FieldName = 'IsTwinSpiresTrack'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 220
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField222: TppField
+      FieldAlias = 'TodaysAltWagerWinPct'
+      FieldName = 'TodaysAltWagerWinPct'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 221
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField223: TppField
+      FieldAlias = 'TodaysAltWagerWinPctRank'
+      FieldName = 'TodaysAltWagerWinPctRank'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 222
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField224: TppField
+      FieldAlias = 'MudSheetOrder'
+      FieldName = 'MudSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 223
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField225: TppField
+      FieldAlias = 'TurfSheetOrder'
+      FieldName = 'TurfSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 224
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField226: TppField
+      FieldAlias = 'MaidenSheetOrder'
+      FieldName = 'MaidenSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 225
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField227: TppField
+      FieldAlias = 'DistanceSheetOrder'
+      FieldName = 'DistanceSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 226
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField228: TppField
+      FieldAlias = 'AWSheetOrder'
+      FieldName = 'AWSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 227
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField229: TppField
+      FieldAlias = 'TrainerSheetOrder'
+      FieldName = 'TrainerSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 228
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField230: TppField
+      FieldAlias = 'JockeySheetOrder'
+      FieldName = 'JockeySheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 229
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField231: TppField
+      FieldAlias = 'OwnerSheetOrder'
+      FieldName = 'OwnerSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 230
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField232: TppField
+      FieldAlias = 'TrainerJockeySheetOrder'
+      FieldName = 'TrainerJockeySheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 231
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField233: TppField
+      FieldAlias = 'ErlPaceSheetOrder'
+      FieldName = 'ErlPaceSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 232
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField234: TppField
+      FieldAlias = 'MidPaceSheetOrder'
+      FieldName = 'MidPaceSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 233
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField235: TppField
+      FieldAlias = 'LatePaceSheetOrder'
+      FieldName = 'LatePaceSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 234
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField236: TppField
+      FieldAlias = 'ErlPacePosSheetOrder'
+      FieldName = 'ErlPacePosSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 235
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField237: TppField
+      FieldAlias = 'MidPacePosSheetOrder'
+      FieldName = 'MidPacePosSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 236
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField238: TppField
+      FieldAlias = 'LatePacePosSheetOrder'
+      FieldName = 'LatePacePosSheetOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 237
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField239: TppField
+      FieldAlias = 'PacificTime'
+      FieldName = 'PacificTime'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 238
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField240: TppField
+      FieldAlias = 'PowerGapOrder'
+      FieldName = 'PowerGapOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 239
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField241: TppField
+      FieldAlias = 'ErlPaceGapOrder'
+      FieldName = 'ErlPaceGapOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 240
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField242: TppField
+      FieldAlias = 'MidPaceGapOrder'
+      FieldName = 'MidPaceGapOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 241
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField243: TppField
+      FieldAlias = 'LatePaceGapOrder'
+      FieldName = 'LatePaceGapOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 242
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField244: TppField
+      FieldAlias = 'ErlPacePosGapOrder'
+      FieldName = 'ErlPacePosGapOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 243
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField245: TppField
+      FieldAlias = 'MidPacePosGapOrder'
+      FieldName = 'MidPacePosGapOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 244
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField246: TppField
+      FieldAlias = 'LatePacePosGapOrder'
+      FieldName = 'LatePacePosGapOrder'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 245
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField247: TppField
+      FieldAlias = 'EarlyPacePar'
+      FieldName = 'EarlyPacePar'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 246
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField248: TppField
+      FieldAlias = 'MiddlePacePar'
+      FieldName = 'MiddlePacePar'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 247
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField249: TppField
+      FieldAlias = 'LatePacePar'
+      FieldName = 'LatePacePar'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 248
+      Searchable = False
+      Sortable = False
+    end
+    object plRacesReportppField250: TppField
+      FieldAlias = 'SpeedPacePar'
+      FieldName = 'SpeedPacePar'
+      FieldLength = 0
+      DataType = dtNotKnown
+      DisplayWidth = 0
+      Position = 249
+      Searchable = False
+      Sortable = False
+    end
   end
   object dsEntries: TDataSource
     DataSet = tblEntries
@@ -243,7 +2743,7 @@ object HospitalReport2Form: THospitalReport2Form
         ParentPrinterSetup = False
         TraverseAllData = False
         DataPipelineName = 'plEntries'
-        mmHeight = 6350
+        mmHeight = 6265
         mmLeft = 0
         mmTop = 0
         mmWidth = 214630
@@ -1304,16 +3804,15 @@ object HospitalReport2Form: THospitalReport2Form
           end
           object aDetailBand: TppDetailBand
             PrintCount = 16
-            PrintHeight = phDynamic
             mmBottomOffset = 0
-            mmHeight = 15452
+            mmHeight = 15367
             mmPrintPosition = 0
             object ppLine5: TppLine
               UserName = 'Line5'
               ParentHeight = True
               Position = lpRight
               Weight = 0.750000000000000000
-              mmHeight = 15452
+              mmHeight = 15367
               mmLeft = 66411
               mmTop = 0
               mmWidth = 529
@@ -1324,7 +3823,7 @@ object HospitalReport2Form: THospitalReport2Form
               ParentHeight = True
               Position = lpRight
               Weight = 0.750000000000000000
-              mmHeight = 15452
+              mmHeight = 15367
               mmLeft = 51012
               mmTop = 0
               mmWidth = 635
@@ -1335,7 +3834,7 @@ object HospitalReport2Form: THospitalReport2Form
               ParentHeight = True
               Position = lpRight
               Weight = 0.750000000000000000
-              mmHeight = 15452
+              mmHeight = 15367
               mmLeft = 21802
               mmTop = 0
               mmWidth = 212
@@ -1346,7 +3845,7 @@ object HospitalReport2Form: THospitalReport2Form
               ParentHeight = True
               Position = lpRight
               Weight = 0.750000000000000000
-              mmHeight = 15452
+              mmHeight = 15367
               mmLeft = 86254
               mmTop = 0
               mmWidth = 265
@@ -1357,7 +3856,7 @@ object HospitalReport2Form: THospitalReport2Form
               ParentHeight = True
               Position = lpRight
               Weight = 0.750000000000000000
-              mmHeight = 15452
+              mmHeight = 15367
               mmLeft = 121285
               mmTop = 0
               mmWidth = 212
@@ -1391,7 +3890,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 5
-              Font.Style = [fsBold, fsUnderline]
+              Font.Style = []
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2117
@@ -1410,7 +3909,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 5
-              Font.Style = [fsBold, fsUnderline]
+              Font.Style = []
               DataPipelineName = 'plEntries'
               mmHeight = 2117
               mmLeft = 22648
@@ -1489,7 +3988,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 5
-              Font.Style = [fsBold, fsUnderline]
+              Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
@@ -1510,7 +4009,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 5
-              Font.Style = []
+              Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
@@ -1683,7 +4182,6 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
-              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2963
               mmLeft = 78952
@@ -1830,7 +4328,7 @@ object HospitalReport2Form: THospitalReport2Form
               ParentHeight = True
               Position = lpRight
               Weight = 0.750000000000000000
-              mmHeight = 15452
+              mmHeight = 15367
               mmLeft = 127212
               mmTop = 0
               mmWidth = 423
@@ -1951,7 +4449,6 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2963
               mmLeft = 78528
@@ -1972,6 +4469,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
+              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2963
               mmLeft = 67310
@@ -1992,7 +4490,6 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2963
               mmLeft = 74930
@@ -2021,10 +4518,9 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 5
-              Font.Style = []
+              Font.Style = [fsBold, fsUnderline]
               TextAlignment = taRightJustified
               Transparent = True
-              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2540
               mmLeft = 102024
@@ -2040,7 +4536,7 @@ object HospitalReport2Form: THospitalReport2Form
               Weight = 0.750000000000000000
               mmHeight = 212
               mmLeft = 0
-              mmTop = 15240
+              mmTop = 15155
               mmWidth = 214630
               BandType = 4
             end
@@ -8039,7 +10535,7 @@ object HospitalReport2Form: THospitalReport2Form
     ReadOnly = True
     TableName = 'ENTRY.DAT'
     StoreDefs = True
-    Left = 104
+    Left = 112
     Top = 106
   end
 end

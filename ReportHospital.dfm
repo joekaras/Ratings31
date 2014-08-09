@@ -1,6 +1,6 @@
 object HospitalReportForm: THospitalReportForm
-  Left = 327
-  Top = 411
+  Left = 79
+  Top = 621
   Width = 576
   Height = 333
   Caption = 'Hospital Report'
@@ -56,9 +56,8 @@ object HospitalReportForm: THospitalReportForm
   end
   object dbHospitalReport: TDBISAMDatabase
     EngineVersion = '4.24 Build 1'
-    Connected = True
     DatabaseName = 'dbHospitalReport'
-    Directory = 'C:\RatingsData31'
+    Directory = 'd:\RatingsData31'
     KeepTablesOpen = False
     SessionName = 'Default'
     BeforeConnect = dbHospitalReportBeforeConnect
@@ -4760,7 +4759,7 @@ object HospitalReportForm: THospitalReportForm
     Filtered = True
     DatabaseName = 'dbHospitalReport'
     EngineVersion = '4.24 Build 1'
-    IndexName = 'ByTodaysWagerWinPctRank'
+    IndexFieldNames = 'RangeRaceDate;TrkCode;RaceDate;RaceNbr'
     MasterFields = 'RangeRaceDate;TrkCode;RaceDate;RaceNbr'
     MasterSource = dsRacesMaster
     TableName = 'ENTRY.DAT'
