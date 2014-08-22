@@ -1983,7 +1983,7 @@ begin
             DecodeTime(Present, wHour, wMin, wSec, wMSec);
 
 
-            if ((wHour >= 0)andr(wHour < 12)) then begin
+            if ((wHour >= 0)and (wHour < 12)) then begin
                if (Trim(sMTO_AE) = 'A') then begin
                   sMTO_AE := 'A';
                   continue;

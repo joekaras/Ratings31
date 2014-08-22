@@ -1986,11 +1986,11 @@ begin
             if ((wHour >= 0)and (wHour < 12)) then begin
                if (Trim(sMTO_AE) = 'A') then begin
                   sMTO_AE := 'A';
-                  continue;
+              //    continue;
                end;
                if (Trim(sMTO_AE) = 'M') then begin
                   sMTO_AE := 'M';
-                  continue;
+              //    continue;
                end;
             end;
             //

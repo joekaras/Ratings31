@@ -1,6 +1,6 @@
 object HospitalReportForm: THospitalReportForm
-  Left = 79
-  Top = 621
+  Left = 536
+  Top = 231
   Width = 576
   Height = 333
   Caption = 'Hospital Report'
@@ -56,8 +56,9 @@ object HospitalReportForm: THospitalReportForm
   end
   object dbHospitalReport: TDBISAMDatabase
     EngineVersion = '4.24 Build 1'
+    Connected = True
     DatabaseName = 'dbHospitalReport'
-    Directory = 'd:\RatingsData31'
+    Directory = 'c:\RatingsData31'
     KeepTablesOpen = False
     SessionName = 'Default'
     BeforeConnect = dbHospitalReportBeforeConnect
@@ -2472,7 +2473,7 @@ object HospitalReportForm: THospitalReportForm
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 7
-              Font.Style = [fsBold, fsUnderline]
+              Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
               mmHeight = 3387
@@ -2684,6 +2685,7 @@ object HospitalReportForm: THospitalReportForm
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
+              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2910
               mmLeft = 67469
@@ -2704,6 +2706,7 @@ object HospitalReportForm: THospitalReportForm
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
+              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2910
               mmLeft = 74877
@@ -2733,7 +2736,7 @@ object HospitalReportForm: THospitalReportForm
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 5
-              Font.Style = []
+              Font.Style = [fsBold, fsUnderline]
               TextAlignment = taRightJustified
               Transparent = True
               Visible = False
@@ -2981,7 +2984,7 @@ object HospitalReportForm: THospitalReportForm
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 7
-              Font.Style = []
+              Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
@@ -4759,11 +4762,11 @@ object HospitalReportForm: THospitalReportForm
     Filtered = True
     DatabaseName = 'dbHospitalReport'
     EngineVersion = '4.24 Build 1'
-    IndexFieldNames = 'RangeRaceDate;TrkCode;RaceDate;RaceNbr'
+    IndexName = 'ByTodaysWagerWinPctRank'
     MasterFields = 'RangeRaceDate;TrkCode;RaceDate;RaceNbr'
     MasterSource = dsRacesMaster
     TableName = 'ENTRY.DAT'
-    Left = 104
+    Left = 112
     Top = 106
   end
 end

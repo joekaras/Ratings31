@@ -56,8 +56,9 @@ object HospitalReport2Form: THospitalReport2Form
   end
   object dbHospitalReport2: TDBISAMDatabase
     EngineVersion = '4.24 Build 1'
+    Connected = True
     DatabaseName = 'dbHospitalReport2'
-    Directory = 'd:\RatingsData31'
+    Directory = 'c:\RatingsData31'
     KeepTablesOpen = False
     SessionName = 'Default'
     BeforeConnect = dbHospitalReport2BeforeConnect
@@ -1389,7 +1390,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 5
-              Font.Style = []
+              Font.Style = [fsBold, fsUnderline]
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2117
@@ -1445,7 +1446,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 7
-              Font.Style = []
+              Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
@@ -1567,7 +1568,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 7
-              Font.Style = []
+              Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
@@ -1627,7 +1628,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 7
-              Font.Style = []
+              Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
@@ -1681,6 +1682,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
+              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2963
               mmLeft = 78952
@@ -1775,7 +1777,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 7
-              Font.Style = [fsBold, fsUnderline]
+              Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
               mmHeight = 3387
@@ -1948,6 +1950,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
+              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2963
               mmLeft = 78528
@@ -1989,6 +1992,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
+              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2963
               mmLeft = 74930
@@ -2020,6 +2024,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = [fsBold, fsUnderline]
               TextAlignment = taRightJustified
               Transparent = True
+              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2540
               mmLeft = 102024
@@ -2081,7 +2086,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 6
-              Font.Style = []
+              Font.Style = [fsBold, fsUnderline]
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
               mmHeight = 2498
@@ -2452,7 +2457,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 5
-              Font.Style = []
+              Font.Style = [fsBold, fsUnderline]
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
@@ -2473,7 +2478,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 5
-              Font.Style = []
+              Font.Style = [fsBold, fsUnderline]
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
@@ -2494,7 +2499,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Arial Narrow'
               Font.Size = 5
-              Font.Style = []
+              Font.Style = [fsBold, fsUnderline]
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
@@ -8028,7 +8033,7 @@ object HospitalReport2Form: THospitalReport2Form
         Options = [ixDescending]
         Compression = icNone
       end>
-    IndexFieldNames = 'RangeRaceDate;TrkCode;RaceDate;RaceNbr'
+    IndexName = 'ByTodaysWagerWinPctRank'
     MasterFields = 'RangeRaceDate;TrkCode;RaceDate;RaceNbr'
     MasterSource = dsRacesMaster
     ReadOnly = True

@@ -1,6 +1,6 @@
 object MainForm: TMainForm
-  Left = 490
-  Top = 73
+  Left = 124
+  Top = 39
   Width = 1175
   Height = 623
   Caption = 'KSK Ratings 3.1'
@@ -51,7 +51,7 @@ object MainForm: TMainForm
     Top = 28
     Width = 1167
     Height = 507
-    ActivePage = cxTabSheet1
+    ActivePage = tabBatch
     Align = alClient
     LookAndFeel.Kind = lfStandard
     LookAndFeel.NativeStyle = False
