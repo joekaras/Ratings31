@@ -1,5 +1,5 @@
 object MainForm: TMainForm
-  Left = 124
+  Left = 140
   Top = 39
   Width = 1175
   Height = 623
@@ -51,7 +51,7 @@ object MainForm: TMainForm
     Top = 28
     Width = 1167
     Height = 507
-    ActivePage = tabBatch
+    ActivePage = tabDaily
     Align = alClient
     LookAndFeel.Kind = lfStandard
     LookAndFeel.NativeStyle = False

@@ -8866,11 +8866,11 @@ begin
                TimerOn(False);
                gbSuppressTimerOn := True;
 
-               try
-                  btnDownloadTsnResultsClick(Sender);
-               except
-                  on E: Exception do hLog.AddToLog(E.Message, msevException);
-               end;
+               //try
+//                  btnDownloadTsnResultsClick(Sender);
+//               except
+//                  on E: Exception do hLog.AddToLog(E.Message, msevException);
+//               end;
 
                try
                   edtOverrideDate.Date := Now();
@@ -8937,11 +8937,11 @@ begin
 
 
                edtOverrideDate.Date := Now() + 1;
-               try
-                  btnDownloadTSNClick(Sender);
-               except
-                  on E: Exception do hLog.AddToLog(E.Message, msevException);
-               end;
+               //try
+                //    btnDownloadTSNClick(Sender);
+  //               except
+  //                  on E: Exception do hLog.AddToLog(E.Message, msevException);
+  //               end;
 
                try
                   edtOverrideDate.Date := Now() + 1;
@@ -9137,20 +9137,20 @@ begin
             on E: Exception do hLog.AddToLog(E.Message, msevException);
          end;
 
-         //
-         try
-            edtOverrideDate.Date := Now();
-            btnDownloadEquibaseStatsClick(Sender);
-            btnProcessEquibaseStatsClick(Sender);
-         except
-            on E: Exception do hLog.AddToLog(E.Message, msevException);
-         end;
+//         //
+//         try
+//            edtOverrideDate.Date := Now();
+//            btnDownloadEquibaseStatsClick(Sender);
+//            btnProcessEquibaseStatsClick(Sender);
+//         except
+//            on E: Exception do hLog.AddToLog(E.Message, msevException);
+//         end;
 
-         try
-            btnDownloadTSNClick(Sender);
-         except
-            on E: Exception do hLog.AddToLog(E.Message, msevException);
-         end;
+         //try
+//            btnDownloadTSNClick(Sender);
+//         except
+//            on E: Exception do hLog.AddToLog(E.Message, msevException);
+//         end;
 
 
          chkCreateHospitalReport.Checked := True;
@@ -10585,11 +10585,11 @@ begin
 
    edtOverrideDate.Date := Now() + 1;
 
-   try
-      btnDownloadTSNClick(Sender);
-   except
-      on E: Exception do hLog.AddToLog(E.Message, msevException);
-   end;
+  // try
+//      btnDownloadTSNClick(Sender);
+//   except
+//      on E: Exception do hLog.AddToLog(E.Message, msevException);
+//   end;
 
    try
       btnStartOfDayClick(Sender);
@@ -10920,7 +10920,7 @@ begin
       btnStartOfDayClick(Sender);
       btnImportClick(Sender);
       //  if (chkDownloadAxcis.Checked) then begin
-      btnDownloadTSNClick(Sender);
+    //btnDownloadTSNClick(Sender);
       //   end;
       btnCreateTodaysRatingsClick(Sender);
       btnImportTodayClick(Sender);
@@ -16812,13 +16812,13 @@ begin
 
       btnStartOfDayClick(Sender);
       btnImportClick(Sender);
-      if (chkDownloadAxcis.Checked) then begin
-         try
-            btnDownloadTSNClick(Sender);
-         except
-            on E: Exception do hLog.AddToLog(E.Message, msevException);
-         end;
-      end;
+      //if (chkDownloadAxcis.Checked) then begin
+//         try
+//            btnDownloadTSNClick(Sender);
+//         except
+//            on E: Exception do hLog.AddToLog(E.Message, msevException);
+//         end;
+//      end;
       btnCreateTodaysRatingsClick(Sender);
       btnImportTodayClick(Sender);
 
@@ -18694,35 +18694,35 @@ begin
    dm.tblTrainerOwnerSummary.ExportTable(sFileName, ',', True);
    dm.tblTrainerOwnerSummary.Active := False;
 
-//   dm.tblTrainerSummary.Active := True;
-//   dm.tblTrainerSummary.First();
-//   sFileName := EXPORT_REPORT_PATH + 'TRNSUMM' + sBaseFileName;
-//   dm.tblTrainerSummary.ExportTable(sFileName, ',', True);
-//   dm.tblTrainerSummary.Active := False;
-//
-//   dm.tblTrainer.Active := True;
-//   dm.tblTrainer.First();
-//   sFileName := EXPORT_REPORT_PATH + 'TRN' + sBaseFileName;
-//   dm.tblTrainer.ExportTable(sFileName, ',', True);
-//   dm.tblTrainer.Active := False;
-//
-//   dm.tblJockeySummary.Active := True;
-//   dm.tblJockeySummary.First();
-//   sFileName := EXPORT_REPORT_PATH + 'JKYSUMM' + sBaseFileName;
-//   dm.tblJockeySummary.ExportTable(sFileName, ',', True);
-//   dm.tblJockeySummary.Active := False;
-//
-//   dm.tblJockey.Active := True;
-//   dm.tblJockey.First();
-//   sFileName := EXPORT_REPORT_PATH + 'JKY' + sBaseFileName;
-//   dm.tblJockey.ExportTable(sFileName, ',', True);
-//   dm.tblJockey.Active := False;
-//
-//   dm.tblTrainerCategory.Active := True;
-//   dm.tblTrainerCategory.First();
-//   sFileName := EXPORT_REPORT_PATH + 'TC' + sBaseFileName;
-//   dm.tblTrainerCategory.ExportTable(sFileName, ',', True);
-//   dm.tblTrainerCategory.Active := False;
+   //   dm.tblTrainerSummary.Active := True;
+   //   dm.tblTrainerSummary.First();
+   //   sFileName := EXPORT_REPORT_PATH + 'TRNSUMM' + sBaseFileName;
+   //   dm.tblTrainerSummary.ExportTable(sFileName, ',', True);
+   //   dm.tblTrainerSummary.Active := False;
+   //
+   //   dm.tblTrainer.Active := True;
+   //   dm.tblTrainer.First();
+   //   sFileName := EXPORT_REPORT_PATH + 'TRN' + sBaseFileName;
+   //   dm.tblTrainer.ExportTable(sFileName, ',', True);
+   //   dm.tblTrainer.Active := False;
+   //
+   //   dm.tblJockeySummary.Active := True;
+   //   dm.tblJockeySummary.First();
+   //   sFileName := EXPORT_REPORT_PATH + 'JKYSUMM' + sBaseFileName;
+   //   dm.tblJockeySummary.ExportTable(sFileName, ',', True);
+   //   dm.tblJockeySummary.Active := False;
+   //
+   //   dm.tblJockey.Active := True;
+   //   dm.tblJockey.First();
+   //   sFileName := EXPORT_REPORT_PATH + 'JKY' + sBaseFileName;
+   //   dm.tblJockey.ExportTable(sFileName, ',', True);
+   //   dm.tblJockey.Active := False;
+   //
+   //   dm.tblTrainerCategory.Active := True;
+   //   dm.tblTrainerCategory.First();
+   //   sFileName := EXPORT_REPORT_PATH + 'TC' + sBaseFileName;
+   //   dm.tblTrainerCategory.ExportTable(sFileName, ',', True);
+   //   dm.tblTrainerCategory.Active := False;
 
 
    dm.tblRaces.Active := True;

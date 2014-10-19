@@ -1,6 +1,6 @@
 object MainForm: TMainForm
-  Left = -23
-  Top = 85
+  Left = 140
+  Top = 39
   Width = 1175
   Height = 623
   Caption = 'KSK Ratings 3.1'
@@ -48,15 +48,15 @@ object MainForm: TMainForm
   end
   object pgCtrlMain: TcxPageControl
     Left = 0
-    Top = 25
+    Top = 28
     Width = 1167
-    Height = 510
-    ActivePage = cxTabSheet1
+    Height = 507
+    ActivePage = tabDaily
     Align = alClient
     LookAndFeel.Kind = lfStandard
     LookAndFeel.NativeStyle = False
     TabOrder = 2
-    ClientRectBottom = 508
+    ClientRectBottom = 505
     ClientRectLeft = 2
     ClientRectRight = 1165
     ClientRectTop = 25
@@ -935,7 +935,7 @@ object MainForm: TMainForm
         Left = 0
         Top = 0
         Width = 236
-        Height = 483
+        Height = 480
         Align = alLeft
         TabOrder = 0
         object btnAnalysisFinalOrderForm: TButton
@@ -1935,7 +1935,7 @@ object MainForm: TMainForm
     DockControlHeights = (
       0
       0
-      25
+      28
       0)
     object File1: TdxBarSubItem
       Caption = 'File'
