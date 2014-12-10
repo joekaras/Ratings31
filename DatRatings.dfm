@@ -2,8 +2,8 @@ object dm: Tdm
   OldCreateOrder = False
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
-  Left = 520
-  Top = 405
+  Left = 95
+  Top = 82
   Height = 780
   Width = 1036
   object dbSireRate: TDBISAMDatabase
