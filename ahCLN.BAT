@@ -1,5 +1,5 @@
 
-cd \ratings31
+
 pause
 del ??.txt
 del ???.txt
