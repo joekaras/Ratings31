@@ -19,7 +19,7 @@ object TipReportForm: TTipReportForm
   PixelsPerInch = 120
   TextHeight = 16
   object pnlPrgBar: TPanel
-    Left = -147
+    Left = -155
     Top = 17
     Width = 842
     Height = 51
@@ -47,7 +47,7 @@ object TipReportForm: TTipReportForm
   end
   object btnCreatePdf: TButton
     Left = -147
-    Top = 83
+    Top = 75
     Width = 842
     Height = 51
     Caption = 'Create PDF Reports'
@@ -4963,15 +4963,15 @@ object TipReportForm: TTipReportForm
   object ppTipSheetReport: TppReport
     AutoStop = False
     DataPipeline = plRacesReport
-    NoDataBehaviors = [ndBlankReport]
+    PassSetting = psTwoPass
     PrinterSetup.BinName = 'Default'
     PrinterSetup.DocumentName = 'Report'
     PrinterSetup.PaperName = 'Letter 8 '#189' x 11 in'
-    PrinterSetup.PrinterName = 'Default'
-    PrinterSetup.mmMarginBottom = 212
-    PrinterSetup.mmMarginLeft = 1058
-    PrinterSetup.mmMarginRight = 212
-    PrinterSetup.mmMarginTop = 212
+    PrinterSetup.PrinterName = 'Dell Laser Printer 1700n'
+    PrinterSetup.mmMarginBottom = 23
+    PrinterSetup.mmMarginLeft = 0
+    PrinterSetup.mmMarginRight = 0
+    PrinterSetup.mmMarginTop = 0
     PrinterSetup.mmPaperHeight = 279401
     PrinterSetup.mmPaperWidth = 215900
     PrinterSetup.PaperSize = 1
@@ -4979,6 +4979,7 @@ object TipReportForm: TTipReportForm
     Template.Format = ftASCII
     Units = utPrinterPixels
     AllowPrintToFile = True
+    CachePages = True
     DeviceType = 'PDFFile'
     ModalCancelDialog = False
     ModalPreview = False
@@ -4988,15 +4989,14 @@ object TipReportForm: TTipReportForm
     OutlineSettings.Visible = False
     TextSearchSettings.DefaultString = '<FindText>'
     TextSearchSettings.Enabled = False
-    Left = 264
+    Left = 280
     Top = 8
     Version = '7.04'
     mmColumnWidth = 203200
     DataPipelineName = 'plRacesReport'
-    object ppDetailBand3: TppDetailBand
-      PrintHeight = phDynamic
+    object ppDetailBand1: TppDetailBand
       mmBottomOffset = 0
-      mmHeight = 19262
+      mmHeight = 20320
       mmPrintPosition = 53
       object ppDBText14: TppDBText
         UserName = 'DBText14'
@@ -5014,7 +5014,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 193252
         mmTop = 1058
-        mmWidth = 22013
+        mmWidth = 7535
         BandType = 4
       end
       object lblErlPace: TppLabel
@@ -5047,7 +5047,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 137160
         mmTop = 1058
-        mmWidth = 20278
+        mmWidth = 7535
         BandType = 4
       end
       object lblMidPace: TppLabel
@@ -5079,7 +5079,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 164465
         mmTop = 1058
-        mmWidth = 21209
+        mmWidth = 7535
         BandType = 4
       end
       object ppLabel14: TppLabel
@@ -5123,9 +5123,9 @@ object TipReportForm: TTipReportForm
         Transparent = True
         DataPipelineName = 'plRacesReport'
         mmHeight = 3725
-        mmLeft = 16722
-        mmTop = 635
-        mmWidth = 10668
+        mmLeft = 12912
+        mmTop = 847
+        mmWidth = 1439
         BandType = 4
       end
       object ppDBText3: TppDBText
@@ -5141,13 +5141,14 @@ object TipReportForm: TTipReportForm
         Transparent = True
         DataPipelineName = 'plRacesReport'
         mmHeight = 3725
-        mmLeft = 21590
-        mmTop = 635
-        mmWidth = 9525
+        mmLeft = 17780
+        mmTop = 847
+        mmWidth = 1863
         BandType = 4
       end
       object ppDBText4: TppDBText
         UserName = 'DBText4'
+        AutoSize = True
         DataField = 'DistanceDesc'
         DataPipeline = plRacesReport
         Font.Charset = DEFAULT_CHARSET
@@ -5157,10 +5158,10 @@ object TipReportForm: TTipReportForm
         Font.Style = [fsBold]
         Transparent = True
         DataPipelineName = 'plRacesReport'
-        mmHeight = 3810
-        mmLeft = 25400
-        mmTop = 635
-        mmWidth = 30480
+        mmHeight = 3725
+        mmLeft = 22648
+        mmTop = 847
+        mmWidth = 3768
         BandType = 4
       end
       object ppLine1: TppLine
@@ -5171,7 +5172,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 212
         mmLeft = 0
         mmTop = 0
-        mmWidth = 214630
+        mmWidth = 215900
         BandType = 4
       end
       object ppDBText6: TppDBText
@@ -5187,9 +5188,9 @@ object TipReportForm: TTipReportForm
         Transparent = True
         DataPipelineName = 'plRacesReport'
         mmHeight = 3725
-        mmLeft = 24765
+        mmLeft = 22648
         mmTop = 5927
-        mmWidth = 12361
+        mmWidth = 11853
         BandType = 4
       end
       object txtDebut: TppDBText
@@ -5249,9 +5250,9 @@ object TipReportForm: TTipReportForm
         TextAlignment = taRightJustified
         DataPipelineName = 'plRacesReport'
         mmHeight = 3302
-        mmLeft = 61764
+        mmLeft = 72348
         mmTop = 5715
-        mmWidth = 11896
+        mmWidth = 1312
         BandType = 4
       end
       object Starters: TppLabel
@@ -5331,7 +5332,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 2879
         mmLeft = 137160
         mmTop = 5080
-        mmWidth = 15960
+        mmWidth = 14563
         BandType = 4
       end
       object ppDBText12: TppDBText
@@ -5349,7 +5350,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 2879
         mmLeft = 164465
         mmTop = 5080
-        mmWidth = 16722
+        mmWidth = 14563
         BandType = 4
       end
       object ppDBText13: TppDBText
@@ -5368,7 +5369,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 2879
         mmLeft = 193252
         mmTop = 5080
-        mmWidth = 17314
+        mmWidth = 14563
         BandType = 4
       end
       object ppLabel4: TppLabel
@@ -5381,8 +5382,8 @@ object TipReportForm: TTipReportForm
         Font.Style = [fsBold]
         Transparent = True
         mmHeight = 3810
-        mmLeft = 12700
-        mmTop = 635
+        mmLeft = 8890
+        mmTop = 847
         mmWidth = 3387
         BandType = 4
       end
@@ -5455,9 +5456,9 @@ object TipReportForm: TTipReportForm
         Transparent = True
         DataPipelineName = 'plRacesReport'
         mmHeight = 3725
-        mmLeft = 5503
-        mmTop = 635
-        mmWidth = 10583
+        mmLeft = 1693
+        mmTop = 847
+        mmWidth = 5207
         BandType = 4
       end
       object ppDBText5: TppDBText
@@ -5473,9 +5474,9 @@ object TipReportForm: TTipReportForm
         Transparent = True
         DataPipelineName = 'plRacesReport'
         mmHeight = 2879
-        mmLeft = 5503
-        mmTop = 16087
-        mmWidth = 6773
+        mmLeft = 423
+        mmTop = 16298
+        mmWidth = 99949
         BandType = 4
       end
       object ppDBText7: TppDBText
@@ -5491,9 +5492,9 @@ object TipReportForm: TTipReportForm
         Transparent = True
         DataPipelineName = 'plRacesReport'
         mmHeight = 3725
-        mmLeft = 5503
+        mmLeft = 1905
         mmTop = 5927
-        mmWidth = 19177
+        mmWidth = 15071
         BandType = 4
       end
       object ppLabel7: TppLabel
@@ -5504,8 +5505,8 @@ object TipReportForm: TTipReportForm
         Font.Name = 'Courier New'
         Font.Size = 12
         Font.Style = [fsBold]
-        mmHeight = 4868
-        mmLeft = 5503
+        mmHeight = 4826
+        mmLeft = 2328
         mmTop = 11007
         mmWidth = 7620
         BandType = 4
@@ -5567,7 +5568,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 69850
         mmTop = 423
-        mmWidth = 20532
+        mmWidth = 11684
         BandType = 4
       end
       object ppDBText15: TppDBText
@@ -5631,7 +5632,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 2879
         mmLeft = 137160
         mmTop = 12700
-        mmWidth = 19431
+        mmWidth = 12531
         BandType = 4
       end
       object ppDBText22: TppDBText
@@ -5649,7 +5650,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 137160
         mmTop = 8678
-        mmWidth = 24299
+        mmWidth = 7535
         BandType = 4
       end
       object ppLabel20: TppLabel
@@ -5695,7 +5696,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 2879
         mmLeft = 164465
         mmTop = 12700
-        mmWidth = 20193
+        mmWidth = 12531
         BandType = 4
       end
       object ppDBText24: TppDBText
@@ -5713,7 +5714,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 164465
         mmTop = 8678
-        mmWidth = 25231
+        mmWidth = 7535
         BandType = 4
       end
       object ppLabel22: TppLabel
@@ -5760,7 +5761,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 2879
         mmLeft = 193252
         mmTop = 12700
-        mmWidth = 20786
+        mmWidth = 12531
         BandType = 4
       end
       object ppDBText26: TppDBText
@@ -5779,7 +5780,7 @@ object TipReportForm: TTipReportForm
         mmHeight = 3302
         mmLeft = 193252
         mmTop = 8678
-        mmWidth = 26035
+        mmWidth = 7535
         BandType = 4
       end
       object ppLabel6: TppLabel
@@ -5800,23 +5801,58 @@ object TipReportForm: TTipReportForm
     object ppGroup1: TppGroup
       BreakName = 'TrkCode'
       DataPipeline = plRacesReport
-      HeaderForOrphanedFooter = False
+      KeepTogether = True
       OutlineSettings.CreateNode = True
-      NewPage = True
+      ReprintOnSubsequentPage = False
       UserName = 'Group1'
       mmNewColumnThreshold = 0
       mmNewPageThreshold = 0
       DataPipelineName = 'plRacesReport'
       object ppGroupHeaderBand1: TppGroupHeaderBand
         Visible = False
-        PrintHeight = phDynamic
         mmBottomOffset = 0
-        mmHeight = 212
+        mmHeight = 3810
         mmPrintPosition = 0
+        object ppDBText16: TppDBText
+          UserName = 'DBText16'
+          AutoSize = True
+          DataField = 'TrkCode'
+          DataPipeline = plRacesReport
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Name = 'Arial Narrow'
+          Font.Size = 9
+          Font.Style = [fsBold]
+          Transparent = True
+          DataPipelineName = 'plRacesReport'
+          mmHeight = 3725
+          mmLeft = 83185
+          mmTop = 0
+          mmWidth = 5207
+          BandType = 3
+          GroupNo = 0
+        end
+        object ppDBText17: TppDBText
+          UserName = 'DBText17'
+          AutoSize = True
+          DataField = 'RaceDate'
+          DataPipeline = plRacesReport
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Name = 'Arial Narrow'
+          Font.Size = 9
+          Font.Style = [fsBold]
+          Transparent = True
+          DataPipelineName = 'plRacesReport'
+          mmHeight = 3725
+          mmLeft = 103294
+          mmTop = 0
+          mmWidth = 12954
+          BandType = 3
+          GroupNo = 0
+        end
       end
       object ppGroupFooterBand1: TppGroupFooterBand
-        Visible = False
-        PrintHeight = phDynamic
         mmBottomOffset = 0
         mmHeight = 0
         mmPrintPosition = 0
@@ -5910,8 +5946,10 @@ object TipReportForm: TTipReportForm
     AutoDisplayLabels = False
     CopyOnAppend = False
     Filter = 'IsTrainerSheetSelected=True) or (IsSpeedSheetSelected=True)'
+    Filtered = True
     DatabaseName = 'dbTipSheets'
     EngineVersion = '4.24 Build 1'
+    IndexName = 'ByTodaysWagerWinPctRank'
     MasterFields = 'RangeRaceDate;TrkCode;RaceDate;RaceNbr'
     MasterSource = dsRacesMaster
     TableName = 'ENTRY.DAT'

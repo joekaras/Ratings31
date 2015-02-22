@@ -27,7 +27,7 @@ type
       ppParameterList1: TppParameterList;
       hLog: TmLog;
       tblEntries: TDBISAMTable;
-    ppDetailBand3: TppDetailBand;
+    ppDetailBand1: TppDetailBand;
     ppDBText14: TppDBText;
     lblErlPace: TppLabel;
     ErlPaceSheetOrder: TppDBText;
@@ -76,11 +76,13 @@ type
     ppLabel23: TppLabel;
     ppDBText25: TppDBText;
     ppDBText26: TppDBText;
-    ppLabel6: TppLabel;
     ppGroup1: TppGroup;
     ppGroupHeaderBand1: TppGroupHeaderBand;
+    ppDBText16: TppDBText;
+    ppDBText17: TppDBText;
     ppGroupFooterBand1: TppGroupFooterBand;
     raCodeModule1: TraCodeModule;
+    ppLabel6: TppLabel;
       procedure FormCreate(Sender: TObject);
       procedure FormDestroy(Sender: TObject);
       procedure btnCreatePdfClick(Sender: TObject);

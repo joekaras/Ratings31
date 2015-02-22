@@ -3,19 +3,19 @@ Version=7.0
 [Compiler]
 A=8
 B=0
-C=0
+C=1
 D=1
 E=0
 F=0
 G=1
 H=1
-I=0
+I=1
 J=0
 K=0
 L=1
 M=0
 N=1
-O=1
+O=0
 P=1
 Q=0
 R=0
@@ -25,10 +25,10 @@ U=0
 V=1
 W=0
 X=1
-Y=0
+Y=1
 Z=1
-ShowHints=0
-ShowWarnings=0
+ShowHints=1
+ShowWarnings=1
 UnitAliases=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
 NamespacePrefix=
 SymbolDeprecated=1
@@ -126,3 +126,9 @@ c:\program files\borland\delphi7\Bin\dclite70.bpl=Borland Integrated Translation
 c:\program files\borland\delphi7\Bin\dclnet70.bpl=Borland Internet Components
 c:\program files\borland\delphi7\Bin\dclsoap70.bpl=Borland SOAP Components
 c:\program files\borland\delphi7\Bin\dclocx70.bpl=Borland Sample Imported ActiveX Controls
+[HistoryLists\hlConditionals]
+Count=1
+Item0=madExcept
+[HistoryLists\hlUnitAliases]
+Count=1
+Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
