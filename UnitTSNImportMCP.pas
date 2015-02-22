@@ -795,7 +795,8 @@ var
    sLPostPos: string;
    sLDistanceDesc: string;
    sLTrkCond: string;
-   sLRaceType: string;
+   Present: TDateTime;
+   sLRaceType: string;    
    sLClmPrice: string;
    sLClaimed: string;
    sLPurse: string;
@@ -1976,13 +1977,21 @@ begin
             sTJMeetStarts := StringListTrim(lstS[1413 - 1]);
             sTJMeetWins := StringListTrim(lstS[1414 - 1]);
 
-            if (Trim(sMTO_AE) = 'A') then begin
-               sMTO_AE := 'A';
-               //continue;
-            end;
-            if (Trim(sMTO_AE) = 'M') then begin
-               sMTO_AE := 'M';
-               //continue;
+
+
+            Present := Now;
+            DecodeTime(Present, wHour, wMin, wSec, wMSec);
+
+
+            if ((wHour >= 0)and (wHour < 12)) then begin
+               if (Trim(sMTO_AE) = 'A') then begin
+                  sMTO_AE := 'A';
+              //    continue;
+               end;
+               if (Trim(sMTO_AE) = 'M') then begin
+                  sMTO_AE := 'M';
+              //    continue;
+               end;
             end;
             //
             tblRH.IndexName := '';
