@@ -1379,13 +1379,20 @@ var
    C: Integer;
 
 begin
-
+   Result := 0;
+   try
    Val(sIn, I, C);
    if C <> 0 then
       Result := 0
    else
+           
       Result := I;
-
+      if Result > 32678  then  begin
+        Result := 0;
+     end ; 
+    except
+    end;
+   
 end;
 
 function atol(sIn: string): Longint;

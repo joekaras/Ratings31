@@ -1,0 +1,10 @@
+12/17/2016 9:10:28 AM [Operation] btnDownloadTsnResults
+12/17/2016 9:23:16 AM [Exception] Cannot generate report.
+12/17/2016 9:06:53 AM [Operation] Process TSN MultiCaps _ D:\TSNDOWNLOAD\PROCAPS\FGX1217.MCP
+12/17/2016 9:06:56 AM [Exception] 1644479 is not a valid value for field 'BackSpeed'. The allowed range is -32768 to 32767
+12/17/2016 10:03:37 AM [Operation] Process TSN MultiCaps _ D:\TSNDOWNLOAD\PROCAPS\FGX1217.MCP
+12/17/2016 10:03:39 AM [Exception] 1644479 is not a valid value for field 'BackSpeed'. The allowed range is -32768 to 32767
+12/17/2016 10:17:37 AM [Operation] Process TSN MultiCaps _ D:\TSNDOWNLOAD\PROCAPS\FGX1217.MCP
+12/17/2016 10:17:40 AM [Exception] 1644479 is not a valid value for field 'BackSpeed'. The allowed range is -32768 to 32767
+12/17/2016 10:20:06 AM [Operation] Process TSN MultiCaps _ D:\TSNDOWNLOAD\PROCAPS\FGX1217.MCP
+12/17/2016 10:20:09 AM [Exception] 1644479 is not a valid value for field 'BackSpeed'. The allowed range is -32768 to 32767

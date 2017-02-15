@@ -1,0 +1,100 @@
+ATTENTION; THIS IS A LICENSE, NOT A SALE. THIS PRODUCT IS PROVIDED
+UNDER THE FOLLOWING LICENSE WHICH DEFINES WHAT YOU MAY DO WITH THE
+PRODUCT, AND CONTAINS LIMITATIONS ON WARRANTIES AND YOUR REMEDIES.
+
+
+                          License
+
+This is a legal agreement between you, the end user and Elfring 
+Soft Fonts, governed by the laws of the state of Illinois.
+
+Grant of License. Elfring Soft Fonts grants you the right to use 
+the fonts, clip art, utility programs, and documentation included
+in this package, (the "Software"), on a single computer and on a 
+single printer. The copyright and all other rights in the 
+Software shall remain with Elfring Soft Fonts. You must reproduce 
+any copyright or other notice marked on the Software on all copies 
+you make.
+
+You May Not: 1) network the fonts, clip art, or utilities, or use
+them on more than one system or printer at one time. 2) distrib-
+ute (either electronically or mechanically), sell, or copy this 
+Software as part of another Software product except in printed 
+form. 3) modify the fonts or clip art.
+
+Copyright. This software is owned and copyrighted by Elfring Soft
+Fonts. All clip art, programs, data, fonts, and documentation are 
+protected by United States copyright law and international treaty 
+provisions. You must treat these materials as you would any other 
+copyrighted software. You may make backup copies or duplicates of
+this software provided only a single copy of the software is in 
+use at any one time.
+
+Other Restrictions. This license grants you the right to use our 
+soft fonts under the same restrictions that apply to copyrighted 
+material. Any other usage is a violation of this agreement. You 
+may not copy or distribute these fonts, except for a single stand-
+ard backup. You may not duplicate, copy, distribute, rent, or 
+lease the fonts, or utilities. Fonts are licensed for use on a 
+single printer. You may transfer the ownership of this material 
+on a permanent basis to another person if that person agrees to 
+all the terms of this Agreement. You may NOT distribute or sell
+these fonts or clip art as part of another software package.
+
+
+               Limited Warranty and Liability
+
+Elfring Soft Fonts warrants that all soft fonts and utility pro-
+grams will perform substantially as specified in the written docu-
+mentation accompanying the product, for a period of 30 days from 
+the date of receipt. We reserve the right to make changes to the 
+specifications of the program and the contents of the documenta-
+tion without obligation to notify any person or organization of 
+such changes. Any implied warranties are limited to 30 days. Some
+states do not allow limitations on duration of an implied war-
+ranty, so the above limitations may not apply to you. All printer 
+drivers are provided on an As-Is basis. Elfring Soft Fonts does 
+not guarantee these printer drivers will work with your word pro-
+cessor software or computer hardware configuration.
+
+Elfring Soft Fonts' entire liability and your exclusive remedy 
+shall be, at Elfring Soft Fonts' option, either the return of the 
+price paid or the replacement of the software that does not meet 
+Elfring Soft Fonts' Limited Warranty and which is returned to 
+Elfring Soft Fonts with a copy of your receipt. This Limited War-
+ranty is void if failure of the software is due to accident, 
+abuse, misapplication, or complications arising from your choice 
+of hardware or auxiliary software.
+
+Except as specified above, Elfring Soft Fonts disclaims all other 
+warranties, either express or implied, including but not limited 
+to implied warranties of merchantability and fitness for a partic-
+ular purpose, with respect to the soft font disks, utilities, and 
+documentation. This warranty gives you specific legal rights. You 
+may have other, which vary from state to state.
+
+In no event shall Elfring Soft Fonts or any of its employees be 
+liable for any damages whatsoever, (including without limitation 
+damages for loss of business profits, business interruption, loss 
+of business information, and the like), arising out of the use of 
+or inability to use this Elfring Soft Font product, even if 
+Elfring Soft Fonts has been advised of the possibility of damages.
+Since some states do not allow the exclusion or limitation of 
+liability for consequential or incidental damages, the above limi-
+tation may not apply to you.
+
+RESTRICTED RIGHTS: If this product is acquired by or for the U.S.
+Government then it is provided with Restricted Rights. Use,
+duplication, or disclosure by the U.S. Government is subject to
+restrictions as set forth in subparagraph (c)(1)(ii) of The
+Rights in Technical Data and Computer Software clause at DFARS 
+252.227-7013, or subparagraphs (c)(1) and (2) of the Commercial
+Computer Software - Restricted Rights at 48 CFR 52.227-19, or 
+clause 18-52.227-86(d) of the NASA Supplement to the FAR, as
+applicable. Contractor/manufacturer is Elfring Soft Fonts, Inc
+at PO Box 61, Wasco, IL 60183.
+
+This Agreement is governed by the laws of the state of Illinois.
+
+This entire package is copyright 1992 - 1996 by Elfring Soft 
+Fonts. All rights reserved.

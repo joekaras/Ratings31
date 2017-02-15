@@ -1,0 +1,49 @@
+***  Installation Started 01/27/06 8:53  ***
+Title: Fixed Width Fonts Installation
+Source: D:\UPDATES\FONTS\FIXED.EXE
+Made Dir: C:\Program Files\FIXED
+File Copy: C:\Program Files\FIXED\Readme.txt
+File Copy: C:\Program Files\FIXED\License.txt
+File Copy: C:\Program Files\FIXED\Courcd.ttf
+File Copy: C:\Program Files\FIXED\Courcdbd.ttf
+File Copy: C:\Program Files\FIXED\Courcdbo.ttf
+File Copy: C:\Program Files\FIXED\Courcdob.ttf
+File Copy: C:\Program Files\FIXED\Teltypbi.ttf
+File Copy: C:\Program Files\FIXED\Teltype.ttf
+File Copy: C:\Program Files\FIXED\Teltypeb.ttf
+File Copy: C:\Program Files\FIXED\Teltypei.ttf
+File Copy: C:\Program Files\FIXED\Letter.ttf
+File Copy: C:\Program Files\FIXED\Letterbd.ttf
+File Copy: C:\Program Files\FIXED\Letterbi.ttf
+File Copy: C:\Program Files\FIXED\Letterit.ttf
+File Copy: C:\Program Files\FIXED\Ocra.ttf
+File Copy: C:\Program Files\FIXED\Ocrb.ttf
+File Copy: C:\Program Files\FIXED\Prescd.ttf
+File Copy: C:\Program Files\FIXED\Prescdbd.ttf
+File Copy: C:\Program Files\FIXED\Prescdbo.ttf
+File Copy: C:\Program Files\FIXED\Prescdob.ttf
+File Copy: C:\Program Files\FIXED\Prestgbo.ttf
+File Copy: C:\Program Files\FIXED\Prestigb.ttf
+File Copy: C:\Program Files\FIXED\Prestige.ttf
+File Copy: C:\Program Files\FIXED\Prestigo.ttf
+File Copy: C:\Program Files\FIXED\Profix.ttf
+File Copy: C:\Program Files\FIXED\Profixb.ttf
+File Copy: C:\Program Files\FIXED\Profixi.ttf
+File Copy: C:\Program Files\FIXED\Profixbi.ttf
+File Copy: C:\Program Files\FIXED\Sansmnbd.ttf
+File Copy: C:\Program Files\FIXED\Sansmnbo.ttf
+File Copy: C:\Program Files\FIXED\Sansmnob.ttf
+File Copy: C:\Program Files\FIXED\Sansmono.ttf
+File Copy: C:\PROGRA~1\FIXED\UNWISE.EXE
+RegDB Key: Software\Microsoft\Windows\CurrentVersion\Uninstall\Fixed Width Fonts
+RegDB Val: Fixed Width Fonts
+RegDB Name: DisplayName
+RegDB Root: 2
+RegDB Key: Software\Microsoft\Windows\CurrentVersion\Uninstall\Fixed Width Fonts
+RegDB Val: C:\PROGRA~1\FIXED\UNWISE.EXE C:\PROGRA~1\FIXED\INSTALL.LOG
+RegDB Name: UninstallString
+RegDB Root: 2
+Made Dir: C:\Documents and Settings\jkaras.JOSEPH-XX9EDN3P\Templates\Start Menu\Programs\Elfring Soft Fonts
+Shell Link: C:\Documents and Settings\jkaras.JOSEPH-XX9EDN3P\Templates\Start Menu\Programs\Elfring Soft Fonts\License.lnk
+Shell Link: C:\Documents and Settings\jkaras.JOSEPH-XX9EDN3P\Templates\Start Menu\Programs\Elfring Soft Fonts\Readme.lnk
+User Rights: Admin

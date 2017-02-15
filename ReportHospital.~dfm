@@ -1,6 +1,6 @@
 object HospitalReportForm: THospitalReportForm
-  Left = 327
-  Top = 411
+  Left = 538
+  Top = 148
   Width = 576
   Height = 333
   Caption = 'Hospital Report'
@@ -58,7 +58,7 @@ object HospitalReportForm: THospitalReportForm
     EngineVersion = '4.24 Build 1'
     Connected = True
     DatabaseName = 'dbHospitalReport'
-    Directory = 'C:\RatingsData31'
+    Directory = 'c:\RatingsData31'
     KeepTablesOpen = False
     SessionName = 'Default'
     BeforeConnect = dbHospitalReportBeforeConnect
@@ -7169,16 +7169,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = [fsBold]
               ParentDataPipeline = False
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3725
+              mmHeight = 3598
               mmLeft = 89112
               mmTop = 0
-              mmWidth = 13885
+              mmWidth = 15240
               BandType = 1
             end
             object ppLabel5: TppLabel
@@ -7187,12 +7187,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'P#'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 3387
+              mmHeight = 2709
               mmLeft = 3598
               mmTop = 21590
               mmWidth = 2540
@@ -7204,11 +7204,11 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'HORSE'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 8043
               mmTop = 23072
               mmWidth = 5292
@@ -7220,11 +7220,11 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'JOCKEY'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 44238
               mmTop = 23072
               mmWidth = 5927
@@ -7235,15 +7235,15 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'M/L'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 4657
-              mmLeft = 127635
+              mmHeight = 2074
+              mmLeft = 126788
               mmTop = 22860
-              mmWidth = 2328
+              mmWidth = 3175
               BandType = 1
             end
             object ppLabel8: TppLabel
@@ -7252,11 +7252,11 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'TRAINER'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 25188
               mmTop = 23072
               mmWidth = 6562
@@ -7268,12 +7268,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = '------PACE-----'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 3175
+              mmHeight = 2371
               mmLeft = 54187
               mmTop = 26882
               mmWidth = 11430
@@ -7285,12 +7285,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'T/J'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 31538
               mmTop = 26247
               mmWidth = 2117
@@ -7302,12 +7302,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'ALL'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 48472
               mmTop = 26247
               mmWidth = 2752
@@ -7319,11 +7319,11 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'DAYS LAST RACE-TRN LAY%'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 3387
               mmTop = 27728
               mmWidth = 19473
@@ -7335,11 +7335,11 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'BRED SEX AGE COLOR MED'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 2963
               mmTop = 25612
               mmWidth = 20532
@@ -7351,12 +7351,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = '--------TRAINER--------'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 3175
+              mmHeight = 2371
               mmLeft = 67733
               mmTop = 24977
               mmWidth = 19050
@@ -7368,12 +7368,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'ERL'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 54610
               mmTop = 29845
               mmWidth = 2752
@@ -7385,12 +7385,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'STR'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 62442
               mmTop = 29845
               mmWidth = 2752
@@ -7402,12 +7402,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'ALL'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 40640
               mmTop = 26247
               mmWidth = 2752
@@ -7419,11 +7419,11 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'MT'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 27093
               mmTop = 26247
               mmWidth = 2117
@@ -7435,12 +7435,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'MID'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 58208
               mmTop = 29845
               mmWidth = 2752
@@ -7452,12 +7452,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'TRF'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 78740
               mmTop = 27940
               mmWidth = 2752
@@ -7469,12 +7469,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'CLM'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 3175
+              mmHeight = 2074
               mmLeft = 82973
               mmTop = 27940
               mmWidth = 3175
@@ -7486,12 +7486,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = '2ND'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 71543
               mmTop = 27940
               mmWidth = 2963
@@ -7503,12 +7503,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = '1ST'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 68157
               mmTop = 27940
               mmWidth = 2752
@@ -7520,12 +7520,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'SC'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 74930
               mmTop = 27940
               mmWidth = 2117
@@ -7537,12 +7537,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'DC'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 74930
               mmTop = 31115
               mmWidth = 2117
@@ -7554,11 +7554,11 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'MT'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 44027
               mmTop = 26247
               mmWidth = 2117
@@ -7570,12 +7570,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = '2YO'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 71543
               mmTop = 33655
               mmWidth = 2963
@@ -7587,12 +7587,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'ON'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 83185
               mmTop = 30692
               mmWidth = 2963
@@ -7604,12 +7604,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'OFF'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 83185
               mmTop = 33867
               mmWidth = 2963
@@ -7621,11 +7621,11 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'OWNER'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 24553
               mmTop = 30268
               mmWidth = 5292
@@ -7638,7 +7638,7 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = [fsBold]
               ParentDataPipeline = False
@@ -7660,12 +7660,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'DAM SIRE'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 86995
               mmTop = 27517
               mmWidth = 6562
@@ -7677,12 +7677,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'RT'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 74930
               mmTop = 33655
               mmWidth = 1905
@@ -7694,12 +7694,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'POWER'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 17992
               mmTop = 31115
               mmWidth = 5080
@@ -7712,16 +7712,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = [fsBold]
               ParentDataPipeline = False
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3725
+              mmHeight = 3598
               mmLeft = 22490
               mmTop = 0
-              mmWidth = 1736
+              mmWidth = 1905
               BandType = 1
             end
             object ppDBText7: TppDBText
@@ -7731,16 +7731,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Andale Mono'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 4064
-              mmLeft = 4318
+              mmHeight = 3598
+              mmLeft = 5354
               mmTop = 0
-              mmWidth = 5884
+              mmWidth = 3810
               BandType = 1
             end
             object ppLabel23: TppLabel
@@ -7748,14 +7748,14 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'RACE#'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 3725
+              mmHeight = 3598
               mmLeft = 11906
               mmTop = 0
-              mmWidth = 8678
+              mmWidth = 9525
               BandType = 1
             end
             object ppLabel39: TppLabel
@@ -7763,14 +7763,14 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'All Weather'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 3725
+              mmHeight = 3598
               mmLeft = 27940
               mmTop = 0
-              mmWidth = 19092
+              mmWidth = 20955
               BandType = 1
             end
             object ppLabel1: TppLabel
@@ -7779,12 +7779,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'SIRE'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 86995
               mmTop = 24765
               mmWidth = 2963
@@ -7795,14 +7795,14 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Turf'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 102870
               mmTop = 29422
-              mmWidth = 2752
+              mmWidth = 4233
               BandType = 1
             end
             object lblSire2yo: TppLabel
@@ -7810,14 +7810,14 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Dist'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 113030
               mmTop = 29422
-              mmWidth = 2752
+              mmWidth = 4233
               BandType = 1
             end
             object ppLabel34: TppLabel
@@ -7825,15 +7825,15 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'HORSE RECORDS   -   STARTS  /  WINS'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2752
-              mmLeft = 94192
+              mmHeight = 2074
+              mmLeft = 89536
               mmTop = 32808
-              mmWidth = 27728
+              mmWidth = 37042
               BandType = 1
             end
             object ppLabel2: TppLabel
@@ -7841,15 +7841,15 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'PEDIGREE RATINGS'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2752
-              mmLeft = 106892
+              mmHeight = 2074
+              mmLeft = 105728
               mmTop = 25823
-              mmWidth = 14605
+              mmWidth = 16933
               BandType = 1
             end
             object ppDBText11: TppDBText
@@ -7859,17 +7859,17 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = [fsBold]
               ParentDataPipeline = False
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3725
-              mmLeft = 122302
+              mmHeight = 3598
+              mmLeft = 121455
               mmTop = 0
-              mmWidth = 8678
+              mmWidth = 9525
               BandType = 1
             end
             object ppDBText16: TppDBText
@@ -7879,16 +7879,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = [fsBold]
               ParentDataPipeline = False
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3725
+              mmHeight = 3598
               mmLeft = 51858
               mmTop = 0
-              mmWidth = 3471
+              mmWidth = 13335
               BandType = 1
             end
             object ppLabel11: TppLabel
@@ -7897,12 +7897,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'POWER ADVANTAGE'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 7832
               mmTop = 34290
               mmWidth = 15240
@@ -7913,15 +7913,15 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'LS'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
               mmHeight = 2074
-              mmLeft = 124502
+              mmLeft = 124248
               mmTop = 22860
-              mmWidth = 1863
+              mmWidth = 2117
               BandType = 1
             end
             object ppLabel53: TppLabel
@@ -7930,12 +7930,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'LAY'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 67945
               mmTop = 33655
               mmWidth = 2963
@@ -7947,12 +7947,12 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'T/O'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 36407
               mmTop = 26247
               mmWidth = 2117
@@ -7964,13 +7964,13 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Andale Mono'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3810
+              mmHeight = 3598
               mmLeft = 203200
               mmTop = 0
               mmWidth = 10583
@@ -7981,14 +7981,14 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Mud'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 106892
               mmTop = 29422
-              mmWidth = 2963
+              mmWidth = 3175
               BandType = 1
             end
             object ppLabel63: TppLabel
@@ -7996,14 +7996,14 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'All'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 118957
               mmTop = 29210
-              mmWidth = 1905
+              mmWidth = 3175
               BandType = 1
             end
             object lblPowerOrder: TppLabel
@@ -8011,13 +8011,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Power:'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 847
               mmTop = 11642
-              mmWidth = 9313
+              mmWidth = 10160
               BandType = 1
             end
             object WagerSheetOrder: TppDBText
@@ -8027,15 +8027,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Andale Mono'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 11642
               mmTop = 11642
-              mmWidth = 9313
+              mmWidth = 13547
               BandType = 1
             end
             object ppLine8: TppLine
@@ -8053,13 +8053,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Early:'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 35348
               mmTop = 11642
-              mmWidth = 9313
+              mmWidth = 10160
               BandType = 1
             end
             object lblMidPace: TppLabel
@@ -8067,13 +8067,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Middle:'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 91440
               mmTop = 11642
-              mmWidth = 11007
+              mmWidth = 11853
               BandType = 1
             end
             object lblLatePace: TppLabel
@@ -8081,13 +8081,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Late:'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 154729
               mmTop = 11642
-              mmWidth = 7832
+              mmWidth = 8467
               BandType = 1
             end
             object ErlPaceSheetOrder: TppDBText
@@ -8097,15 +8097,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Andale Mono'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 46143
               mmTop = 11642
-              mmWidth = 9313
+              mmWidth = 15240
               BandType = 1
             end
             object MidPaceSheetOrder: TppDBText
@@ -8115,15 +8115,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Andale Mono'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 105622
               mmTop = 11642
-              mmWidth = 9313
+              mmWidth = 13547
               BandType = 1
             end
             object LatePaceSheetOrder: TppDBText
@@ -8133,15 +8133,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Andale Mono'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 164042
               mmTop = 11642
-              mmWidth = 9313
+              mmWidth = 16933
               BandType = 1
             end
             object ppLine23: TppLine
@@ -8160,11 +8160,11 @@ object HospitalReportForm: THospitalReportForm
               Caption = '365'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2752
+              mmHeight = 2074
               mmLeft = 43815
               mmTop = 28998
               mmWidth = 2117
@@ -8175,13 +8175,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Gap'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3302
+              mmHeight = 3006
               mmLeft = 35348
               mmTop = 15875
-              mmWidth = 4445
+              mmWidth = 5080
               BandType = 1
             end
             object ppLabel13: TppLabel
@@ -8189,13 +8189,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Gap'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3302
+              mmHeight = 3006
               mmLeft = 847
               mmTop = 15875
-              mmWidth = 4445
+              mmWidth = 5080
               BandType = 1
             end
             object ppDBText25: TppDBText
@@ -8205,15 +8205,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
-              Font.Size = 8
+              Font.Name = 'Courier New'
+              Font.Size = 6
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3302
+              mmHeight = 2328
               mmLeft = 11642
               mmTop = 15875
-              mmWidth = 17103
+              mmWidth = 16298
               BandType = 1
             end
             object ppDBText26: TppDBText
@@ -8223,15 +8223,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
-              Font.Size = 8
+              Font.Name = 'Courier New'
+              Font.Size = 6
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3302
+              mmHeight = 2244
               mmLeft = 46143
               mmTop = 15875
-              mmWidth = 17103
+              mmWidth = 22860
               BandType = 1
             end
             object ppLabel16: TppLabel
@@ -8239,13 +8239,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Gap'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3302
+              mmHeight = 3006
               mmLeft = 91440
               mmTop = 15875
-              mmWidth = 4445
+              mmWidth = 5080
               BandType = 1
             end
             object ppDBText27: TppDBText
@@ -8255,15 +8255,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
-              Font.Size = 8
+              Font.Name = 'Courier New'
+              Font.Size = 6
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3302
+              mmHeight = 2244
               mmLeft = 105622
               mmTop = 15875
-              mmWidth = 17103
+              mmWidth = 24130
               BandType = 1
             end
             object TrainerJockeySheetOrder: TppDBText
@@ -8273,15 +8273,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3302
+              mmHeight = 3006
               mmLeft = 157269
               mmTop = 21590
-              mmWidth = 7535
+              mmWidth = 15240
               BandType = 1
             end
             object ppLabel21: TppLabel
@@ -8289,13 +8289,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'T/J'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = []
-              mmHeight = 3810
+              mmHeight = 3387
               mmLeft = 149225
               mmTop = 21167
-              mmWidth = 3598
+              mmWidth = 5715
               BandType = 1
             end
             object ppDBText29: TppDBText
@@ -8305,15 +8305,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3302
+              mmHeight = 3006
               mmLeft = 157269
               mmTop = 26247
-              mmWidth = 7535
+              mmWidth = 16933
               BandType = 1
             end
             object ppLabel25: TppLabel
@@ -8321,13 +8321,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Trn'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = []
-              mmHeight = 3810
+              mmHeight = 3387
               mmLeft = 149225
               mmTop = 25612
-              mmWidth = 3810
+              mmWidth = 5715
               BandType = 1
             end
             object ppLabel42: TppLabel
@@ -8335,14 +8335,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'MDN'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = []
-              Visible = False
-              mmHeight = 3810
+              mmHeight = 3387
               mmLeft = 173144
               mmTop = 21167
-              mmWidth = 5927
+              mmWidth = 5715
               BandType = 1
             end
             object ppLabel31: TppLabel
@@ -8350,14 +8349,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Turf'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = []
-              Visible = False
-              mmHeight = 3810
+              mmHeight = 3387
               mmLeft = 173144
               mmTop = 26035
-              mmWidth = 4657
+              mmWidth = 7620
               BandType = 1
             end
             object MaidenSheetOrder: TppDBText
@@ -8367,16 +8365,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
               Transparent = True
-              Visible = False
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3302
+              mmHeight = 3006
               mmLeft = 185844
               mmTop = 21590
-              mmWidth = 7535
+              mmWidth = 16933
               BandType = 1
             end
             object TurfSheetOrder: TppDBText
@@ -8386,16 +8383,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
               Transparent = True
-              Visible = False
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3302
+              mmHeight = 3006
               mmLeft = 186055
               mmTop = 25823
-              mmWidth = 7535
+              mmWidth = 16933
               BandType = 1
             end
             object ppLabel17: TppLabel
@@ -8403,13 +8399,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Gap'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3302
+              mmHeight = 3006
               mmLeft = 154729
               mmTop = 15875
-              mmWidth = 4445
+              mmWidth = 5080
               BandType = 1
             end
             object ppDBText32: TppDBText
@@ -8421,17 +8417,17 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               ParentDataPipeline = False
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 2879
-              mmLeft = 53891
+              mmHeight = 2625
+              mmLeft = 53129
               mmTop = 33443
-              mmWidth = 2201
+              mmWidth = 2963
               BandType = 1
             end
             object ppDBText33: TppDBText
@@ -8443,17 +8439,17 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               ParentDataPipeline = False
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 2879
-              mmLeft = 58548
+              mmHeight = 2625
+              mmLeft = 57786
               mmTop = 33443
-              mmWidth = 2201
+              mmWidth = 2963
               BandType = 1
             end
             object ppDBText34: TppDBText
@@ -8465,17 +8461,17 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               ParentDataPipeline = False
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 2879
-              mmLeft = 63628
+              mmHeight = 2625
+              mmLeft = 62866
               mmTop = 33443
-              mmWidth = 2201
+              mmWidth = 2963
               BandType = 1
             end
             object ppDBText35: TppDBText
@@ -8487,17 +8483,17 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               ParentDataPipeline = False
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 2879
-              mmLeft = 123530
+              mmHeight = 2625
+              mmLeft = 122768
               mmTop = 33443
-              mmWidth = 2201
+              mmWidth = 2963
               BandType = 1
             end
             object ppDBText36: TppDBText
@@ -8507,15 +8503,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Andale Mono'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 134832
               mmTop = 11642
-              mmWidth = 9313
+              mmWidth = 15240
               BandType = 1
             end
             object ppDBText37: TppDBText
@@ -8525,15 +8521,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Andale Mono'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 189865
               mmTop = 11642
-              mmWidth = 9313
+              mmWidth = 13547
               BandType = 1
             end
             object ppDBText38: TppDBText
@@ -8543,15 +8539,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Andale Mono'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 72178
               mmTop = 11642
-              mmWidth = 9313
+              mmWidth = 15240
               BandType = 1
             end
             object ppLabel47: TppLabel
@@ -8559,15 +8555,15 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'BS'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2540
-              mmLeft = 124291
+              mmHeight = 2074
+              mmLeft = 124206
               mmTop = 25400
-              mmWidth = 2032
+              mmWidth = 2117
               BandType = 1
             end
             object ppLabel48: TppLabel
@@ -8575,15 +8571,15 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'AC'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2117
-              mmLeft = 124460
+              mmHeight = 2074
+              mmLeft = 124248
               mmTop = 28363
-              mmWidth = 1905
+              mmWidth = 2117
               BandType = 1
             end
             object ppLabel49: TppLabel
@@ -8591,7 +8587,7 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'BC'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
@@ -8607,13 +8603,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'L Pos:'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3344
+              mmHeight = 3006
               mmLeft = 179494
               mmTop = 11642
-              mmWidth = 9398
+              mmWidth = 10160
               BandType = 1
             end
             object ppDBText10: TppDBText
@@ -8623,15 +8619,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
-              Font.Size = 8
+              Font.Name = 'Courier New'
+              Font.Size = 6
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3302
-              mmLeft = 164042
-              mmTop = 15875
-              mmWidth = 17103
+              mmHeight = 2244
+              mmLeft = 163407
+              mmTop = 15663
+              mmWidth = 22860
               BandType = 1
             end
             object ppDBText14: TppDBText
@@ -8641,15 +8637,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
-              Font.Size = 8
+              Font.Name = 'Courier New'
+              Font.Size = 6
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3302
-              mmLeft = 189865
+              mmHeight = 2244
+              mmLeft = 190924
               mmTop = 15875
-              mmWidth = 14817
+              mmWidth = 19050
               BandType = 1
             end
             object ppLabel45: TppLabel
@@ -8657,13 +8653,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'E Pos:'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 62018
               mmTop = 11642
-              mmWidth = 9313
+              mmWidth = 10160
               BandType = 1
             end
             object ppLabel51: TppLabel
@@ -8671,13 +8667,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'M Pos:'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 123402
               mmTop = 11642
-              mmWidth = 9313
+              mmWidth = 10160
               BandType = 1
             end
             object ppDBText28: TppDBText
@@ -8687,15 +8683,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
-              Font.Size = 8
+              Font.Name = 'Courier New'
+              Font.Size = 6
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3302
+              mmHeight = 2244
               mmLeft = 134832
               mmTop = 15875
-              mmWidth = 14817
+              mmWidth = 19050
               BandType = 1
             end
             object ppDBText39: TppDBText
@@ -8705,15 +8701,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
-              Font.Size = 8
+              Font.Name = 'Courier New'
+              Font.Size = 6
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3302
+              mmHeight = 2244
               mmLeft = 72178
               mmTop = 15875
-              mmWidth = 14817
+              mmWidth = 19050
               BandType = 1
             end
             object ppLine17: TppLine
@@ -8741,13 +8737,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Own'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = []
-              mmHeight = 3810
+              mmHeight = 3387
               mmLeft = 149225
               mmTop = 30692
-              mmWidth = 5292
+              mmWidth = 5715
               BandType = 1
             end
             object ppDBText40: TppDBText
@@ -8757,15 +8753,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3302
+              mmHeight = 3006
               mmLeft = 157269
               mmTop = 30692
-              mmWidth = 7535
+              mmWidth = 13547
               BandType = 1
             end
             object ppDBText42: TppDBText
@@ -8775,15 +8771,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plRacesReport'
-              mmHeight = 3302
+              mmHeight = 2963
               mmLeft = 186267
               mmTop = 30903
-              mmWidth = 7535
+              mmWidth = 16722
               BandType = 1
             end
             object ppLabel54: TppLabel
@@ -8791,13 +8787,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Distance'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = []
-              mmHeight = 3810
+              mmHeight = 3387
               mmLeft = 173144
               mmTop = 30692
-              mmWidth = 10160
+              mmWidth = 8467
               BandType = 1
             end
             object ppLabel56: TppLabel
@@ -8805,13 +8801,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Avg:'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 64982
               mmTop = 16087
-              mmWidth = 6350
+              mmWidth = 6773
               BandType = 1
             end
             object ppLabel58: TppLabel
@@ -8819,13 +8815,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Avg:'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 126365
               mmTop = 16087
-              mmWidth = 6350
+              mmWidth = 6773
               BandType = 1
             end
             object ppLine34: TppLine
@@ -8843,13 +8839,13 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Avg:'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Consolas'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = []
-              mmHeight = 3387
+              mmHeight = 3006
               mmLeft = 182457
               mmTop = 15663
-              mmWidth = 6350
+              mmWidth = 6773
               BandType = 1
             end
             object ppLine33: TppLine
@@ -8947,13 +8943,13 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 8
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 3246
+              mmHeight = 3217
               mmLeft = 265
               mmTop = 0
               mmWidth = 3969
@@ -8966,12 +8962,12 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2381
+              mmHeight = 1905
               mmLeft = 22490
               mmTop = 0
               mmWidth = 17198
@@ -8984,11 +8980,11 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               DataPipelineName = 'plEntries'
-              mmHeight = 2371
+              mmHeight = 1905
               mmLeft = 41275
               mmTop = 0
               mmWidth = 9102
@@ -9002,15 +8998,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
+              mmHeight = 1905
               mmLeft = 18785
               mmTop = 0
-              mmWidth = 1736
+              mmWidth = 3175
               BandType = 4
             end
             object Pace: TppDBText
@@ -9022,16 +9018,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2879
-              mmLeft = 53891
+              mmHeight = 2625
+              mmLeft = 53129
               mmTop = 0
-              mmWidth = 2201
+              mmWidth = 2963
               BandType = 4
             end
             object TotalTrnWinPct: TppDBText
@@ -9044,16 +9040,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###%'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 36195
+              mmHeight = 2244
+              mmLeft = 35983
               mmTop = 2540
-              mmWidth = 3598
+              mmWidth = 3810
               BandType = 4
             end
             object TotalTrnJkyWinPct: TppDBText
@@ -9066,16 +9062,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###%'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 27094
+              mmHeight = 2244
+              mmLeft = 26882
               mmTop = 2540
-              mmWidth = 3598
+              mmWidth = 3810
               BandType = 4
             end
             object TotalJky30WinPct: TppDBText
@@ -9088,16 +9084,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###%'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
-              Font.Style = []
+              Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 41487
+              mmHeight = 2244
+              mmLeft = 41275
               mmTop = 2540
-              mmWidth = 3598
+              mmWidth = 3810
               BandType = 4
             end
             object Sex: TppDBText
@@ -9108,15 +9104,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
+              mmHeight = 2244
               mmLeft = 3704
               mmTop = 3704
-              mmWidth = 1058
+              mmWidth = 1270
               BandType = 4
             end
             object Age: TppDBText
@@ -9126,13 +9122,13 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2646
+              mmHeight = 2244
               mmLeft = 5821
               mmTop = 3704
               mmWidth = 2646
@@ -9147,16 +9143,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2879
-              mmLeft = 63670
+              mmHeight = 2625
+              mmLeft = 62908
               mmTop = 0
-              mmWidth = 2201
+              mmWidth = 2963
               BandType = 4
             end
             object BredIn: TppDBText
@@ -9167,15 +9163,15 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
+              mmHeight = 2244
               mmLeft = 265
               mmTop = 3704
-              mmWidth = 2413
+              mmWidth = 2540
               BandType = 4
             end
             object TotalTrnDebutWinPct: TppDBText
@@ -9186,14 +9182,14 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               Visible = False
               DataPipelineName = 'plEntries'
-              mmHeight = 2910
+              mmHeight = 2921
               mmLeft = 67469
               mmTop = 0
               mmWidth = 3440
@@ -9208,16 +9204,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2879
-              mmLeft = 58643
+              mmHeight = 2625
+              mmLeft = 57881
               mmTop = 0
-              mmWidth = 2201
+              mmWidth = 2963
               BandType = 4
             end
             object TotalJkyWinPct: TppDBText
@@ -9229,13 +9225,13 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###%'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2540
+              mmHeight = 2244
               mmLeft = 45932
               mmTop = 2540
               mmWidth = 5080
@@ -9259,14 +9255,13 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
-              Visible = False
               DataPipelineName = 'plEntries'
-              mmHeight = 2963
+              mmHeight = 2625
               mmLeft = 78952
               mmTop = 0
               mmWidth = 3810
@@ -9281,7 +9276,7 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
@@ -9301,14 +9296,14 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               Visible = False
               DataPipelineName = 'plEntries'
-              mmHeight = 2910
+              mmHeight = 2625
               mmLeft = 71173
               mmTop = 0
               mmWidth = 3440
@@ -9322,12 +9317,12 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2910
+              mmHeight = 2625
               mmLeft = 74877
               mmTop = 0
               mmWidth = 3175
@@ -9341,12 +9336,12 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2910
+              mmHeight = 2625
               mmLeft = 74877
               mmTop = 4233
               mmWidth = 3175
@@ -9357,15 +9352,15 @@ object HospitalReportForm: THospitalReportForm
               Caption = '*'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
-              Font.Style = [fsBold, fsUnderline]
+              Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 3387
-              mmLeft = 54214
+              mmHeight = 2709
+              mmLeft = 53897
               mmTop = 3704
-              mmWidth = 847
+              mmWidth = 1482
               BandType = 4
             end
             object lblMidPos: TppLabel
@@ -9373,15 +9368,15 @@ object HospitalReportForm: THospitalReportForm
               Caption = '*'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2646
-              mmLeft = 59002
+              mmHeight = 2709
+              mmLeft = 58658
               mmTop = 3704
-              mmWidth = 794
+              mmWidth = 1482
               BandType = 4
             end
             object LastComment2: TppDBText
@@ -9399,7 +9394,7 @@ object HospitalReportForm: THospitalReportForm
               mmHeight = 2074
               mmLeft = 131234
               mmTop = 2117
-              mmWidth = 65617
+              mmWidth = 76200
               BandType = 4
             end
             object TotalTrn2yoWinPct: TppDBText
@@ -9411,14 +9406,13 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
-              Visible = False
               DataPipelineName = 'plEntries'
-              mmHeight = 2910
+              mmHeight = 2921
               mmLeft = 71173
               mmTop = 8202
               mmWidth = 3440
@@ -9443,7 +9437,7 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
@@ -9483,13 +9477,13 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2910
+              mmHeight = 2921
               mmLeft = 67469
               mmTop = 4233
               mmWidth = 3440
@@ -9504,13 +9498,13 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2910
+              mmHeight = 2921
               mmLeft = 82815
               mmTop = 4233
               mmWidth = 3175
@@ -9525,13 +9519,13 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2910
+              mmHeight = 2921
               mmLeft = 82815
               mmTop = 8202
               mmWidth = 3175
@@ -9545,14 +9539,13 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              Visible = False
               DataPipelineName = 'plEntries'
-              mmHeight = 2910
+              mmHeight = 2921
               mmLeft = 78581
               mmTop = 8202
               mmWidth = 3704
@@ -9566,13 +9559,13 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2910
+              mmHeight = 2921
               mmLeft = 67469
               mmTop = 8202
               mmWidth = 3440
@@ -9586,13 +9579,13 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2910
+              mmHeight = 2709
               mmLeft = 74877
               mmTop = 8202
               mmWidth = 3175
@@ -9618,17 +9611,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
-              Visible = False
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 103252
+              mmHeight = 1905
+              mmLeft = 102490
               mmTop = 0
-              mmWidth = 2413
+              mmWidth = 3175
               BandType = 4
             end
             object Last2Comment2: TppDBText
@@ -9646,7 +9638,7 @@ object HospitalReportForm: THospitalReportForm
               mmHeight = 2074
               mmLeft = 131234
               mmTop = 7673
-              mmWidth = 42333
+              mmWidth = 63500
               BandType = 4
             end
             object ppLine4: TppLine
@@ -9725,16 +9717,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '##0'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 119380
+              mmHeight = 1905
+              mmLeft = 119126
               mmTop = 9260
-              mmWidth = 804
+              mmWidth = 1058
               BandType = 4
             end
             object MudStarts: TppDBText
@@ -9745,16 +9737,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 106088
+              mmHeight = 1905
+              mmLeft = 105834
               mmTop = 9260
-              mmWidth = 804
+              mmWidth = 1058
               BandType = 4
             end
             object MudWins: TppDBText
@@ -9765,16 +9757,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 108734
+              mmHeight = 1905
+              mmLeft = 108480
               mmTop = 9260
-              mmWidth = 804
+              mmWidth = 1058
               BandType = 4
             end
             object TrkStarts: TppDBText
@@ -9785,16 +9777,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 93124
+              mmHeight = 1905
+              mmLeft = 92870
               mmTop = 9260
-              mmWidth = 804
+              mmWidth = 1058
               BandType = 4
             end
             object ppDBText15: TppDBText
@@ -9805,16 +9797,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 95769
+              mmHeight = 1905
+              mmLeft = 95515
               mmTop = 9260
-              mmWidth = 804
+              mmWidth = 1058
               BandType = 4
             end
             object lblTrack: TppLabel
@@ -9822,14 +9814,14 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Track'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               Transparent = True
-              mmHeight = 2709
-              mmLeft = 87048
-              mmTop = 9260
-              mmWidth = 4572
+              mmHeight = 2328
+              mmLeft = 86995
+              mmTop = 9313
+              mmWidth = 5292
               BandType = 4
             end
             object ppLabel67: TppLabel
@@ -9837,14 +9829,14 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Mud'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               Transparent = True
-              mmHeight = 2381
+              mmHeight = 2244
               mmLeft = 99484
               mmTop = 9260
-              mmWidth = 3440
+              mmWidth = 3810
               BandType = 4
             end
             object ppLine16: TppLine
@@ -9866,16 +9858,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2879
-              mmLeft = 11028
+              mmHeight = 2625
+              mmLeft = 10266
               mmTop = 6085
-              mmWidth = 2201
+              mmWidth = 2963
               BandType = 4
             end
             object lblOnTurf: TppLabel
@@ -9883,14 +9875,14 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Turf '
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               Transparent = True
-              mmHeight = 2328
-              mmLeft = 112184
+              mmHeight = 1905
+              mmLeft = 110914
               mmTop = 9525
-              mmWidth = 2963
+              mmWidth = 5292
               BandType = 4
             end
             object Power: TppDBText
@@ -9903,15 +9895,15 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '##0.0'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 2879
-              mmLeft = 15790
+              mmHeight = 2625
+              mmLeft = 13335
               mmTop = 6773
-              mmWidth = 4953
+              mmWidth = 7408
               BandType = 4
             end
             object ppDBText5: TppDBText
@@ -9921,12 +9913,12 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2381
+              mmHeight = 1905
               mmLeft = 86995
               mmTop = 2910
               mmWidth = 13123
@@ -9939,12 +9931,12 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2381
+              mmHeight = 1905
               mmLeft = 86995
               mmTop = 0
               mmWidth = 13123
@@ -9958,31 +9950,31 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2879
-              mmLeft = 127085
+              mmHeight = 2625
+              mmLeft = 125519
               mmTop = 0
-              mmWidth = 2879
+              mmWidth = 4445
               BandType = 4
             end
             object lblRoute: TppLabel
               UserName = 'lblRoute'
-              Caption = 'Route'
+              Caption = 'Rte'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               Transparent = True
-              mmHeight = 2646
+              mmHeight = 2244
               mmLeft = 99484
-              mmTop = 6085
-              mmWidth = 4763
+              mmTop = 6138
+              mmWidth = 3810
               BandType = 4
             end
             object RouteStarts: TppDBText
@@ -9993,16 +9985,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 106088
+              mmHeight = 1905
+              mmLeft = 105834
               mmTop = 6350
-              mmWidth = 804
+              mmWidth = 1058
               BandType = 4
             end
             object RouteWins: TppDBText
@@ -10013,16 +10005,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 108734
+              mmHeight = 1905
+              mmLeft = 108480
               mmTop = 6350
-              mmWidth = 804
+              mmWidth = 1058
               BandType = 4
             end
             object QSP1stCallRunStyle: TppDBText
@@ -10033,30 +10025,30 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2879
+              mmHeight = 2625
               mmLeft = 52070
               mmTop = 11853
-              mmWidth = 1355
+              mmWidth = 1482
               BandType = 4
             end
             object lblSprint: TppLabel
               UserName = 'Label4'
-              Caption = 'Sprint'
+              Caption = 'Spr'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               Transparent = True
-              mmHeight = 2646
+              mmHeight = 2244
               mmLeft = 111125
-              mmTop = 6085
-              mmWidth = 4498
+              mmTop = 6138
+              mmWidth = 3810
               BandType = 4
             end
             object SprintStarts: TppDBText
@@ -10067,16 +10059,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 117264
+              mmHeight = 1905
+              mmLeft = 117010
               mmTop = 6350
-              mmWidth = 804
+              mmWidth = 1058
               BandType = 4
             end
             object SprintWins: TppDBText
@@ -10087,16 +10079,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 119380
+              mmHeight = 1905
+              mmLeft = 119126
               mmTop = 6350
-              mmWidth = 804
+              mmWidth = 1058
               BandType = 4
             end
             object lblLife: TppLabel
@@ -10104,14 +10096,14 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'Life'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               Transparent = True
-              mmHeight = 2709
+              mmHeight = 2244
               mmLeft = 87048
               mmTop = 6085
-              mmWidth = 2709
+              mmWidth = 5080
               BandType = 4
             end
             object LifeStarts: TppDBText
@@ -10122,16 +10114,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 93124
+              mmHeight = 1905
+              mmLeft = 92870
               mmTop = 6350
-              mmWidth = 804
+              mmWidth = 1058
               BandType = 4
             end
             object LifeWins: TppDBText
@@ -10142,16 +10134,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 95769
+              mmHeight = 1905
+              mmLeft = 95515
               mmTop = 6350
-              mmWidth = 804
+              mmWidth = 1058
               BandType = 4
             end
             object HorseName: TppDBText
@@ -10161,12 +10153,12 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = [fsBold]
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 3175
+              mmHeight = 2371
               mmLeft = 5556
               mmTop = 0
               mmWidth = 11906
@@ -10222,16 +10214,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###%'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 31751
+              mmHeight = 2244
+              mmLeft = 31539
               mmTop = 2540
-              mmWidth = 3598
+              mmWidth = 3810
               BandType = 4
             end
             object TurfStarts: TppDBText
@@ -10242,16 +10234,16 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 117264
+              mmHeight = 1905
+              mmLeft = 117010
               mmTop = 9260
-              mmWidth = 804
+              mmWidth = 1058
               BandType = 4
             end
             object ppDBText41: TppDBText
@@ -10266,10 +10258,10 @@ object HospitalReportForm: THospitalReportForm
               Font.Size = 5
               Font.Style = [fsBold]
               DataPipelineName = 'plEntries'
-              mmHeight = 2074
+              mmHeight = 2117
               mmLeft = 131234
               mmTop = 10372
-              mmWidth = 9525
+              mmWidth = 81280
               BandType = 4
             end
             object OwnerName: TppDBText
@@ -10279,11 +10271,11 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               DataPipelineName = 'plEntries'
-              mmHeight = 2646
+              mmHeight = 2244
               mmLeft = 22860
               mmTop = 9313
               mmWidth = 27252
@@ -10308,15 +10300,15 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '##0.0'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = []
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 2879
-              mmLeft = 17992
+              mmHeight = 2625
+              mmLeft = 15875
               mmTop = 10372
-              mmWidth = 2752
+              mmWidth = 4445
               BandType = 4
             end
             object ppLine3: TppLine
@@ -10342,10 +10334,10 @@ object HospitalReportForm: THospitalReportForm
               Font.Size = 5
               Font.Style = [fsBold]
               DataPipelineName = 'plEntries'
-              mmHeight = 2074
+              mmHeight = 2117
               mmLeft = 131234
               mmTop = 12700
-              mmWidth = 9525
+              mmWidth = 81492
               BandType = 4
             end
             object ppLine9: TppLine
@@ -10387,16 +10379,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '##'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 64315
+              mmHeight = 2244
+              mmLeft = 63341
               mmTop = 8202
-              mmWidth = 1566
+              mmWidth = 2540
               BandType = 4
             end
             object ppLine24: TppLine
@@ -10419,16 +10411,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '##'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 59288
+              mmHeight = 2244
+              mmLeft = 57044
               mmTop = 8202
-              mmWidth = 1566
+              mmWidth = 3810
               BandType = 4
             end
             object EarlyPaceAdvantageWinPct: TppDBText
@@ -10441,16 +10433,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '##'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 54526
+              mmHeight = 2244
+              mmLeft = 54822
               mmTop = 8255
-              mmWidth = 1566
+              mmWidth = 1270
               BandType = 4
             end
             object TotalTrn46To120WinPct: TppDBText
@@ -10462,7 +10454,7 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###%'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
@@ -10479,14 +10471,14 @@ object HospitalReportForm: THospitalReportForm
               Caption = 'PP'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = [fsBold]
               Transparent = True
-              mmHeight = 2328
+              mmHeight = 2371
               mmLeft = 1270
               mmTop = 9525
-              mmWidth = 2328
+              mmWidth = 2540
               BandType = 4
             end
             object PostPos: TppDBText
@@ -10498,13 +10490,13 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '##'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2540
+              mmHeight = 2244
               mmLeft = 212
               mmTop = 12065
               mmWidth = 3387
@@ -10520,16 +10512,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###%'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 22437
+              mmHeight = 2244
+              mmLeft = 22225
               mmTop = 2540
-              mmWidth = 3598
+              mmWidth = 3810
               BandType = 4
             end
             object ppLine25: TppLine
@@ -10592,16 +10584,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 118322
+              mmHeight = 1905
+              mmLeft = 117560
               mmTop = 0
-              mmWidth = 2413
+              mmWidth = 3175
               BandType = 4
             end
             object DistanceRating: TppDBText
@@ -10614,16 +10606,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 113369
+              mmHeight = 2074
+              mmLeft = 112607
               mmTop = 0
-              mmWidth = 2413
+              mmWidth = 3175
               BandType = 4
             end
             object MudRating: TppDBText
@@ -10636,16 +10628,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 5
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2117
-              mmLeft = 107527
+              mmHeight = 1905
+              mmLeft = 106765
               mmTop = 0
-              mmWidth = 2413
+              mmWidth = 3175
               BandType = 4
             end
             object ppLine30: TppLine
@@ -10676,16 +10668,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               ParentDataPipeline = False
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 123614
+              mmHeight = 2244
+              mmLeft = 123021
               mmTop = 3387
-              mmWidth = 1947
+              mmWidth = 2540
               BandType = 4
             end
             object ppDBText3: TppDBText
@@ -10696,16 +10688,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               ParentDataPipeline = False
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 123572
+              mmHeight = 2244
+              mmLeft = 122979
               mmTop = 6350
-              mmWidth = 1947
+              mmWidth = 2540
               BandType = 4
             end
             object ppDBText4: TppDBText
@@ -10716,16 +10708,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               ParentDataPipeline = False
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 128778
+              mmHeight = 2244
+              mmLeft = 128482
               mmTop = 3387
-              mmWidth = 974
+              mmWidth = 1270
               BandType = 4
             end
             object ppDBText9: TppDBText
@@ -10736,16 +10728,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               ParentDataPipeline = False
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 128778
+              mmHeight = 2244
+              mmLeft = 128482
               mmTop = 6350
-              mmWidth = 974
+              mmWidth = 1270
               BandType = 4
             end
             object ppDBText17: TppDBText
@@ -10758,16 +10750,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###%'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 27093
+              mmHeight = 2244
+              mmLeft = 26881
               mmTop = 5927
-              mmWidth = 3598
+              mmWidth = 3810
               BandType = 4
             end
             object ppDBText19: TppDBText
@@ -10780,15 +10772,15 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '##0.0'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 123064
+              mmHeight = 2244
+              mmLeft = 121074
               mmTop = 9313
-              mmWidth = 4360
+              mmWidth = 6350
               BandType = 4
             end
             object ppDBText21: TppDBText
@@ -10801,15 +10793,15 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '##0.0'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 123063
+              mmHeight = 2244
+              mmLeft = 121073
               mmTop = 12277
-              mmWidth = 4360
+              mmWidth = 6350
               BandType = 4
             end
             object ppDBText22: TppDBText
@@ -10820,16 +10812,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               ParentDataPipeline = False
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 128778
+              mmHeight = 2244
+              mmLeft = 128482
               mmTop = 9313
-              mmWidth = 974
+              mmWidth = 1270
               BandType = 4
             end
             object ppDBText23: TppDBText
@@ -10840,16 +10832,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               ParentDataPipeline = False
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 128778
+              mmHeight = 2244
+              mmLeft = 128482
               mmTop = 12277
-              mmWidth = 974
+              mmWidth = 1270
               BandType = 4
             end
             object ppDBText20: TppDBText
@@ -10860,14 +10852,14 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plEntries
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
+              mmHeight = 2244
               mmLeft = 86572
               mmTop = 12277
-              mmWidth = 10541
+              mmWidth = 20320
               BandType = 4
             end
             object ppDBText24: TppDBText
@@ -10878,12 +10870,12 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '##.#'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 2752
+              mmHeight = 2244
               mmLeft = 114512
               mmTop = 12277
               mmWidth = 5503
@@ -10897,12 +10889,12 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '#####'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 2752
+              mmHeight = 2244
               mmLeft = 108162
               mmTop = 12277
               mmWidth = 4445
@@ -10918,16 +10910,16 @@ object HospitalReportForm: THospitalReportForm
               DisplayFormat = '###%'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2498
-              mmLeft = 8382
+              mmHeight = 2244
+              mmLeft = 8170
               mmTop = 12065
-              mmWidth = 3598
+              mmWidth = 3810
               BandType = 4
             end
           end
@@ -10949,7 +10941,7 @@ object HospitalReportForm: THospitalReportForm
               DataPipeline = plRacesReport
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
-              Font.Name = 'Arial Narrow'
+              Font.Name = 'Courier New'
               Font.Size = 7
               Font.Style = [fsBold]
               ParentDataPipeline = False
@@ -11651,7 +11643,7 @@ object HospitalReportForm: THospitalReportForm
     MasterFields = 'RangeRaceDate;TrkCode;RaceDate;RaceNbr'
     MasterSource = dsRacesMaster
     TableName = 'ENTRY.DAT'
-    Left = 104
+    Left = 112
     Top = 106
   end
 end
