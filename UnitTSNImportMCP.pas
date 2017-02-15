@@ -795,7 +795,8 @@ var
    sLPostPos: string;
    sLDistanceDesc: string;
    sLTrkCond: string;
-   sLRaceType: string;
+   Present: TDateTime;
+   sLRaceType: string;    
    sLClmPrice: string;
    sLClaimed: string;
    sLPurse: string;
@@ -1976,13 +1977,21 @@ begin
             sTJMeetStarts := StringListTrim(lstS[1413 - 1]);
             sTJMeetWins := StringListTrim(lstS[1414 - 1]);
 
-            if (Trim(sMTO_AE) = 'A') then begin
-               sMTO_AE := 'A';
-               //continue;
-            end;
-            if (Trim(sMTO_AE) = 'M') then begin
-               sMTO_AE := 'M';
-               //continue;
+
+
+            Present := Now;
+            DecodeTime(Present, wHour, wMin, wSec, wMSec);
+
+
+            if ((wHour >= 0)and (wHour < 12)) then begin
+               if (Trim(sMTO_AE) = 'A') then begin
+                  sMTO_AE := 'A';
+              //    continue;
+               end;
+               if (Trim(sMTO_AE) = 'M') then begin
+                  sMTO_AE := 'M';
+              //    continue;
+               end;
             end;
             //
             tblRH.IndexName := '';
@@ -3364,7 +3373,7 @@ begin
 
                iWOIdx := 1;
 
-               if (atoi(sdateWorkout[iWOIdx]) > 0) then begin
+               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
 
                   sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
                   sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
@@ -3377,7 +3386,7 @@ begin
 
                   dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
 
-                  if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
+                 // if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
                      sWO1 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
                         CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
                         CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
@@ -3386,11 +3395,11 @@ begin
                         sconditionWorkout[iWOIdx] + ' ' +
                         stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
                         '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                  end;
+                 // end;
                end;
 
                Inc(iWOIdx);
-               if (atoi(sdateWorkout[iWOIdx]) > 0) then begin
+               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
                   sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
                   sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
                   sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
@@ -3402,7 +3411,7 @@ begin
 
                   dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
 
-                  if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
+                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
                      sWO2 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
                         CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
                         CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
@@ -3411,11 +3420,11 @@ begin
                         sconditionWorkout[iWOIdx] + ' ' +
                         stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
                         '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                  end;
+                  //end;
                end;
 
                Inc(iWOIdx);
-               if (atoi(sdateWorkout[iWOIdx]) > 0) then begin
+               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
                   sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
                   sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
                   sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
@@ -3427,7 +3436,7 @@ begin
 
                   dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
 
-                  if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
+                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
                      sWO3 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
                         CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
                         CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
@@ -3436,11 +3445,11 @@ begin
                         sconditionWorkout[iWOIdx] + ' ' +
                         stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
                         '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                  end;
+                 // end;
                end;
 
                Inc(iWOIdx);
-               if (atoi(sdateWorkout[iWOIdx]) > 0) then begin
+               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
                   sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
                   sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
                   sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
@@ -3452,7 +3461,7 @@ begin
 
                   dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
 
-                  if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
+                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
                      sWO4 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
                         CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
                         CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
@@ -3461,11 +3470,11 @@ begin
                         sconditionWorkout[iWOIdx] + ' ' +
                         stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
                         '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                  end;
+                  //end;
                end;
 
                Inc(iWOIdx);
-               if (atoi(sdateWorkout[iWOIdx]) > 0) then begin
+               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
                   sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
                   sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
                   sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
@@ -3477,7 +3486,7 @@ begin
 
                   dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
 
-                  if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
+                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
                      sWO5 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
                         CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
                         CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
@@ -3486,11 +3495,11 @@ begin
                         sconditionWorkout[iWOIdx] + ' ' +
                         stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
                         '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                  end;
+                 // end;
                end;
 
                Inc(iWOIdx);
-               if (atoi(sdateWorkout[iWOIdx]) > 0) then begin
+               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
                   sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
                   sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
                   sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
@@ -3502,7 +3511,7 @@ begin
 
                   dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
 
-                  if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
+                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
                      sWO6 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
                         CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
                         CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
@@ -3511,7 +3520,7 @@ begin
                         sconditionWorkout[iWOIdx] + ' ' +
                         stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
                         '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                  end;
+                  //end;
 
                end;
 
