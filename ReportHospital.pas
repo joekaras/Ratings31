@@ -272,6 +272,10 @@ type
     ppLabel62: TppLabel;
     ppLine33: TppLine;
     ppLine35: TppLine;
+    ppDBText43: TppDBText;
+    ppLabel64: TppLabel;
+    ppDBText44: TppDBText;
+    ppLabel65: TppLabel;
       procedure FormCreate(Sender: TObject);
       procedure FormDestroy(Sender: TObject);
       procedure btnCreatePdfClick(Sender: TObject);

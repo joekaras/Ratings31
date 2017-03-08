@@ -550,6 +550,39 @@ const
    DebutGt1M = 63;
    Routes = 64;
 
+                                 A1stLasix = 0;
+                                 A1stStart45dLayff= 1;
+                                 A2ndLasix= 2;
+                                 A2ndStart45dLayff= 3;
+                                 A3rdStart45dLayff= 4;
+                                 A3yrolds= 5;
+                                 A4youp= 6;
+                                 A5To1to10To1= 7;
+                                 HAllowance= 8;
+                                 HBlinkersOFF= 9;
+                                 BlinkersON= 10;
+                                 Claimed1bk= 11;
+                                 Claimed2bk= 12;
+                                 Claimed3bk= 13;
+                                 HClaiming=14;
+                                 Dirt/Synth=15;
+                                 Dwn20PctPurse= 16;
+                                 FAndM= 17;
+                                 FTS= 18;
+                                 Favorites= 19;
+                                 MClm= 20;
+                                 MaleHorses= 21;
+                                 RouteDebut= 22;
+                                 RouteToSprint= 23;
+                                 Routes= 24;
+                                 Splwt = 25;
+                                 SprintToRoute= 26;
+                                 Sprints=27;
+                                 Track=28;
+                                 TurfDebut= 29;
+                                 Up20PctPurse= 30;
+                                 Below5To1 = 31;
+
 
 
    EXACTA = 0;
@@ -1222,6 +1255,9 @@ var
    TSN_MCP_PATH: string;
    TSN_XRD_PATH: string;
 
+   HDW_JCP_PATH: string;
+   HDW_XRD_PATH: string;
+
    dtAltLastDateToProcess: TDateTime;
    dtAltFirstDateToProcess: TDateTime;
    dtAltStartDateProcessed: TDateTime;
@@ -1387,9 +1423,9 @@ begin
    else
            
       Result := I;
-      if Result > 32678  then
+      if Result > 32678  then  begin
         Result := 0;
-     end  
+     end ; 
     except
     end;
    

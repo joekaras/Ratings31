@@ -99,7 +99,9 @@ uses
   UnitProcessTSNLists in 'UnitProcessTSNLists.pas',
   unitProcessTSNChanges in 'unitProcessTSNChanges.pas',
   UnitTSNImport in 'UnitTSNImport.pas',
-  ReportHospital in 'ReportHospital.pas' {HospitalReportForm};
+  ReportHospital in 'ReportHospital.pas' {HospitalReportForm},
+  UnitHDWImportJCP in 'UnitHDWImportJCP.pas',
+  UnitUpdateHDW in 'UnitUpdateHDW.pas';
 
 {$R *.RES}
 

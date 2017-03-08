@@ -1,6 +1,6 @@
 object MainForm: TMainForm
-  Left = 597
-  Top = 105
+  Left = 443
+  Top = 131
   Width = 798
   Height = 598
   Caption = 'KSK Ratings 3.1'
@@ -64,8 +64,8 @@ object MainForm: TMainForm
       Caption = 'Daily'
       object lblLocalPath: TLabel
         Left = 0
-        Top = 422
-        Width = 1262
+        Top = 402
+        Width = 786
         Height = 26
         Align = alBottom
         AutoSize = False
@@ -78,8 +78,8 @@ object MainForm: TMainForm
       end
       object lblServerPath: TLabel
         Left = 0
-        Top = 448
-        Width = 1262
+        Top = 428
+        Width = 786
         Height = 27
         Align = alBottom
         AutoSize = False

@@ -641,15 +641,26 @@ type
       procedure ImportAxcisEntry(lRecNo: Longint);
       procedure ImportAxcisTodayEntry(lRecNo: Longint);
       procedure ImportToday(Sender: TObject);
-      procedure ImportTSNForToday(Sender: TObject);
+      procedure ImportTSNOldForToday(Sender: TObject);
 
       //      procedure UpdateTodayContenders(Sender: TObject);
 
-      procedure ImportTSNToday(Sender: TObject);
-      procedure ImportTSNResults(Sender: TObject;
+      procedure ImportTSNOldToday(Sender: TObject);
+      procedure ImportTSNOldResults(Sender: TObject;
          tblR: TDBISAMTable;
          tblE: TDBISAMTable
          );
+
+
+      procedure ImportHDWForToday(Sender: TObject);
+
+      procedure ImportHDWToday(Sender: TObject);
+      procedure ImportHDWResults(Sender: TObject;
+         tblR: TDBISAMTable;
+         tblE: TDBISAMTable
+         );
+
+
 
 
       procedure ProcessDRFResults(Sender: TObject; bUseOverride: boolean);
@@ -832,8 +843,8 @@ type
 
       procedure DownloadTSNAvailable(Sender: TObject);
 
-      procedure ImportTSNHistory(Sender: TObject);
-
+      procedure ImportTSNOldHistory(Sender: TObject);
+      procedure ImportHDWHistory(Sender: TObject);
    public
       { Public declarations }
       dAverageSpeed: Double;
@@ -872,6 +883,7 @@ uses DatRatings, FastStrings, FastStringFuncs, ESBDates,
    UnitUpdateTopFigures, UnitUpdateLines, UnitUpdateReportSelections,
    FormQuery, QueryWagerResults, FormTrainerConnections,
    ReportContestResults, UnitTSNImportMCP, UnitUpdateTSN,
+   UnitHDWImportJCP, UnitUpdateHDW,
    UnitProcessTSNLists, unitProcessTSNChanges;
 
 
@@ -3949,9 +3961,21 @@ begin
          iniFile.WriteString('Paths', 'TsnMCPPath', 'd:\TsnDownload\ProCaps\');
       end;
 
+      HDW_JCP_PATH := iniFile.ReadString('Paths', 'HdwJCPPath', 'ERROR');
+      if (HDW_JCP_PATH = 'ERROR') then begin
+         iniFile.WriteString('Paths', 'HdwJCPPath', 'd:\HdwDownload\JCP\');
+      end;
+
       TSN_XRD_PATH := iniFile.ReadString('Paths', 'TsnXRDPath', 'ERROR');
       if (TSN_XRD_PATH = 'ERROR') then begin
          iniFile.WriteString('Paths', 'TsnXRDPath', 'd:\TsnDownload\Results\');
+      end;
+
+
+
+      HDW_XRD_PATH := iniFile.ReadString('Paths', 'HDWXRDPath', 'ERROR');
+      if (HDW_XRD_PATH = 'ERROR') then begin
+         iniFile.WriteString('Paths', 'HdwXRDPath', 'd:\HdwDownload\Results\');
       end;
 
       AXCIS_PATH := iniFile.ReadString('Paths', 'AxcisPath', 'ERROR');
@@ -4794,7 +4818,8 @@ begin
                on E: Exception do hLog.AddToLog(E.Message, msevException);
             end;
 
-            ImportTSNToday(Sender);
+            //ImportTSNToday(Sender);
+            ImportHDWToday(Sender);
 
             SetRanking(dm.tblEntries, 'ByLastSpeedRank', 'LastSpeedRank', 'LastSpeed', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
             SetRanking(dm.tblEntries, 'ByBackSpeedRank', 'BackSpeedRank', 'BackSpeed', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
@@ -8823,7 +8848,7 @@ begin
       if sLocation = 'Testing' then begin
          FreeAndNil(iniFile);
          Application.Terminate;
-      end;                                                                     
+      end;
 
       if sLocation = 'Exit' then begin
          FreeAndNil(iniFile);
@@ -8946,7 +8971,8 @@ begin
                try
                   edtOverrideDate.Date := Now() + 1;
                   btnStartOfDayClick(Sender);
-                  ImportTSNHistory(Sender);
+                  // ImportTSNHistory(Sender);
+                  ImportHDWHistory(Sender);
 
                   try
                      btnDownloadTSNLSCClick(Sender);
@@ -8955,7 +8981,10 @@ begin
                   end;
 
 
-                  ImportTSNForToday(Sender);
+
+                  //ImportTSNForToday(Sender);
+
+                  ImportHDWForToday(Sender);
 
                   chkCreateExportFiles.Checked := True;
                   chkCreateHospitalReport.Checked := True;
@@ -8987,8 +9016,8 @@ begin
                edtOverrideDate.Date := Now();
 
                btnStartOfDayClick(Sender);
-               ImportTSNHistory(Sender);
-
+               // ImportTSNHistory(Sender);
+               ImportHDWHistory(Sender);
                try
                   btnDownloadTSNLSCClick(Sender);
                except
@@ -9003,7 +9032,8 @@ begin
 
                end;
 
-               ImportTSNForToday(Sender);
+               //ImportTSNForToday(Sender);
+               ImportHDWForToday(Sender);
 
 
                chkCreateExportFiles.Checked := True;
@@ -9059,7 +9089,8 @@ begin
 
                edtOverrideDate.Date := Now();
                btnStartOfDayClick(Sender);
-               ImportTSNHistory(Sender);
+               //ImportTSNHistory(Sender);
+               ImportHDWHistory(Sender);
 
                try
                   btnDownloadTSNLSCClick(Sender);
@@ -9074,7 +9105,9 @@ begin
                   on E: Exception do hLog.AddToLog(E.Message, msevException);
                end;
 
-               ImportTSNForToday(Sender);
+               //  ImportTSNForToday(Sender);
+               ImportHDWForToday(Sender);
+
                chkCreateExportFiles.Checked := True;
                chkCreateHospitalReport.Checked := True;
                chkCreateValueReport.Checked := True;
@@ -9137,20 +9170,20 @@ begin
             on E: Exception do hLog.AddToLog(E.Message, msevException);
          end;
 
-//         //
-//         try
-//            edtOverrideDate.Date := Now();
-//            btnDownloadEquibaseStatsClick(Sender);
-//            btnProcessEquibaseStatsClick(Sender);
-//         except
-//            on E: Exception do hLog.AddToLog(E.Message, msevException);
-//         end;
+         //         //
+         //         try
+         //            edtOverrideDate.Date := Now();
+         //            btnDownloadEquibaseStatsClick(Sender);
+         //            btnProcessEquibaseStatsClick(Sender);
+         //         except
+         //            on E: Exception do hLog.AddToLog(E.Message, msevException);
+         //         end;
 
-         //try
-//            btnDownloadTSNClick(Sender);
-//         except
-//            on E: Exception do hLog.AddToLog(E.Message, msevException);
-//         end;
+                  //try
+         //            btnDownloadTSNClick(Sender);
+         //         except
+         //            on E: Exception do hLog.AddToLog(E.Message, msevException);
+         //         end;
 
 
          chkCreateHospitalReport.Checked := True;
@@ -9166,8 +9199,12 @@ begin
             edtOverrideDate.Date := edtOverrideDate.Date + 3;
 
             btnStartOfDayClick(Sender);
-            ImportTSNHistory(Sender);
-            ImportTSNForToday(Sender);
+            //            ImportTSNHistory(Sender);
+            //            ImportTSNForToday(Sender);
+
+            ImportHDWHistory(Sender);
+            ImportHDWForToday(Sender);
+
 
             chkCreateExportFiles.Checked := True;
             chkCreateTipReport.Checked := True;
@@ -9188,8 +9225,10 @@ begin
             edtOverrideDate.Date := edtOverrideDate.Date + 2;
 
             btnStartOfDayClick(Sender);
-            ImportTSNHistory(Sender);
-            ImportTSNForToday(Sender);
+            //ImportTSNHistory(Sender);
+            //ImportTSNForToday(Sender);
+            ImportHDWHistory(Sender);
+            ImportHDWForToday(Sender);
 
             chkCreateExportFiles.Checked := True;
             chkCreateTipReport.Checked := True;
@@ -9208,8 +9247,10 @@ begin
             edtOverrideDate.Date := edtOverrideDate.Date + 1;
 
             btnStartOfDayClick(Sender);
-            ImportTSNHistory(Sender);
-            ImportTSNForToday(Sender);
+            //ImportTSNHistory(Sender);
+            //ImportTSNForToday(Sender);
+            ImportHDWHistory(Sender);
+            ImportHDWForToday(Sender);
 
             chkCreateExportFiles.Checked := True;
             chkCreateTipReport.Checked := True;
@@ -9231,8 +9272,10 @@ begin
             edtOverrideDate.Date := Now();
 
             btnStartOfDayClick(Sender);
-            ImportTSNHistory(Sender);
-            ImportTSNForToday(Sender);
+            //            ImportTSNHistory(Sender);
+            //            ImportTSNForToday(Sender);
+            ImportHDWHistory(Sender);
+            ImportHDWForToday(Sender);
 
             chkCreateExportFiles.Checked := True;
             chkCreateTipReport.Checked := True;
@@ -10368,9 +10411,11 @@ begin
          try
             try
                btnStartOfDayClick(Sender);
-               ImportTSNHistory(Sender);
+               //ImportTSNHistory(Sender);
+               ImportHDWHistory(Sender);
                ProcessTSNChanges(dm.tblRaces, dm.tblEntries);
-               ImportTSNForToday(Sender);
+               //ImportTSNForToday(Sender);
+               ImportHDWForToday(Sender);
                chkCreateExportFiles.Checked := True;
                chkCreateHospitalReport.Checked := False;
                chkCreateValueReport.Checked := True;
@@ -10502,7 +10547,8 @@ begin
    end;
 
    try
-      ImportTSNHistory(Sender);
+      // ImportTSNHistory(Sender);
+      ImportHDWHistory(Sender);
    except
       on E: Exception do hLog.AddToLog(E.Message, msevException);
    end;
@@ -10520,7 +10566,8 @@ begin
    end;
 
    try
-      ImportTSNForToday(Sender);
+      //      ImportTSNForToday(Sender);
+      ImportHDWForToday(Sender);
    except
       on E: Exception do hLog.AddToLog(E.Message, msevException);
    end;
@@ -10560,14 +10607,16 @@ begin
    try
       edtOverrideDate.Date := Now() - 1;
       btnStartOfDayClick(Sender);
-      ImportTSNHistory(Sender);
-      ImportTSNForToday(Sender);
+      //   ImportTSNHistory(Sender);
+       //  ImportTSNForToday(Sender);
+      ImportHDWHistory(Sender);
+      ImportHDWForToday(Sender);
       //    if (chkCreateReports.Checked) then begin
-    //         btnCreateReportsClick(Sender);
-    //      end;
-    //      if (chkFTPReports.Checked) then begin
-    //         btnFtpReportsClick(Sender);
-    //      end;
+        //         btnCreateReportsClick(Sender);
+        //      end;
+        //      if (chkFTPReports.Checked) then begin
+        //         btnFtpReportsClick(Sender);
+        //      end;
 
 
    except
@@ -10585,11 +10634,11 @@ begin
 
    edtOverrideDate.Date := Now() + 1;
 
-  // try
-//      btnDownloadTSNClick(Sender);
-//   except
-//      on E: Exception do hLog.AddToLog(E.Message, msevException);
-//   end;
+   // try
+ //      btnDownloadTSNClick(Sender);
+ //   except
+ //      on E: Exception do hLog.AddToLog(E.Message, msevException);
+ //   end;
 
    try
       btnStartOfDayClick(Sender);
@@ -10598,13 +10647,15 @@ begin
    end;
 
    try
-      ImportTSNHistory(Sender);
+      //  ImportTSNHistory(Sender);
+      ImportHDWHistory(Sender);
    except
       on E: Exception do hLog.AddToLog(E.Message, msevException);
    end;
 
    try
-      ImportTSNForToday(Sender);
+      //    ImportTSNForToday(Sender);
+      ImportHDWForToday(Sender);
    except
       on E: Exception do hLog.AddToLog(E.Message, msevException);
    end;
@@ -10878,7 +10929,8 @@ begin
    //   end;
    //
    try
-      ImportTSNForToday(Sender);
+      //ImportTSNForToday(Sender);
+      ImportHDWForToday(Sender);
    except
       on E: Exception do hLog.AddToLog(E.Message, msevException);
    end;
@@ -11127,7 +11179,9 @@ begin
    end;
 
    try
-      ImportTSNForToday(Sender);
+      //     ImportTSNForToday(Sender);
+      ImportHDWHistory(Sender);
+      ImportHDWForToday(Sender);
    except
       on E: Exception do hLog.AddToLog(E.Message, msevException);
    end;
@@ -13952,7 +14006,8 @@ begin
    end;
 
    try
-      ImportTSNForToday(Sender);
+      //ImportTSNForToday(Sender);
+      ImportHDWForToday(Sender);
    except
       on E: Exception do hLog.AddToLog(E.Message, msevException);
    end;
@@ -15035,7 +15090,8 @@ begin
          edtOverrideDate.Date := edtOverrideDate.Date - 1;
          qryCreatePreviousDaysFiles();
          ClearRaceResults(dm.tblPrevDayRH);
-         ImportTSNResults(Sender, dm.tblPrevDayRH, dm.tblPrevDayHH);
+         //         ImportTSNResults(Sender, dm.tblPrevDayRH, dm.tblPrevDayHH);
+         ImportHDWResults(Sender, dm.tblPrevDayRH, dm.tblPrevDayHH);
          UpdateMultiRaceResults(dm.tblPrevDayRH);
          ProcessPicksAndResults(dm.tblPrevDayRH, OVERRIDE_DATE_FALSE);
 
@@ -15078,7 +15134,8 @@ begin
             edtOverrideDate.Date := (edtOverrideDate.Date - 1) - PREV_WEEK_DAYS;
             repeat
                ClearRaceResults(dm.tblPrevWeekRH);
-               ImportTSNResults(Sender, dm.tblPrevWeekRH, dm.tblPrevWeekHH);
+               //  ImportTSNResults(Sender, dm.tblPrevWeekRH, dm.tblPrevWeekHH);
+               ImportHDWResults(Sender, dm.tblPrevWeekRH, dm.tblPrevWeekHH);
                UpdateMultiRaceResults(dm.tblPrevWeekRH);
                ProcessPicksAndResults(dm.tblPrevWeekRH, OVERRIDE_DATE_FALSE);
                edtOverrideDate.Date := edtOverrideDate.Date + 1;
@@ -15126,7 +15183,8 @@ begin
      //         gbOpenCloseFiles := False;
 
          ClearRaceResults(dm.tblPrevDayRH);
-         ImportTSNResults(Sender, dm.tblPrevDayRH, dm.tblPrevDayHH);
+         // ImportTSNResults(Sender, dm.tblPrevDayRH, dm.tblPrevDayHH);
+         ImportHDWResults(Sender, dm.tblPrevWeekRH, dm.tblPrevWeekHH);
          UpdateMultiRaceResults(dm.tblPrevDayRH);
          ProcessPicksAndResults(dm.tblPrevDayRH, OVERRIDE_DATE_FALSE);
       except
@@ -15165,7 +15223,8 @@ begin
          edtOverrideDate.Date := (Now() - 1) - PREV_WEEK_DAYS;
          repeat
             try
-               ImportTSNResults(Sender, dm.tblPrevWeekRH, dm.tblPrevWeekHH);
+               // ImportTSNResults(Sender, dm.tblPrevWeekRH, dm.tblPrevWeekHH);
+               ImportHDWResults(Sender, dm.tblPrevWeekRH, dm.tblPrevWeekHH);
             except
                on E: Exception do hLog.AddToLog(E.Message, msevException);
             end;
@@ -16261,7 +16320,8 @@ procedure TMainForm.btnProcessTSNResultsClick(Sender: TObject);
 begin
 
    TimerOn(False);
-   ImportTSNResults(Sender, dm.tblRH, dm.tblHH);
+   //   ImportTSNResults(Sender, dm.tblRH, dm.tblHH);
+   ImportHDWResults(Sender, dm.tblPrevWeekRH, dm.tblPrevWeekHH);
    ///  ProcessPicksAndResults(dm.tblRH, OVERRIDE_DATE_TRUE);
    TimerOn(True);
 
@@ -16298,7 +16358,8 @@ begin
       gbOpenCloseFiles := False;
       repeat
          try
-            ImportTSNResults(Sender, dm.tblRH, dm.tblHH, );
+            // ImportTSNResults(Sender, dm.tblRH, dm.tblHH, );
+            ImportHDWResults(Sender, dm.tblRH, dm.tblHH);
             //        ProcessPicksAndResults(dm.tblRH, OVERRIDE_DATE_TRUE);
          except
             on E: Exception do hLog.AddToLog(E.Message, msevException);
@@ -16836,7 +16897,7 @@ begin
 
 end;
 
-procedure TMainForm.ImportTSNToday(Sender: TObject);
+procedure TMainForm.ImportTSNOldToday(Sender: TObject);
 var
    iEndPos: Integer;
    iStartPos: Integer;
@@ -17112,9 +17173,286 @@ begin
    end;
 end;
 
+procedure TMainForm.ImportHDWToday(Sender: TObject);
+var
+   iEndPos: Integer;
+   iStartPos: Integer;
+   iAttributes: Integer;
+
+   sTmp: string;
+   sSearch: string;
+
+   tsFile: TSearchRec;
+   dtDownLoadDate: TDateTime;
+   dtPresent: TDateTime;
+
+   wYear: Word;
+   wMonth: Word;
+   wDay: Word;
+   sPath: string;
+   sFileName: string;
+   sMCPFileName: string;
+   sRaceMM: string;
+   sRaceDD: string;
+   iLen: Integer;
+   bOk: boolean;
+   bDebug: boolean;
+   iFilesExtracted: integer;
+
+begin
+
+   try
+
+      try
+         hLog.AddToLog('Import Todays TSN For Reports ', msevOperation);
+
+         bDebug := False;
+
+         CloseTable(dm.tblRaces);
+         CloseTable(dm.tblEntries);
+
+         OpenTable(dm.tblRaces);
+         OpenTable(dm.tblEntries);
+         OpenTable(dm.tblRatings);
+
+         OpenTable(dm.tblTrack);
+         OpenTable(dm.tblTrainer);
+         OpenTable(dm.tblJockey);
+
+         prgBar.Position := 0;
+         pnlPrgBar.Visible := False;
+
+         if gbUseOverrideDate then begin
+            dtDownloadDate := edtOverrideDate.Date;
+         end else begin
+            dtDownloadDate := Now();
+         end;
+
+         iGimmicksRace := 0;
+
+         iDDRace := 0;
+         iPk3Race := 0;
+         iPk4Race := 0;
+         iPk6Race := 0;
+
+         iExaRace := 0;
+         iQuiRace := 0;
+         iTriRace := 0;
+         iSuperRace := 0;
+
+         iAttributes := faAnyFile;
+         sPath := TSN_MCP_PATH;
+         if bProcessAllDates then begin
+            sSearch := sPath + '*.zip';
+         end else begin
+            DecodeDate(dtDownloadDate, wYear, wMonth, wDay);
+            if gbTest then begin
+               sFileName := 'a*' + sm.Str(wMonth, 2) + sm.Str(wDay, 2);
+            end else begin
+               sFileName := '*' + sm.Str(wMonth, 2) + sm.Str(wDay, 2);
+            end;
+            sFileName := sFileName + 's.zip';
+            sSearch := sPath + sFileName;
+         end;
+
+         UpdateStatusBar(sSearch);
+         if FindFirst(sSearch, iAttributes, tsFile) = 0 then begin
+            //TrkCode
+            iEndPos := SmartPos('.', tsFile.Name);
+            iStartPos := iEndPos - 5;
+            sFileTrkCode := CopyStr(tsFile.Name, 1, iStartPos - 1);
+            sFileTrkCode := UpperCase(sFileTrkCode);
+
+            if (sFileTrkCode <> '') then begin
+               //FileName
+               sTmp := CopyStr(tsFile.Name, iStartPos, 4);
+               sRaceMM := CopyStr(sTmp, 1, 2);
+               sRaceDD := CopyStr(sTmp, 3, 2);
+               sTmp := CopyStr(sTmp, 1, 2) + '/' + CopyStr(sTmp, 3, 2) + ' - ' + tsFile.Name;
+               iLen := Length(sTmp);
+               sTmp := CopyStr(sTmp, 9, iLen - 8);
+               sFileName := sPath + sTmp;
+               sFileName := UpperCase(sFileName);
+
+               vZip.ZipName := sFileName;
+               vZip.DestDir := TSN_MCP_PATH;
+               if IsValidZip(sFileName) then begin
+                  try
+                     vZip.UnZip;
+                  except
+                     on E: Exception do begin
+                        hLog.AddToLog(sFileName + ' ' + E.Message, msevException);
+                     end;
+                  end;
+                  dtPresent := Now();
+                  DecodeDate(dtPresent, wYear, wMonth, wDay);
+                  wDay := atow(sRaceDD);
+                  wMonth := atow(sRaceMM);
+                  if bProcessAllDates then begin
+                     dtAxcisRaceDate := EncodeDate(wYear, wMonth, wDay);
+                  end else begin
+                     dtAxcisRaceDate := dtDownloadDate;
+                  end;
+               end;
+            end;
+
+            while (FindNext(tsFile) = 0) do begin
+               // TrkCode
+               iEndPos := SmartPos('.', tsFile.Name);
+               iStartPos := iEndPos - 5;
+               sFileTrkCode := CopyStr(tsFile.Name, 1, iStartPos - 1);
+               sFileTrkCode := UpperCase(sFileTrkCode);
+
+               if (sFileTrkCode <> '') then begin
+                  //FileName
+                  sTmp := CopyStr(tsFile.Name, iStartPos, 4);
+                  sRaceMM := CopyStr(sTmp, 1, 2);
+                  sRaceDD := CopyStr(sTmp, 3, 2);
+                  sTmp := CopyStr(sTmp, 1, 2) + '/' + CopyStr(sTmp, 3, 2) + ' - ' + tsFile.Name;
+                  iLen := Length(sTmp);
+                  sTmp := CopyStr(sTmp, 9, iLen - 8);
+                  sFileName := sPath + sTmp;
+                  sFileName := UpperCase(sFileName);
+
+                  vZip.ZipName := sFileName;
+                  vZip.DestDir := TSN_MCP_PATH;
+                  if IsValidZip(sFileName) then begin
+                     try
+                        vZip.UnZip;
+                     except
+                        on E: Exception do begin
+                           hLog.AddToLog(sFileName + ' ' + E.Message, msevException);
+                        end;
+                     end;
+                     dtPresent := Now();
+                     DecodeDate(dtPresent, wYear, wMonth, wDay);
+                     wDay := atow(sRaceDD);
+                     wMonth := atow(sRaceMM);
+                     if bProcessAllDates then begin
+                        dtAxcisRaceDate := EncodeDate(wYear, wMonth, wDay);
+                     end else begin
+                        dtAxcisRaceDate := dtDownloadDate;
+                     end;
+                  end;
+
+               end;
+            end;
+            FindClose(tsFile);
+         end;
+
+         iAttributes := faAnyFile;
+         sPath := TSN_MCP_PATH;
+         if bProcessAllDates then begin
+            sSearch := sPath + '*.mcp';
+         end else begin
+            DecodeDate(dtDownloadDate, wYear, wMonth, wDay);
+            if gbTest then begin
+               sFileName := 'a*' + sm.Str(wMonth, 2) + sm.Str(wDay, 2);
+            end else begin
+               sFileName := '*' + sm.Str(wMonth, 2) + sm.Str(wDay, 2);
+            end;
+            sFileName := sFileName + '.mcp';
+            sSearch := sPath + sFileName;
+         end;
+
+         UpdateStatusBar(sSearch);
+         if FindFirst(sSearch, iAttributes, tsFile) = 0 then begin
+            iEndPos := SmartPos('.', tsFile.Name);
+            iStartPos := iEndPos - 4;
+            sFileTrkCode := CopyStr(tsFile.Name, 1, iStartPos - 1);
+            sFileTrkCode := UpperCase(sFileTrkCode);
+
+            if (sFileTrkCode <> '') then begin
+               sTmp := CopyStr(tsFile.Name, iStartPos, 4);
+               sRaceMM := CopyStr(sTmp, 1, 2);
+               sRaceDD := CopyStr(sTmp, 3, 2);
+               sTmp := CopyStr(sTmp, 1, 2) + '/' + CopyStr(sTmp, 3, 2) + ' - ' + tsFile.Name;
+               iLen := Length(sTmp);
+               sTmp := CopyStr(sTmp, 9, iLen - 8);
+               sFileName := sPath + sTmp;
+
+               dtPresent := Now();
+               DecodeDate(dtPresent, wYear, wMonth, wDay);
+               wDay := atow(sRaceDD);
+               wMonth := atow(sRaceMM);
+               dtAxcisRaceDate := EncodeDate(wYear, wMonth, wDay);
+
+               sMCPFileName := UpperCase(sFileName);
+               if FileExists(sMCPFileName) then begin
+                  try
+                     ImportMCPFile(dm.tblRaces, dm.tblEntries, sMCPFileName);
+                  except
+                     on E: Exception do hLog.AddToLog(E.Message, msevException);
+                  end;
+               end;
+
+            end;
+         end;
+
+         while (FindNext(tsFile) = 0) do begin
+
+            iEndPos := SmartPos('.', tsFile.Name);
+            iStartPos := iEndPos - 4;
+            sFileTrkCode := CopyStr(tsFile.Name, 1, iStartPos - 1);
+            sFileTrkCode := UpperCase(sFileTrkCode);
+
+            if (sFileTrkCode <> '') then begin
+               sTmp := CopyStr(tsFile.Name, iStartPos, 4);
+               sRaceMM := CopyStr(sTmp, 1, 2);
+               sRaceDD := CopyStr(sTmp, 3, 2);
+
+               sTmp := CopyStr(sTmp, 1, 2) + '/' + CopyStr(sTmp, 3, 2) + ' - ' + tsFile.Name;
+               iLen := Length(sTmp);
+               sTmp := CopyStr(sTmp, 9, iLen - 8);
+               sFileName := sPath + sTmp;
+
+               dtPresent := Now();
+               DecodeDate(dtPresent, wYear, wMonth, wDay);
+               wDay := atow(sRaceDD);
+               wMonth := atow(sRaceMM);
+               dtAxcisRaceDate := EncodeDate(wYear, wMonth, wDay);
+
+               sMCPFileName := UpperCase(sFileName);
+               if FileExists(sMCPFileName) then begin
+                  try
+                     ImportMCPFile(dm.tblRaces, dm.tblEntries, sMCPFileName);
+                  except
+                     on E: Exception do hLog.AddToLog(E.Message, msevException);
+                  end;
+               end;
+
+            end;
+         end;
+         FindClose(tsFile);
+
+      except
+         on E: Exception do begin
+            hLog.AddToLog(E.Message, msevException);
+            CloseTable(dm.tblTrack);
+            CloseTable(dm.tblTrainer);
+            CloseTable(dm.tblJockey);
+            CloseTable(dm.tblRaces);
+            CloseTable(dm.tblEntries);
+            CloseTable(dm.tblRatings);
+            ClearPrgStatusBars();
+            FindClose(tsFile);
+         end;
+      end;
+   finally
+      CloseTable(dm.tblRaces);
+      CloseTable(dm.tblEntries);
+      CloseTable(dm.tblTrack);
+      CloseTable(dm.tblTrainer);
+      CloseTable(dm.tblJockey);
+      CloseTable(dm.tblRatings);
+      ClearPrgStatusBars();
+   end;
+end;
+
+
 //
 
-procedure TMainForm.ImportTSNResults(Sender: TObject;
+procedure TMainForm.ImportTSNOldResults(Sender: TObject;
    tblR: TDBISAMTable;
    tblE: TDBISAMTable
    );
@@ -17371,10 +17709,926 @@ begin
 end;
 
 
+procedure TMainForm.ImportHDWResults(Sender: TObject;
+   tblR: TDBISAMTable;
+   tblE: TDBISAMTable
+   );
+var
+   iEndPos: Integer;
+   iStartPos: Integer;
+   iAttributes: Integer;
+
+   sTmp: string;
+   sSearch: string;
+
+   tsFile: TSearchRec;
+   dtDownLoadDate: TDateTime;
+   dtPresent: TDateTime;
+
+   wYear: Word;
+   wMonth: Word;
+   wDay: Word;
+   sPath: string;
+   sFileName: string;
+   sXRDFileName: string;
+
+   sRaceMM: string;
+   sRaceDD: string;
+   iLen: Integer;
+   bOk: boolean;
+   bDebug: boolean;
+   iFilesExtracted: integer;
+
+begin
+
+   try
+      if (gbOpenCloseFiles) then begin
+         OpenTable(tblR);
+         OpenTable(dm.tblEntries);
+         gbOpenCloseFiles := False;
+      end;
+
+      try
+         hLog.AddToLog('Import TSN XRD Results ', msevOperation);
+
+         bDebug := False;
+
+         prgBar.Position := 0;
+         pnlPrgBar.Visible := False;
+
+         if gbUseOverrideDate then begin
+            dtDownloadDate := edtOverrideDate.Date;
+         end else begin
+            dtDownloadDate := Now();
+         end;
+
+         iGimmicksRace := 0;
+
+         iDDRace := 0;
+         iPk3Race := 0;
+         iPk4Race := 0;
+         iPk6Race := 0;
+
+         iExaRace := 0;
+         iQuiRace := 0;
+         iTriRace := 0;
+         iSuperRace := 0;
+
+         iAttributes := faAnyFile;
+         sPath := TSN_XRD_PATH;
+
+         if bProcessAllDates then begin
+            sSearch := sProcessAllDatesPath + sProcessAllDatesSearch;
+            sPath := sProcessAllDatesPath;
+         end else begin
+            DecodeDate(dtDownloadDate, wYear, wMonth, wDay);
+            if gbTest then begin
+               sFileName := 'z*' + sm.Str(wMonth, 2) + sm.Str(wDay, 2);
+            end else begin
+               sFileName := '*' + sm.Str(wMonth, 2) + sm.Str(wDay, 2);
+            end;
+            sFileName := sFileName + 'x.zip';
+            sSearch := sPath + sFileName;
+         end;
+
+         UpdateStatusBar(sSearch);
+         if FindFirst(sSearch, iAttributes, tsFile) = 0 then begin
+            iEndPos := SmartPos('.', tsFile.Name);
+            iStartPos := iEndPos - 5;
+            sFileTrkCode := CopyStr(tsFile.Name, 1, iStartPos - 1);
+            sFileTrkCode := UpperCase(sFileTrkCode);
+
+            if (sFileTrkCode <> '') then begin
+               sTmp := CopyStr(tsFile.Name, iStartPos, 4);
+               sRaceMM := CopyStr(sTmp, 1, 2);
+               sRaceDD := CopyStr(sTmp, 3, 2);
+               sTmp := CopyStr(sTmp, 1, 2) + '/' + CopyStr(sTmp, 3, 2) + ' - ' + tsFile.Name;
+               iLen := Length(sTmp);
+               sTmp := CopyStr(sTmp, 9, iLen - 8);
+               sFileName := sPath + sTmp;
+               sFileName := UpperCase(sFileName);
+               vZip.ZipName := sFileName;
+               vZip.DestDir := sPath; //TSN_XRD_PATH;
+               if IsValidZip(sFileName) then begin
+                  try
+                     vZip.UnZip;
+                  except
+                     on E: Exception do begin
+                        hLog.AddToLog(sFileName + ' ' + E.Message, msevException);
+                     end;
+                  end;
+               end else begin
+                  DeleteFile(sFileName);
+                  hLog.AddToLog('Bad Zip ' + sFileName, msevOperation);
+               end;
+            end;
+
+            while (FindNext(tsFile) = 0) do begin
+               iEndPos := SmartPos('.', tsFile.Name);
+               iStartPos := iEndPos - 5;
+               sFileTrkCode := CopyStr(tsFile.Name, 1, iStartPos - 1);
+               sFileTrkCode := UpperCase(sFileTrkCode);
+
+               if (sFileTrkCode <> '') then begin
+                  sTmp := CopyStr(tsFile.Name, iStartPos, 4);
+                  sRaceMM := CopyStr(sTmp, 1, 2);
+                  sRaceDD := CopyStr(sTmp, 3, 2);
+
+                  sTmp := CopyStr(sTmp, 1, 2) + '/' + CopyStr(sTmp, 3, 2) + ' - ' + tsFile.Name;
+                  iLen := Length(sTmp);
+                  sTmp := CopyStr(sTmp, 9, iLen - 8);
+                  sFileName := sPath + sTmp;
+                  sFileName := UpperCase(sFileName);
+
+                  vZip.ZipName := sFileName;
+                  vZip.DestDir := sPath; //TSN_XRD_PATH;
+                  if IsValidZip(sFileName) then begin
+                     try
+                        vZip.UnZip;
+                     except
+                        on E: Exception do begin
+                           hLog.AddToLog(sFileName + ' ' + E.Message, msevException);
+                        end;
+                     end;
+                  end else begin
+                     DeleteFile(sFileName);
+                     hLog.AddToLog('Bad Zip ' + sFileName, msevOperation);
+                  end;
+               end;
+            end;
+            FindClose(tsFile);
+         end;
+
+         iAttributes := faAnyFile;
+         sPath := TSN_XRD_PATH;
+         if bProcessAllDates then begin
+            sSearch := sProcessAllDatesPath + sProcessAllDatesSearchXrd;
+            sPath := sProcessAllDatesPath;
+         end else begin
+            DecodeDate(dtDownloadDate, wYear, wMonth, wDay);
+            if gbTest then begin
+               sFileName := 'a*' + sm.Str(wMonth, 2) + sm.Str(wDay, 2);
+            end else begin
+               sFileName := '*' + sm.Str(wMonth, 2) + sm.Str(wDay, 2);
+            end;
+            sFileName := sFileName + '.xrd';
+            sSearch := sPath + sFileName;
+         end;
+
+         UpdateStatusBar(sSearch);
+         if FindFirst(sSearch, iAttributes, tsFile) = 0 then begin
+            iEndPos := SmartPos('.', tsFile.Name);
+            iStartPos := iEndPos - 4;
+            sFileTrkCode := CopyStr(tsFile.Name, 1, iStartPos - 1);
+            sFileTrkCode := UpperCase(sFileTrkCode);
+
+            if (sFileTrkCode <> '') then begin
+               sTmp := CopyStr(tsFile.Name, iStartPos, 4);
+               sRaceMM := CopyStr(sTmp, 1, 2);
+               sRaceDD := CopyStr(sTmp, 3, 2);
+
+               sTmp := CopyStr(sTmp, 1, 2) + '/' + CopyStr(sTmp, 3, 2) + ' - ' + tsFile.Name;
+               iLen := Length(sTmp);
+               sTmp := CopyStr(sTmp, 9, iLen - 8);
+               sFileName := sPath + sTmp;
+
+               dtPresent := Now();
+               DecodeDate(dtPresent, wYear, wMonth, wDay);
+               wDay := atow(sRaceDD);
+               wMonth := atow(sRaceMM);
+               dtAxcisRaceDate := EncodeDate(wYear, wMonth, wDay);
+
+               sXRDFileName := UpperCase(sFileName);
+               if FileExists(sXRDFileName) then begin
+                  try
+                     ImportXRDFile(tblR, tblE, sXRDFileName);
+                  except
+                     on E: Exception do begin
+                        DeleteFile(sFileName);
+                        hLog.AddToLog('Bad Zip ' + sFileName + ' ' + E.Message, msevOperation);
+                     end;
+                  end;
+               end;
+
+            end;
+         end;
+
+         while (FindNext(tsFile) = 0) do begin
+            iEndPos := SmartPos('.', tsFile.Name);
+            iStartPos := iEndPos - 4;
+            sFileTrkCode := CopyStr(tsFile.Name, 1, iStartPos - 1);
+            sFileTrkCode := UpperCase(sFileTrkCode);
+
+            if (sFileTrkCode <> '') then begin
+               sTmp := CopyStr(tsFile.Name, iStartPos, 4);
+               sRaceMM := CopyStr(sTmp, 1, 2);
+               sRaceDD := CopyStr(sTmp, 3, 2);
+               sTmp := CopyStr(sTmp, 1, 2) + '/' + CopyStr(sTmp, 3, 2) + ' - ' + tsFile.Name;
+               iLen := Length(sTmp);
+               sTmp := CopyStr(sTmp, 9, iLen - 8);
+               sFileName := sPath + sTmp;
+
+               dtPresent := Now();
+               DecodeDate(dtPresent, wYear, wMonth, wDay);
+               wDay := atow(sRaceDD);
+               wMonth := atow(sRaceMM);
+               dtAxcisRaceDate := EncodeDate(wYear, wMonth, wDay);
+
+               sXRDFileName := UpperCase(sFileName);
+               if FileExists(sXRDFileName) then begin
+                  try
+                     ImportXRDFile(tblR, tblE, sXRDFileName);
+                  except
+                     on E: Exception do hLog.AddToLog(E.Message, msevException);
+                  end;
+               end;
+
+            end;
+         end;
+
+         FindClose(tsFile);
+
+      except
+         on E: Exception do begin
+            hLog.AddToLog(E.Message, msevException);
+            ClearPrgStatusBars();
+            FindClose(tsFile);
+         end;
+      end;
+   finally
+      if (not gbOpenCloseFiles) then begin
+         gbOpenCloseFiles := True;
+         CloseTable(tblR);
+         CloseTable(dm.tblEntries);
+      end;
+      ClearPrgStatusBars();
+   end;
+end;
 
 //
 
-procedure TMainForm.ImportTSNHistory(Sender: TObject);
+procedure TMainForm.ImportHDWHistory(Sender: TObject);
+var
+   iEndPos: Integer;
+   iStartPos: Integer;
+   iAttributes: Integer;
+
+   sTmp: string;
+   sSearch: string;
+
+   tsFile: TSearchRec;
+   dtDownLoadDate: TDateTime;
+   dtPresent: TDateTime;
+
+   wYear: Word;
+   wMonth: Word;
+   wDay: Word;
+   sPath: string;
+   sFileName: string;
+   sJCPFileName: string;
+   sRaceMM: string;
+   sRaceDD: string;
+   iLen: Integer;
+   bOk: boolean;
+   bDebug: boolean;
+   iFilesExtracted: integer;
+
+begin
+
+   try
+
+      try
+         hLog.AddToLog('Import Todays HDW For History ', msevOperation);
+
+         bDebug := False;
+
+         CloseTable(dm.tblRaces);
+         CloseTable(dm.tblEntries);
+
+         OpenTable(dm.tblRaces);
+         OpenTable(dm.tblEntries);
+         OpenTable(dm.tblRatings);
+
+         OpenTable(dm.tblTrack);
+         OpenTable(dm.tblTrainer);
+         OpenTable(dm.tblATrainerList);
+         OpenTable(dm.tblTrainerCategory);
+         OpenTable(dm.tblTrainerJockeySummary);
+         OpenTable(dm.tblTrainerOwnerSummary);
+         OpenTable(dm.tblJockey);
+
+         OpenTable(dm.tblRH);
+         OpenTable(dm.tblHH);
+
+
+         OpenTable(dm.tblPP);
+
+
+         OpenTable(dm.tblRatingSireClass);
+         OpenTable(dm.tblRatingSireTurf);
+
+         OpenTable(dm.tblRatingSireMud);
+         OpenTable(dm.tblRatingSireAW);
+
+         OpenTable(dm.tblRatingSireSprint);
+         OpenTable(dm.tblRatingSireRoute);
+
+
+         OpenTable(dm.tblRatingDamSireClass);
+         OpenTable(dm.tblRatingDamSireTurf);
+
+         OpenTable(dm.tblRatingDamSireMud);
+         OpenTable(dm.tblRatingDamSireAW);
+
+         OpenTable(dm.tblRatingDamSireSprint);
+         OpenTable(dm.tblRatingDamSireRoute);
+
+
+         OpenTable(dm.tblRatingTrainer);
+         OpenTable(dm.tblRatingTrainerTrack);
+         OpenTable(dm.tblRatingTrainerJockey);
+         OpenTable(dm.tblRatingTrainerOwner);
+
+         OpenTable(dm.tblRatingJockey);
+         OpenTable(dm.tblRatingJockeyTrack);
+         OpenTable(dm.tblRatingJockeyOwner);
+
+         OpenTable(dm.tblRatingOwner);
+
+         prgBar.Position := 0;
+         pnlPrgBar.Visible := False;
+
+         if gbUseOverrideDate then begin
+            dtDownloadDate := edtOverrideDate.Date;
+         end else begin
+            dtDownloadDate := Now();
+         end;
+
+         iGimmicksRace := 0;
+
+         iDDRace := 0;
+         iPk3Race := 0;
+         iPk4Race := 0;
+         iPk6Race := 0;
+
+         iExaRace := 0;
+         iQuiRace := 0;
+         iTriRace := 0;
+         iSuperRace := 0;
+
+         iAttributes := faAnyFile;
+
+         iAttributes := faAnyFile;
+         sPath := HDW_JCP_PATH;
+         if bProcessAllDates then begin
+            sSearch := sPath + '*.jcp';
+         end else begin
+            DecodeDate(dtDownloadDate, wYear, wMonth, wDay);
+            if gbTest then begin
+               sFileName := 'a*' + sm.Str(wMonth, 2) + sm.Str(wDay, 2);
+            end else begin
+               sFileName := '*' + sm.Str(wMonth, 2) + sm.Str(wDay, 2);
+            end;
+            sFileName := sFileName + '.jcp';
+            //sFileName := sFileName + '.mcp';
+            sSearch := sPath + sFileName;
+         end;
+
+         UpdateStatusBar(sSearch);
+         if FindFirst(sSearch, iAttributes, tsFile) = 0 then begin
+            iEndPos := SmartPos('.', tsFile.Name);
+            iStartPos := iEndPos - 4;
+            sFileTrkCode := CopyStr(tsFile.Name, 1, iStartPos - 1);
+            sFileTrkCode := UpperCase(sFileTrkCode);
+
+            if (sFileTrkCode <> '') then begin
+               sTmp := CopyStr(tsFile.Name, iStartPos, 4);
+               sRaceMM := CopyStr(sTmp, 1, 2);
+               sRaceDD := CopyStr(sTmp, 3, 2);
+               sTmp := CopyStr(sTmp, 1, 2) + '/' + CopyStr(sTmp, 3, 2) + ' - ' + tsFile.Name;
+               iLen := Length(sTmp);
+               sTmp := CopyStr(sTmp, 9, iLen - 8);
+               sFileName := sPath + sTmp;
+
+               dtPresent := Now();
+               DecodeDate(dtPresent, wYear, wMonth, wDay);
+               wDay := atow(sRaceDD);
+               wMonth := atow(sRaceMM);
+               dtAxcisRaceDate := EncodeDate(wYear, wMonth, wDay);
+
+               sJCPFileName := UpperCase(sFileName);
+               if FileExists(sJCPFileName) then begin
+                  try
+                     UpdateStatusBar(sJCPFileName);
+                     HDWImportJCP(dm.tblRaces,
+                        dm.tblEntries,
+                        dm.tblRH,
+                        dm.tblHH,
+                        dm.tblPP,
+                        dm.tblRatingSireClass,
+                        dm.tblRatingSireTurf,
+                        dm.tblRatingSireSprint,
+                        dm.tblRatingSireRoute,
+                        dm.tblRatingSireMud,
+                        dm.tblRatingSireAW,
+                        dm.tblRatingDamSireClass,
+                        dm.tblRatingDamSireTurf,
+                        dm.tblRatingDamSireSprint,
+                        dm.tblRatingDamSireRoute,
+                        dm.tblRatingDamSireMud,
+                        dm.tblRatingDamSireAW,
+                        dm.tblRatingTrainer,
+                        dm.tblRatingTrainerJockey,
+                        dm.tblRatingTrainerOwner,
+                        dm.tblRatingTrainerTrack,
+                        dm.tblRatingJockey,
+                        dm.tblRatingJockeyOwner,
+                        dm.tblRatingJockeyTrack,
+                        dm.tblRatingOwner,
+                        sJCPFileName);
+
+
+                     UpdateHDW(dm.tblRaces, dm.tblEntries, dm.tblTrainerCategory, dm.tblATrainerList, dm.tblTrainerJockeySummary, dm.tblTrainerOwnerSummary, sJCPFileName);
+                  except
+                     on E: Exception do hLog.AddToLog(E.Message, msevException);
+                  end;
+               end;
+
+            end;
+         end;
+
+         while (FindNext(tsFile) = 0) do begin
+            iEndPos := SmartPos('.', tsFile.Name);
+            iStartPos := iEndPos - 4;
+            sFileTrkCode := CopyStr(tsFile.Name, 1, iStartPos - 1);
+            sFileTrkCode := UpperCase(sFileTrkCode);
+
+            if (sFileTrkCode <> '') then begin
+               sTmp := CopyStr(tsFile.Name, iStartPos, 4);
+               sRaceMM := CopyStr(sTmp, 1, 2);
+               sRaceDD := CopyStr(sTmp, 3, 2);
+
+               sTmp := CopyStr(sTmp, 1, 2) + '/' + CopyStr(sTmp, 3, 2) + ' - ' + tsFile.Name;
+               iLen := Length(sTmp);
+               sTmp := CopyStr(sTmp, 9, iLen - 8);
+               sFileName := sPath + sTmp;
+
+               dtPresent := Now();
+               DecodeDate(dtPresent, wYear, wMonth, wDay);
+               wDay := atow(sRaceDD);
+               wMonth := atow(sRaceMM);
+               dtAxcisRaceDate := EncodeDate(wYear, wMonth, wDay);
+
+               sJCPFileName := UpperCase(sFileName);
+               if FileExists(sJCPFileName) then begin
+                  try
+                     UpdateStatusBar(sJCPFileName);
+                     HDWImportJCP(dm.tblRaces,
+                        dm.tblEntries,
+                        dm.tblRH,
+                        dm.tblHH,
+                        dm.tblPP,
+                        dm.tblRatingSireClass,
+                        dm.tblRatingSireTurf,
+                        dm.tblRatingSireSprint,
+                        dm.tblRatingSireRoute,
+                        dm.tblRatingSireMud,
+                        dm.tblRatingSireAW,
+                        dm.tblRatingDamSireClass,
+                        dm.tblRatingDamSireTurf,
+                        dm.tblRatingDamSireSprint,
+                        dm.tblRatingDamSireRoute,
+                        dm.tblRatingDamSireMud,
+                        dm.tblRatingDamSireAW,
+                        dm.tblRatingTrainer,
+                        dm.tblRatingTrainerJockey,
+                        dm.tblRatingTrainerOwner,
+                        dm.tblRatingTrainerTrack,
+                        dm.tblRatingJockey,
+                        dm.tblRatingJockeyOwner,
+                        dm.tblRatingJockeyTrack,
+                        dm.tblRatingOwner,
+                        sJCPFileName);
+
+                     UpdateHDW(dm.tblRaces, dm.tblEntries, dm.tblTrainerCategory, dm.tblATrainerList, dm.tblTrainerJockeySummary, dm.tblTrainerOwnerSummary, sJCPFileName);
+                  except
+                     on E: Exception do hLog.AddToLog(E.Message, msevException);
+                  end;
+               end;
+            end;
+         end;
+         FindClose(tsFile);
+
+      except
+         on E: Exception do begin
+            hLog.AddToLog(E.Message, msevException);
+            CloseTable(dm.tblRH);
+            CloseTable(dm.tblHH);
+            CloseTable(dm.tblPP);
+            CloseTable(dm.tblTrack);
+            CloseTable(dm.tblTrainer);
+            CloseTable(dm.tblATrainerList);
+            CloseTable(dm.tblTrainerCategory);
+            CloseTable(dm.tblTrainerJockeySummary);
+            CloseTable(dm.tblTrainerOwnerSummary);
+            CloseTable(dm.tblJockey);
+            CloseTable(dm.tblRaces);
+            CloseTable(dm.tblEntries);
+            CloseTable(dm.tblRatings);
+
+            CloseTable(dm.tblRatingSireClass);
+            CloseTable(dm.tblRatingSireTurf);
+
+            CloseTable(dm.tblRatingSireMud);
+            CloseTable(dm.tblRatingSireAW);
+
+            CloseTable(dm.tblRatingSireSprint);
+            CloseTable(dm.tblRatingSireRoute);
+
+
+            CloseTable(dm.tblRatingDamSireClass);
+            CloseTable(dm.tblRatingDamSireTurf);
+
+            CloseTable(dm.tblRatingDamSireMud);
+            CloseTable(dm.tblRatingDamSireAW);
+
+            CloseTable(dm.tblRatingDamSireSprint);
+            CloseTable(dm.tblRatingDamSireRoute);
+
+            CloseTable(dm.tblRatingTrainer);
+            CloseTable(dm.tblRatingTrainerTrack);
+            CloseTable(dm.tblRatingTrainerJockey);
+            CloseTable(dm.tblRatingTrainerOwner);
+
+            CloseTable(dm.tblRatingJockey);
+            CloseTable(dm.tblRatingJockeyTrack);
+            CloseTable(dm.tblRatingJockeyOwner);
+
+            CloseTable(dm.tblRatingOwner);
+
+            ClearPrgStatusBars();
+            FindClose(tsFile);
+         end;
+      end;
+   finally
+      CloseTable(dm.tblRH);
+      CloseTable(dm.tblHH);
+      CloseTable(dm.tblPP);
+      CloseTable(dm.tblRaces);
+      CloseTable(dm.tblEntries);
+      CloseTable(dm.tblTrack);
+      CloseTable(dm.tblTrainerCategory);
+      CloseTable(dm.tblATrainerList);
+      CloseTable(dm.tblTrainerJockeySummary);
+      CloseTable(dm.tblTrainerOwnerSummary);
+      CloseTable(dm.tblTrainer);
+      CloseTable(dm.tblJockey);
+      CloseTable(dm.tblRatings);
+
+      CloseTable(dm.tblRatingSireClass);
+      CloseTable(dm.tblRatingSireTurf);
+
+      CloseTable(dm.tblRatingSireMud);
+      CloseTable(dm.tblRatingSireAW);
+
+      CloseTable(dm.tblRatingSireSprint);
+      CloseTable(dm.tblRatingSireRoute);
+
+      CloseTable(dm.tblRatingDamSireClass);
+      CloseTable(dm.tblRatingDamSireTurf);
+
+      CloseTable(dm.tblRatingDamSireMud);
+      CloseTable(dm.tblRatingDamSireAW);
+
+      CloseTable(dm.tblRatingDamSireSprint);
+      CloseTable(dm.tblRatingDamSireRoute);
+
+      CloseTable(dm.tblRatingTrainer);
+      CloseTable(dm.tblRatingTrainerTrack);
+      CloseTable(dm.tblRatingTrainerJockey);
+      CloseTable(dm.tblRatingTrainerOwner);
+
+      CloseTable(dm.tblRatingJockey);
+      CloseTable(dm.tblRatingJockeyTrack);
+      CloseTable(dm.tblRatingJockeyOwner);
+
+      CloseTable(dm.tblRatingOwner);
+
+      ClearPrgStatusBars();
+   end;
+end;
+
+procedure TMainForm.ImportHDWForToday(Sender: TObject);
+var
+   iEndPos: Integer;
+   iStartPos: Integer;
+   iAttributes: Integer;
+
+   sTmp: string;
+   sSearch: string;
+
+   tsFile: TSearchRec;
+   dtDownLoadDate: TDateTime;
+   dtPresent: TDateTime;
+
+   wYear: Word;
+   wMonth: Word;
+   wDay: Word;
+   sPath: string;
+   sFileName: string;
+   sRaceMM: string;
+   sRaceDD: string;
+   iLen: Integer;
+   bOk: boolean;
+   bDebug: boolean;
+begin
+
+   try
+
+      try
+         hLog.AddToLog('Import Todays HDW For Reports ', msevOperation);
+         prgBar.Position := 0;
+         pnlPrgBar.Visible := False;
+
+         if gbUseOverrideDate then begin
+            dtDownloadDate := edtOverrideDate.Date;
+         end else begin
+            dtDownloadDate := Now();
+         end;
+
+         iGimmicksRace := 0;
+
+         iDDRace := 0;
+         iPk3Race := 0;
+         iPk4Race := 0;
+         iPk6Race := 0;
+
+         iExaRace := 0;
+         iQuiRace := 0;
+         iTriRace := 0;
+         iSuperRace := 0;
+
+         try
+            gbOpenCloseFiles := True;
+            OpenTable(dm.tblBank);
+            OpenTable(dm.tblRaces);
+            OpenTable(dm.tblEntries);
+            OpenTable(dm.tblPP);
+            OpenTable(dm.tblRH);
+            OpenTable(dm.tblHH);
+            OpenTable(dm.tblRankingStats);
+            OpenTable(dm.tblRankingStatsByTrk);
+            OpenTable(dm.tblFinalOrder);
+            OpenTable(dm.tblTrack);
+            OpenTable(dm.tblTrainer);
+            OpenTable(dm.tblJockey);
+            OpenTable(dm.tblOwner);
+            OpenTable(dm.tblSire);
+            OpenTable(dm.tblTrackLeaders);
+            OpenTable(dm.tblGimmicks);
+            OpenTable(dm.tblWagers);
+            gbOpenCloseFiles := False;
+
+            try
+               UpdateQSPAndKSP(dm.tblRaces, dm.tblEntries, dm.tblPP, pnlPrgBar, prgBar, staBar, 10);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+            SetRanking(dm.tblEntries, 'ByQSP1stCallRank', 'QSP1stCallRank', 'QSP1stCall', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
+            SetRanking(dm.tblEntries, 'ByQSP2ndCallRank', 'QSP2ndCallRank', 'QSP2ndCall', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
+            SetRanking(dm.tblEntries, 'ByKSP1stCallRank', 'KSP1stCallRank', 'KSP1stCall', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, True);
+            SetRanking(dm.tblEntries, 'ByKSP2ndCallRank', 'KSP2ndCallRank', 'KSP2ndCall', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, True);
+
+            SetRankingDouble(dm.tblEntries, 'ByEarlyPacePosRank', 'EarlyPacePosRank', 'EarlyPacePos', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, True);
+            SetRankingDouble(dm.tblEntries, 'ByMiddlePacePosRank', 'MiddlePacePosRank', 'MiddlePacePos', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, True);
+            SetRankingDouble(dm.tblEntries, 'ByLatePacePosRank', 'LatePacePosRank', 'LatePacePos', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, True);
+
+            SetRankingDouble(dm.tblEntries, 'ByEarlyPaceRank', 'EarlyPaceRank', 'EarlyPace', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
+            SetRankingDouble(dm.tblEntries, 'ByMiddlePaceRank', 'MiddlePaceRank', 'MiddlePace', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
+            SetRankingDouble(dm.tblEntries, 'ByLatePaceRank', 'LatePaceRank', 'LatePace', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
+
+            SetRanking(dm.tblEntries, 'ByTotalTrn30WinPctRank', 'TotalTrn30WinPctRank', 'TotalTrn30WinPct', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
+            SetRanking(dm.tblEntries, 'ByTotalJky30WinPctRank', 'TotalJky30WinPctRank', 'TotalJky30WinPct', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
+            SetRanking(dm.tblEntries, 'ByTotalTrnOddsWinPctRank', 'TotalTrnOddsWinPctRank', 'TotalTrnOddsWinPct', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
+            SetRanking(dm.tblEntries, 'ByTotalJkyOddsWinPctRank', 'TotalJkyOddsWinPctRank', 'TotalJkyOddsWinPct', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
+            SetRanking(dm.tblEntries, 'ByMorningLineTo1Rank', 'MorningLineTo1Rank', 'MorningLineTo1', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, True);
+            SetRanking(dm.tblEntries, 'ByTrnTodayWinPctRank', 'TrnTodayWinPctRank', 'TrnTodayWinPct', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
+            SetRanking(dm.tblEntries, 'ByLastSpeedRank', 'LastSpeedRank', 'LastSpeed', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
+            SetRanking(dm.tblEntries, 'ByBackSpeedRank', 'BackSpeedRank', 'BackSpeed', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
+            SetRankingDouble(dm.tblEntries, 'ByPowerRank', 'PowerRank', 'Power', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
+
+
+            gbOpenCloseFiles := True;
+            CloseTable(dm.tblRaces);
+            CloseTable(dm.tblEntries);
+
+            try
+               IndexToday(dm.tblRaces, dm.tblEntries, pnlPrgBar, prgBar, staBar, 10);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+            try
+               IndexPedigree(dm.tblRaces, dm.tblEntries, pnlPrgBar, prgBar, staBar, 10);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+            OpenTable(dm.tblRaces);
+            OpenTable(dm.tblEntries);
+            gbOpenCloseFiles := False;
+
+            //Paired
+            qryUpdateEntryOwnerFromXrefTrainer();
+            try
+               UpdateTrnJkyOwnSireRanks(dm.tblRaces, dm.tblEntries, dm.tblTrack, dm.tblTrainer, dm.tblJockey, dm.tblOwner, dm.tblSire, dm.tblTrackLeaders, dm.tblOwnerSummary, pnlPrgBar, prgBar, staBar, BATCH_SIZE);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+            try
+               UpdateATrainerList(dm.tblRaces, dm.tblEntries, dm.tblATrainerList, pnlPrgBar, prgBar, staBar);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+
+            // Has to be run this way - start
+            try
+               UpdateNbrOfStarters(dm.tblRaces, dm.tblEntries, pnlPrgBar, prgBar, staBar, BATCH_SIZE);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+            //
+            try
+               SetLiners(dm.tblRaces, dm.tblEntries, dm.tblRankingStats, dm.tblRankingStatsByTrk, pnlPrgBar, prgBar, staBar, 100);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+            //
+            try
+               UpdateTopFigures(dm.tblRaces, dm.tblEntries, pnlPrgBar, prgBar, staBar, 100);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+            //
+            try
+               UpdatePaceAdvantage(dm.tblRaces, dm.tblEntries, pnlPrgBar, prgBar, staBar, 100);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+
+            try
+               UpdateTipSheetSelections(dm.tblRaces, dm.tblEntries, dm.tblTrack, pnlPrgBar, prgBar, staBar, BATCH_SIZE, False);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+            // This uses fields update in UpdateTipSelections
+            //HAS TO RUN TWICE
+            try
+               UpdateTodaysWagerWinPct(dm.tblRaces, dm.tblEntries, dm.tblFinalOrder, dm.tblTrainerCategory, pnlPrgBar, prgBar, staBar, BATCH_SIZE, True, STAT_DAYS, ALT_ORDER);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+            try
+               UpdateTodaysWagerWinPct(dm.tblRaces, dm.tblEntries, dm.tblFinalOrder, dm.tblTrainerCategory, pnlPrgBar, prgBar, staBar, BATCH_SIZE, True, STAT_DAYS, NORMAL_ORDER);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+            try
+               UpdateTodaysWagerWinPctRank(dm.tblRaces, dm.tblEntries, pnlPrgBar, prgBar, staBar, BATCH_SIZE, True, STAT_DAYS);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+
+            // This uses TodaysWagerChoices
+            try
+               UpdateReportSelections(dm.tblRaces, dm.tblEntries, dm.tblTrack, pnlPrgBar, prgBar, staBar, BATCH_SIZE, False);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+            gbOpenCloseFiles := True;
+            CloseTable(dm.tblRaces);
+            CloseTable(dm.tblEntries);
+            CloseTable(dm.tblGimmicks);
+            try
+               UpdateGimmicks(dm.tblRaces, dm.tblEntries, dm.tblGimmicks, pnlPrgBar, prgBar, staBar, 100);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+            OpenTable(dm.tblRaces);
+            OpenTable(dm.tblEntries);
+            OpenTable(dm.tblGimmicks);
+            gbOpenCloseFiles := False;
+
+            try
+               UpdateATrainerList(dm.tblRaces, dm.tblEntries, dm.tblATrainerList, pnlPrgBar, prgBar, staBar);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+            //      try
+      //               Update_FinalOrder_WinPct(dm.tblRaces, dm.tblEntries, dm.tblFinalOrder, pnlPrgBar, prgBar, staBar, BATCH_SIZE, False, RANKING_DAYS);
+      //            except
+      //               on E: Exception do hLog.AddToLog(E.Message, msevException);
+      //            end;
+      //
+      //            try
+      //               Update_FinalOrder_WinPctRank(dm.tblRaces, dm.tblEntries, pnlPrgBar, prgBar, staBar, BATCH_SIZE, False, RANKING_DAYS);
+      //            except
+      //               on E: Exception do hLog.AddToLog(E.Message, msevException);
+      //            end;
+
+
+            try
+               UpdateHHFromToday(dm.tblRaces, dm.tblEntries, dm.tblRH, dm.tblHH, pnlPrgBar, prgBar, staBar, 100);
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
+            end;
+
+         finally
+            gbOpenCloseFiles := True;
+            CloseTable(dm.tblRaces);
+            CloseTable(dm.tblEntries);
+            CloseTable(dm.tblRH);
+            CloseTable(dm.tblHH);
+            CloseTable(dm.tblPP);
+            CloseTable(dm.tblRankingStats);
+            CloseTable(dm.tblRankingStatsByTrk);
+            CloseTable(dm.tblFinalOrder);
+            CloseTable(dm.tblTrack);
+            CloseTable(dm.tblTrainer);
+            CloseTable(dm.tblJockey);
+            CloseTable(dm.tblOwner);
+            CloseTable(dm.tblSire);
+            CloseTable(dm.tblTrackLeaders);
+            CloseTable(dm.tblGimmicks);
+            CloseTable(dm.tblWagers);
+            CloseTable(dm.tblBank);
+         end;
+
+      except
+         on E: Exception do begin
+            hLog.AddToLog(E.Message, msevException);
+            gbOpenCloseFiles := True;
+            CloseTable(dm.tblRaces);
+            CloseTable(dm.tblEntries);
+            CloseTable(dm.tblRH);
+            CloseTable(dm.tblHH);
+            CloseTable(dm.tblPP);
+            CloseTable(dm.tblRankingStats);
+            CloseTable(dm.tblRankingStatsByTrk);
+            CloseTable(dm.tblFinalOrder);
+            CloseTable(dm.tblTrack);
+            CloseTable(dm.tblTrainer);
+            CloseTable(dm.tblJockey);
+            CloseTable(dm.tblOwner);
+            CloseTable(dm.tblSire);
+            CloseTable(dm.tblTrackLeaders);
+            CloseTable(dm.tblGimmicks);
+            CloseTable(dm.tblWagers);
+            CloseTable(dm.tblBank);
+
+            ClearPrgStatusBars();
+            FindClose(tsFile);
+         end;
+      end;
+
+   finally
+      gbOpenCloseFiles := True;
+      CloseTable(dm.tblRaces);
+      CloseTable(dm.tblEntries);
+      CloseTable(dm.tblRH);
+      CloseTable(dm.tblHH);
+      CloseTable(dm.tblPP);
+      CloseTable(dm.tblRankingStats);
+      CloseTable(dm.tblRankingStatsByTrk);
+      CloseTable(dm.tblFinalOrder);
+      CloseTable(dm.tblTrack);
+      CloseTable(dm.tblTrainer);
+      CloseTable(dm.tblJockey);
+      CloseTable(dm.tblOwner);
+      CloseTable(dm.tblSire);
+      CloseTable(dm.tblTrackLeaders);
+      CloseTable(dm.tblGimmicks);
+      CloseTable(dm.tblWagers);
+      CloseTable(dm.tblBank);
+      ClearPrgStatusBars();
+   end;
+
+end;
+
+//
+
+procedure TMainForm.ImportTSNOldHistory(Sender: TObject);
 var
    iEndPos: Integer;
    iStartPos: Integer;
@@ -17823,7 +19077,8 @@ begin
    end;
 end;
 
-procedure TMainForm.ImportTSNForToday(Sender: TObject);
+
+procedure TMainForm.ImportTSNOldForToday(Sender: TObject);
 var
    iEndPos: Integer;
    iStartPos: Integer;
@@ -18132,6 +19387,7 @@ begin
 end;
 
 
+
 procedure TMainForm.btnImportTodayClick(Sender: TObject);
 begin
 
@@ -18257,10 +19513,10 @@ begin
    hLog.LogFileName := LOG_PATH + TSN_LOG_FILENAME;
    qryDeleteLSC();
 
-//   DownloadTSNLSC(Sender);
-//   ProcessTSNLists(dm.dbSireRate, dm.tblTSNDownload, LSC_FILE);
-//   DownloadTsnLate(Sender);
-//   hLog.LogFileName := LOG_PATH + LOG_FILENAME;
+   //   DownloadTSNLSC(Sender);
+   //   ProcessTSNLists(dm.dbSireRate, dm.tblTSNDownload, LSC_FILE);
+   //   DownloadTsnLate(Sender);
+   //   hLog.LogFileName := LOG_PATH + LOG_FILENAME;
    TimerOn(True);
 end;
 
@@ -18518,7 +19774,8 @@ begin
    end;
 
    try
-      ImportTSNForToday(Sender);
+      //ImportTSNForToday(Sender);
+      ImportHDWForToday(Sender);
    except
       on E: Exception do hLog.AddToLog(E.Message, msevException);
    end;
@@ -18566,7 +19823,8 @@ begin
          TimerOn(False);
          edtOverrideDate.Date := edtOverrideDate.Date - 1;
          ClearRaceResults(dm.tblPrevDayRH);
-         ImportTSNResults(Sender, dm.tblPrevDayRH, dm.tblPrevDayHH);
+         // ImportTSNResults(Sender, dm.tblPrevDayRH, dm.tblPrevDayHH);
+         ImportHDWResults(Sender, dm.tblPrevDayRH, dm.tblPrevDayHH);
          UpdateMultiRaceResults(dm.tblPrevDayRH);
          ProcessPicksAndResults(dm.tblPrevDayRH, OVERRIDE_DATE_FALSE);
          TimerOn(True);
@@ -18578,7 +19836,8 @@ begin
             edtOverrideDate.Date := edtOverrideDate.Date - PREV_WEEK_DAYS;
             repeat
                ClearRaceResults(dm.tblPrevWeekRH);
-               ImportTSNResults(Sender, dm.tblPrevWeekRH, dm.tblPrevWeekHH);
+               ImportHDWResults(Sender, dm.tblPrevWeekRH, dm.tblPrevWeekHH);
+               // ImportTSNResults(Sender, dm.tblPrevWeekRH, dm.tblPrevWeekHH);
                UpdateMultiRaceResults(dm.tblPrevWeekRH);
                ProcessPicksAndResults(dm.tblPrevWeekRH, OVERRIDE_DATE_FALSE);
                edtOverrideDate.Date := edtOverrideDate.Date + 1;

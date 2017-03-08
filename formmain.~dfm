@@ -1,8 +1,8 @@
 object MainForm: TMainForm
-  Left = 31
-  Top = 93
-  Width = 1274
-  Height = 618
+  Left = 240
+  Top = 141
+  Width = 798
+  Height = 598
   Caption = 'KSK Ratings 3.1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -20,8 +20,8 @@ object MainForm: TMainForm
   TextHeight = 16
   object staBar: TStatusBar
     Left = 0
-    Top = 530
-    Width = 1266
+    Top = 510
+    Width = 790
     Height = 19
     Panels = <>
     ParentShowHint = False
@@ -30,8 +30,8 @@ object MainForm: TMainForm
   end
   object pnlPrgBar: TPanel
     Left = 0
-    Top = 549
-    Width = 1266
+    Top = 529
+    Width = 790
     Height = 36
     Align = alBottom
     BorderStyle = bsSingle
@@ -49,23 +49,23 @@ object MainForm: TMainForm
   object pgCtrlMain: TcxPageControl
     Left = 0
     Top = 25
-    Width = 1266
-    Height = 505
+    Width = 790
+    Height = 485
     ActivePage = tabBatch
     Align = alClient
     LookAndFeel.Kind = lfStandard
     LookAndFeel.NativeStyle = False
     TabOrder = 2
-    ClientRectBottom = 503
+    ClientRectBottom = 483
     ClientRectLeft = 2
-    ClientRectRight = 1264
+    ClientRectRight = 788
     ClientRectTop = 25
     object tabDaily: TcxTabSheet
       Caption = 'Daily'
       object lblLocalPath: TLabel
         Left = 0
-        Top = 422
-        Width = 1262
+        Top = 402
+        Width = 786
         Height = 26
         Align = alBottom
         AutoSize = False
@@ -78,8 +78,8 @@ object MainForm: TMainForm
       end
       object lblServerPath: TLabel
         Left = 0
-        Top = 448
-        Width = 1262
+        Top = 428
+        Width = 786
         Height = 27
         Align = alBottom
         AutoSize = False

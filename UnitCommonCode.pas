@@ -310,9 +310,9 @@ const
 //   FTP_HOST = '64.202.163.74';
    FTP_HOST = 'ksklimited.com';
    FTP_USERNAME = 'JoeKarasKSK@ksklimited.com';
-//   FTP_USERNAME = 'JoeKarasKSK';
-//   FTP_PASSWORD = 'Only1Time';
-   FTP_PASSWORD = 'Only1TimeHostGatorFTP';  
+   //   FTP_USERNAME = 'JoeKarasKSK';
+   //   FTP_PASSWORD = 'Only1Time';
+   FTP_PASSWORD = 'Only1TimeHostGatorFTP';
 
    //   FTP_HOST = '64.202.163.74';
    JIM_FTP_HOST = 'www.onlinefolder.com';
@@ -550,6 +550,39 @@ const
    DebutGt1M = 63;
    Routes = 64;
 
+   A1stLasix = 0;
+   A1stStart45dLayff = 1;
+   A2ndLasix = 2;
+   A2ndStart45dLayff = 3;
+   A3rdStart45dLayff = 4;
+   A3yrolds = 5;
+   A4youp = 6;
+   A5To1to10To1 = 7;
+   HAllowance = 8;
+   HBlinkersOFF = 9;
+   BlinkersON = 10;
+   Claimed1bk = 11;
+   Claimed2bk = 12;
+   Claimed3bk = 13;
+   HClaiming = 14;
+   DirtSynth = 15;
+   Dwn20PctPurse = 16;
+   FAndM = 17;
+   FTS = 18;
+   Favorites = 19;
+   MClm = 20;
+   MaleHorses = 21;
+   RouteDebut = 22;
+   RouteToSprint = 23;
+   HRoutes = 24;
+   Splwt = 25;
+   SprintToRoute = 26;
+   HSprints = 27;
+   Track = 28;
+   TurfDebut = 29;
+   Up20PctPurse = 30;
+   Below5To1 = 31;
+
 
 
    EXACTA = 0;
@@ -745,7 +778,7 @@ var
    adBackSpeedOdds: TDArray;
    adBackSpeedMinOdds: TDArray;
    adBackSpeedMaxOdds: TDArray;
-   
+
    //
 //   alFinalWinPctRank: TLArray;
 //   adFinalWinPctOdds: TDArray;
@@ -1222,6 +1255,9 @@ var
    TSN_MCP_PATH: string;
    TSN_XRD_PATH: string;
 
+   HDW_JCP_PATH: string;
+   HDW_XRD_PATH: string;
+
    dtAltLastDateToProcess: TDateTime;
    dtAltFirstDateToProcess: TDateTime;
    dtAltStartDateProcessed: TDateTime;
@@ -1381,18 +1417,18 @@ var
 begin
    Result := 0;
    try
-   Val(sIn, I, C);
-   if C <> 0 then
-      Result := 0
-   else
-           
-      Result := I;
-      if Result > 32678  then  begin
-        Result := 0;
-     end ; 
-    except
-    end;
-   
+      Val(sIn, I, C);
+      if C <> 0 then
+         Result := 0
+      else
+
+         Result := I;
+      if Result > 32678 then begin
+         Result := 0;
+      end;
+   except
+   end;
+
 end;
 
 function atol(sIn: string): Longint;
