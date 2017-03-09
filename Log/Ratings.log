@@ -1,18 +1,29 @@
-3/8/2017 10:30:05 AM [Operation] ProcessTodays
-3/8/2017 10:30:05 AM [Operation] Start Of Day : 3/8/2017
-3/8/2017 10:30:05 AM [Operation] Import Todays HDW For History 
-3/8/2017 10:30:34 AM [Operation] btnDownloadTsnResults
-3/8/2017 10:32:07 AM [Exception] Cannot generate report.
+3/8/2017 4:12:51 PM [Operation] ProcessTodays
+3/8/2017 4:12:51 PM [Operation] Start Of Day : 3/8/2017
+3/8/2017 4:12:51 PM [Operation] Import Todays HDW For History 
+3/8/2017 4:13:20 PM [Operation] btnDownloadTsnResults
+3/8/2017 4:15:03 PM [Exception] Cannot generate report.
 
 Could not open DataSet.: plRacesReport
-3/8/2017 10:33:56 AM [Operation] ProcessTodays
-3/8/2017 10:33:56 AM [Operation] Start Of Day : 3/8/2017
-3/8/2017 10:33:57 AM [Operation] Import Todays HDW For History 
-3/8/2017 10:34:29 AM [Operation] btnDownloadTsnResults
-3/8/2017 10:36:02 AM [Exception] Cannot generate report.
+3/8/2017 4:32:38 PM [Operation] Create Reports 
+3/8/2017 4:32:38 PM [Operation] Create Hospital Reports - Start
+3/8/2017 4:33:16 PM [Operation] Create Hospital Reports - End
+3/8/2017 4:33:16 PM [Operation] Create Hospital2 Reports - Start
+3/8/2017 4:35:19 PM [Operation] Create Hospital2 Reports - End
+3/8/2017 5:01:42 PM [Exception] Access violation at address 00C57A1C in module 'ratings31.exe'. Read of address 00000000
+3/8/2017 5:31:19 PM [Operation] Create Reports 
+3/8/2017 5:31:19 PM [Operation] Create Hospital Reports - Start
+3/8/2017 5:31:56 PM [Operation] Create Hospital Reports - End
+3/8/2017 5:31:56 PM [Operation] Create Hospital2 Reports - Start
+3/8/2017 5:34:06 PM [Operation] ProcessTodays
+3/8/2017 5:34:06 PM [Operation] Start Of Day : 3/8/2017
+3/8/2017 5:34:07 PM [Operation] Import Todays HDW For History 
+3/8/2017 5:34:36 PM [Operation] btnDownloadTsnResults
+3/8/2017 5:36:38 PM [Exception] Cannot generate report.
 
 Could not open DataSet.: plRacesReport
-3/8/2017 11:52:39 AM [Operation] ProcessTodays
-3/8/2017 11:52:39 AM [Operation] Start Of Day : 3/8/2017
-3/8/2017 11:52:39 AM [Operation] Import Todays HDW For History 
-3/8/2017 11:53:11 AM [Operation] btnDownloadTsnResults
+3/8/2017 5:50:18 PM [Operation] ProcessTodays
+3/8/2017 5:50:18 PM [Operation] Start Of Day : 3/8/2017
+3/8/2017 5:50:19 PM [Operation] Import Todays HDW For History 
+3/8/2017 5:50:48 PM [Operation] btnDownloadTsnResults
+3/8/2017 6:01:41 PM [Exception] Access violation at address 00C60384 in module 'ratings31.exe'. Read of address 00000000

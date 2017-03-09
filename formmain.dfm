@@ -1,8 +1,8 @@
 object MainForm: TMainForm
-  Left = 443
-  Top = 131
-  Width = 798
-  Height = 598
+  Left = -4
+  Top = -4
+  Width = 1589
+  Height = 924
   Caption = 'KSK Ratings 3.1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -20,8 +20,8 @@ object MainForm: TMainForm
   TextHeight = 16
   object staBar: TStatusBar
     Left = 0
-    Top = 510
-    Width = 790
+    Top = 836
+    Width = 1581
     Height = 19
     Panels = <>
     ParentShowHint = False
@@ -30,8 +30,8 @@ object MainForm: TMainForm
   end
   object pnlPrgBar: TPanel
     Left = 0
-    Top = 529
-    Width = 790
+    Top = 855
+    Width = 1581
     Height = 36
     Align = alBottom
     BorderStyle = bsSingle
@@ -48,24 +48,24 @@ object MainForm: TMainForm
   end
   object pgCtrlMain: TcxPageControl
     Left = 0
-    Top = 25
-    Width = 790
-    Height = 485
-    ActivePage = tabBatch
+    Top = 28
+    Width = 1581
+    Height = 808
+    ActivePage = tabDaily
     Align = alClient
     LookAndFeel.Kind = lfStandard
     LookAndFeel.NativeStyle = False
     TabOrder = 2
-    ClientRectBottom = 483
+    ClientRectBottom = 806
     ClientRectLeft = 2
-    ClientRectRight = 788
+    ClientRectRight = 1579
     ClientRectTop = 25
     object tabDaily: TcxTabSheet
       Caption = 'Daily'
       object lblLocalPath: TLabel
         Left = 0
-        Top = 402
-        Width = 786
+        Top = 728
+        Width = 1577
         Height = 26
         Align = alBottom
         AutoSize = False
@@ -78,8 +78,8 @@ object MainForm: TMainForm
       end
       object lblServerPath: TLabel
         Left = 0
-        Top = 428
-        Width = 786
+        Top = 754
+        Width = 1577
         Height = 27
         Align = alBottom
         AutoSize = False
@@ -88,6 +88,96 @@ object MainForm: TMainForm
         ParentColor = False
         Transparent = False
         Visible = False
+      end
+      object pnlOptions: TPanel
+        Left = 255
+        Top = 58
+        Width = 402
+        Height = 277
+        TabOrder = 1
+        object TLabel
+          Left = 325
+          Top = 49
+          Width = 3
+          Height = 16
+        end
+        object edtProxy: TcxTextEdit
+          Left = 266
+          Top = 57
+          Properties.OnChange = edtProxyPropertiesChange
+          TabOrder = 0
+          Width = 119
+        end
+        object chkProcessAllDates: TcxCheckBox
+          Left = 10
+          Top = 75
+          Caption = 'Process All Dates'
+          Properties.OnChange = chkProcessAllDatesPropertiesChange
+          TabOrder = 1
+          Width = 149
+        end
+        object chkUseProxy: TcxCheckBox
+          Left = 10
+          Top = 43
+          Caption = 'Proxy '
+          Properties.OnChange = chkUseProxyPropertiesChange
+          TabOrder = 2
+          Width = 149
+        end
+        object chkOverrideDate: TcxCheckBox
+          Left = 10
+          Top = 10
+          Caption = 'Override Date'
+          Properties.OnChange = chkOverrideDatePropertiesChange
+          State = cbsChecked
+          TabOrder = 3
+          Width = 149
+        end
+        object edtOverrideDate: TcxDateEdit
+          Left = 267
+          Top = 9
+          EditValue = 0d
+          Properties.DateButtons = [btnClear, btnNow, btnToday]
+          Properties.SaveTime = False
+          Properties.ShowTime = False
+          Properties.OnChange = edtOverrideDatePropertiesChange
+          TabOrder = 4
+          Width = 121
+        end
+        object chkDownloadProcessResults: TcxCheckBox
+          Left = 10
+          Top = 105
+          Caption = 'Download/Process Results'
+          Properties.OnChange = chkProcessAllDatesPropertiesChange
+          State = cbsChecked
+          TabOrder = 5
+          Width = 208
+        end
+        object chkDownloadProcessStats: TcxCheckBox
+          Left = 10
+          Top = 134
+          Caption = 'Download/Process Stats'
+          Properties.OnChange = chkProcessAllDatesPropertiesChange
+          State = cbsChecked
+          TabOrder = 6
+          Width = 208
+        end
+        object chkSuppressAutomaticProcessing: TcxCheckBox
+          Left = 10
+          Top = 201
+          Caption = 'Suppress Automatic Processing'
+          Properties.OnChange = chkProcessAllDatesPropertiesChange
+          TabOrder = 7
+          Width = 296
+        end
+        object chkForceEquibase: TcxCheckBox
+          Left = 10
+          Top = 164
+          Caption = 'Force Equibase Process'
+          Properties.OnChange = chkProcessAllDatesPropertiesChange
+          TabOrder = 8
+          Width = 208
+        end
       end
       object pnlAxcis: TPanel
         Left = 10
@@ -202,96 +292,6 @@ object MainForm: TMainForm
           Caption = 'Adjust For Contenders Only'
           TabOrder = 11
           OnClick = btnContendersClick
-        end
-      end
-      object pnlOptions: TPanel
-        Left = 255
-        Top = 58
-        Width = 402
-        Height = 277
-        TabOrder = 1
-        object TLabel
-          Left = 325
-          Top = 49
-          Width = 3
-          Height = 16
-        end
-        object edtProxy: TcxTextEdit
-          Left = 266
-          Top = 57
-          Properties.OnChange = edtProxyPropertiesChange
-          TabOrder = 0
-          Width = 119
-        end
-        object chkProcessAllDates: TcxCheckBox
-          Left = 10
-          Top = 75
-          Caption = 'Process All Dates'
-          Properties.OnChange = chkProcessAllDatesPropertiesChange
-          TabOrder = 1
-          Width = 149
-        end
-        object chkUseProxy: TcxCheckBox
-          Left = 10
-          Top = 43
-          Caption = 'Proxy '
-          Properties.OnChange = chkUseProxyPropertiesChange
-          TabOrder = 2
-          Width = 149
-        end
-        object chkOverrideDate: TcxCheckBox
-          Left = 10
-          Top = 10
-          Caption = 'Override Date'
-          Properties.OnChange = chkOverrideDatePropertiesChange
-          State = cbsChecked
-          TabOrder = 3
-          Width = 149
-        end
-        object edtOverrideDate: TcxDateEdit
-          Left = 267
-          Top = 9
-          EditValue = 0d
-          Properties.DateButtons = [btnClear, btnNow, btnToday]
-          Properties.SaveTime = False
-          Properties.ShowTime = False
-          Properties.OnChange = edtOverrideDatePropertiesChange
-          TabOrder = 4
-          Width = 121
-        end
-        object chkDownloadProcessResults: TcxCheckBox
-          Left = 10
-          Top = 105
-          Caption = 'Download/Process Results'
-          Properties.OnChange = chkProcessAllDatesPropertiesChange
-          State = cbsChecked
-          TabOrder = 5
-          Width = 208
-        end
-        object chkDownloadProcessStats: TcxCheckBox
-          Left = 10
-          Top = 134
-          Caption = 'Download/Process Stats'
-          Properties.OnChange = chkProcessAllDatesPropertiesChange
-          State = cbsChecked
-          TabOrder = 6
-          Width = 208
-        end
-        object chkSuppressAutomaticProcessing: TcxCheckBox
-          Left = 10
-          Top = 193
-          Caption = 'Suppress Automatic Processing'
-          Properties.OnChange = chkProcessAllDatesPropertiesChange
-          TabOrder = 7
-          Width = 296
-        end
-        object chkForceEquibase: TcxCheckBox
-          Left = 10
-          Top = 164
-          Caption = 'Force Equibase Process'
-          Properties.OnChange = chkProcessAllDatesPropertiesChange
-          TabOrder = 8
-          Width = 208
         end
       end
       object pnlReports: TPanel
@@ -1935,7 +1935,7 @@ object MainForm: TMainForm
     DockControlHeights = (
       0
       0
-      25
+      28
       0)
     object File1: TdxBarSubItem
       Caption = 'File'

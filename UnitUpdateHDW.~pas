@@ -58,7 +58,6 @@ var
    bRoute: boolean;
    msText: TMemoryStream;
 
-
    sResults: string;
 
    iPPIdx: integer;
@@ -69,6 +68,7 @@ var
    iProgNbrIdx: integer;
 
    //Race History
+
    sFootNotes: string;
    sFractionalTimes: string;
    sScratchedHorses: string;
@@ -97,9 +97,10 @@ var
    fQuinellaPayout: double;
 
    sParse: string;
-   sPick3Nbrs: string;
+//   sPick3Nbrs: string;
    fPick3Wager: double;
    fPick3Payout: double;
+
    sPick3NbrsLeg1: string;
    sPick3NbrsLeg2: string;
    sPick3NbrsLeg3: string;
@@ -143,8 +144,10 @@ var
    sBestTSNSpeedTurf: string;
    sBestTSNSpeedOffTrack: string;
    sBestTSNSpeedDistance: string;
+
    sAuctionSalesPrice: string;
    sWhereSoldAtAuction: string;
+
    sBestTSNSpeedLife: string;
    sBestTSNSpeedMostRecentYr: string;
    sBestTSNSpeed2ndMostRecentYr: string;
@@ -152,7 +155,6 @@ var
 
    sTSNLastClassRating: string;
    sTSNAvgClassRating: string;
-
 
    s2fPaceFigure: string;
    s4fPaceFigure: string;
@@ -209,17 +211,15 @@ var
    fLatePacePosO: double;
 
    fFinishPacePosH: double;
-   aFinishPacePosH: array of double;
 
    aEarlyPacePosO: array of double;
    aMiddlePacePosO: array of double;
    aLatePacePosO: array of double;
+   aFinishPacePosH: array of double;
 
    aEarlyPacePosH: array of double;
    aMiddlePacePosH: array of double;
    aLatePacePosH: array of double;
-
-
 
    aClassRatingH: array of double;
    aClassRatingO: array of double;
@@ -229,7 +229,6 @@ var
 
    aClassRatingMax: array of double;
    aRaceRatingMax: array of double;
-
 
    fEarlyPaceH: double;
    fMiddlePaceH: double;
@@ -333,13 +332,21 @@ var
    fJockeyShowsPY: double;
    fJockeyROIPY: double;
 
-   fTotalJkyStarts: double;
-   fTotalJkyWins: double;
-   fTotalJkyWinPct: double;
+   fTotalJky365Starts: double;
+   fTotalJky365Wins: double;
+   fTotalJky365WinPct: double;
 
-   fTotalTrnStarts: double;
-   fTotalTrnWins: double;
-   fTotalTrnWinPct: double;
+   fTotalJky90Starts: double;
+   fTotalJky90Wins: double;
+   fTotalJky90WinPct: double;
+
+   fTotalTrn365Starts: double;
+   fTotalTrn365Wins: double;
+   fTotalTrn365WinPct: double;
+
+   fTotalTrn90Starts: double;
+   fTotalTrn90Wins: double;
+   fTotalTrn90WinPct: double;
 
    sDirtPedigreeRating: string;
    sMudPedigreeRating: string;
@@ -357,7 +364,6 @@ var
    fJockeyWinPctCurrentMeet: double;
    fJockeyPlacesCurrentMeet: double;
    fJockeyShowsCurrentMeet: double;
-
 
    sTodaysRaceClassification: string;
    sRaceConditions: string;
@@ -389,132 +395,6 @@ var
    fDistanceInFurlongs: double;
 
 begin
-   //   1 Track                         CHARACTER  XXX       3
-   //   2 Date                          CHARACTER  XXXXXXXX  8
-   //   3 Race #                        NUMERIC    99        2
-   //   4 Post Position                 NUMERIC    99        2
-
-   //*** Today's Horse/Trainer/Jockey/Owner ***
-   //
-   //  28 Today's Trainer               CHARACTER           30
-   //  29 Trainer Sts     Current Meet  NUMERIC    9999      4
-   //  30 Trainer Wins    Current Meet  NUMERIC     999      3
-   //  31 Trainer Places  Current Meet  NUMERIC     999      3
-   //  32 Trainer Shows   Cureent Meet  NUMERIC     999      3
-   //  33 Today's Jockey                CHARACTER           25
-   //  34 Apprentice wgt allow.(if any) NUMERIC      99      2
-   //  35 Jockey  Sts     Current Meet  NUMERIC    9999      4
-   //  36 Jockey  Wins    Current Meet  NUMERIC     999      3
-   //  37 Jockey  Places  Current Meet  NUMERIC     999      3
-   //  38 Jockey  Shows   Current Meet  NUMERIC     999      3
-   //  39 Today's Owner                 CHARACTER           40
-   //  40 Owner's Silks                 CHARACTER          100
-   //  41 Main Track Only Indicator     CHARACTER            1  "M" for MTO
-   //                                                           "A" for A.E.
-   //  42 Reserved for possible future expansion
-   //  43 Program Number (if available) CHARACTER   XXX      3
-   //  44 Morn. Line Odds(if available) NUMERIC  999.99      6
-   //
-   //
-   // 210 TSN Run Style designations    CHARACTER   XXX      3  E   Early
-   // 211 Early Speed Points            NUMERIC       9      1
-   // 240-248 Wager Types for this race     CHARACTER  X(50)    50  (if available)
-   // 251 TSN Power Rating              NUMERIC    999.999   6
-
-   // 1178      Best TSN Speed - Fast track   NUMERIC   999        3
-   // 1179      Best TSN Speed - Turf         NUMERIC   999        3
-   // 1180      Best TSN Speed - Off track    NUMERIC   999        3
-   // 1181      Best TSN Speed - Distance     NUMERIC   999        3
-
-   // 1222      Auction Sales Price           NUMERIC   99999999   8
-   // 1223      Where Sold At Auction         CHARACTER X(12)     12
-
-   // 1328      Best TSN Speed: Life          NUMERIC    999       3
-   // 1329      Best TSN Speed: MostRecentYr  NUMERIC    999       3
-   // 1330      Best TSN Speed: 2ndMstRcntYr  NUMERIC    999       3
-   // 1331      Best TSN Speed: Track         NUMERIC    999       3
-   //
-   // 766- 775 TSN   2f Pace Figure
-   // 776- 785 TSN   4f Pace Figure
-   // 786- 795 TSN   6f Pace Figure
-   // 796- 805 TSN   8f Pace Figure
-   // 806- 815 TSN  10f Pace Figure
-   // 816- 825 TSN Late Pace Figure
-   // 846- 855 TSN Official Speed Rating
-
-   //1146 Avg BRIS Class Rating last 3 sts   NUMERIC   999.9      5
-   // 1147 Trainer      Sts     Current Year  NUMERIC   9999       4
-   // 1148              Wins                                       4
-   // 1149              Places                                     4
-   // 1150              Shows                                      4
-   // 1151              ROI     Current Year  NUMERIC   999.99     6
-   // 1152 Trainer      Sts     Previous Year NUMERIC   9999       4
-   // 1153              Wins                                       4
-   // 1154              Places                                     4
-   // 1155              Shows                                      4
-   // 1156              ROI     Previous Year NUMERIC   999.99     6
-   // 1157 Jockey       Sts     Current Year  NUMERIC   9999       4
-   // 1158              Wins                                       4
-   // 1159              Places                                     4
-   // 1160              Shows                                      4
-   // 1161              ROI     Current Year  NUMERIC   999.99     6
-   // 1162 Jockey       Sts     Previous Year NUMERIC   9999       4
-   // 1163              Wins                                       4
-   // 1164              Places                                     4
-   // 1165              Shows                                      4
-   // 1166              ROI     Previous Year NUMERIC   999.99     6
-   // 1264      BRIS Dirt Pedigree Rating     CHARACTER XXXX       4 eg. "115*"
-   // 1265      BRIS Mud Pedigree Rating      CHARACTER XXXX       4
-   // 1266      BRIS Turf Pedigree Rating     CHARACTER XXXX       4
-   // 1267      BRIS Dist Pedigree Rating     CHARACTER XXXX       4
-
-   // 1337      Key Trnr Stat Category #1     CHARACTER X(16)     16
-   // 1338      # of starts            #1     NUMERIC   9999       4
-   // 1339      Win%                   #1     NUMERIC   999.99     6
-   // 1340      in-the-money (itm) %   #1     NUMERIC   999.99     6
-   // 1341      $2ReturnOnInvestment   #1     NUMERIC   999.99     6
-   // 1342      Key Trnr Stat Category #2     CHARACTER X(16)     16
-   // 1343      # of starts            #2     NUMERIC   9999       4
-   // 1344      Win%                   #2     NUMERIC   999.99     6
-   // 1345      in-the-money (itm) %   #2     NUMERIC   999.99     6
-   // 1346      $2ReturnOnInvestment   #2     NUMERIC   999.99     6
-   // 1347      Key Trnr Stat Category #3     CHARACTER X(16)     16
-   // 1348      # of starts            #3     NUMERIC   9999       4
-   // 1349      Win%                   #3     NUMERIC   999.99     6
-   // 1350      in-the-money (itm) %   #3     NUMERIC   999.99     6
-   // 1351      $2ReturnOnInvestment   #3     NUMERIC   999.99     6
-   // 1352      Key Trnr Stat Category #4     CHARACTER X(16)     16
-   // 1353      # of starts            #4     NUMERIC   9999       4
-   // 1354      Win%                   #4     NUMERIC   999.99     6
-   // 1355      in-the-money (itm) %   #4     NUMERIC   999.99     6
-   // 1356      $2ReturnOnInvestment   #5     NUMERIC   999.99     6
-   // 1357      Key Trnr Stat Category #5     CHARACTER X(16)     16
-   // 1358      # of starts            #5     NUMERIC   9999       4
-   // 1359      Win%                   #5     NUMERIC   999.99     6
-   // 1360      in-the-money (itm) %   #5     NUMERIC   999.99     6
-   // 1361      $2ReturnOnInvestment   #5     NUMERIC   999.99     6
-   // 1362      Key Trnr Stat Category #6     CHARACTER X(16)     16
-   // 1363      # of starts            #6     NUMERIC   9999       4
-   // 1364      Win%                   #6     NUMERIC   999.99     6
-   // 1365      in-the-money (itm) %   #6     NUMERIC   999.99     6
-   // 1366      $2ReturnOnInvestment   #6     NUMERIC   999.99     6
-   // 1367      JKY@Dis/JKYonTurf Label       CHARACTER X(13)     13
-   // 1368      JKY@Dis/JKYonTurf Starts      NUMERIC   9999       4
-   // 1369      JKY@Dis/JKYonTurf Wins        NUMERIC   9999       4
-   // 1370      JKY@Dis/JKYonTurf Places      NUMERIC   9999       4
-   // 1371      JKY@Dis/JKYonTurf Shows       NUMERIC   9999       4
-   // 1372      JKY@Dis/JKYonTurf ROI         NUMERIC   999.99     6
-   // 1373      JKY@Dis/JKYonTurf Earnings    NUMERIC   999999999  9
-   // 1374      Post Times (by region)        CHARACTER X(50)     50
-   //           eg: 1:15/(12:15)/11:15/10:15
-   // 1375-1382 Reserved
-   // 1383-1392 Extended Start Comment        CHARACTER X(90)     90
-   // 1393-1402 "Sealed" track indicator      CHARACTER X          1 "s"
-   // 1403-1412 Prev. All-Weather Surface flagCHARACTER X          1 A - All Weather
-   //                                                                    Surface
-   //
-   // 1413-1435 Reserved fields
-
 
 
    hLog.LogFileName := LOG_PATH + TSN_LOG_FILENAME;
@@ -612,12 +492,20 @@ begin
             fTrainerShowsPY := atof(StringListTrim(lstS[1155 - 1]));
             fTrainerROIPY := atof(StringListTrim(lstS[1156 - 1]));
 
-            fTotalTrnStarts := fTrainerStsCY; // + fTrainerStsPY;
-            fTotalTrnWins := fTrainerWinsCY; // + fTrainerWinsPY;
-            if (fTotalTrnStarts > 0) then begin
-               fTotalTrnWinPct := (fTotalTrnWins / fTotalTrnStarts) * 100;
+            fTotalTrn365Starts := fTrainerStsCY; // + fTrainerStsPY;
+            fTotalTrn365Wins := fTrainerWinsCY; // + fTrainerWinsPY;
+            if (fTotalTrn365Starts > 0) then begin
+               fTotalTrn365WinPct := (fTotalTrn365Wins / fTotalTrn365Starts) * 100;
             end else begin
-               fTotalTrnWinPct := 0;
+               fTotalTrn365WinPct := 0;
+            end;
+
+            fTotalTrn90Starts := fTrainerStsPY; // + fTrainerStsPY;
+            fTotalTrn90Wins := fTrainerWinsPY; // + fTrainerWinsPY;
+            if (fTotalTrn90Starts > 0) then begin
+               fTotalTrn90WinPct := (fTotalTrn90Wins / fTotalTrn90Starts) * 100;
+            end else begin
+               fTotalTrn90WinPct := 0;
             end;
 
             fJockeyStsCY := atof(StringListTrim(lstS[1157 - 1]));
@@ -632,12 +520,20 @@ begin
             fJockeyShowsPY := atof(StringListTrim(lstS[1165 - 1]));
             fJockeyROIPY := atof(StringListTrim(lstS[1166 - 1]));
 
-            fTotalJkyStarts := fJockeyStsCY; // + fJockeyStsPY;
-            fTotalJkyWins := fJockeyWinsCY; // + fJockeyWinsPY;
-            if (fTotalJkyStarts > 0) then begin
-               fTotalJkyWinPct := (fTotalJkyWins / fTotalJkyStarts) * 100;
+            fTotalJky365Starts := fJockeyStsCY; // + fJockeyStsPY;
+            fTotalJky365Wins := fJockeyWinsCY; // + fJockeyWinsPY;
+            if (fTotalJky365Starts > 0) then begin
+               fTotalJky365WinPct := (fTotalJky365Wins / fTotalJky365Starts) * 100;
             end else begin
-               fTotalJkyWinPct := 0;
+               fTotalJky365WinPct := 0;
+            end;
+
+            fTotalJky90Starts := fJockeyStsPY; // + fJockeyStsPY;
+            fTotalJky90Wins := fJockeyWinsPY; // + fJockeyWinsPY;
+            if (fTotalJky90Starts > 0) then begin
+               fTotalJky90WinPct := (fTotalJky90Wins / fTotalJky90Starts) * 100;
+            end else begin
+               fTotalJky90WinPct := 0;
             end;
 
             fTrainerStsCurrentMeet := atof(StringListTrim(lstS[29 - 1]));
@@ -665,14 +561,27 @@ begin
             sTurfPedigreeRating := StringListTrim(lstS[1266 - 1]);
             sDistPedigreeRating := StringListTrim(lstS[1267 - 1]);
 
-            //   sBackClass := StringListTrim(lstS[1267 - 1]);
-            //   sAvgBris :=
-            //   sBackSpeed :=
-            //   sPacificPostTime :=
-            //   sBackClass := StringListTrim(lstS[1267 - 1]);
-            //   sAvgBris :=
-            //   sBackSpeed :=
-            //   sPacificPostTime :=
+               fEarlyPaceH:= 0;
+   fMiddlePaceH:= 0;
+   fLatePaceH:= 0;
+
+   fEarlyPaceO:= 0;
+   fMiddlePaceO:= 0;
+   fLatePaceO:= 0;
+
+   fEarlyPaceMax:= 0;
+   fMiddlePaceMax:= 0;
+   fLatePaceMax:= 0;
+
+   fClassRatingH:= 0;
+   fRaceRatingH:= 0;
+
+   fClassRatingO:= 0;
+   fRaceRatingO:= 0;
+
+   fClassRatingMax:= 0;
+   fRaceRatingMax:= 0;
+
 
             iEarlyPaceLines := 0;
             iMiddlePaceLines := 0;
@@ -689,13 +598,10 @@ begin
             SetLength(aClassRatingO, iClassRatingLines);
             SetLength(aClassRatingMax, iClassRatingLines);
 
-
             iFLD_EARLY_PACE_POS := 576;
-
             iFLD_MIDDLE_PACE_POS := 586;
             iFLD_LATE_PACE_POS := 606;
             iFLD_FINISH_PACE_POS := 616;
-
 
             iFLD_EARLY_PACE := 766;
             iFLD_MIDDLE_PACE := 776;
@@ -707,10 +613,9 @@ begin
             end;
 
 
-            iFLD_SPD := 846;
-
             iFLD_RACE_CLASS := 826;
             iFLD_CLASS := 836;
+            iFLD_SPD := 846;
 
             iEarlyPacePosLines := 0;
             iMiddlePacePosLines := 0;
@@ -730,9 +635,9 @@ begin
                sPP4fPaceFigure := StringListTrim(lstS[iFLD_MIDDLE_PACE - 1]);
                sPPLatePaceFigure := StringListTrim(lstS[iFLD_LATE_PACE - 1]);
 
-               sPP2fPaceFigure := FastReplace(sPP2fPaceFigure, '-', '', True);
-               sPP4fPaceFigure := FastReplace(sPP4fPaceFigure, '-', '', True);
-               sPPLatePaceFigure := FastReplace(sPPLatePaceFigure, '-', '', True);
+               //sPP2fPaceFigure := FastReplace(sPP2fPaceFigure, '-', '', True);
+               //sPP4fPaceFigure := FastReplace(sPP4fPaceFigure, '-', '', True);
+               //sPPLatePaceFigure := FastReplace(sPPLatePaceFigure, '-', '', True);
 
                sPP2fPacePos := StringListTrim(lstS[iFLD_EARLY_PACE_POS - 1]);
                sPP4fPacePos := StringListTrim(lstS[iFLD_MIDDLE_PACE_POS - 1]);
@@ -794,7 +699,6 @@ begin
                fMiddlePace := atof(sPP4fPaceFigure);
                if fMiddlePace > 0 then begin
                   Inc(iMiddlePaceLines);
-
 
                   SetLength(aMiddlePaceH, iMiddlePaceLines);
                   SetLength(aMiddlePaceO, iMiddlePaceLines);
@@ -1106,9 +1010,6 @@ begin
                      end;
 
 
-
-
-
                      if (sTrack = 'CD') then begin
                         if (atoi(sRaceNbr) = 2) then begin
                            if (sPacificTime <> '') then begin
@@ -1141,9 +1042,9 @@ begin
 
                   tblE.Edit();
 
-                  tblE.FieldByName('TrnTodayStarts').AsFloat := fTotalTrnStarts;
-                  tblE.FieldByName('TrnTodayWins').AsFloat := fTotalTrnWins;
-                  tblE.FieldByName('TrnTodayWinPct').AsFloat := fTotalTrnWinPct;
+                  tblE.FieldByName('TrnTodayStarts').AsFloat := fTotalTrn365Starts;
+                  tblE.FieldByName('TrnTodayWins').AsFloat := fTotalTrn365Wins;
+                  tblE.FieldByName('TrnTodayWinPct').AsFloat := fTotalTrn365WinPct;
                   tblE.FieldByName('ValueDesc').AsString := ' ';
 
                   try
@@ -1175,10 +1076,9 @@ begin
                            if (fKeyTrnROI > 0) then begin
                               fValueROI := fValueROI + fKeyTrnROI;
                               fValueROICnt := fValueROICnt + 1;
-
                            end;
 
-                           if (fKeyTrnWinPct > fTotalTrnWinPct) then begin
+                           if (fKeyTrnWinPct > fTotalTrn365WinPct) then begin
                               Inc(iTCPlusMinus);
                               //end else begin
                               //   Dec(iTCplusMinus);
@@ -1270,7 +1170,8 @@ begin
                                  'Track',
                                  'Turf Debut',
                                  'Up 20Pct Purse',
-                                 'below 5-1'
+                                 'below 5-1',
+                                 '2yr olds'
 
 
                               ]);
@@ -1582,7 +1483,8 @@ begin
                                  'Track',
                                  'Turf Debut',
                                  'Up 20Pct Purse',
-                                 'below 5-1'
+                                 'below 5-1',
+                                 '2yr olds'
                                  ]) of
 
                               A1stLasix: begin
@@ -1604,10 +1506,16 @@ begin
                                     tblE.FieldByName('TotalTrn46To120WinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               A3yrolds: begin
+                                    tblE.FieldByName('TotalTrn2yoStarts').AsInteger := iKeyTrnStart;
+                                    tblE.FieldByName('TotalTrn2yoWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               A4youp: begin
+                                    tblE.FieldByName('TotalTrn2yoStarts').AsInteger := iKeyTrnStart;
+                                    tblE.FieldByName('TotalTrn2yoWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               A5To1to10To1: begin
+                                    tblE.FieldByName('TotalTrnOddsStarts').AsInteger := iKeyTrnStart;
+                                    tblE.FieldByName('TotalTrnOddsWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               HAllowance: begin
                                     tblE.FieldByName('TrnAlwWinPct').AsFloat := fKeyTrnWinPct;
@@ -1629,7 +1537,6 @@ begin
                               Claimed2bk: begin
                                     tblE.FieldByName('TotalTrnAftClmStarts').AsInteger := iKeyTrnStart;
                                     tblE.FieldByName('TotalTrnAftClmWinPct').AsFloat := fKeyTrnWinPct;
-
                                  end;
                               Claimed3bk: begin
                                     tblE.FieldByName('TotalTrnAftClmStarts').AsInteger := iKeyTrnStart;
@@ -1639,28 +1546,35 @@ begin
                                     tblE.FieldByName('TrnClmWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               Dwn20PctPurse: begin
+                                    tblE.FieldByName('TrnStkWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               FAndM: begin
+                                    tblE.FieldByName('TotalTrn2yoStarts').AsInteger := iKeyTrnStart;
+                                    tblE.FieldByName('TotalTrn2yoWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               FTS: begin
                                     tblE.FieldByName('TotalTrnDebutStarts').AsInteger := iKeyTrnStart;
                                     tblE.FieldByName('TotalTrnDebutWinPct').AsFloat := fKeyTrnWinPct;
-
                                  end;
                               Favorites: begin
+                                    tblE.FieldByName('TotalTrnOddsStarts').AsInteger := iKeyTrnStart;
+                                    tblE.FieldByName('TotalTrnOddsWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               MClm: begin
                                     tblE.FieldByName('TrnMdnWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               MaleHorses: begin
+                                    tblE.FieldByName('TotalTrn2yoStarts').AsInteger := iKeyTrnStart;
+                                    tblE.FieldByName('TotalTrn2yoWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               RouteDebut: begin
+                                    tblE.FieldByName('TotalTrnDebutStarts').AsInteger := iKeyTrnStart;
+                                    tblE.FieldByName('TotalTrnDebutWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               RouteToSprint: begin
                                     tblE.FieldByName('TrnRteToSprStarts').AsInteger := iKeyTrnStart;
                                     tblE.FieldByName('TrnRteToSprWinPct').AsFloat := fKeyTrnWinPct;
                                     tblE.FieldByName('IsRteToSpr').AsBoolean := True;
-
                                  end;
                               HRoutes: begin
                                  end;
@@ -1675,25 +1589,24 @@ begin
                               HSprints: begin
                                  end;
                               Track: begin
-                                    tblE.FieldByName('TotalTrn120PlusStarts').AsInteger := iKeyTrnStart;
-                                    tblE.FieldByName('TotalTrn120PlusWinPct').AsFloat := fKeyTrnWinPct;
-
+                                    tblE.FieldByName('TotalTrn30Starts').AsInteger := iKeyTrnStart;
+                                    tblE.FieldByName('TotalTrn30WinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               TurfDebut: begin
                                     tblE.FieldByName('TotalTrnDebutStarts').AsInteger := iKeyTrnStart;
                                     tblE.FieldByName('TotalTrnDebutWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               Up20PctPurse: begin
+                                    tblE.FieldByName('TrnStkWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               Below5To1: begin
+                                    tblE.FieldByName('TotalTrnOddsStarts').AsInteger := iKeyTrnStart;
+                                    tblE.FieldByName('TotalTrnOddsWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
-
-
-
-
-
-                              //else
-                              //   hLog.AddToLog(sKeyTrnCategory, msevException);
+                              A2yrolds: begin
+                                    tblE.FieldByName('TotalTrn2yoStarts').AsInteger := iKeyTrnStart;
+                                    tblE.FieldByName('TotalTrn2yoWinPct').AsFloat := fKeyTrnWinPct;
+                                 end;
                            end;
 
 
@@ -1704,26 +1617,22 @@ begin
                      on E: Exception do hLog.AddToLog(E.Message, msevException);
                   end;
 
-                  //   if (fValueROICnt > 0) then begin
-                  //                  tblE.FieldByName('ValueROI').AsFloat := fValueROI / fValueROICnt;
-                  //                  tblE.FieldByName('ValueROICnt').AsFloat := fValueROICnt;
-                  //               end;
 
-                  tblE.FieldByName('TotalTrn30Starts').AsFloat := fTrainerStsCurrentMeet;
-                  tblE.FieldByName('TotalTrn30Wins').AsFloat := fTrainerWinsCurrentMeet;
-                  tblE.FieldByName('TotalTrn30WinPct').AsFloat := fTrainerWinPctCurrentMeet;
+                  tblE.FieldByName('TotalTrn1To45Starts').AsFloat := fTotalTrn90Starts;
+                  tblE.FieldByName('TotalTrn1To45Wins').AsFloat := fTotalTrn90Wins;
+                  tblE.FieldByName('TotalTrn1To45WinPct').AsFloat := fTotalTrn90WinPct;
 
-                  tblE.FieldByName('TotalJky30Starts').AsFloat := fJockeyStsCurrentMeet;
-                  tblE.FieldByName('TotalJky30Wins').AsFloat := fJockeyWinsCurrentMeet;
-                  tblE.FieldByName('TotalJky30WinPct').AsFloat := fJockeyWinPctCurrentMeet;
+                  tblE.FieldByName('TotalJkyDaysStarts').AsFloat := fTotalJky90Starts;
+                  tblE.FieldByName('TotalJkyDaysWins').AsFloat := fTotalJky90Wins;
+                  tblE.FieldByName('TotalJkyDaysWinPct').AsFloat := fTotalJky90WinPct;
 
-                  tblE.FieldByName('TotalJkyStarts').AsFloat := fTotalJkyStarts;
-                  tblE.FieldByName('TotalJkyWins').AsFloat := fTotalJkyWins;
-                  tblE.FieldByName('TotalJkyWinPct').AsFloat := fTotalJkyWinPct;
+                  tblE.FieldByName('TotalJkyStarts').AsFloat := fTotalJky365Starts;
+                  tblE.FieldByName('TotalJkyWins').AsFloat := fTotalJky365Wins;
+                  tblE.FieldByName('TotalJkyWinPct').AsFloat := fTotalJky365WinPct;
 
-                  tblE.FieldByName('TotalJkyDaysStarts').AsFloat := fTotalJkyStarts;
-                  tblE.FieldByName('TotalJkyDaysWins').AsFloat := fTotalJkyWins;
-                  tblE.FieldByName('TotalJkyDaysWinPct').AsFloat := fTotalJkyWinPct;
+                  //tblE.FieldByName('TotalJkyDaysStarts').AsFloat := fTotalJkyStarts;
+                  //tblE.FieldByName('TotalJkyDaysWins').AsFloat := fTotalJkyWins;
+                  //tblE.FieldByName('TotalJkyDaysWinPct').AsFloat := fTotalJkyWinPct;
 
                   fjockeyDistanceOnTurfStarts := atof(StringListTrim(lstS[1368 - 1]));
                   fjockeyDistanceOnTurfWins := atof(StringListTrim(lstS[1369 - 1]));
@@ -1732,22 +1641,23 @@ begin
                   end else begin
                      fjockeyDistanceOnTurfWinPct := 0;
                   end;
+
                   tblE.FieldByName('TotalJkyTurfStarts').AsFloat := fjockeyDistanceOnTurfStarts;
                   tblE.FieldByName('TotalJkyTurfWins').AsFloat := fjockeyDistanceOnTurfWins;
                   tblE.FieldByName('TotalJkyTurfWinPct').AsFloat := fjockeyDistanceOnTurfWinPct;
 
-                  tblE.FieldByName('TotalJkyOddsStarts').AsFloat := fTotalJkyStarts;
-                  tblE.FieldByName('TotalJkyOddsWins').AsFloat := fTotalJkyWins;
-                  tblE.FieldByName('TotalJkyOddsWinPct').AsFloat := fTotalJkyWinPct;
+                 // tblE.FieldByName('TotalJkyOddsStarts').AsFloat := fTotalJkyStarts;
+                 // tblE.FieldByName('TotalJkyOddsWins').AsFloat := fTotalJkyWins;
+                 // tblE.FieldByName('TotalJkyOddsWinPct').AsFloat := fTotalJkyWinPct;
 
 
                   tblE.FieldByName('TotalTrnStarts').AsFloat := fTotalTrnStarts;
                   tblE.FieldByName('TotalTrnWins').AsFloat := fTotalTrnWins;
                   tblE.FieldByName('TotalTrnWinPct').AsFloat := fTotalTrnWinPct;
 
-                  tblE.FieldByName('TotalTrnOddsStarts').AsFloat := fTotalTrnStarts;
-                  tblE.FieldByName('TotalTrnOddsWins').AsFloat := fTotalTrnWins;
-                  tblE.FieldByName('TotalTrnOddsWinPct').AsFloat := fTotalTrnWinPct;
+                  //tblE.FieldByName('TotalTrnOddsStarts').AsFloat := fTotalTrnStarts;
+                  //tblE.FieldByName('TotalTrnOddsWins').AsFloat := fTotalTrnWins;
+                  //tblE.FieldByName('TotalTrnOddsWinPct').AsFloat := fTotalTrnWinPct;
 
                   tblE.FieldByName('TCPlusMinus').AsInteger := iTCPlusMinus;
 
@@ -1798,105 +1708,39 @@ begin
                   tblE.FieldByName('BackClass').AsFloat := fClassRatingMax;
                   tblE.FieldByName('AvgClass').AsFloat := fClassRatingH;
 
-                  if (tblE.FieldByName('DistanceInFurlongs').AsFloat < 6.0) then begin
-                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat;
-                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat;
-                  end;
-
-
-                  if (tblE.FieldByName('IsFirstTimeJuice').AsBoolean = True) then begin
-                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 1;
-                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 1;
-                     //tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat;
-
-                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
-                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
-                     //tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat;
-                  end;
-
-                  if (tblE.FieldByName('IsBlinkersOn').AsBoolean = True) then begin
-                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 2;
-                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 2;
-                     //tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat;
-
-                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
-                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
-                     //tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat;
-                  end;
-
-                  if (tblE.FieldByName('IsBlinkersOff').AsBoolean = True) then begin
-                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat - 1;
-                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat - 1;
-                     tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat + 1;
-
-                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
-                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
-                     tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat - 0.9;
-                  end;
-
-                  if (tblE.FieldByName('LifeStarts').AsInteger = 1) then begin
-                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 3;
-                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 3;
-                     tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat + 2;
-
-                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
-                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
-                     tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat - 0.9;
-                  end;
 
                   if (tblE.FieldByName('LifeStarts').AsInteger = 2) then begin
-                     //tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 3;
-                     //tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 3;
-                     tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat + 1;
+                     if (tblR.FieldByName('Surface').AsString <> 'T') then begin
+                        tblTC.IndexName := '';
+                        tblTC.SetKey();
+                        tblTC.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
+                        tblTC.FieldByName('Category').AsString := '2nd career race';
 
-                     //tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
-                     //tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
-                     tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat - 0.9;
-                  end;
+                        if (tblTC.GotoKey()) then begin
+                           tblE.FieldByName('TotalTrnDebutTwoStarts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
+                           tblE.FieldByName('TotalTrnDebutTwoWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
+                           tblE.FieldByName('TrnTodayStarts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
+                           tblE.FieldByName('TrnTodayWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
+                        end;
+                     end else begin
+                        tblTC.IndexName := '';
+                        tblTC.SetKey();
+                        tblTC.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
+                        tblTC.FieldByName('Category').AsString := '2nd grass race';
 
-
-                  if (tblR.FieldByName('Surface').AsString <> 'T') then begin
-                     tblTC.IndexName := '';
-                     tblTC.SetKey();
-                     tblTC.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
-                     tblTC.FieldByName('Category').AsString := '2nd career race';
-
-                     if (tblTC.GotoKey()) then begin
-                        tblE.FieldByName('TotalTrnDebutTwoStarts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
-                        tblE.FieldByName('TotalTrnDebutTwoWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
-                        tblE.FieldByName('TrnTodayStarts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
-                        tblE.FieldByName('TrnTodayWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
+                        if (tblTC.GotoKey()) then begin
+                           tblE.FieldByName('TotalTrnDebutTwoStarts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
+                           tblE.FieldByName('TotalTrnDebutTwoWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
+                           tblE.FieldByName('TrnTodayStarts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
+                           tblE.FieldByName('TrnTodayWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
+                        end;
                      end;
-                  end else begin
-                     tblTC.IndexName := '';
-                     tblTC.SetKey();
-                     tblTC.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
-                     tblTC.FieldByName('Category').AsString := '2nd grass race';
 
-                     if (tblTC.GotoKey()) then begin
-                        tblE.FieldByName('TotalTrnDebutTwoStarts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
-                        tblE.FieldByName('TotalTrnDebutTwoWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
-                        tblE.FieldByName('TrnTodayStarts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
-                        tblE.FieldByName('TrnTodayWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
-                     end;
                   end;
 
 
 
-                  if (tblE.FieldByName('DaysLast').AsInteger > 90) then begin
-                     tblTC.IndexName := '';
-                     tblTC.SetKey();
-                     tblTC.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
-                     tblTC.FieldByName('Category').AsString := '90+ days away';
-                     if (tblTC.GotoKey()) then begin
-                        tblE.FieldByName('TotalTrn46To120Starts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
-                        tblE.FieldByName('TotalTrn46To120WinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
-                        tblE.FieldByName('TrnTodayStarts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
-                        tblE.FieldByName('TrnTodayWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
-                     end;
-                  end;
-
-                  //
+                                    //
                   tblTJSummary.IndexName := '';
                   tblTJSummary.SetKey();
                   tblTJSummary.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
@@ -1918,22 +1762,6 @@ begin
 
 
 
-                  //if (tblE.FieldByName('TotalTrnJkyStarts').AsFloat > 4) then begin
-                  //                     tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TotalTrnJkyWinPct').AsFloat;
-                  //                  end else begin
-                  //                     tblE.FieldByName('TrainerJockeyRating').AsFloat := 0;
-                  //                  end;
-
-
-                  //
-
-                  //tblE.FieldByName('TrainerRating').AsFloat := tblE.FieldByName('TrnTodayWinPct').AsFloat;
-
-                  //tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TJ365WinPct').AsInteger;
-
-                  //tblE.FieldByName('JockeyRating').AsFloat := tblE.FieldByName('TotalJkyWinPct').AsFloat;
-
-                  //tblE.FieldByName('OwnerRating').AsFloat := tblE.FieldByName('TotalOwnWinPct').AsFloat;
 
                   tblE.FieldByName('Surface').AsString := tblR.FieldByName('Surface').AsString;
                   tblE.Post();
@@ -1956,139 +1784,6 @@ begin
 end;
 
 
-//
-//procedure UpdateTrnCategory
-//   (
-//   tblR: TDBISAMTable;
-//   tblE: TDBISAMTable;
-//   tblTC: TDBISAMTable;
-//   pnlPrgBar: TPanel;
-//   prgBar: TcxProgressBar;
-//   staBar: TStatusBar;
-//   iIncCnt: Integer
-//   );
-//begin
-//
-////                           '1st after clm',
-//                           '1st time str',
-//                           '1stTimeBlinkers',
-//                           '2nd career race',
-//                           '31-90daysAway',
-//                           '90+ days away',
-//                           'Blinkers off',
-//                           'Blnkr back on',
-//                           'Btn favorite',
-//                           'Dirt to turf',
-//                           'Down 2+ classes',
-//                           'Down one class',
-//                           'Maiden Clming',
-//                           'Maiden Sp Wt',
-//                           'Rte to Sprint',
-//                           'Shipper',
-//                           'Sprint to Rte',
-//                           'Sprnt-Rte-Sprnt',
-//                           'Sprnt-Sprnt-Rte',
-//                           'Turf starts ',
-//                           'Turf to dirt',
-//                           '1-5 days away',
-//
-//                              tblE.FieldByName('TotalTrnAftClmStarts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TotalTrnAftClmWinPct').AsFloat := fKeyTrnWinPct;
-//
-//                              tblE.FieldByName('TotalTrnDebutStarts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TotalTrnDebutWinPct').AsFloat := fKeyTrnWinPct;
-//
-//                              tblE.FieldByName('TotalTrnBlinkersOnStarts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TotalTrnBlinkersOnWinPct').AsFloat := fKeyTrnWinPct;
-//
-//                              tblE.FieldByName('TotalTrnDebutTwoStarts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TotalTrnDebutTwoWinPct').AsFloat := fKeyTrnWinPct;
-//
-//
-//                        ThirtyOneToNinetyDaysAway: begin
-//                              tblE.FieldByName('TotalTrn46To120Starts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TotalTrn46To120WinPct').AsFloat := fKeyTrnWinPct;
-//
-//                        NinetyPlusDaysAway: begin
-//                              tblE.FieldByName('TotalTrn120PlusStarts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TotalTrn120PlusWinPct').AsFloat := fKeyTrnWinPct;
-//
-//
-//                        BlinkersOff: begin
-//                              tblE.FieldByName('TotalTrnBlinkersOffStarts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TotalTrnBlinkersOffWinPct').AsFloat := fKeyTrnWinPct;
-//
-//
-//                        BlnkrBackOn: begin
-//                              tblE.FieldByName('TotalTrnBlinkersOnStarts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TotalTrnBlinkersOnWinPct').AsFloat := fKeyTrnWinPct;
-//
-//
-//                        DirtToTurf: begin
-//                              tblE.FieldByName('TrnDirtToTurfStarts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TrnDirtToTurfWinPct').AsFloat := fKeyTrnWinPct;
-//
-//
-//                        RteToSprint: begin
-//                              tblE.FieldByName('TrnRteToSprStarts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TrnRteToSprWinPct').AsFloat := fKeyTrnWinPct;
-//
-//
-//                        SprintToRte: begin
-//                              tblE.FieldByName('TrnSprToRteStarts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TrnSprToRteWinPct').AsFloat := fKeyTrnWinPct;
-//
-//
-//                        TurfStarts: begin
-//                              tblE.FieldByName('TotalTrnTurfStarts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TotalTrnTurfWinPct').AsFloat := fKeyTrnWinPct;
-//
-//                        TurfToDirt: begin
-//                              tblE.FieldByName('TrnTurfToDirtStarts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TrnTurfToDirtWinPct').AsFloat := fKeyTrnWinPct;
-//
-//
-//                        OneFiveDaysAway: begin
-//                              tblE.FieldByName('TotalTrn1To45Starts').AsInteger := iKeyTrnStart;
-//                              tblE.FieldByName('TotalTrn1To45WinPct').AsFloat := fKeyTrnWinPct;
-//
-//
-//   hLog.AddToLog('UpdateTrainer', msevOperation);
-//   try
-//      OpenTable(tblR);
-//      OpenTable(tblE);
-//
-//      tblE.Filtered := False;
-//      tblE.First();
-//      while not tblE.Eof do begin
-//         SetRaceEntriesKey(dm.tblRaces, dm.tblEntries);
-//         UpdateEntriesProgressStatusBar(dm.tblEntries, 'Top Figures - ');
-//
-//         if tblR.GotoKey() then begin
-//            tblR.Edit();
-////            if (tblE.FieldByName('LastSpeedRank').AsInteger = 1) then begin
-////               tblR.FieldByName('TopLastSpeed').AsInteger := tblE.FieldByName('LastSpeed').AsInteger;
-////            end;
-////            if (tblE.FieldByName('BackSpeedRank').AsInteger = 1) then begin
-////               tblR.FieldByName('TopBackSpeed').AsInteger := tblE.FieldByName('BackSpeed').AsInteger;
-////            end;
-//            tblR.Post();
-//         end;
-//
-//         tblE.Next();
-//      end;
-//   except
-//      CloseTable(tblR);
-//      CloseTable(tblE);
-//      ClearPrgStatusBars();
-//   end;
-//
-//   ClearPrgStatusBars();
-//   CloseTable(tblR);
-//   CloseTable(tblE);
-//
-//end;
-//
 
 
 end.

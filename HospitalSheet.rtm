@@ -27,7 +27,7 @@ object ppHospitalReport: TppReport
   OutlineSettings.Visible = False
   TextSearchSettings.DefaultString = '<FindText>'
   TextSearchSettings.Enabled = False
-  Left = 240
+  Left = 248
   Top = 120
   Version = '7.04'
   mmColumnWidth = 203200
@@ -200,7 +200,7 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taRightJustified
             Transparent = True
-            mmHeight = 2752
+            mmHeight = 2709
             mmLeft = 1270
             mmTop = 21590
             mmWidth = 2963
@@ -216,7 +216,7 @@ object ppHospitalReport: TppReport
             Font.Size = 5
             Font.Style = [fsBold]
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 5503
             mmTop = 22225
             mmWidth = 5292
@@ -262,7 +262,7 @@ object ppHospitalReport: TppReport
             Font.Size = 5
             Font.Style = [fsBold]
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 22437
             mmTop = 23072
             mmWidth = 7408
@@ -295,7 +295,7 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taRightJustified
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 27517
             mmTop = 26247
             mmWidth = 3175
@@ -303,7 +303,7 @@ object ppHospitalReport: TppReport
           end
           object ppLabel29: TppLabel
             UserName = 'Label29'
-            Caption = 'ALL'
+            Caption = '365'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
@@ -312,7 +312,7 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             Transparent = True
             mmHeight = 2117
-            mmLeft = 47837
+            mmLeft = 47413
             mmTop = 26247
             mmWidth = 3175
             BandType = 1
@@ -358,7 +358,7 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taCentered
             Transparent = True
-            mmHeight = 2328
+            mmHeight = 2371
             mmLeft = 67522
             mmTop = 21590
             mmWidth = 19050
@@ -398,7 +398,7 @@ object ppHospitalReport: TppReport
           end
           object ppLabel41: TppLabel
             UserName = 'Label41'
-            Caption = 'ALL'
+            Caption = '365'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
@@ -406,7 +406,7 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taRightJustified
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 36618
             mmTop = 26247
             mmWidth = 3175
@@ -414,14 +414,14 @@ object ppHospitalReport: TppReport
           end
           object ppLabel12: TppLabel
             UserName = 'Label12'
-            Caption = 'MT'
+            Caption = '90'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 5
             Font.Style = [fsBold]
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 23918
             mmTop = 26247
             mmWidth = 2117
@@ -443,22 +443,6 @@ object ppHospitalReport: TppReport
             mmWidth = 3175
             BandType = 1
           end
-          object ppLabel32: TppLabel
-            UserName = 'Label32'
-            Caption = 'TRF'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Courier New'
-            Font.Size = 5
-            Font.Style = [fsBold]
-            TextAlignment = taCentered
-            Transparent = True
-            mmHeight = 2117
-            mmLeft = 78317
-            mmTop = 24553
-            mmWidth = 3175
-            BandType = 1
-          end
           object ppLabel26: TppLabel
             UserName = 'Label26'
             Caption = 'CLM'
@@ -469,7 +453,7 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taCentered
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 82762
             mmTop = 24553
             mmWidth = 3175
@@ -486,7 +470,7 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taCentered
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 71332
             mmTop = 24553
             mmWidth = 2963
@@ -503,7 +487,7 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taCentered
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 67945
             mmTop = 24553
             mmWidth = 2752
@@ -521,7 +505,7 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             Transparent = True
             mmHeight = 2117
-            mmLeft = 75777
+            mmLeft = 79163
             mmTop = 24553
             mmWidth = 2117
             BandType = 1
@@ -538,8 +522,8 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             Transparent = True
             mmHeight = 2117
-            mmLeft = 75777
-            mmTop = 27728
+            mmLeft = 75565
+            mmTop = 24553
             mmWidth = 2117
             BandType = 1
           end
@@ -554,14 +538,14 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             Transparent = True
             mmHeight = 2117
-            mmLeft = 42968
+            mmLeft = 42545
             mmTop = 26247
             mmWidth = 2117
             BandType = 1
           end
           object ppLabel60: TppLabel
             UserName = 'Label60'
-            Caption = '2YO'
+            Caption = 'AGE'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
@@ -569,9 +553,9 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taRightJustified
             Transparent = True
-            mmHeight = 2117
-            mmLeft = 71120
-            mmTop = 30268
+            mmHeight = 2074
+            mmLeft = 70908
+            mmTop = 34290
             mmWidth = 3175
             BandType = 1
           end
@@ -610,18 +594,17 @@ object ppHospitalReport: TppReport
           end
           object ppLabel57: TppLabel
             UserName = 'Label57'
-            AutoSize = False
-            Caption = 'OWNER'
+            Caption = 'OWN'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 5
             Font.Style = [fsBold]
             Transparent = True
-            mmHeight = 2117
-            mmLeft = 22437
-            mmTop = 30268
-            mmWidth = 5292
+            mmHeight = 2074
+            mmLeft = 31750
+            mmTop = 30057
+            mmWidth = 3387
             BandType = 1
           end
           object RaceCondition: TppDBMemo
@@ -674,8 +657,8 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             Transparent = True
             mmHeight = 2117
-            mmLeft = 75777
-            mmTop = 30480
+            mmLeft = 75565
+            mmTop = 27517
             mmWidth = 2117
             BandType = 1
           end
@@ -690,7 +673,7 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taCentered
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 16298
             mmTop = 31115
             mmWidth = 5080
@@ -774,7 +757,7 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taCentered
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 87207
             mmTop = 24765
             mmWidth = 4233
@@ -789,10 +772,10 @@ object ppHospitalReport: TppReport
             Font.Size = 5
             Font.Style = [fsBold]
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 102024
             mmTop = 30692
-            mmWidth = 3387
+            mmWidth = 3175
             BandType = 1
           end
           object lblSire2yo: TppLabel
@@ -804,7 +787,7 @@ object ppHospitalReport: TppReport
             Font.Size = 5
             Font.Style = [fsBold]
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 110702
             mmTop = 30692
             mmWidth = 4233
@@ -821,9 +804,9 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taCentered
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 87630
-            mmTop = 33867
+            mmTop = 34290
             mmWidth = 33655
             BandType = 1
           end
@@ -837,7 +820,7 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taCentered
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 104352
             mmTop = 24765
             mmWidth = 16933
@@ -893,7 +876,7 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taCentered
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 6138
             mmTop = 34290
             mmWidth = 15240
@@ -925,9 +908,9 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taCentered
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 67310
-            mmTop = 33655
+            mmTop = 34290
             mmWidth = 3175
             BandType = 1
           end
@@ -942,9 +925,9 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             Transparent = True
             mmHeight = 2117
-            mmLeft = 32173
+            mmLeft = 31962
             mmTop = 26247
-            mmWidth = 3175
+            mmWidth = 3387
             BandType = 1
           end
           object ppDBText18: TppDBText
@@ -974,7 +957,7 @@ object ppHospitalReport: TppReport
             Font.Size = 5
             Font.Style = [fsBold]
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 106469
             mmTop = 30692
             mmWidth = 3175
@@ -989,7 +972,7 @@ object ppHospitalReport: TppReport
             Font.Size = 5
             Font.Style = [fsBold]
             Transparent = True
-            mmHeight = 2117
+            mmHeight = 2074
             mmLeft = 117052
             mmTop = 30692
             mmWidth = 3175
@@ -1045,9 +1028,9 @@ object ppHospitalReport: TppReport
             Font.Name = 'Courier New'
             Font.Size = 8
             Font.Style = []
-            mmHeight = 2963
+            mmHeight = 3006
             mmLeft = 33867
-            mmTop = 11430
+            mmTop = 11642
             mmWidth = 10160
             BandType = 1
           end
@@ -1112,7 +1095,7 @@ object ppHospitalReport: TppReport
             mmHeight = 3006
             mmLeft = 105622
             mmTop = 11642
-            mmWidth = 11853
+            mmWidth = 13547
             BandType = 1
           end
           object LatePaceSheetOrder: TppDBText
@@ -1143,22 +1126,6 @@ object ppHospitalReport: TppReport
             mmWidth = 214630
             BandType = 1
           end
-          object ppLabel3: TppLabel
-            UserName = 'Label11'
-            AutoSize = False
-            Caption = '365'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Courier New'
-            Font.Size = 5
-            Font.Style = [fsBold]
-            Transparent = True
-            mmHeight = 2117
-            mmLeft = 42968
-            mmTop = 28998
-            mmWidth = 2117
-            BandType = 1
-          end
           object ppLabel4: TppLabel
             UserName = 'Label13'
             Caption = 'Gap'
@@ -1167,9 +1134,9 @@ object ppHospitalReport: TppReport
             Font.Name = 'Courier New'
             Font.Size = 8
             Font.Style = []
-            mmHeight = 2963
+            mmHeight = 3006
             mmLeft = 33867
-            mmTop = 15663
+            mmTop = 15875
             mmWidth = 5080
             BandType = 1
           end
@@ -1196,12 +1163,12 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 5
-            Font.Style = [fsBold]
+            Font.Style = []
             Transparent = True
             DataPipelineName = 'plRacesReport'
-            mmHeight = 2074
+            mmHeight = 1905
             mmLeft = 7408
-            mmTop = 16722
+            mmTop = 16933
             mmWidth = 20108
             BandType = 1
           end
@@ -1214,13 +1181,13 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 5
-            Font.Style = [fsBold]
+            Font.Style = []
             Transparent = True
             DataPipelineName = 'plRacesReport'
-            mmHeight = 2074
+            mmHeight = 1905
             mmLeft = 39793
-            mmTop = 16510
-            mmWidth = 23283
+            mmTop = 16933
+            mmWidth = 21167
             BandType = 1
           end
           object ppLabel16: TppLabel
@@ -1246,11 +1213,11 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 5
-            Font.Style = [fsBold]
+            Font.Style = []
             Transparent = True
             DataPipelineName = 'plRacesReport'
-            mmHeight = 2074
-            mmLeft = 99060
+            mmHeight = 1905
+            mmLeft = 97790
             mmTop = 16933
             mmWidth = 23283
             BandType = 1
@@ -1302,7 +1269,7 @@ object ppHospitalReport: TppReport
             mmHeight = 3006
             mmLeft = 156845
             mmTop = 26035
-            mmWidth = 11853
+            mmWidth = 13547
             BandType = 1
           end
           object ppLabel25: TppLabel
@@ -1321,7 +1288,7 @@ object ppHospitalReport: TppReport
           end
           object ppLabel42: TppLabel
             UserName = 'lblMaidenSheetOrder'
-            Caption = 'MDN'
+            Caption = 'Mdn'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
@@ -1395,9 +1362,9 @@ object ppHospitalReport: TppReport
             Font.Name = 'Courier New'
             Font.Size = 8
             Font.Style = []
-            mmHeight = 2963
+            mmHeight = 3006
             mmLeft = 154729
-            mmTop = 16087
+            mmTop = 15875
             mmWidth = 5080
             BandType = 1
           end
@@ -1602,7 +1569,7 @@ object ppHospitalReport: TppReport
             mmHeight = 3006
             mmLeft = 183304
             mmTop = 11642
-            mmWidth = 9948
+            mmWidth = 10160
             BandType = 1
           end
           object ppDBText10: TppDBText
@@ -1618,7 +1585,7 @@ object ppHospitalReport: TppReport
             Transparent = True
             DataPipelineName = 'plRacesReport'
             mmHeight = 2074
-            mmLeft = 161925
+            mmLeft = 160867
             mmTop = 16933
             mmWidth = 21167
             BandType = 1
@@ -1632,10 +1599,10 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 5
-            Font.Style = [fsBold]
+            Font.Style = []
             Transparent = True
             DataPipelineName = 'plRacesReport'
-            mmHeight = 2074
+            mmHeight = 1905
             mmLeft = 191982
             mmTop = 16933
             mmWidth = 15875
@@ -1682,7 +1649,7 @@ object ppHospitalReport: TppReport
             Transparent = True
             DataPipelineName = 'plRacesReport'
             mmHeight = 2074
-            mmLeft = 134197
+            mmLeft = 131869
             mmTop = 16933
             mmWidth = 15875
             BandType = 1
@@ -1696,12 +1663,12 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 5
-            Font.Style = [fsBold]
+            Font.Style = []
             Transparent = True
             DataPipelineName = 'plRacesReport'
-            mmHeight = 2074
+            mmHeight = 1905
             mmLeft = 72178
-            mmTop = 16510
+            mmTop = 16933
             mmWidth = 15875
             BandType = 1
           end
@@ -1797,9 +1764,9 @@ object ppHospitalReport: TppReport
             Font.Name = 'Courier New'
             Font.Size = 8
             Font.Style = []
-            mmHeight = 2963
+            mmHeight = 3006
             mmLeft = 63923
-            mmTop = 15663
+            mmTop = 15875
             mmWidth = 6773
             BandType = 1
           end
@@ -1813,7 +1780,7 @@ object ppHospitalReport: TppReport
             Font.Style = []
             mmHeight = 3006
             mmLeft = 123825
-            mmTop = 16087
+            mmTop = 15875
             mmWidth = 6773
             BandType = 1
           end
@@ -1835,9 +1802,9 @@ object ppHospitalReport: TppReport
             Font.Name = 'Courier New'
             Font.Size = 8
             Font.Style = []
-            mmHeight = 2963
+            mmHeight = 3006
             mmLeft = 183304
-            mmTop = 16087
+            mmTop = 15875
             mmWidth = 6773
             BandType = 1
           end
@@ -1871,10 +1838,104 @@ object ppHospitalReport: TppReport
             Font.Style = [fsBold]
             TextAlignment = taRightJustified
             Transparent = True
-            mmHeight = 2117
-            mmLeft = 78952
-            mmTop = 33655
+            mmHeight = 2074
+            mmLeft = 75565
+            mmTop = 34290
             mmWidth = 3175
+            BandType = 1
+          end
+          object ppLabel65: TppLabel
+            UserName = 'Label65'
+            Caption = 'ODDS'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2117
+            mmLeft = 81703
+            mmTop = 34078
+            mmWidth = 4233
+            BandType = 1
+          end
+          object ppLabel3: TppLabel
+            UserName = 'Label11'
+            Caption = 'Trf'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 2117
+            mmLeft = 41487
+            mmTop = 28998
+            mmWidth = 3175
+            BandType = 1
+          end
+          object ppLabel32: TppLabel
+            UserName = 'Label32'
+            Caption = 'Dist'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 2117
+            mmLeft = 46355
+            mmTop = 28998
+            mmWidth = 4233
+            BandType = 1
+          end
+          object ppLabel66: TppLabel
+            UserName = 'Label66'
+            Caption = 'TF'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2117
+            mmLeft = 79163
+            mmTop = 27517
+            mmWidth = 2117
+            BandType = 1
+          end
+          object ppLabel68: TppLabel
+            UserName = 'Label68'
+            Caption = 'UP'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2117
+            mmLeft = 75565
+            mmTop = 30480
+            mmWidth = 2117
+            BandType = 1
+          end
+          object ppLabel69: TppLabel
+            UserName = 'Label69'
+            Caption = 'DN'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 5
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 2117
+            mmLeft = 79163
+            mmTop = 30480
+            mmWidth = 2117
             BandType = 1
           end
         end
@@ -1972,14 +2033,14 @@ object ppHospitalReport: TppReport
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
-            Font.Size = 5
+            Font.Size = 6
             Font.Style = []
             Transparent = True
             DataPipelineName = 'plEntries'
-            mmHeight = 1905
-            mmLeft = 22490
+            mmHeight = 2328
+            mmLeft = 22648
             mmTop = 0
-            mmWidth = 17198
+            mmWidth = 17145
             BandType = 4
           end
           object Jockey: TppDBText
@@ -1990,10 +2051,10 @@ object ppHospitalReport: TppReport
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
-            Font.Size = 5
+            Font.Size = 6
             Font.Style = []
             DataPipelineName = 'plEntries'
-            mmHeight = 1905
+            mmHeight = 2244
             mmLeft = 41275
             mmTop = 0
             mmWidth = 9102
@@ -2044,9 +2105,9 @@ object ppHospitalReport: TppReport
             ShiftWithParent = True
             AutoSize = True
             BlankWhenZero = True
-            DataField = 'TotalTrnOddsWinPct'
+            DataField = 'TotalTrnWinPct'
             DataPipeline = plEntries
-            DisplayFormat = '###%'
+            DisplayFormat = '###'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
@@ -2056,18 +2117,18 @@ object ppHospitalReport: TppReport
             Transparent = True
             DataPipelineName = 'plEntries'
             mmHeight = 2244
-            mmLeft = 35983
-            mmTop = 2540
-            mmWidth = 3810
+            mmLeft = 37253
+            mmTop = 3175
+            mmWidth = 2540
             BandType = 4
           end
           object TotalTrnJkyWinPct: TppDBText
             UserName = 'TotalTrnJkyWinPct'
             ShiftWithParent = True
             BlankWhenZero = True
-            DataField = 'TJMeetWinPct'
+            DataField = 'TJ365WinPct'
             DataPipeline = plEntries
-            DisplayFormat = '###%'
+            DisplayFormat = '###'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
@@ -2077,8 +2138,8 @@ object ppHospitalReport: TppReport
             Transparent = True
             DataPipelineName = 'plEntries'
             mmHeight = 2328
-            mmLeft = 27305
-            mmTop = 2540
+            mmLeft = 26882
+            mmTop = 3175
             mmWidth = 3387
             BandType = 4
           end
@@ -2086,10 +2147,9 @@ object ppHospitalReport: TppReport
             UserName = 'TotalJky30WinPct'
             ShiftWithParent = True
             AutoSize = True
-            BlankWhenZero = True
-            DataField = 'TotalJky30WinPct'
+            DataField = 'TotalJkyDaysWinPct'
             DataPipeline = plEntries
-            DisplayFormat = '###%'
+            DisplayFormat = '###'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
@@ -2098,10 +2158,10 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             Transparent = True
             DataPipelineName = 'plEntries'
-            mmHeight = 2371
-            mmLeft = 41275
-            mmTop = 2540
-            mmWidth = 3810
+            mmHeight = 2328
+            mmLeft = 43392
+            mmTop = 3175
+            mmWidth = 1270
             BandType = 4
           end
           object Sex: TppDBText
@@ -2136,7 +2196,7 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             Transparent = True
             DataPipelineName = 'plEntries'
-            mmHeight = 2328
+            mmHeight = 2244
             mmLeft = 5927
             mmTop = 3598
             mmWidth = 2752
@@ -2219,18 +2279,18 @@ object ppHospitalReport: TppReport
             Transparent = True
             DataPipelineName = 'plEntries'
             mmHeight = 2244
-            mmLeft = 57034
+            mmLeft = 58304
             mmTop = 0
-            mmWidth = 3810
+            mmWidth = 2540
             BandType = 4
           end
           object TotalJkyWinPct: TppDBText
             UserName = 'TotalJkyWinPct'
             ShiftWithParent = True
             BlankWhenZero = True
-            DataField = 'TotalJkyOddsWinPct'
+            DataField = 'TotalJkyWinPct'
             DataPipeline = plEntries
-            DisplayFormat = '###%'
+            DisplayFormat = '###'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
@@ -2240,9 +2300,9 @@ object ppHospitalReport: TppReport
             Transparent = True
             DataPipelineName = 'plEntries'
             mmHeight = 2244
-            mmLeft = 45932
-            mmTop = 2540
-            mmWidth = 5080
+            mmLeft = 46778
+            mmTop = 3175
+            mmWidth = 3810
             BandType = 4
           end
           object ppLine10: TppLine
@@ -2251,14 +2311,14 @@ object ppHospitalReport: TppReport
             Weight = 0.750000000000000000
             mmHeight = 8731
             mmLeft = 40481
-            mmTop = 265
+            mmTop = 847
             mmWidth = 265
             BandType = 4
           end
           object TotalTrnTurfWinPct: TppDBText
             UserName = 'TotalTrnTurfWinPct'
             ShiftWithParent = True
-            DataField = 'TotalTrnTurfWinPct'
+            DataField = 'TotalJkyTurfWinPct'
             DataPipeline = plEntries
             DisplayFormat = '###'
             Font.Charset = DEFAULT_CHARSET
@@ -2271,8 +2331,8 @@ object ppHospitalReport: TppReport
             Visible = False
             DataPipelineName = 'plEntries'
             mmHeight = 2540
-            mmLeft = 78952
-            mmTop = 0
+            mmLeft = 41487
+            mmTop = 6562
             mmWidth = 3175
             BandType = 4
           end
@@ -2332,7 +2392,7 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             Transparent = True
             mmHeight = 2328
-            mmLeft = 74930
+            mmLeft = 78740
             mmTop = 0
             mmWidth = 3175
             BandType = 4
@@ -2352,7 +2412,7 @@ object ppHospitalReport: TppReport
             Transparent = True
             mmHeight = 2328
             mmLeft = 74930
-            mmTop = 4233
+            mmTop = 0
             mmWidth = 3175
             BandType = 4
           end
@@ -2398,9 +2458,9 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 5
-            Font.Style = [fsBold]
+            Font.Style = []
             DataPipelineName = 'plEntries'
-            mmHeight = 2074
+            mmHeight = 1905
             mmLeft = 131234
             mmTop = 2117
             mmWidth = 23283
@@ -2420,11 +2480,10 @@ object ppHospitalReport: TppReport
             Font.Style = []
             TextAlignment = taRightJustified
             Transparent = True
-            Visible = False
             DataPipelineName = 'plEntries'
-            mmHeight = 2540
-            mmLeft = 71332
-            mmTop = 8255
+            mmHeight = 2328
+            mmLeft = 71120
+            mmTop = 12065
             mmWidth = 3175
             BandType = 4
           end
@@ -2466,16 +2525,16 @@ object ppHospitalReport: TppReport
             DataPipeline = plEntries
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Name = 'Arial Narrow'
+            Font.Name = 'Courier New'
             Font.Size = 6
             Font.Style = []
             TextAlignment = taRightJustified
             Transparent = True
             DataPipelineName = 'plEntries'
-            mmHeight = 2498
-            mmLeft = 12954
+            mmHeight = 2244
+            mmLeft = 12065
             mmTop = 3387
-            mmWidth = 2921
+            mmWidth = 3810
             BandType = 4
           end
           object TotalTrnFirstJuiceWinPct: TppDBText
@@ -2550,35 +2609,14 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 6
-            Font.Style = [fsBold]
+            Font.Style = []
             TextAlignment = taRightJustified
             Transparent = True
             Visible = False
             DataPipelineName = 'plEntries'
             mmHeight = 2540
-            mmLeft = 78952
-            mmTop = 8255
-            mmWidth = 3175
-            BandType = 4
-          end
-          object DebutIndicator: TppDBText
-            UserName = 'DebutIndicator'
-            ShiftWithParent = True
-            AutoSize = True
-            BlankWhenZero = True
-            DataField = 'DebutIndicator'
-            DataPipeline = plEntries
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Courier New'
-            Font.Size = 6
-            Font.Style = [fsBold]
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2328
-            mmLeft = 67310
-            mmTop = 8467
+            mmLeft = 78740
+            mmTop = 4233
             mmWidth = 3175
             BandType = 4
           end
@@ -2592,14 +2630,13 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 6
-            Font.Style = [fsBold]
+            Font.Style = []
             TextAlignment = taRightJustified
             Transparent = True
-            Visible = False
             DataPipelineName = 'plEntries'
             mmHeight = 2540
             mmLeft = 75142
-            mmTop = 8255
+            mmTop = 4233
             mmWidth = 3175
             BandType = 4
           end
@@ -2646,9 +2683,9 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 5
-            Font.Style = [fsBold]
+            Font.Style = []
             DataPipelineName = 'plEntries'
-            mmHeight = 2074
+            mmHeight = 1905
             mmLeft = 131234
             mmTop = 7673
             mmWidth = 23283
@@ -2660,7 +2697,7 @@ object ppHospitalReport: TppReport
             Weight = 0.750000000000000000
             mmHeight = 265
             mmLeft = 51594
-            mmTop = 11377
+            mmTop = 8467
             mmWidth = 14552
             BandType = 4
           end
@@ -2695,9 +2732,9 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 5
-            Font.Style = [fsBold]
+            Font.Style = []
             DataPipelineName = 'plEntries'
-            mmHeight = 2074
+            mmHeight = 1905
             mmLeft = 131234
             mmTop = 0
             mmWidth = 74083
@@ -2713,9 +2750,9 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 5
-            Font.Style = [fsBold]
+            Font.Style = []
             DataPipelineName = 'plEntries'
-            mmHeight = 2074
+            mmHeight = 1905
             mmLeft = 131234
             mmTop = 5080
             mmWidth = 74083
@@ -2877,9 +2914,9 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             Transparent = True
             DataPipelineName = 'plEntries'
-            mmHeight = 2709
-            mmLeft = 10372
-            mmTop = 6773
+            mmHeight = 2625
+            mmLeft = 8890
+            mmTop = 6985
             mmWidth = 2963
             BandType = 4
           end
@@ -2905,18 +2942,18 @@ object ppHospitalReport: TppReport
             BlankWhenZero = True
             DataField = 'Power'
             DataPipeline = plEntries
-            DisplayFormat = '##0'
+            DisplayFormat = '#0.0'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
-            Font.Size = 6
+            Font.Size = 8
             Font.Style = []
             TextAlignment = taRightJustified
             DataPipelineName = 'plEntries'
-            mmHeight = 2244
-            mmLeft = 18203
+            mmHeight = 3006
+            mmLeft = 13970
             mmTop = 6773
-            mmWidth = 2540
+            mmWidth = 6773
             BandType = 4
           end
           object ppDBText5: TppDBText
@@ -3039,14 +3076,14 @@ object ppHospitalReport: TppReport
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
-            Font.Size = 7
+            Font.Size = 8
             Font.Style = []
             Transparent = True
             DataPipelineName = 'plEntries'
-            mmHeight = 2625
-            mmLeft = 52070
-            mmTop = 11853
-            mmWidth = 1482
+            mmHeight = 3006
+            mmLeft = 52705
+            mmTop = 11218
+            mmWidth = 1693
             BandType = 4
           end
           object lblSprint: TppLabel
@@ -3223,7 +3260,7 @@ object ppHospitalReport: TppReport
             BlankWhenZero = True
             DataField = 'TotalTrnOwnWinPct'
             DataPipeline = plEntries
-            DisplayFormat = '###%'
+            DisplayFormat = '###'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
@@ -3234,7 +3271,7 @@ object ppHospitalReport: TppReport
             DataPipelineName = 'plEntries'
             mmHeight = 2328
             mmLeft = 31327
-            mmTop = 2540
+            mmTop = 3175
             mmWidth = 4022
             BandType = 4
           end
@@ -3268,9 +3305,9 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 5
-            Font.Style = [fsBold]
+            Font.Style = []
             DataPipelineName = 'plEntries'
-            mmHeight = 2074
+            mmHeight = 1905
             mmLeft = 131234
             mmTop = 10372
             mmWidth = 77258
@@ -3289,7 +3326,7 @@ object ppHospitalReport: TppReport
             DataPipelineName = 'plEntries'
             mmHeight = 2244
             mmLeft = 22860
-            mmTop = 9313
+            mmTop = 11853
             mmWidth = 27252
             BandType = 4
           end
@@ -3319,7 +3356,7 @@ object ppHospitalReport: TppReport
             DataPipelineName = 'plEntries'
             mmHeight = 2244
             mmLeft = 19050
-            mmTop = 9525
+            mmTop = 10372
             mmWidth = 1270
             BandType = 4
           end
@@ -3344,9 +3381,9 @@ object ppHospitalReport: TppReport
             Font.Color = clBlack
             Font.Name = 'Courier New'
             Font.Size = 5
-            Font.Style = [fsBold]
+            Font.Style = []
             DataPipelineName = 'plEntries'
-            mmHeight = 2074
+            mmHeight = 1905
             mmLeft = 131234
             mmTop = 12700
             mmWidth = 75142
@@ -3377,97 +3414,17 @@ object ppHospitalReport: TppReport
             Weight = 0.750000000000000000
             mmHeight = 265
             mmLeft = 21960
-            mmTop = 8890
+            mmTop = 9525
             mmWidth = 28840
-            BandType = 4
-          end
-          object LatePaceAdvantageWinPct: TppDBText
-            UserName = 'LatePaceAdvantageWinPct'
-            ShiftWithParent = True
-            AutoSize = True
-            BlankWhenZero = True
-            DataField = 'LatePaceAdvantage'
-            DataPipeline = plEntries
-            DisplayFormat = '##'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Courier New'
-            Font.Size = 6
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            Visible = False
-            DataPipelineName = 'plEntries'
-            mmHeight = 2244
-            mmLeft = 63288
-            mmTop = 8255
-            mmWidth = 2540
-            BandType = 4
-          end
-          object ppLine24: TppLine
-            UserName = 'Line24'
-            Pen.Style = psDot
-            Weight = 0.750000000000000000
-            mmHeight = 423
-            mmLeft = 52282
-            mmTop = 7408
-            mmWidth = 13547
-            BandType = 4
-          end
-          object MiddlePaceAdvantageWinPct: TppDBText
-            UserName = 'MiddlePaceAdvantageWinPct'
-            ShiftWithParent = True
-            AutoSize = True
-            BlankWhenZero = True
-            DataField = 'MiddlePaceAdvantage'
-            DataPipeline = plEntries
-            DisplayFormat = '##'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Courier New'
-            Font.Size = 6
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            Visible = False
-            DataPipelineName = 'plEntries'
-            mmHeight = 2244
-            mmLeft = 57044
-            mmTop = 8202
-            mmWidth = 3810
-            BandType = 4
-          end
-          object EarlyPaceAdvantageWinPct: TppDBText
-            UserName = 'EarlyPaceAdvantageWinPct'
-            ShiftWithParent = True
-            AutoSize = True
-            BlankWhenZero = True
-            DataField = 'EarlyPaceAdvantage'
-            DataPipeline = plEntries
-            DisplayFormat = '##'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Courier New'
-            Font.Size = 6
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            Visible = False
-            DataPipelineName = 'plEntries'
-            mmHeight = 2328
-            mmLeft = 51647
-            mmTop = 8043
-            mmWidth = 3810
             BandType = 4
           end
           object TotalTrn46To120WinPct: TppDBText
             UserName = 'TotalTrn46To120WinPct'
             ShiftWithParent = True
-            AutoSize = True
             BlankWhenZero = True
             DataField = 'TotalTrn46To120WinPct'
             DataPipeline = plEntries
-            DisplayFormat = '###%'
+            DisplayFormat = '###'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
@@ -3476,10 +3433,10 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             Transparent = True
             DataPipelineName = 'plEntries'
-            mmHeight = 2540
-            mmLeft = 67310
+            mmHeight = 2328
+            mmLeft = 67945
             mmTop = 12065
-            mmWidth = 3175
+            mmWidth = 2752
             BandType = 4
           end
           object ppLabel22: TppLabel
@@ -3523,9 +3480,9 @@ object ppHospitalReport: TppReport
             ShiftWithParent = True
             AutoSize = True
             BlankWhenZero = True
-            DataField = 'TotalTrn30WinPct'
+            DataField = 'TotalTrn1To45WinPct'
             DataPipeline = plEntries
-            DisplayFormat = '###%'
+            DisplayFormat = '###'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
             Font.Name = 'Courier New'
@@ -3535,9 +3492,9 @@ object ppHospitalReport: TppReport
             Transparent = True
             DataPipelineName = 'plEntries'
             mmHeight = 2244
-            mmLeft = 22225
-            mmTop = 2540
-            mmWidth = 3810
+            mmLeft = 24765
+            mmTop = 3175
+            mmWidth = 1270
             BandType = 4
           end
           object ppLine25: TppLine
@@ -3546,7 +3503,7 @@ object ppHospitalReport: TppReport
             Weight = 0.750000000000000000
             mmHeight = 5503
             mmLeft = 26458
-            mmTop = 2963
+            mmTop = 3598
             mmWidth = 212
             BandType = 4
           end
@@ -3556,7 +3513,7 @@ object ppHospitalReport: TppReport
             Weight = 0.750000000000000000
             mmHeight = 5503
             mmLeft = 30480
-            mmTop = 2963
+            mmTop = 3598
             mmWidth = 212
             BandType = 4
           end
@@ -3566,7 +3523,7 @@ object ppHospitalReport: TppReport
             Weight = 0.750000000000000000
             mmHeight = 5503
             mmLeft = 35560
-            mmTop = 2963
+            mmTop = 3598
             mmWidth = 212
             BandType = 4
           end
@@ -3576,7 +3533,7 @@ object ppHospitalReport: TppReport
             Weight = 0.750000000000000000
             mmHeight = 5503
             mmLeft = 45297
-            mmTop = 2963
+            mmTop = 3598
             mmWidth = 212
             BandType = 4
           end
@@ -3586,7 +3543,7 @@ object ppHospitalReport: TppReport
             Weight = 0.750000000000000000
             mmHeight = 265
             mmLeft = 22860
-            mmTop = 5292
+            mmTop = 5927
             mmWidth = 27728
             BandType = 4
           end
@@ -3650,7 +3607,7 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             Transparent = True
             DataPipelineName = 'plEntries'
-            mmHeight = 2074
+            mmHeight = 1905
             mmLeft = 106469
             mmTop = 0
             mmWidth = 3175
@@ -3691,7 +3648,7 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             DataPipelineName = 'plEntries'
             mmHeight = 2244
-            mmLeft = 124461
+            mmLeft = 122767
             mmTop = 3387
             mmWidth = 2540
             BandType = 4
@@ -3711,7 +3668,7 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             DataPipelineName = 'plEntries'
             mmHeight = 2244
-            mmLeft = 124461
+            mmLeft = 122555
             mmTop = 6350
             mmWidth = 2540
             BandType = 4
@@ -3738,6 +3695,7 @@ object ppHospitalReport: TppReport
           end
           object ppDBText9: TppDBText
             UserName = 'DBText9'
+            ShiftWithParent = True
             AutoSize = True
             DataField = 'BackSpeedRank'
             DataPipeline = plEntries
@@ -3756,28 +3714,6 @@ object ppHospitalReport: TppReport
             mmWidth = 1270
             BandType = 4
           end
-          object ppDBText17: TppDBText
-            UserName = 'TotalJky30WinPct1'
-            ShiftWithParent = True
-            AutoSize = True
-            BlankWhenZero = True
-            DataField = 'TJ365WinPct'
-            DataPipeline = plEntries
-            DisplayFormat = '###%'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Courier New'
-            Font.Size = 6
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2244
-            mmLeft = 26881
-            mmTop = 5927
-            mmWidth = 3810
-            BandType = 4
-          end
           object ppDBText19: TppDBText
             UserName = 'DBText19'
             ShiftWithParent = True
@@ -3794,7 +3730,7 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             DataPipelineName = 'plEntries'
             mmHeight = 2244
-            mmLeft = 124461
+            mmLeft = 122555
             mmTop = 9313
             mmWidth = 2540
             BandType = 4
@@ -3815,7 +3751,7 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             DataPipelineName = 'plEntries'
             mmHeight = 2244
-            mmLeft = 124461
+            mmLeft = 122555
             mmTop = 12277
             mmWidth = 2540
             BandType = 4
@@ -3863,7 +3799,6 @@ object ppHospitalReport: TppReport
           object ppDBText20: TppDBText
             UserName = 'OwnerName1'
             ShiftWithParent = True
-            AutoSize = True
             DataField = 'TodaysWagerOrderKey'
             DataPipeline = plEntries
             Font.Charset = DEFAULT_CHARSET
@@ -3873,9 +3808,9 @@ object ppHospitalReport: TppReport
             Font.Style = []
             DataPipelineName = 'plEntries'
             mmHeight = 1905
-            mmLeft = 86572
+            mmLeft = 86784
             mmTop = 12700
-            mmWidth = 12700
+            mmWidth = 18838
             BandType = 4
           end
           object ppDBText24: TppDBText
@@ -3892,7 +3827,7 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             DataPipelineName = 'plEntries'
             mmHeight = 1905
-            mmLeft = 114512
+            mmLeft = 114089
             mmTop = 12700
             mmWidth = 5503
             BandType = 4
@@ -3913,36 +3848,14 @@ object ppHospitalReport: TppReport
             mmHeight = 1905
             mmLeft = 106892
             mmTop = 12700
-            mmWidth = 4445
+            mmWidth = 5503
             BandType = 4
           end
           object ppDBText31: TppDBText
             UserName = 'TotalTrn30WinPct1'
             ShiftWithParent = True
-            AutoSize = True
             BlankWhenZero = True
             DataField = 'PostPosWinPct'
-            DataPipeline = plEntries
-            DisplayFormat = '###%'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clBlack
-            Font.Name = 'Courier New'
-            Font.Size = 6
-            Font.Style = []
-            TextAlignment = taRightJustified
-            Transparent = True
-            DataPipelineName = 'plEntries'
-            mmHeight = 2244
-            mmLeft = 0
-            mmTop = 12065
-            mmWidth = 16510
-            BandType = 4
-          end
-          object ppDBText43: TppDBText
-            UserName = 'TotalTrnBlinkersOffWinPct1'
-            ShiftWithParent = True
-            BlankWhenZero = True
-            DataField = 'TotalTrn120PlusWinPct'
             DataPipeline = plEntries
             DisplayFormat = '###'
             Font.Charset = DEFAULT_CHARSET
@@ -3953,9 +3866,157 @@ object ppHospitalReport: TppReport
             TextAlignment = taRightJustified
             Transparent = True
             DataPipelineName = 'plEntries'
-            mmHeight = 2540
-            mmLeft = 78952
+            mmHeight = 2328
+            mmLeft = 5715
             mmTop = 12065
+            mmWidth = 4445
+            BandType = 4
+          end
+          object ppDBText43: TppDBText
+            UserName = 'TotalTrnBlinkersOffWinPct1'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TotalTrn30WinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 6
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2244
+            mmLeft = 75353
+            mmTop = 12065
+            mmWidth = 3175
+            BandType = 4
+          end
+          object ppDBText44: TppDBText
+            UserName = 'DBText44'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TotalTrnOddsWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 6
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2328
+            mmLeft = 82762
+            mmTop = 12065
+            mmWidth = 3175
+            BandType = 4
+          end
+          object ppDBText45: TppDBText
+            UserName = 'DBText45'
+            ShiftWithParent = True
+            AutoSize = True
+            BlankWhenZero = True
+            DataField = 'TotalOwnWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 6
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2117
+            mmLeft = 32808
+            mmTop = 6562
+            mmWidth = 2540
+            BandType = 4
+          end
+          object DebutIndicator: TppDBText
+            UserName = 'DebutIndicator'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'DebutIndicator'
+            DataPipeline = plEntries
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 6
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2328
+            mmLeft = 67098
+            mmTop = 8255
+            mmWidth = 3598
+            BandType = 4
+          end
+          object ppDBText17: TppDBText
+            UserName = 'TotalTrnTurfWinPct1'
+            ShiftWithParent = True
+            DataField = 'TotalJky2yoWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 6
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plEntries'
+            mmHeight = 2540
+            mmLeft = 47413
+            mmTop = 6562
+            mmWidth = 3175
+            BandType = 4
+          end
+          object ppDBText46: TppDBText
+            UserName = 'DBText46'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TotalBrdWinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 6
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2328
+            mmLeft = 75353
+            mmTop = 8255
+            mmWidth = 3175
+            BandType = 4
+          end
+          object ppDBText47: TppDBText
+            UserName = 'DBText47'
+            ShiftWithParent = True
+            BlankWhenZero = True
+            DataField = 'TotalJky10WinPct'
+            DataPipeline = plEntries
+            DisplayFormat = '###'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Courier New'
+            Font.Size = 6
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plEntries'
+            mmHeight = 2328
+            mmLeft = 79163
+            mmTop = 8255
             mmWidth = 3175
             BandType = 4
           end
@@ -4274,343 +4335,296 @@ object ppHospitalReport: TppReport
             4576656E74494402350001060F5472614576656E7448616E646C65720B50726F
             6772616D4E616D650618546F74616C54726E32796F57696E5063744F6E507269
             6E740B50726F6772616D54797065070B747450726F63656475726506536F7572
-            636506DC70726F63656475726520546F74616C54726E32796F57696E5063744F
+            636506DD70726F63656475726520546F74616C54726E32796F57696E5063744F
             6E5072696E743B0D0A626567696E0D0A202020696620706C456E74726965735B
-            27416765275D203D2032207468656E20626567696E0D0A20202009546F74616C
-            54726E32596F57696E5063742E56697369626C65203A3D20547275653B0D0A20
-            2020656E6420656C736520626567696E0D0A202020202020546F74616C54726E
-            32596F57696E5063742E56697369626C65203A3D2046616C73653B0D0A202020
-            656E643B0D0A2020200D0A2020200D0A2020202020200D0A0D0A656E643B0D0A
-            0D436F6D706F6E656E744E616D650611546F74616C54726E32796F57696E5063
-            74094576656E744E616D6506074F6E5072696E74074576656E74494402200001
-            060F5472614576656E7448616E646C65720B50726F6772616D4E616D65060E54
-            7261696E65724F6E5072696E740B50726F6772616D54797065070B747450726F
-            63656475726506536F757263650CB301000070726F6365647572652054726169
-            6E65724F6E5072696E743B0D0A626567696E0D0A202020202020202020200D0A
-            202020547261696E65722E466F6E742E426F6C64203A3D2046616C73653B0D0A
-            202020547261696E65722E466F6E742E556E6465726C696E65203A3D2046616C
-            73653B0D0A2020200D0A2020206966202828706C456E74726965735B2754726E
-            57696E7352616E6B275D203E3D20312920616E642028706C456E74726965735B
-            2754726E57696E7352616E6B275D203C3D2035302929206F720D0A2020202020
-            202828706C456E74726965735B2754726E4561726E696E677352616E6B275D20
-            3E3D20312920616E642028706C456E74726965735B2754726E4561726E696E67
-            7352616E6B275D203C3D20353029206F720D0A20202020202028706C456E7472
-            6965735B27547261696E6572526174696E6752616E6B275D203D203129292074
-            68656E20626567696E0D0A202020202020547261696E65722E466F6E742E426F
-            6C64203A3D20547275653B0D0A202020202020547261696E65722E466F6E742E
-            556E6465726C696E65203A3D20547275653B0D0A202020656E643B0D0A0D0A65
-            6E643B0D0A0D436F6D706F6E656E744E616D650607547261696E657209457665
-            6E744E616D6506074F6E5072696E74074576656E74494402200001060F547261
-            4576656E7448616E646C65720B50726F6772616D4E616D65060D4A6F636B6579
-            4F6E5072696E740B50726F6772616D54797065070B747450726F636564757265
-            06536F757263650C8101000070726F636564757265204A6F636B65794F6E5072
-            696E743B0D0A626567696E0D0A2020204A6F636B65792E466F6E742E426F6C64
-            203A3D2046616C73653B0D0A2020204A6F636B65792E466F6E742E556E646572
-            6C696E65203A3D2046616C73653B0D0A2020202020202020200D0A2020206966
-            20706C456E74726965735B27497353757065724A6F636B6579275D207468656E
-            20626567696E0D0A2020202020204A6F636B65792E466F6E742E426F6C64203A
-            3D20547275653B0D0A2020202020204A6F636B65792E466F6E742E556E646572
-            6C696E65203A3D20547275653B0D0A202020656E643B0D0A0D0A202020696620
-            28706C456E74726965735B274A6F636B6579526174696E6752616E6B275D203D
-            203129207468656E20626567696E0D0A2020202020204A6F636B65792E466F6E
-            742E426F6C64203A3D20547275653B0D0A2020202020204A6F636B65792E466F
-            6E742E556E6465726C696E65203A3D20547275653B0D0A202020656E643B0D0A
-            2020200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506064A6F63
-            6B6579094576656E744E616D6506074F6E5072696E74074576656E7449440220
-            0001060F5472614576656E7448616E646C65720B50726F6772616D4E616D6506
-            164D6F726E696E674C696E65446573634F6E5072696E740B50726F6772616D54
-            797065070B747450726F63656475726506536F7572636506C970726F63656475
-            7265204D6F726E696E674C696E65446573634F6E5072696E743B0D0A62656769
-            6E0D0A0D0A2020204D6F726E696E674C696E65446573632E466F6E742E426F6C
-            64203A3D2046616C73653B0D0A20202069662020706C456E74726965735B274D
-            6F726E696E674C696E65546F3152616E6B275D203D2031207468656E20626567
-            696E0D0A2020202020204D6F726E696E674C696E65446573632E466F6E742E42
-            6F6C64203A3D20547275653B0D0A202020656E643B0D0A2020200D0A656E643B
-            0D0A0D436F6D706F6E656E744E616D65060F4D6F726E696E674C696E65446573
-            63094576656E744E616D6506074F6E5072696E74074576656E74494402200001
-            060F5472614576656E7448616E646C65720B50726F6772616D4E616D65061253
-            756D6D6172794265666F72655072696E740B50726F6772616D54797065070B74
-            7450726F63656475726506536F75726365063670726F6365647572652053756D
-            6D6172794265666F72655072696E743B0D0A626567696E0D0A0D0A2020200D0A
-            200D0A656E643B0D0A0D436F6D706F6E656E744E616D65060753756D6D617279
-            094576656E744E616D65060B4265666F72655072696E74074576656E74494402
-            180001060F5472614576656E7448616E646C65720B50726F6772616D4E616D65
-            06104F776E65724E616D654F6E5072696E740B50726F6772616D54797065070B
-            747450726F63656475726506536F757263650C1001000070726F636564757265
-            204F776E65724E616D654F6E5072696E743B0D0A626567696E0D0A2020202020
-            20202020200D0A2020204F776E65724E616D652E466F6E742E426F6C64203A3D
-            2046616C73653B0D0A2020204F776E65724E616D652E466F6E742E556E646572
-            6C696E65203A3D2046616C73653B0D0A2020202020202020200D0A2020206966
-            20706C456E74726965735B27497353757065724F776E6572275D207468656E20
-            626567696E0D0A2020202020204F776E65724E616D652E466F6E742E426F6C64
-            203A3D20547275653B0D0A2020202020204F776E65724E616D652E466F6E742E
-            556E6465726C696E65203A3D20547275653B0D0A202020656E643B0D0A0D0A0D
-            0A656E643B0D0A0D436F6D706F6E656E744E616D6506094F776E65724E616D65
-            094576656E744E616D6506074F6E5072696E74074576656E7449440220000106
-            0F5472614576656E7448616E646C65720B50726F6772616D4E616D6506145475
-            7266496E64696361746F724F6E5072696E740B50726F6772616D54797065070B
-            747450726F63656475726506536F7572636506C570726F636564757265205475
-            7266496E64696361746F724F6E5072696E743B0D0A626567696E0D0A20206966
-            20706C52616365735265706F72745B2753757266616365275D203D2027542720
-            7468656E20626567696E0D0A2020200954757266496E64696361746F722E5669
-            7369626C65203A3D20547275653B0D0A202020656E6420656C73652062656769
-            6E0D0A2020200954757266496E64696361746F722E56697369626C65203A3D20
-            46616C73653B0D0A202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E
-            656E744E616D65060D54757266496E64696361746F72094576656E744E616D65
-            06074F6E5072696E74074576656E74494402200001060F5472614576656E7448
-            616E646C65720B50726F6772616D4E616D6506154465627574496E6469636174
-            6F724F6E5072696E740B50726F6772616D54797065070B747450726F63656475
-            726506536F7572636506E470726F636564757265204465627574496E64696361
-            746F724F6E5072696E743B0D0A626567696E0D0A0D0A2020204465627574496E
-            64696361746F722E56697369626C65203A3D2046616C73653B0D0A2020206966
-            2028706C52616365735265706F72745B275261636554797065275D203D20274D
-            53572729206F722028706C52616365735265706F72745B275261636554797065
-            275D203D20274D434C272920207468656E20626567696E0D0A09202020446562
-            7574496E64696361746F722E56697369626C65203A3D20547275653B0D0A2020
-            20656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060E44
-            65627574496E64696361746F72094576656E744E616D6506074F6E5072696E74
-            074576656E74494402200001060F5472614576656E7448616E646C65720B5072
-            6F6772616D4E616D650615526F757465496E64696361746F724F6E5072696E74
-            0B50726F6772616D54797065070B747450726F63656475726506536F75726365
-            0C2601000070726F63656475726520526F757465496E64696361746F724F6E50
-            72696E743B0D0A626567696E0D0A202020202020202020202020202020202020
-            20202020200D0A202020526F757465496E64696361746F722E56697369626C65
-            203A3D2046616C73653B0D0A2020200D0A20202069662028706C526163657352
-            65706F72745B27526F757465496E64696361746F72275D203C3E202727292020
-            7468656E20626567696E0D0A20202020202069662028706C5261636573526570
-            6F72745B274973526F75746552616365275D203D20547275652920207468656E
-            20626567696E0D0A09202020526F757465496E64696361746F722E5669736962
-            6C65203A3D20547275653B0D0A202020202020656E643B200D0A202020656E64
-            3B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060E526F757465
-            496E64696361746F72094576656E744E616D6506074F6E5072696E7407457665
-            6E74494402200001060F5472614576656E7448616E646C65720B50726F677261
-            6D4E616D65060F446179734C6173744F6E5072696E740B50726F6772616D5479
-            7065070B747450726F63656475726506536F757263650CA801000070726F6365
-            6475726520446179734C6173744F6E5072696E743B0D0A626567696E0D0A0D0A
-            09446179734C6173742E466F6E742E426F6C64203A3D2046616C73653B0D0A09
-            446179734C6173742E466F6E742E556E6465726C696E65203A3D2046616C7365
-            3B0D0A0D0A202020202020696620706C456E74726965735B27446179734C6173
-            74275D203E203435207468656E20626567696E0D0A2020202020202020204461
-            79734C6173742E466F6E742E426F6C64203A3D20547275653B0D0A2020202020
-            20202020446179734C6173742E466F6E742E556E6465726C696E65203A3D2046
-            616C73653B0D0A202020202020656E643B0D0A2020202020202020200D0A2020
-            20202020696620706C456E74726965735B27446179734C617374275D203E2039
-            30207468656E20626567696E0D0A202020202020202020446179734C6173742E
-            466F6E742E426F6C64203A3D20547275653B0D0A202020202020202020446179
-            734C6173742E466F6E742E556E6465726C696E65203A3D20547275653B0D0A20
-            2020202020656E643B0D0A0D0A2020202020200D0A2020202020200D0A656E64
-            3B0D0A0D436F6D706F6E656E744E616D650608446179734C617374094576656E
-            744E616D6506074F6E5072696E74074576656E74494402200001060F54726145
-            76656E7448616E646C65720B50726F6772616D4E616D65060C506F7765724F6E
-            5072696E740B50726F6772616D54797065070B747450726F6365647572650653
-            6F757263650C0601000070726F63656475726520506F7765724F6E5072696E74
-            3B0D0A626567696E0D0A0D0A20202020696620706C456E74726965735B27506F
-            77657252616E6B275D203D2031207468656E20626567696E0D0A09202020506F
-            7765722E466F6E742E426F6C64203A3D20547275653B0D0A2020202020202020
-            20506F7765722E466F6E742E556E6465726C696E65203A3D20547275653B0D0A
-            20202020656E6420656C736520626567696E0D0A09202020506F7765722E466F
-            6E742E426F6C64203A3D2046616C73653B0D0A202020202020202020506F7765
-            722E466F6E742E556E6465726C696E65203A3D2046616C73653B0D0A20202065
-            6E643B200D0A0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D650605
-            506F776572094576656E744E616D6506074F6E5072696E74074576656E744944
-            02200001060F5472614576656E7448616E646C65720B50726F6772616D4E616D
-            6506106C626C545552464F6E476574546578740B50726F6772616D5479706507
-            0B747450726F63656475726506536F757263650C4E01000070726F6365647572
-            65206C626C545552464F6E476574546578742876617220546578743A20537472
-            696E67293B0D0A626567696E0D0A0D0A09696620706C52616365735265706F72
-            745B2753757266616365275D203D20275427207468656E20626567696E0D0A20
-            20090954657874203A3D202754757266273B0D0A202020202020656E643B0D0A
-            09696620706C52616365735265706F72745B2753757266616365275D203D2027
-            4127207468656E20626567696E0D0A2020090954657874203A3D2027416C6C20
-            57656174686572273B0D0A202020202020656E643B0D0A202020202020696620
-            706C52616365735265706F72745B2753757266616365275D203D202744272074
-            68656E20626567696E0D0A2020090954657874203A3D202744495254273B0D0A
-            202020202020656E643B0D0A2020202020200D0A0D0A2020202020200D0A0D0A
-            656E643B0D0A0D436F6D706F6E656E744E616D6506076C626C54555246094576
-            656E744E616D6506094F6E47657454657874074576656E74494402350001060F
-            5472614576656E7448616E646C65720B50726F6772616D4E616D650618546F74
-            616C54726E4F776E57696E5063744F6E5072696E740B50726F6772616D547970
-            65070B747450726F63656475726506536F757263650C3901000070726F636564
-            75726520546F74616C54726E4F776E57696E5063744F6E5072696E743B0D0A62
-            6567696E0D0A0D0A202020202020546F74616C54726E4F776E57696E5063742E
-            466F6E742E426F6C64203A3D2046616C73653B0D0A202020202020546F74616C
-            54726E4F776E57696E5063742E466F6E742E556E6465726C696E65203A3D2046
-            616C73653B0D0A2020202020200D0A202020696620706C456E74726965735B27
-            546F74616C54726E4F776E57696E506374275D203E203234207468656E206265
-            67696E0D0A202020202020546F74616C54726E4F776E57696E5063742E466F6E
-            742E426F6C64203A3D20547275653B0D0A202020202020546F74616C54726E4F
-            776E57696E5063742E466F6E742E556E6465726C696E65203A3D20547275653B
-            0D0A202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D
-            650611546F74616C54726E4F776E57696E506374094576656E744E616D650607
-            4F6E5072696E74074576656E74494402200001060F5472614576656E7448616E
-            646C65720B50726F6772616D4E616D65061B51535031737443616C6C52756E53
-            74796C654F6E476574546578740B50726F6772616D54797065070B747450726F
-            63656475726506536F7572636506A270726F6365647572652051535031737443
-            616C6C52756E5374796C654F6E476574546578742876617220546578743A2053
-            7472696E67293B0D0A626567696E0D0A2054657874203A3D20706C456E747269
-            65735B2751535031737443616C6C52756E5374796C65275D202B20272D27202B
-            2020496E74546F53747228706C456E74726965735B2751535031737443616C6C
-            275D293B0D0A200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506
-            1251535031737443616C6C52756E5374796C65094576656E744E616D6506094F
-            6E47657454657874074576656E74494402350001060F5472614576656E744861
-            6E646C65720B50726F6772616D4E616D65061951535031737443616C6C52756E
-            5374796C654F6E5072696E740B50726F6772616D54797065070B747450726F63
-            656475726506536F7572636506D770726F636564757265205153503173744361
-            6C6C52756E5374796C654F6E5072696E743B0D0A626567696E0D0A0D0A202020
-            696620706C456E74726965735B274C696665537461727473275D203E20302074
-            68656E20626567696E0D0A2020200951535031737443616C6C52756E5374796C
-            652E56697369626C65203A3D20547275653B0D0A202020656E6420656C736520
-            626567696E0D0A2020200951535031737443616C6C52756E5374796C652E5669
-            7369626C65203A3D2046616C73653B0D0A202020656E643B0D0A2020200D0A65
-            6E643B0D0A0D436F6D706F6E656E744E616D65061251535031737443616C6C52
-            756E5374796C65094576656E744E616D6506074F6E5072696E74074576656E74
-            494402200001060F5472614576656E7448616E646C65720B50726F6772616D4E
-            616D6506204D6964646C6550616365416476616E7461676557696E5063744F6E
-            5072696E740B50726F6772616D54797065070B747450726F6365647572650653
-            6F7572636506F670726F636564757265204D6964646C6550616365416476616E
-            7461676557696E5063744F6E5072696E743B0D0A626567696E0D0A0D0A096966
-            20706C456E74726965735B274D6964646C6550616365416476616E7461676557
-            696E50637452616E6B275D203D2031207468656E20626567696E0D0A09094D69
-            64646C6550616365416476616E7461676557696E5063742E466F6E742E426F6C
-            64203A3D20547275653B0D0A09656E6420656C736520626567696E0D0A09094D
-            6964646C6550616365416476616E7461676557696E5063742E466F6E742E426F
-            6C64203A3D2046616C73653B0D0A09656E643B0D0A0D0A656E643B0D0A0D436F
-            6D706F6E656E744E616D6506194D6964646C6550616365416476616E74616765
-            57696E506374094576656E744E616D6506074F6E5072696E74074576656E7449
-            4402200001060F5472614576656E7448616E646C65720B50726F6772616D4E61
-            6D65061F4561726C7950616365416476616E7461676557696E5063744F6E5072
-            696E740B50726F6772616D54797065070B747450726F63656475726506536F75
-            72636506F770726F636564757265204561726C7950616365416476616E746167
-            6557696E5063744F6E5072696E743B0D0A626567696E0D0A0D0A202020202020
-            696620706C456E74726965735B274561726C7950616365416476616E74616765
-            57696E50637452616E6B275D203D2031207468656E20626567696E0D0A090945
-            61726C7950616365416476616E7461676557696E5063742E466F6E742E426F6C
-            64203A3D20547275653B0D0A09656E6420656C736520626567696E0D0A090945
-            61726C7950616365416476616E7461676557696E5063742E466F6E742E426F6C
-            64203A3D2046616C73653B0D0A09656E643B0D0A0D0A656E643B0D0A0D436F6D
-            706F6E656E744E616D6506184561726C7950616365416476616E746167655769
-            6E506374094576656E744E616D6506074F6E5072696E74074576656E74494402
-            200001060F5472614576656E7448616E646C65720B50726F6772616D4E616D65
-            061E4C61746550616365416476616E7461676557696E5063744F6E5072696E74
-            0B50726F6772616D54797065070B747450726F63656475726506536F75726365
-            06EE70726F636564757265204C61746550616365416476616E7461676557696E
-            5063744F6E5072696E743B0D0A626567696E0D0A20696620706C456E74726965
-            735B274C61746550616365416476616E7461676557696E50637452616E6B275D
-            203D2031207468656E20626567696E0D0A09094C61746550616365416476616E
-            7461676557696E5063742E466F6E742E426F6C64203A3D20547275653B0D0A09
-            656E6420656C736520626567696E0D0A09094C61746550616365416476616E74
-            61676557696E5063742E466F6E742E426F6C64203A3D2046616C73653B0D0A09
-            656E643B0D0A0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D650617
-            4C61746550616365416476616E7461676557696E506374094576656E744E616D
+            27416765275D203E3D2032207468656E20626567696E0D0A20202009546F7461
+            6C54726E32596F57696E5063742E56697369626C65203A3D20547275653B0D0A
+            202020656E6420656C736520626567696E0D0A202020202020546F74616C5472
+            6E32596F57696E5063742E56697369626C65203A3D2046616C73653B0D0A2020
+            20656E643B0D0A2020200D0A2020200D0A2020202020200D0A0D0A656E643B0D
+            0A0D436F6D706F6E656E744E616D650611546F74616C54726E32796F57696E50
+            6374094576656E744E616D6506074F6E5072696E74074576656E744944022000
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D65060E
+            547261696E65724F6E5072696E740B50726F6772616D54797065070B74745072
+            6F63656475726506536F757263650C0D01000070726F63656475726520547261
+            696E65724F6E5072696E743B0D0A626567696E0D0A202020202020202020200D
+            0A202020547261696E65722E466F6E742E426F6C64203A3D2046616C73653B0D
+            0A202020547261696E65722E466F6E742E556E6465726C696E65203A3D204661
+            6C73653B0D0A20202020696620706C456E74726965735B27546F74616C54726E
+            57696E506374275D203E203234207468656E20626567696E0D0A202020202020
+            20547261696E65722E466F6E742E426F6C64203A3D20547275653B0D0A202020
+            20202020547261696E65722E466F6E742E556E6465726C696E65203A3D205472
+            75653B2020202020200D0A202020656E643B0D0A0D0A20200D0A656E643B0D0A
+            0D436F6D706F6E656E744E616D650607547261696E6572094576656E744E616D
             6506074F6E5072696E74074576656E74494402200001060F5472614576656E74
-            48616E646C65720B50726F6772616D4E616D650612436C617373526174696E67
-            4F6E5072696E740B50726F6772616D54797065070B747450726F636564757265
-            06536F757263650C1501000070726F63656475726520436C617373526174696E
-            674F6E5072696E743B0D0A626567696E0D0A202020436C617373526174696E67
-            2E466F6E742E426F6C64203A3D2046616C73653B0D0A202020436C6173735261
-            74696E672E466F6E742E556E6465726C696E65203A3D2046616C73653B0D0A20
-            20202020202020200D0A20202069662028706C456E74726965735B27436C6173
-            73526174696E6752616E6B275D203D203129207468656E20626567696E0D0A20
-            2020202020436C617373526174696E672E466F6E742E426F6C64203A3D205472
-            75653B0D0A202020202020436C617373526174696E672E466F6E742E556E6465
-            726C696E65203A3D20547275653B0D0A202020656E643B0D0A0D0A656E643B0D
-            0A0D436F6D706F6E656E744E616D65060B436C617373526174696E6709457665
-            6E744E616D6506074F6E5072696E74074576656E74494402200001060F547261
-            4576656E7448616E646C65720B50726F6772616D4E616D65061544697374616E
-            6365526174696E674F6E5072696E740B50726F6772616D54797065070B747450
-            726F63656475726506536F757263650C2B01000070726F636564757265204469
-            7374616E6365526174696E674F6E5072696E743B0D0A626567696E0D0A202020
-            44697374616E6365526174696E672E466F6E742E426F6C64203A3D2046616C73
-            653B0D0A20202044697374616E6365526174696E672E466F6E742E556E646572
-            6C696E65203A3D2046616C73653B0D0A20202020202020202020200D0A202020
-            69662028706C456E74726965735B2744697374616E6365526174696E6752616E
-            6B275D203D203129207468656E20626567696E0D0A2020202020204469737461
-            6E6365526174696E672E466F6E742E426F6C64203A3D20547275653B0D0A2020
-            2020202044697374616E6365526174696E672E466F6E742E556E6465726C696E
-            65203A3D20547275653B0D0A202020656E643B0D0A0D0A0D0A656E643B0D0A0D
-            436F6D706F6E656E744E616D65060E44697374616E6365526174696E67094576
+            48616E646C65720B50726F6772616D4E616D65060D4A6F636B65794F6E507269
+            6E740B50726F6772616D54797065070B747450726F63656475726506536F7572
+            63650C0301000070726F636564757265204A6F636B65794F6E5072696E743B0D
+            0A626567696E0D0A2020204A6F636B65792E466F6E742E426F6C64203A3D2046
+            616C73653B0D0A2020204A6F636B65792E466F6E742E556E6465726C696E6520
+            3A3D2046616C73653B0D0A2020200D0A2020202020696620706C456E74726965
+            735B27546F74616C4A6B7957696E506374275D203E203234207468656E206265
+            67696E0D0A202020202020204A6F636B65792E466F6E742E426F6C64203A3D20
+            547275653B0D0A202020202020204A6F636B65792E466F6E742E556E6465726C
+            696E65203A3D20547275653B2020202020200D0A202020656E643B0D0A202020
+            0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506064A6F636B6579
+            094576656E744E616D6506074F6E5072696E74074576656E7449440220000106
+            0F5472614576656E7448616E646C65720B50726F6772616D4E616D6506164D6F
+            726E696E674C696E65446573634F6E5072696E740B50726F6772616D54797065
+            070B747450726F63656475726506536F7572636506C970726F63656475726520
+            4D6F726E696E674C696E65446573634F6E5072696E743B0D0A626567696E0D0A
+            0D0A2020204D6F726E696E674C696E65446573632E466F6E742E426F6C64203A
+            3D2046616C73653B0D0A20202069662020706C456E74726965735B274D6F726E
+            696E674C696E65546F3152616E6B275D203D2031207468656E20626567696E0D
+            0A2020202020204D6F726E696E674C696E65446573632E466F6E742E426F6C64
+            203A3D20547275653B0D0A202020656E643B0D0A2020200D0A656E643B0D0A0D
+            436F6D706F6E656E744E616D65060F4D6F726E696E674C696E65446573630945
+            76656E744E616D6506074F6E5072696E74074576656E74494402200001060F54
+            72614576656E7448616E646C65720B50726F6772616D4E616D65061253756D6D
+            6172794265666F72655072696E740B50726F6772616D54797065070B74745072
+            6F63656475726506536F75726365063670726F6365647572652053756D6D6172
+            794265666F72655072696E743B0D0A626567696E0D0A0D0A2020200D0A200D0A
+            656E643B0D0A0D436F6D706F6E656E744E616D65060753756D6D617279094576
+            656E744E616D65060B4265666F72655072696E74074576656E74494402180001
+            060F5472614576656E7448616E646C65720B50726F6772616D4E616D6506104F
+            776E65724E616D654F6E5072696E740B50726F6772616D54797065070B747450
+            726F63656475726506536F757263650C1001000070726F636564757265204F77
+            6E65724E616D654F6E5072696E743B0D0A626567696E0D0A2020202020202020
+            20200D0A2020204F776E65724E616D652E466F6E742E426F6C64203A3D204661
+            6C73653B0D0A2020204F776E65724E616D652E466F6E742E556E6465726C696E
+            65203A3D2046616C73653B0D0A2020202020202020200D0A202020696620706C
+            456E74726965735B27497353757065724F776E6572275D207468656E20626567
+            696E0D0A2020202020204F776E65724E616D652E466F6E742E426F6C64203A3D
+            20547275653B0D0A2020202020204F776E65724E616D652E466F6E742E556E64
+            65726C696E65203A3D20547275653B0D0A202020656E643B0D0A0D0A0D0A656E
+            643B0D0A0D436F6D706F6E656E744E616D6506094F776E65724E616D65094576
             656E744E616D6506074F6E5072696E74074576656E74494402200001060F5472
-            614576656E7448616E646C65720B50726F6772616D4E616D6506115475726652
-            6174696E674F6E5072696E740B50726F6772616D54797065070B747450726F63
-            656475726506536F757263650CA301000070726F636564757265205475726652
-            6174696E674F6E5072696E743B0D0A626567696E0D0A20202054757266526174
-            696E672E466F6E742E426F6C64203A3D2046616C73653B0D0A20202054757266
-            526174696E672E466F6E742E556E6465726C696E65203A3D2046616C73653B0D
-            0A2020202020202020200D0A20202069662028706C456E74726965735B275475
-            7266526174696E6752616E6B275D203D203129207468656E20626567696E0D0A
-            20202020202054757266526174696E672E466F6E742E426F6C64203A3D205472
-            75653B0D0A20202054757266526174696E672E466F6E742E556E6465726C696E
-            65203A3D20547275653B0D0A202020656E643B0D0A0D0A202020696620706C52
-            616365735265706F72745B2753757266616365275D203D20275427207468656E
-            20626567696E0D0A2020200954757266526174696E672E56697369626C65203A
-            3D20547275653B0D0A202020656E6420656C736520626567696E0D0A20202009
-            54757266526174696E672E56697369626C65203A3D2046616C73653B0D0A2020
-            20656E643B0D0A2020200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E61
-            6D65060A54757266526174696E67094576656E744E616D6506074F6E5072696E
-            74074576656E74494402200001060F5472614576656E7448616E646C65720B50
-            726F6772616D4E616D6506104D7564526174696E674F6E5072696E740B50726F
-            6772616D54797065070B747450726F63656475726506536F757263650C0F0100
-            0070726F636564757265204D7564526174696E674F6E5072696E743B0D0A6265
-            67696E20200D0A2020204D7564526174696E672E466F6E742E426F6C64203A3D
-            2046616C73653B0D0A2020204D7564526174696E672E466F6E742E556E646572
-            6C696E65203A3D2046616C73653B0D0A2020202020202020200D0A2020206966
-            2028706C456E74726965735B274D7564526174696E6752616E6B275D203D2031
-            29207468656E20626567696E0D0A2020202020204D7564526174696E672E466F
-            6E742E426F6C64203A3D20547275653B0D0A2020202020204D7564526174696E
-            672E466F6E742E556E6465726C696E65203A3D20547275653B0D0A202020656E
-            643B0D0A0D0A0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D650609
-            4D7564526174696E67094576656E744E616D6506074F6E5072696E7407457665
-            6E74494402200001060F5472614576656E7448616E646C65720B50726F677261
-            6D4E616D65061A6C626C4D616964656E53686565744F726465724F6E5072696E
-            740B50726F6772616D54797065070B747450726F63656475726506536F757263
-            650C2201000070726F636564757265206C626C4D616964656E53686565744F72
-            6465724F6E5072696E743B0D0A626567696E0D0A0D0A20200D0A202020206966
-            2028706C52616365735265706F72745B275261636554797065275D203D20274D
-            5357272920206F720D0A20202020202028706C52616365735265706F72745B27
-            5261636554797065275D203D20274D434C2729207468656E20626567696E0D0A
-            202020202020206C626C4D616964656E53686565744F726465722E5669736962
-            6C65203A3D20547275653B0D0A20202020656E6420656C736520626567696E0D
-            0A202020202020206C626C4D616964656E53686565744F726465722E56697369
-            626C65203A3D2046616C73653B2020200D0A0D0A20202020656E643B0D0A0D0A
-            0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506136C626C4D61696465
-            6E53686565744F72646572094576656E744E616D6506074F6E5072696E740745
-            76656E74494402200001060F5472614576656E7448616E646C65720B50726F67
-            72616D4E616D6506174D616964656E53686565744F726465724F6E5072696E74
-            0B50726F6772616D54797065070B747450726F63656475726506536F75726365
-            0C0B01000070726F636564757265204D616964656E53686565744F726465724F
-            6E5072696E743B0D0A626567696E0D0A202069662028706C5261636573526570
-            6F72745B275261636554797065275D203D20274D5357272920206F720D0A2020
-            2020202028706C52616365735265706F72745B275261636554797065275D203D
-            20274D434C2729207468656E20626567696E0D0A202020202020204D61696465
-            6E53686565744F726465722E56697369626C65203A3D20547275653B0D0A2020
-            2020656E6420656C736520626567696E0D0A202020202020204D616964656E53
-            686565744F726465722E56697369626C65203A3D2046616C73653B2020200D0A
-            20202020656E643B0D0A656E643B0D0A0D436F6D706F6E656E744E616D650610
-            4D616964656E53686565744F72646572094576656E744E616D6506074F6E5072
-            696E74074576656E74494402200001060F5472614576656E7448616E646C6572
-            0B50726F6772616D4E616D6506186C626C5475726653686565744F726465724F
+            614576656E7448616E646C65720B50726F6772616D4E616D6506145475726649
+            6E64696361746F724F6E5072696E740B50726F6772616D54797065070B747450
+            726F63656475726506536F7572636506C570726F636564757265205475726649
+            6E64696361746F724F6E5072696E743B0D0A626567696E0D0A2020696620706C
+            52616365735265706F72745B2753757266616365275D203D2027542720746865
+            6E20626567696E0D0A2020200954757266496E64696361746F722E5669736962
+            6C65203A3D20547275653B0D0A202020656E6420656C736520626567696E0D0A
+            2020200954757266496E64696361746F722E56697369626C65203A3D2046616C
+            73653B0D0A202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E74
+            4E616D65060D54757266496E64696361746F72094576656E744E616D6506074F
+            6E5072696E74074576656E74494402200001060F5472614576656E7448616E64
+            6C65720B50726F6772616D4E616D6506154465627574496E64696361746F724F
             6E5072696E740B50726F6772616D54797065070B747450726F63656475726506
-            536F7572636506E470726F636564757265206C626C5475726653686565744F72
-            6465724F6E5072696E743B0D0A626567696E0D0A69662028706C526163657352
-            65706F72745B2753757266616365275D203D2027542729202020202020207468
-            656E20626567696E0D0A202020202020206C626C5475726653686565744F7264
-            65722E56697369626C65203A3D20547275653B0D0A20202020656E6420656C73
-            6520626567696E0D0A202020202020206C626C5475726653686565744F726465
-            722E56697369626C65203A3D2046616C73653B2020200D0A0D0A20202020656E
-            643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506116C626C54
-            75726653686565744F72646572094576656E744E616D6506074F6E5072696E74
-            074576656E74494402200001060F5472614576656E7448616E646C65720B5072
-            6F6772616D4E616D6506155475726653686565744F726465724F6E5072696E74
-            0B50726F6772616D54797065070B747450726F63656475726506536F75726365
-            06D970726F636564757265205475726653686565744F726465724F6E5072696E
-            743B0D0A626567696E0D0A2069662028706C52616365735265706F72745B2753
-            757266616365275D203D2027542729202020202020207468656E20626567696E
-            0D0A2020202020205475726653686565744F726465722E56697369626C65203A
-            3D20547275653B0D0A20202020656E6420656C736520626567696E0D0A202020
-            202020205475726653686565744F726465722E56697369626C65203A3D204661
-            6C73653B2020200D0A20202020656E643B0D0A0D0A656E643B0D0A0D436F6D70
-            6F6E656E744E616D65060E5475726653686565744F72646572094576656E744E
-            616D6506074F6E5072696E74074576656E74494402200000}
+            536F7572636506E470726F636564757265204465627574496E64696361746F72
+            4F6E5072696E743B0D0A626567696E0D0A0D0A2020204465627574496E646963
+            61746F722E56697369626C65203A3D2046616C73653B0D0A2020206966202870
+            6C52616365735265706F72745B275261636554797065275D203D20274D535727
+            29206F722028706C52616365735265706F72745B275261636554797065275D20
+            3D20274D434C272920207468656E20626567696E0D0A09202020446562757449
+            6E64696361746F722E56697369626C65203A3D20547275653B0D0A202020656E
+            643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060E44656275
+            74496E64696361746F72094576656E744E616D6506074F6E5072696E74074576
+            656E74494402200001060F5472614576656E7448616E646C65720B50726F6772
+            616D4E616D650615526F757465496E64696361746F724F6E5072696E740B5072
+            6F6772616D54797065070B747450726F63656475726506536F757263650C2601
+            000070726F63656475726520526F757465496E64696361746F724F6E5072696E
+            743B0D0A626567696E0D0A202020202020202020202020202020202020202020
+            20200D0A202020526F757465496E64696361746F722E56697369626C65203A3D
+            2046616C73653B0D0A2020200D0A20202069662028706C52616365735265706F
+            72745B27526F757465496E64696361746F72275D203C3E202727292020746865
+            6E20626567696E0D0A20202020202069662028706C52616365735265706F7274
+            5B274973526F75746552616365275D203D20547275652920207468656E206265
+            67696E0D0A09202020526F757465496E64696361746F722E56697369626C6520
+            3A3D20547275653B0D0A202020202020656E643B200D0A202020656E643B0D0A
+            0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060E526F757465496E64
+            696361746F72094576656E744E616D6506074F6E5072696E74074576656E7449
+            4402200001060F5472614576656E7448616E646C65720B50726F6772616D4E61
+            6D65060F446179734C6173744F6E5072696E740B50726F6772616D5479706507
+            0B747450726F63656475726506536F757263650CA801000070726F6365647572
+            6520446179734C6173744F6E5072696E743B0D0A626567696E0D0A0D0A094461
+            79734C6173742E466F6E742E426F6C64203A3D2046616C73653B0D0A09446179
+            734C6173742E466F6E742E556E6465726C696E65203A3D2046616C73653B0D0A
+            0D0A202020202020696620706C456E74726965735B27446179734C617374275D
+            203E203435207468656E20626567696E0D0A202020202020202020446179734C
+            6173742E466F6E742E426F6C64203A3D20547275653B0D0A2020202020202020
+            20446179734C6173742E466F6E742E556E6465726C696E65203A3D2046616C73
+            653B0D0A202020202020656E643B0D0A2020202020202020200D0A2020202020
+            20696620706C456E74726965735B27446179734C617374275D203E2039302074
+            68656E20626567696E0D0A202020202020202020446179734C6173742E466F6E
+            742E426F6C64203A3D20547275653B0D0A202020202020202020446179734C61
+            73742E466F6E742E556E6465726C696E65203A3D20547275653B0D0A20202020
+            2020656E643B0D0A0D0A2020202020200D0A2020202020200D0A656E643B0D0A
+            0D436F6D706F6E656E744E616D650608446179734C617374094576656E744E61
+            6D6506074F6E5072696E74074576656E74494402200001060F5472614576656E
+            7448616E646C65720B50726F6772616D4E616D65060C506F7765724F6E507269
+            6E740B50726F6772616D54797065070B747450726F63656475726506536F7572
+            63650C0601000070726F63656475726520506F7765724F6E5072696E743B0D0A
+            626567696E0D0A0D0A20202020696620706C456E74726965735B27506F776572
+            52616E6B275D203D2031207468656E20626567696E0D0A09202020506F776572
+            2E466F6E742E426F6C64203A3D20547275653B0D0A202020202020202020506F
+            7765722E466F6E742E556E6465726C696E65203A3D20547275653B0D0A202020
+            20656E6420656C736520626567696E0D0A09202020506F7765722E466F6E742E
+            426F6C64203A3D2046616C73653B0D0A202020202020202020506F7765722E46
+            6F6E742E556E6465726C696E65203A3D2046616C73653B0D0A202020656E643B
+            200D0A0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D650605506F77
+            6572094576656E744E616D6506074F6E5072696E74074576656E744944022000
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650610
+            6C626C545552464F6E476574546578740B50726F6772616D54797065070B7474
+            50726F63656475726506536F757263650C4E01000070726F636564757265206C
+            626C545552464F6E476574546578742876617220546578743A20537472696E67
+            293B0D0A626567696E0D0A0D0A09696620706C52616365735265706F72745B27
+            53757266616365275D203D20275427207468656E20626567696E0D0A20200909
+            54657874203A3D202754757266273B0D0A202020202020656E643B0D0A096966
+            20706C52616365735265706F72745B2753757266616365275D203D2027412720
+            7468656E20626567696E0D0A2020090954657874203A3D2027416C6C20576561
+            74686572273B0D0A202020202020656E643B0D0A202020202020696620706C52
+            616365735265706F72745B2753757266616365275D203D20274427207468656E
+            20626567696E0D0A2020090954657874203A3D202744495254273B0D0A202020
+            202020656E643B0D0A2020202020200D0A0D0A2020202020200D0A0D0A656E64
+            3B0D0A0D436F6D706F6E656E744E616D6506076C626C54555246094576656E74
+            4E616D6506094F6E47657454657874074576656E74494402350001060F547261
+            4576656E7448616E646C65720B50726F6772616D4E616D650618546F74616C54
+            726E4F776E57696E5063744F6E5072696E740B50726F6772616D54797065070B
+            747450726F63656475726506536F757263650C3901000070726F636564757265
+            20546F74616C54726E4F776E57696E5063744F6E5072696E743B0D0A62656769
+            6E0D0A0D0A202020202020546F74616C54726E4F776E57696E5063742E466F6E
+            742E426F6C64203A3D2046616C73653B0D0A202020202020546F74616C54726E
+            4F776E57696E5063742E466F6E742E556E6465726C696E65203A3D2046616C73
+            653B0D0A2020202020200D0A202020696620706C456E74726965735B27546F74
+            616C54726E4F776E57696E506374275D203E203234207468656E20626567696E
+            0D0A202020202020546F74616C54726E4F776E57696E5063742E466F6E742E42
+            6F6C64203A3D20547275653B0D0A202020202020546F74616C54726E4F776E57
+            696E5063742E466F6E742E556E6465726C696E65203A3D20547275653B0D0A20
+            2020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D650611
+            546F74616C54726E4F776E57696E506374094576656E744E616D6506074F6E50
+            72696E74074576656E74494402200001060F5472614576656E7448616E646C65
+            720B50726F6772616D4E616D65061B51535031737443616C6C52756E5374796C
+            654F6E476574546578740B50726F6772616D54797065070B747450726F636564
+            75726506536F7572636506A270726F6365647572652051535031737443616C6C
+            52756E5374796C654F6E476574546578742876617220546578743A2053747269
+            6E67293B0D0A626567696E0D0A2054657874203A3D20706C456E74726965735B
+            2751535031737443616C6C52756E5374796C65275D202B20272D27202B202049
+            6E74546F53747228706C456E74726965735B2751535031737443616C6C275D29
+            3B0D0A200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506125153
+            5031737443616C6C52756E5374796C65094576656E744E616D6506094F6E4765
+            7454657874074576656E74494402350001060F5472614576656E7448616E646C
+            65720B50726F6772616D4E616D65061951535031737443616C6C52756E537479
+            6C654F6E5072696E740B50726F6772616D54797065070B747450726F63656475
+            726506536F7572636506D770726F6365647572652051535031737443616C6C52
+            756E5374796C654F6E5072696E743B0D0A626567696E0D0A0D0A202020696620
+            706C456E74726965735B274C696665537461727473275D203E2030207468656E
+            20626567696E0D0A2020200951535031737443616C6C52756E5374796C652E56
+            697369626C65203A3D20547275653B0D0A202020656E6420656C736520626567
+            696E0D0A2020200951535031737443616C6C52756E5374796C652E5669736962
+            6C65203A3D2046616C73653B0D0A202020656E643B0D0A2020200D0A656E643B
+            0D0A0D436F6D706F6E656E744E616D65061251535031737443616C6C52756E53
+            74796C65094576656E744E616D6506074F6E5072696E74074576656E74494402
+            200001060F5472614576656E7448616E646C65720B50726F6772616D4E616D65
+            0612436C617373526174696E674F6E5072696E740B50726F6772616D54797065
+            070B747450726F63656475726506536F757263650C1501000070726F63656475
+            726520436C617373526174696E674F6E5072696E743B0D0A626567696E0D0A20
+            2020436C617373526174696E672E466F6E742E426F6C64203A3D2046616C7365
+            3B0D0A202020436C617373526174696E672E466F6E742E556E6465726C696E65
+            203A3D2046616C73653B0D0A2020202020202020200D0A20202069662028706C
+            456E74726965735B27436C617373526174696E6752616E6B275D203D20312920
+            7468656E20626567696E0D0A202020202020436C617373526174696E672E466F
+            6E742E426F6C64203A3D20547275653B0D0A202020202020436C617373526174
+            696E672E466F6E742E556E6465726C696E65203A3D20547275653B0D0A202020
+            656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060B436C
+            617373526174696E67094576656E744E616D6506074F6E5072696E7407457665
+            6E74494402200001060F5472614576656E7448616E646C65720B50726F677261
+            6D4E616D65061544697374616E6365526174696E674F6E5072696E740B50726F
+            6772616D54797065070B747450726F63656475726506536F757263650C2B0100
+            0070726F6365647572652044697374616E6365526174696E674F6E5072696E74
+            3B0D0A626567696E0D0A20202044697374616E6365526174696E672E466F6E74
+            2E426F6C64203A3D2046616C73653B0D0A20202044697374616E636552617469
+            6E672E466F6E742E556E6465726C696E65203A3D2046616C73653B0D0A202020
+            20202020202020200D0A20202069662028706C456E74726965735B2744697374
+            616E6365526174696E6752616E6B275D203D203129207468656E20626567696E
+            0D0A20202020202044697374616E6365526174696E672E466F6E742E426F6C64
+            203A3D20547275653B0D0A20202020202044697374616E6365526174696E672E
+            466F6E742E556E6465726C696E65203A3D20547275653B0D0A202020656E643B
+            0D0A0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060E44697374
+            616E6365526174696E67094576656E744E616D6506074F6E5072696E74074576
+            656E74494402200001060F5472614576656E7448616E646C65720B50726F6772
+            616D4E616D65061154757266526174696E674F6E5072696E740B50726F677261
+            6D54797065070B747450726F63656475726506536F757263650CA30100007072
+            6F6365647572652054757266526174696E674F6E5072696E743B0D0A62656769
+            6E0D0A20202054757266526174696E672E466F6E742E426F6C64203A3D204661
+            6C73653B0D0A20202054757266526174696E672E466F6E742E556E6465726C69
+            6E65203A3D2046616C73653B0D0A2020202020202020200D0A20202069662028
+            706C456E74726965735B2754757266526174696E6752616E6B275D203D203129
+            207468656E20626567696E0D0A20202020202054757266526174696E672E466F
+            6E742E426F6C64203A3D20547275653B0D0A20202054757266526174696E672E
+            466F6E742E556E6465726C696E65203A3D20547275653B0D0A202020656E643B
+            0D0A0D0A202020696620706C52616365735265706F72745B2753757266616365
+            275D203D20275427207468656E20626567696E0D0A2020200954757266526174
+            696E672E56697369626C65203A3D20547275653B0D0A202020656E6420656C73
+            6520626567696E0D0A2020200954757266526174696E672E56697369626C6520
+            3A3D2046616C73653B0D0A202020656E643B0D0A2020200D0A0D0A656E643B0D
+            0A0D436F6D706F6E656E744E616D65060A54757266526174696E67094576656E
+            744E616D6506074F6E5072696E74074576656E74494402200001060F54726145
+            76656E7448616E646C65720B50726F6772616D4E616D6506104D756452617469
+            6E674F6E5072696E740B50726F6772616D54797065070B747450726F63656475
+            726506536F757263650C0F01000070726F636564757265204D7564526174696E
+            674F6E5072696E743B0D0A626567696E20200D0A2020204D7564526174696E67
+            2E466F6E742E426F6C64203A3D2046616C73653B0D0A2020204D756452617469
+            6E672E466F6E742E556E6465726C696E65203A3D2046616C73653B0D0A202020
+            2020202020200D0A20202069662028706C456E74726965735B274D7564526174
+            696E6752616E6B275D203D203129207468656E20626567696E0D0A2020202020
+            204D7564526174696E672E466F6E742E426F6C64203A3D20547275653B0D0A20
+            20202020204D7564526174696E672E466F6E742E556E6465726C696E65203A3D
+            20547275653B0D0A202020656E643B0D0A0D0A0D0A0D0A656E643B0D0A0D436F
+            6D706F6E656E744E616D6506094D7564526174696E67094576656E744E616D65
+            06074F6E5072696E74074576656E74494402200001060F5472614576656E7448
+            616E646C65720B50726F6772616D4E616D65061A6C626C4D616964656E536865
+            65744F726465724F6E5072696E740B50726F6772616D54797065070B74745072
+            6F63656475726506536F757263650C2201000070726F636564757265206C626C
+            4D616964656E53686565744F726465724F6E5072696E743B0D0A626567696E0D
+            0A0D0A20200D0A2020202069662028706C52616365735265706F72745B275261
+            636554797065275D203D20274D5357272920206F720D0A20202020202028706C
+            52616365735265706F72745B275261636554797065275D203D20274D434C2729
+            207468656E20626567696E0D0A202020202020206C626C4D616964656E536865
+            65744F726465722E56697369626C65203A3D20547275653B0D0A20202020656E
+            6420656C736520626567696E0D0A202020202020206C626C4D616964656E5368
+            6565744F726465722E56697369626C65203A3D2046616C73653B2020200D0A0D
+            0A20202020656E643B0D0A0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E
+            616D6506136C626C4D616964656E53686565744F72646572094576656E744E61
+            6D6506074F6E5072696E74074576656E74494402200001060F5472614576656E
+            7448616E646C65720B50726F6772616D4E616D6506174D616964656E53686565
+            744F726465724F6E5072696E740B50726F6772616D54797065070B747450726F
+            63656475726506536F757263650C0B01000070726F636564757265204D616964
+            656E53686565744F726465724F6E5072696E743B0D0A626567696E0D0A202069
+            662028706C52616365735265706F72745B275261636554797065275D203D2027
+            4D5357272920206F720D0A20202020202028706C52616365735265706F72745B
+            275261636554797065275D203D20274D434C2729207468656E20626567696E0D
+            0A202020202020204D616964656E53686565744F726465722E56697369626C65
+            203A3D20547275653B0D0A20202020656E6420656C736520626567696E0D0A20
+            2020202020204D616964656E53686565744F726465722E56697369626C65203A
+            3D2046616C73653B2020200D0A20202020656E643B0D0A656E643B0D0A0D436F
+            6D706F6E656E744E616D6506104D616964656E53686565744F72646572094576
+            656E744E616D6506074F6E5072696E74074576656E74494402200001060F5472
+            614576656E7448616E646C65720B50726F6772616D4E616D6506186C626C5475
+            726653686565744F726465724F6E5072696E740B50726F6772616D5479706507
+            0B747450726F63656475726506536F7572636506E470726F636564757265206C
+            626C5475726653686565744F726465724F6E5072696E743B0D0A626567696E0D
+            0A69662028706C52616365735265706F72745B2753757266616365275D203D20
+            27542729202020202020207468656E20626567696E0D0A202020202020206C62
+            6C5475726653686565744F726465722E56697369626C65203A3D20547275653B
+            0D0A20202020656E6420656C736520626567696E0D0A202020202020206C626C
+            5475726653686565744F726465722E56697369626C65203A3D2046616C73653B
+            2020200D0A0D0A20202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E
+            656E744E616D6506116C626C5475726653686565744F72646572094576656E74
+            4E616D6506074F6E5072696E74074576656E74494402200001060F5472614576
+            656E7448616E646C65720B50726F6772616D4E616D6506155475726653686565
+            744F726465724F6E5072696E740B50726F6772616D54797065070B747450726F
+            63656475726506536F7572636506D970726F6365647572652054757266536865
+            65744F726465724F6E5072696E743B0D0A626567696E0D0A2069662028706C52
+            616365735265706F72745B2753757266616365275D203D202754272920202020
+            2020207468656E20626567696E0D0A2020202020205475726653686565744F72
+            6465722E56697369626C65203A3D20547275653B0D0A20202020656E6420656C
+            736520626567696E0D0A202020202020205475726653686565744F726465722E
+            56697369626C65203A3D2046616C73653B2020200D0A20202020656E643B0D0A
+            0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060E5475726653686565
+            744F72646572094576656E744E616D6506074F6E5072696E74074576656E7449
+            4402200000}
         end
       end
     end

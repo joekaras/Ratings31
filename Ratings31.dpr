@@ -29,7 +29,6 @@ uses
   ReportGimmick in 'ReportGimmick.pas' {GimmickReportForm},
   ReportSelection in 'ReportSelection.pas' {SelectionReportForm},
   ReportTip in 'ReportTip.pas' {TipReportForm},
-  ReportHospital2 in 'ReportHospital2.pas' {HospitalReport2Form},
   ReportValue in 'ReportValue.pas' {ValueReportForm},
   FormOptions in 'FormOptions.pas' {OptionsForm},
   UnitCommonCode in 'UnitCommonCode.pas',
@@ -99,9 +98,10 @@ uses
   UnitProcessTSNLists in 'UnitProcessTSNLists.pas',
   unitProcessTSNChanges in 'unitProcessTSNChanges.pas',
   UnitTSNImport in 'UnitTSNImport.pas',
-  ReportHospital in 'ReportHospital.pas' {HospitalReportForm},
   UnitHDWImportJCP in 'UnitHDWImportJCP.pas',
-  UnitUpdateHDW in 'UnitUpdateHDW.pas';
+  UnitUpdateHDW in 'UnitUpdateHDW.pas',
+  ReportHospital2 in 'ReportHospital2.pas' {HospitalReport2Form},
+  ReportHospital in 'ReportHospital.pas' {HospitalReportForm};
 
 {$R *.RES}
 
@@ -110,6 +110,7 @@ begin
    Application.CreateForm(TMainForm, MainForm);
   Application.CreateForm(Tdm, dm);
   Application.CreateForm(TdmDbf, dmDbf);
+  Application.CreateForm(THospitalReport2Form, HospitalReport2Form);
   Application.CreateForm(THospitalReportForm, HospitalReportForm);
   Application.Run;
 end.

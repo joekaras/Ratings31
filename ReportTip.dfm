@@ -57,10 +57,11 @@ object TipReportForm: TTipReportForm
   object dbTipSheets: TDBISAMDatabase
     EngineVersion = '4.24 Build 1'
     DatabaseName = 'dbTipSheets'
-    Directory = 'd:\RatingsData31'
+    Directory = 'C:\RatingsData31'
     KeepConnection = False
     KeepTablesOpen = False
     SessionName = 'Default'
+    BeforeConnect = dbTipSheetsBeforeConnect
     Left = 320
     Top = 152
   end
@@ -5821,6 +5822,8 @@ object TipReportForm: TTipReportForm
         mmHeight = 0
         mmPrintPosition = 0
       end
+    end
+    object daDataModule1: TdaDataModule
     end
     object raCodeModule1: TraCodeModule
       ProgramStream = {

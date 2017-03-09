@@ -81,12 +81,14 @@ type
     ppGroupHeaderBand1: TppGroupHeaderBand;
     ppGroupFooterBand1: TppGroupFooterBand;
     raCodeModule1: TraCodeModule;
+    daDataModule1: TdaDataModule;
       procedure FormCreate(Sender: TObject);
       procedure FormDestroy(Sender: TObject);
       procedure btnCreatePdfClick(Sender: TObject);
       procedure FormActivate(Sender: TObject);
       procedure timCloseFormCheckTimer(Sender: TObject);
       procedure GenerateReport(sFilePath: string);
+    procedure dbTipSheetsBeforeConnect(Sender: TObject);
    private
       { Private declarations }
       bCreateReportsActive: boolean;
@@ -304,6 +306,11 @@ begin
       Close;
    end;
 
+end;
+
+procedure TTipReportForm.dbTipSheetsBeforeConnect(Sender: TObject);
+begin
+  dbTipSheets.Directory := DATA_PATH;
 end;
 
 end.
