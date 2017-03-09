@@ -6815,7 +6815,7 @@ begin
       hLog.AddToLog('Create TSN Reports - End', msevOperation);
    end;
 
-   //
+  
    if chkCreateHospitalReport.Checked then begin
       hLog.AddToLog('Create Hospital Reports - Start', msevOperation);
       try
@@ -6836,7 +6836,7 @@ begin
    if chkCreateHospitalReport.Checked then begin
       hLog.AddToLog('Create Hospital2 Reports - Start', msevOperation);
       try
-         if not assigned(HospitalReportForm) then begin
+         if not assigned(HospitalReport2Form) then begin
             HospitalReport2Form := THospitalReport2Form.Create(Application);
          end;
          try
@@ -8930,8 +8930,6 @@ begin
                end;
 
 
-
-
                iniFile.WriteInteger('Processing', 'ResultsProcessed', 1);
                gbSuppressTimerOn := False;
                TimerOn(True);
@@ -8983,7 +8981,6 @@ begin
 
 
                   //ImportTSNForToday(Sender);
-
                   ImportHDWForToday(Sender);
 
                   chkCreateExportFiles.Checked := True;

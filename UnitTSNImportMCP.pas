@@ -1124,6 +1124,8 @@ begin
             iCnt := lstS.Count;
 
             strack := StringListTrim(lstS[1 - 1]);
+
+
             sraceDate := StringListTrim(lstS[2 - 1]);
             sraceNum := StringListTrim(lstS[3 - 1]);
             spostPosition := StringListTrim(lstS[4 - 1]);

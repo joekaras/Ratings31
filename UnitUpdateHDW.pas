@@ -413,15 +413,28 @@ begin
             iCnt := lstS.Count;
 
             sTrack := StringListTrim(lstS[1 - 1]);
+            sTrack := FastReplace(sTrack, 'CTX', 'CT');
+            sTrack := FastReplace(sTrack, 'SAX', 'SA');
+            sTrack := FastReplace(sTrack, 'GPX', 'GP');
+            sTrack := FastReplace(sTrack, 'APX', 'AP');
+            sTrack := FastReplace(sTrack, 'FGX', 'FG');
+            sTrack := FastReplace(sTrack, 'FLX', 'FL');
+            sTrack := FastReplace(sTrack, 'FPX', 'FP');
+            sTrack := FastReplace(sTrack, 'LAX', 'LA');
+            sTrack := FastReplace(sTrack, 'LSX', 'LS');
+            sTrack := FastReplace(sTrack, 'RPX', 'RP');
+            sTrack := FastReplace(sTrack, 'TPX', 'TP');
+            sTrack := FastReplace(sTrack, 'CDX', 'CD');
+            sTrack := FastReplace(sTrack, 'GGX', 'GG');
+            sTrack := FastReplace(sTrack, 'KDX', 'KD');
+            sTrack := FastReplace(sTrack, 'OPX', 'OP');
+            sTrack := FastReplace(sTrack, 'WOX', 'WO');
+            sTrack := FastReplace(sTrack, 'SRX', 'SR');
 
             sDate := StringListTrim(lstS[2 - 1]);
             sRaceNbr := StringListTrim(lstS[3 - 1]);
             sPostPos := StringListTrim(lstS[4 - 1]);
-            if (sTrack = 'CD') then begin
-               if (atoi(sRaceNbr) = 2) then begin
-                  sPostPos := StringListTrim(lstS[4 - 1]);
-               end;
-            end;
+
 
             sTodaysRaceClassification := StringListTrim(lstS[11 - 1]);
             // sRaceConditions := StringListTrim(lstS[16 - 1]);

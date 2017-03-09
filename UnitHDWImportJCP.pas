@@ -2603,6 +2603,26 @@ begin
             iCnt := lstS.Count;
 
             strack := StringListTrim(lstS[1 - 1]);
+
+            strack := FastReplace(strack, 'CTX', 'CT');
+            strack := FastReplace(strack, 'SAX', 'SA');
+            strack := FastReplace(strack, 'GPX', 'GP');
+            strack := FastReplace(strack, 'APX', 'AP');
+            strack := FastReplace(strack, 'FGX', 'FG');
+            strack := FastReplace(strack, 'FLX', 'FL');
+            strack := FastReplace(strack, 'FPX', 'FP');
+            strack := FastReplace(strack, 'LAX', 'LA');
+            strack := FastReplace(strack, 'LSX', 'LS');
+            strack := FastReplace(strack, 'RPX', 'RP');
+            strack := FastReplace(strack, 'TPX', 'TP');
+            strack := FastReplace(strack, 'CDX', 'CD');
+            strack := FastReplace(strack, 'GGX', 'GG');
+            strack := FastReplace(strack, 'KDX', 'KD');
+            strack := FastReplace(strack, 'OPX', 'OP');
+            strack := FastReplace(strack, 'WOX', 'WO');
+            strack := FastReplace(strack, 'SRX', 'SR');
+
+
             sraceDate := StringListTrim(lstS[2 - 1]);
             sraceNum := StringListTrim(lstS[3 - 1]);
             spostPosition := StringListTrim(lstS[4 - 1]);

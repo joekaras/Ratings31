@@ -1,29 +1,16 @@
-3/8/2017 4:12:51 PM [Operation] ProcessTodays
-3/8/2017 4:12:51 PM [Operation] Start Of Day : 3/8/2017
-3/8/2017 4:12:51 PM [Operation] Import Todays HDW For History 
-3/8/2017 4:13:20 PM [Operation] btnDownloadTsnResults
-3/8/2017 4:15:03 PM [Exception] Cannot generate report.
-
-Could not open DataSet.: plRacesReport
-3/8/2017 4:32:38 PM [Operation] Create Reports 
-3/8/2017 4:32:38 PM [Operation] Create Hospital Reports - Start
-3/8/2017 4:33:16 PM [Operation] Create Hospital Reports - End
-3/8/2017 4:33:16 PM [Operation] Create Hospital2 Reports - Start
-3/8/2017 4:35:19 PM [Operation] Create Hospital2 Reports - End
-3/8/2017 5:01:42 PM [Exception] Access violation at address 00C57A1C in module 'ratings31.exe'. Read of address 00000000
-3/8/2017 5:31:19 PM [Operation] Create Reports 
-3/8/2017 5:31:19 PM [Operation] Create Hospital Reports - Start
-3/8/2017 5:31:56 PM [Operation] Create Hospital Reports - End
-3/8/2017 5:31:56 PM [Operation] Create Hospital2 Reports - Start
-3/8/2017 5:34:06 PM [Operation] ProcessTodays
-3/8/2017 5:34:06 PM [Operation] Start Of Day : 3/8/2017
-3/8/2017 5:34:07 PM [Operation] Import Todays HDW For History 
-3/8/2017 5:34:36 PM [Operation] btnDownloadTsnResults
-3/8/2017 5:36:38 PM [Exception] Cannot generate report.
-
-Could not open DataSet.: plRacesReport
-3/8/2017 5:50:18 PM [Operation] ProcessTodays
-3/8/2017 5:50:18 PM [Operation] Start Of Day : 3/8/2017
-3/8/2017 5:50:19 PM [Operation] Import Todays HDW For History 
-3/8/2017 5:50:48 PM [Operation] btnDownloadTsnResults
-3/8/2017 6:01:41 PM [Exception] Access violation at address 00C60384 in module 'ratings31.exe'. Read of address 00000000
+3/9/2017 10:23:04 AM [Exception] Access violation at address 00C604DC in module 'Ratings31.exe'. Read of address 00000000
+3/9/2017 10:31:40 AM [Exception] Access violation at address 00C604DC in module 'Ratings31.exe'. Read of address 00000000
+3/9/2017 11:31:41 AM [Exception] Access violation at address 00C604DC in module 'ratings31.exe'. Read of address 00000000
+3/9/2017 12:26:15 PM [Exception] Access violation at address 00C60994 in module 'Ratings31.exe'. Read of address 00000000
+3/9/2017 12:31:40 PM [Exception] Access violation at address 00C60994 in module 'ratings31.exe'. Read of address 00000000
+3/9/2017 1:02:40 PM [Exception] Access violation at address 00C60994 in module 'ratings31.exe'. Read of address 00000000
+3/9/2017 2:01:40 PM [Exception] Access violation at address 00C60994 in module 'ratings31.exe'. Read of address 00000000
+3/9/2017 2:31:13 PM [Operation] Start Of Day : 3/9/2017
+3/9/2017 2:31:24 PM [Operation] ProcessTodays
+3/9/2017 2:31:24 PM [Operation] Start Of Day : 3/9/2017
+3/9/2017 2:31:24 PM [Operation] Import Todays HDW For History 
+3/9/2017 2:34:13 PM [Operation] Start Of Day : 3/9/2017
+3/9/2017 2:34:31 PM [Operation] ProcessTodays
+3/9/2017 2:34:31 PM [Operation] Start Of Day : 3/9/2017
+3/9/2017 2:34:31 PM [Operation] Import Todays HDW For History 
+3/9/2017 2:35:25 PM [Operation] btnDownloadTsnResults
