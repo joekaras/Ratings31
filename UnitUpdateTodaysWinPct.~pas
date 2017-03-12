@@ -208,8 +208,7 @@ begin
 
                // Default to morning line
                //sTodaysKey := GetMorningLineKeyTrkCodeRaceType(tblR, tblE);
-               sTodaysKey := GetMorningLineKeyTrkCodePower(tblR, tblE);
-
+               sTodaysKey := GetMorningLineKeyPower(tblR, tblE);
                if (sTodaysKey <> '') then begin
                   tblF.IndexName := '';
                   tblF.SetKey();
@@ -231,7 +230,6 @@ begin
 
                // Override if enough starts
                sTodaysKey := GetMorningLineKeyTrkCodePower(tblR, tblE);
-
                if (sTodaysKey <> '') then begin
                   tblF.IndexName := '';
                   tblF.SetKey();
@@ -244,7 +242,7 @@ begin
                         tblE.FieldByName('FinalOrderValueBet').AsFloat := tblF.FieldByName('ValueBet').AsFloat;
                      end;
 
-                     if (tblF.FieldByName('Starts').AsInteger >= 4) then begin
+                     if (tblF.FieldByName('Starts').AsInteger >= 16) then begin
                         if (UpperCase(tblE.TableName) = 'ENTRY') then begin
                            tblE.FieldByName('TodaysWagerOrderKey').AsString := sTodaysKey;
                         end;
@@ -395,18 +393,16 @@ begin
                      tblTC.FieldByName('Category').AsString := '1st time str';
 
                      if (tblTC.GotoKey()) then begin
-                        if (tblTC.FieldByName('Starts').AsInteger >= 4) then begin
-                           if (tblTC.FieldByName('WinPct').AsFloat > fSaveWinPct) then begin
-                              tblE.FieldByName('TodaysWagerOrderKey').AsString := 'TrnDebut';
-                              tblE.FieldByName('TotalTrnDebutWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
-                              tblE.FieldByName('TodaysWagerWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
-                              tblE.FieldByName('TodaysWagerStarts').AsFloat := tblTC.FieldByName('Starts').AsFloat;
-                              tblE.FieldByName('TodaysWagerMaxWinOdds').AsFloat := 0;
-                              if (UpperCase(tblE.TableName) = 'ENTRY') then begin
-                                 fSaveWinPct := tblE.FieldByName('TodaysWagerWinPct').AsFloat;
-                                 iSaveStarts := tblE.FieldByName('TodaysWagerStarts').AsInteger;
-                                 sSaveOrderKey := sTodaysKey;
-                              end;
+                        if (tblTC.FieldByName('Starts').AsInteger >= 8) then begin
+                           tblE.FieldByName('TodaysWagerOrderKey').AsString := 'TrnDebut';
+                           tblE.FieldByName('TotalTrnDebutWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
+                           tblE.FieldByName('TodaysWagerWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
+                           tblE.FieldByName('TodaysWagerStarts').AsFloat := tblTC.FieldByName('Starts').AsFloat;
+                           tblE.FieldByName('TodaysWagerMaxWinOdds').AsFloat := 0;
+                           if (UpperCase(tblE.TableName) = 'ENTRY') then begin
+                              fSaveWinPct := tblE.FieldByName('TodaysWagerWinPct').AsFloat;
+                              iSaveStarts := tblE.FieldByName('TodaysWagerStarts').AsInteger;
+                              sSaveOrderKey := sTodaysKey;
                            end;
                         end;
                      end;
@@ -418,18 +414,16 @@ begin
                      tblTC.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
                      tblTC.FieldByName('Category').AsString := '2nd career race';
                      if (tblTC.GotoKey()) then begin
-                        if (tblTC.FieldByName('Starts').AsInteger >= 4) then begin
-                           if (tblTC.FieldByName('WinPct').AsFloat > fSaveWinPct) then begin
-                              tblE.FieldByName('TodaysWagerOrderKey').AsString := 'TrnTwoDebut';
-                              tblE.FieldByName('TotalTrnDebutTwoWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
-                              tblE.FieldByName('TodaysWagerWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
-                              tblE.FieldByName('TodaysWagerStarts').AsFloat := tblTC.FieldByName('Starts').AsFloat;
-                              tblE.FieldByName('TodaysWagerMaxWinOdds').AsFloat := 0;
-                              if (UpperCase(tblE.TableName) = 'ENTRY') then begin
-                                 fSaveWinPct := tblE.FieldByName('TodaysWagerWinPct').AsFloat;
-                                 iSaveStarts := tblE.FieldByName('TodaysWagerStarts').AsInteger;
-                                 sSaveOrderKey := sTodaysKey;
-                              end;
+                        if (tblTC.FieldByName('Starts').AsInteger >= 8) then begin
+                           tblE.FieldByName('TodaysWagerOrderKey').AsString := 'TrnTwoDebut';
+                           tblE.FieldByName('TotalTrnDebutTwoWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
+                           tblE.FieldByName('TodaysWagerWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
+                           tblE.FieldByName('TodaysWagerStarts').AsFloat := tblTC.FieldByName('Starts').AsFloat;
+                           tblE.FieldByName('TodaysWagerMaxWinOdds').AsFloat := 0;
+                           if (UpperCase(tblE.TableName) = 'ENTRY') then begin
+                              fSaveWinPct := tblE.FieldByName('TodaysWagerWinPct').AsFloat;
+                              iSaveStarts := tblE.FieldByName('TodaysWagerStarts').AsInteger;
+                              sSaveOrderKey := sTodaysKey;
                            end;
                         end;
                      end;
@@ -439,22 +433,21 @@ begin
 
                tblE.FieldByName('IsEliminated').AsBoolean := False;
 
-
                sTodaysKey := GetElimKey(tblR, tblE);
                if (sTodaysKey = 'NONE') then begin
                   tblF.IndexName := '';
                   tblF.SetKey();
                   tblF.FieldByName('OrderKey').AsString := 'NONE';
                   if (tblF.GotoKey()) then begin
-                     if (UpperCase(tblE.TableName) = 'ENTRY') then begin
-                        tblE.FieldByName('TodaysWagerOrderKey').AsString := 'Elim-1';
-                     end;
-                     SetFlds();
-                     if (UpperCase(tblE.TableName) = 'ENTRY') then begin
-                        fSaveWinPct := tblE.FieldByName('TodaysWagerWinPct').AsFloat;
-                        iSaveStarts := tblE.FieldByName('TodaysWagerStarts').AsInteger;
-                        sSaveOrderKey := 'Elim-1';
-                     end;
+                     //if (UpperCase(tblE.TableName) = 'ENTRY') then begin
+                     //   tblE.FieldByName('TodaysWagerOrderKey').AsString := 'Elim-1';
+                     //end;
+                     //SetFlds();
+                     //if (UpperCase(tblE.TableName) = 'ENTRY') then begin
+                     //   fSaveWinPct := tblE.FieldByName('TodaysWagerWinPct').AsFloat;
+                     //   iSaveStarts := tblE.FieldByName('TodaysWagerStarts').AsInteger;
+                     //   sSaveOrderKey := 'Elim-1';
+                     //end;
                      tblE.FieldByName('ElimWinPct').AsFloat := tblF.FieldByName('WinPct').AsFloat;
                   end;
                end;
@@ -465,19 +458,19 @@ begin
                   tblF.SetKey();
                   tblF.FieldByName('OrderKey').AsString := 'NONE2';
                   if (tblF.GotoKey()) then begin
-                     if (UpperCase(tblE.TableName) = 'ENTRY') then begin
-                        tblE.FieldByName('TodaysWagerOrderKey').AsString := 'Elim-2';
-                     end;
-                     SetFlds();
-                     if (UpperCase(tblE.TableName) = 'ENTRY') then begin
-                        fSaveWinPct := tblE.FieldByName('TodaysWagerWinPct').AsFloat;
-                        iSaveStarts := tblE.FieldByName('TodaysWagerStarts').AsInteger;
-                        sSaveOrderKey := 'Elim-2';
-                     end;
+                     //if (UpperCase(tblE.TableName) = 'ENTRY') then begin
+                     //   tblE.FieldByName('TodaysWagerOrderKey').AsString := 'Elim-2';
+                     //end;
+                     //SetFlds();
+                     //if (UpperCase(tblE.TableName) = 'ENTRY') then begin
+                     //   fSaveWinPct := tblE.FieldByName('TodaysWagerWinPct').AsFloat;
+                     //   iSaveStarts := tblE.FieldByName('TodaysWagerStarts').AsInteger;
+                     //   sSaveOrderKey := 'Elim-2';
+                     //end;
                      tblE.FieldByName('Elim2WinPct').AsFloat := tblF.FieldByName('WinPct').AsFloat;
                   end;
                end;
-               
+
 
 
                if (tblE.FieldByName('EarlyPaceRank').AsInteger = 1) then begin

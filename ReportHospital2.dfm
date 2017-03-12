@@ -1,6 +1,6 @@
 object HospitalReport2Form: THospitalReport2Form
-  Left = 538
-  Top = 148
+  Left = 83
+  Top = 178
   Width = 576
   Height = 333
   Caption = 'Hospital Report 2'
@@ -1384,7 +1384,7 @@ object HospitalReport2Form: THospitalReport2Form
           object aTitleBand: TppTitleBand
             PrintHeight = phDynamic
             mmBottomOffset = 0
-            mmHeight = 31750
+            mmHeight = 37465
             mmPrintPosition = 0
             object RaceDesc: TppDBText
               UserName = 'RaceDesc'
@@ -1417,13 +1417,12 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2709
               mmLeft = 1270
-              mmTop = 15875
+              mmTop = 21590
               mmWidth = 2963
               BandType = 1
             end
             object ppLabel6: TppLabel
               UserName = 'Label6'
-              AutoSize = False
               Caption = 'HORSE'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
@@ -1433,7 +1432,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 5503
-              mmTop = 16510
+              mmTop = 22225
               mmWidth = 5292
               BandType = 1
             end
@@ -1448,7 +1447,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 44238
-              mmTop = 17357
+              mmTop = 23072
               mmWidth = 6350
               BandType = 1
             end
@@ -1464,7 +1463,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 126788
-              mmTop = 17145
+              mmTop = 22860
               mmWidth = 3175
               BandType = 1
             end
@@ -1479,7 +1478,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 22437
-              mmTop = 17357
+              mmTop = 23072
               mmWidth = 7408
               BandType = 1
             end
@@ -1496,7 +1495,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2371
               mmLeft = 54187
-              mmTop = 21167
+              mmTop = 26882
               mmWidth = 11430
               BandType = 1
             end
@@ -1512,7 +1511,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 27517
-              mmTop = 20532
+              mmTop = 26247
               mmWidth = 3175
               BandType = 1
             end
@@ -1528,7 +1527,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2117
               mmLeft = 47413
-              mmTop = 20532
+              mmTop = 26247
               mmWidth = 3175
               BandType = 1
             end
@@ -1543,7 +1542,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 423
-              mmTop = 22013
+              mmTop = 27728
               mmWidth = 14817
               BandType = 1
             end
@@ -1558,7 +1557,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 423
-              mmTop = 19897
+              mmTop = 25612
               mmWidth = 20108
               BandType = 1
             end
@@ -1575,7 +1574,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2371
               mmLeft = 67522
-              mmTop = 15875
+              mmTop = 21590
               mmWidth = 19050
               BandType = 1
             end
@@ -1591,7 +1590,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 54399
-              mmTop = 24130
+              mmTop = 29845
               mmWidth = 3175
               BandType = 1
             end
@@ -1607,7 +1606,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 62231
-              mmTop = 24130
+              mmTop = 29845
               mmWidth = 3175
               BandType = 1
             end
@@ -1623,7 +1622,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 36618
-              mmTop = 20532
+              mmTop = 26247
               mmWidth = 3175
               BandType = 1
             end
@@ -1638,7 +1637,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 23918
-              mmTop = 20532
+              mmTop = 26247
               mmWidth = 2117
               BandType = 1
             end
@@ -1654,7 +1653,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 57997
-              mmTop = 24130
+              mmTop = 29845
               mmWidth = 3175
               BandType = 1
             end
@@ -1670,13 +1669,12 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 82762
-              mmTop = 18838
+              mmTop = 24553
               mmWidth = 3175
               BandType = 1
             end
             object ppLabel19: TppLabel
               UserName = 'Label19'
-              AutoSize = False
               Caption = '2ND'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
@@ -1686,14 +1684,13 @@ object HospitalReport2Form: THospitalReport2Form
               TextAlignment = taCentered
               Transparent = True
               mmHeight = 2074
-              mmLeft = 71332
-              mmTop = 18838
-              mmWidth = 2963
+              mmLeft = 71226
+              mmTop = 24553
+              mmWidth = 3175
               BandType = 1
             end
             object ppLabel18: TppLabel
               UserName = 'Label18'
-              AutoSize = False
               Caption = '1ST'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
@@ -1703,14 +1700,13 @@ object HospitalReport2Form: THospitalReport2Form
               TextAlignment = taCentered
               Transparent = True
               mmHeight = 2074
-              mmLeft = 67945
-              mmTop = 18838
-              mmWidth = 2752
+              mmLeft = 67734
+              mmTop = 24553
+              mmWidth = 3175
               BandType = 1
             end
             object ppLabel35: TppLabel
               UserName = 'Label35'
-              AutoSize = False
               Caption = 'SC'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
@@ -1719,15 +1715,14 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2117
+              mmHeight = 2074
               mmLeft = 79163
-              mmTop = 18838
+              mmTop = 24553
               mmWidth = 2117
               BandType = 1
             end
             object ppLabel36: TppLabel
               UserName = 'Label36'
-              AutoSize = False
               Caption = 'DC'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
@@ -1736,16 +1731,16 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = [fsBold]
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2117
+              mmHeight = 2074
               mmLeft = 75565
-              mmTop = 18838
+              mmTop = 24553
               mmWidth = 2117
               BandType = 1
             end
             object ppLabel15: TppLabel
               UserName = 'Label15'
               AutoSize = False
-              Caption = 'MT'
+              Caption = '90'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
               Font.Name = 'Courier New'
@@ -1754,7 +1749,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2117
               mmLeft = 42545
-              mmTop = 20532
+              mmTop = 26247
               mmWidth = 2117
               BandType = 1
             end
@@ -1770,7 +1765,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 70908
-              mmTop = 28575
+              mmTop = 34290
               mmWidth = 3175
               BandType = 1
             end
@@ -1787,7 +1782,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2117
               mmLeft = 82973
-              mmTop = 21590
+              mmTop = 27305
               mmWidth = 2963
               BandType = 1
             end
@@ -1803,7 +1798,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2117
               mmLeft = 82762
-              mmTop = 24765
+              mmTop = 30480
               mmWidth = 3175
               BandType = 1
             end
@@ -1818,7 +1813,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 31750
-              mmTop = 24342
+              mmTop = 30057
               mmWidth = 3387
               BandType = 1
             end
@@ -1857,7 +1852,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 87207
-              mmTop = 21802
+              mmTop = 27517
               mmWidth = 8467
               BandType = 1
             end
@@ -1873,7 +1868,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2117
               mmLeft = 75565
-              mmTop = 21802
+              mmTop = 27517
               mmWidth = 2117
               BandType = 1
             end
@@ -1890,7 +1885,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 16298
-              mmTop = 25400
+              mmTop = 31115
               mmWidth = 5080
               BandType = 1
             end
@@ -1974,7 +1969,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 87207
-              mmTop = 19050
+              mmTop = 24765
               mmWidth = 4233
               BandType = 1
             end
@@ -1989,7 +1984,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 102024
-              mmTop = 24977
+              mmTop = 30692
               mmWidth = 3175
               BandType = 1
             end
@@ -2004,7 +1999,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 110702
-              mmTop = 24977
+              mmTop = 30692
               mmWidth = 4233
               BandType = 1
             end
@@ -2021,7 +2016,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 87630
-              mmTop = 28575
+              mmTop = 34290
               mmWidth = 33655
               BandType = 1
             end
@@ -2037,7 +2032,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 104352
-              mmTop = 19050
+              mmTop = 24765
               mmWidth = 16933
               BandType = 1
             end
@@ -2082,7 +2077,6 @@ object HospitalReport2Form: THospitalReport2Form
             end
             object ppLabel11: TppLabel
               UserName = 'Label501'
-              AutoSize = False
               Caption = 'POWER ADVANTAGE'
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
@@ -2092,9 +2086,9 @@ object HospitalReport2Form: THospitalReport2Form
               TextAlignment = taCentered
               Transparent = True
               mmHeight = 2074
-              mmLeft = 6138
-              mmTop = 28575
-              mmWidth = 15240
+              mmLeft = 5821
+              mmTop = 34290
+              mmWidth = 15875
               BandType = 1
             end
             object ppLabel40: TppLabel
@@ -2109,7 +2103,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 124248
-              mmTop = 17145
+              mmTop = 22860
               mmWidth = 2117
               BandType = 1
             end
@@ -2123,9 +2117,9 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
-              mmHeight = 2074
-              mmLeft = 67310
-              mmTop = 28575
+              mmHeight = 2117
+              mmLeft = 67733
+              mmTop = 34290
               mmWidth = 3175
               BandType = 1
             end
@@ -2141,7 +2135,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2117
               mmLeft = 31962
-              mmTop = 20532
+              mmTop = 26247
               mmWidth = 3387
               BandType = 1
             end
@@ -2174,7 +2168,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 106469
-              mmTop = 24977
+              mmTop = 30692
               mmWidth = 3175
               BandType = 1
             end
@@ -2189,7 +2183,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 117052
-              mmTop = 24977
+              mmTop = 30692
               mmWidth = 3175
               BandType = 1
             end
@@ -2222,7 +2216,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plRacesReport'
               mmHeight = 3006
-              mmLeft = 12700
+              mmLeft = 12065
               mmTop = 11642
               mmWidth = 25400
               BandType = 1
@@ -2233,7 +2227,7 @@ object HospitalReport2Form: THospitalReport2Form
               Weight = 0.750000000000000000
               mmHeight = 212
               mmLeft = 0
-              mmTop = 15240
+              mmTop = 20320
               mmWidth = 214630
               BandType = 1
             end
@@ -2334,7 +2328,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plRacesReport'
               mmHeight = 3006
-              mmLeft = 164465
+              mmLeft = 164677
               mmTop = 11642
               mmWidth = 30480
               BandType = 1
@@ -2345,8 +2339,108 @@ object HospitalReport2Form: THospitalReport2Form
               Weight = 0.750000000000000000
               mmHeight = 423
               mmLeft = 0
-              mmTop = 31327
+              mmTop = 37042
               mmWidth = 214630
+              BandType = 1
+            end
+            object ppLabel4: TppLabel
+              UserName = 'Label13'
+              Caption = 'Gap'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 8
+              Font.Style = []
+              mmHeight = 3006
+              mmLeft = 33867
+              mmTop = 15875
+              mmWidth = 5080
+              BandType = 1
+            end
+            object ppLabel13: TppLabel
+              UserName = 'Label16'
+              ShiftWithParent = True
+              Caption = 'Gap'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 8
+              Font.Style = []
+              mmHeight = 3006
+              mmLeft = 847
+              mmTop = 15875
+              mmWidth = 5080
+              BandType = 1
+            end
+            object ppDBText25: TppDBText
+              UserName = 'WagerSheetOrder2'
+              ShiftWithParent = True
+              AutoSize = True
+              DataField = 'PowerGapOrder'
+              DataPipeline = plRacesReport
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 5
+              Font.Style = []
+              Transparent = True
+              DataPipelineName = 'plRacesReport'
+              mmHeight = 1905
+              mmLeft = 7408
+              mmTop = 16933
+              mmWidth = 13758
+              BandType = 1
+            end
+            object ppDBText26: TppDBText
+              UserName = 'ErlPaceSheetOrder1'
+              AutoSize = True
+              DataField = 'ErlPaceGapOrder'
+              DataPipeline = plRacesReport
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 5
+              Font.Style = []
+              Transparent = True
+              DataPipelineName = 'plRacesReport'
+              mmHeight = 1905
+              mmLeft = 39793
+              mmTop = 16933
+              mmWidth = 15875
+              BandType = 1
+            end
+            object ppLabel16: TppLabel
+              UserName = 'Label17'
+              ShiftWithParent = True
+              Caption = 'Gap'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 8
+              Font.Style = []
+              mmHeight = 3006
+              mmLeft = 91440
+              mmTop = 15875
+              mmWidth = 5080
+              BandType = 1
+            end
+            object ppDBText27: TppDBText
+              UserName = 'DBText27'
+              ShiftWithParent = True
+              AutoSize = True
+              DataField = 'MidPaceGapOrder'
+              DataPipeline = plRacesReport
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 5
+              Font.Style = []
+              Transparent = True
+              DataPipelineName = 'plRacesReport'
+              mmHeight = 1905
+              mmLeft = 97790
+              mmTop = 16933
+              mmWidth = 15875
               BandType = 1
             end
             object TrainerJockeySheetOrder: TppDBText
@@ -2363,7 +2457,7 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plRacesReport'
               mmHeight = 3006
               mmLeft = 157269
-              mmTop = 15875
+              mmTop = 21590
               mmWidth = 38947
               BandType = 1
             end
@@ -2377,7 +2471,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = []
               mmHeight = 3387
               mmLeft = 149225
-              mmTop = 15452
+              mmTop = 21167
               mmWidth = 5715
               BandType = 1
             end
@@ -2395,7 +2489,7 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plRacesReport'
               mmHeight = 3006
               mmLeft = 156845
-              mmTop = 20320
+              mmTop = 26035
               mmWidth = 28787
               BandType = 1
             end
@@ -2409,7 +2503,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = []
               mmHeight = 3387
               mmLeft = 149225
-              mmTop = 19897
+              mmTop = 25612
               mmWidth = 5715
               BandType = 1
             end
@@ -2424,7 +2518,7 @@ object HospitalReport2Form: THospitalReport2Form
               Visible = False
               mmHeight = 3387
               mmLeft = 175472
-              mmTop = 15452
+              mmTop = 21167
               mmWidth = 5715
               BandType = 1
             end
@@ -2439,7 +2533,7 @@ object HospitalReport2Form: THospitalReport2Form
               Visible = False
               mmHeight = 3387
               mmLeft = 175472
-              mmTop = 19897
+              mmTop = 25612
               mmWidth = 7620
               BandType = 1
             end
@@ -2458,7 +2552,7 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plRacesReport'
               mmHeight = 3006
               mmLeft = 185844
-              mmTop = 15875
+              mmTop = 21590
               mmWidth = 27093
               BandType = 1
             end
@@ -2477,8 +2571,22 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plRacesReport'
               mmHeight = 3006
               mmLeft = 185844
-              mmTop = 20320
+              mmTop = 26035
               mmWidth = 23707
+              BandType = 1
+            end
+            object ppLabel17: TppLabel
+              UserName = 'Label21'
+              Caption = 'Gap'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 8
+              Font.Style = []
+              mmHeight = 3006
+              mmLeft = 154729
+              mmTop = 15875
+              mmWidth = 5080
               BandType = 1
             end
             object ppDBText32: TppDBText
@@ -2499,7 +2607,7 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plRacesReport'
               mmHeight = 2371
               mmLeft = 40005
-              mmTop = 28363
+              mmTop = 34078
               mmWidth = 15240
               BandType = 1
             end
@@ -2521,7 +2629,7 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plRacesReport'
               mmHeight = 2371
               mmLeft = 44662
-              mmTop = 28363
+              mmTop = 34078
               mmWidth = 16510
               BandType = 1
             end
@@ -2543,7 +2651,7 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plRacesReport'
               mmHeight = 2371
               mmLeft = 51858
-              mmTop = 28363
+              mmTop = 34078
               mmWidth = 13970
               BandType = 1
             end
@@ -2565,7 +2673,7 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plRacesReport'
               mmHeight = 2371
               mmLeft = 111760
-              mmTop = 28363
+              mmTop = 34078
               mmWidth = 15240
               BandType = 1
             end
@@ -2583,7 +2691,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plRacesReport'
               mmHeight = 3006
-              mmLeft = 134832
+              mmLeft = 135255
               mmTop = 11642
               mmWidth = 33867
               BandType = 1
@@ -2602,7 +2710,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plRacesReport'
               mmHeight = 3006
-              mmLeft = 194734
+              mmLeft = 194945
               mmTop = 11642
               mmWidth = 35560
               BandType = 1
@@ -2621,7 +2729,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plRacesReport'
               mmHeight = 3006
-              mmLeft = 73660
+              mmLeft = 73237
               mmTop = 11642
               mmWidth = 33867
               BandType = 1
@@ -2638,7 +2746,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 124206
-              mmTop = 19685
+              mmTop = 25400
               mmWidth = 2117
               BandType = 1
             end
@@ -2654,7 +2762,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 124248
-              mmTop = 22648
+              mmTop = 28363
               mmWidth = 2117
               BandType = 1
             end
@@ -2670,7 +2778,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 124248
-              mmTop = 25188
+              mmTop = 30903
               mmWidth = 2117
               BandType = 1
             end
@@ -2687,6 +2795,43 @@ object HospitalReport2Form: THospitalReport2Form
               mmLeft = 183304
               mmTop = 11642
               mmWidth = 10160
+              BandType = 1
+            end
+            object ppDBText10: TppDBText
+              UserName = 'DBText1'
+              AutoSize = True
+              DataField = 'LatePaceGapOrder'
+              DataPipeline = plRacesReport
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 5
+              Font.Style = [fsBold]
+              Transparent = True
+              DataPipelineName = 'plRacesReport'
+              mmHeight = 2074
+              mmLeft = 160867
+              mmTop = 16933
+              mmWidth = 16933
+              BandType = 1
+            end
+            object ppDBText14: TppDBText
+              UserName = 'DBText14'
+              ShiftWithParent = True
+              AutoSize = True
+              DataField = 'LatePacePosGapOrder'
+              DataPipeline = plRacesReport
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 5
+              Font.Style = []
+              Transparent = True
+              DataPipelineName = 'plRacesReport'
+              mmHeight = 1905
+              mmLeft = 191982
+              mmTop = 16933
+              mmWidth = 20108
               BandType = 1
             end
             object ppLabel45: TppLabel
@@ -2719,11 +2864,47 @@ object HospitalReport2Form: THospitalReport2Form
               mmWidth = 10160
               BandType = 1
             end
+            object ppDBText28: TppDBText
+              UserName = 'DBText28'
+              AutoSize = True
+              DataField = 'MidPacePosGapOrder'
+              DataPipeline = plRacesReport
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 5
+              Font.Style = [fsBold]
+              Transparent = True
+              DataPipelineName = 'plRacesReport'
+              mmHeight = 2074
+              mmLeft = 131869
+              mmTop = 16933
+              mmWidth = 19050
+              BandType = 1
+            end
+            object ppDBText39: TppDBText
+              UserName = 'DBText39'
+              AutoSize = True
+              DataField = 'ErlPacePosGapOrder'
+              DataPipeline = plRacesReport
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 5
+              Font.Style = []
+              Transparent = True
+              DataPipelineName = 'plRacesReport'
+              mmHeight = 1905
+              mmLeft = 72178
+              mmTop = 16933
+              mmWidth = 19050
+              BandType = 1
+            end
             object ppLine17: TppLine
               UserName = 'Line17'
               Position = lpLeft
               Weight = 0.600000023841857900
-              mmHeight = 3387
+              mmHeight = 7408
               mmLeft = 32173
               mmTop = 11218
               mmWidth = 212
@@ -2733,9 +2914,9 @@ object HospitalReport2Form: THospitalReport2Form
               UserName = 'Line32'
               Position = lpLeft
               Weight = 0.600000023841857900
-              mmHeight = 2540
+              mmHeight = 6562
               mmLeft = 89535
-              mmTop = 11430
+              mmTop = 11853
               mmWidth = 212
               BandType = 1
             end
@@ -2749,7 +2930,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = []
               mmHeight = 3387
               mmLeft = 149225
-              mmTop = 24977
+              mmTop = 30692
               mmWidth = 5715
               BandType = 1
             end
@@ -2767,7 +2948,7 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plRacesReport'
               mmHeight = 3006
               mmLeft = 156845
-              mmTop = 25400
+              mmTop = 31115
               mmWidth = 25400
               BandType = 1
             end
@@ -2785,7 +2966,7 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plRacesReport'
               mmHeight = 3006
               mmLeft = 186055
-              mmTop = 25400
+              mmTop = 31115
               mmWidth = 30480
               BandType = 1
             end
@@ -2799,18 +2980,61 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = []
               mmHeight = 3387
               mmLeft = 175472
-              mmTop = 24977
+              mmTop = 30692
               mmWidth = 7620
+              BandType = 1
+            end
+            object ppLabel56: TppLabel
+              UserName = 'Label56'
+              Caption = 'Avg:'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 8
+              Font.Style = []
+              mmHeight = 3006
+              mmLeft = 63923
+              mmTop = 15875
+              mmWidth = 6773
+              BandType = 1
+            end
+            object ppLabel58: TppLabel
+              UserName = 'Label58'
+              Caption = 'Avg:'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 8
+              Font.Style = []
+              mmHeight = 3006
+              mmLeft = 123825
+              mmTop = 15875
+              mmWidth = 6773
               BandType = 1
             end
             object ppLine34: TppLine
               UserName = 'Line34'
               Position = lpLeft
               Weight = 0.600000023841857900
-              mmHeight = 3175
+              mmHeight = 7620
               mmLeft = 151977
               mmTop = 11218
               mmWidth = 212
+              BandType = 1
+            end
+            object ppLabel62: TppLabel
+              UserName = 'Label62'
+              ShiftWithParent = True
+              Caption = 'Avg:'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 8
+              Font.Style = []
+              mmHeight = 3006
+              mmLeft = 183304
+              mmTop = 15875
+              mmWidth = 6773
               BandType = 1
             end
             object ppLine33: TppLine
@@ -2845,7 +3069,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2074
               mmLeft = 75565
-              mmTop = 28575
+              mmTop = 34290
               mmWidth = 3175
               BandType = 1
             end
@@ -2861,7 +3085,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2117
               mmLeft = 81703
-              mmTop = 28363
+              mmTop = 34078
               mmWidth = 4233
               BandType = 1
             end
@@ -2876,7 +3100,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2117
               mmLeft = 41487
-              mmTop = 23283
+              mmTop = 28998
               mmWidth = 3175
               BandType = 1
             end
@@ -2891,7 +3115,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2117
               mmLeft = 46355
-              mmTop = 23283
+              mmTop = 28998
               mmWidth = 4233
               BandType = 1
             end
@@ -2907,7 +3131,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2117
               mmLeft = 79163
-              mmTop = 21802
+              mmTop = 27517
               mmWidth = 2117
               BandType = 1
             end
@@ -2923,7 +3147,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2117
               mmLeft = 75565
-              mmTop = 24765
+              mmTop = 30480
               mmWidth = 2117
               BandType = 1
             end
@@ -2939,8 +3163,24 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 2117
               mmLeft = 79163
-              mmTop = 24765
+              mmTop = 30480
               mmWidth = 2117
+              BandType = 1
+            end
+            object ppLabel70: TppLabel
+              UserName = 'Label70'
+              Caption = 'Lsx'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 5
+              Font.Style = [fsBold]
+              TextAlignment = taCentered
+              Transparent = True
+              mmHeight = 2074
+              mmLeft = 67733
+              mmTop = 30692
+              mmWidth = 3175
               BandType = 1
             end
           end
@@ -3079,8 +3319,8 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 1905
-              mmLeft = 18785
-              mmTop = 0
+              mmLeft = 18203
+              mmTop = 423
               mmWidth = 3175
               BandType = 4
             end
@@ -3263,9 +3503,9 @@ object HospitalReport2Form: THospitalReport2Form
               Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2328
-              mmLeft = 67522
+              mmLeft = 67310
               mmTop = 0
-              mmWidth = 3175
+              mmWidth = 3387
               BandType = 4
             end
             object MidPace: TppDBText
@@ -3314,7 +3554,7 @@ object HospitalReport2Form: THospitalReport2Form
               UserName = 'Line10'
               Position = lpRight
               Weight = 0.750000000000000000
-              mmHeight = 8731
+              mmHeight = 8255
               mmLeft = 40481
               mmTop = 847
               mmWidth = 265
@@ -3378,7 +3618,7 @@ object HospitalReport2Form: THospitalReport2Form
               Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2328
-              mmLeft = 71120
+              mmLeft = 71332
               mmTop = 0
               mmWidth = 3175
               BandType = 4
@@ -3397,7 +3637,7 @@ object HospitalReport2Form: THospitalReport2Form
               TextAlignment = taRightJustified
               Transparent = True
               mmHeight = 2328
-              mmLeft = 78740
+              mmLeft = 78952
               mmTop = 0
               mmWidth = 3175
               BandType = 4
@@ -3415,8 +3655,8 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
-              mmHeight = 2328
-              mmLeft = 74930
+              mmHeight = 2540
+              mmLeft = 75353
               mmTop = 0
               mmWidth = 3175
               BandType = 4
@@ -3428,7 +3668,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Color = clBlack
               Font.Name = 'Courier New'
               Font.Size = 7
-              Font.Style = [fsBold, fsUnderline]
+              Font.Style = [fsBold]
               TextAlignment = taCentered
               Transparent = True
               mmHeight = 2709
@@ -3487,7 +3727,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2328
-              mmLeft = 71120
+              mmLeft = 71332
               mmTop = 12065
               mmWidth = 3175
               BandType = 4
@@ -3557,9 +3797,9 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2540
-              mmLeft = 67522
-              mmTop = 4233
-              mmWidth = 3175
+              mmLeft = 67310
+              mmTop = 8043
+              mmWidth = 3387
               BandType = 4
             end
             object TotalTrnBlinkersOnWinPct: TppDBText
@@ -3620,7 +3860,7 @@ object HospitalReport2Form: THospitalReport2Form
               Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2540
-              mmLeft = 78740
+              mmLeft = 78952
               mmTop = 4233
               mmWidth = 3175
               BandType = 4
@@ -3641,7 +3881,7 @@ object HospitalReport2Form: THospitalReport2Form
               Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2540
-              mmLeft = 75142
+              mmLeft = 75353
               mmTop = 4233
               mmWidth = 3175
               BandType = 4
@@ -3703,7 +3943,7 @@ object HospitalReport2Form: THospitalReport2Form
               Weight = 0.750000000000000000
               mmHeight = 265
               mmLeft = 51594
-              mmTop = 8467
+              mmTop = 7408
               mmWidth = 14552
               BandType = 4
             end
@@ -3780,8 +4020,8 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 1905
-              mmLeft = 111717
-              mmTop = 9260
+              mmLeft = 111760
+              mmTop = 9737
               mmWidth = 8467
               BandType = 4
             end
@@ -3801,7 +4041,7 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plEntries'
               mmHeight = 1905
               mmLeft = 97367
-              mmTop = 9260
+              mmTop = 9737
               mmWidth = 9525
               BandType = 4
             end
@@ -3820,8 +4060,8 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 1905
-              mmLeft = 102130
-              mmTop = 9260
+              mmLeft = 102235
+              mmTop = 9737
               mmWidth = 7408
               BandType = 4
             end
@@ -3841,7 +4081,7 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plEntries'
               mmHeight = 1905
               mmLeft = 85514
-              mmTop = 9313
+              mmTop = 9737
               mmWidth = 9525
               BandType = 4
             end
@@ -3861,7 +4101,7 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plEntries'
               mmHeight = 1905
               mmLeft = 90012
-              mmTop = 9260
+              mmTop = 9737
               mmWidth = 7408
               BandType = 4
             end
@@ -3874,7 +4114,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Size = 6
               Font.Style = []
               Transparent = True
-              mmHeight = 2244
+              mmHeight = 2328
               mmLeft = 86995
               mmTop = 9313
               mmWidth = 3810
@@ -3889,9 +4129,9 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Size = 6
               Font.Style = []
               Transparent = True
-              mmHeight = 2244
+              mmHeight = 2328
               mmLeft = 99484
-              mmTop = 9260
+              mmTop = 9313
               mmWidth = 3810
               BandType = 4
             end
@@ -3937,7 +4177,7 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               mmHeight = 1905
               mmLeft = 110914
-              mmTop = 9525
+              mmTop = 9737
               mmWidth = 5292
               BandType = 4
             end
@@ -4027,7 +4267,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Size = 6
               Font.Style = []
               Transparent = True
-              mmHeight = 2244
+              mmHeight = 2328
               mmLeft = 99484
               mmTop = 6138
               mmWidth = 3810
@@ -4049,7 +4289,7 @@ object HospitalReport2Form: THospitalReport2Form
               DataPipelineName = 'plEntries'
               mmHeight = 1905
               mmLeft = 95250
-              mmTop = 6350
+              mmTop = 6562
               mmWidth = 11642
               BandType = 4
             end
@@ -4068,8 +4308,8 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 1905
-              mmLeft = 100013
-              mmTop = 6350
+              mmLeft = 100118
+              mmTop = 6562
               mmWidth = 9525
               BandType = 4
             end
@@ -4101,7 +4341,7 @@ object HospitalReport2Form: THospitalReport2Form
               Font.Size = 6
               Font.Style = []
               Transparent = True
-              mmHeight = 2244
+              mmHeight = 2328
               mmLeft = 111125
               mmTop = 6138
               mmWidth = 3810
@@ -4122,8 +4362,8 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 1905
-              mmLeft = 105368
-              mmTop = 6350
+              mmLeft = 105410
+              mmTop = 6562
               mmWidth = 12700
               BandType = 4
             end
@@ -4142,8 +4382,8 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 1905
-              mmLeft = 109601
-              mmTop = 6350
+              mmLeft = 109644
+              mmTop = 6562
               mmWidth = 10583
               BandType = 4
             end
@@ -4177,8 +4417,8 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 1905
-              mmLeft = 84403
-              mmTop = 6350
+              mmLeft = 84456
+              mmTop = 6562
               mmWidth = 10583
               BandType = 4
             end
@@ -4197,8 +4437,8 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 1905
-              mmLeft = 88953
-              mmTop = 6350
+              mmLeft = 88900
+              mmTop = 6562
               mmWidth = 8467
               BandType = 4
             end
@@ -4296,8 +4536,8 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 1905
-              mmLeft = 107485
-              mmTop = 9260
+              mmLeft = 107527
+              mmTop = 9737
               mmWidth = 10583
               BandType = 4
             end
@@ -4440,9 +4680,9 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2328
-              mmLeft = 67945
+              mmLeft = 67310
               mmTop = 12065
-              mmWidth = 2752
+              mmWidth = 3387
               BandType = 4
             end
             object ppLabel22: TppLabel
@@ -4639,8 +4879,8 @@ object HospitalReport2Form: THospitalReport2Form
               mmWidth = 212
               BandType = 4
             end
-            object TodaysWagerWinPct: TppDBText
-              UserName = 'TodaysWagerWinPct'
+            object LastSpeed: TppDBText
+              UserName = 'LastSpeed'
               AutoSize = True
               DataField = 'LastSpeed'
               DataPipeline = plEntries
@@ -4659,8 +4899,8 @@ object HospitalReport2Form: THospitalReport2Form
               mmWidth = 11430
               BandType = 4
             end
-            object ppDBText3: TppDBText
-              UserName = 'TodaysWagerWinPct1'
+            object BackSpeed: TppDBText
+              UserName = 'BackSpeed'
               AutoSize = True
               DataField = 'BackSpeed'
               DataPipeline = plEntries
@@ -4679,8 +4919,8 @@ object HospitalReport2Form: THospitalReport2Form
               mmWidth = 11430
               BandType = 4
             end
-            object ppDBText4: TppDBText
-              UserName = 'TodaysWagerWinPct2'
+            object LastSpeedRank: TppDBText
+              UserName = 'LastSpeedRank'
               AutoSize = True
               DataField = 'LastSpeedRank'
               DataPipeline = plEntries
@@ -4699,8 +4939,8 @@ object HospitalReport2Form: THospitalReport2Form
               mmWidth = 16510
               BandType = 4
             end
-            object ppDBText9: TppDBText
-              UserName = 'DBText9'
+            object BackSpeedRank: TppDBText
+              UserName = 'BackSpeedRank'
               ShiftWithParent = True
               AutoSize = True
               DataField = 'BackSpeedRank'
@@ -4720,8 +4960,8 @@ object HospitalReport2Form: THospitalReport2Form
               mmWidth = 16510
               BandType = 4
             end
-            object ppDBText19: TppDBText
-              UserName = 'DBText19'
+            object AvgClass: TppDBText
+              UserName = 'AvgClass'
               ShiftWithParent = True
               AutoSize = True
               BlankWhenZero = True
@@ -4741,8 +4981,8 @@ object HospitalReport2Form: THospitalReport2Form
               mmWidth = 10160
               BandType = 4
             end
-            object ppDBText21: TppDBText
-              UserName = 'DBText21'
+            object BackClass: TppDBText
+              UserName = 'BackClass'
               ShiftWithParent = True
               AutoSize = True
               BlankWhenZero = True
@@ -4762,8 +5002,8 @@ object HospitalReport2Form: THospitalReport2Form
               mmWidth = 11430
               BandType = 4
             end
-            object ppDBText22: TppDBText
-              UserName = 'DBText22'
+            object AvgClassRank: TppDBText
+              UserName = 'AvgClassRank'
               AutoSize = True
               DataField = 'AvgClassRank'
               DataPipeline = plEntries
@@ -4782,8 +5022,8 @@ object HospitalReport2Form: THospitalReport2Form
               mmWidth = 15240
               BandType = 4
             end
-            object ppDBText23: TppDBText
-              UserName = 'DBText23'
+            object BackClassRank: TppDBText
+              UserName = 'BackClassRank'
               AutoSize = True
               DataField = 'BackClassRank'
               DataPipeline = plEntries
@@ -4893,7 +5133,7 @@ object HospitalReport2Form: THospitalReport2Form
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2244
+              mmHeight = 2540
               mmLeft = 75353
               mmTop = 12065
               mmWidth = 3175
@@ -4958,9 +5198,9 @@ object HospitalReport2Form: THospitalReport2Form
               Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2328
-              mmLeft = 67098
-              mmTop = 8255
-              mmWidth = 3598
+              mmLeft = 67310
+              mmTop = 4445
+              mmWidth = 3387
               BandType = 4
             end
             object ppDBText17: TppDBText
@@ -4999,7 +5239,7 @@ object HospitalReport2Form: THospitalReport2Form
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2328
+              mmHeight = 2540
               mmLeft = 75353
               mmTop = 8255
               mmWidth = 3175
@@ -5021,9 +5261,59 @@ object HospitalReport2Form: THospitalReport2Form
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2328
-              mmLeft = 79163
+              mmLeft = 78952
               mmTop = 8255
               mmWidth = 3175
+              BandType = 4
+            end
+            object ppLine24: TppLine
+              UserName = 'Line24'
+              Pen.Style = psDot
+              Weight = 0.750000000000000000
+              mmHeight = 265
+              mmLeft = 66675
+              mmTop = 11218
+              mmWidth = 19050
+              BandType = 4
+            end
+            object ppLine36: TppLine
+              UserName = 'Line36'
+              Position = lpRight
+              Weight = 0.750000000000000000
+              mmHeight = 14393
+              mmLeft = 70908
+              mmTop = 0
+              mmWidth = 212
+              BandType = 4
+            end
+            object ppLine37: TppLine
+              UserName = 'Line37'
+              Position = lpRight
+              Weight = 0.750000000000000000
+              mmHeight = 14393
+              mmLeft = 74718
+              mmTop = 0
+              mmWidth = 212
+              BandType = 4
+            end
+            object ppLine38: TppLine
+              UserName = 'Line38'
+              Position = lpRight
+              Weight = 0.750000000000000000
+              mmHeight = 14393
+              mmLeft = 78740
+              mmTop = 0
+              mmWidth = 212
+              BandType = 4
+            end
+            object ppLine39: TppLine
+              UserName = 'Line39'
+              Position = lpRight
+              Weight = 0.750000000000000000
+              mmHeight = 14393
+              mmLeft = 82338
+              mmTop = 0
+              mmWidth = 212
               BandType = 4
             end
           end
@@ -5630,7 +5920,93 @@ object HospitalReport2Form: THospitalReport2Form
               56697369626C65203A3D2046616C73653B2020200D0A20202020656E643B0D0A
               0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060E5475726653686565
               744F72646572094576656E744E616D6506074F6E5072696E74074576656E7449
-              4402200000}
+              4402200001060F5472614576656E7448616E646C65720B50726F6772616D4E61
+              6D6506104C61737453706565644F6E5072696E740B50726F6772616D54797065
+              070B747450726F63656475726506536F7572636506AE70726F63656475726520
+              4C61737453706565644F6E5072696E743B0D0A626567696E0D0A2020204C6173
+              7453706565642E466F6E742E426F6C64203A3D2046616C73653B0D0A20202069
+              662028706C456E74726965735B274C617374537065656452616E6B275D203D20
+              3129207468656E20626567696E0D0A2020202020204C61737453706565642E46
+              6F6E742E426F6C64203A3D20547275653B0D0A202020656E643B0D0A0D0A656E
+              643B0D0A0D436F6D706F6E656E744E616D6506094C6173745370656564094576
+              656E744E616D6506074F6E5072696E74074576656E74494402200001060F5472
+              614576656E7448616E646C65720B50726F6772616D4E616D65060F417667436C
+              6173734F6E5072696E740B50726F6772616D54797065070B747450726F636564
+              75726506536F7572636506AC70726F63656475726520417667436C6173734F6E
+              5072696E743B0D0A626567696E0D0A202020417667436C6173732E466F6E742E
+              426F6C64203A3D2046616C73653B0D0A20202069662028706C456E7472696573
+              5B27417667436C61737352616E6B275D203D203129207468656E20626567696E
+              0D0A202020202020417667436C6173732E466F6E742E426F6C64203A3D205472
+              75653B0D0A202020656E643B0D0A0D0A0D0A656E643B0D0A0D436F6D706F6E65
+              6E744E616D650608417667436C617373094576656E744E616D6506074F6E5072
+              696E74074576656E74494402200001060F5472614576656E7448616E646C6572
+              0B50726F6772616D4E616D6506104261636B436C6173734F6E5072696E740B50
+              726F6772616D54797065070B747450726F63656475726506536F7572636506AE
+              70726F636564757265204261636B436C6173734F6E5072696E743B0D0A626567
+              696E0D0A2020204261636B436C6173732E466F6E742E426F6C64203A3D204661
+              6C73653B0D0A20202069662028706C456E74726965735B274261636B436C6173
+              7352616E6B275D203D203129207468656E20626567696E0D0A20202020202042
+              61636B436C6173732E466F6E742E426F6C64203A3D20547275653B0D0A202020
+              656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506094261
+              636B436C617373094576656E744E616D6506074F6E5072696E74074576656E74
+              494402200001060F5472614576656E7448616E646C65720B50726F6772616D4E
+              616D650613417667436C61737352616E6B4F6E5072696E740B50726F6772616D
+              54797065070B747450726F63656475726506536F7572636506B670726F636564
+              75726520417667436C61737352616E6B4F6E5072696E743B0D0A626567696E0D
+              0A202020417667436C61737352616E6B2E466F6E742E426F6C64203A3D204661
+              6C73653B0D0A20202069662028706C456E74726965735B27417667436C617373
+              52616E6B275D203D203129207468656E20626567696E0D0A2020202020204176
+              67436C61737352616E6B2E466F6E742E426F6C64203A3D20547275653B0D0A20
+              2020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060C
+              417667436C61737352616E6B094576656E744E616D6506074F6E5072696E7407
+              4576656E74494402200001060F5472614576656E7448616E646C65720B50726F
+              6772616D4E616D6506144261636B436C61737352616E6B4F6E5072696E740B50
+              726F6772616D54797065070B747450726F63656475726506536F7572636506BA
+              70726F636564757265204261636B436C61737352616E6B4F6E5072696E743B0D
+              0A626567696E0D0A2020204261636B436C61737352616E6B2E466F6E742E426F
+              6C64203A3D2046616C73653B0D0A20202069662028706C456E74726965735B27
+              4261636B436C61737352616E6B275D203D203129207468656E20626567696E0D
+              0A2020202020204261636B436C61737352616E6B2E466F6E742E426F6C64203A
+              3D20547275653B0D0A202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F
+              6E656E744E616D65060D4261636B436C61737352616E6B094576656E744E616D
+              6506074F6E5072696E74074576656E74494402200001060F5472614576656E74
+              48616E646C65720B50726F6772616D4E616D6506144261636B53706565645261
+              6E6B4F6E5072696E740B50726F6772616D54797065070B747450726F63656475
+              726506536F7572636506B970726F636564757265204261636B53706565645261
+              6E6B4F6E5072696E743B0D0A626567696E0D0A20204261636B53706565645261
+              6E6B2E466F6E742E426F6C64203A3D2046616C73653B0D0A2020206966202870
+              6C456E74726965735B274261636B537065656452616E6B275D203D2031292074
+              68656E20626567696E0D0A2020202020204261636B537065656452616E6B2E46
+              6F6E742E426F6C64203A3D20547275653B0D0A202020656E643B0D0A0D0A656E
+              643B0D0A0D436F6D706F6E656E744E616D65060D4261636B537065656452616E
+              6B094576656E744E616D6506074F6E5072696E74074576656E74494402200001
+              060F5472614576656E7448616E646C65720B50726F6772616D4E616D65061B54
+              6F74616C54726E416674436C6D57696E5063744F6E5072696E740B50726F6772
+              616D54797065070B747450726F63656475726506536F75726365063770726F63
+              656475726520546F74616C54726E416674436C6D57696E5063744F6E5072696E
+              743B0D0A626567696E0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D
+              650614546F74616C54726E416674436C6D57696E506374094576656E744E616D
+              6506074F6E5072696E74074576656E74494402200001060F5472614576656E74
+              48616E646C65720B50726F6772616D4E616D6506104261636B53706565644F6E
+              5072696E740B50726F6772616D54797065070B747450726F6365647572650653
+              6F7572636506AE70726F636564757265204261636B53706565644F6E5072696E
+              743B0D0A626567696E0D0A2020204261636B53706565642E466F6E742E426F6C
+              64203A3D2046616C73653B0D0A20202069662028706C456E74726965735B2742
+              61636B537065656452616E6B275D203D203129207468656E20626567696E0D0A
+              2020202020204261636B53706565642E466F6E742E426F6C64203A3D20547275
+              653B0D0A202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E
+              616D6506094261636B5370656564094576656E744E616D6506074F6E5072696E
+              74074576656E74494402200001060F5472614576656E7448616E646C65720B50
+              726F6772616D4E616D6506144C617374537065656452616E6B4F6E5072696E74
+              0B50726F6772616D54797065070B747450726F63656475726506536F75726365
+              06BA70726F636564757265204C617374537065656452616E6B4F6E5072696E74
+              3B0D0A626567696E0D0A2020204C617374537065656452616E6B2E466F6E742E
+              426F6C64203A3D2046616C73653B0D0A20202069662028706C456E7472696573
+              5B274C617374537065656452616E6B275D203D203129207468656E2062656769
+              6E0D0A2020202020204C617374537065656452616E6B2E466F6E742E426F6C64
+              203A3D20547275653B0D0A202020656E643B0D0A0D0A656E643B0D0A0D436F6D
+              706F6E656E744E616D65060D4C617374537065656452616E6B094576656E744E
+              616D6506074F6E5072696E74074576656E74494402200000}
           end
         end
       end

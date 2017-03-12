@@ -1,6 +1,6 @@
 object MainForm: TMainForm
-  Left = 751
-  Top = 119
+  Left = 686
+  Top = 169
   Width = 1589
   Height = 924
   Caption = 'KSK Ratings 3.1'

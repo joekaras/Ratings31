@@ -1027,40 +1027,39 @@ begin
                end;
 
                tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TJ365WinPct').AsFloat;
-               if (tblE.FieldByName('TJMeetStarts').AsInteger > 16) then begin
-                  tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TJMeetWinPct').AsFloat;
-               end;
+            //   if (tblE.FieldByName('TJMeetStarts').AsInteger > 16) then begin
+              //    tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TJMeetWinPct').AsFloat;
+              // end;
 
                //
-               tblE.FieldByName('TrainerRating').AsFloat := tblE.FieldByName('TotalTrnOddsWinPct').AsFloat;
-               if (tblR.FieldByName('Surface').AsString = 'T') then begin
-                  tblE.FieldByName('TrainerRating').AsFloat := tblE.FieldByName('TotalTrnTurfWinPct').AsFloat;
-               end;
 
-               if (tblE.FieldByName('DaysLast').AsInteger > 90) then begin
-                  if (tblE.FieldByName('TotalTrn46To120Starts').AsInteger > 16) then begin
-                     tblE.FieldByName('TrainerRating').AsFloat := tblE.FieldByName('TotalTrn46To120WinPct').AsFloat;
-                  end;
-               end;
-
-               if ((sRaceType = 'MSW') or (sRaceType = 'MCL')) then begin
-                  if (tblR.FieldByName('Surface').AsString = 'D') then begin
-                     if (sDebutIndicator = '*') then begin
-                        tblE.FieldByName('TrainerRating').AsFloat := tblE.FieldByName('TotalTrnDebutWinPct').AsFloat;
-                     end;
-
-                     if (sDebutIndicator = '**') then begin
-                        tblE.FieldByName('TrainerRating').AsFloat := tblE.FieldByName('TotalTrnDebutTwoWinPct').AsFloat;
-                     end;
-                  end;
-               end;
+               tblE.FieldByName('TrainerRating').AsFloat := tblE.FieldByName('TotalTrn30WinPct').AsFloat;
 
 
-               if (tblE.FieldByName('TotalJky30Starts').AsInteger > 8) then begin
-                  tblE.FieldByName('JockeyRating').AsFloat := tblE.FieldByName('TotalJky30WinPct').AsFloat;
-               end else begin
-                  tblE.FieldByName('JockeyRating').AsFloat := tblE.FieldByName('TotalJkyOddsWinPct').AsFloat;
-               end;
+               //if (tblE.FieldByName('DaysLast').AsInteger > 90) then begin
+                //  if (tblE.FieldByName('TotalTrn46To120Starts').AsInteger > 0) then begin
+                //     tblE.FieldByName('TrainerRating').AsFloat := tblE.FieldByName('TotalTrn46To120WinPct').AsFloat;
+                //  end;
+              // end;
+//
+//               if ((sRaceType = 'MSW') or (sRaceType = 'MCL')) then begin
+//                  if (tblR.FieldByName('Surface').AsString = 'D') then begin
+//                     if (sDebutIndicator = '*') then begin
+//                        tblE.FieldByName('TrainerRating').AsFloat := tblE.FieldByName('TotalTrnDebutWinPct').AsFloat;
+//                     end;
+//
+//                     if (sDebutIndicator = '**') then begin
+//                        tblE.FieldByName('TrainerRating').AsFloat := tblE.FieldByName('TotalTrnDebutTwoWinPct').AsFloat;
+//                     end;
+//                  end;
+//               end;
+
+
+               //if (tblE.FieldByName('TotalJky30Starts').AsInteger > 8) then begin
+                 tblE.FieldByName('JockeyRating').AsFloat := tblE.FieldByName('TotalJky30WinPct').AsFloat;
+              // end else begin
+              //    tblE.FieldByName('JockeyRating').AsFloat := tblE.FieldByName('TotalJkyOddsWinPct').AsFloat;
+              // end;
 
                tblE.FieldByName('OwnerRating').AsFloat := tblE.FieldByName('TotalTrnOwnWinPct').AsFloat;
 

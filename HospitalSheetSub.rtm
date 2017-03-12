@@ -41,7 +41,7 @@ object ppChildReport12: TppChildReport
       mmHeight = 3598
       mmLeft = 89112
       mmTop = 0
-      mmWidth = 13335
+      mmWidth = 15240
       BandType = 1
     end
     object ppLabel5: TppLabel
@@ -62,7 +62,6 @@ object ppChildReport12: TppChildReport
     end
     object ppLabel6: TppLabel
       UserName = 'Label6'
-      AutoSize = False
       Caption = 'HORSE'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -315,7 +314,6 @@ object ppChildReport12: TppChildReport
     end
     object ppLabel19: TppLabel
       UserName = 'Label19'
-      AutoSize = False
       Caption = '2ND'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -325,14 +323,13 @@ object ppChildReport12: TppChildReport
       TextAlignment = taCentered
       Transparent = True
       mmHeight = 2074
-      mmLeft = 71332
+      mmLeft = 71226
       mmTop = 24553
-      mmWidth = 2963
+      mmWidth = 3175
       BandType = 1
     end
     object ppLabel18: TppLabel
       UserName = 'Label18'
-      AutoSize = False
       Caption = '1ST'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -342,14 +339,13 @@ object ppChildReport12: TppChildReport
       TextAlignment = taCentered
       Transparent = True
       mmHeight = 2074
-      mmLeft = 67945
+      mmLeft = 67734
       mmTop = 24553
-      mmWidth = 2752
+      mmWidth = 3175
       BandType = 1
     end
     object ppLabel35: TppLabel
       UserName = 'Label35'
-      AutoSize = False
       Caption = 'SC'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -358,7 +354,7 @@ object ppChildReport12: TppChildReport
       Font.Style = [fsBold]
       TextAlignment = taRightJustified
       Transparent = True
-      mmHeight = 2117
+      mmHeight = 2074
       mmLeft = 79163
       mmTop = 24553
       mmWidth = 2117
@@ -366,7 +362,6 @@ object ppChildReport12: TppChildReport
     end
     object ppLabel36: TppLabel
       UserName = 'Label36'
-      AutoSize = False
       Caption = 'DC'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -375,7 +370,7 @@ object ppChildReport12: TppChildReport
       Font.Style = [fsBold]
       TextAlignment = taRightJustified
       Transparent = True
-      mmHeight = 2117
+      mmHeight = 2074
       mmLeft = 75565
       mmTop = 24553
       mmWidth = 2117
@@ -566,9 +561,9 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plRacesReport'
       mmHeight = 3598
-      mmLeft = 4402
+      mmLeft = 5354
       mmTop = 0
-      mmWidth = 5715
+      mmWidth = 3810
       BandType = 1
     end
     object ppLabel23: TppLabel
@@ -716,12 +711,11 @@ object ppChildReport12: TppChildReport
       mmHeight = 3598
       mmLeft = 51858
       mmTop = 0
-      mmWidth = 7620
+      mmWidth = 3810
       BandType = 1
     end
     object ppLabel11: TppLabel
       UserName = 'Label501'
-      AutoSize = False
       Caption = 'POWER ADVANTAGE'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -731,9 +725,9 @@ object ppChildReport12: TppChildReport
       TextAlignment = taCentered
       Transparent = True
       mmHeight = 2074
-      mmLeft = 6138
+      mmLeft = 5821
       mmTop = 34290
-      mmWidth = 15240
+      mmWidth = 15875
       BandType = 1
     end
     object ppLabel40: TppLabel
@@ -762,8 +756,8 @@ object ppChildReport12: TppChildReport
       Font.Style = [fsBold]
       TextAlignment = taCentered
       Transparent = True
-      mmHeight = 2074
-      mmLeft = 67310
+      mmHeight = 2117
+      mmLeft = 67733
       mmTop = 34290
       mmWidth = 3175
       BandType = 1
@@ -834,6 +828,7 @@ object ppChildReport12: TppChildReport
     end
     object lblPowerOrder: TppLabel
       UserName = 'lblPowerOrder'
+      ShiftWithParent = True
       Caption = 'Power:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -848,6 +843,7 @@ object ppChildReport12: TppChildReport
     end
     object WagerSheetOrder: TppDBText
       UserName = 'WagerSheetOrder'
+      ShiftWithParent = True
       AutoSize = True
       DataField = 'WagerSheetOrder'
       DataPipeline = plRacesReport
@@ -859,9 +855,9 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plRacesReport'
       mmHeight = 3006
-      mmLeft = 11642
+      mmLeft = 12065
       mmTop = 11642
-      mmWidth = 13547
+      mmWidth = 11853
       BandType = 1
     end
     object ppLine8: TppLine
@@ -876,6 +872,7 @@ object ppChildReport12: TppChildReport
     end
     object lblErlPace: TppLabel
       UserName = 'lblPowerOrder2'
+      ShiftWithParent = True
       Caption = 'Early:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -890,6 +887,7 @@ object ppChildReport12: TppChildReport
     end
     object lblMidPace: TppLabel
       UserName = 'lblMidPace'
+      ShiftWithParent = True
       Caption = 'Middle:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -904,6 +902,7 @@ object ppChildReport12: TppChildReport
     end
     object lblLatePace: TppLabel
       UserName = 'lblLatePace'
+      ShiftWithParent = True
       Caption = 'Late:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -918,6 +917,7 @@ object ppChildReport12: TppChildReport
     end
     object ErlPaceSheetOrder: TppDBText
       UserName = 'ErlPaceSheetOrder'
+      ShiftWithParent = True
       AutoSize = True
       DataField = 'ErlPaceSheetOrder'
       DataPipeline = plRacesReport
@@ -931,11 +931,12 @@ object ppChildReport12: TppChildReport
       mmHeight = 3006
       mmLeft = 46143
       mmTop = 11642
-      mmWidth = 13547
+      mmWidth = 11853
       BandType = 1
     end
     object MidPaceSheetOrder: TppDBText
       UserName = 'MidPaceSheetOrder'
+      ShiftWithParent = True
       AutoSize = True
       DataField = 'MidPaceSheetOrder'
       DataPipeline = plRacesReport
@@ -949,11 +950,12 @@ object ppChildReport12: TppChildReport
       mmHeight = 3006
       mmLeft = 105622
       mmTop = 11642
-      mmWidth = 13547
+      mmWidth = 11853
       BandType = 1
     end
     object LatePaceSheetOrder: TppDBText
       UserName = 'LatePaceSheetOrder'
+      ShiftWithParent = True
       AutoSize = True
       DataField = 'LatePaceSheetOrder'
       DataPipeline = plRacesReport
@@ -965,7 +967,7 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plRacesReport'
       mmHeight = 3006
-      mmLeft = 164042
+      mmLeft = 164677
       mmTop = 11642
       mmWidth = 11853
       BandType = 1
@@ -996,6 +998,7 @@ object ppChildReport12: TppChildReport
     end
     object ppLabel13: TppLabel
       UserName = 'Label16'
+      ShiftWithParent = True
       Caption = 'Gap'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -1010,6 +1013,7 @@ object ppChildReport12: TppChildReport
     end
     object ppDBText25: TppDBText
       UserName = 'WagerSheetOrder2'
+      ShiftWithParent = True
       AutoSize = True
       DataField = 'PowerGapOrder'
       DataPipeline = plRacesReport
@@ -1046,6 +1050,7 @@ object ppChildReport12: TppChildReport
     end
     object ppLabel16: TppLabel
       UserName = 'Label17'
+      ShiftWithParent = True
       Caption = 'Gap'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -1060,6 +1065,7 @@ object ppChildReport12: TppChildReport
     end
     object ppDBText27: TppDBText
       UserName = 'DBText27'
+      ShiftWithParent = True
       AutoSize = True
       DataField = 'MidPaceGapOrder'
       DataPipeline = plRacesReport
@@ -1073,7 +1079,7 @@ object ppChildReport12: TppChildReport
       mmHeight = 1905
       mmLeft = 97790
       mmTop = 16933
-      mmWidth = 23283
+      mmWidth = 21167
       BandType = 1
     end
     object TrainerJockeySheetOrder: TppDBText
@@ -1091,7 +1097,7 @@ object ppChildReport12: TppChildReport
       mmHeight = 3006
       mmLeft = 157269
       mmTop = 21590
-      mmWidth = 13547
+      mmWidth = 11853
       BandType = 1
     end
     object ppLabel21: TppLabel
@@ -1186,7 +1192,7 @@ object ppChildReport12: TppChildReport
       mmHeight = 3006
       mmLeft = 185844
       mmTop = 21590
-      mmWidth = 13547
+      mmWidth = 11853
       BandType = 1
     end
     object TurfSheetOrder: TppDBText
@@ -1283,9 +1289,9 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plRacesReport'
       mmHeight = 2371
-      mmLeft = 64558
+      mmLeft = 63288
       mmTop = 34078
-      mmWidth = 1270
+      mmWidth = 2540
       BandType = 1
     end
     object ppDBText35: TppDBText
@@ -1312,6 +1318,7 @@ object ppChildReport12: TppChildReport
     end
     object ppDBText36: TppDBText
       UserName = 'MidPaceSheetOrder1'
+      ShiftWithParent = True
       AutoSize = True
       DataField = 'MidPacePosSheetOrder'
       DataPipeline = plRacesReport
@@ -1323,13 +1330,14 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plRacesReport'
       mmHeight = 3006
-      mmLeft = 134832
+      mmLeft = 135255
       mmTop = 11642
-      mmWidth = 13547
+      mmWidth = 11853
       BandType = 1
     end
     object ppDBText37: TppDBText
       UserName = 'LatePaceSheetOrder1'
+      ShiftWithParent = True
       AutoSize = True
       DataField = 'LatePacePosSheetOrder'
       DataPipeline = plRacesReport
@@ -1341,13 +1349,14 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plRacesReport'
       mmHeight = 3006
-      mmLeft = 194310
+      mmLeft = 194945
       mmTop = 11642
-      mmWidth = 13547
+      mmWidth = 11853
       BandType = 1
     end
     object ppDBText38: TppDBText
       UserName = 'ErlPaceSheetOrder2'
+      ShiftWithParent = True
       AutoSize = True
       DataField = 'ErlPacePosSheetOrder'
       DataPipeline = plRacesReport
@@ -1359,7 +1368,7 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plRacesReport'
       mmHeight = 3006
-      mmLeft = 72813
+      mmLeft = 73237
       mmTop = 11642
       mmWidth = 11853
       BandType = 1
@@ -1414,6 +1423,7 @@ object ppChildReport12: TppChildReport
     end
     object ppLabel43: TppLabel
       UserName = 'lblLatePace1'
+      ShiftWithParent = True
       Caption = 'L Pos:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -1441,11 +1451,12 @@ object ppChildReport12: TppChildReport
       mmHeight = 2074
       mmLeft = 160867
       mmTop = 16933
-      mmWidth = 21167
+      mmWidth = 20108
       BandType = 1
     end
     object ppDBText14: TppDBText
       UserName = 'DBText14'
+      ShiftWithParent = True
       AutoSize = True
       DataField = 'LatePacePosGapOrder'
       DataPipeline = plRacesReport
@@ -1464,6 +1475,7 @@ object ppChildReport12: TppChildReport
     end
     object ppLabel45: TppLabel
       UserName = 'Label45'
+      ShiftWithParent = True
       Caption = 'E Pos:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -1478,6 +1490,7 @@ object ppChildReport12: TppChildReport
     end
     object ppLabel51: TppLabel
       UserName = 'Label51'
+      ShiftWithParent = True
       Caption = 'M Pos:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -1593,7 +1606,7 @@ object ppChildReport12: TppChildReport
       mmHeight = 3006
       mmLeft = 186055
       mmTop = 31115
-      mmWidth = 13547
+      mmWidth = 11853
       BandType = 1
     end
     object ppLabel54: TppLabel
@@ -1650,6 +1663,7 @@ object ppChildReport12: TppChildReport
     end
     object ppLabel62: TppLabel
       UserName = 'Label62'
+      ShiftWithParent = True
       Caption = 'Avg:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -1792,6 +1806,22 @@ object ppChildReport12: TppChildReport
       mmWidth = 2117
       BandType = 1
     end
+    object ppLabel70: TppLabel
+      UserName = 'Label70'
+      Caption = 'Lsx'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Courier New'
+      Font.Size = 5
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 2074
+      mmLeft = 67733
+      mmTop = 30692
+      mmWidth = 3175
+      BandType = 1
+    end
   end
   object ppHeaderBand2: TppHeaderBand
     Visible = False
@@ -1928,8 +1958,8 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 1905
-      mmLeft = 18785
-      mmTop = 0
+      mmLeft = 18203
+      mmTop = 423
       mmWidth = 3175
       BandType = 4
     end
@@ -2072,9 +2102,9 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 2244
-      mmLeft = 62061
+      mmLeft = 63331
       mmTop = 0
-      mmWidth = 3810
+      mmWidth = 2540
       BandType = 4
     end
     object BredIn: TppDBText
@@ -2112,9 +2142,9 @@ object ppChildReport12: TppChildReport
       Visible = False
       DataPipelineName = 'plEntries'
       mmHeight = 2328
-      mmLeft = 67522
+      mmLeft = 67310
       mmTop = 0
-      mmWidth = 3175
+      mmWidth = 3387
       BandType = 4
     end
     object MidPace: TppDBText
@@ -2163,7 +2193,7 @@ object ppChildReport12: TppChildReport
       UserName = 'Line10'
       Position = lpRight
       Weight = 0.750000000000000000
-      mmHeight = 8731
+      mmHeight = 8255
       mmLeft = 40481
       mmTop = 847
       mmWidth = 265
@@ -2227,7 +2257,7 @@ object ppChildReport12: TppChildReport
       Visible = False
       DataPipelineName = 'plEntries'
       mmHeight = 2328
-      mmLeft = 71120
+      mmLeft = 71332
       mmTop = 0
       mmWidth = 3175
       BandType = 4
@@ -2246,7 +2276,7 @@ object ppChildReport12: TppChildReport
       TextAlignment = taRightJustified
       Transparent = True
       mmHeight = 2328
-      mmLeft = 78740
+      mmLeft = 78952
       mmTop = 0
       mmWidth = 3175
       BandType = 4
@@ -2264,8 +2294,8 @@ object ppChildReport12: TppChildReport
       Font.Style = []
       TextAlignment = taRightJustified
       Transparent = True
-      mmHeight = 2328
-      mmLeft = 74930
+      mmHeight = 2540
+      mmLeft = 75353
       mmTop = 0
       mmWidth = 3175
       BandType = 4
@@ -2317,7 +2347,7 @@ object ppChildReport12: TppChildReport
       mmHeight = 1905
       mmLeft = 131234
       mmTop = 2117
-      mmWidth = 23283
+      mmWidth = 52917
       BandType = 4
     end
     object TotalTrn2yoWinPct: TppDBText
@@ -2336,7 +2366,7 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 2328
-      mmLeft = 71120
+      mmLeft = 71332
       mmTop = 12065
       mmWidth = 3175
       BandType = 4
@@ -2406,9 +2436,9 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 2540
-      mmLeft = 67522
-      mmTop = 4233
-      mmWidth = 3175
+      mmLeft = 67310
+      mmTop = 8043
+      mmWidth = 3387
       BandType = 4
     end
     object TotalTrnBlinkersOnWinPct: TppDBText
@@ -2469,7 +2499,7 @@ object ppChildReport12: TppChildReport
       Visible = False
       DataPipelineName = 'plEntries'
       mmHeight = 2540
-      mmLeft = 78740
+      mmLeft = 78952
       mmTop = 4233
       mmWidth = 3175
       BandType = 4
@@ -2489,7 +2519,7 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 2540
-      mmLeft = 75142
+      mmLeft = 75353
       mmTop = 4233
       mmWidth = 3175
       BandType = 4
@@ -2542,7 +2572,7 @@ object ppChildReport12: TppChildReport
       mmHeight = 1905
       mmLeft = 131234
       mmTop = 7673
-      mmWidth = 23283
+      mmWidth = 19050
       BandType = 4
     end
     object ppLine4: TppLine
@@ -2551,7 +2581,7 @@ object ppChildReport12: TppChildReport
       Weight = 0.750000000000000000
       mmHeight = 265
       mmLeft = 51594
-      mmTop = 8467
+      mmTop = 7408
       mmWidth = 14552
       BandType = 4
     end
@@ -2628,8 +2658,8 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 1905
-      mmLeft = 119126
-      mmTop = 9260
+      mmLeft = 119169
+      mmTop = 9737
       mmWidth = 1058
       BandType = 4
     end
@@ -2649,7 +2679,7 @@ object ppChildReport12: TppChildReport
       DataPipelineName = 'plEntries'
       mmHeight = 1905
       mmLeft = 105834
-      mmTop = 9260
+      mmTop = 9737
       mmWidth = 1058
       BandType = 4
     end
@@ -2668,8 +2698,8 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 1905
-      mmLeft = 108480
-      mmTop = 9260
+      mmLeft = 108585
+      mmTop = 9737
       mmWidth = 1058
       BandType = 4
     end
@@ -2688,9 +2718,9 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 1905
-      mmLeft = 93981
-      mmTop = 9313
-      mmWidth = 1058
+      mmLeft = 92922
+      mmTop = 9737
+      mmWidth = 2117
       BandType = 4
     end
     object ppDBText15: TppDBText
@@ -2709,7 +2739,7 @@ object ppChildReport12: TppChildReport
       DataPipelineName = 'plEntries'
       mmHeight = 1905
       mmLeft = 96362
-      mmTop = 9260
+      mmTop = 9737
       mmWidth = 1058
       BandType = 4
     end
@@ -2722,7 +2752,7 @@ object ppChildReport12: TppChildReport
       Font.Size = 6
       Font.Style = []
       Transparent = True
-      mmHeight = 2244
+      mmHeight = 2328
       mmLeft = 86995
       mmTop = 9313
       mmWidth = 3810
@@ -2737,9 +2767,9 @@ object ppChildReport12: TppChildReport
       Font.Size = 6
       Font.Style = []
       Transparent = True
-      mmHeight = 2244
+      mmHeight = 2328
       mmLeft = 99484
-      mmTop = 9260
+      mmTop = 9313
       mmWidth = 3810
       BandType = 4
     end
@@ -2785,7 +2815,7 @@ object ppChildReport12: TppChildReport
       Transparent = True
       mmHeight = 1905
       mmLeft = 110914
-      mmTop = 9525
+      mmTop = 9737
       mmWidth = 5292
       BandType = 4
     end
@@ -2875,7 +2905,7 @@ object ppChildReport12: TppChildReport
       Font.Size = 6
       Font.Style = []
       Transparent = True
-      mmHeight = 2244
+      mmHeight = 2328
       mmLeft = 99484
       mmTop = 6138
       mmWidth = 3810
@@ -2897,7 +2927,7 @@ object ppChildReport12: TppChildReport
       DataPipelineName = 'plEntries'
       mmHeight = 1905
       mmLeft = 105834
-      mmTop = 6350
+      mmTop = 6562
       mmWidth = 1058
       BandType = 4
     end
@@ -2916,8 +2946,8 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 1905
-      mmLeft = 108480
-      mmTop = 6350
+      mmLeft = 108585
+      mmTop = 6562
       mmWidth = 1058
       BandType = 4
     end
@@ -2949,7 +2979,7 @@ object ppChildReport12: TppChildReport
       Font.Size = 6
       Font.Style = []
       Transparent = True
-      mmHeight = 2244
+      mmHeight = 2328
       mmLeft = 111125
       mmTop = 6138
       mmWidth = 3810
@@ -2970,8 +3000,8 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 1905
-      mmLeft = 117010
-      mmTop = 6350
+      mmLeft = 117052
+      mmTop = 6562
       mmWidth = 1058
       BandType = 4
     end
@@ -2990,8 +3020,8 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 1905
-      mmLeft = 119126
-      mmTop = 6350
+      mmLeft = 119169
+      mmTop = 6562
       mmWidth = 1058
       BandType = 4
     end
@@ -3025,8 +3055,8 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 1905
-      mmLeft = 92869
-      mmTop = 6350
+      mmLeft = 92922
+      mmTop = 6562
       mmWidth = 2117
       BandType = 4
     end
@@ -3045,8 +3075,8 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 1905
-      mmLeft = 96362
-      mmTop = 6350
+      mmLeft = 96309
+      mmTop = 6562
       mmWidth = 1058
       BandType = 4
     end
@@ -3144,8 +3174,8 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 1905
-      mmLeft = 117010
-      mmTop = 9260
+      mmLeft = 117052
+      mmTop = 9737
       mmWidth = 1058
       BandType = 4
     end
@@ -3164,7 +3194,7 @@ object ppChildReport12: TppChildReport
       mmHeight = 1905
       mmLeft = 131234
       mmTop = 10372
-      mmWidth = 77258
+      mmWidth = 71967
       BandType = 4
     end
     object OwnerName: TppDBText
@@ -3240,7 +3270,7 @@ object ppChildReport12: TppChildReport
       mmHeight = 1905
       mmLeft = 131234
       mmTop = 12700
-      mmWidth = 75142
+      mmWidth = 77258
       BandType = 4
     end
     object ppLine9: TppLine
@@ -3288,9 +3318,9 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 2328
-      mmLeft = 67945
+      mmLeft = 67310
       mmTop = 12065
-      mmWidth = 2752
+      mmWidth = 3387
       BandType = 4
     end
     object ppLabel22: TppLabel
@@ -3346,9 +3376,9 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 2244
-      mmLeft = 24765
+      mmLeft = 23495
       mmTop = 3175
-      mmWidth = 1270
+      mmWidth = 2540
       BandType = 4
     end
     object ppLine25: TppLine
@@ -3487,8 +3517,8 @@ object ppChildReport12: TppChildReport
       mmWidth = 212
       BandType = 4
     end
-    object TodaysWagerWinPct: TppDBText
-      UserName = 'TodaysWagerWinPct'
+    object LastSpeed: TppDBText
+      UserName = 'LastSpeed'
       AutoSize = True
       DataField = 'LastSpeed'
       DataPipeline = plEntries
@@ -3507,8 +3537,8 @@ object ppChildReport12: TppChildReport
       mmWidth = 2540
       BandType = 4
     end
-    object ppDBText3: TppDBText
-      UserName = 'TodaysWagerWinPct1'
+    object BackSpeed: TppDBText
+      UserName = 'BackSpeed'
       AutoSize = True
       DataField = 'BackSpeed'
       DataPipeline = plEntries
@@ -3527,8 +3557,8 @@ object ppChildReport12: TppChildReport
       mmWidth = 2540
       BandType = 4
     end
-    object ppDBText4: TppDBText
-      UserName = 'TodaysWagerWinPct2'
+    object LastSpeedRank: TppDBText
+      UserName = 'LastSpeedRank'
       AutoSize = True
       DataField = 'LastSpeedRank'
       DataPipeline = plEntries
@@ -3547,8 +3577,8 @@ object ppChildReport12: TppChildReport
       mmWidth = 1270
       BandType = 4
     end
-    object ppDBText9: TppDBText
-      UserName = 'DBText9'
+    object BackSpeedRank: TppDBText
+      UserName = 'BackSpeedRank'
       ShiftWithParent = True
       AutoSize = True
       DataField = 'BackSpeedRank'
@@ -3568,8 +3598,8 @@ object ppChildReport12: TppChildReport
       mmWidth = 1270
       BandType = 4
     end
-    object ppDBText19: TppDBText
-      UserName = 'DBText19'
+    object AvgClass: TppDBText
+      UserName = 'AvgClass'
       ShiftWithParent = True
       AutoSize = True
       BlankWhenZero = True
@@ -3589,8 +3619,8 @@ object ppChildReport12: TppChildReport
       mmWidth = 2540
       BandType = 4
     end
-    object ppDBText21: TppDBText
-      UserName = 'DBText21'
+    object BackClass: TppDBText
+      UserName = 'BackClass'
       ShiftWithParent = True
       AutoSize = True
       BlankWhenZero = True
@@ -3610,8 +3640,8 @@ object ppChildReport12: TppChildReport
       mmWidth = 2540
       BandType = 4
     end
-    object ppDBText22: TppDBText
-      UserName = 'DBText22'
+    object AvgClassRank: TppDBText
+      UserName = 'AvgClassRank'
       AutoSize = True
       DataField = 'AvgClassRank'
       DataPipeline = plEntries
@@ -3630,8 +3660,8 @@ object ppChildReport12: TppChildReport
       mmWidth = 1270
       BandType = 4
     end
-    object ppDBText23: TppDBText
-      UserName = 'DBText23'
+    object BackClassRank: TppDBText
+      UserName = 'BackClassRank'
       AutoSize = True
       DataField = 'BackClassRank'
       DataPipeline = plEntries
@@ -3741,7 +3771,7 @@ object ppChildReport12: TppChildReport
       TextAlignment = taRightJustified
       Transparent = True
       DataPipelineName = 'plEntries'
-      mmHeight = 2244
+      mmHeight = 2540
       mmLeft = 75353
       mmTop = 12065
       mmWidth = 3175
@@ -3784,7 +3814,7 @@ object ppChildReport12: TppChildReport
       TextAlignment = taRightJustified
       Transparent = True
       DataPipelineName = 'plEntries'
-      mmHeight = 2117
+      mmHeight = 2244
       mmLeft = 32808
       mmTop = 6562
       mmWidth = 2540
@@ -3806,9 +3836,9 @@ object ppChildReport12: TppChildReport
       Visible = False
       DataPipelineName = 'plEntries'
       mmHeight = 2328
-      mmLeft = 67098
-      mmTop = 8255
-      mmWidth = 3598
+      mmLeft = 67310
+      mmTop = 4445
+      mmWidth = 3387
       BandType = 4
     end
     object ppDBText17: TppDBText
@@ -3847,7 +3877,7 @@ object ppChildReport12: TppChildReport
       TextAlignment = taRightJustified
       Transparent = True
       DataPipelineName = 'plEntries'
-      mmHeight = 2328
+      mmHeight = 2540
       mmLeft = 75353
       mmTop = 8255
       mmWidth = 3175
@@ -3869,9 +3899,59 @@ object ppChildReport12: TppChildReport
       Transparent = True
       DataPipelineName = 'plEntries'
       mmHeight = 2328
-      mmLeft = 79163
+      mmLeft = 78952
       mmTop = 8255
       mmWidth = 3175
+      BandType = 4
+    end
+    object ppLine24: TppLine
+      UserName = 'Line24'
+      Pen.Style = psDot
+      Weight = 0.750000000000000000
+      mmHeight = 265
+      mmLeft = 66675
+      mmTop = 11218
+      mmWidth = 19050
+      BandType = 4
+    end
+    object ppLine36: TppLine
+      UserName = 'Line36'
+      Position = lpRight
+      Weight = 0.750000000000000000
+      mmHeight = 14393
+      mmLeft = 70908
+      mmTop = 0
+      mmWidth = 212
+      BandType = 4
+    end
+    object ppLine37: TppLine
+      UserName = 'Line37'
+      Position = lpRight
+      Weight = 0.750000000000000000
+      mmHeight = 14393
+      mmLeft = 74718
+      mmTop = 0
+      mmWidth = 212
+      BandType = 4
+    end
+    object ppLine38: TppLine
+      UserName = 'Line38'
+      Position = lpRight
+      Weight = 0.750000000000000000
+      mmHeight = 14393
+      mmLeft = 78740
+      mmTop = 0
+      mmWidth = 212
+      BandType = 4
+    end
+    object ppLine39: TppLine
+      UserName = 'Line39'
+      Position = lpRight
+      Weight = 0.750000000000000000
+      mmHeight = 14393
+      mmLeft = 82338
+      mmTop = 0
+      mmWidth = 212
       BandType = 4
     end
   end
@@ -4478,6 +4558,92 @@ object ppChildReport12: TppChildReport
       56697369626C65203A3D2046616C73653B2020200D0A20202020656E643B0D0A
       0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060E5475726653686565
       744F72646572094576656E744E616D6506074F6E5072696E74074576656E7449
-      4402200000}
+      4402200001060F5472614576656E7448616E646C65720B50726F6772616D4E61
+      6D6506104C61737453706565644F6E5072696E740B50726F6772616D54797065
+      070B747450726F63656475726506536F7572636506AE70726F63656475726520
+      4C61737453706565644F6E5072696E743B0D0A626567696E0D0A2020204C6173
+      7453706565642E466F6E742E426F6C64203A3D2046616C73653B0D0A20202069
+      662028706C456E74726965735B274C617374537065656452616E6B275D203D20
+      3129207468656E20626567696E0D0A2020202020204C61737453706565642E46
+      6F6E742E426F6C64203A3D20547275653B0D0A202020656E643B0D0A0D0A656E
+      643B0D0A0D436F6D706F6E656E744E616D6506094C6173745370656564094576
+      656E744E616D6506074F6E5072696E74074576656E74494402200001060F5472
+      614576656E7448616E646C65720B50726F6772616D4E616D65060F417667436C
+      6173734F6E5072696E740B50726F6772616D54797065070B747450726F636564
+      75726506536F7572636506AC70726F63656475726520417667436C6173734F6E
+      5072696E743B0D0A626567696E0D0A202020417667436C6173732E466F6E742E
+      426F6C64203A3D2046616C73653B0D0A20202069662028706C456E7472696573
+      5B27417667436C61737352616E6B275D203D203129207468656E20626567696E
+      0D0A202020202020417667436C6173732E466F6E742E426F6C64203A3D205472
+      75653B0D0A202020656E643B0D0A0D0A0D0A656E643B0D0A0D436F6D706F6E65
+      6E744E616D650608417667436C617373094576656E744E616D6506074F6E5072
+      696E74074576656E74494402200001060F5472614576656E7448616E646C6572
+      0B50726F6772616D4E616D6506104261636B436C6173734F6E5072696E740B50
+      726F6772616D54797065070B747450726F63656475726506536F7572636506AE
+      70726F636564757265204261636B436C6173734F6E5072696E743B0D0A626567
+      696E0D0A2020204261636B436C6173732E466F6E742E426F6C64203A3D204661
+      6C73653B0D0A20202069662028706C456E74726965735B274261636B436C6173
+      7352616E6B275D203D203129207468656E20626567696E0D0A20202020202042
+      61636B436C6173732E466F6E742E426F6C64203A3D20547275653B0D0A202020
+      656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506094261
+      636B436C617373094576656E744E616D6506074F6E5072696E74074576656E74
+      494402200001060F5472614576656E7448616E646C65720B50726F6772616D4E
+      616D650613417667436C61737352616E6B4F6E5072696E740B50726F6772616D
+      54797065070B747450726F63656475726506536F7572636506B670726F636564
+      75726520417667436C61737352616E6B4F6E5072696E743B0D0A626567696E0D
+      0A202020417667436C61737352616E6B2E466F6E742E426F6C64203A3D204661
+      6C73653B0D0A20202069662028706C456E74726965735B27417667436C617373
+      52616E6B275D203D203129207468656E20626567696E0D0A2020202020204176
+      67436C61737352616E6B2E466F6E742E426F6C64203A3D20547275653B0D0A20
+      2020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060C
+      417667436C61737352616E6B094576656E744E616D6506074F6E5072696E7407
+      4576656E74494402200001060F5472614576656E7448616E646C65720B50726F
+      6772616D4E616D6506144261636B436C61737352616E6B4F6E5072696E740B50
+      726F6772616D54797065070B747450726F63656475726506536F7572636506BA
+      70726F636564757265204261636B436C61737352616E6B4F6E5072696E743B0D
+      0A626567696E0D0A2020204261636B436C61737352616E6B2E466F6E742E426F
+      6C64203A3D2046616C73653B0D0A20202069662028706C456E74726965735B27
+      4261636B436C61737352616E6B275D203D203129207468656E20626567696E0D
+      0A2020202020204261636B436C61737352616E6B2E466F6E742E426F6C64203A
+      3D20547275653B0D0A202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F
+      6E656E744E616D65060D4261636B436C61737352616E6B094576656E744E616D
+      6506074F6E5072696E74074576656E74494402200001060F5472614576656E74
+      48616E646C65720B50726F6772616D4E616D6506144261636B53706565645261
+      6E6B4F6E5072696E740B50726F6772616D54797065070B747450726F63656475
+      726506536F7572636506B970726F636564757265204261636B53706565645261
+      6E6B4F6E5072696E743B0D0A626567696E0D0A20204261636B53706565645261
+      6E6B2E466F6E742E426F6C64203A3D2046616C73653B0D0A2020206966202870
+      6C456E74726965735B274261636B537065656452616E6B275D203D2031292074
+      68656E20626567696E0D0A2020202020204261636B537065656452616E6B2E46
+      6F6E742E426F6C64203A3D20547275653B0D0A202020656E643B0D0A0D0A656E
+      643B0D0A0D436F6D706F6E656E744E616D65060D4261636B537065656452616E
+      6B094576656E744E616D6506074F6E5072696E74074576656E74494402200001
+      060F5472614576656E7448616E646C65720B50726F6772616D4E616D65061B54
+      6F74616C54726E416674436C6D57696E5063744F6E5072696E740B50726F6772
+      616D54797065070B747450726F63656475726506536F75726365063770726F63
+      656475726520546F74616C54726E416674436C6D57696E5063744F6E5072696E
+      743B0D0A626567696E0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D
+      650614546F74616C54726E416674436C6D57696E506374094576656E744E616D
+      6506074F6E5072696E74074576656E74494402200001060F5472614576656E74
+      48616E646C65720B50726F6772616D4E616D6506104261636B53706565644F6E
+      5072696E740B50726F6772616D54797065070B747450726F6365647572650653
+      6F7572636506AE70726F636564757265204261636B53706565644F6E5072696E
+      743B0D0A626567696E0D0A2020204261636B53706565642E466F6E742E426F6C
+      64203A3D2046616C73653B0D0A20202069662028706C456E74726965735B2742
+      61636B537065656452616E6B275D203D203129207468656E20626567696E0D0A
+      2020202020204261636B53706565642E466F6E742E426F6C64203A3D20547275
+      653B0D0A202020656E643B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E
+      616D6506094261636B5370656564094576656E744E616D6506074F6E5072696E
+      74074576656E74494402200001060F5472614576656E7448616E646C65720B50
+      726F6772616D4E616D6506144C617374537065656452616E6B4F6E5072696E74
+      0B50726F6772616D54797065070B747450726F63656475726506536F75726365
+      06BA70726F636564757265204C617374537065656452616E6B4F6E5072696E74
+      3B0D0A626567696E0D0A2020204C617374537065656452616E6B2E466F6E742E
+      426F6C64203A3D2046616C73653B0D0A20202069662028706C456E7472696573
+      5B274C617374537065656452616E6B275D203D203129207468656E2062656769
+      6E0D0A2020202020204C617374537065656452616E6B2E466F6E742E426F6C64
+      203A3D20547275653B0D0A202020656E643B0D0A0D0A656E643B0D0A0D436F6D
+      706F6E656E744E616D65060D4C617374537065656452616E6B094576656E744E
+      616D6506074F6E5072696E74074576656E74494402200000}
   end
 end
