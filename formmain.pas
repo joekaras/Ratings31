@@ -18409,7 +18409,7 @@ begin
             SetRanking(dm.tblEntries, 'ByTotalJky30WinPctRank', 'TotalJky30WinPctRank', 'TotalJky30WinPct', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
             SetRanking(dm.tblEntries, 'ByTotalTrnOddsWinPctRank', 'TotalTrnOddsWinPctRank', 'TotalTrnOddsWinPct', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
             SetRanking(dm.tblEntries, 'ByTotalJkyOddsWinPctRank', 'TotalJkyOddsWinPctRank', 'TotalJkyOddsWinPct', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
-            SetRanking(dm.tblEntries, 'ByMorningLineTo1Rank', 'MorningLineTo1Rank', 'MorningLineTo1', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, True);
+            SetRankingDouble(dm.tblEntries, 'ByMorningLineTo1Rank', 'MorningLineTo1Rank', 'MorningLineTo1', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, True);
             SetRanking(dm.tblEntries, 'ByTrnTodayWinPctRank', 'TrnTodayWinPctRank', 'TrnTodayWinPct', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
             SetRanking(dm.tblEntries, 'ByLastSpeedRank', 'LastSpeedRank', 'LastSpeed', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);
             SetRanking(dm.tblEntries, 'ByBackSpeedRank', 'BackSpeedRank', 'BackSpeed', pnlPrgBar, prgBar, staBar, BATCH_SIZE, STAT_DAYS, False);

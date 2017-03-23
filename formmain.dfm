@@ -1,8 +1,8 @@
 object MainForm: TMainForm
-  Left = 686
-  Top = 169
+  Left = -50
+  Top = 307
   Width = 1589
-  Height = 924
+  Height = 871
   Caption = 'KSK Ratings 3.1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -20,7 +20,7 @@ object MainForm: TMainForm
   TextHeight = 16
   object staBar: TStatusBar
     Left = 0
-    Top = 836
+    Top = 783
     Width = 1581
     Height = 19
     Panels = <>
@@ -30,7 +30,7 @@ object MainForm: TMainForm
   end
   object pnlPrgBar: TPanel
     Left = 0
-    Top = 855
+    Top = 802
     Width = 1581
     Height = 36
     Align = alBottom
@@ -50,13 +50,13 @@ object MainForm: TMainForm
     Left = 0
     Top = 28
     Width = 1581
-    Height = 808
+    Height = 755
     ActivePage = tabDaily
     Align = alClient
     LookAndFeel.Kind = lfStandard
     LookAndFeel.NativeStyle = False
     TabOrder = 2
-    ClientRectBottom = 806
+    ClientRectBottom = 753
     ClientRectLeft = 2
     ClientRectRight = 1579
     ClientRectTop = 25
@@ -64,7 +64,7 @@ object MainForm: TMainForm
       Caption = 'Daily'
       object lblLocalPath: TLabel
         Left = 0
-        Top = 728
+        Top = 675
         Width = 1577
         Height = 26
         Align = alBottom
@@ -78,7 +78,7 @@ object MainForm: TMainForm
       end
       object lblServerPath: TLabel
         Left = 0
-        Top = 754
+        Top = 701
         Width = 1577
         Height = 27
         Align = alBottom

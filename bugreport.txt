@@ -1,213 +1,174 @@
-date/time         : 2013-06-04, 21:49:03, 281ms
-computer name     : KSKRATINGSVM2
-user name         : Administrator <admin>
-registered owner  : Joseph Karas / Joseph Karas
-operating system  : Windows 2000 Service Pack 4 build 2195
-system language   : English
-system up time    : 48 minutes 12 seconds
-program up time   : 1 minute 18 seconds
-processor         : Intel(R) Xeon(R) CPU W3530 @ 2.80GHz
-physical memory   : 1552/2047 MB (free/total)
-free disk space   : (C:) 48.92 GB
-display mode      : 1280x1024, 32 bit
-process id        : $2a8
-allocated memory  : 13.64 MB
-executable        : Ratings31.exe
-exec. date/time   : 2013-06-04 21:47
-compiled with     : Delphi 7
-madExcept version : 3.0e
-callstack crc     : $8457fe77, $2e112837, $2e112837
-exception number  : 1
-exception class   : EIdConnClosedGracefully
-exception message : Connection Closed Gracefully.
+date/time          : 2017-03-22, 21:00:04, 152ms
+computer name      : KSKRATINGSVM2
+user name          : Administrator <admin>
+registered owner   : Joseph Karas / Joseph Karas
+operating system   : Windows 2000 Service Pack 4 build 2195
+system language    : English
+system up time     : 13 hours 10 minutes
+program up time    : 3 seconds
+processor          : Intel(R) Xeon(R) CPU W3530 @ 2.80GHz
+physical memory    : 1511/2047 MB (free/total)
+free disk space    : (C:) 44.96 GB
+display mode       : 1920x1080, 32 bit
+process id         : $420
+allocated memory   : 24.01 MB
+largest free block : 1.29 GB
+executable         : ratings31.exe
+exec. date/time    : 2017-03-22 20:59
+compiled with      : Delphi 7
+madExcept version  : 4.0.8.1
+callstack crc      : $35c6fb56, $ed77d4f3, $ed77d4f3
+exception number   : 1
+exception class    : EDBISAMEngineError
+exception message  : DBISAM Engine Error # 11013 Access denied to table or backup file 'ENTRY'.
 
-Main ($418):
-006feeff +02f Ratings31.exe IdIOHandler       1456 +23 TIdIOHandler.RaiseConnClosedGracefully
-00887284 +060 Ratings31.exe IdIOHandlerStack   534 +19 TIdIOHandlerStack.CheckForDisconnect
-006ff687 +00f Ratings31.exe IdIOHandler       1785  +2 TIdIOHandler.WriteDirect
-00886f41 +011 Ratings31.exe IdIOHandlerStack   420  +1 TIdIOHandlerStack.WriteDirect
-006ff4ad +03d Ratings31.exe IdIOHandler       1687  +3 TIdIOHandler.Write
-006fdf38 +030 Ratings31.exe IdIOHandler        953  +2 TIdIOHandler.Write
-006fea63 +02f Ratings31.exe IdIOHandler       1300  +2 TIdIOHandler.WriteLn
-008a7e8f +01f Ratings31.exe IdFTP             1843  +2 TIdFTP.DisconnectNotifyPeer
-0088bbca +02a Ratings31.exe IdTCPConnection    505  +5 TIdTCPConnection.Disconnect
-0088c1dc +004 Ratings31.exe IdTCPConnection    767  +0 TIdTCPConnection.Disconnect
-00c3b8e5 +0e1 Ratings31.exe FormMain          7881  +8 TMainForm.FTPSheets
-00c3a750 +054 Ratings31.exe FormMain          7518  +6 TMainForm.FTPReports
-00c3a55d +011 Ratings31.exe FormMain          7466  +2 TMainForm.btnFTPReportsClick
-004d93d4 +064 Ratings31.exe Controls                   TControl.Click
-004ceeb8 +01c Ratings31.exe StdCtrls                   TButton.Click
-004cefac +00c Ratings31.exe StdCtrls                   TButton.CNCommand
-004d923c +188 Ratings31.exe Controls                   TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                   TWinControl.WndProc
-004ced7c +06c Ratings31.exe StdCtrls                   TButtonControl.WndProc
-004d900c +024 Ratings31.exe Controls                   TControl.Perform
-004dc41b +023 Ratings31.exe Controls                   DoControlMsg
-004dca73 +00b Ratings31.exe Controls                   TWinControl.WMCommand
-004d923c +188 Ratings31.exe Controls                   TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                   TWinControl.WndProc
-004dbf60 +02c Ratings31.exe Controls                   TWinControl.MainWndProc
-0047bfe4 +014 Ratings31.exe Classes                    StdWndProc
-77f91bac +010 ntdll.dll                                KiUserCallbackDispatcher
-77e1735c +03f user32.dll                               SendMessageW
-77e16b5f +014 user32.dll                               CallWindowProcA
-004dc3c7 +0d7 Ratings31.exe Controls                   TWinControl.DefaultHandler
-004d97dc +010 Ratings31.exe Controls                   TControl.WMLButtonUp
-004d923c +188 Ratings31.exe Controls                   TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                   TWinControl.WndProc
-004ced7c +06c Ratings31.exe StdCtrls                   TButtonControl.WndProc
-004dbf60 +02c Ratings31.exe Controls                   TWinControl.MainWndProc
-0047bfe4 +014 Ratings31.exe Classes                    StdWndProc
-77e15b72 +006 user32.dll                               DispatchMessageA
-004f8d63 +083 Ratings31.exe Forms                      TApplication.ProcessMessage
-004f8d82 +00a Ratings31.exe Forms                      TApplication.ProcessMessages
-00c42042 +00a Ratings31.exe FormMain         10233  +2 TMainForm.idFtpStatus
-006f0c0b +06f Ratings31.exe IdComponent        171  +7 TIdComponent.DoStatus
-006f0b96 +006 Ratings31.exe IdComponent        160  +0 TIdComponent.DoStatus
-0088bbf5 +055 Ratings31.exe IdTCPConnection    530 +30 TIdTCPConnection.Disconnect
-0088c1dc +004 Ratings31.exe IdTCPConnection    767  +0 TIdTCPConnection.Disconnect
-00c3ab8e +2ca Ratings31.exe FormMain          7627 +50 TMainForm.DeleteFTPSheets
-00c3a5f7 +08b Ratings31.exe FormMain          7490  +7 TMainForm.DeleteAllFTPReports
-00c4a674 +000 Ratings31.exe FormMain         13730  +0 TMainForm.btnDeleteAllFTPReportClick
-004d93d4 +064 Ratings31.exe Controls                   TControl.Click
-004ceeb8 +01c Ratings31.exe StdCtrls                   TButton.Click
-004cefac +00c Ratings31.exe StdCtrls                   TButton.CNCommand
-004d923c +188 Ratings31.exe Controls                   TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                   TWinControl.WndProc
-004ced7c +06c Ratings31.exe StdCtrls                   TButtonControl.WndProc
-004d900c +024 Ratings31.exe Controls                   TControl.Perform
-004dc41b +023 Ratings31.exe Controls                   DoControlMsg
-004dca73 +00b Ratings31.exe Controls                   TWinControl.WMCommand
-004d923c +188 Ratings31.exe Controls                   TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                   TWinControl.WndProc
-004dbf60 +02c Ratings31.exe Controls                   TWinControl.MainWndProc
-0047bfe4 +014 Ratings31.exe Classes                    StdWndProc
-77f91bac +010 ntdll.dll                                KiUserCallbackDispatcher
-77e1735c +03f user32.dll                               SendMessageW
-77e16b5f +014 user32.dll                               CallWindowProcA
-004dc3c7 +0d7 Ratings31.exe Controls                   TWinControl.DefaultHandler
-004d97dc +010 Ratings31.exe Controls                   TControl.WMLButtonUp
-004d923c +188 Ratings31.exe Controls                   TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                   TWinControl.WndProc
-004ced7c +06c Ratings31.exe StdCtrls                   TButtonControl.WndProc
-004dbf60 +02c Ratings31.exe Controls                   TWinControl.MainWndProc
-0047bfe4 +014 Ratings31.exe Classes                    StdWndProc
-77e15b72 +006 user32.dll                               DispatchMessageA
-004f8d63 +083 Ratings31.exe Forms                      TApplication.ProcessMessage
-004f8d9a +00a Ratings31.exe Forms                      TApplication.HandleMessage
-004f8fca +096 Ratings31.exe Forms                      TApplication.Run
-00c72887 +06b Ratings31.exe Ratings31          110  +5 initialization
+Main ($500):
+005f5889 +011 ratings31.exe dbisamtb   2886  +1 DBISAMError
+005a505a +07e ratings31.exe dbisamen   5447 +19 TDataEngine.RaiseError
+005abdb3 +0f7 ratings31.exe dbisamen   8451  +7 TEngineFile.OpenFile
+005ad5fd +009 ratings31.exe dbisamen   9343  +2 TBufferedFile.OpenFile
+005e7419 +00d ratings31.exe dbisamen  32659  +0 TDataFile.OpenFile
+005b7506 +082 ratings31.exe dbisamen  14965 +13 TDataTable.OpenTable
+005b3796 +1de ratings31.exe dbisamen  13799 +55 TDataDirectory.OpenDataTable
+005bc7ba +0a6 ratings31.exe dbisamen  17852  +9 TDataCursor.OpenCursor
+00600c2d +07d ratings31.exe dbisamtb  10836  +8 TDBISAMTable.GetHandle
+00600e18 +058 ratings31.exe dbisamtb  10888  +5 TDBISAMTable.CreateHandle
+005fc8d2 +01e ratings31.exe dbisamtb   8215  +1 TDBISAMDataSet.OpenCursor
+006001ad +019 ratings31.exe dbisamtb  10333  +2 TDBISAMDBDataSet.OpenCursor
+00526271 +055 ratings31.exe DB                  TDataSet.SetActive
+00525e07 +033 ratings31.exe DB                  TDataSet.Loaded
+00480678 +024 ratings31.exe Classes             NotifyGlobalLoading
+004807f9 +071 ratings31.exe Classes             InitInheritedComponent
+00503459 +0a1 ratings31.exe Forms               TCustomForm.Create
+0050ae39 +031 ratings31.exe Forms               TApplication.CreateForm
+00c946b4 +078 ratings31.exe Ratings31   114  +6 initialization
 
-thread $454: <priority:15>
-77f88f03 +0b ntdll.dll               NtWaitForMultipleObjects
+thread $31c: <priority:15>
 7c59a26b +e8 kernel32.dll            WaitForMultipleObjectsEx
 7c59a17b +12 kernel32.dll            WaitForMultipleObjects
-00451d59 +0d Ratings31.exe madExcept CallThreadProcSafe
-00451dc3 +37 Ratings31.exe madExcept ThreadExceptFrame
->> created by Main ($418) at:
+00462849 +0d ratings31.exe madExcept CallThreadProcSafe
+004628b3 +37 ratings31.exe madExcept ThreadExceptFrame
+>> created by Main ($500) at:
 77562d78 +00 wdmaud.drv
 
-thread $3f8: <priority:2>
-77e585c7 +0b user32.dll
+thread $4cc: <priority:2>
 77e1698a +79 user32.dll              GetMessageA
-00451d59 +0d Ratings31.exe madExcept CallThreadProcSafe
-00451dc3 +37 Ratings31.exe madExcept ThreadExceptFrame
->> created by Main ($418) at:
+00462849 +0d ratings31.exe madExcept CallThreadProcSafe
+004628b3 +37 ratings31.exe madExcept ThreadExceptFrame
+>> created by Main ($500) at:
 77573c61 +00 winmm.dll
 
-thread $534:
-77f88f03 +0b ntdll.dll               NtWaitForMultipleObjects
-7c59a26b +e8 kernel32.dll            WaitForMultipleObjectsEx
-7c59a17b +12 kernel32.dll            WaitForMultipleObjects
-00451d59 +0d Ratings31.exe madExcept CallThreadProcSafe
-00451dc3 +37 Ratings31.exe madExcept ThreadExceptFrame
->> created by Main ($418) at:
-778321e6 +00 RTUTILS.DLL
+thread $55c:
+00462849 +0d ratings31.exe madExcept CallThreadProcSafe
+004628b3 +37 ratings31.exe madExcept ThreadExceptFrame
+>> created by madExcept - HandleExceptionThread ($3cc) at:
+77d37fdb +00 RPCRT4.dll
+
+thread $43c:
+7c59a2ff +30 kernel32.dll            SleepEx
+7c59a2c7 +06 kernel32.dll            Sleep
+00462849 +0d ratings31.exe madExcept CallThreadProcSafe
+004628b3 +37 ratings31.exe madExcept ThreadExceptFrame
+>> created by madExcept - HandleExceptionThread ($3cc) at:
+7ce85cb4 +00 ole32.dll
 
 modules:
-00400000 Ratings31.exe                C:\Ratings31
-02e10000 unrar3.dll                   C:\WINNT\system32
-6b2c0000 msimg32.dll   5.0.2180.1     C:\WINNT\system32
-70a70000 SHLWAPI.dll   6.0.2800.2006  C:\WINNT\system32
-70d00000 gdiplus.dll   5.1.3102.1360  C:\WINNT\system32
-71710000 comctl32.dll  5.81.4968.2500 C:\WINNT\system32
-74fd0000 msafd.dll     5.0.2195.7158  C:\WINNT\system32
-75010000 wshtcpip.dll  5.0.2195.6601  C:\WINNT\System32
-75020000 WS2HELP.DLL   5.0.2134.1     C:\WINNT\system32
-75030000 WS2_32.DLL    5.0.2195.6601  C:\WINNT\system32
-75050000 wsock32.dll   5.0.2195.6603  C:\WINNT\system32
-75150000 SAMLIB.DLL    5.0.2195.6944  C:\WINNT\system32
-751c0000 NETRAP.dll    5.0.2134.1     C:\WINNT\system32
-759b0000 LZ32.DLL      5.0.2195.6611  C:\WINNT\system32
-76620000 mpr.dll       5.0.2195.7134  C:\WINNT\system32
-76b20000 RICHED32.DLL  5.0.2134.1     C:\WINNT\system32
-76b30000 comdlg32.dll  5.0.3700.6693  C:\WINNT\system32
-772b0000 RICHED20.DLL  5.30.23.1227   C:\WINNT\system32
-77320000 MPRAPI.dll    5.0.2181.1     C:\WINNT\system32
-77340000 iphlpapi.dll  5.0.2195.7097  C:\WINNT\system32
-77360000 DHCPCSVC.DLL  5.0.2195.7085  C:\WINNT\system32
-77380000 ADSLDPC.DLL   5.0.2195.6993  C:\WINNT\system32
-773b0000 ACTIVEDS.DLL  5.0.2195.6601  C:\WINNT\system32
-774c0000 rasman.dll    5.0.2195.6824  C:\WINNT\system32
-774e0000 RASAPI32.dll  5.0.2195.6920  C:\WINNT\system32
-77520000 ICMP.dll      5.0.2134.1     C:\WINNT\system32
-77530000 TAPI32.dll    5.0.2195.6664  C:\WINNT\system32
-77560000 wdmaud.drv    5.0.2195.6673  C:\WINNT\system32
-77570000 winmm.dll     5.0.2161.1     C:\WINNT\system32
-777e0000 winrnr.dll    5.0.2160.1     C:\WINNT\System32
-777f0000 rasadhlp.dll  5.0.2195.7098  C:\WINNT\system32
-77800000 winspool.drv  5.0.2195.6659  C:\WINNT\system32
-77820000 version.dll   5.0.2195.6623  C:\WINNT\system32
-77830000 RTUTILS.DLL   5.0.2168.1     C:\WINNT\system32
-77880000 SETUPAPI.DLL  5.0.2195.6622  C:\WINNT\system32
-77950000 WLDAP32.DLL   5.0.2195.7017  C:\WINNT\system32
-77980000 DNSAPI.DLL    5.0.2195.7280  C:\WINNT\system32
-779b0000 oleaut32.dll  2.40.4532.0    C:\WINNT\system32
-77bf0000 NTDSAPI.dll   5.0.2195.6666  C:\WINNT\system32
-77d30000 RPCRT4.dll    5.0.2195.7281  C:\WINNT\system32
-77e10000 user32.dll    5.0.2195.7133  C:\WINNT\system32
-77f40000 GDI32.dll     5.0.2195.7205  C:\WINNT\system32
-77f80000 ntdll.dll     5.0.2195.7006  C:\WINNT\system32
-78000000 msvcrt.dll    6.1.9844.0     C:\WINNT\system32
-782c0000 rnr20.dll     5.0.2195.6603  C:\WINNT\System32
-7c0f0000 USERENV.DLL   5.0.2195.7002  C:\WINNT\system32
-7c2d0000 advapi32.dll  5.0.2195.7038  C:\WINNT\system32
-7c340000 Secur32.dll   5.0.2195.7244  C:\WINNT\system32
-7c570000 kernel32.dll  5.0.2195.7135  C:\WINNT\system32
-7cdc0000 NETAPI32.DLL  5.0.2195.7203  C:\WINNT\system32
-7ce20000 ole32.dll     5.0.2195.7059  C:\WINNT\system32
-7cf30000 shell32.dll   5.0.3900.7155  C:\WINNT\system32
+00400000 ratings31.exe                        c:\Ratings31
+02ea0000 unrar3.dll                           C:\WINNT\system32
+045d0000 TortoiseSVN.dll      1.5.2.13595     C:\Program Files\TortoiseSVN\bin
+05940000 TortoiseStub.dll     1.5.2.13595     C:\Program Files\TortoiseSVN\bin
+05960000 TortoiseOverlays.dll 1.0.4.11886     C:\Program Files\Common Files\TortoiseOverlays
+10000000 intl3_tsvn.dll       0.14.4.0        C:\Program Files\TortoiseSVN\bin
+63000000 WININET.dll          6.0.2800.1649   C:\WINNT\system32
+6b2c0000 msimg32.dll          5.0.2180.1      C:\WINNT\system32
+6ee60000 libaprutil_tsvn.dll  1.2.12.0        C:\Program Files\TortoiseSVN\bin
+6eec0000 libapr_tsvn.dll      1.2.12.0        C:\Program Files\TortoiseSVN\bin
+70a70000 SHLWAPI.dll          6.0.2800.2006   C:\WINNT\system32
+70d00000 gdiplus.dll          5.1.3102.1360   C:\WINNT\system32
+71710000 comctl32.dll         5.81.4968.2500  C:\WINNT\system32
+719b0000 SHFOLDER.dll         6.0.2800.1106   C:\WINNT\system32
+74ff0000 MSWSOCK.dll          5.0.2195.7158   C:\WINNT\system32
+75020000 WS2HELP.DLL          5.0.2134.1      C:\WINNT\system32
+75030000 WS2_32.DLL           5.0.2195.6601   C:\WINNT\system32
+75050000 wsock32.dll          5.0.2195.6603   C:\WINNT\system32
+75150000 SAMLIB.DLL           5.0.2195.6944   C:\WINNT\system32
+751c0000 NETRAP.dll           5.0.2134.1      C:\WINNT\system32
+759b0000 LZ32.DLL             5.0.2195.6611   C:\WINNT\system32
+76620000 mpr.dll              5.0.2195.7134   C:\WINNT\system32
+76b20000 RICHED32.DLL         5.0.2134.1      C:\WINNT\system32
+76b30000 comdlg32.dll         5.0.3700.6693   C:\WINNT\system32
+770c0000 CSCDLL.DLL           5.0.2195.6713   C:\WINNT\system32
+772b0000 RICHED20.DLL         5.30.23.1227    C:\WINNT\system32
+77320000 MPRAPI.dll           5.0.2181.1      C:\WINNT\system32
+77340000 iphlpapi.dll         5.0.2195.7097   C:\WINNT\system32
+77360000 DHCPCSVC.DLL         5.0.2195.7085   C:\WINNT\system32
+77380000 ADSLDPC.DLL          5.0.2195.6993   C:\WINNT\system32
+773b0000 ACTIVEDS.DLL         5.0.2195.6601   C:\WINNT\system32
+77430000 MSASN1.dll           5.0.2195.7334   C:\WINNT\system32
+774c0000 rasman.dll           5.0.2195.6824   C:\WINNT\system32
+774e0000 RASAPI32.dll         5.0.2195.6920   C:\WINNT\system32
+77520000 ICMP.dll             5.0.2134.1      C:\WINNT\system32
+77530000 TAPI32.dll           5.0.2195.6664   C:\WINNT\system32
+77560000 wdmaud.drv           5.0.2195.6673   C:\WINNT\system32
+77570000 winmm.dll            5.0.2161.1      C:\WINNT\system32
+777e0000 winrnr.dll           5.0.2160.1      C:\WINNT\System32
+77800000 winspool.drv         5.0.2195.6659   C:\WINNT\system32
+77820000 version.dll          5.0.2195.6623   C:\WINNT\system32
+77830000 RTUTILS.DLL          5.0.2168.1      C:\WINNT\system32
+77840000 cscui.dll            5.0.2195.6705   C:\WINNT\system32
+77880000 SETUPAPI.DLL         5.0.2195.6622   C:\WINNT\system32
+77950000 WLDAP32.DLL          5.0.2195.7017   C:\WINNT\system32
+77980000 DNSAPI.DLL           5.0.2195.7280   C:\WINNT\system32
+779b0000 oleaut32.dll         2.40.4532.0     C:\WINNT\system32
+77bf0000 NTDSAPI.dll          5.0.2195.6666   C:\WINNT\system32
+77d30000 RPCRT4.dll           5.0.2195.7281   C:\WINNT\system32
+77e10000 user32.dll           5.0.2195.7133   C:\WINNT\system32
+77f40000 GDI32.dll            5.0.2195.7205   C:\WINNT\system32
+77f80000 ntdll.dll            5.0.2195.7006   C:\WINNT\system32
+78000000 msvcrt.dll           6.1.9844.0      C:\WINNT\system32
+782c0000 rnr20.dll            5.0.2195.6603   C:\WINNT\System32
+78480000 MSVCP90.dll          9.0.30729.4148  C:\WINNT\system32
+78520000 MSVCR90.dll          9.0.30729.4148  C:\WINNT\system32
+7c0f0000 USERENV.DLL          5.0.2195.7002   C:\WINNT\system32
+7c2d0000 advapi32.dll         5.0.2195.7038   C:\WINNT\system32
+7c340000 Secur32.dll          5.0.2195.7244   C:\WINNT\system32
+7c570000 kernel32.dll         5.0.2195.7135   C:\WINNT\system32
+7c740000 CRYPT32.dll          5.131.2195.6926 C:\WINNT\system32
+7c950000 CLBCATQ.DLL          2000.2.3529.0   C:\WINNT\system32
+7cdc0000 NETAPI32.DLL         5.0.2195.7203   C:\WINNT\system32
+7ce20000 ole32.dll            5.0.2195.7059   C:\WINNT\system32
+7cf30000 shell32.dll          5.0.3900.7155   C:\WINNT\system32
 
 processes:
-000 Idle
-008 System                         normal
-0a0 smss.exe                       normal C:\WINNT\system32
-0b8 CSRSS.EXE
-0b4 winlogon.exe                   high   C:\WINNT\system32
-0e8 services.exe                   normal C:\WINNT\system32
-0f4 lsass.exe                      normal C:\WINNT\system32
-1a8 svchost.exe                    normal C:\WINNT\system32
-1c8 LEXBCES.EXE                    normal C:\WINNT\system32
-1e4 spoolsv.exe                    normal C:\WINNT\system32
-208 svchost.exe                    normal C:\WINNT\System32
-214 FileZilla Server.exe           normal C:\Program Files\FileZilla Server
-240 jqs.exe                        idle   C:\Program Files\Java\jre6\bin
-268 regsvc.exe                     normal C:\WINNT\system32
-258 MSTask.exe                     normal C:\WINNT\system32
-2c8 WinVNC.exe                     normal C:\Program Files\UltraVNC
-2dc vmtoolsd.exe                   high   C:\Program Files\VMware\VMware Tools
-2f0 WinMgmt.exe                    normal C:\WINNT\System32\WBEM
-2fc svchost.exe                    normal C:\WINNT\system32
-110 WinVNC.exe                     normal C:\Program Files\UltraVNC
-410 Explorer.EXE                   normal C:\WINNT
-0e4 TSVNCache.exe                  normal C:\Program Files\TortoiseSVN\bin
-440 qttask.exe                     normal C:\Program Files\QuickTime
-43c FileZilla Server Interface.exe normal C:\Program Files\FileZilla Server
-478 jusched.exe                    normal C:\Program Files\Common Files\Java\Java Update
-480 vmtoolsd.exe                   normal C:\Program Files\VMware\VMware Tools
-4b0 svchost.exe                    normal C:\WINNT\System32
-530 delphi32.exe                   normal C:\Program Files\Borland\Delphi7\Bin
-2a8 Ratings31.exe                  normal C:\Ratings31
+000 Idle                 0   0
+008 System               0   0   normal
+0a0 smss.exe             0   0   normal C:\WINNT\system32
+0bc CSRSS.EXE            0   0
+0b8 winlogon.exe         18  7   high   C:\WINNT\system32
+0ec services.exe         4   0   normal C:\WINNT\system32
+0f8 lsass.exe            4   0   normal C:\WINNT\system32
+1b4 svchost.exe          4   0   normal C:\WINNT\system32
+1d4 LEXBCES.EXE          4   0   normal C:\WINNT\system32
+1f0 spoolsv.exe          4   1   normal C:\WINNT\system32
+214 svchost.exe          6   3   normal C:\WINNT\System32
+220 FileZilla Server.exe 4   7   normal C:\Program Files\FileZilla Server
+248 jqs.exe              4   0   idle   C:\Program Files\Java\jre6\bin
+270 regsvc.exe           4   0   normal C:\WINNT\system32
+288 MSTask.exe           20  1   normal C:\WINNT\system32
+29c WinVNC.exe           4   0   normal C:\Program Files\UltraVNC
+2cc vmtoolsd.exe         4   3   high   C:\Program Files\VMware\VMware Tools
+2dc WinMgmt.exe          4   0   normal C:\WINNT\System32\WBEM
+2f0 svchost.exe          4   0   normal C:\WINNT\system32
+3a0 WinVNC.exe           8   5   normal C:\Program Files\UltraVNC
+434 Explorer.EXE         357 378 normal C:\WINNT
+478 TSVNCache.exe        4   1   normal C:\Program Files\TortoiseSVN\bin
+460 qttask.exe           6   2   normal C:\Program Files\QuickTime
+4a0 jusched.exe          4   1   normal C:\Program Files\Common Files\Java\Java Update
+4ac vmtoolsd.exe         39  19  normal C:\Program Files\VMware\VMware Tools
+150 svchost.exe          4   1   normal C:\WINNT\System32
+330 delphi32.exe         984 405 normal C:\Program Files\Borland\Delphi7\Bin
+084 Ratings31.exe        217 214 normal C:\Ratings31
+420 ratings31.exe        206 105 normal c:\Ratings31
 
 hardware:
 + Batteries
@@ -239,11 +200,11 @@ hardware:
   - VMware USB Pointing Device (driver 12.5.2.0)
   - VMware USB Pointing Device (driver 12.5.2.0)
 + Network adapters
+  - Direct Parallel
   - VMware Accelerated AMD PCNet Adapter #6 (driver 2.2.0.0)
-+ Ports (COM & LPT)
-  - Communications Port (COM1)
-  - Communications Port (COM2)
-  - Printer Port (LPT1)
+  - WAN Miniport (IP)
+  - WAN Miniport (L2TP)
+  - WAN Miniport (PPTP)
 + SCSI and RAID controllers
   - VMware VMSCSI Controller (driver 2.0.3.0)
 + Sound, video and game controllers
@@ -258,8 +219,6 @@ hardware:
   - ACPI Fixed Feature Button
   - Direct memory access controller
   - EISA programmable interrupt controller
-  - Generic Bus
-  - Generic Bus
   - Generic Bus
   - Intel 82371AB/EB PCI to ISA bridge (ISA mode)
   - Intel 82443BX Pentium(r) II Processor to AGP Controller
@@ -279,6 +238,7 @@ hardware:
   - PCI standard PCI-to-PCI bridge
   - PCI standard PCI-to-PCI bridge
   - Plug and Play Software Device Enumerator
+  - System board
   - System CMOS/real time clock
   - System speaker
   - System timer
@@ -287,985 +247,53 @@ hardware:
   - Volume Manager
 + Universal Serial Bus controllers
   - Generic USB Hub
-  - Intel 82371AB/EB PCI to USB Universal Host Controller
   - Standard Enhanced PCI to USB Host Controller
+  - Standard Universal PCI to USB Host Controller
   - USB 2.0 Root Hub
   - USB Composite Device
   - USB Root Hub
 
 cpu registers:
-eax = 033a1820
-ebx = 0012e201
+eax = 0012f4b0
+ebx = 00002b05
 ecx = 00000000
-edx = 006fef04
-esi = 019cf5d0
-edi = 00886934
-eip = 006fef04
-esp = 0012e254
-ebp = 0012e294
+edx = 005f588e
+esi = 0012f534
+edi = 0012f4e0
+eip = 7c59bcb1
+esp = 0012f4a8
+ebp = 0012f500
 
 stack dump:
-0012e254  04 ef 6f 00 de fa ed 0e - 01 00 00 00 07 00 00 00  ..o.............
-0012e264  68 e2 12 00 04 ef 6f 00 - 20 18 3a 03 01 e2 12 00  h.....o...:.....
-0012e274  d0 f5 9c 01 34 69 88 00 - 94 e2 12 00 84 e2 12 00  ....4i..........
-0012e284  d8 e2 12 00 80 4d 40 00 - 94 e2 12 00 00 00 00 00  .....M@.........
-0012e294  ec e2 12 00 89 72 88 00 - 01 69 88 00 e8 e2 12 00  .....r...i......
-0012e2a4  d0 f5 9c 01 8a f6 6f 00 - 01 00 00 00 d0 f5 9c 01  ......o.........
-0012e2b4  d0 f5 9c 01 46 6f 88 00 - e8 e2 12 00 0e 00 00 00  ....Fo..........
-0012e2c4  ec e2 12 00 01 00 00 00 - d0 f5 9c 01 d0 f5 9c 01  ................
-0012e2d4  b0 f4 6f 00 f4 e2 12 00 - 80 4d 40 00 ec e2 12 00  ..o......M@.....
-0012e2e4  08 65 32 03 00 00 00 00 - 0c e3 12 00 3b df 6f 00  .e2.........;.o.
-0012e2f4  14 e3 12 00 80 4d 40 00 - 0c e3 12 00 cc 7e 8a 00  .....M@......~..
-0012e304  d0 f5 9c 01 00 00 00 00 - 2c e3 12 00 69 ea 6f 00  ........,...i.o.
-0012e314  3c e3 12 00 80 4d 40 00 - 2c e3 12 00 24 e8 12 00  <....M@.,...$...
-0012e324  e0 48 36 03 00 00 00 00 - 4c e3 12 00 95 7e 8a 00  .H6.....L....~..
-0012e334  80 ec 12 00 cd bb 88 00 - 80 e3 12 00 80 4d 40 00  .............M@.
-0012e344  4c e3 12 00 e0 48 36 03 - 34 ee 12 00 df c1 88 00  L....H6.4.......
-0012e354  b0 bc c3 00 7c 4d 40 00 - 8c e3 12 00 01 00 00 00  ....|M@.........
-0012e364  24 e8 12 00 80 ec 12 00 - 72 b2 fb 77 24 e8 12 00  $.......r..w$...
-0012e374  80 ec 12 00 b4 e3 12 00 - 28 e7 12 00 80 ec 12 00  ........(.......
-0012e384  ad b2 fb 77 80 ec 12 00 - 2c e7 12 00 aa cd fa 77  ...w....,......w
+0012f4a8  2c 5d c1 03 c8 bd 5a 00 - de fa ed 0e 01 00 00 00  ,]....Z.........
+0012f4b8  00 00 00 00 b1 bc 59 7c - 07 00 00 00 8e 58 5f 00  ......Y|.....X_.
+0012f4c8  40 14 c3 03 05 2b 00 00 - c8 bd 5a 00 2c 5d c1 03  @....+....Z.,]..
+0012f4d8  54 f5 12 00 34 f5 12 00 - 03 13 46 00 2c 5d c1 03  T...4.....F.,]..
+0012f4e8  c8 bd 5a 00 54 f5 12 00 - 04 f5 12 00 05 2b 00 00  ..Z.T........+..
+0012f4f8  8e 58 5f 00 01 00 00 00 - 54 f5 12 00 8e 58 5f 00  .X_.....T....X_.
+0012f508  de fa ed 0e 01 00 00 00 - 07 00 00 00 18 f5 12 00  ................
+0012f518  8e 58 5f 00 40 14 c3 03 - 05 2b 00 00 c8 bd 5a 00  .X_.@....+....Z.
+0012f528  2c 5d c1 03 54 f5 12 00 - 34 f5 12 00 05 2b 00 00  ,]..T...4....+..
+0012f538  5f 50 5a 00 b4 f8 12 00 - 80 4d 40 00 54 f5 12 00  _PZ......M@.T...
+0012f548  fb d4 ff ff e0 42 c1 03 - 00 d8 a9 01 d4 f8 12 00  .....B..........
+0012f558  b8 bd 5a 00 00 00 00 00 - 00 00 00 00 c8 bd 5a 00  ..Z...........Z.
+0012f568  c8 bd 5a 00 c8 bd 5a 00 - c8 bd 5a 00 c8 bd 5a 00  ..Z...Z...Z...Z.
+0012f578  84 f5 12 00 c8 bd 5a 00 - c8 bd 5a 00 05 45 4e 54  ......Z...Z..ENT
+0012f588  52 59 57 00 b7 b4 57 00 - e0 e3 a9 01 06 00 00 00  RYW...W.........
+0012f598  2c fa 12 00 00 00 00 00 - 00 00 00 00 04 2e 64 61  ,.............da
+0012f5a8  74 f2 c3 03 10 00 00 00 - a8 2e 40 00 70 87 c3 03  t.........@.p...
+0012f5b8  00 00 00 00 cd 55 40 00 - 0e 00 00 00 a8 2e 40 00  .....U@.......@.
+0012f5c8  d8 a0 c3 03 30 f6 12 00 - cd 55 40 00 e0 a0 c3 03  ....0....U@.....
+0012f5d8  09 00 00 00 30 f6 12 00 - fb 2e 40 00 ec f5 12 00  ....0.....@.....
 
 disassembling:
 [...]
-006feeeb        call    -$2f73e8 ($407b08)     ; System.LoadResString
-006feef0        mov     ecx, [ebp-4]
-006feef3        mov     dl, 1
-006feef5        mov     eax, [$6e5d8c]
-006feefa        call    -$18dc7 ($6e6138)      ; IdException.EIdException.Create
-006feeff      > call    -$2fa0b8 ($404e4c)     ; System.@RaiseExcept
-006fef04        xor     eax, eax
-006fef06        pop     edx
-006fef07        pop     ecx
-006fef08        pop     ecx
-006fef09        mov     fs:[eax], edx
-[...]
-
-date/time         : 2013-06-04, 21:49:07, 468ms
-computer name     : KSKRATINGSVM2
-user name         : Administrator <admin>
-registered owner  : Joseph Karas / Joseph Karas
-operating system  : Windows 2000 Service Pack 4 build 2195
-system language   : English
-system up time    : 48 minutes 17 seconds
-program up time   : 1 minute 23 seconds
-processor         : Intel(R) Xeon(R) CPU W3530 @ 2.80GHz
-physical memory   : 1551/2047 MB (free/total)
-free disk space   : (C:) 48.92 GB
-display mode      : 1280x1024, 32 bit
-process id        : $2a8
-allocated memory  : 13.70 MB
-executable        : Ratings31.exe
-exec. date/time   : 2013-06-04 21:47
-compiled with     : Delphi 7
-madExcept version : 3.0e
-callstack crc     : $8457fe77, $d86b13bf, $d86b13bf
-exception number  : 2
-exception class   : EIdConnClosedGracefully
-exception message : Connection Closed Gracefully.
-
-Main ($418):
-006feeff +02f Ratings31.exe IdIOHandler       1456 +23 TIdIOHandler.RaiseConnClosedGracefully
-00887284 +060 Ratings31.exe IdIOHandlerStack   534 +19 TIdIOHandlerStack.CheckForDisconnect
-006ff687 +00f Ratings31.exe IdIOHandler       1785  +2 TIdIOHandler.WriteDirect
-00886f41 +011 Ratings31.exe IdIOHandlerStack   420  +1 TIdIOHandlerStack.WriteDirect
-006ff4ad +03d Ratings31.exe IdIOHandler       1687  +3 TIdIOHandler.Write
-006fdf38 +030 Ratings31.exe IdIOHandler        953  +2 TIdIOHandler.Write
-006fea63 +02f Ratings31.exe IdIOHandler       1300  +2 TIdIOHandler.WriteLn
-008a7e8f +01f Ratings31.exe IdFTP             1843  +2 TIdFTP.DisconnectNotifyPeer
-0088bbca +02a Ratings31.exe IdTCPConnection    505  +5 TIdTCPConnection.Disconnect
-0088c1dc +004 Ratings31.exe IdTCPConnection    767  +0 TIdTCPConnection.Disconnect
-00c3b764 +498 Ratings31.exe FormMain          7851 +86 TMainForm.DeleteFTPExport
-00c3a61a +0ae Ratings31.exe FormMain          7494 +11 TMainForm.DeleteAllFTPReports
-00c4a674 +000 Ratings31.exe FormMain         13730  +0 TMainForm.btnDeleteAllFTPReportClick
-004d93d4 +064 Ratings31.exe Controls                   TControl.Click
-004ceeb8 +01c Ratings31.exe StdCtrls                   TButton.Click
-004cefac +00c Ratings31.exe StdCtrls                   TButton.CNCommand
-004d923c +188 Ratings31.exe Controls                   TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                   TWinControl.WndProc
-004ced7c +06c Ratings31.exe StdCtrls                   TButtonControl.WndProc
-004d900c +024 Ratings31.exe Controls                   TControl.Perform
-004dc41b +023 Ratings31.exe Controls                   DoControlMsg
-004dca73 +00b Ratings31.exe Controls                   TWinControl.WMCommand
-004d923c +188 Ratings31.exe Controls                   TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                   TWinControl.WndProc
-004dbf60 +02c Ratings31.exe Controls                   TWinControl.MainWndProc
-0047bfe4 +014 Ratings31.exe Classes                    StdWndProc
-77f91bac +010 ntdll.dll                                KiUserCallbackDispatcher
-77e1735c +03f user32.dll                               SendMessageW
-77e16b5f +014 user32.dll                               CallWindowProcA
-004dc3c7 +0d7 Ratings31.exe Controls                   TWinControl.DefaultHandler
-004d97dc +010 Ratings31.exe Controls                   TControl.WMLButtonUp
-004d923c +188 Ratings31.exe Controls                   TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                   TWinControl.WndProc
-004ced7c +06c Ratings31.exe StdCtrls                   TButtonControl.WndProc
-004dbf60 +02c Ratings31.exe Controls                   TWinControl.MainWndProc
-0047bfe4 +014 Ratings31.exe Classes                    StdWndProc
-77e15b72 +006 user32.dll                               DispatchMessageA
-004f8d63 +083 Ratings31.exe Forms                      TApplication.ProcessMessage
-004f8d9a +00a Ratings31.exe Forms                      TApplication.HandleMessage
-004f8fca +096 Ratings31.exe Forms                      TApplication.Run
-00c72887 +06b Ratings31.exe Ratings31          110  +5 initialization
-
-thread $454: <priority:15>
-77f88f03 +0b ntdll.dll               NtWaitForMultipleObjects
-7c59a26b +e8 kernel32.dll            WaitForMultipleObjectsEx
-7c59a17b +12 kernel32.dll            WaitForMultipleObjects
-00451d59 +0d Ratings31.exe madExcept CallThreadProcSafe
-00451dc3 +37 Ratings31.exe madExcept ThreadExceptFrame
->> created by Main ($418) at:
-77562d78 +00 wdmaud.drv
-
-thread $3f8: <priority:2>
-77e585c7 +0b user32.dll
-77e1698a +79 user32.dll              GetMessageA
-00451d59 +0d Ratings31.exe madExcept CallThreadProcSafe
-00451dc3 +37 Ratings31.exe madExcept ThreadExceptFrame
->> created by Main ($418) at:
-77573c61 +00 winmm.dll
-
-thread $534:
-77f88f03 +0b ntdll.dll               NtWaitForMultipleObjects
-7c59a26b +e8 kernel32.dll            WaitForMultipleObjectsEx
-7c59a17b +12 kernel32.dll            WaitForMultipleObjects
-00451d59 +0d Ratings31.exe madExcept CallThreadProcSafe
-00451dc3 +37 Ratings31.exe madExcept ThreadExceptFrame
->> created by Main ($418) at:
-778321e6 +00 RTUTILS.DLL
-
-modules:
-00400000 Ratings31.exe                C:\Ratings31
-02e10000 unrar3.dll                   C:\WINNT\system32
-690a0000 psapi.dll     5.0.2134.1     C:\WINNT\system32
-6b2c0000 msimg32.dll   5.0.2180.1     C:\WINNT\system32
-70a70000 SHLWAPI.dll   6.0.2800.2006  C:\WINNT\system32
-70d00000 gdiplus.dll   5.1.3102.1360  C:\WINNT\system32
-71710000 comctl32.dll  5.81.4968.2500 C:\WINNT\system32
-74fd0000 msafd.dll     5.0.2195.7158  C:\WINNT\system32
-75010000 wshtcpip.dll  5.0.2195.6601  C:\WINNT\System32
-75020000 WS2HELP.DLL   5.0.2134.1     C:\WINNT\system32
-75030000 WS2_32.DLL    5.0.2195.6601  C:\WINNT\system32
-75050000 wsock32.dll   5.0.2195.6603  C:\WINNT\system32
-75150000 SAMLIB.DLL    5.0.2195.6944  C:\WINNT\system32
-751c0000 NETRAP.dll    5.0.2134.1     C:\WINNT\system32
-759b0000 LZ32.DLL      5.0.2195.6611  C:\WINNT\system32
-76620000 mpr.dll       5.0.2195.7134  C:\WINNT\system32
-76b20000 RICHED32.DLL  5.0.2134.1     C:\WINNT\system32
-76b30000 comdlg32.dll  5.0.3700.6693  C:\WINNT\system32
-772b0000 RICHED20.DLL  5.30.23.1227   C:\WINNT\system32
-77320000 MPRAPI.dll    5.0.2181.1     C:\WINNT\system32
-77340000 iphlpapi.dll  5.0.2195.7097  C:\WINNT\system32
-77360000 DHCPCSVC.DLL  5.0.2195.7085  C:\WINNT\system32
-77380000 ADSLDPC.DLL   5.0.2195.6993  C:\WINNT\system32
-773b0000 ACTIVEDS.DLL  5.0.2195.6601  C:\WINNT\system32
-774c0000 rasman.dll    5.0.2195.6824  C:\WINNT\system32
-774e0000 RASAPI32.dll  5.0.2195.6920  C:\WINNT\system32
-77520000 ICMP.dll      5.0.2134.1     C:\WINNT\system32
-77530000 TAPI32.dll    5.0.2195.6664  C:\WINNT\system32
-77560000 wdmaud.drv    5.0.2195.6673  C:\WINNT\system32
-77570000 winmm.dll     5.0.2161.1     C:\WINNT\system32
-777e0000 winrnr.dll    5.0.2160.1     C:\WINNT\System32
-777f0000 rasadhlp.dll  5.0.2195.7098  C:\WINNT\system32
-77800000 winspool.drv  5.0.2195.6659  C:\WINNT\system32
-77820000 version.dll   5.0.2195.6623  C:\WINNT\system32
-77830000 RTUTILS.DLL   5.0.2168.1     C:\WINNT\system32
-77880000 SETUPAPI.DLL  5.0.2195.6622  C:\WINNT\system32
-77950000 WLDAP32.DLL   5.0.2195.7017  C:\WINNT\system32
-77980000 DNSAPI.DLL    5.0.2195.7280  C:\WINNT\system32
-779b0000 oleaut32.dll  2.40.4532.0    C:\WINNT\system32
-77bf0000 NTDSAPI.dll   5.0.2195.6666  C:\WINNT\system32
-77d30000 RPCRT4.dll    5.0.2195.7281  C:\WINNT\system32
-77e10000 user32.dll    5.0.2195.7133  C:\WINNT\system32
-77f40000 GDI32.dll     5.0.2195.7205  C:\WINNT\system32
-77f80000 ntdll.dll     5.0.2195.7006  C:\WINNT\system32
-78000000 msvcrt.dll    6.1.9844.0     C:\WINNT\system32
-782c0000 rnr20.dll     5.0.2195.6603  C:\WINNT\System32
-7c0f0000 USERENV.DLL   5.0.2195.7002  C:\WINNT\system32
-7c2d0000 advapi32.dll  5.0.2195.7038  C:\WINNT\system32
-7c340000 Secur32.dll   5.0.2195.7244  C:\WINNT\system32
-7c570000 kernel32.dll  5.0.2195.7135  C:\WINNT\system32
-7cdc0000 NETAPI32.DLL  5.0.2195.7203  C:\WINNT\system32
-7ce20000 ole32.dll     5.0.2195.7059  C:\WINNT\system32
-7cf30000 shell32.dll   5.0.3900.7155  C:\WINNT\system32
-
-processes:
-000 Idle
-008 System                         normal
-0a0 smss.exe                       normal C:\WINNT\system32
-0b8 CSRSS.EXE
-0b4 winlogon.exe                   high   C:\WINNT\system32
-0e8 services.exe                   normal C:\WINNT\system32
-0f4 lsass.exe                      normal C:\WINNT\system32
-1a8 svchost.exe                    normal C:\WINNT\system32
-1c8 LEXBCES.EXE                    normal C:\WINNT\system32
-1e4 spoolsv.exe                    normal C:\WINNT\system32
-208 svchost.exe                    normal C:\WINNT\System32
-214 FileZilla Server.exe           normal C:\Program Files\FileZilla Server
-240 jqs.exe                        idle   C:\Program Files\Java\jre6\bin
-268 regsvc.exe                     normal C:\WINNT\system32
-258 MSTask.exe                     normal C:\WINNT\system32
-2c8 WinVNC.exe                     normal C:\Program Files\UltraVNC
-2dc vmtoolsd.exe                   high   C:\Program Files\VMware\VMware Tools
-2f0 WinMgmt.exe                    normal C:\WINNT\System32\WBEM
-2fc svchost.exe                    normal C:\WINNT\system32
-110 WinVNC.exe                     normal C:\Program Files\UltraVNC
-410 Explorer.EXE                   normal C:\WINNT
-0e4 TSVNCache.exe                  normal C:\Program Files\TortoiseSVN\bin
-440 qttask.exe                     normal C:\Program Files\QuickTime
-43c FileZilla Server Interface.exe normal C:\Program Files\FileZilla Server
-478 jusched.exe                    normal C:\Program Files\Common Files\Java\Java Update
-480 vmtoolsd.exe                   normal C:\Program Files\VMware\VMware Tools
-4b0 svchost.exe                    normal C:\WINNT\System32
-530 delphi32.exe                   normal C:\Program Files\Borland\Delphi7\Bin
-2a8 Ratings31.exe                  normal C:\Ratings31
-
-hardware:
-+ Batteries
-  - Microsoft AC Adapter
-+ Computer
-  - ACPI Uniprocessor PC
-+ Disk drives
-  - VMware, VMware Virtual S SCSI Disk Device
-+ Display adapters
-  - VMware SVGA II (driver 11.9.1.0)
-+ DVD/CD-ROM drives
-  - NECVMWar VMware IDE CDR00
-  - NECVMWar VMware IDE CDR10
-+ Floppy disk controllers
-  - Standard floppy disk controller
-+ Floppy disk drives
-  - Floppy disk drive
-+ Human Interface Devices
-  - USB Human Interface Device
-  - USB Human Interface Device
-+ IDE ATA/ATAPI controllers
-  - Intel(r) 82371AB/EB PCI Bus Master IDE Controller
-  - Primary IDE Channel
-  - Secondary IDE Channel
-+ Keyboards
-  - Standard 101/102-Key or Microsoft Natural PS/2 Keyboard
-+ Mice and other pointing devices
-  - VMware Pointing Device (driver 12.5.2.0)
-  - VMware USB Pointing Device (driver 12.5.2.0)
-  - VMware USB Pointing Device (driver 12.5.2.0)
-+ Network adapters
-  - VMware Accelerated AMD PCNet Adapter #6 (driver 2.2.0.0)
-+ Ports (COM & LPT)
-  - Communications Port (COM1)
-  - Communications Port (COM2)
-  - Printer Port (LPT1)
-+ SCSI and RAID controllers
-  - VMware VMSCSI Controller (driver 2.0.3.0)
-+ Sound, video and game controllers
-  - Audio Codecs
-  - Creative AudioPCI (ES1371,ES1373) (WDM)
-  - Game Port for Creative
-  - Legacy Audio Drivers
-  - Legacy Video Capture Devices
-  - Media Control Devices
-  - Video Codecs
-+ System devices
-  - ACPI Fixed Feature Button
-  - Direct memory access controller
-  - EISA programmable interrupt controller
-  - Generic Bus
-  - Generic Bus
-  - Generic Bus
-  - Intel 82371AB/EB PCI to ISA bridge (ISA mode)
-  - Intel 82443BX Pentium(r) II Processor to AGP Controller
-  - Intel 82443BX Pentium(r) II Processor to PCI Bridge
-  - ISAPNP Read Data Port
-  - Logical Disk Manager
-  - Microcode Update Device
-  - Microsoft ACPI-Compliant System
-  - Microsoft Composite Battery
-  - Motherboard resources
-  - Motherboard resources
-  - Parallel Class Enumerator
-  - PCI bus
-  - PCI standard PCI-to-PCI bridge
-  - PCI standard PCI-to-PCI bridge
-  - PCI standard PCI-to-PCI bridge
-  - PCI standard PCI-to-PCI bridge
-  - PCI standard PCI-to-PCI bridge
-  - Plug and Play Software Device Enumerator
-  - System CMOS/real time clock
-  - System speaker
-  - System timer
-  - VMware VMCI Bus Device (driver 9.3.51.0)
-  - VMware VMCI Host Device (driver 9.3.51.0)
-  - Volume Manager
-+ Universal Serial Bus controllers
-  - Generic USB Hub
-  - Intel 82371AB/EB PCI to USB Universal Host Controller
-  - Standard Enhanced PCI to USB Host Controller
-  - USB 2.0 Root Hub
-  - USB Composite Device
-  - USB Root Hub
-
-cpu registers:
-eax = 033a0ff0
-ebx = 0012f601
-ecx = 00000000
-edx = 006fef04
-esi = 019cf5d0
-edi = 00886934
-eip = 006fef04
-esp = 0012f5e8
-ebp = 0012f628
-
-stack dump:
-0012f5e8  04 ef 6f 00 de fa ed 0e - 01 00 00 00 07 00 00 00  ..o.............
-0012f5f8  fc f5 12 00 04 ef 6f 00 - f0 0f 3a 03 01 f6 12 00  ......o...:.....
-0012f608  d0 f5 9c 01 34 69 88 00 - 28 f6 12 00 18 f6 12 00  ....4i..(.......
-0012f618  6c f6 12 00 80 4d 40 00 - 28 f6 12 00 00 00 00 00  l....M@.(.......
-0012f628  80 f6 12 00 89 72 88 00 - 01 69 88 00 7c f6 12 00  .....r...i..|...
-0012f638  d0 f5 9c 01 8a f6 6f 00 - d8 f6 12 00 d0 f5 9c 01  ......o.........
-0012f648  d0 f5 9c 01 46 6f 88 00 - 7c f6 12 00 0e 00 00 00  ....Fo..|.......
-0012f658  80 f6 12 00 d8 f6 12 00 - d0 f5 9c 01 d0 f5 9c 01  ................
-0012f668  b0 f4 6f 00 88 f6 12 00 - 80 4d 40 00 80 f6 12 00  ..o......M@.....
-0012f678  60 d6 30 03 00 00 00 00 - a0 f6 12 00 3b df 6f 00  `.0.........;.o.
-0012f688  a8 f6 12 00 80 4d 40 00 - a0 f6 12 00 cc 7e 8a 00  .....M@......~..
-0012f698  d0 f5 9c 01 00 00 00 00 - c0 f6 12 00 69 ea 6f 00  ............i.o.
-0012f6a8  d0 f6 12 00 80 4d 40 00 - c0 f6 12 00 00 00 00 00  .....M@.........
-0012f6b8  e0 48 36 03 00 00 00 00 - e0 f6 12 00 95 7e 8a 00  .H6..........~..
-0012f6c8  16 b7 c3 00 cd bb 88 00 - f0 f6 12 00 80 4d 40 00  .............M@.
-0012f6d8  e0 f6 12 00 e0 48 36 03 - 28 f7 12 00 df c1 88 00  .....H6.(.......
-0012f6e8  69 b7 c3 00 71 b7 c3 00 - 3c f7 12 00 80 4d 40 00  i...q...<....M@.
-0012f6f8  28 f7 12 00 cc f8 12 00 - 9c ee 4c 00 20 ac 3d 03  (.........L...=.
-0012f708  00 00 00 00 00 00 00 00 - 00 00 00 00 13 00 00 00  ................
-0012f718  00 00 00 00 00 00 00 00 - 00 00 00 00 20 ac 3d 03  ..............=.
-
-disassembling:
-[...]
-006feeeb        call    -$2f73e8 ($407b08)     ; System.LoadResString
-006feef0        mov     ecx, [ebp-4]
-006feef3        mov     dl, 1
-006feef5        mov     eax, [$6e5d8c]
-006feefa        call    -$18dc7 ($6e6138)      ; IdException.EIdException.Create
-006feeff      > call    -$2fa0b8 ($404e4c)     ; System.@RaiseExcept
-006fef04        xor     eax, eax
-006fef06        pop     edx
-006fef07        pop     ecx
-006fef08        pop     ecx
-006fef09        mov     fs:[eax], edx
-[...]
-
-date/time         : 2013-06-06, 14:11:53, 968ms
-computer name     : KSKRATINGSVM2
-user name         : Administrator <admin>
-registered owner  : Joseph Karas / Joseph Karas
-operating system  : Windows 2000 Service Pack 4 build 2195
-system language   : English
-system up time    : 1 day 5 hours
-program up time   : 11 seconds
-processor         : Intel(R) Xeon(R) CPU W3530 @ 2.80GHz
-physical memory   : 1696/2047 MB (free/total)
-free disk space   : (C:) 48.82 GB
-display mode      : 1280x1024, 32 bit
-process id        : $428
-allocated memory  : 14.38 MB
-executable        : Ratings31.exe
-exec. date/time   : 2013-06-04 21:52
-compiled with     : Delphi 7
-madExcept version : 3.0e
-callstack crc     : $2f8dcc28, $06b6abb5, $06b6abb5
-exception number  : 1
-exception class   : EIdSocketError
-exception message : Socket Error # 10061 Connection refused.
-
-Main ($4c4):
-006eb8ef +06b Ratings31.exe IdStackBSDBase                 518 +42 TIdStackBSDBase.RaiseSocketError
-006eb7c9 +011 Ratings31.exe IdStackBSDBase                 436  +1 TIdStackBSDBase.RaiseLastSocketError
-006eb7d8 +008 Ratings31.exe IdStackBSDBase                 442  +2 TIdStackBSDBase.CheckForSocketError
-006eda6c +060 Ratings31.exe IdStackWindows                1002  +6 TIdStackWindows.Connect
-006f0c3a +09e Ratings31.exe IdComponent                    173  +9 TIdComponent.DoStatus
-006f10df +02b Ratings31.exe IdSocketHandle                 292  +1 TIdSocketHandle.Connect
-00886ead +1cd Ratings31.exe IdIOHandlerStack               395 +52 TIdIOHandlerStack.ConnectClient
-0088b59f +05f Ratings31.exe IdIOHandlerSocket              358 +13 TIdIOHandlerSocket.Open
-008879ab +1eb Ratings31.exe IdTCPClient                    326 +44 TIdTCPClientCustom.Connect
-0088d3c6 +0a2 Ratings31.exe IdExplicitTLSClientServerBase  279 +22 TIdExplicitTLSClient.Connect
-008a6d72 +11e Ratings31.exe IdFTP                         1311 +29 TIdFTP.Connect
-00c3ad5d +151 Ratings31.exe FormMain                      7663 +16 TMainForm.FTPExport
-00c3a7e6 +0ea Ratings31.exe FormMain                      7553 +41 TMainForm.FTPReports
-00c3a55d +011 Ratings31.exe FormMain                      7466  +2 TMainForm.btnFTPReportsClick
-004d93d4 +064 Ratings31.exe Controls                               TControl.Click
-004ceeb8 +01c Ratings31.exe StdCtrls                               TButton.Click
-004cefac +00c Ratings31.exe StdCtrls                               TButton.CNCommand
-004d923c +188 Ratings31.exe Controls                               TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                               TWinControl.WndProc
-004ced7c +06c Ratings31.exe StdCtrls                               TButtonControl.WndProc
-004d900c +024 Ratings31.exe Controls                               TControl.Perform
-004dc41b +023 Ratings31.exe Controls                               DoControlMsg
-004dca73 +00b Ratings31.exe Controls                               TWinControl.WMCommand
-004d923c +188 Ratings31.exe Controls                               TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                               TWinControl.WndProc
-004dbf60 +02c Ratings31.exe Controls                               TWinControl.MainWndProc
-0047bfe4 +014 Ratings31.exe Classes                                StdWndProc
-77f91bac +010 ntdll.dll                                            KiUserCallbackDispatcher
-77e1735c +03f user32.dll                                           SendMessageW
-77e16b5f +014 user32.dll                                           CallWindowProcA
-004dc3c7 +0d7 Ratings31.exe Controls                               TWinControl.DefaultHandler
-004d97dc +010 Ratings31.exe Controls                               TControl.WMLButtonUp
-004d923c +188 Ratings31.exe Controls                               TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                               TWinControl.WndProc
-004ced7c +06c Ratings31.exe StdCtrls                               TButtonControl.WndProc
-004dbf60 +02c Ratings31.exe Controls                               TWinControl.MainWndProc
-0047bfe4 +014 Ratings31.exe Classes                                StdWndProc
-77e15b72 +006 user32.dll                                           DispatchMessageA
-004f8d63 +083 Ratings31.exe Forms                                  TApplication.ProcessMessage
-004f8d9a +00a Ratings31.exe Forms                                  TApplication.HandleMessage
-004f8fca +096 Ratings31.exe Forms                                  TApplication.Run
-00c72887 +06b Ratings31.exe Ratings31                      110  +5 initialization
-
-thread $354: <priority:15>
-77f88f03 +0b ntdll.dll               NtWaitForMultipleObjects
-7c59a26b +e8 kernel32.dll            WaitForMultipleObjectsEx
-7c59a17b +12 kernel32.dll            WaitForMultipleObjects
-00451d59 +0d Ratings31.exe madExcept CallThreadProcSafe
-00451dc3 +37 Ratings31.exe madExcept ThreadExceptFrame
->> created by Main ($4c4) at:
-77562d78 +00 wdmaud.drv
-
-thread $470: <priority:2>
-77e585c7 +0b user32.dll
-77e1698a +79 user32.dll              GetMessageA
-00451d59 +0d Ratings31.exe madExcept CallThreadProcSafe
-00451dc3 +37 Ratings31.exe madExcept ThreadExceptFrame
->> created by Main ($4c4) at:
-77573c61 +00 winmm.dll
-
-thread $390:
-77f88f03 +0b ntdll.dll               NtWaitForMultipleObjects
-7c59a26b +e8 kernel32.dll            WaitForMultipleObjectsEx
-7c59a17b +12 kernel32.dll            WaitForMultipleObjects
-00451d59 +0d Ratings31.exe madExcept CallThreadProcSafe
-00451dc3 +37 Ratings31.exe madExcept ThreadExceptFrame
->> created by Main ($4c4) at:
-778321e6 +00 RTUTILS.DLL
-
-modules:
-00400000 Ratings31.exe                C:\Ratings31
-02e10000 unrar3.dll                   C:\WINNT\system32
-6b2c0000 msimg32.dll   5.0.2180.1     C:\WINNT\system32
-70a70000 SHLWAPI.dll   6.0.2800.2006  C:\WINNT\system32
-70d00000 gdiplus.dll   5.1.3102.1360  C:\WINNT\system32
-71710000 comctl32.dll  5.81.4968.2500 C:\WINNT\system32
-74fd0000 msafd.dll     5.0.2195.7158  C:\WINNT\system32
-75010000 wshtcpip.dll  5.0.2195.6601  C:\WINNT\System32
-75020000 WS2HELP.DLL   5.0.2134.1     C:\WINNT\system32
-75030000 WS2_32.DLL    5.0.2195.6601  C:\WINNT\system32
-75050000 wsock32.dll   5.0.2195.6603  C:\WINNT\system32
-75150000 SAMLIB.DLL    5.0.2195.6944  C:\WINNT\system32
-751c0000 NETRAP.dll    5.0.2134.1     C:\WINNT\system32
-759b0000 LZ32.DLL      5.0.2195.6611  C:\WINNT\system32
-76620000 mpr.dll       5.0.2195.7134  C:\WINNT\system32
-76b20000 RICHED32.DLL  5.0.2134.1     C:\WINNT\system32
-76b30000 comdlg32.dll  5.0.3700.6693  C:\WINNT\system32
-772b0000 RICHED20.DLL  5.30.23.1227   C:\WINNT\system32
-77320000 MPRAPI.dll    5.0.2181.1     C:\WINNT\system32
-77340000 iphlpapi.dll  5.0.2195.7097  C:\WINNT\system32
-77360000 DHCPCSVC.DLL  5.0.2195.7085  C:\WINNT\system32
-77380000 ADSLDPC.DLL   5.0.2195.6993  C:\WINNT\system32
-773b0000 ACTIVEDS.DLL  5.0.2195.6601  C:\WINNT\system32
-774c0000 rasman.dll    5.0.2195.6824  C:\WINNT\system32
-774e0000 RASAPI32.dll  5.0.2195.6920  C:\WINNT\system32
-77520000 ICMP.dll      5.0.2134.1     C:\WINNT\system32
-77530000 TAPI32.dll    5.0.2195.6664  C:\WINNT\system32
-77560000 wdmaud.drv    5.0.2195.6673  C:\WINNT\system32
-77570000 winmm.dll     5.0.2161.1     C:\WINNT\system32
-777e0000 winrnr.dll    5.0.2160.1     C:\WINNT\System32
-777f0000 rasadhlp.dll  5.0.2195.7098  C:\WINNT\system32
-77800000 winspool.drv  5.0.2195.6659  C:\WINNT\system32
-77820000 version.dll   5.0.2195.6623  C:\WINNT\system32
-77830000 RTUTILS.DLL   5.0.2168.1     C:\WINNT\system32
-77880000 SETUPAPI.DLL  5.0.2195.6622  C:\WINNT\system32
-77950000 WLDAP32.DLL   5.0.2195.7017  C:\WINNT\system32
-77980000 DNSAPI.DLL    5.0.2195.7280  C:\WINNT\system32
-779b0000 oleaut32.dll  2.40.4532.0    C:\WINNT\system32
-77bf0000 NTDSAPI.dll   5.0.2195.6666  C:\WINNT\system32
-77d30000 RPCRT4.dll    5.0.2195.7281  C:\WINNT\system32
-77e10000 user32.dll    5.0.2195.7133  C:\WINNT\system32
-77f40000 GDI32.dll     5.0.2195.7205  C:\WINNT\system32
-77f80000 ntdll.dll     5.0.2195.7006  C:\WINNT\system32
-78000000 msvcrt.dll    6.1.9844.0     C:\WINNT\system32
-782c0000 rnr20.dll     5.0.2195.6603  C:\WINNT\System32
-7c0f0000 USERENV.DLL   5.0.2195.7002  C:\WINNT\system32
-7c2d0000 advapi32.dll  5.0.2195.7038  C:\WINNT\system32
-7c340000 Secur32.dll   5.0.2195.7244  C:\WINNT\system32
-7c570000 kernel32.dll  5.0.2195.7135  C:\WINNT\system32
-7cdc0000 NETAPI32.DLL  5.0.2195.7203  C:\WINNT\system32
-7ce20000 ole32.dll     5.0.2195.7059  C:\WINNT\system32
-7cf30000 shell32.dll   5.0.3900.7155  C:\WINNT\system32
-
-processes:
-000 Idle
-008 System                         normal
-0a0 smss.exe                       normal C:\WINNT\system32
-0b8 CSRSS.EXE
-0b4 winlogon.exe                   high   C:\WINNT\system32
-0e8 services.exe                   normal C:\WINNT\system32
-0f4 lsass.exe                      normal C:\WINNT\system32
-1a8 svchost.exe                    normal C:\WINNT\system32
-1c8 LEXBCES.EXE                    normal C:\WINNT\system32
-1e4 spoolsv.exe                    normal C:\WINNT\system32
-208 svchost.exe                    normal C:\WINNT\System32
-214 FileZilla Server.exe           normal C:\Program Files\FileZilla Server
-23c jqs.exe                        idle   C:\Program Files\Java\jre6\bin
-264 regsvc.exe                     normal C:\WINNT\system32
-26c MSTask.exe                     normal C:\WINNT\system32
-2c0 WinVNC.exe                     normal C:\Program Files\UltraVNC
-2dc vmtoolsd.exe                   high   C:\Program Files\VMware\VMware Tools
-2f0 WinMgmt.exe                    normal C:\WINNT\System32\WBEM
-2fc svchost.exe                    normal C:\WINNT\system32
-110 WinVNC.exe                     normal C:\Program Files\UltraVNC
-2e4 Explorer.EXE                   normal C:\WINNT
-394 TSVNCache.exe                  normal C:\Program Files\TortoiseSVN\bin
-150 FileZilla Server Interface.exe normal C:\Program Files\FileZilla Server
-2b4 jusched.exe                    normal C:\Program Files\Common Files\Java\Java Update
-28c vmtoolsd.exe                   normal C:\Program Files\VMware\VMware Tools
-414 qttask.exe                     normal C:\Program Files\QuickTime
-3d0 ratings31.exe                  normal c:\Ratings31
-428 Ratings31.exe                  normal C:\Ratings31
-
-hardware:
-+ Batteries
-  - Microsoft AC Adapter
-+ Computer
-  - ACPI Uniprocessor PC
-+ Disk drives
-  - VMware, VMware Virtual S SCSI Disk Device
-+ Display adapters
-  - VMware SVGA II (driver 11.9.1.0)
-+ DVD/CD-ROM drives
-  - NECVMWar VMware IDE CDR00
-  - NECVMWar VMware IDE CDR10
-+ Floppy disk controllers
-  - Standard floppy disk controller
-+ Floppy disk drives
-  - Floppy disk drive
-+ Human Interface Devices
-  - USB Human Interface Device
-  - USB Human Interface Device
-+ IDE ATA/ATAPI controllers
-  - Intel(r) 82371AB/EB PCI Bus Master IDE Controller
-  - Primary IDE Channel
-  - Secondary IDE Channel
-+ Keyboards
-  - Standard 101/102-Key or Microsoft Natural PS/2 Keyboard
-+ Mice and other pointing devices
-  - VMware Pointing Device (driver 12.5.2.0)
-  - VMware USB Pointing Device (driver 12.5.2.0)
-  - VMware USB Pointing Device (driver 12.5.2.0)
-+ Network adapters
-  - VMware Accelerated AMD PCNet Adapter #6 (driver 2.2.0.0)
-+ Ports (COM & LPT)
-  - Communications Port (COM1)
-  - Communications Port (COM2)
-  - Printer Port (LPT1)
-+ SCSI and RAID controllers
-  - VMware VMSCSI Controller (driver 2.0.3.0)
-+ Sound, video and game controllers
-  - Audio Codecs
-  - Creative AudioPCI (ES1371,ES1373) (WDM)
-  - Game Port for Creative
-  - Legacy Audio Drivers
-  - Legacy Video Capture Devices
-  - Media Control Devices
-  - Video Codecs
-+ System devices
-  - ACPI Fixed Feature Button
-  - Direct memory access controller
-  - EISA programmable interrupt controller
-  - Generic Bus
-  - Generic Bus
-  - Generic Bus
-  - Intel 82371AB/EB PCI to ISA bridge (ISA mode)
-  - Intel 82443BX Pentium(r) II Processor to AGP Controller
-  - Intel 82443BX Pentium(r) II Processor to PCI Bridge
-  - ISAPNP Read Data Port
-  - Logical Disk Manager
-  - Microcode Update Device
-  - Microsoft ACPI-Compliant System
-  - Microsoft Composite Battery
-  - Motherboard resources
-  - Motherboard resources
-  - Parallel Class Enumerator
-  - PCI bus
-  - PCI standard PCI-to-PCI bridge
-  - PCI standard PCI-to-PCI bridge
-  - PCI standard PCI-to-PCI bridge
-  - PCI standard PCI-to-PCI bridge
-  - PCI standard PCI-to-PCI bridge
-  - Plug and Play Software Device Enumerator
-  - System CMOS/real time clock
-  - System speaker
-  - System timer
-  - VMware VMCI Bus Device (driver 9.3.51.0)
-  - VMware VMCI Host Device (driver 9.3.51.0)
-  - Volume Manager
-+ Universal Serial Bus controllers
-  - Generic USB Hub
-  - Intel 82371AB/EB PCI to USB Universal Host Controller
-  - Standard Enhanced PCI to USB Host Controller
-  - USB 2.0 Root Hub
-  - USB Composite Device
-  - USB Root Hub
-
-cpu registers:
-eax = 03326368
-ebx = 0000274d
-ecx = 00000000
-edx = 006eb8f4
-esi = 006ec238
-edi = 0012f4b4
-eip = 006eb8f4
-esp = 0012f3d0
-ebp = 0012f420
-
-stack dump:
-0012f3d0  f4 b8 6e 00 de fa ed 0e - 01 00 00 00 07 00 00 00  ..n.............
-0012f3e0  e4 f3 12 00 f4 b8 6e 00 - 68 63 32 03 4d 27 00 00  ......n.hc2.M'..
-0012f3f0  38 c2 6e 00 b4 f4 12 00 - 20 f4 12 00 00 f4 12 00  8.n.............
-0012f400  8c f4 12 00 80 4d 40 00 - 20 f4 12 00 b4 f4 12 00  .....M@.........
-0012f410  a8 01 00 00 90 26 38 03 - 00 00 00 00 00 00 00 00  .....&8.........
-0012f420  6c f4 12 00 ce b7 6e 00 - ff ff ff ff dd b7 6e 00  l.....n.......n.
-0012f430  90 26 38 03 71 da 6e 00 - 15 00 00 00 38 c2 6e 00  .&8.q.n.....8.n.
-0012f440  00 00 00 00 01 00 00 00 - 5b 20 c4 00 80 f4 12 00  ........[.......
-0012f450  3d 0c 6f 00 48 c6 a5 01 - 8c f4 12 00 02 00 00 15  =.o.H...........
-0012f460  32 57 97 a0 b4 f4 12 00 - 15 00 00 00 84 f4 12 00  2W..............
-0012f470  e2 10 6f 00 00 f4 32 03 - 15 00 00 00 00 00 00 00  ..o...2.........
-0012f480  30 f4 32 03 b8 f4 12 00 - b0 6e 88 00 c8 f4 12 00  0.2......n......
-0012f490  80 4d 40 00 b8 f4 12 00 - cc f8 12 00 00 00 00 00  .M@.............
-0012f4a0  d0 f5 9c 01 a8 f0 3a 03 - 0b f4 12 00 00 00 00 00  ......:.........
-0012f4b0  00 00 00 00 d0 f5 9c 01 - fc f4 12 00 a5 b5 88 00  ................
-0012f4c0  d0 f5 9c 01 ae 79 88 00 - d4 f4 12 00 bf 4e 40 00  .....y.......N@.
-0012f4d0  fc f4 12 00 10 f5 12 00 - 80 4d 40 00 fc f4 12 00  .........M@.....
-0012f4e0  cc f8 12 00 00 00 00 00 - e0 48 36 03 ff ff ff ff  .........H6.....
-0012f4f0  64 f5 12 00 00 00 00 00 - e0 48 36 03 64 f5 12 00  d........H6.d...
-0012f500  cb d3 88 00 00 e9 3a 03 - 00 00 00 00 77 6d 8a 00  ......:.....wm..
-
-disassembling:
-[...]
-006eb8e0       push    eax
-006eb8e1       mov     ecx, ebx
-006eb8e3       mov     dl, 1
-006eb8e5       mov     eax, [$6ee464]
-006eb8ea       call    +$3835 ($6ef124)       ; IdStack.EIdSocketError.CreateError
-006eb8ef     > call    -$2e6aa8 ($404e4c)     ; System.@RaiseExcept
-006eb8f4       xor     eax, eax
-006eb8f6       pop     edx
-006eb8f7       pop     ecx
-006eb8f8       pop     ecx
-006eb8f9       mov     fs:[eax], edx
-[...]
-
-date/time         : 2013-06-06, 21:04:22, 640ms
-computer name     : KSKRATINGSVM2
-user name         : Administrator <admin>
-registered owner  : Joseph Karas / Joseph Karas
-operating system  : Windows 2000 Service Pack 4 build 2195
-system language   : English
-system up time    : 1 day 11 hours
-program up time   : 16 minutes 52 seconds
-processor         : Intel(R) Xeon(R) CPU W3530 @ 2.80GHz
-physical memory   : 1502/2047 MB (free/total)
-free disk space   : (C:) 48.78 GB
-display mode      : 1280x960, 32 bit
-process id        : $490
-allocated memory  : 14.23 MB
-executable        : Ratings31.exe
-exec. date/time   : 2013-06-06 20:36
-compiled with     : Delphi 7
-madExcept version : 3.0e
-callstack crc     : $8457fe77, $3d73c73c, $3d73c73c
-exception number  : 1
-exception class   : EIdConnClosedGracefully
-exception message : Connection Closed Gracefully.
-
-Main ($390):
-006feeff +02f Ratings31.exe IdIOHandler      1456 +23 TIdIOHandler.RaiseConnClosedGracefully
-00887284 +060 Ratings31.exe IdIOHandlerStack  534 +19 TIdIOHandlerStack.CheckForDisconnect
-006ff687 +00f Ratings31.exe IdIOHandler      1785  +2 TIdIOHandler.WriteDirect
-00886f41 +011 Ratings31.exe IdIOHandlerStack  420  +1 TIdIOHandlerStack.WriteDirect
-006ff4ad +03d Ratings31.exe IdIOHandler      1687  +3 TIdIOHandler.Write
-006fdf38 +030 Ratings31.exe IdIOHandler       953  +2 TIdIOHandler.Write
-006fea63 +02f Ratings31.exe IdIOHandler      1300  +2 TIdIOHandler.WriteLn
-008a7e8f +01f Ratings31.exe IdFTP            1843  +2 TIdFTP.DisconnectNotifyPeer
-0088bbca +02a Ratings31.exe IdTCPConnection   505  +5 TIdTCPConnection.Disconnect
-0088c1dc +004 Ratings31.exe IdTCPConnection   767  +0 TIdTCPConnection.Disconnect
-00c3b1bc +5b0 Ratings31.exe FormMain         7745 +98 TMainForm.FTPExport
-00c3a7e6 +0ea Ratings31.exe FormMain         7553 +41 TMainForm.FTPReports
-00c3a55d +011 Ratings31.exe FormMain         7466  +2 TMainForm.btnFTPReportsClick
-004d93d4 +064 Ratings31.exe Controls                  TControl.Click
-004ceeb8 +01c Ratings31.exe StdCtrls                  TButton.Click
-004cefac +00c Ratings31.exe StdCtrls                  TButton.CNCommand
-004d923c +188 Ratings31.exe Controls                  TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                  TWinControl.WndProc
-004ced7c +06c Ratings31.exe StdCtrls                  TButtonControl.WndProc
-004d900c +024 Ratings31.exe Controls                  TControl.Perform
-004dc41b +023 Ratings31.exe Controls                  DoControlMsg
-004dca73 +00b Ratings31.exe Controls                  TWinControl.WMCommand
-004d923c +188 Ratings31.exe Controls                  TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                  TWinControl.WndProc
-004dbf60 +02c Ratings31.exe Controls                  TWinControl.MainWndProc
-0047bfe4 +014 Ratings31.exe Classes                   StdWndProc
-77f91bac +010 ntdll.dll                               KiUserCallbackDispatcher
-77e1735c +03f user32.dll                              SendMessageW
-77e16b5f +014 user32.dll                              CallWindowProcA
-004dc3c7 +0d7 Ratings31.exe Controls                  TWinControl.DefaultHandler
-004d97dc +010 Ratings31.exe Controls                  TControl.WMLButtonUp
-004d923c +188 Ratings31.exe Controls                  TControl.WndProc
-004dc2e3 +157 Ratings31.exe Controls                  TWinControl.WndProc
-004ced7c +06c Ratings31.exe StdCtrls                  TButtonControl.WndProc
-004dbf60 +02c Ratings31.exe Controls                  TWinControl.MainWndProc
-0047bfe4 +014 Ratings31.exe Classes                   StdWndProc
-77e15b72 +006 user32.dll                              DispatchMessageA
-004f8d63 +083 Ratings31.exe Forms                     TApplication.ProcessMessage
-004f8d9a +00a Ratings31.exe Forms                     TApplication.HandleMessage
-004f8fca +096 Ratings31.exe Forms                     TApplication.Run
-00c72887 +06b Ratings31.exe Ratings31         110  +5 initialization
-
-thread $474: <priority:15>
-77f88f03 +0b ntdll.dll               NtWaitForMultipleObjects
-7c59a26b +e8 kernel32.dll            WaitForMultipleObjectsEx
-7c59a17b +12 kernel32.dll            WaitForMultipleObjects
-00451d59 +0d Ratings31.exe madExcept CallThreadProcSafe
-00451dc3 +37 Ratings31.exe madExcept ThreadExceptFrame
->> created by Main ($390) at:
-77562d78 +00 wdmaud.drv
-
-thread $45c: <priority:2>
-77e585c7 +0b user32.dll
-77e1698a +79 user32.dll              GetMessageA
-00451d59 +0d Ratings31.exe madExcept CallThreadProcSafe
-00451dc3 +37 Ratings31.exe madExcept ThreadExceptFrame
->> created by Main ($390) at:
-77573c61 +00 winmm.dll
-
-thread $428:
-77f88f03 +0b ntdll.dll               NtWaitForMultipleObjects
-7c59a26b +e8 kernel32.dll            WaitForMultipleObjectsEx
-7c59a17b +12 kernel32.dll            WaitForMultipleObjects
-00451d59 +0d Ratings31.exe madExcept CallThreadProcSafe
-00451dc3 +37 Ratings31.exe madExcept ThreadExceptFrame
->> created by Main ($390) at:
-778321e6 +00 RTUTILS.DLL
-
-modules:
-00400000 Ratings31.exe                C:\Ratings31
-02e10000 unrar3.dll                   C:\WINNT\system32
-6b2c0000 msimg32.dll   5.0.2180.1     C:\WINNT\system32
-70a70000 SHLWAPI.dll   6.0.2800.2006  C:\WINNT\system32
-70d00000 gdiplus.dll   5.1.3102.1360  C:\WINNT\system32
-71710000 comctl32.dll  5.81.4968.2500 C:\WINNT\system32
-74fd0000 msafd.dll     5.0.2195.7158  C:\WINNT\system32
-75010000 wshtcpip.dll  5.0.2195.6601  C:\WINNT\System32
-75020000 WS2HELP.DLL   5.0.2134.1     C:\WINNT\system32
-75030000 WS2_32.DLL    5.0.2195.6601  C:\WINNT\system32
-75050000 wsock32.dll   5.0.2195.6603  C:\WINNT\system32
-75150000 SAMLIB.DLL    5.0.2195.6944  C:\WINNT\system32
-751c0000 NETRAP.dll    5.0.2134.1     C:\WINNT\system32
-759b0000 LZ32.DLL      5.0.2195.6611  C:\WINNT\system32
-76620000 mpr.dll       5.0.2195.7134  C:\WINNT\system32
-76b20000 RICHED32.DLL  5.0.2134.1     C:\WINNT\system32
-76b30000 comdlg32.dll  5.0.3700.6693  C:\WINNT\system32
-772b0000 RICHED20.DLL  5.30.23.1227   C:\WINNT\system32
-77320000 MPRAPI.dll    5.0.2181.1     C:\WINNT\system32
-77340000 iphlpapi.dll  5.0.2195.7097  C:\WINNT\system32
-77360000 DHCPCSVC.DLL  5.0.2195.7085  C:\WINNT\system32
-77380000 ADSLDPC.DLL   5.0.2195.6993  C:\WINNT\system32
-773b0000 ACTIVEDS.DLL  5.0.2195.6601  C:\WINNT\system32
-774c0000 rasman.dll    5.0.2195.6824  C:\WINNT\system32
-774e0000 RASAPI32.dll  5.0.2195.6920  C:\WINNT\system32
-77520000 ICMP.dll      5.0.2134.1     C:\WINNT\system32
-77530000 TAPI32.dll    5.0.2195.6664  C:\WINNT\system32
-77560000 wdmaud.drv    5.0.2195.6673  C:\WINNT\system32
-77570000 winmm.dll     5.0.2161.1     C:\WINNT\system32
-777e0000 winrnr.dll    5.0.2160.1     C:\WINNT\System32
-777f0000 rasadhlp.dll  5.0.2195.7098  C:\WINNT\system32
-77800000 winspool.drv  5.0.2195.6659  C:\WINNT\system32
-77820000 version.dll   5.0.2195.6623  C:\WINNT\system32
-77830000 RTUTILS.DLL   5.0.2168.1     C:\WINNT\system32
-77880000 SETUPAPI.DLL  5.0.2195.6622  C:\WINNT\system32
-77950000 WLDAP32.DLL   5.0.2195.7017  C:\WINNT\system32
-77980000 DNSAPI.DLL    5.0.2195.7280  C:\WINNT\system32
-779b0000 oleaut32.dll  2.40.4532.0    C:\WINNT\system32
-77bf0000 NTDSAPI.dll   5.0.2195.6666  C:\WINNT\system32
-77d30000 RPCRT4.dll    5.0.2195.7281  C:\WINNT\system32
-77e10000 user32.dll    5.0.2195.7133  C:\WINNT\system32
-77f40000 GDI32.dll     5.0.2195.7205  C:\WINNT\system32
-77f80000 ntdll.dll     5.0.2195.7006  C:\WINNT\system32
-78000000 msvcrt.dll    6.1.9844.0     C:\WINNT\system32
-782c0000 rnr20.dll     5.0.2195.6603  C:\WINNT\System32
-7c0f0000 USERENV.DLL   5.0.2195.7002  C:\WINNT\system32
-7c2d0000 advapi32.dll  5.0.2195.7038  C:\WINNT\system32
-7c340000 Secur32.dll   5.0.2195.7244  C:\WINNT\system32
-7c570000 kernel32.dll  5.0.2195.7135  C:\WINNT\system32
-7cdc0000 NETAPI32.DLL  5.0.2195.7203  C:\WINNT\system32
-7ce20000 ole32.dll     5.0.2195.7059  C:\WINNT\system32
-7cf30000 shell32.dll   5.0.3900.7155  C:\WINNT\system32
-
-processes:
-000 Idle
-008 System                         normal
-0a0 smss.exe                       normal C:\WINNT\system32
-0b8 CSRSS.EXE
-0b4 winlogon.exe                   high   C:\WINNT\system32
-0e8 services.exe                   normal C:\WINNT\system32
-0f4 lsass.exe                      normal C:\WINNT\system32
-1a8 svchost.exe                    normal C:\WINNT\system32
-1c8 LEXBCES.EXE                    normal C:\WINNT\system32
-1e4 spoolsv.exe                    normal C:\WINNT\system32
-208 svchost.exe                    normal C:\WINNT\System32
-214 FileZilla Server.exe           normal C:\Program Files\FileZilla Server
-23c jqs.exe                        idle   C:\Program Files\Java\jre6\bin
-264 regsvc.exe                     normal C:\WINNT\system32
-26c MSTask.exe                     normal C:\WINNT\system32
-2c0 WinVNC.exe                     normal C:\Program Files\UltraVNC
-2dc vmtoolsd.exe                   high   C:\Program Files\VMware\VMware Tools
-2f0 WinMgmt.exe                    normal C:\WINNT\System32\WBEM
-2fc svchost.exe                    normal C:\WINNT\system32
-110 WinVNC.exe                     normal C:\Program Files\UltraVNC
-2e4 Explorer.EXE                   normal C:\WINNT
-394 TSVNCache.exe                  normal C:\Program Files\TortoiseSVN\bin
-150 FileZilla Server Interface.exe normal C:\Program Files\FileZilla Server
-2b4 jusched.exe                    normal C:\Program Files\Common Files\Java\Java Update
-28c vmtoolsd.exe                   normal C:\Program Files\VMware\VMware Tools
-414 qttask.exe                     normal C:\Program Files\QuickTime
-084 delphi32.exe                   normal C:\Program Files\Borland\Delphi7\Bin
-490 Ratings31.exe                  normal C:\Ratings31
-310 ratings31.exe                  normal c:\Ratings31
-
-hardware:
-+ Batteries
-  - Microsoft AC Adapter
-+ Computer
-  - ACPI Uniprocessor PC
-+ Disk drives
-  - VMware, VMware Virtual S SCSI Disk Device
-+ Display adapters
-  - VMware SVGA II (driver 11.9.1.0)
-+ DVD/CD-ROM drives
-  - NECVMWar VMware IDE CDR00
-  - NECVMWar VMware IDE CDR10
-+ Floppy disk controllers
-  - Standard floppy disk controller
-+ Floppy disk drives
-  - Floppy disk drive
-+ Human Interface Devices
-  - USB Human Interface Device
-  - USB Human Interface Device
-+ IDE ATA/ATAPI controllers
-  - Intel(r) 82371AB/EB PCI Bus Master IDE Controller
-  - Primary IDE Channel
-  - Secondary IDE Channel
-+ Keyboards
-  - Standard 101/102-Key or Microsoft Natural PS/2 Keyboard
-+ Mice and other pointing devices
-  - VMware Pointing Device (driver 12.5.2.0)
-  - VMware USB Pointing Device (driver 12.5.2.0)
-  - VMware USB Pointing Device (driver 12.5.2.0)
-+ Network adapters
-  - VMware Accelerated AMD PCNet Adapter #6 (driver 2.2.0.0)
-+ Ports (COM & LPT)
-  - Communications Port (COM1)
-  - Communications Port (COM2)
-  - Printer Port (LPT1)
-+ SCSI and RAID controllers
-  - VMware VMSCSI Controller (driver 2.0.3.0)
-+ Sound, video and game controllers
-  - Audio Codecs
-  - Creative AudioPCI (ES1371,ES1373) (WDM)
-  - Game Port for Creative
-  - Legacy Audio Drivers
-  - Legacy Video Capture Devices
-  - Media Control Devices
-  - Video Codecs
-+ System devices
-  - ACPI Fixed Feature Button
-  - Direct memory access controller
-  - EISA programmable interrupt controller
-  - Generic Bus
-  - Generic Bus
-  - Generic Bus
-  - Intel 82371AB/EB PCI to ISA bridge (ISA mode)
-  - Intel 82443BX Pentium(r) II Processor to AGP Controller
-  - Intel 82443BX Pentium(r) II Processor to PCI Bridge
-  - ISAPNP Read Data Port
-  - Logical Disk Manager
-  - Microcode Update Device
-  - Microsoft ACPI-Compliant System
-  - Microsoft Composite Battery
-  - Motherboard resources
-  - Motherboard resources
-  - Parallel Class Enumerator
-  - PCI bus
-  - PCI standard PCI-to-PCI bridge
-  - PCI standard PCI-to-PCI bridge
-  - PCI standard PCI-to-PCI bridge
-  - PCI standard PCI-to-PCI bridge
-  - PCI standard PCI-to-PCI bridge
-  - Plug and Play Software Device Enumerator
-  - System CMOS/real time clock
-  - System speaker
-  - System timer
-  - VMware VMCI Bus Device (driver 9.3.51.0)
-  - VMware VMCI Host Device (driver 9.3.51.0)
-  - Volume Manager
-+ Universal Serial Bus controllers
-  - Generic USB Hub
-  - Intel 82371AB/EB PCI to USB Universal Host Controller
-  - Standard Enhanced PCI to USB Host Controller
-  - USB 2.0 Root Hub
-  - USB Composite Device
-  - USB Root Hub
-
-cpu registers:
-eax = 01a72880
-ebx = 0012f501
-ecx = 00000000
-edx = 006fef04
-esi = 019cf5d0
-edi = 00886934
-eip = 006fef04
-esp = 0012f470
-ebp = 0012f4b0
-
-stack dump:
-0012f470  04 ef 6f 00 de fa ed 0e - 01 00 00 00 07 00 00 00  ..o.............
-0012f480  84 f4 12 00 04 ef 6f 00 - 80 28 a7 01 01 f5 12 00  ......o..(......
-0012f490  d0 f5 9c 01 34 69 88 00 - b0 f4 12 00 a0 f4 12 00  ....4i..........
-0012f4a0  f4 f4 12 00 80 4d 40 00 - b0 f4 12 00 00 00 00 00  .....M@.........
-0012f4b0  08 f5 12 00 89 72 88 00 - 01 69 88 00 04 f5 12 00  .....r...i......
-0012f4c0  d0 f5 9c 01 8a f6 6f 00 - 60 f5 12 00 d0 f5 9c 01  ......o.`.......
-0012f4d0  d0 f5 9c 01 46 6f 88 00 - 04 f5 12 00 0e 00 00 00  ....Fo..........
-0012f4e0  08 f5 12 00 60 f5 12 00 - d0 f5 9c 01 d0 f5 9c 01  ....`...........
-0012f4f0  b0 f4 6f 00 10 f5 12 00 - 80 4d 40 00 08 f5 12 00  ..o......M@.....
-0012f500  78 64 32 03 00 00 00 00 - 28 f5 12 00 3b df 6f 00  xd2.....(...;.o.
-0012f510  30 f5 12 00 80 4d 40 00 - 28 f5 12 00 cc 7e 8a 00  0....M@.(....~..
-0012f520  d0 f5 9c 01 00 00 00 00 - 48 f5 12 00 69 ea 6f 00  ........H...i.o.
-0012f530  58 f5 12 00 80 4d 40 00 - 48 f5 12 00 00 00 00 00  X....M@.H.......
-0012f540  e0 48 36 03 00 00 00 00 - 68 f5 12 00 95 7e 8a 00  .H6.....h....~..
-0012f550  5d b1 c3 00 cd bb 88 00 - 78 f5 12 00 80 4d 40 00  ].......x....M@.
-0012f560  68 f5 12 00 e0 48 36 03 - 20 f7 12 00 df c1 88 00  h....H6.........
-0012f570  c1 b1 c3 00 d1 b1 c3 00 - 34 f7 12 00 80 4d 40 00  ........4....M@.
-0012f580  20 f7 12 00 cc f8 12 00 - 20 9b a3 01 20 ac 3d 03  ..............=.
-0012f590  00 00 00 00 00 00 00 00 - 00 00 00 00 00 00 00 00  ................
-0012f5a0  66 4a c6 42 44 26 5e 00 - 20 00 00 00 00 00 00 00  fJ.BD&^.........
-
-disassembling:
-[...]
-006feeeb        call    -$2f73e8 ($407b08)     ; System.LoadResString
-006feef0        mov     ecx, [ebp-4]
-006feef3        mov     dl, 1
-006feef5        mov     eax, [$6e5d8c]
-006feefa        call    -$18dc7 ($6e6138)      ; IdException.EIdException.Create
-006feeff      > call    -$2fa0b8 ($404e4c)     ; System.@RaiseExcept
-006fef04        xor     eax, eax
-006fef06        pop     edx
-006fef07        pop     ecx
-006fef08        pop     ecx
-006fef09        mov     fs:[eax], edx
-[...]
+005f5879        mov     ebx, eax
+005f587b 2886   mov     ecx, ebx
+005f587d        mov     dl, 1
+005f587f        mov     eax, [$5efc28]
+005f5884        call    +7 ($5f5890)           ; dbisamtb.EDBISAMEngineError.Create
+005f5889      > call    -$1f0a42 ($404e4c)     ; System.@RaiseExcept
+005f588e 2887   pop     ebx
+005f588f        ret
 

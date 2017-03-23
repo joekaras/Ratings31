@@ -4213,7 +4213,7 @@ begin
 
                tblR.FieldByName('EarlyPacePar').AsInteger := atoi(stwoFHdwPaceParForLevel);
                tblR.FieldByName('MiddlePacePar').AsInteger := atoi(sfourFHdwPaceParForLevel);
-               tblR.FieldByName('LatePacePar').AsInteger := atoi(sHdwLatePaceParForLevel);
+               tblR.FieldByName('LatePacePar').AsInteger := atoi(sHdwLatePaceParForLevel) + 100;
                tblR.FieldByName('SpeedPacePar').AsInteger := atoi(sHdwSpeedParForClassLevel);
 
 
@@ -4664,21 +4664,35 @@ begin
 
                //
 
+
                sHdwDirtPedigreeRating := FastReplace(sHdwDirtPedigreeRating, '*', '', True);
                sHdwDirtPedigreeRating := FastReplace(sHdwDirtPedigreeRating, '?', '', True);
                tblE.FieldByName('ClassRating').AsFloat := atof(sHdwDirtPedigreeRating);
+               if (tblE.FieldByName('ClassRating').AsFloat > 999) then begin
+                  tblE.FieldByName('ClassRating').AsFloat := 0;
+               end;
 
                sHdwMudPedigreeRating := FastReplace(sHdwMudPedigreeRating, '*', '', True);
                sHdwMudPedigreeRating := FastReplace(sHdwMudPedigreeRating, '?', '', True);
                tblE.FieldByName('MudRating').AsFloat := atof(sHdwMudPedigreeRating);
+               if (tblE.FieldByName('MudRating').AsFloat > 999) then begin
+                  tblE.FieldByName('MudRating').AsFloat := 0;
+               end;
 
                sHdwTurfPedigreeRating := FastReplace(sHdwTurfPedigreeRating, '*', '', True);
                sHdwTurfPedigreeRating := FastReplace(sHdwTurfPedigreeRating, '?', '', True);
                tblE.FieldByName('TurfRating').AsFloat := atof(sHdwTurfPedigreeRating);
+               if (tblE.FieldByName('TurfRating').AsFloat > 999) then begin
+                  tblE.FieldByName('TurfRating').AsFloat := 0;
+               end;
 
                sHdwDistPedigreeRating := FastReplace(sHdwDistPedigreeRating, '*', '', True);
                sHdwDistPedigreeRating := FastReplace(sHdwDistPedigreeRating, '?', '', True);
                tblE.FieldByName('DistanceRating').AsFloat := atof(sHdwDistPedigreeRating);
+               if (tblE.FieldByName('DistanceRating').AsFloat > 999) then begin
+                  tblE.FieldByName('DistanceRating').AsFloat := 0;
+               end;
+
 
                //               //
                //               tblE.FieldByName('OwnerRating').AsFloat := 0;

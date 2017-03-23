@@ -408,7 +408,7 @@ begin
          for iIdx := 0 to lstMCP.Count - 1 do begin
             sTmp := lstMCP[iIdx];
             sTmp := FastReplace(sTmp, '"', '', True);
-            sTmp := FastReplace(sTmp, '-', '', True);
+            //  sTmp := FastReplace(sTmp, '-', '', True);
             Split(sTmp, ',', lstS);
 
             iCnt := lstS.Count;
@@ -622,9 +622,16 @@ begin
             end;
 
 
+            iFLD_SPD := 846;
+
+            // Cramer
+            //iFLD_MIDDLE_PACE := 1234;
+            //iFLD_LATE_PACE := 1244;
+            //iFLD_SPD := 1268;
+
+
             iFLD_RACE_CLASS := 826;
             iFLD_CLASS := 836;
-            iFLD_SPD := 846;
 
             iEarlyPacePosLines := 0;
             iMiddlePacePosLines := 0;
@@ -652,9 +659,9 @@ begin
                sPP4fPacePos := StringListTrim(lstS[iFLD_MIDDLE_PACE_POS - 1]);
                sPPLatePacePos := StringListTrim(lstS[iFLD_LATE_PACE_POS - 1]);
 
-               sPP2fPacePos := FastReplace(sPP2fPacePos, '-', '', True);
-               sPP4fPacePos := FastReplace(sPP4fPacePos, '-', '', True);
-               sPPLatePacePos := FastReplace(sPPLatePacePos, '-', '', True);
+               //     sPP2fPacePos := FastReplace(sPP2fPacePos, '-', '', True);
+     //               sPP4fPacePos := FastReplace(sPP4fPacePos, '-', '', True);
+     //               sPPLatePacePos := FastReplace(sPPLatePacePos, '-', '', True);
 
                sPPFinishPos := StringListTrim(lstS[iFLD_FINISH_PACE_POS - 1]);
                sPPOfficialSpeedRating := StringListTrim(lstS[iFLD_SPD - 1]);
@@ -719,16 +726,16 @@ begin
                end;
 
                fLatePace := atof(sPPlatePaceFigure);
-               if fLatePace > 0 then begin
+               if (fLatePace > 0) or (fLatePace < 0) then begin
                   Inc(iLatePaceLines);
 
                   SetLength(aLatePaceH, iLatePaceLines);
                   SetLength(aLatePaceO, iLatePaceLines);
                   SetLength(aLatePaceMax, iLatePaceLines);
 
-                  aLatePaceH[iLatePaceLines - 1] := fLatePace;
-                  aLatePaceO[iLatePaceLines - 1] := fLatePace;
-                  aLatePaceMax[iLatePaceLines - 1] := fLatePace;
+                  aLatePaceH[iLatePaceLines - 1] := fLatePace + fMiddlePace;
+                  aLatePaceO[iLatePaceLines - 1] := fLatePace + fMiddlePace;
+                  aLatePaceMax[iLatePaceLines - 1] := fLatePace + fMiddlePace;
                end;
 
                fClassRating := atof(sPPClassRating);
@@ -757,73 +764,107 @@ begin
             end;
             //
 
-            if (iEarlyPacePosLines > 0) then begin
-               fEarlyPacePosH := RoundTo(HarmonicMean(aEarlyPacePosH), -2);
-               fEarlyPacePosO := RoundTo(Median(aEarlyPacePosH), -2);
-            end else begin
-               fEarlyPacePosH := 9999;
-               fEarlyPacePosO := 9999;
+            try
+               if (iEarlyPacePosLines > 0) then begin
+                  fEarlyPacePosH := RoundTo(HarmonicMean(aEarlyPacePosH), -2);
+                  fEarlyPacePosO := RoundTo(Median(aEarlyPacePosH), -2);
+               end else begin
+                  fEarlyPacePosH := 9999;
+                  fEarlyPacePosO := 9999;
+               end;
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
             end;
 
-            if (iMiddlePacePosLines > 0) then begin
-               fMiddlePacePosH := RoundTo(HarmonicMean(aMiddlePacePosH), -2);
-               fMiddlePacePosO := RoundTo(Median(aMiddlePacePosH), -2);
-            end else begin
-               fMiddlePacePosH := 9999;
-               fMiddlePacePosO := 9999;
+            try
+               if (iMiddlePacePosLines > 0) then begin
+                  fMiddlePacePosH := RoundTo(HarmonicMean(aMiddlePacePosH), -2);
+                  fMiddlePacePosO := RoundTo(Median(aMiddlePacePosH), -2);
+               end else begin
+                  fMiddlePacePosH := 9999;
+                  fMiddlePacePosO := 9999;
+               end;
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
             end;
 
-            if (iLatePacePosLines > 0) then begin
-               fLatePacePosH := RoundTo(HarmonicMean(aLatePacePosH), -2);
-               fLatePacePosO := RoundTo(Median(aLatePacePosH), -2);
-            end else begin
-               fLatePacePosH := 9999;
-               fLatePacePosO := 9999;
+            try
+               if (iLatePacePosLines > 0) then begin
+                  fLatePacePosH := RoundTo(HarmonicMean(aLatePacePosH), -2);
+                  fLatePacePosO := RoundTo(Median(aLatePacePosH), -2);
+               end else begin
+                  fLatePacePosH := 9999;
+                  fLatePacePosO := 9999;
+               end;
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
             end;
 
-            if (iFinishPacePosLines > 0) then begin
-               fFinishPacePosH := RoundTo(HarmonicMean(aFinishPacePosH), -2);
-            end else begin
-               fFinishPacePosH := 9999;
+            try
+               if (iFinishPacePosLines > 0) then begin
+                  fFinishPacePosH := RoundTo(HarmonicMean(aFinishPacePosH), -2);
+               end else begin
+                  fFinishPacePosH := 9999;
+               end;
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
             end;
 
-            if (iEarlyPaceLines > 0) then begin
-               fEarlyPaceH := RoundTo(HarmonicMean(aEarlyPaceH), -2);
-               fEarlyPaceO := RoundTo(Median(aEarlyPaceO), -2);
-               fEarlyPaceMax := RoundTo(Largest(aEarlyPaceMax, 1), -2);
-            end else begin
-               fEarlyPaceH := 0;
-               fEarlyPaceO := 0;
+            try
+               if (iEarlyPaceLines > 0) then begin
+                  fEarlyPaceH := RoundTo(HarmonicMean(aEarlyPaceH), -2);
+                  fEarlyPaceO := RoundTo(Median(aEarlyPaceO), -2);
+                  fEarlyPaceMax := RoundTo(Largest(aEarlyPaceMax, 1), -2);
+               end else begin
+                  fEarlyPaceH := 0;
+                  fEarlyPaceO := 0;
+               end;
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
             end;
 
-            if (iMiddlePaceLines > 0) then begin
-               fMiddlePaceH := RoundTo(HarmonicMean(aMiddlePaceH), -2);
-               fMiddlePaceO := RoundTo(Median(aMiddlePaceO), -2);
-               fMiddlePaceMax := RoundTo(Largest(aMiddlePaceMax, 1), -2);
-            end else begin
-               fMiddlePaceH := 0;
-               fMiddlePaceO := 0;
-               fMiddlePaceMax := 0;
+            try
+               if (iMiddlePaceLines > 0) then begin
+                  fMiddlePaceH := RoundTo(HarmonicMean(aMiddlePaceH), -2);
+                  fMiddlePaceO := RoundTo(Median(aMiddlePaceO), -2);
+                  fMiddlePaceMax := RoundTo(Largest(aMiddlePaceMax, 1), -2);
+               end else begin
+                  fMiddlePaceH := 0;
+                  fMiddlePaceO := 0;
+                  fMiddlePaceMax := 0;
+               end;
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
             end;
 
-            if (iLatePaceLines > 0) then begin
-               fLatePaceH := RoundTo(HarmonicMean(aLatePaceH), -2);
-               fLatePaceO := RoundTo(Median(aLatePaceO), -2);
-               fLatePaceMax := RoundTo(Largest(aLatePaceMax, 1), -2);
-            end else begin
-               fLatePaceH := 0;
-               fLatePaceO := 0;
-               fLatePaceMax := 0;
+            try
+               if (iLatePaceLines > 0) then begin
+                  fLatePaceH := RoundTo(HarmonicMean(aLatePaceH), -2);
+                  //fLatePaceH := ESBHarmonicMean(aLatePaceH), -2);
+
+                  fLatePaceO := RoundTo(Median(aLatePaceO), -2);
+                  fLatePaceMax := RoundTo(Largest(aLatePaceMax, 1), -2);
+               end else begin
+                  fLatePaceH := 0;
+                  fLatePaceO := 0;
+                  fLatePaceMax := 0;
+               end;
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
             end;
 
-            if (iClassRatingLines > 0) then begin
-               fClassRatingH := RoundTo(HarmonicMean(aClassRatingH), -2);
-               fClassRatingO := RoundTo(Median(aClassRatingO), -2);
-               fClassRatingMax := RoundTo(Largest(aClassRatingMax, 1), -2);
-            end else begin
-               fClassRatingH := 0;
-               fClassRatingO := 0;
-               fClassRatingMax := 0;
+            try
+               if (iClassRatingLines > 0) then begin
+                  fClassRatingH := RoundTo(HarmonicMean(aClassRatingH), -2);
+                  fClassRatingO := RoundTo(Median(aClassRatingO), -2);
+                  fClassRatingMax := RoundTo(Largest(aClassRatingMax, 1), -2);
+               end else begin
+                  fClassRatingH := 0;
+                  fClassRatingO := 0;
+                  fClassRatingMax := 0;
+               end;
+            except
+               on E: Exception do hLog.AddToLog(E.Message, msevException);
             end;
 
             tblE.IndexName := '';
@@ -1607,7 +1648,7 @@ begin
                                     tblE.FieldByName('TotalBrdWinPct').AsFloat := fKeyTrnWinPct;
                                  end;
                               Below5To1: begin
-                                    if (tblE.FieldByName('TotalTrnOddsStarts').AsInteger = 0)   begin
+                                    if (tblE.FieldByName('TotalTrnOddsStarts').AsInteger = 0) then begin
                                        tblE.FieldByName('TotalTrnOddsStarts').AsInteger := iKeyTrnStart;
                                        tblE.FieldByName('TotalTrnOddsWinPct').AsFloat := fKeyTrnWinPct;
                                     end;
@@ -1649,20 +1690,20 @@ begin
                      fjockeyDistanceOnTurfWinPct := 0;
                   end;
 
-  //Resusing old fields
-                  if (sjockeyDistanceOnTurfLabel =  'Routes') then begin
+                  //Resusing old fields
+                  if (sjockeyDistanceOnTurfLabel = 'Routes') then begin
                      tblE.FieldByName('TotalJky2yoStarts').AsFloat := fjockeyDistanceOnTurfStarts;
                      tblE.FieldByName('TotalJky2yoWins').AsFloat := fjockeyDistanceOnTurfWins;
                      tblE.FieldByName('TotalJky2yoWinPct').AsFloat := fjockeyDistanceOnTurfWinPct;
                   end;
 
-                   if (sjockeyDistanceOnTurfLabel =  'Sprints') then begin
+                  if (sjockeyDistanceOnTurfLabel = 'Sprints') then begin
                      tblE.FieldByName('TotalJky2yoStarts').AsFloat := fjockeyDistanceOnTurfStarts;
                      tblE.FieldByName('TotalJky2yoWins').AsFloat := fjockeyDistanceOnTurfWins;
                      tblE.FieldByName('TotalJky2yoWinPct').AsFloat := fjockeyDistanceOnTurfWinPct;
                   end;
 
-                  if (sjockeyDistanceOnTurfLabel = 'Turf'  ) then begin
+                  if (sjockeyDistanceOnTurfLabel = 'Turf') then begin
                      tblE.FieldByName('TotalJkyTurfStarts').AsFloat := fjockeyDistanceOnTurfStarts;
                      tblE.FieldByName('TotalJkyTurfWins').AsFloat := fjockeyDistanceOnTurfWins;
                      tblE.FieldByName('TotalJkyTurfWinPct').AsFloat := fjockeyDistanceOnTurfWinPct;
@@ -1704,7 +1745,14 @@ begin
 
                   tblE.FieldByName('EarlyPace').AsFloat := fEarlyPaceH;
                   tblE.FieldByName('MiddlePace').AsFloat := fMiddlePaceH;
-                  tblE.FieldByName('LatePace').AsFloat := fLatePaceMax;
+                  if (fLatePaceH > fLatePaceO) then begin
+                     tblE.FieldByName('LatePace').AsFloat := fLatePaceH;
+                  end else begin
+                     tblE.FieldByName('LatePace').AsFloat := fLatePaceO;
+                  end;
+                  if tblE.FieldByName('LatePace').AsFloat > 199 then begin
+                     tblE.FieldByName('LatePace').AsFloat := 198;
+                  end;
 
                   tblE.FieldByName('BackClass').AsFloat := fClassRatingMax;
                   tblE.FieldByName('AvgClass').AsFloat := fClassRatingH;

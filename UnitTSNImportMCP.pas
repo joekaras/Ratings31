@@ -796,7 +796,7 @@ var
    sLDistanceDesc: string;
    sLTrkCond: string;
    Present: TDateTime;
-   sLRaceType: string;    
+   sLRaceType: string;
    sLClmPrice: string;
    sLClaimed: string;
    sLPurse: string;
@@ -1985,14 +1985,14 @@ begin
             DecodeTime(Present, wHour, wMin, wSec, wMSec);
 
 
-            if ((wHour >= 0)and (wHour < 12)) then begin
+            if ((wHour >= 0) and (wHour < 12)) then begin
                if (Trim(sMTO_AE) = 'A') then begin
                   sMTO_AE := 'A';
-              //    continue;
+                  //    continue;
                end;
                if (Trim(sMTO_AE) = 'M') then begin
                   sMTO_AE := 'M';
-              //    continue;
+                  //    continue;
                end;
             end;
             //
@@ -3132,18 +3132,31 @@ begin
                sBrisDirtPedigreeRating := FastReplace(sBrisDirtPedigreeRating, '*', '', True);
                sBrisDirtPedigreeRating := FastReplace(sBrisDirtPedigreeRating, '?', '', True);
                tblE.FieldByName('ClassRating').AsFloat := atof(sbrisDirtPedigreeRating);
+               if (tblE.FieldByName('ClassRating').AsInteger = 9999) then begin
+                  tblE.FieldByName('ClassRating').AsFloat := 0;
+               end;
 
                sBrisMudPedigreeRating := FastReplace(sBrisMudPedigreeRating, '*', '', True);
                sBrisMudPedigreeRating := FastReplace(sBrisMudPedigreeRating, '?', '', True);
                tblE.FieldByName('MudRating').AsFloat := atof(sbrisMudPedigreeRating);
+               if (tblE.FieldByName('MudRating').AsInteger = 9999) then begin
+                  tblE.FieldByName('MudRating').AsFloat := 0;
+               end;
 
                sBrisTurfPedigreeRating := FastReplace(sBrisTurfPedigreeRating, '*', '', True);
                sBrisTurfPedigreeRating := FastReplace(sBrisTurfPedigreeRating, '?', '', True);
                tblE.FieldByName('TurfRating').AsFloat := atof(sbrisTurfPedigreeRating);
+               if (tblE.FieldByName('TurfRating').AsInteger = 9999) then begin
+                  tblE.FieldByName('TurfRating').AsFloat := 0;
+               end;
 
                sBrisDistPedigreeRating := FastReplace(sBrisDistPedigreeRating, '*', '', True);
                sBrisDistPedigreeRating := FastReplace(sBrisDistPedigreeRating, '?', '', True);
                tblE.FieldByName('DistanceRating').AsFloat := atof(sbrisDistPedigreeRating);
+               if (tblE.FieldByName('DistanceRating').AsInteger = 9999) then begin
+                  tblE.FieldByName('DistanceRating').AsFloat := 0;
+               end;
+
 
                //               //
                //               tblE.FieldByName('OwnerRating').AsFloat := 0;
@@ -3388,16 +3401,16 @@ begin
 
                   dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
 
-                 // if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
-                     sWO1 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
-                        CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
-                        CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
-                        strackWorkout[iWOIdx] + ' ' +
-                        GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
-                        sconditionWorkout[iWOIdx] + ' ' +
-                        stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
-                        '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                 // end;
+                  // if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
+                  sWO1 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
+                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
+                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
+                     strackWorkout[iWOIdx] + ' ' +
+                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
+                     sconditionWorkout[iWOIdx] + ' ' +
+                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
+                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
+                  // end;
                end;
 
                Inc(iWOIdx);
@@ -3414,14 +3427,14 @@ begin
                   dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
 
                   //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
-                     sWO2 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
-                        CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
-                        CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
-                        strackWorkout[iWOIdx] + ' ' +
-                        GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
-                        sconditionWorkout[iWOIdx] + ' ' +
-                        stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
-                        '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
+                  sWO2 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
+                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
+                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
+                     strackWorkout[iWOIdx] + ' ' +
+                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
+                     sconditionWorkout[iWOIdx] + ' ' +
+                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
+                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
                   //end;
                end;
 
@@ -3439,15 +3452,15 @@ begin
                   dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
 
                   //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
-                     sWO3 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
-                        CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
-                        CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
-                        strackWorkout[iWOIdx] + ' ' +
-                        GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
-                        sconditionWorkout[iWOIdx] + ' ' +
-                        stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
-                        '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                 // end;
+                  sWO3 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
+                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
+                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
+                     strackWorkout[iWOIdx] + ' ' +
+                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
+                     sconditionWorkout[iWOIdx] + ' ' +
+                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
+                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
+                  // end;
                end;
 
                Inc(iWOIdx);
@@ -3464,14 +3477,14 @@ begin
                   dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
 
                   //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
-                     sWO4 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
-                        CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
-                        CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
-                        strackWorkout[iWOIdx] + ' ' +
-                        GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
-                        sconditionWorkout[iWOIdx] + ' ' +
-                        stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
-                        '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
+                  sWO4 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
+                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
+                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
+                     strackWorkout[iWOIdx] + ' ' +
+                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
+                     sconditionWorkout[iWOIdx] + ' ' +
+                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
+                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
                   //end;
                end;
 
@@ -3489,15 +3502,15 @@ begin
                   dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
 
                   //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
-                     sWO5 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
-                        CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
-                        CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
-                        strackWorkout[iWOIdx] + ' ' +
-                        GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
-                        sconditionWorkout[iWOIdx] + ' ' +
-                        stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
-                        '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                 // end;
+                  sWO5 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
+                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
+                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
+                     strackWorkout[iWOIdx] + ' ' +
+                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
+                     sconditionWorkout[iWOIdx] + ' ' +
+                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
+                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
+                  // end;
                end;
 
                Inc(iWOIdx);
@@ -3514,14 +3527,14 @@ begin
                   dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
 
                   //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
-                     sWO6 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
-                        CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
-                        CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
-                        strackWorkout[iWOIdx] + ' ' +
-                        GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
-                        sconditionWorkout[iWOIdx] + ' ' +
-                        stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
-                        '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
+                  sWO6 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
+                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
+                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
+                     strackWorkout[iWOIdx] + ' ' +
+                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
+                     sconditionWorkout[iWOIdx] + ' ' +
+                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
+                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
                   //end;
 
                end;
