@@ -641,7 +641,7 @@ type
       procedure ImportAxcisEntry(lRecNo: Longint);
       procedure ImportAxcisTodayEntry(lRecNo: Longint);
       procedure ImportToday(Sender: TObject);
-      procedure ImportTSNOldForToday(Sender: TObject);
+      procedure ImportTSNForToday(Sender: TObject);
 
       //      procedure UpdateTodayContenders(Sender: TObject);
 
@@ -843,7 +843,7 @@ type
 
       procedure DownloadTSNAvailable(Sender: TObject);
 
-      procedure ImportTSNOldHistory(Sender: TObject);
+      procedure ImportTSNHistory(Sender: TObject);
       procedure ImportHDWHistory(Sender: TObject);
    public
       { Public declarations }
@@ -8969,7 +8969,7 @@ begin
                try
                   edtOverrideDate.Date := Now() + 1;
                   btnStartOfDayClick(Sender);
-                  // ImportTSNHistory(Sender);
+                  ImportTSNHistory(Sender);
                   ImportHDWHistory(Sender);
 
                   try
@@ -9013,7 +9013,7 @@ begin
                edtOverrideDate.Date := Now();
 
                btnStartOfDayClick(Sender);
-               // ImportTSNHistory(Sender);
+                ImportTSNHistory(Sender);
                ImportHDWHistory(Sender);
                try
                   btnDownloadTSNLSCClick(Sender);
@@ -9086,7 +9086,7 @@ begin
 
                edtOverrideDate.Date := Now();
                btnStartOfDayClick(Sender);
-               //ImportTSNHistory(Sender);
+               ImportTSNHistory(Sender);
                ImportHDWHistory(Sender);
 
                try
@@ -9196,8 +9196,8 @@ begin
             edtOverrideDate.Date := edtOverrideDate.Date + 3;
 
             btnStartOfDayClick(Sender);
-            //            ImportTSNHistory(Sender);
-            //            ImportTSNForToday(Sender);
+            ImportTSNHistory(Sender);
+            ImportTSNForToday(Sender);
 
             ImportHDWHistory(Sender);
             ImportHDWForToday(Sender);
@@ -9222,8 +9222,8 @@ begin
             edtOverrideDate.Date := edtOverrideDate.Date + 2;
 
             btnStartOfDayClick(Sender);
-            //ImportTSNHistory(Sender);
-            //ImportTSNForToday(Sender);
+            ImportTSNHistory(Sender);
+            ImportTSNForToday(Sender);
             ImportHDWHistory(Sender);
             ImportHDWForToday(Sender);
 
@@ -9244,8 +9244,8 @@ begin
             edtOverrideDate.Date := edtOverrideDate.Date + 1;
 
             btnStartOfDayClick(Sender);
-            //ImportTSNHistory(Sender);
-            //ImportTSNForToday(Sender);
+            ImportTSNHistory(Sender);
+            ImportTSNForToday(Sender);
             ImportHDWHistory(Sender);
             ImportHDWForToday(Sender);
 
@@ -9269,8 +9269,8 @@ begin
             edtOverrideDate.Date := Now();
 
             btnStartOfDayClick(Sender);
-            //            ImportTSNHistory(Sender);
-            //            ImportTSNForToday(Sender);
+                        ImportTSNHistory(Sender);
+                        ImportTSNForToday(Sender);
             ImportHDWHistory(Sender);
             ImportHDWForToday(Sender);
 
@@ -10408,10 +10408,10 @@ begin
          try
             try
                btnStartOfDayClick(Sender);
-               //ImportTSNHistory(Sender);
+               ImportTSNHistory(Sender);
                ImportHDWHistory(Sender);
                ProcessTSNChanges(dm.tblRaces, dm.tblEntries);
-               //ImportTSNForToday(Sender);
+               ImportTSNForToday(Sender);
                ImportHDWForToday(Sender);
                chkCreateExportFiles.Checked := True;
                chkCreateHospitalReport.Checked := False;
@@ -10544,8 +10544,8 @@ begin
    end;
 
    try
-      // ImportTSNHistory(Sender);
       ImportHDWHistory(Sender);
+      ImportTSNHistory(Sender);
    except
       on E: Exception do hLog.AddToLog(E.Message, msevException);
    end;
@@ -10563,8 +10563,8 @@ begin
    end;
 
    try
-      //      ImportTSNForToday(Sender);
       ImportHDWForToday(Sender);
+      //ImportTSNForToday(Sender);
    except
       on E: Exception do hLog.AddToLog(E.Message, msevException);
    end;
@@ -10604,8 +10604,8 @@ begin
    try
       edtOverrideDate.Date := Now() - 1;
       btnStartOfDayClick(Sender);
-      //   ImportTSNHistory(Sender);
-       //  ImportTSNForToday(Sender);
+         ImportTSNHistory(Sender);
+        ImportTSNForToday(Sender);
       ImportHDWHistory(Sender);
       ImportHDWForToday(Sender);
       //    if (chkCreateReports.Checked) then begin
@@ -10644,7 +10644,7 @@ begin
    end;
 
    try
-      //  ImportTSNHistory(Sender);
+      ImportTSNHistory(Sender);
       ImportHDWHistory(Sender);
    except
       on E: Exception do hLog.AddToLog(E.Message, msevException);
@@ -10926,7 +10926,7 @@ begin
    //   end;
    //
    try
-      //ImportTSNForToday(Sender);
+      ImportTSNForToday(Sender);
       ImportHDWForToday(Sender);
    except
       on E: Exception do hLog.AddToLog(E.Message, msevException);
@@ -18625,7 +18625,7 @@ end;
 
 //
 
-procedure TMainForm.ImportTSNOldHistory(Sender: TObject);
+procedure TMainForm.ImportTSNHistory(Sender: TObject);
 var
    iEndPos: Integer;
    iStartPos: Integer;
@@ -18876,32 +18876,32 @@ begin
                if FileExists(sMCPFileName) then begin
                   try
                      UpdateStatusBar(sMCPFileName);
-                     TSNImportMCP(dm.tblRaces,
-                        dm.tblEntries,
-                        dm.tblRH,
-                        dm.tblHH,
-                        dm.tblPP,
-                        dm.tblRatingSireClass,
-                        dm.tblRatingSireTurf,
-                        dm.tblRatingSireSprint,
-                        dm.tblRatingSireRoute,
-                        dm.tblRatingSireMud,
-                        dm.tblRatingSireAW,
-                        dm.tblRatingDamSireClass,
-                        dm.tblRatingDamSireTurf,
-                        dm.tblRatingDamSireSprint,
-                        dm.tblRatingDamSireRoute,
-                        dm.tblRatingDamSireMud,
-                        dm.tblRatingDamSireAW,
-                        dm.tblRatingTrainer,
-                        dm.tblRatingTrainerJockey,
-                        dm.tblRatingTrainerOwner,
-                        dm.tblRatingTrainerTrack,
-                        dm.tblRatingJockey,
-                        dm.tblRatingJockeyOwner,
-                        dm.tblRatingJockeyTrack,
-                        dm.tblRatingOwner,
-                        sMCPFileName);
+                  //   TSNImportMCP(dm.tblRaces,
+//                        dm.tblEntries,
+//                        dm.tblRH,
+//                        dm.tblHH,
+//                        dm.tblPP,
+//                        dm.tblRatingSireClass,
+//                        dm.tblRatingSireTurf,
+//                        dm.tblRatingSireSprint,
+//                        dm.tblRatingSireRoute,
+//                        dm.tblRatingSireMud,
+//                        dm.tblRatingSireAW,
+//                        dm.tblRatingDamSireClass,
+//                        dm.tblRatingDamSireTurf,
+//                        dm.tblRatingDamSireSprint,
+//                        dm.tblRatingDamSireRoute,
+//                        dm.tblRatingDamSireMud,
+//                        dm.tblRatingDamSireAW,
+//                        dm.tblRatingTrainer,
+//                        dm.tblRatingTrainerJockey,
+//                        dm.tblRatingTrainerOwner,
+//                        dm.tblRatingTrainerTrack,
+//                        dm.tblRatingJockey,
+//                        dm.tblRatingJockeyOwner,
+//                        dm.tblRatingJockeyTrack,
+//                        dm.tblRatingOwner,
+//                        sMCPFileName);
 
 
                      UpdateTSN(dm.tblRaces, dm.tblEntries, dm.tblTrainerCategory, dm.tblATrainerList, dm.tblTrainerJockeySummary, dm.tblTrainerOwnerSummary, sMCPFileName);
@@ -18939,32 +18939,32 @@ begin
                if FileExists(sMCPFileName) then begin
                   try
                      UpdateStatusBar(sMCPFileName);
-                     TSNImportMCP(dm.tblRaces,
-                        dm.tblEntries,
-                        dm.tblRH,
-                        dm.tblHH,
-                        dm.tblPP,
-                        dm.tblRatingSireClass,
-                        dm.tblRatingSireTurf,
-                        dm.tblRatingSireSprint,
-                        dm.tblRatingSireRoute,
-                        dm.tblRatingSireMud,
-                        dm.tblRatingSireAW,
-                        dm.tblRatingDamSireClass,
-                        dm.tblRatingDamSireTurf,
-                        dm.tblRatingDamSireSprint,
-                        dm.tblRatingDamSireRoute,
-                        dm.tblRatingDamSireMud,
-                        dm.tblRatingDamSireAW,
-                        dm.tblRatingTrainer,
-                        dm.tblRatingTrainerJockey,
-                        dm.tblRatingTrainerOwner,
-                        dm.tblRatingTrainerTrack,
-                        dm.tblRatingJockey,
-                        dm.tblRatingJockeyOwner,
-                        dm.tblRatingJockeyTrack,
-                        dm.tblRatingOwner,
-                        sMCPFileName);
+                  //   TSNImportMCP(dm.tblRaces,
+//                        dm.tblEntries,
+//                        dm.tblRH,
+//                        dm.tblHH,
+//                        dm.tblPP,
+//                        dm.tblRatingSireClass,
+//                        dm.tblRatingSireTurf,
+//                        dm.tblRatingSireSprint,
+//                        dm.tblRatingSireRoute,
+//                        dm.tblRatingSireMud,
+//                        dm.tblRatingSireAW,
+//                        dm.tblRatingDamSireClass,
+//                        dm.tblRatingDamSireTurf,
+//                        dm.tblRatingDamSireSprint,
+//                        dm.tblRatingDamSireRoute,
+//                        dm.tblRatingDamSireMud,
+//                        dm.tblRatingDamSireAW,
+//                        dm.tblRatingTrainer,
+//                        dm.tblRatingTrainerJockey,
+//                        dm.tblRatingTrainerOwner,
+//                        dm.tblRatingTrainerTrack,
+//                        dm.tblRatingJockey,
+//                        dm.tblRatingJockeyOwner,
+//                        dm.tblRatingJockeyTrack,
+//                        dm.tblRatingOwner,
+//                        sMCPFileName);
 
                      UpdateTSN(dm.tblRaces, dm.tblEntries, dm.tblTrainerCategory, dm.tblATrainerList, dm.tblTrainerJockeySummary, dm.tblTrainerOwnerSummary, sMCPFileName);
                   except
@@ -19075,7 +19075,7 @@ begin
 end;
 
 
-procedure TMainForm.ImportTSNOldForToday(Sender: TObject);
+procedure TMainForm.ImportTSNForToday(Sender: TObject);
 var
    iEndPos: Integer;
    iStartPos: Integer;

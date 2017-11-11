@@ -1139,6 +1139,7 @@ type
     ppLabel35: TppLabel;
     ppLabel36: TppLabel;
     ppLabel15: TppLabel;
+    ppLabel60: TppLabel;
     ppLabel44: TppLabel;
     ppLabel46: TppLabel;
     ppLabel57: TppLabel;
@@ -1189,10 +1190,10 @@ type
     MaidenSheetOrder: TppDBText;
     TurfSheetOrder: TppDBText;
     ppLabel17: TppLabel;
-    EarlyPacePar: TppDBText;
-    MiddlePacePar: TppDBText;
-    LatePacePar: TppDBText;
-    SpeedPacePar: TppDBText;
+    ppDBText32: TppDBText;
+    ppDBText33: TppDBText;
+    ppDBText34: TppDBText;
+    ppDBText35: TppDBText;
     ppDBText36: TppDBText;
     ppDBText37: TppDBText;
     ppDBText38: TppDBText;
@@ -1226,8 +1227,6 @@ type
     ppLabel68: TppLabel;
     ppLabel69: TppLabel;
     ppLabel70: TppLabel;
-    ppLabel60: TppLabel;
-    ppLabel71: TppLabel;
     ppHeaderBand2: TppHeaderBand;
     aDetailBand: TppDetailBand;
     ppLine5: TppLine;
@@ -1251,7 +1250,7 @@ type
     MidPace: TppDBText;
     TotalJkyWinPct: TppDBText;
     ppLine10: TppLine;
-    TotalJkyTurfWinPct: TppDBText;
+    TotalTrnTurfWinPct: TppDBText;
     TotalTrnAftClmWinPct: TppDBText;
     TotalTrnDebutTwoWinPct: TppDBText;
     SurfaceChange: TppVariable;
@@ -1287,7 +1286,7 @@ type
     DaysLast: TppDBText;
     lblOnTurf: TppLabel;
     Power: TppDBText;
-    DamSire: TppDBText;
+    ppDBText5: TppDBText;
     SireName: TppDBText;
     ML: TppDBText;
     lblRoute: TppLabel;
@@ -1319,7 +1318,7 @@ type
     TotalTrn46To120WinPct: TppDBText;
     ppLabel22: TppLabel;
     PostPos: TppDBText;
-    TotalTrn1To45WinPct: TppDBText;
+    TotalTrn30WinPct: TppDBText;
     ppLine25: TppLine;
     ppLine26: TppLine;
     ppLine27: TppLine;
@@ -1338,23 +1337,22 @@ type
     BackClass: TppDBText;
     AvgClassRank: TppDBText;
     BackClassRank: TppDBText;
-    TodaysWagerOrderKey: TppDBText;
-    TodaysWagerWinPct: TppDBText;
-    TodaysWagerStarts: TppDBText;
-    PostPosWinPct: TppDBText;
-    TotalTrn30WinPct: TppDBText;
-    TotalTrnOddsWinPct: TppDBText;
-    TotalOwnWinPct: TppDBText;
+    ppDBText20: TppDBText;
+    ppDBText24: TppDBText;
+    ppDBText30: TppDBText;
+    ppDBText31: TppDBText;
+    ppDBText43: TppDBText;
+    ppDBText44: TppDBText;
+    ppDBText45: TppDBText;
     DebutIndicator: TppDBText;
-    TotalJky2yoWinPct: TppDBText;
-    TotalBrdWinPct: TppDBText;
-    TotalJky10WinPct: TppDBText;
+    ppDBText17: TppDBText;
+    ppDBText46: TppDBText;
+    ppDBText47: TppDBText;
     ppLine24: TppLine;
     ppLine36: TppLine;
     ppLine37: TppLine;
     ppLine38: TppLine;
     ppLine39: TppLine;
-    TotalTrnWork120PlusWinPct: TppDBText;
     ppFooterBand1: TppFooterBand;
     ppSummaryWagerTypeBand: TppSummaryBand;
     dbWagerType: TppDBMemo;
@@ -1585,4 +1583,3 @@ begin
 end;
 
 end.
-

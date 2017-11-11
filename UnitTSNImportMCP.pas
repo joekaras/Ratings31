@@ -2636,36 +2636,36 @@ begin
                end;
 
 
-               tblR.FieldByName('TopEarlyPace').AsFloat := 0;
-               tblR.FieldByName('TopMiddlePace').AsFloat := 0;
-               tblR.FieldByName('TopLatePace').AsFloat := 0;
-               tblR.FieldByName('TopEarlyPacePos').AsFloat := 0;
-               tblR.FieldByName('TopMiddlePacePos').AsFloat := 0;
-               tblR.FieldByName('TopLatePacePos').AsFloat := 0;
-
-               tblR.FieldByName('SecondEarlyPace').AsFloat := 0;
-               tblR.FieldByName('SecondMiddlePace').AsFloat := 0;
-               tblR.FieldByName('SecondLatePace').AsFloat := 0;
-               tblR.FieldByName('SecondEarlyPacePos').AsFloat := 0;
-               tblR.FieldByName('SecondMiddlePacePos').AsFloat := 0;
-               tblR.FieldByName('SecondLatePacePos').AsFloat := 0;
-
-               tblR.FieldByName('MaxWPSBet').AsFloat := 0;
-               tblR.FieldByName('MaxGimmickBet').AsFloat := 0;
-
-               tblR.FieldByName('NbrStarters').AsInteger := 0;
-               tblR.FieldByName('NbrDebutStarters').AsInteger := 0;
-               tblR.FieldByName('NbrDebutTwoStarters').AsInteger := 0;
-               tblR.FieldByName('NbrTurfDebutStarters').AsInteger := 0;
-               tblR.FieldByName('NbrRouteDebutStarters').AsInteger := 0;
-               tblR.FieldByName('NbrScratchedStarters').AsInteger := 0;
-               tblR.FieldByName('NbrRunners').AsInteger := 0;
+           //    tblR.FieldByName('TopEarlyPace').AsFloat := 0;
+//               tblR.FieldByName('TopMiddlePace').AsFloat := 0;
+//               tblR.FieldByName('TopLatePace').AsFloat := 0;
+//               tblR.FieldByName('TopEarlyPacePos').AsFloat := 0;
+//               tblR.FieldByName('TopMiddlePacePos').AsFloat := 0;
+//               tblR.FieldByName('TopLatePacePos').AsFloat := 0;
+//
+//               tblR.FieldByName('SecondEarlyPace').AsFloat := 0;
+//               tblR.FieldByName('SecondMiddlePace').AsFloat := 0;
+//               tblR.FieldByName('SecondLatePace').AsFloat := 0;
+//               tblR.FieldByName('SecondEarlyPacePos').AsFloat := 0;
+//               tblR.FieldByName('SecondMiddlePacePos').AsFloat := 0;
+//               tblR.FieldByName('SecondLatePacePos').AsFloat := 0;
+//
+//               tblR.FieldByName('MaxWPSBet').AsFloat := 0;
+//               tblR.FieldByName('MaxGimmickBet').AsFloat := 0;
+//
+//               tblR.FieldByName('NbrStarters').AsInteger := 0;
+//               tblR.FieldByName('NbrDebutStarters').AsInteger := 0;
+//               tblR.FieldByName('NbrDebutTwoStarters').AsInteger := 0;
+//               tblR.FieldByName('NbrTurfDebutStarters').AsInteger := 0;
+//               tblR.FieldByName('NbrRouteDebutStarters').AsInteger := 0;
+//               tblR.FieldByName('NbrScratchedStarters').AsInteger := 0;
+//               tblR.FieldByName('NbrRunners').AsInteger := 0;
                //               tblR.FieldByName('IsEquibaseChartsProcessed').AsBoolean := False;
                //               tblR.FieldByName('IsDRFChartsProcessed').AsBoolean := False;
-
-               tblR.FieldByName('OrigSurface').AsString := '';
-               tblR.FieldByName('IsPk9Place').AsBoolean := False;
-               tblR.FieldByName('Pk9RaceNbr').AsInteger := 0;
+//
+//               tblR.FieldByName('OrigSurface').AsString := '';
+//               tblR.FieldByName('IsPk9Place').AsBoolean := False;
+//               tblR.FieldByName('Pk9RaceNbr').AsInteger := 0;
 
                //               tblR.FieldByName('IsPPValue').AsBoolean := False;
                //               tblR.FieldByName('IsMLValue').AsBoolean := False;
@@ -2676,10 +2676,10 @@ begin
                //               tblR.FieldByName('FractionalTimes').AsString := '';
 
 
-               tblR.FieldByName('EarlyPacePar').AsInteger := atoi(stwoFBrisPaceParForLevel);
-               tblR.FieldByName('MiddlePacePar').AsInteger := atoi(sfourFBrisPaceParForLevel);
-               tblR.FieldByName('LatePacePar').AsInteger := atoi(sBrisLatePaceParForLevel);
-               tblR.FieldByName('SpeedPacePar').AsInteger := atoi(sBrisSpeedParForClassLevel);
+               //tblR.FieldByName('EarlyPacePar').AsInteger := atoi(stwoFBrisPaceParForLevel);
+              // tblR.FieldByName('MiddlePacePar').AsInteger := atoi(sfourFBrisPaceParForLevel);
+                 tblR.FieldByName('LatePacePar').AsInteger := atoi(sBrisLatePaceParForLevel) * 2;
+             //  tblR.FieldByName('SpeedPacePar').AsInteger := atoi(sBrisSpeedParForClassLevel);
 
 
                tblR.FieldByName('PacificTime').AsString := sPacificTime;
@@ -3239,1081 +3239,1082 @@ begin
                //                  tblE.FieldByName('JockeyTrackRating').AsFloat := tblJTR.FieldByName('JockeyTrackRating').AsFloat;
                //               end;
 
-               tblE.FieldByName('LastSpeed').AsInteger := 0;
-               tblE.FieldByName('LastSpeedRank').AsInteger := 0;
-
-               tblE.FieldByName('Power').AsFloat := 0;
-               tblE.FieldByName('PowerRank').AsInteger := 0;
-
-               tblE.FieldByName('BackSpeed').AsInteger := 0;
-               tblE.FieldByName('BackSpeedRank').AsInteger := 0;
-
-               tblE.FieldByName('AvgSpeed').AsInteger := 0;
-               tblE.FieldByName('AvgSpeedRank').AsInteger := 0;
-
-               tblE.FieldByName('EarlyPace').AsFloat := 0;
-               tblE.FieldByName('EarlyPaceRank').AsInteger := 0;
-               tblE.FieldByName('EarlyPacePos').AsFloat := 0;
-               tblE.FieldByName('EarlyPacePosRank').AsInteger := 0;
-
-               tblE.FieldByName('MiddlePace').AsFloat := 0;
-               tblE.FieldByName('MiddlePaceRank').AsInteger := 0;
-               tblE.FieldByName('MiddlePacePos').AsFloat := 0;
-               tblE.FieldByName('MiddlePacePosRank').AsInteger := 0;
-
-               tblE.FieldByName('LatePace').AsFloat := 0;
-               tblE.FieldByName('LatePaceRank').AsInteger := 0;
-               tblE.FieldByName('LatePacePos').AsFloat := 0;
-               tblE.FieldByName('LatePacePosRank').AsInteger := 0;
-
-               tblE.FieldByName('FinishPacePos').AsFloat := 0;
-               tblE.FieldByName('FinishPacePosRank').AsInteger := 0;
-
-               tblE.FieldByName('EarlyPaceAdvantage').AsFloat := 0;
-               tblE.FieldByName('MiddlePaceAdvantage').AsFloat := 0;
-               tblE.FieldByName('LatePaceAdvantage').AsFloat := 0;
-
-
-               tblE.FieldByName('IsClaimed1Back').AsBoolean := False;
-               tblE.FieldByName('IsClaimed2Back').AsBoolean := False;
-               tblE.FieldByName('IsLayoffAndUp').AsBoolean := False;
-               tblE.FieldByName('IsClaimedAndUp').AsBoolean := False;
-               tblE.FieldByName('IsClaimedAndDown').AsBoolean := False;
-               tblE.FieldByName('IsFirstTimeClaiming').AsBoolean := False;
-               tblE.FieldByName('IsBelowClaimedPrice').AsBoolean := False;
-
-               tblE.FieldByName('LifeStarts').AsInteger := atoi(slifeStarts);
-               tblE.FieldByName('LifeWins').AsInteger := atoi(slifeWins);
-               tblE.FieldByName('LifePlcs').AsInteger := atoi(slifePlaces);
-               tblE.FieldByName('LifeShos').AsInteger := atoi(slifeShows);
-               tblE.FieldByName('LifeEarnings').AsInteger := atoi(slifeEarnings);
-
-               if atoi(slifeStarts) > 0 then begin
-                  tblE.FieldByName('LifeEPS').AsInteger := atoi(slifeEarnings) div atoi(slifeStarts);
-               end;
-
-               tblE.FieldByName('DebutIndicator').AsString := '';
-               if atoi(slifeStarts) = 0 then begin
-                  tblE.FieldByName('DebutIndicator').AsString := '*';
-                  //   tblE.FieldByName('IsDebut').AsBoolean := True;
-               end;
-
-               if atoi(slifeStarts) = 1 then begin
-                  tblE.FieldByName('DebutIndicator').AsString := '**';
-                  //tblE.FieldByName('IsDebutTwo').AsBoolean := True;
-               end;
-
-               tblE.FieldByName('TurfIndicator').AsString := '';
-               tblE.FieldByName('TurfStarts').AsInteger := atoi(sturfStarts);
-               tblE.FieldByName('TurfWins').AsInteger := atoi(sturfWins);
-               tblE.FieldByName('TurfPlcs').AsInteger := atoi(sturfPlaces);
-               tblE.FieldByName('TurfShos').AsInteger := atoi(sturfShows);
-               tblE.FieldByName('TurfEarnings').AsInteger := atoi(sturfEarnings);
-
-               if atoi(sturfStarts) > 0 then begin
-                  tblE.FieldByName('TurfEPS').AsInteger := atoi(sTurfEarnings) div atoi(sTurfStarts);
-               end;
-               if atoi(sturfStarts) = 0 then begin
-                  tblE.FieldByName('TurfIndicator').AsString := '*';
-               end;
-
-               if atoi(sturfStarts) = 1 then begin
-                  tblE.FieldByName('TurfIndicator').AsString := '**';
-               end;
-
-               tblE.FieldByName('MudIndicator').AsString := '';
-               tblE.FieldByName('MudStarts').AsInteger := atoi(swetStarts);
-               tblE.FieldByName('MudWins').AsInteger := atoi(swetWins);
-               tblE.FieldByName('MudPlcs').AsInteger := atoi(swetPlaces);
-               tblE.FieldByName('MudShos').AsInteger := atoi(swetShows);
-               tblE.FieldByName('MudEarnings').AsInteger := atoi(swetEarnings);
-               if atoi(sWetStarts) > 0 then begin
-                  tblE.FieldByName('MudEPS').AsInteger := atoi(sWetEarnings) div atoi(sWetStarts);
-               end;
-               if atoi(swetStarts) = 0 then begin
-                  tblE.FieldByName('MudIndicator').AsString := '*';
-               end;
-               if atoi(swetStarts) = 1 then begin
-                  tblE.FieldByName('MudIndicator').AsString := '**';
-               end;
-
-               tblE.FieldByName('TrkStarts').AsInteger := atoi(strackStarts);
-               tblE.FieldByName('TrkWins').AsInteger := atoi(strackWins);
-               tblE.FieldByName('TrkPlcs').AsInteger := atoi(strackPlaces);
-               tblE.FieldByName('TrkShos').AsInteger := atoi(strackShows);
-               tblE.FieldByName('TrkEarnings').AsInteger := atoi(strackEarnings);
-
-               if atoi(strackStarts) > 0 then begin
-                  tblE.FieldByName('TrkEPS').AsInteger := atoi(sTrackEarnings) div atoi(sTrackStarts);
-               end;
-
-               tblE.FieldByName('RouteIndicator').AsString := '';
-               if tblR.FieldByName('DistanceInFurlongs').AsFloat >= 8 then begin
-                  tblE.FieldByName('RouteStarts').AsInteger := atoi(sdistStarts);
-                  tblE.FieldByName('RouteWins').AsInteger := atoi(sdistWins);
-                  tblE.FieldByName('RoutePlcs').AsInteger := atoi(sdistPlaces);
-                  tblE.FieldByName('RouteShos').AsInteger := atoi(sdistShows);
-                  if atoi(sdistStarts) = 0 then begin
-                     tblE.FieldByName('RouteIndicator').AsString := '*';
-                  end;
-                  if atoi(sdistStarts) = 1 then begin
-                     tblE.FieldByName('RouteIndicator').AsString := '**';
-                  end;
-               end else begin
-                  tblE.FieldByName('SprintStarts').AsInteger := atoi(sdistStarts);
-                  tblE.FieldByName('SprintWins').AsInteger := atoi(sdistWins);
-                  tblE.FieldByName('SprintPlcs').AsInteger := atoi(sdistPlaces);
-                  tblE.FieldByName('SprintShos').AsInteger := atoi(sdistShows);
-               end;
-
-               tblE.FieldByName('AngleDesc').AsString := '';
-
-               tblE.FieldByName('IsWagerSheetSelected').AsBoolean := False;
-               tblE.FieldByName('IsYouBetTrack').AsBoolean := False;
-               tblE.FieldByName('IsPTCTrack').AsBoolean := False;
-               tblE.FieldByName('IsTwinSpiresTrack').AsBoolean := False;
-               tblE.FieldByName('IsPrintedOnValueSheet').AsBoolean := False;
-
-               tblE.FieldByName('HorseNbr').AsInteger := iIdx + 1;
-
-               iDaysLast := atoi(sdaysSinceLastRace);
-               dtWOCutoffDate := tblR.FieldByName('RaceDate').AsDateTime - iDaysLast;
-
-               sWO1 := '';
-               sWO2 := '';
-               sWO3 := '';
-               sWO4 := '';
-               sWO5 := '';
-               sWO6 := '';
-
-               iWOIdx := 1;
-
-               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
-
-                  sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
-                  sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
-                  sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
-                  sMonthDesc := GetMonthDesc(atoi(sM));
-
-                  wDay := atow(sD);
-                  wMonth := atow(sM);
-                  wYear := atow(sY);
-
-                  dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
-
-                  // if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
-                  sWO1 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
-                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
-                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
-                     strackWorkout[iWOIdx] + ' ' +
-                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
-                     sconditionWorkout[iWOIdx] + ' ' +
-                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
-                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                  // end;
-               end;
-
-               Inc(iWOIdx);
-               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
-                  sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
-                  sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
-                  sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
-                  sMonthDesc := GetMonthDesc(atoi(sM));
-
-                  wDay := atow(sD);
-                  wMonth := atow(sM);
-                  wYear := atow(sY);
-
-                  dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
-
-                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
-                  sWO2 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
-                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
-                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
-                     strackWorkout[iWOIdx] + ' ' +
-                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
-                     sconditionWorkout[iWOIdx] + ' ' +
-                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
-                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                  //end;
-               end;
-
-               Inc(iWOIdx);
-               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
-                  sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
-                  sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
-                  sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
-                  sMonthDesc := GetMonthDesc(atoi(sM));
-
-                  wDay := atow(sD);
-                  wMonth := atow(sM);
-                  wYear := atow(sY);
-
-                  dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
-
-                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
-                  sWO3 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
-                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
-                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
-                     strackWorkout[iWOIdx] + ' ' +
-                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
-                     sconditionWorkout[iWOIdx] + ' ' +
-                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
-                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                  // end;
-               end;
-
-               Inc(iWOIdx);
-               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
-                  sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
-                  sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
-                  sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
-                  sMonthDesc := GetMonthDesc(atoi(sM));
-
-                  wDay := atow(sD);
-                  wMonth := atow(sM);
-                  wYear := atow(sY);
-
-                  dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
-
-                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
-                  sWO4 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
-                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
-                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
-                     strackWorkout[iWOIdx] + ' ' +
-                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
-                     sconditionWorkout[iWOIdx] + ' ' +
-                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
-                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                  //end;
-               end;
-
-               Inc(iWOIdx);
-               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
-                  sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
-                  sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
-                  sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
-                  sMonthDesc := GetMonthDesc(atoi(sM));
-
-                  wDay := atow(sD);
-                  wMonth := atow(sM);
-                  wYear := atow(sY);
-
-                  dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
-
-                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
-                  sWO5 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
-                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
-                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
-                     strackWorkout[iWOIdx] + ' ' +
-                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
-                     sconditionWorkout[iWOIdx] + ' ' +
-                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
-                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                  // end;
-               end;
-
-               Inc(iWOIdx);
-               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
-                  sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
-                  sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
-                  sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
-                  sMonthDesc := GetMonthDesc(atoi(sM));
-
-                  wDay := atow(sD);
-                  wMonth := atow(sM);
-                  wYear := atow(sY);
-
-                  dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
-
-                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
-                  sWO6 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
-                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
-                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
-                     strackWorkout[iWOIdx] + ' ' +
-                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
-                     sconditionWorkout[iWOIdx] + ' ' +
-                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
-                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
-                  //end;
-
-               end;
-
-               tblE.FieldByName('WorkLine1').AsString := sWO1 + ' ' + sWO2;
-               tblE.FieldByName('WorkLine2').AsString := sWO3 + ' ' + sWO4;
-
-
-               tblE.FieldByName('IsFrontDoubleLiner').AsBoolean := False;
-               tblE.FieldByName('IsBackDoubleLiner').AsBoolean := False;
-               tblE.FieldByName('IsTripleLiner').AsBoolean := False;
-               tblE.FieldByName('IsFrontDoubleDot').AsBoolean := False;
-               tblE.FieldByName('IsBackDoubleDot').AsBoolean := False;
-               tblE.FieldByName('IsTripleDot').AsBoolean := False;
-               tblE.FieldByName('IsFrontDoubleLiner0').AsBoolean := False;
-               tblE.FieldByName('IsBackDoubleLiner0').AsBoolean := False;
-               tblE.FieldByName('IsTripleLiner0').AsBoolean := False;
-               tblE.FieldByName('IsFrontDoubleLiner1').AsBoolean := False;
-               tblE.FieldByName('IsBackDoubleLiner1').AsBoolean := False;
-               tblE.FieldByName('IsTripleLiner1').AsBoolean := False;
-               tblE.FieldByName('IsFrontDoubleLiner2').AsBoolean := False;
-               tblE.FieldByName('IsBackDoubleLiner2').AsBoolean := False;
-               tblE.FieldByName('IsTripleLiner2').AsBoolean := False;
-               tblE.FieldByName('IsFrontDoubleLiner3').AsBoolean := False;
-               tblE.FieldByName('IsBackDoubleLiner3').AsBoolean := False;
-               tblE.FieldByName('IsTripleLiner3').AsBoolean := False;
-
-
-               tblE.FieldByName('TodaysWagerOrderKey').AsString := '';
-               tblE.FieldByName('TodaysWagerStarts').AsInteger := 0;
-               tblE.FieldByName('TodaysWagerWins').AsInteger := 0;
-               tblE.FieldByName('TodaysWagerWinPct').AsFloat := atof(sBrisPrimePowerRating);
-               tblE.FieldByName('TodaysWagerWinPctRank').AsInteger := 0;
-               tblE.FieldByName('TodaysWagerAvgOdds').AsFloat := 0;
-               tblE.FieldByName('TodaysWagerMinOdds').AsFloat := 0;
-               tblE.FieldByName('TodaysWagerMaxOdds').AsFloat := 0;
-               tblE.FieldByName('TodaysWagerAvgWinOdds').AsFloat := 0;
-               tblE.FieldByName('TodaysWagerMinWinOdds').AsFloat := 0;
-               tblE.FieldByName('TodaysWagerMaxWinOdds').AsFloat := 0;
-               tblE.FieldByName('TodaysWagerValueBet').AsFloat := 0;
-
-               if (Trim(sppraceDate[1]) <> '') then begin
-                  sY := CopyStr(sppraceDate[1], 1, 4);
-                  sM := CopyStr(sppraceDate[1], 5, 2);
-                  sD := CopyStr(sppraceDate[1], 7, 2);
-                  sMonthDesc := GetMonthDesc(atoi(sM));
-
-                  wDay := atow(sD);
-                  wMonth := atow(sM);
-                  wYear := atow(sY);
-                  dtPPRaceDate := EncodeDate(wYear, wMonth, wDay);
-
-                  tblE.FieldByName('LastTrkCode').AsString := sppTrackCode[1];
-                  tblE.FieldByName('LastRaceNbr').AsInteger := atoi(sppRaceNum[1]);
-                  tblE.FieldByName('LastRaceDate').AsDateTime := dtPPRaceDate;
-                  tblE.FieldByName('LastPostPos').AsInteger := atoi(sppPostPosition[1]);
-                  tblE.FieldByName('LastRaceType').AsString := GetTSNRaceClass(sppRaceType[1]);
-                  tblE.FieldByName('LastSurf').AsString := GetTSNSurface(sppSurface[1]);
-                  if (sPPAllSurface[1] = 'A') then begin
-                     tblE.FieldByName('LastSurf').AsString := 'A';
-                  end;
-
-                  tblE.FieldByName('LastRaceConditions').AsString := UpperCase(sppRaceClassification[1]);
-                  tblE.FieldByName('LastDistanceDesc').AsString := GetYardDistanceDesc(atoi(sppdistanceYards[1]));
-                  tblE.FieldByName('LastDistance').AsFloat := (atof(sppdistanceYards[1]) * 3) / FEET_IN_FURLONG;
-                  if (tblE.FieldByName('LastDistance').AsFloat < 0) then begin
-                     tblE.FieldByName('LastDistance').AsFloat := ((atof(sppdistanceYards[1]) * 3) / FEET_IN_FURLONG) * -1;
-                  end;
-                  tblE.FieldByName('LastOdds').AsFloat := atof(sppOdds[1]);
-                  tblE.FieldByName('LastFavoriteIndicator').AsString := '';
-                  tblE.FieldByName('LastDQIndicator').AsString := '';
-                  tblE.FieldByName('LastJockey').AsString := sppJockey[1];
-                  tblE.FieldByName('LastComment').AsString := sppTripComment[1];
-                  tblE.FieldByName('LastComment2').AsString := UpperCase(sppTripComment[1] + ' ' + sppExtraComment[1]);
-                  tblE.FieldByName('LastTrkCond').AsString := sppTrackCond[1];
-                  tblE.FieldByName('LastClmPrice').AsFloat := atof(sppClaimingPriceHorse[1]);
-                  tblE.FieldByName('LastClaimed').AsString := sppClaimedCode[1];
-                  tblE.FieldByName('LastPurse').AsFloat := atof(sppPurse[1]);
-                  tblE.FieldByName('LastDay').AsString := UpperCase(sD);
-                  tblE.FieldByName('LastMonthDesc').AsString := sMonthDesc;
-                  tblE.FieldByName('LastYear').AsString := UpperCase(sY);
-                  tblE.FieldByName('LastGateBreak').AsString := sppStartCallBeatenMargin[1];
-                  tblE.FieldByName('LastLen1Back').AsString := sppFirstCallBeatenMargin[1];
-                  tblE.FieldByName('LastLen2Back').AsString := sppSecondCallBeatenMargin[1];
-                  tblE.FieldByName('LastStLenBack').AsString := sppStretchBeatenMargin[1];
-
-                  tblE.FieldByName('LastFinishBeaten').AsString := sppFinishPos[1] + '-' + sppFinishBeatenMargin[1];
-
-                  tblE.FieldByName('LastEquip').AsString := sppEquipment[1];
-                  tblE.FieldByName('LastWeight').AsInteger := atoi(sppWeight[1]);
-                  tblE.FieldByName('LastHorseTime').AsFloat := 0;
-
-                  sLTrackCode := tblE.FieldByName('LastTrkCode').AsString;
-                  sLSurf := tblE.FieldByName('LastSurf').AsString;
-                  sLPostPos := tblE.FieldByName('LastPostPos').AsString;
-                  sLDistanceDesc := LeftStr(tblE.FieldByName('LastDistanceDesc').AsString, 7);
-                  sLTrkCond := tblE.FieldByName('LastTrkCond').AsString;
-                  sLRaceType := tblE.FieldByName('LastRaceType').AsString;
-                  sLClmPrice := tblE.FieldByName('LastClmPrice').AsString;
-                  sLClaimed := tblE.FieldByName('LastClaimed').AsString;
-                  sLPurse := tblE.FieldByName('LastPurse').AsString;
-                  sLRaceConditions := LeftStr(tblE.FieldByName('LastRaceConditions').AsString, 10);
-                  sLJockey := LeftStr(tblE.FieldByName('LastJockey').AsString, 7);
-                  sLWeight := tblE.FieldByName('LastWeight').AsString;
-                  sLDQIndicator := tblE.FieldByName('LastDqIndicator').AsString;
-                  sLOdds := tblE.FieldByName('LastOdds').AsString;
-                  sLFavoriteIndicator := tblE.FieldByName('LastFavoriteIndicator').AsString;
-
-                  sLFinishPos := Trim(sppFinishPos[1]);
-                  sTmp := Trim(sppFinishBeatenMargin[1]);
-
-                  iLen := Length(sTmp);
-                  iBegPos := SmartPos('.', sTmp);
-                  if (iBegPos = 0) then begin
-                     sLFinishBeaten := sLFinishPos + '-' + sppFinishBeatenMargin[1];
-                  end else begin
-                     sL2BL := CopyStr(sTmp, (iBegPos + 1), (iLen - iBegPos) + 1);
-                     iL2BL := atoi(sL2BL);
-
-                     iLen := Length(sTmp);
-                     iBegPos := SmartPos('.', sTmp);
-                     sL1BL := CopyStr(sTmp, 1, (iBegPos - 1));
-                     sL1BL := Trim(sL1BL);
-                     iL1BL := atoi(sL1BL);
-                     if (iL1BL = 0) then begin
-                        sL1BL := '';
-                     end;
-
-                     if (atoi(sLFinishPos) > 1) then begin
-                        case iL2BL of
-                           05: sLFinishBeaten := sL1BL + '-NS';
-                           15: sLFinishBeaten := sL1BL + '-HD';
-                           25: sLFinishBeaten := sL1BL + '-1/4';
-                           50: sLFinishBeaten := sL1BL + '-1/2';
-                           75: sLFinishBeaten := sL1BL + '-3/4';
-                        else
-                           sLFinishBeaten := sLFinishPos + '-' + sL1BL;
-                        end;
-                     end else begin
-                        case iL2BL of
-                           05: sLFinishBeaten := '1-NS';
-                           15: sLFinishBeaten := '1-HD';
-                           25: sLFinishBeaten := '1-1/4';
-                           50: sLFinishBeaten := '1-1/2';
-                           75: sLFinishBeaten := '1-3/4';
-                        else
-                           sLFinishBeaten := '1' + sL1BL;
-                        end;
-                     end;
-                  end;
-
-                  if Length(sLFinishBeaten) = 1 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-                  if Length(sLFinishBeaten) = 2 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-                  if Length(sLFinishBeaten) = 3 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-                  if Length(sLFinishBeaten) = 4 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-                  if Length(sLFinishBeaten) = 5 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-
-                  if Length(sLOdds) = 1 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-                  if Length(sLOdds) = 2 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-                  if Length(sLOdds) = 3 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-                  if Length(sLOdds) = 4 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-                  if Length(sLOdds) = 5 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-
-                  if Length(sLFinishPos) = 0 then begin
-                     sLFinishPos := ' ' + sLFinishPos;
-                  end;
-
-                  if Length(sLFinishBeaten) = 1 then begin
-                     sLFinishPos := ' ' + sLFinishPos;
-                  end;
-
-
-                  if sLFinishPos = ' 0' then begin
-                     sLFinishBeaten := '  ';
-                  end;
-
-                  if sLOdds = '  0.00' then begin
-                     sLOdds := '      ';
-                  end;
-
-                  tblE.FieldByName('LastRaceDesc').AsString := UpperCase(
-                     Format('%-2s', [sD]) +
-                     Format('%3s', [sMonthDesc]) +
-                     Format('%-2s', [sY]) + ' ' +
-                     Format('%-2s', [sLPostPos]) + ' ' +
-                     Format('%-3s', [sLTrackCode]) + ' ' +
-                     Format('%-1s', [sLSurf]) + ' ' +
-                     Format('%-2s', [sLTrkCond]) + ' ' +
-                     Format('%-7s', [sLDistanceDesc]) + ' ' +
-                     // Format('%-4s', [sLRaceType]) +
-                     //   Format('%-7s', [sLClmPrice]) +
-                     // Format('%-1s', [sLClaimed]) +
-                     //   Format('%-7s', [sLPurse]) + ' ' +
-                     Format('%-10s', [sLRaceConditions]) + ' ' +
-                     Format('%-7s', [sLJockey]) + ' ' +
-                     Format('%-3s', [sLWeight]) + '|' +
-                     Format('%-2s', [sLFinishPos]) + ' ' +
-                     Format('%-7s', [sLFinishBeaten]) + '|' +
-                     Format('%-6s', [sLOdds]) +
-                     Format('%-1s', [sLFavoriteIndicator])
-                     );
-
-
-               end;
-
-               if (Trim(sppraceDate[2]) <> '') then begin
-                  sY := CopyStr(sppraceDate[2], 1, 4);
-                  sM := CopyStr(sppraceDate[2], 5, 2);
-                  sD := CopyStr(sppraceDate[2], 7, 2);
-                  sMonthDesc := GetMonthDesc(atoi(sM));
-
-                  wDay := atow(sD);
-                  wMonth := atow(sM);
-                  wYear := atow(sY);
-                  dtPPRaceDate := EncodeDate(wYear, wMonth, wDay);
-
-                  tblE.FieldByName('Last2TrkCode').AsString := sppTrackCode[2];
-                  tblE.FieldByName('Last2RaceNbr').AsInteger := atoi(sppRaceNum[2]);
-                  tblE.FieldByName('Last2RaceDate').AsDateTime := dtPPRaceDate;
-                  tblE.FieldByName('Last2PostPos').AsInteger := atoi(sppPostPosition[2]);
-                  tblE.FieldByName('Last2RaceType').AsString := GetTSNRaceClass(sppRaceType[2]);
-                  tblE.FieldByName('Last2Surf').AsString := GetTSNSurface(sppSurface[2]);
-                  if (sPPAllSurface[2] = 'A') then begin
-                     tblE.FieldByName('Last2Surf').AsString := 'A';
-                  end;
-
-                  tblE.FieldByName('Last2RaceConditions').AsString := UpperCase(sppRaceClassification[2]);
-                  tblE.FieldByName('Last2DistanceDesc').AsString := GetYardDistanceDesc(atoi(sppdistanceYards[2]));
-                  if (tblE.FieldByName('Last2Distance').AsFloat < 0) then begin
-                     tblE.FieldByName('Last2Distance').AsFloat := ((atof(sppdistanceYards[2]) * 3) / FEET_IN_FURLONG) * -1;
-                  end;
-                  tblE.FieldByName('Last2Odds').AsFloat := atof(sppOdds[2]);
-                  tblE.FieldByName('Last2FavoriteIndicator').AsString := '';
-                  tblE.FieldByName('Last2DQIndicator').AsString := '';
-                  tblE.FieldByName('Last2Jockey').AsString := sppJockey[2];
-                  tblE.FieldByName('Last2Comment').AsString := sppTripComment[2];
-                  tblE.FieldByName('Last2Comment2').AsString := UpperCase((sppTripComment[2] + ' ' + sppExtraComment[2]));
-                  tblE.FieldByName('Last2TrkCond').AsString := sppTrackCond[2];
-                  tblE.FieldByName('Last2ClmPrice').AsFloat := atof(sppClaimingPriceHorse[2]);
-                  tblE.FieldByName('Last2Claimed').AsString := sppClaimedCode[2];
-                  tblE.FieldByName('Last2Purse').AsFloat := atof(sppPurse[2]);
-                  tblE.FieldByName('Last2Day').AsString := UpperCase(sD);
-                  tblE.FieldByName('Last2MonthDesc').AsString := sMonthDesc;
-                  tblE.FieldByName('Last2Year').AsString := UpperCase(sY);
-                  tblE.FieldByName('Last2GateBreak').AsString := sppStartCallBeatenMargin[2];
-                  tblE.FieldByName('Last2Len1Back').AsString := sppFirstCallBeatenMargin[2];
-                  tblE.FieldByName('Last2Len2Back').AsString := sppSecondCallBeatenMargin[2];
-                  tblE.FieldByName('Last2StLenBack').AsString := sppStretchBeatenMargin[2];
-
-                  tblE.FieldByName('Last2FinishBeaten').AsString := sppFinishPos[2] + '-' + sppFinishBeatenMargin[2];
-
-                  tblE.FieldByName('Last2Equip').AsString := sppEquipment[2];
-                  tblE.FieldByName('Last2Weight').AsInteger := atoi(sppWeight[2]);
-                  tblE.FieldByName('Last2HorseTime').AsFloat := 0;
-
-                  sLTrackCode := tblE.FieldByName('Last2TrkCode').AsString;
-                  sLSurf := tblE.FieldByName('Last2Surf').AsString;
-                  sLPostPos := tblE.FieldByName('Last2PostPos').AsString;
-                  sLDistanceDesc := LeftStr(tblE.FieldByName('Last2DistanceDesc').AsString, 7);
-                  sLTrkCond := tblE.FieldByName('Last2TrkCond').AsString;
-                  sLRaceType := tblE.FieldByName('Last2RaceType').AsString;
-                  sLClmPrice := tblE.FieldByName('Last2ClmPrice').AsString;
-                  sLClaimed := tblE.FieldByName('Last2Claimed').AsString;
-                  sLPurse := tblE.FieldByName('Last2Purse').AsString;
-                  sLRaceConditions := LeftStr(tblE.FieldByName('Last2RaceConditions').AsString, 10);
-                  sLJockey := LeftStr(tblE.FieldByName('Last2Jockey').AsString, 7);
-                  sLWeight := tblE.FieldByName('Last2Weight').AsString;
-                  sLDQIndicator := tblE.FieldByName('Last2DqIndicator').AsString;
-                  sLFinishBeaten := tblE.FieldByName('Last2FinishBeaten').AsString;
-                  sLOdds := tblE.FieldByName('Last2Odds').AsString;
-                  sLFavoriteIndicator := tblE.FieldByName('Last2FavoriteIndicator').AsString;
-
-                  sLFinishPos := sppFinishPos[2];
-                  sTmp := Trim(sppFinishBeatenMargin[2]);
-
-                  iLen := Length(sTmp);
-                  iBegPos := SmartPos('.', sTmp);
-                  if (iBegPos = 0) then begin
-                     sLFinishBeaten := sLFinishPos + '-' + sppFinishBeatenMargin[2];
-                  end else begin
-                     sL2BL := CopyStr(sTmp, (iBegPos + 1), (iLen - iBegPos) + 1);
-                     iL2BL := atoi(sL2BL);
-
-                     iLen := Length(sTmp);
-                     iBegPos := SmartPos('.', sTmp);
-                     sL1BL := CopyStr(sTmp, 1, (iBegPos - 1));
-                     sL1BL := Trim(sL1BL);
-                     iL1BL := atoi(sL1BL);
-                     if (iL1BL = 0) then begin
-                        sL1BL := '';
-                     end;
-
-                     if (atoi(sLFinishPos) > 1) then begin
-                        case iL2BL of
-                           05: sLFinishBeaten := sL1BL + '-NS';
-                           15: sLFinishBeaten := sL1BL + '-HD';
-                           25: sLFinishBeaten := sL1BL + '-1/4';
-                           50: sLFinishBeaten := sL1BL + '-1/2';
-                           75: sLFinishBeaten := sL1BL + '-3/4';
-                        else
-                           sLFinishBeaten := sLFinishPos + '-' + sL1BL;
-                        end;
-                     end else begin
-                        case iL2BL of
-                           05: sLFinishBeaten := '1-NS';
-                           15: sLFinishBeaten := '1-HD';
-                           25: sLFinishBeaten := '1-1/4';
-                           50: sLFinishBeaten := '1-1/2';
-                           75: sLFinishBeaten := '1-3/4';
-                        else
-                           sLFinishBeaten := '1' + sL1BL;
-                        end;
-                     end;
-                  end;
-
-                  if Length(sLFinishBeaten) = 1 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-                  if Length(sLFinishBeaten) = 2 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-                  if Length(sLFinishBeaten) = 3 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-                  if Length(sLFinishBeaten) = 4 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-                  if Length(sLFinishBeaten) = 5 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-
-
-                  if Length(sLOdds) = 1 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-                  if Length(sLOdds) = 2 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-                  if Length(sLOdds) = 3 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-                  if Length(sLOdds) = 4 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-                  if Length(sLOdds) = 5 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-
-                  if Length(sLFinishPos) = 0 then begin
-                     sLFinishPos := ' ' + sLFinishPos;
-                  end;
-
-                  if Length(sLFinishBeaten) = 1 then begin
-                     sLFinishPos := ' ' + sLFinishPos;
-                  end;
-
-
-                  if sLFinishPos = ' 0' then begin
-                     sLFinishBeaten := '  ';
-                  end;
-
-                  if sLOdds = '  0.00' then begin
-                     sLOdds := '      ';
-                  end;
-
-                  tblE.FieldByName('Last2RaceDesc').AsString := UpperCase(
-                     Format('%-2s', [sD]) +
-                     Format('%3s', [sMonthDesc]) +
-                     Format('%-2s', [sY]) + ' ' +
-                     Format('%-2s', [sLPostPos]) + ' ' +
-                     Format('%-3s', [sLTrackCode]) + ' ' +
-                     Format('%-1s', [sLSurf]) + ' ' +
-                     Format('%-2s', [sLTrkCond]) + ' ' +
-                     Format('%-7s', [sLDistanceDesc]) + ' ' +
-                     // Format('%-4s', [sLRaceType]) +
-                     //   Format('%-7s', [sLClmPrice]) +
-                     // Format('%-1s', [sLClaimed]) +
-                     //   Format('%-7s', [sLPurse]) + ' ' +
-                     Format('%-10s', [sLRaceConditions]) + ' ' +
-                     Format('%-7s', [sLJockey]) + ' ' +
-                     Format('%-3s', [sLWeight]) + '|' +
-                     Format('%-2s', [sLFinishPos]) + ' ' +
-                     Format('%-7s', [sLFinishBeaten]) + '|' +
-                     Format('%-6s', [sLOdds]) +
-                     Format('%-1s', [sLFavoriteIndicator])
-                     );
-
-
-               end;
-
-               if (Trim(sppraceDate[3]) <> '') then begin
-                  sY := CopyStr(sppraceDate[3], 1, 4);
-                  sM := CopyStr(sppraceDate[3], 5, 2);
-                  sD := CopyStr(sppraceDate[3], 7, 2);
-                  sMonthDesc := GetMonthDesc(atoi(sM));
-
-                  wDay := atow(sD);
-                  wMonth := atow(sM);
-                  wYear := atow(sY);
-                  dtPPRaceDate := EncodeDate(wYear, wMonth, wDay);
-
-                  tblE.FieldByName('Last3TrkCode').AsString := sppTrackCode[3];
-                  tblE.FieldByName('Last3RaceNbr').AsInteger := atoi(sppRaceNum[3]);
-                  tblE.FieldByName('Last3RaceDate').AsDateTime := dtPPRaceDate;
-                  tblE.FieldByName('Last3PostPos').AsInteger := atoi(sppPostPosition[3]);
-                  tblE.FieldByName('Last3RaceType').AsString := GetTSNRaceClass(sppRaceType[3]);
-                  tblE.FieldByName('Last3Surf').AsString := GetTSNSurface(sppSurface[3]);
-                  if (sPPAllSurface[3] = 'A') then begin
-                     tblE.FieldByName('Last3Surf').AsString := 'A';
-                  end;
-
-                  tblE.FieldByName('Last3RaceConditions').AsString := UpperCase(sppRaceClassification[3]);
-                  tblE.FieldByName('Last3DistanceDesc').AsString := GetYardDistanceDesc(atoi(sppdistanceYards[3]));
-                  if (tblE.FieldByName('Last3Distance').AsFloat < 0) then begin
-                     tblE.FieldByName('Last3Distance').AsFloat := ((atof(sppdistanceYards[3]) * 3) / FEET_IN_FURLONG) * -1;
-                  end;
-                  tblE.FieldByName('Last3Odds').AsFloat := atof(sppOdds[3]);
-                  tblE.FieldByName('Last3FavoriteIndicator').AsString := '';
-                  tblE.FieldByName('Last3DQIndicator').AsString := '';
-                  tblE.FieldByName('Last3Jockey').AsString := sppJockey[3];
-                  tblE.FieldByName('Last3Comment').AsString := sppTripComment[3];
-                  tblE.FieldByName('Last3Comment2').AsString := UpperCase((sppTripComment[3] + ' ' + sppExtraComment[3]));
-                  tblE.FieldByName('Last3TrkCond').AsString := sppTrackCond[3];
-                  tblE.FieldByName('Last3ClmPrice').AsFloat := atof(sppClaimingPriceHorse[3]);
-                  tblE.FieldByName('Last3Claimed').AsString := sppClaimedCode[3];
-                  tblE.FieldByName('Last3Purse').AsFloat := atof(sppPurse[3]);
-                  tblE.FieldByName('Last3Day').AsString := UpperCase(sD);
-                  tblE.FieldByName('Last3MonthDesc').AsString := sMonthDesc;
-                  tblE.FieldByName('Last3Year').AsString := UpperCase(sY);
-                  tblE.FieldByName('Last3GateBreak').AsString := sppStartCallBeatenMargin[3];
-                  tblE.FieldByName('Last3Len1Back').AsString := sppFirstCallBeatenMargin[3];
-                  tblE.FieldByName('Last3Len2Back').AsString := sppSecondCallBeatenMargin[3];
-                  tblE.FieldByName('Last3StLenBack').AsString := sppStretchBeatenMargin[3];
-
-                  tblE.FieldByName('Last3FinishBeaten').AsString := sppFinishPos[3] + '-' + sppFinishBeatenMargin[3];
-
-                  tblE.FieldByName('Last3Equip').AsString := sppEquipment[3];
-                  tblE.FieldByName('Last3Weight').AsInteger := atoi(sppWeight[3]);
-                  tblE.FieldByName('Last3HorseTime').AsFloat := 0;
-
-                  sLTrackCode := tblE.FieldByName('Last3TrkCode').AsString;
-                  sLSurf := tblE.FieldByName('Last3Surf').AsString;
-                  sLPostPos := tblE.FieldByName('Last3PostPos').AsString;
-                  sLDistanceDesc := LeftStr(tblE.FieldByName('Last3DistanceDesc').AsString, 7);
-                  sLTrkCond := tblE.FieldByName('Last3TrkCond').AsString;
-                  sLRaceType := tblE.FieldByName('Last3RaceType').AsString;
-                  sLClmPrice := tblE.FieldByName('Last3ClmPrice').AsString;
-                  sLClaimed := tblE.FieldByName('Last3Claimed').AsString;
-                  sLPurse := tblE.FieldByName('Last3Purse').AsString;
-                  sLRaceConditions := LeftStr(tblE.FieldByName('Last3RaceConditions').AsString, 10);
-                  sLJockey := LeftStr(tblE.FieldByName('Last3Jockey').AsString, 7);
-                  sLWeight := tblE.FieldByName('Last3Weight').AsString;
-                  sLDQIndicator := tblE.FieldByName('Last3DqIndicator').AsString;
-                  sLFinishBeaten := tblE.FieldByName('Last3FinishBeaten').AsString;
-                  sLOdds := tblE.FieldByName('Last3Odds').AsString;
-                  sLFavoriteIndicator := tblE.FieldByName('Last3FavoriteIndicator').AsString;
-
-                  sLFinishPos := sppFinishPos[3];
-                  sTmp := Trim(sppFinishBeatenMargin[3]);
-
-                  iLen := Length(sTmp);
-                  iBegPos := SmartPos('.', sTmp);
-                  if (iBegPos = 0) then begin
-                     sLFinishBeaten := sLFinishPos + '-' + sppFinishBeatenMargin[3];
-                  end else begin
-                     sL2BL := CopyStr(sTmp, (iBegPos + 1), (iLen - iBegPos) + 1);
-                     iL2BL := atoi(sL2BL);
-
-                     iLen := Length(sTmp);
-                     iBegPos := SmartPos('.', sTmp);
-                     sL1BL := CopyStr(sTmp, 1, (iBegPos - 1));
-                     sL1BL := Trim(sL1BL);
-                     iL1BL := atoi(sL1BL);
-                     if (iL1BL = 0) then begin
-                        sL1BL := '';
-                     end;
-
-                     if (atoi(sLFinishPos) > 1) then begin
-                        case iL2BL of
-                           05: sLFinishBeaten := sL1BL + '-NS';
-                           15: sLFinishBeaten := sL1BL + '-HD';
-                           25: sLFinishBeaten := sL1BL + '-1/4';
-                           50: sLFinishBeaten := sL1BL + '-1/2';
-                           75: sLFinishBeaten := sL1BL + '-3/4';
-                        else
-                           sLFinishBeaten := sLFinishPos + '-' + sL1BL;
-                        end;
-                     end else begin
-                        case iL2BL of
-                           05: sLFinishBeaten := '1-NS';
-                           15: sLFinishBeaten := '1-HD';
-                           25: sLFinishBeaten := '1-1/4';
-                           50: sLFinishBeaten := '1-1/2';
-                           75: sLFinishBeaten := '1-3/4';
-                        else
-                           sLFinishBeaten := '1' + sL1BL;
-                        end;
-                     end;
-                  end;
-
-                  if Length(sLFinishBeaten) = 1 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-                  if Length(sLFinishBeaten) = 2 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-                  if Length(sLFinishBeaten) = 3 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-                  if Length(sLFinishBeaten) = 4 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-                  if Length(sLFinishBeaten) = 5 then begin
-                     sLFinishBeaten := ' ' + sLFinishBeaten;
-                  end;
-
-                  if Length(sLOdds) = 1 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-                  if Length(sLOdds) = 2 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-                  if Length(sLOdds) = 3 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-                  if Length(sLOdds) = 4 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-                  if Length(sLOdds) = 5 then begin
-                     sLOdds := ' ' + sLOdds;
-                  end;
-
-                  if Length(sLFinishPos) = 0 then begin
-                     sLFinishPos := ' ' + sLFinishPos;
-                  end;
-
-                  if Length(sLFinishBeaten) = 1 then begin
-                     sLFinishPos := ' ' + sLFinishPos;
-                  end;
-
-
-                  if sLFinishPos = ' 0' then begin
-                     sLFinishBeaten := '  ';
-                  end;
-
-                  if sLOdds = '  0.00' then begin
-                     sLOdds := '      ';
-                  end;
-
-                  tblE.FieldByName('Last3RaceDesc').AsString := UpperCase(
-                     Format('%-2s', [sD]) +
-                     Format('%3s', [sMonthDesc]) +
-                     Format('%-2s', [sY]) + ' ' +
-                     Format('%-2s', [sLPostPos]) + ' ' +
-                     Format('%-3s', [sLTrackCode]) + ' ' +
-                     Format('%-1s', [sLSurf]) + ' ' +
-                     Format('%-2s', [sLTrkCond]) + ' ' +
-                     Format('%-7s', [sLDistanceDesc]) + ' ' +
-                     // Format('%-4s', [sLRaceType]) +
-                     //   Format('%-7s', [sLClmPrice]) +
-                     // Format('%-1s', [sLClaimed]) +
-                     //   Format('%-7s', [sLPurse]) + ' ' +
-                     Format('%-10s', [sLRaceConditions]) + ' ' +
-                     Format('%-7s', [sLJockey]) + ' ' +
-                     Format('%-3s', [sLWeight]) + '|' +
-                     Format('%-2s', [sLFinishPos]) + ' ' +
-                     Format('%-7s', [sLFinishBeaten]) + '|' +
-                     Format('%-6s', [sLOdds]) +
-                     Format('%-1s', [sLFavoriteIndicator])
-                     );
-
-               end;
-
-               tblE.FieldByName('Odds').AsFloat := 0;
-               tblE.FieldByName('FinishPos').AsFloat := 0;
-
-               tblE.FieldByName('QSP1stCall').AsInteger := 0;
-               tblE.FieldByName('QSP1stCallRank').AsInteger := 0;
-               tblE.FieldByName('QSP1stCallRunStyle').AsString := '';
-
-               tblE.FieldByName('QSP2ndCall').AsInteger := 0;
-               tblE.FieldByName('QSP2ndCallRank').AsInteger := 0;
-               tblE.FieldByName('QSP2ndCallRunStyle').AsString := '';
-
-               tblE.FieldByName('KSP1stCall').AsInteger := 0;
-               tblE.FieldByName('KSP1stCallRank').AsInteger := 0;
-               tblE.FieldByName('KSP2ndCall').AsInteger := 0;
-               tblE.FieldByName('KSP2ndCallRank').AsInteger := 0;
-
-               tblE.FieldByName('Is1stClaiming').AsBoolean := False;
-               tblE.FieldByName('Is1stMCL').AsBoolean := False;
-
-               tblE.FieldByName('Is1stAfterLayoff').AsBoolean := False;
-               tblE.FieldByName('Is2ndAfterLayoff').AsBoolean := False;
-               tblE.FieldByName('Is3rdAfterLayoff').AsBoolean := False;
-
-               tblE.FieldByName('IsDirtToTurfToDirtAfterLayoff').AsBoolean := False;
-               tblE.FieldByName('IsTurfToDirtToTurfAfterLayoff').AsBoolean := False;
-
-               tblE.FieldByName('IsRouteToSprintToRouteAfterLayoff').AsBoolean := False;
-               tblE.FieldByName('IsSprintToRouteToSprintAfterLayoff').AsBoolean := False;
-
-               tblE.FieldByName('Is2yoBred').AsBoolean := False;
-               tblE.FieldByName('Is1stBred').AsBoolean := False;
-               tblE.FieldByName('IsTurfBred').AsBoolean := False;
-
-               tblE.FieldByName('Is1stOffLayoff').AsBoolean := False;
-               tblE.FieldByName('Is2ndOffLayoff').AsBoolean := False;
-               tblE.FieldByName('Is3rdOffLayoff').AsBoolean := False;
-               tblE.FieldByName('StandingIn').AsString := '';
-               tblE.FieldByName('StandingInRank').AsInteger := 0;
-               tblE.FieldByName('IsOnStandingInList').AsBoolean := False;
-
-               tblE.FieldByName('PacificTime').AsString := sPacificTime;
+              // tblE.FieldByName('LastSpeed').AsInteger := 0;
+//               tblE.FieldByName('LastSpeedRank').AsInteger := 0;
+//
+//               tblE.FieldByName('Power').AsFloat := 0;
+//               tblE.FieldByName('PowerRank').AsInteger := 0;
+//
+//               tblE.FieldByName('BackSpeed').AsInteger := 0;
+//               tblE.FieldByName('BackSpeedRank').AsInteger := 0;
+//
+//               tblE.FieldByName('AvgSpeed').AsInteger := 0;
+//               tblE.FieldByName('AvgSpeedRank').AsInteger := 0;
+//
+//               tblE.FieldByName('EarlyPace').AsFloat := 0;
+//               tblE.FieldByName('EarlyPaceRank').AsInteger := 0;
+//               tblE.FieldByName('EarlyPacePos').AsFloat := 0;
+//               tblE.FieldByName('EarlyPacePosRank').AsInteger := 0;
+//
+//               tblE.FieldByName('MiddlePace').AsFloat := 0;
+//               tblE.FieldByName('MiddlePaceRank').AsInteger := 0;
+//               tblE.FieldByName('MiddlePacePos').AsFloat := 0;
+//               tblE.FieldByName('MiddlePacePosRank').AsInteger := 0;
+//
+//               tblE.FieldByName('LatePace').AsFloat := 0;
+//               tblE.FieldByName('LatePaceRank').AsInteger := 0;
+//               tblE.FieldByName('LatePacePos').AsFloat := 0;
+//               tblE.FieldByName('LatePacePosRank').AsInteger := 0;
+//
+//               tblE.FieldByName('FinishPacePos').AsFloat := 0;
+//               tblE.FieldByName('FinishPacePosRank').AsInteger := 0;
+//
+//               tblE.FieldByName('EarlyPaceAdvantage').AsFloat := 0;
+//               tblE.FieldByName('MiddlePaceAdvantage').AsFloat := 0;
+//               tblE.FieldByName('LatePaceAdvantage').AsFloat := 0;
+//
+//
+//               tblE.FieldByName('IsClaimed1Back').AsBoolean := False;
+//               tblE.FieldByName('IsClaimed2Back').AsBoolean := False;
+//               tblE.FieldByName('IsLayoffAndUp').AsBoolean := False;
+//               tblE.FieldByName('IsClaimedAndUp').AsBoolean := False;
+//               tblE.FieldByName('IsClaimedAndDown').AsBoolean := False;
+//               tblE.FieldByName('IsFirstTimeClaiming').AsBoolean := False;
+//               tblE.FieldByName('IsBelowClaimedPrice').AsBoolean := False;
+//
+//               tblE.FieldByName('LifeStarts').AsInteger := atoi(slifeStarts);
+//               tblE.FieldByName('LifeWins').AsInteger := atoi(slifeWins);
+//               tblE.FieldByName('LifePlcs').AsInteger := atoi(slifePlaces);
+//               tblE.FieldByName('LifeShos').AsInteger := atoi(slifeShows);
+//               tblE.FieldByName('LifeEarnings').AsInteger := atoi(slifeEarnings);
+
+       //        if atoi(slifeStarts) > 0 then begin
+//                  tblE.FieldByName('LifeEPS').AsInteger := atoi(slifeEarnings) div atoi(slifeStarts);
+//               end;
+//
+//               tblE.FieldByName('DebutIndicator').AsString := '';
+//               if atoi(slifeStarts) = 0 then begin
+//                  tblE.FieldByName('DebutIndicator').AsString := '*';
+//                  //   tblE.FieldByName('IsDebut').AsBoolean := True;
+//               end;
+//
+//               if atoi(slifeStarts) = 1 then begin
+//                  tblE.FieldByName('DebutIndicator').AsString := '**';
+//                  //tblE.FieldByName('IsDebutTwo').AsBoolean := True;
+//               end;
+
+          //     tblE.FieldByName('TurfIndicator').AsString := '';
+//               tblE.FieldByName('TurfStarts').AsInteger := atoi(sturfStarts);
+//               tblE.FieldByName('TurfWins').AsInteger := atoi(sturfWins);
+//               tblE.FieldByName('TurfPlcs').AsInteger := atoi(sturfPlaces);
+//               tblE.FieldByName('TurfShos').AsInteger := atoi(sturfShows);
+//               tblE.FieldByName('TurfEarnings').AsInteger := atoi(sturfEarnings);
+//
+//               if atoi(sturfStarts) > 0 then begin
+//                  tblE.FieldByName('TurfEPS').AsInteger := atoi(sTurfEarnings) div atoi(sTurfStarts);
+//               end;
+//               if atoi(sturfStarts) = 0 then begin
+//                  tblE.FieldByName('TurfIndicator').AsString := '*';
+//               end;
+//
+//               if atoi(sturfStarts) = 1 then begin
+//                  tblE.FieldByName('TurfIndicator').AsString := '**';
+//               end;
+
+             //  tblE.FieldByName('MudIndicator').AsString := '';
+//               tblE.FieldByName('MudStarts').AsInteger := atoi(swetStarts);
+//               tblE.FieldByName('MudWins').AsInteger := atoi(swetWins);
+//               tblE.FieldByName('MudPlcs').AsInteger := atoi(swetPlaces);
+//               tblE.FieldByName('MudShos').AsInteger := atoi(swetShows);
+//               tblE.FieldByName('MudEarnings').AsInteger := atoi(swetEarnings);
+//               if atoi(sWetStarts) > 0 then begin
+//                  tblE.FieldByName('MudEPS').AsInteger := atoi(sWetEarnings) div atoi(sWetStarts);
+//               end;
+//               if atoi(swetStarts) = 0 then begin
+//                  tblE.FieldByName('MudIndicator').AsString := '*';
+//               end;
+//               if atoi(swetStarts) = 1 then begin
+//                  tblE.FieldByName('MudIndicator').AsString := '**';
+//               end;
+//
+//               tblE.FieldByName('TrkStarts').AsInteger := atoi(strackStarts);
+//               tblE.FieldByName('TrkWins').AsInteger := atoi(strackWins);
+//               tblE.FieldByName('TrkPlcs').AsInteger := atoi(strackPlaces);
+//               tblE.FieldByName('TrkShos').AsInteger := atoi(strackShows);
+//               tblE.FieldByName('TrkEarnings').AsInteger := atoi(strackEarnings);
+//
+//               if atoi(strackStarts) > 0 then begin
+//                  tblE.FieldByName('TrkEPS').AsInteger := atoi(sTrackEarnings) div atoi(sTrackStarts);
+//               end;
+//
+//               tblE.FieldByName('RouteIndicator').AsString := '';
+//               if tblR.FieldByName('DistanceInFurlongs').AsFloat >= 8 then begin
+//                  tblE.FieldByName('RouteStarts').AsInteger := atoi(sdistStarts);
+//                  tblE.FieldByName('RouteWins').AsInteger := atoi(sdistWins);
+//                  tblE.FieldByName('RoutePlcs').AsInteger := atoi(sdistPlaces);
+//                  tblE.FieldByName('RouteShos').AsInteger := atoi(sdistShows);
+//                  if atoi(sdistStarts) = 0 then begin
+//                     tblE.FieldByName('RouteIndicator').AsString := '*';
+//                  end;
+//                  if atoi(sdistStarts) = 1 then begin
+//                     tblE.FieldByName('RouteIndicator').AsString := '**';
+//                  end;
+//               end else begin
+//                  tblE.FieldByName('SprintStarts').AsInteger := atoi(sdistStarts);
+//                  tblE.FieldByName('SprintWins').AsInteger := atoi(sdistWins);
+//                  tblE.FieldByName('SprintPlcs').AsInteger := atoi(sdistPlaces);
+//                  tblE.FieldByName('SprintShos').AsInteger := atoi(sdistShows);
+//               end;
+
+           //    tblE.FieldByName('AngleDesc').AsString := '';
+//
+//               tblE.FieldByName('IsWagerSheetSelected').AsBoolean := False;
+//               tblE.FieldByName('IsYouBetTrack').AsBoolean := False;
+//               tblE.FieldByName('IsPTCTrack').AsBoolean := False;
+//               tblE.FieldByName('IsTwinSpiresTrack').AsBoolean := False;
+//               tblE.FieldByName('IsPrintedOnValueSheet').AsBoolean := False;
+//
+//               tblE.FieldByName('HorseNbr').AsInteger := iIdx + 1;
+//
+//               iDaysLast := atoi(sdaysSinceLastRace);
+//               dtWOCutoffDate := tblR.FieldByName('RaceDate').AsDateTime - iDaysLast;
+
+           //    sWO1 := '';
+//               sWO2 := '';
+//               sWO3 := '';
+//               sWO4 := '';
+//               sWO5 := '';
+//               sWO6 := '';
+//
+//               iWOIdx := 1;
+//
+//               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
+//
+//                  sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
+//                  sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
+//                  sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
+//                  sMonthDesc := GetMonthDesc(atoi(sM));
+//
+//                  wDay := atow(sD);
+//                  wMonth := atow(sM);
+//                  wYear := atow(sY);
+//
+//                  dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
+//
+//                  // if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
+//                  sWO1 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
+//                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
+//                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
+//                     strackWorkout[iWOIdx] + ' ' +
+//                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
+//                     sconditionWorkout[iWOIdx] + ' ' +
+//                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
+//                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
+//                  // end;
+//               end;
+//
+//               Inc(iWOIdx);
+//               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
+//                  sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
+//                  sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
+//                  sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
+//                  sMonthDesc := GetMonthDesc(atoi(sM));
+//
+//                  wDay := atow(sD);
+//                  wMonth := atow(sM);
+//                  wYear := atow(sY);
+//
+//                  dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
+//
+//                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
+//                  sWO2 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
+//                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
+//                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
+//                     strackWorkout[iWOIdx] + ' ' +
+//                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
+//                     sconditionWorkout[iWOIdx] + ' ' +
+//                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
+//                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
+//                  //end;
+//               end;
+//
+//               Inc(iWOIdx);
+//               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
+//                  sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
+//                  sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
+//                  sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
+//                  sMonthDesc := GetMonthDesc(atoi(sM));
+//
+//                  wDay := atow(sD);
+//                  wMonth := atow(sM);
+//                  wYear := atow(sY);
+//
+//                  dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
+//
+//                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
+//                  sWO3 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
+//                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
+//                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
+//                     strackWorkout[iWOIdx] + ' ' +
+//                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
+//                     sconditionWorkout[iWOIdx] + ' ' +
+//                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
+//                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
+//                  // end;
+//               end;
+//
+//               Inc(iWOIdx);
+//               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
+//                  sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
+//                  sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
+//                  sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
+//                  sMonthDesc := GetMonthDesc(atoi(sM));
+//
+//                  wDay := atow(sD);
+//                  wMonth := atow(sM);
+//                  wYear := atow(sY);
+//
+//                  dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
+//
+//                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
+//                  sWO4 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
+//                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
+//                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
+//                     strackWorkout[iWOIdx] + ' ' +
+//                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
+//                     sconditionWorkout[iWOIdx] + ' ' +
+//                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
+//                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
+//                  //end;
+//               end;
+//
+//               Inc(iWOIdx);
+//               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
+//                  sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
+//                  sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
+//                  sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
+//                  sMonthDesc := GetMonthDesc(atoi(sM));
+//
+//                  wDay := atow(sD);
+//                  wMonth := atow(sM);
+//                  wYear := atow(sY);
+//
+//                  dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
+//
+//                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
+//                  sWO5 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
+//                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
+//                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
+//                     strackWorkout[iWOIdx] + ' ' +
+//                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
+//                     sconditionWorkout[iWOIdx] + ' ' +
+//                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
+//                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
+//                  // end;
+//               end;
+//
+//               Inc(iWOIdx);
+//               if (atof(sdateWorkout[iWOIdx]) > 0) then begin
+//                  sY := CopyStr(sdateWorkout[iWOIdx], 1, 4);
+//                  sM := CopyStr(sdateWorkout[iWOIdx], 5, 2);
+//                  sD := CopyStr(sdateWorkout[iWOIdx], 7, 2);
+//                  sMonthDesc := GetMonthDesc(atoi(sM));
+//
+//                  wDay := atow(sD);
+//                  wMonth := atow(sM);
+//                  wYear := atow(sY);
+//
+//                  dtWORaceDate := EncodeDate(wYear, wMonth, wDay);
+//
+//                  //if ((iDaysLast = 0) or (dtWORaceDate > dtWOCutoffDate)) then begin
+//                  sWO6 := CopyStr(sdateWorkout[iWOIdx], 5, 2) + '/' +
+//                     CopyStr(sdateWorkout[iWOIdx], 7, 2) + '/' +
+//                     CopyStr(sdateWorkout[iWOIdx], 3, 2) + ' ' +
+//                     strackWorkout[iWOIdx] + ' ' +
+//                     GetWODistanceDesc(atoi(sdistanceWorkout[iWOIdx])) + ' ' +
+//                     sconditionWorkout[iWOIdx] + ' ' +
+//                     stimeWorkout[iWOIdx] + ' ' + sdescribeWorkout[iWOIdx] + ' ' +
+//                     '(' + srankWorkout[iWOIdx] + '/' + snumWorksWorkout[iWOIdx] + ')';
+//                  //end;
+//
+//               end;
+//
+//               tblE.FieldByName('WorkLine1').AsString := sWO1 + ' ' + sWO2;
+//               tblE.FieldByName('WorkLine2').AsString := sWO3 + ' ' + sWO4;
+//
+//
+//               tblE.FieldByName('IsFrontDoubleLiner').AsBoolean := False;
+//               tblE.FieldByName('IsBackDoubleLiner').AsBoolean := False;
+//               tblE.FieldByName('IsTripleLiner').AsBoolean := False;
+//               tblE.FieldByName('IsFrontDoubleDot').AsBoolean := False;
+//               tblE.FieldByName('IsBackDoubleDot').AsBoolean := False;
+//               tblE.FieldByName('IsTripleDot').AsBoolean := False;
+//               tblE.FieldByName('IsFrontDoubleLiner0').AsBoolean := False;
+//               tblE.FieldByName('IsBackDoubleLiner0').AsBoolean := False;
+//               tblE.FieldByName('IsTripleLiner0').AsBoolean := False;
+//               tblE.FieldByName('IsFrontDoubleLiner1').AsBoolean := False;
+//               tblE.FieldByName('IsBackDoubleLiner1').AsBoolean := False;
+//               tblE.FieldByName('IsTripleLiner1').AsBoolean := False;
+//               tblE.FieldByName('IsFrontDoubleLiner2').AsBoolean := False;
+//               tblE.FieldByName('IsBackDoubleLiner2').AsBoolean := False;
+//               tblE.FieldByName('IsTripleLiner2').AsBoolean := False;
+//               tblE.FieldByName('IsFrontDoubleLiner3').AsBoolean := False;
+//               tblE.FieldByName('IsBackDoubleLiner3').AsBoolean := False;
+//               tblE.FieldByName('IsTripleLiner3').AsBoolean := False;
+//
+//
+//               tblE.FieldByName('TodaysWagerOrderKey').AsString := '';
+//               tblE.FieldByName('TodaysWagerStarts').AsInteger := 0;
+//               tblE.FieldByName('TodaysWagerWins').AsInteger := 0;
+//               tblE.FieldByName('TodaysWagerWinPct').AsFloat := atof(sBrisPrimePowerRating);
+//               tblE.FieldByName('TodaysWagerWinPctRank').AsInteger := 0;
+//               tblE.FieldByName('TodaysWagerAvgOdds').AsFloat := 0;
+//               tblE.FieldByName('TodaysWagerMinOdds').AsFloat := 0;
+//               tblE.FieldByName('TodaysWagerMaxOdds').AsFloat := 0;
+//               tblE.FieldByName('TodaysWagerAvgWinOdds').AsFloat := 0;
+//               tblE.FieldByName('TodaysWagerMinWinOdds').AsFloat := 0;
+//               tblE.FieldByName('TodaysWagerMaxWinOdds').AsFloat := 0;
+//               tblE.FieldByName('TodaysWagerValueBet').AsFloat := 0;
+
+           //    if (Trim(sppraceDate[1]) <> '') then begin
+//                  sY := CopyStr(sppraceDate[1], 1, 4);
+//                  sM := CopyStr(sppraceDate[1], 5, 2);
+//                  sD := CopyStr(sppraceDate[1], 7, 2);
+//                  sMonthDesc := GetMonthDesc(atoi(sM));
+//
+//                  wDay := atow(sD);
+//                  wMonth := atow(sM);
+//                  wYear := atow(sY);
+//                  dtPPRaceDate := EncodeDate(wYear, wMonth, wDay);
+//
+//                  tblE.FieldByName('LastTrkCode').AsString := sppTrackCode[1];
+//                  tblE.FieldByName('LastRaceNbr').AsInteger := atoi(sppRaceNum[1]);
+//                  tblE.FieldByName('LastRaceDate').AsDateTime := dtPPRaceDate;
+//                  tblE.FieldByName('LastPostPos').AsInteger := atoi(sppPostPosition[1]);
+//                  tblE.FieldByName('LastRaceType').AsString := GetTSNRaceClass(sppRaceType[1]);
+//                  tblE.FieldByName('LastSurf').AsString := GetTSNSurface(sppSurface[1]);
+//                  if (sPPAllSurface[1] = 'A') then begin
+//                     tblE.FieldByName('LastSurf').AsString := 'A';
+//                  end;
+//
+//                  tblE.FieldByName('LastRaceConditions').AsString := UpperCase(sppRaceClassification[1]);
+//                  tblE.FieldByName('LastDistanceDesc').AsString := GetYardDistanceDesc(atoi(sppdistanceYards[1]));
+//                  tblE.FieldByName('LastDistance').AsFloat := (atof(sppdistanceYards[1]) * 3) / FEET_IN_FURLONG;
+//                  if (tblE.FieldByName('LastDistance').AsFloat < 0) then begin
+//                     tblE.FieldByName('LastDistance').AsFloat := ((atof(sppdistanceYards[1]) * 3) / FEET_IN_FURLONG) * -1;
+//                  end;
+//                  tblE.FieldByName('LastOdds').AsFloat := atof(sppOdds[1]);
+//                  tblE.FieldByName('LastFavoriteIndicator').AsString := '';
+//                  tblE.FieldByName('LastDQIndicator').AsString := '';
+//                  tblE.FieldByName('LastJockey').AsString := sppJockey[1];
+//                  tblE.FieldByName('LastComment').AsString := sppTripComment[1];
+//                  tblE.FieldByName('LastComment2').AsString := UpperCase(sppTripComment[1] + ' ' + sppExtraComment[1]);
+//                  tblE.FieldByName('LastTrkCond').AsString := sppTrackCond[1];
+//                  tblE.FieldByName('LastClmPrice').AsFloat := atof(sppClaimingPriceHorse[1]);
+//                  tblE.FieldByName('LastClaimed').AsString := sppClaimedCode[1];
+//                  tblE.FieldByName('LastPurse').AsFloat := atof(sppPurse[1]);
+//                  tblE.FieldByName('LastDay').AsString := UpperCase(sD);
+//                  tblE.FieldByName('LastMonthDesc').AsString := sMonthDesc;
+//                  tblE.FieldByName('LastYear').AsString := UpperCase(sY);
+//                  tblE.FieldByName('LastGateBreak').AsString := sppStartCallBeatenMargin[1];
+//                  tblE.FieldByName('LastLen1Back').AsString := sppFirstCallBeatenMargin[1];
+//                  tblE.FieldByName('LastLen2Back').AsString := sppSecondCallBeatenMargin[1];
+//                  tblE.FieldByName('LastStLenBack').AsString := sppStretchBeatenMargin[1];
+//
+//                  tblE.FieldByName('LastFinishBeaten').AsString := sppFinishPos[1] + '-' + sppFinishBeatenMargin[1];
+//
+//                  tblE.FieldByName('LastEquip').AsString := sppEquipment[1];
+//                  tblE.FieldByName('LastWeight').AsInteger := atoi(sppWeight[1]);
+//                  tblE.FieldByName('LastHorseTime').AsFloat := 0;
+//
+//                  sLTrackCode := tblE.FieldByName('LastTrkCode').AsString;
+//                  sLSurf := tblE.FieldByName('LastSurf').AsString;
+//                  sLPostPos := tblE.FieldByName('LastPostPos').AsString;
+//                  sLDistanceDesc := LeftStr(tblE.FieldByName('LastDistanceDesc').AsString, 7);
+//                  sLTrkCond := tblE.FieldByName('LastTrkCond').AsString;
+//                  sLRaceType := tblE.FieldByName('LastRaceType').AsString;
+//                  sLClmPrice := tblE.FieldByName('LastClmPrice').AsString;
+//                  sLClaimed := tblE.FieldByName('LastClaimed').AsString;
+//                  sLPurse := tblE.FieldByName('LastPurse').AsString;
+//                  sLRaceConditions := LeftStr(tblE.FieldByName('LastRaceConditions').AsString, 10);
+//                  sLJockey := LeftStr(tblE.FieldByName('LastJockey').AsString, 7);
+//                  sLWeight := tblE.FieldByName('LastWeight').AsString;
+//                  sLDQIndicator := tblE.FieldByName('LastDqIndicator').AsString;
+//                  sLOdds := tblE.FieldByName('LastOdds').AsString;
+//                  sLFavoriteIndicator := tblE.FieldByName('LastFavoriteIndicator').AsString;
+//
+//                  sLFinishPos := Trim(sppFinishPos[1]);
+//                  sTmp := Trim(sppFinishBeatenMargin[1]);
+//
+//                  iLen := Length(sTmp);
+//                  iBegPos := SmartPos('.', sTmp);
+//                  if (iBegPos = 0) then begin
+//                     sLFinishBeaten := sLFinishPos + '-' + sppFinishBeatenMargin[1];
+//                  end else begin
+//                     sL2BL := CopyStr(sTmp, (iBegPos + 1), (iLen - iBegPos) + 1);
+//                     iL2BL := atoi(sL2BL);
+//
+//                     iLen := Length(sTmp);
+//                     iBegPos := SmartPos('.', sTmp);
+//                     sL1BL := CopyStr(sTmp, 1, (iBegPos - 1));
+//                     sL1BL := Trim(sL1BL);
+//                     iL1BL := atoi(sL1BL);
+//                     if (iL1BL = 0) then begin
+//                        sL1BL := '';
+//                     end;
+//
+//                     if (atoi(sLFinishPos) > 1) then begin
+//                        case iL2BL of
+//                           05: sLFinishBeaten := sL1BL + '-NS';
+//                           15: sLFinishBeaten := sL1BL + '-HD';
+//                           25: sLFinishBeaten := sL1BL + '-1/4';
+//                           50: sLFinishBeaten := sL1BL + '-1/2';
+//                           75: sLFinishBeaten := sL1BL + '-3/4';
+//                        else
+//                           sLFinishBeaten := sLFinishPos + '-' + sL1BL;
+//                        end;
+//                     end else begin
+//                        case iL2BL of
+//                           05: sLFinishBeaten := '1-NS';
+//                           15: sLFinishBeaten := '1-HD';
+//                           25: sLFinishBeaten := '1-1/4';
+//                           50: sLFinishBeaten := '1-1/2';
+//                           75: sLFinishBeaten := '1-3/4';
+//                        else
+//                           sLFinishBeaten := '1' + sL1BL;
+//                        end;
+//                     end;
+//                  end;
+//
+//                  if Length(sLFinishBeaten) = 1 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//                  if Length(sLFinishBeaten) = 2 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//                  if Length(sLFinishBeaten) = 3 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//                  if Length(sLFinishBeaten) = 4 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//                  if Length(sLFinishBeaten) = 5 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//
+//                  if Length(sLOdds) = 1 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//                  if Length(sLOdds) = 2 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//                  if Length(sLOdds) = 3 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//                  if Length(sLOdds) = 4 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//                  if Length(sLOdds) = 5 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//
+//                  if Length(sLFinishPos) = 0 then begin
+//                     sLFinishPos := ' ' + sLFinishPos;
+//                  end;
+//
+//                  if Length(sLFinishBeaten) = 1 then begin
+//                     sLFinishPos := ' ' + sLFinishPos;
+//                  end;
+//
+//
+//                  if sLFinishPos = ' 0' then begin
+//                     sLFinishBeaten := '  ';
+//                  end;
+//
+//                  if sLOdds = '  0.00' then begin
+//                     sLOdds := '      ';
+//                  end;
+//
+//                  tblE.FieldByName('LastRaceDesc').AsString := UpperCase(
+//                     Format('%-2s', [sD]) +
+//                     Format('%3s', [sMonthDesc]) +
+//                     Format('%-2s', [sY]) + ' ' +
+//                     Format('%-2s', [sLPostPos]) + ' ' +
+//                     Format('%-3s', [sLTrackCode]) + ' ' +
+//                     Format('%-1s', [sLSurf]) + ' ' +
+//                     Format('%-2s', [sLTrkCond]) + ' ' +
+//                     Format('%-7s', [sLDistanceDesc]) + ' ' +
+//                     // Format('%-4s', [sLRaceType]) +
+//                     //   Format('%-7s', [sLClmPrice]) +
+//                     // Format('%-1s', [sLClaimed]) +
+//                     //   Format('%-7s', [sLPurse]) + ' ' +
+//                     Format('%-10s', [sLRaceConditions]) + ' ' +
+//                     Format('%-7s', [sLJockey]) + ' ' +
+//                     Format('%-3s', [sLWeight]) + '|' +
+//                     Format('%-2s', [sLFinishPos]) + ' ' +
+//                     Format('%-7s', [sLFinishBeaten]) + '|' +
+//                     Format('%-6s', [sLOdds]) +
+//                     Format('%-1s', [sLFavoriteIndicator])
+//                     );
+//
+//
+//               end;
+
+            //   if (Trim(sppraceDate[2]) <> '') then begin
+//                  sY := CopyStr(sppraceDate[2], 1, 4);
+//                  sM := CopyStr(sppraceDate[2], 5, 2);
+//                  sD := CopyStr(sppraceDate[2], 7, 2);
+//                  sMonthDesc := GetMonthDesc(atoi(sM));
+//
+//                  wDay := atow(sD);
+//                  wMonth := atow(sM);
+//                  wYear := atow(sY);
+//                  dtPPRaceDate := EncodeDate(wYear, wMonth, wDay);
+//
+//                  tblE.FieldByName('Last2TrkCode').AsString := sppTrackCode[2];
+//                  tblE.FieldByName('Last2RaceNbr').AsInteger := atoi(sppRaceNum[2]);
+//                  tblE.FieldByName('Last2RaceDate').AsDateTime := dtPPRaceDate;
+//                  tblE.FieldByName('Last2PostPos').AsInteger := atoi(sppPostPosition[2]);
+//                  tblE.FieldByName('Last2RaceType').AsString := GetTSNRaceClass(sppRaceType[2]);
+//                  tblE.FieldByName('Last2Surf').AsString := GetTSNSurface(sppSurface[2]);
+//                  if (sPPAllSurface[2] = 'A') then begin
+//                     tblE.FieldByName('Last2Surf').AsString := 'A';
+//                  end;
+//
+//                  tblE.FieldByName('Last2RaceConditions').AsString := UpperCase(sppRaceClassification[2]);
+//                  tblE.FieldByName('Last2DistanceDesc').AsString := GetYardDistanceDesc(atoi(sppdistanceYards[2]));
+//                  if (tblE.FieldByName('Last2Distance').AsFloat < 0) then begin
+//                     tblE.FieldByName('Last2Distance').AsFloat := ((atof(sppdistanceYards[2]) * 3) / FEET_IN_FURLONG) * -1;
+//                  end;
+//                  tblE.FieldByName('Last2Odds').AsFloat := atof(sppOdds[2]);
+//                  tblE.FieldByName('Last2FavoriteIndicator').AsString := '';
+//                  tblE.FieldByName('Last2DQIndicator').AsString := '';
+//                  tblE.FieldByName('Last2Jockey').AsString := sppJockey[2];
+//                  tblE.FieldByName('Last2Comment').AsString := sppTripComment[2];
+//                  tblE.FieldByName('Last2Comment2').AsString := UpperCase((sppTripComment[2] + ' ' + sppExtraComment[2]));
+//                  tblE.FieldByName('Last2TrkCond').AsString := sppTrackCond[2];
+//                  tblE.FieldByName('Last2ClmPrice').AsFloat := atof(sppClaimingPriceHorse[2]);
+//                  tblE.FieldByName('Last2Claimed').AsString := sppClaimedCode[2];
+//                  tblE.FieldByName('Last2Purse').AsFloat := atof(sppPurse[2]);
+//                  tblE.FieldByName('Last2Day').AsString := UpperCase(sD);
+//                  tblE.FieldByName('Last2MonthDesc').AsString := sMonthDesc;
+//                  tblE.FieldByName('Last2Year').AsString := UpperCase(sY);
+//                  tblE.FieldByName('Last2GateBreak').AsString := sppStartCallBeatenMargin[2];
+//                  tblE.FieldByName('Last2Len1Back').AsString := sppFirstCallBeatenMargin[2];
+//                  tblE.FieldByName('Last2Len2Back').AsString := sppSecondCallBeatenMargin[2];
+//                  tblE.FieldByName('Last2StLenBack').AsString := sppStretchBeatenMargin[2];
+//
+//                  tblE.FieldByName('Last2FinishBeaten').AsString := sppFinishPos[2] + '-' + sppFinishBeatenMargin[2];
+//
+//                  tblE.FieldByName('Last2Equip').AsString := sppEquipment[2];
+//                  tblE.FieldByName('Last2Weight').AsInteger := atoi(sppWeight[2]);
+//                  tblE.FieldByName('Last2HorseTime').AsFloat := 0;
+//
+//                  sLTrackCode := tblE.FieldByName('Last2TrkCode').AsString;
+//                  sLSurf := tblE.FieldByName('Last2Surf').AsString;
+//                  sLPostPos := tblE.FieldByName('Last2PostPos').AsString;
+//                  sLDistanceDesc := LeftStr(tblE.FieldByName('Last2DistanceDesc').AsString, 7);
+//                  sLTrkCond := tblE.FieldByName('Last2TrkCond').AsString;
+//                  sLRaceType := tblE.FieldByName('Last2RaceType').AsString;
+//                  sLClmPrice := tblE.FieldByName('Last2ClmPrice').AsString;
+//                  sLClaimed := tblE.FieldByName('Last2Claimed').AsString;
+//                  sLPurse := tblE.FieldByName('Last2Purse').AsString;
+//                  sLRaceConditions := LeftStr(tblE.FieldByName('Last2RaceConditions').AsString, 10);
+//                  sLJockey := LeftStr(tblE.FieldByName('Last2Jockey').AsString, 7);
+//                  sLWeight := tblE.FieldByName('Last2Weight').AsString;
+//                  sLDQIndicator := tblE.FieldByName('Last2DqIndicator').AsString;
+//                  sLFinishBeaten := tblE.FieldByName('Last2FinishBeaten').AsString;
+//                  sLOdds := tblE.FieldByName('Last2Odds').AsString;
+//                  sLFavoriteIndicator := tblE.FieldByName('Last2FavoriteIndicator').AsString;
+//
+//                  sLFinishPos := sppFinishPos[2];
+//                  sTmp := Trim(sppFinishBeatenMargin[2]);
+//
+//                  iLen := Length(sTmp);
+//                  iBegPos := SmartPos('.', sTmp);
+//                  if (iBegPos = 0) then begin
+//                     sLFinishBeaten := sLFinishPos + '-' + sppFinishBeatenMargin[2];
+//                  end else begin
+//                     sL2BL := CopyStr(sTmp, (iBegPos + 1), (iLen - iBegPos) + 1);
+//                     iL2BL := atoi(sL2BL);
+//
+//                     iLen := Length(sTmp);
+//                     iBegPos := SmartPos('.', sTmp);
+//                     sL1BL := CopyStr(sTmp, 1, (iBegPos - 1));
+//                     sL1BL := Trim(sL1BL);
+//                     iL1BL := atoi(sL1BL);
+//                     if (iL1BL = 0) then begin
+//                        sL1BL := '';
+//                     end;
+//
+//                     if (atoi(sLFinishPos) > 1) then begin
+//                        case iL2BL of
+//                           05: sLFinishBeaten := sL1BL + '-NS';
+//                           15: sLFinishBeaten := sL1BL + '-HD';
+//                           25: sLFinishBeaten := sL1BL + '-1/4';
+//                           50: sLFinishBeaten := sL1BL + '-1/2';
+//                           75: sLFinishBeaten := sL1BL + '-3/4';
+//                        else
+//                           sLFinishBeaten := sLFinishPos + '-' + sL1BL;
+//                        end;
+//                     end else begin
+//                        case iL2BL of
+//                           05: sLFinishBeaten := '1-NS';
+//                           15: sLFinishBeaten := '1-HD';
+//                           25: sLFinishBeaten := '1-1/4';
+//                           50: sLFinishBeaten := '1-1/2';
+//                           75: sLFinishBeaten := '1-3/4';
+//                        else
+//                           sLFinishBeaten := '1' + sL1BL;
+//                        end;
+//                     end;
+//                  end;
+//
+//                  if Length(sLFinishBeaten) = 1 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//                  if Length(sLFinishBeaten) = 2 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//                  if Length(sLFinishBeaten) = 3 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//                  if Length(sLFinishBeaten) = 4 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//                  if Length(sLFinishBeaten) = 5 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//
+//
+//                  if Length(sLOdds) = 1 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//                  if Length(sLOdds) = 2 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//                  if Length(sLOdds) = 3 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//                  if Length(sLOdds) = 4 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//                  if Length(sLOdds) = 5 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//
+//                  if Length(sLFinishPos) = 0 then begin
+//                     sLFinishPos := ' ' + sLFinishPos;
+//                  end;
+//
+//                  if Length(sLFinishBeaten) = 1 then begin
+//                     sLFinishPos := ' ' + sLFinishPos;
+//                  end;
+//
+//
+//                  if sLFinishPos = ' 0' then begin
+//                     sLFinishBeaten := '  ';
+//                  end;
+//
+//                  if sLOdds = '  0.00' then begin
+//                     sLOdds := '      ';
+//                  end;
+//
+//                  tblE.FieldByName('Last2RaceDesc').AsString := UpperCase(
+//                     Format('%-2s', [sD]) +
+//                     Format('%3s', [sMonthDesc]) +
+//                     Format('%-2s', [sY]) + ' ' +
+//                     Format('%-2s', [sLPostPos]) + ' ' +
+//                     Format('%-3s', [sLTrackCode]) + ' ' +
+//                     Format('%-1s', [sLSurf]) + ' ' +
+//                     Format('%-2s', [sLTrkCond]) + ' ' +
+//                     Format('%-7s', [sLDistanceDesc]) + ' ' +
+//                     // Format('%-4s', [sLRaceType]) +
+//                     //   Format('%-7s', [sLClmPrice]) +
+//                     // Format('%-1s', [sLClaimed]) +
+//                     //   Format('%-7s', [sLPurse]) + ' ' +
+//                     Format('%-10s', [sLRaceConditions]) + ' ' +
+//                     Format('%-7s', [sLJockey]) + ' ' +
+//                     Format('%-3s', [sLWeight]) + '|' +
+//                     Format('%-2s', [sLFinishPos]) + ' ' +
+//                     Format('%-7s', [sLFinishBeaten]) + '|' +
+//                     Format('%-6s', [sLOdds]) +
+//                     Format('%-1s', [sLFavoriteIndicator])
+//                     );
+//
+//
+//               end;
+//
+//               if (Trim(sppraceDate[3]) <> '') then begin
+//                  sY := CopyStr(sppraceDate[3], 1, 4);
+//                  sM := CopyStr(sppraceDate[3], 5, 2);
+//                  sD := CopyStr(sppraceDate[3], 7, 2);
+//                  sMonthDesc := GetMonthDesc(atoi(sM));
+//
+//                  wDay := atow(sD);
+//                  wMonth := atow(sM);
+//                  wYear := atow(sY);
+//                  dtPPRaceDate := EncodeDate(wYear, wMonth, wDay);
+//
+//                  tblE.FieldByName('Last3TrkCode').AsString := sppTrackCode[3];
+//                  tblE.FieldByName('Last3RaceNbr').AsInteger := atoi(sppRaceNum[3]);
+//                  tblE.FieldByName('Last3RaceDate').AsDateTime := dtPPRaceDate;
+//                  tblE.FieldByName('Last3PostPos').AsInteger := atoi(sppPostPosition[3]);
+//                  tblE.FieldByName('Last3RaceType').AsString := GetTSNRaceClass(sppRaceType[3]);
+//                  tblE.FieldByName('Last3Surf').AsString := GetTSNSurface(sppSurface[3]);
+//                  if (sPPAllSurface[3] = 'A') then begin
+//                     tblE.FieldByName('Last3Surf').AsString := 'A';
+//                  end;
+//
+//                  tblE.FieldByName('Last3RaceConditions').AsString := UpperCase(sppRaceClassification[3]);
+//                  tblE.FieldByName('Last3DistanceDesc').AsString := GetYardDistanceDesc(atoi(sppdistanceYards[3]));
+//                  if (tblE.FieldByName('Last3Distance').AsFloat < 0) then begin
+//                     tblE.FieldByName('Last3Distance').AsFloat := ((atof(sppdistanceYards[3]) * 3) / FEET_IN_FURLONG) * -1;
+//                  end;
+//                  tblE.FieldByName('Last3Odds').AsFloat := atof(sppOdds[3]);
+//                  tblE.FieldByName('Last3FavoriteIndicator').AsString := '';
+//                  tblE.FieldByName('Last3DQIndicator').AsString := '';
+//                  tblE.FieldByName('Last3Jockey').AsString := sppJockey[3];
+//                  tblE.FieldByName('Last3Comment').AsString := sppTripComment[3];
+//                  tblE.FieldByName('Last3Comment2').AsString := UpperCase((sppTripComment[3] + ' ' + sppExtraComment[3]));
+//                  tblE.FieldByName('Last3TrkCond').AsString := sppTrackCond[3];
+//                  tblE.FieldByName('Last3ClmPrice').AsFloat := atof(sppClaimingPriceHorse[3]);
+//                  tblE.FieldByName('Last3Claimed').AsString := sppClaimedCode[3];
+//                  tblE.FieldByName('Last3Purse').AsFloat := atof(sppPurse[3]);
+//                  tblE.FieldByName('Last3Day').AsString := UpperCase(sD);
+//                  tblE.FieldByName('Last3MonthDesc').AsString := sMonthDesc;
+//                  tblE.FieldByName('Last3Year').AsString := UpperCase(sY);
+//                  tblE.FieldByName('Last3GateBreak').AsString := sppStartCallBeatenMargin[3];
+//                  tblE.FieldByName('Last3Len1Back').AsString := sppFirstCallBeatenMargin[3];
+//                  tblE.FieldByName('Last3Len2Back').AsString := sppSecondCallBeatenMargin[3];
+//                  tblE.FieldByName('Last3StLenBack').AsString := sppStretchBeatenMargin[3];
+//
+//                  tblE.FieldByName('Last3FinishBeaten').AsString := sppFinishPos[3] + '-' + sppFinishBeatenMargin[3];
+//
+//                  tblE.FieldByName('Last3Equip').AsString := sppEquipment[3];
+//                  tblE.FieldByName('Last3Weight').AsInteger := atoi(sppWeight[3]);
+//                  tblE.FieldByName('Last3HorseTime').AsFloat := 0;
+//
+//                  sLTrackCode := tblE.FieldByName('Last3TrkCode').AsString;
+//                  sLSurf := tblE.FieldByName('Last3Surf').AsString;
+//                  sLPostPos := tblE.FieldByName('Last3PostPos').AsString;
+//                  sLDistanceDesc := LeftStr(tblE.FieldByName('Last3DistanceDesc').AsString, 7);
+//                  sLTrkCond := tblE.FieldByName('Last3TrkCond').AsString;
+//                  sLRaceType := tblE.FieldByName('Last3RaceType').AsString;
+//                  sLClmPrice := tblE.FieldByName('Last3ClmPrice').AsString;
+//                  sLClaimed := tblE.FieldByName('Last3Claimed').AsString;
+//                  sLPurse := tblE.FieldByName('Last3Purse').AsString;
+//                  sLRaceConditions := LeftStr(tblE.FieldByName('Last3RaceConditions').AsString, 10);
+//                  sLJockey := LeftStr(tblE.FieldByName('Last3Jockey').AsString, 7);
+//                  sLWeight := tblE.FieldByName('Last3Weight').AsString;
+//                  sLDQIndicator := tblE.FieldByName('Last3DqIndicator').AsString;
+//                  sLFinishBeaten := tblE.FieldByName('Last3FinishBeaten').AsString;
+//                  sLOdds := tblE.FieldByName('Last3Odds').AsString;
+//                  sLFavoriteIndicator := tblE.FieldByName('Last3FavoriteIndicator').AsString;
+//
+//                  sLFinishPos := sppFinishPos[3];
+//                  sTmp := Trim(sppFinishBeatenMargin[3]);
+//
+//                  iLen := Length(sTmp);
+//                  iBegPos := SmartPos('.', sTmp);
+//                  if (iBegPos = 0) then begin
+//                     sLFinishBeaten := sLFinishPos + '-' + sppFinishBeatenMargin[3];
+//                  end else begin
+//                     sL2BL := CopyStr(sTmp, (iBegPos + 1), (iLen - iBegPos) + 1);
+//                     iL2BL := atoi(sL2BL);
+//
+//                     iLen := Length(sTmp);
+//                     iBegPos := SmartPos('.', sTmp);
+//                     sL1BL := CopyStr(sTmp, 1, (iBegPos - 1));
+//                     sL1BL := Trim(sL1BL);
+//                     iL1BL := atoi(sL1BL);
+//                     if (iL1BL = 0) then begin
+//                        sL1BL := '';
+//                     end;
+//
+//                     if (atoi(sLFinishPos) > 1) then begin
+//                        case iL2BL of
+//                           05: sLFinishBeaten := sL1BL + '-NS';
+//                           15: sLFinishBeaten := sL1BL + '-HD';
+//                           25: sLFinishBeaten := sL1BL + '-1/4';
+//                           50: sLFinishBeaten := sL1BL + '-1/2';
+//                           75: sLFinishBeaten := sL1BL + '-3/4';
+//                        else
+//                           sLFinishBeaten := sLFinishPos + '-' + sL1BL;
+//                        end;
+//                     end else begin
+//                        case iL2BL of
+//                           05: sLFinishBeaten := '1-NS';
+//                           15: sLFinishBeaten := '1-HD';
+//                           25: sLFinishBeaten := '1-1/4';
+//                           50: sLFinishBeaten := '1-1/2';
+//                           75: sLFinishBeaten := '1-3/4';
+//                        else
+//                           sLFinishBeaten := '1' + sL1BL;
+//                        end;
+//                     end;
+//                  end;
+//
+//                  if Length(sLFinishBeaten) = 1 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//                  if Length(sLFinishBeaten) = 2 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//                  if Length(sLFinishBeaten) = 3 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//                  if Length(sLFinishBeaten) = 4 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//                  if Length(sLFinishBeaten) = 5 then begin
+//                     sLFinishBeaten := ' ' + sLFinishBeaten;
+//                  end;
+//
+//                  if Length(sLOdds) = 1 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//                  if Length(sLOdds) = 2 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//                  if Length(sLOdds) = 3 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//                  if Length(sLOdds) = 4 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//                  if Length(sLOdds) = 5 then begin
+//                     sLOdds := ' ' + sLOdds;
+//                  end;
+//
+//                  if Length(sLFinishPos) = 0 then begin
+//                     sLFinishPos := ' ' + sLFinishPos;
+//                  end;
+//
+//                  if Length(sLFinishBeaten) = 1 then begin
+//                     sLFinishPos := ' ' + sLFinishPos;
+//                  end;
+//
+//
+//                  if sLFinishPos = ' 0' then begin
+//                     sLFinishBeaten := '  ';
+//                  end;
+//
+//                  if sLOdds = '  0.00' then begin
+//                     sLOdds := '      ';
+//                  end;
+//
+//                  tblE.FieldByName('Last3RaceDesc').AsString := UpperCase(
+//                     Format('%-2s', [sD]) +
+//                     Format('%3s', [sMonthDesc]) +
+//                     Format('%-2s', [sY]) + ' ' +
+//                     Format('%-2s', [sLPostPos]) + ' ' +
+//                     Format('%-3s', [sLTrackCode]) + ' ' +
+//                     Format('%-1s', [sLSurf]) + ' ' +
+//                     Format('%-2s', [sLTrkCond]) + ' ' +
+//                     Format('%-7s', [sLDistanceDesc]) + ' ' +
+//                     // Format('%-4s', [sLRaceType]) +
+//                     //   Format('%-7s', [sLClmPrice]) +
+//                     // Format('%-1s', [sLClaimed]) +
+//                     //   Format('%-7s', [sLPurse]) + ' ' +
+//                     Format('%-10s', [sLRaceConditions]) + ' ' +
+//                     Format('%-7s', [sLJockey]) + ' ' +
+//                     Format('%-3s', [sLWeight]) + '|' +
+//                     Format('%-2s', [sLFinishPos]) + ' ' +
+//                     Format('%-7s', [sLFinishBeaten]) + '|' +
+//                     Format('%-6s', [sLOdds]) +
+//                     Format('%-1s', [sLFavoriteIndicator])
+//                     );
+//
+//               end;
+
+           //    tblE.FieldByName('Odds').AsFloat := 0;
+//               tblE.FieldByName('FinishPos').AsFloat := 0;
+//
+//               tblE.FieldByName('QSP1stCall').AsInteger := 0;
+//               tblE.FieldByName('QSP1stCallRank').AsInteger := 0;
+//               tblE.FieldByName('QSP1stCallRunStyle').AsString := '';
+//
+//               tblE.FieldByName('QSP2ndCall').AsInteger := 0;
+//               tblE.FieldByName('QSP2ndCallRank').AsInteger := 0;
+//               tblE.FieldByName('QSP2ndCallRunStyle').AsString := '';
+//
+//               tblE.FieldByName('KSP1stCall').AsInteger := 0;
+//               tblE.FieldByName('KSP1stCallRank').AsInteger := 0;
+//               tblE.FieldByName('KSP2ndCall').AsInteger := 0;
+//               tblE.FieldByName('KSP2ndCallRank').AsInteger := 0;
+//
+//               tblE.FieldByName('Is1stClaiming').AsBoolean := False;
+//               tblE.FieldByName('Is1stMCL').AsBoolean := False;
+//
+//               tblE.FieldByName('Is1stAfterLayoff').AsBoolean := False;
+//               tblE.FieldByName('Is2ndAfterLayoff').AsBoolean := False;
+//               tblE.FieldByName('Is3rdAfterLayoff').AsBoolean := False;
+//
+//               tblE.FieldByName('IsDirtToTurfToDirtAfterLayoff').AsBoolean := False;
+//               tblE.FieldByName('IsTurfToDirtToTurfAfterLayoff').AsBoolean := False;
+//
+//               tblE.FieldByName('IsRouteToSprintToRouteAfterLayoff').AsBoolean := False;
+//               tblE.FieldByName('IsSprintToRouteToSprintAfterLayoff').AsBoolean := False;
+//
+//               tblE.FieldByName('Is2yoBred').AsBoolean := False;
+//               tblE.FieldByName('Is1stBred').AsBoolean := False;
+//               tblE.FieldByName('IsTurfBred').AsBoolean := False;
+//
+//               tblE.FieldByName('Is1stOffLayoff').AsBoolean := False;
+//               tblE.FieldByName('Is2ndOffLayoff').AsBoolean := False;
+//               tblE.FieldByName('Is3rdOffLayoff').AsBoolean := False;
+//               tblE.FieldByName('StandingIn').AsString := '';
+//               tblE.FieldByName('StandingInRank').AsInteger := 0;
+//               tblE.FieldByName('IsOnStandingInList').AsBoolean := False;
+
+            //   tblE.FieldByName('PacificTime').AsString := sPacificTime;
 
                tblE.FieldByName('AvgClass').AsFloat := atof(sAvgClass);
                tblE.FieldByName('BackClass').AsFloat := atof(sBackClass);
-               tblE.FieldByName('BackSpeed').AsInteger := atoi(sBrisBackSpeed);
+              // tblE.FieldByName('BackSpeed').AsInteger := atoi(sBrisBackSpeed);
 
-               tblE.FieldByName('JockeyRating').AsFloat := atoi(sTJMeetStarts);
-               fWins := atof(sTJMeetWins);
-               fStarts := atof(sTJMeetStarts);
-               if (fStarts > 0) then begin
-                  fWinPct := (fWins / fStarts) * 100;
-               end else begin
-                  fWinPct := 0;
-               end;
-               tblE.FieldByName('TJMeetStarts').AsFloat := fStarts;
-               tblE.FieldByName('TJMeetWinPct').AsFloat := fWinPct;
-               tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TJ365WinPct').AsFloat;
-
-               fWins := atof(sTJ365Wins);
-               fStarts := atof(sTJ365Starts);
-               if (fStarts > 0) then begin
-                  fWinPct := (fWins / fStarts) * 100;
-               end else begin
-                  fWinPct := 0;
-               end;
-               tblE.FieldByName('TJ365Starts').AsFloat := fStarts;
-               tblE.FieldByName('TJ365WinPct').AsFloat := fWinPct;
-
-               if (fStarts > 16) then begin
-                  tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TJMeetWinPct').AsFloat;
-               end;
+           //    tblE.FieldByName('JockeyRating').AsFloat := atoi(sTJMeetStarts);
+//               fWins := atof(sTJMeetWins);
+//               fStarts := atof(sTJMeetStarts);
+//               if (fStarts > 0) then begin
+//                  fWinPct := (fWins / fStarts) * 100;
+//               end else begin
+//                  fWinPct := 0;
+//               end;
+//               tblE.FieldByName('TJMeetStarts').AsFloat := fStarts;
+//               tblE.FieldByName('TJMeetWinPct').AsFloat := fWinPct;
+//               tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TJ365WinPct').AsFloat;
+//
+//               fWins := atof(sTJ365Wins);
+//               fStarts := atof(sTJ365Starts);
+//               if (fStarts > 0) then begin
+//                  fWinPct := (fWins / fStarts) * 100;
+//               end else begin
+//                  fWinPct := 0;
+//               end;
+//               tblE.FieldByName('TJ365Starts').AsFloat := fStarts;
+//               tblE.FieldByName('TJ365WinPct').AsFloat := fWinPct;
+//
+//               if (fStarts > 16) then begin
+//                  tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TJMeetWinPct').AsFloat;
+//               end;
 
                tblE.Post();
             end;
 
 
-            for iFldIdx := 1 to 10 do begin
-               if Trim(sppTrackCode[iFldIdx]) <> '' then begin
-                  tblPP.IndexName := '';
-                  tblPP.SetKey();
-                  tblPP.FieldByName('TrkCode').AsString := sTrack;
-                  tblPP.FieldByName('RaceDate').AsDateTime := dtRaceDate;
-                  tblPP.FieldByName('HorseNbr').AsInteger := iIdx + 1;
-                  tblPP.FieldByName('PPNbr').AsInteger := iFldIdx;
+         //   for iFldIdx := 1 to 10 do begin
+//               if Trim(sppTrackCode[iFldIdx]) <> '' then begin
+//                  tblPP.IndexName := '';
+//                  tblPP.SetKey();
+//                  tblPP.FieldByName('TrkCode').AsString := sTrack;
+//                  tblPP.FieldByName('RaceDate').AsDateTime := dtRaceDate;
+//                  tblPP.FieldByName('HorseNbr').AsInteger := iIdx + 1;
+//                  tblPP.FieldByName('PPNbr').AsInteger := iFldIdx;
+//
+//
+//                  if not (tblPP.GotoKey()) then begin
+//                     tblPP.Append();
+//                     tblPP.FieldByName('TrkCode').AsString := sTrack;
+//                     tblPP.FieldByName('RaceDate').AsDateTime := dtRaceDate;
+//                     tblPP.FieldByName('HorseNbr').AsInteger := iIdx + 1;
+//                     tblPP.FieldByName('PPNbr').AsInteger := iFldIdx;
+//
+//                     tblPP.FieldByName('Comment').Value := UpperCase(sppTripComment[iFldIdx]);
+//                     tblPP.FieldByName('Comment2').Value := UpperCase(sppExtraComment[iFldIdx]);
+//
+//                     sY := CopyStr(sppraceDate[iFldIdx], 1, 4);
+//                     sM := CopyStr(sppraceDate[iFldIdx], 5, 2);
+//                     sD := CopyStr(sppraceDate[iFldIdx], 7, 2);
+//                     sMonthDesc := GetMonthDesc(atoi(sM));
+//
+//                     wDay := atow(sD);
+//                     wMonth := atow(sM);
+//                     wYear := atow(sY);
+//                     dtPPRaceDate := EncodeDate(wYear, wMonth, wDay);
+//
+//                     tblPP.FieldByName('Day').Value := UpperCase(sD);
+//                     tblPP.FieldByName('MonthDesc').Value := UpperCase(sMonthDesc);
+//                     tblPP.FieldByName('Year').Value := UpperCase(sY);
+//
+//                     tblPP.FieldByName('DateOfRace').AsDateTime := dtPPRaceDate;
+//                     tblPP.FieldByName('DaysFromTodaysRace').AsFloat := DaysApart(dtPPRaceDate, dtRaceDate);
+//
+//                     tblPP.FieldByName('RaceNbr').Value := UpperCase(sppRaceNum[iFldIdx]);
+//                     tblPP.FieldByName('TrkAbbr').Value := UpperCase(sppTrackCode[iFldIdx]);
+//
+//                     tblPP.FieldByName('Surf').Value := GetTSNSurface(sppSurface[iFldIdx]);
+//                     if atoi(sPPAllSurface[iFldIdx]) = 1 then begin
+//                        tblPP.FieldByName('Surf').Value := 'A';
+//                     end;
+//
+//                     tblPP.FieldByName('TrkCond').Value := UpperCase(sppTrackCond[iFldIdx]);
+//                     tblPP.FieldByName('DistanceDesc').Value := GetYardDistanceDesc(atoi(sppdistanceYards[iFldIdx]));
+//
+//                     tblPP.FieldByName('Time1stCall').AsFloat := atof(UpperCase(sppFirstFraction[iFldIdx]));
+//                     tblPP.FieldByName('Time2ndCall').AsFloat := atof(UpperCase(sppSecondFraction[iFldIdx]));
+//                     tblPP.FieldByName('TimeStrCall').AsFloat := atof(UpperCase(sppThirdFraction[iFldIdx]));
+//                     tblPP.FieldByName('TimeFinCall').AsFloat := atof(UpperCase(sppFinalTime[iFldIdx]));
+//
+//                     tblPP.FieldByName('Pos1stCall').AsFloat := atof(sppFirstCallPos[iFldIdx]);
+//                     tblPP.FieldByName('Pos2ndCall').AsFloat := atof(sppSecondCallPos[iFldIdx]);
+//                     tblPP.FieldByName('PosStrCall').AsFloat := atof(sppStretchPos[iFldIdx]);
+//                     tblPP.FieldByName('PosFinCall').AsFloat := atof(sppFinishPos[iFldIdx]);
+//
+//                     tblPP.FieldByName('BL1stCall').AsFloat := atof(sppFirstCallBeaten[iFldIdx]);
+//                     tblPP.FieldByName('BL2ndCall').AsFloat := atof(sppSecondCallBeaten[iFldIdx]);
+//                     tblPP.FieldByName('BLStrCall').AsFloat := atof(sppStretchBeaten[iFldIdx]);
+//                     tblPP.FieldByName('BLFinCall').AsFloat := atof(sppFinishBeaten[iFldIdx]);
+//
+//                     tblPP.FieldByName('ClmPrice').AsInteger := atoi(sppClaimingPriceHorse[iFldIdx]);
+//                     tblPP.FieldByName('Claimed').Value := UpperCase(sppClaimedCode[iFldIdx]);
+//                     tblPP.FieldByName('Purse').AsInteger := atoi(sppPurse[iFldIdx]);
+//
+//                     tblPP.FieldByName('RaceConditions').Value := UpperCase(sppRaceClassification[iFldIdx]);
+//                     tblPP.FieldByName('RaceDesc').Value := GetTSNRaceDesc(sppRaceType[iFldIdx]);
+//                     tblPP.FieldByName('RaceType').Value := GetTSNRaceClass(sppRaceType[iFldIdx]);
+//
+//                     tblPP.FieldByName('Speed').AsInteger := atoi(sppBrisSpeedRating[iFldIdx]);
+//                     tblPP.FieldByName('PostPos').AsInteger := atoi(sppPostPosition[iFldIdx]);
+//
+//                     tblPP.FieldByName('GateBreak').Value := atof(sppStartCallBeatenMargin[iFldIdx]);
+//                     tblPP.FieldByName('Len1Back').Value := atof(sppFirstCallBeatenMargin[iFldIdx]);
+//                     tblPP.FieldByName('Len2Back').Value := atof(sppSecondCallBeatenMargin[iFldIdx]);
+//                     tblPP.FieldByName('StLenBack').Value := atof(sppStretchBeatenMargin[iFldIdx]);
+//                     tblPP.FieldByName('FinishBeaten').Value := atof(sppFinishBeatenMargin[iFldIdx]);
+//
+//                     if atoi(sppFinishPos[iFldIdx]) <> atoi(sppMoneyPos[iFldIdx]) then begin
+//                        tblPP.FieldByName('DQIndicator').Value := 'DQ';
+//                     end;
+//
+//                     tblPP.FieldByName('Jockey').Value := sppJockey[iFldIdx];
+//                     tblPP.FieldByName('Equip').Value := sppEquipment[iFldIdx];
+//
+//                     tblPP.FieldByName('Weight').AsInteger := atoi(sppWeight[iFldIdx]);
+//                     tblPP.FieldByName('Odds').AsFloat := atof(sppOdds[iFldIdx]);
+//
+//                     if Trim(sppFavoriteIndicator[iFldIdx]) = '1' then begin
+//                        tblPP.FieldByName('FavoriteIndicator').Value := '*';
+//                     end;
+//
+//                   //  tblPP.FieldByName('HorseTime').AsFloat := atof(UpperCase(sppFinalTime[iFldIdx]));
+//                   //  tblPP.FieldByName('FldSize').AsInteger := atoi(sppNumEntrants[iFldIdx]);
+//
+//                    // tblPP.FieldByName('EarlyPace').Value := atof(sppBris2fPaceRating[iFldIdx]);
+//                   //  tblPP.FieldByName('MiddlePace').Value := atof(sppBris4fPaceRating[iFldIdx]);
+//                   //  tblPP.FieldByName('LatePace').Value := atof(sppBrisLatePaceRating[iFldIdx]);
+//
+//                    // tblPP.FieldByName('HHTrkCode').AsString := sTrack;
+//                    // tblPP.FieldByName('HHRaceDate').AsDateTime := dtRaceDate;
+//                   //  tblPP.FieldByName('HHRaceNbr').AsInteger := atoi(sppraceNum[iFldIdx]);
+//                    // tblPP.FieldByName('HHPostPos').AsInteger := atoi(spppostPosition[iFldIdx]);
+//
+//                     tblPP.Post();
+//                  end;
+//               end;
+//            end;
 
-
-                  if not (tblPP.GotoKey()) then begin
-                     tblPP.Append();
-                     tblPP.FieldByName('TrkCode').AsString := sTrack;
-                     tblPP.FieldByName('RaceDate').AsDateTime := dtRaceDate;
-                     tblPP.FieldByName('HorseNbr').AsInteger := iIdx + 1;
-                     tblPP.FieldByName('PPNbr').AsInteger := iFldIdx;
-
-                     tblPP.FieldByName('Comment').Value := UpperCase(sppTripComment[iFldIdx]);
-                     tblPP.FieldByName('Comment2').Value := UpperCase(sppExtraComment[iFldIdx]);
-
-                     sY := CopyStr(sppraceDate[iFldIdx], 1, 4);
-                     sM := CopyStr(sppraceDate[iFldIdx], 5, 2);
-                     sD := CopyStr(sppraceDate[iFldIdx], 7, 2);
-                     sMonthDesc := GetMonthDesc(atoi(sM));
-
-                     wDay := atow(sD);
-                     wMonth := atow(sM);
-                     wYear := atow(sY);
-                     dtPPRaceDate := EncodeDate(wYear, wMonth, wDay);
-
-                     tblPP.FieldByName('Day').Value := UpperCase(sD);
-                     tblPP.FieldByName('MonthDesc').Value := UpperCase(sMonthDesc);
-                     tblPP.FieldByName('Year').Value := UpperCase(sY);
-
-                     tblPP.FieldByName('DateOfRace').AsDateTime := dtPPRaceDate;
-                     tblPP.FieldByName('DaysFromTodaysRace').AsFloat := DaysApart(dtPPRaceDate, dtRaceDate);
-
-                     tblPP.FieldByName('RaceNbr').Value := UpperCase(sppRaceNum[iFldIdx]);
-                     tblPP.FieldByName('TrkAbbr').Value := UpperCase(sppTrackCode[iFldIdx]);
-
-                     tblPP.FieldByName('Surf').Value := GetTSNSurface(sppSurface[iFldIdx]);
-                     if atoi(sPPAllSurface[iFldIdx]) = 1 then begin
-                        tblPP.FieldByName('Surf').Value := 'A';
-                     end;
-
-                     tblPP.FieldByName('TrkCond').Value := UpperCase(sppTrackCond[iFldIdx]);
-                     tblPP.FieldByName('DistanceDesc').Value := GetYardDistanceDesc(atoi(sppdistanceYards[iFldIdx]));
-
-                     tblPP.FieldByName('Time1stCall').AsFloat := atof(UpperCase(sppFirstFraction[iFldIdx]));
-                     tblPP.FieldByName('Time2ndCall').AsFloat := atof(UpperCase(sppSecondFraction[iFldIdx]));
-                     tblPP.FieldByName('TimeStrCall').AsFloat := atof(UpperCase(sppThirdFraction[iFldIdx]));
-                     tblPP.FieldByName('TimeFinCall').AsFloat := atof(UpperCase(sppFinalTime[iFldIdx]));
-
-                     tblPP.FieldByName('Pos1stCall').AsFloat := atof(sppFirstCallPos[iFldIdx]);
-                     tblPP.FieldByName('Pos2ndCall').AsFloat := atof(sppSecondCallPos[iFldIdx]);
-                     tblPP.FieldByName('PosStrCall').AsFloat := atof(sppStretchPos[iFldIdx]);
-                     tblPP.FieldByName('PosFinCall').AsFloat := atof(sppFinishPos[iFldIdx]);
-
-                     tblPP.FieldByName('BL1stCall').AsFloat := atof(sppFirstCallBeaten[iFldIdx]);
-                     tblPP.FieldByName('BL2ndCall').AsFloat := atof(sppSecondCallBeaten[iFldIdx]);
-                     tblPP.FieldByName('BLStrCall').AsFloat := atof(sppStretchBeaten[iFldIdx]);
-                     tblPP.FieldByName('BLFinCall').AsFloat := atof(sppFinishBeaten[iFldIdx]);
-
-                     tblPP.FieldByName('ClmPrice').AsInteger := atoi(sppClaimingPriceHorse[iFldIdx]);
-                     tblPP.FieldByName('Claimed').Value := UpperCase(sppClaimedCode[iFldIdx]);
-                     tblPP.FieldByName('Purse').AsInteger := atoi(sppPurse[iFldIdx]);
-
-                     tblPP.FieldByName('RaceConditions').Value := UpperCase(sppRaceClassification[iFldIdx]);
-                     tblPP.FieldByName('RaceDesc').Value := GetTSNRaceDesc(sppRaceType[iFldIdx]);
-                     tblPP.FieldByName('RaceType').Value := GetTSNRaceClass(sppRaceType[iFldIdx]);
-
-                     tblPP.FieldByName('Speed').AsInteger := atoi(sppBrisSpeedRating[iFldIdx]);
-                     tblPP.FieldByName('PostPos').AsInteger := atoi(sppPostPosition[iFldIdx]);
-
-                     tblPP.FieldByName('GateBreak').Value := atof(sppStartCallBeatenMargin[iFldIdx]);
-                     tblPP.FieldByName('Len1Back').Value := atof(sppFirstCallBeatenMargin[iFldIdx]);
-                     tblPP.FieldByName('Len2Back').Value := atof(sppSecondCallBeatenMargin[iFldIdx]);
-                     tblPP.FieldByName('StLenBack').Value := atof(sppStretchBeatenMargin[iFldIdx]);
-                     tblPP.FieldByName('FinishBeaten').Value := atof(sppFinishBeatenMargin[iFldIdx]);
-
-                     if atoi(sppFinishPos[iFldIdx]) <> atoi(sppMoneyPos[iFldIdx]) then begin
-                        tblPP.FieldByName('DQIndicator').Value := 'DQ';
-                     end;
-
-                     tblPP.FieldByName('Jockey').Value := sppJockey[iFldIdx];
-                     tblPP.FieldByName('Equip').Value := sppEquipment[iFldIdx];
-
-                     tblPP.FieldByName('Weight').AsInteger := atoi(sppWeight[iFldIdx]);
-                     tblPP.FieldByName('Odds').AsFloat := atof(sppOdds[iFldIdx]);
-
-                     if Trim(sppFavoriteIndicator[iFldIdx]) = '1' then begin
-                        tblPP.FieldByName('FavoriteIndicator').Value := '*';
-                     end;
-
-                     tblPP.FieldByName('HorseTime').AsFloat := atof(UpperCase(sppFinalTime[iFldIdx]));
-                     tblPP.FieldByName('FldSize').AsInteger := atoi(sppNumEntrants[iFldIdx]);
-
-                     tblPP.FieldByName('EarlyPace').Value := atof(sppBris2fPaceRating[iFldIdx]);
-                     tblPP.FieldByName('MiddlePace').Value := atof(sppBris4fPaceRating[iFldIdx]);
-                     tblPP.FieldByName('LatePace').Value := atof(sppBrisLatePaceRating[iFldIdx]);
-
-                     tblPP.FieldByName('HHTrkCode').AsString := sTrack;
-                     tblPP.FieldByName('HHRaceDate').AsDateTime := dtRaceDate;
-                     tblPP.FieldByName('HHRaceNbr').AsInteger := atoi(sppraceNum[iFldIdx]);
-                     tblPP.FieldByName('HHPostPos').AsInteger := atoi(spppostPosition[iFldIdx]);
-
-                     tblPP.Post();
-                  end;
-               end;
-            end;
          end;
 
       except

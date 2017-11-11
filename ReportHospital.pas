@@ -1103,6 +1103,8 @@ type
     tblRacesLoopMiddlePacePar: TIntegerField;
     tblRacesLoopLatePacePar: TIntegerField;
     tblRacesLoopSpeedPacePar: TIntegerField;
+    tblEntriesPSR: TFloatField;
+    tblEntriesLateMove: TFloatField;
     ppHeaderBand1: TppHeaderBand;
     ppDBText1: TppDBText;
     ppDBText2: TppDBText;
@@ -1352,6 +1354,7 @@ type
     ppLine38: TppLine;
     ppLine39: TppLine;
     TotalTrnWork120PlusWinPct: TppDBText;
+    PSR: TppDBText;
     ppFooterBand1: TppFooterBand;
     ppSummaryWagerTypeBand: TppSummaryBand;
     dbWagerType: TppDBMemo;

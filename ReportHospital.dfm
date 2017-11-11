@@ -1,6 +1,6 @@
 object HospitalReportForm: THospitalReportForm
-  Left = 522
-  Top = 144
+  Left = 158
+  Top = 103
   Width = 576
   Height = 333
   Caption = 'Hospital Report'
@@ -66,7 +66,6 @@ object HospitalReportForm: THospitalReportForm
     Top = 184
   end
   object tblRacesMaster: TDBISAMTable
-    Active = True
     AutoCalcFields = False
     AutoDisplayLabels = False
     CopyOnAppend = False
@@ -1195,1991 +1194,6 @@ object HospitalReportForm: THospitalReportForm
     OnTraversal = plRacesReportTraversal
     Left = 24
     Top = 200
-    object plRacesReportppField1: TppField
-      FieldAlias = 'TrkCode'
-      FieldName = 'TrkCode'
-      FieldLength = 0
-      DisplayWidth = 0
-      Position = 0
-    end
-    object plRacesReportppField2: TppField
-      FieldAlias = 'RaceDate'
-      FieldName = 'RaceDate'
-      FieldLength = 0
-      DataType = dtDate
-      DisplayWidth = 10
-      Position = 1
-    end
-    object plRacesReportppField3: TppField
-      FieldAlias = 'RangeRaceDate'
-      FieldName = 'RangeRaceDate'
-      FieldLength = 0
-      DataType = dtDate
-      DisplayWidth = 10
-      Position = 2
-    end
-    object plRacesReportppField4: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'RaceNbr'
-      FieldName = 'RaceNbr'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 3
-    end
-    object plRacesReportppField5: TppField
-      FieldAlias = 'EstTimeOfRace'
-      FieldName = 'EstTimeOfRace'
-      FieldLength = 0
-      DataType = dtTime
-      DisplayWidth = 10
-      Position = 4
-    end
-    object plRacesReportppField6: TppField
-      FieldAlias = 'EstTimeOfFirstRace'
-      FieldName = 'EstTimeOfFirstRace'
-      FieldLength = 0
-      DataType = dtTime
-      DisplayWidth = 10
-      Position = 5
-    end
-    object plRacesReportppField7: TppField
-      FieldAlias = 'LocalTimeOfRace'
-      FieldName = 'LocalTimeOfRace'
-      FieldLength = 0
-      DataType = dtTime
-      DisplayWidth = 10
-      Position = 6
-    end
-    object plRacesReportppField8: TppField
-      FieldAlias = 'CT'
-      FieldName = 'CT'
-      FieldLength = 10
-      DisplayWidth = 10
-      Position = 7
-    end
-    object plRacesReportppField9: TppField
-      FieldAlias = 'Surface'
-      FieldName = 'Surface'
-      FieldLength = 1
-      DisplayWidth = 1
-      Position = 8
-    end
-    object plRacesReportppField10: TppField
-      FieldAlias = 'ActualSurface'
-      FieldName = 'ActualSurface'
-      FieldLength = 1
-      DisplayWidth = 1
-      Position = 9
-    end
-    object plRacesReportppField11: TppField
-      FieldAlias = 'AltSurface'
-      FieldName = 'AltSurface'
-      FieldLength = 10
-      DisplayWidth = 10
-      Position = 10
-    end
-    object plRacesReportppField12: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'DistanceInFeet'
-      FieldName = 'DistanceInFeet'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 11
-    end
-    object plRacesReportppField13: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'DistanceInYards'
-      FieldName = 'DistanceInYards'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 12
-    end
-    object plRacesReportppField14: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'DistanceInFurlongs'
-      FieldName = 'DistanceInFurlongs'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 13
-    end
-    object plRacesReportppField15: TppField
-      FieldAlias = 'DistanceDesc'
-      FieldName = 'DistanceDesc'
-      FieldLength = 15
-      DisplayWidth = 15
-      Position = 14
-    end
-    object plRacesReportppField16: TppField
-      FieldAlias = 'RaceType'
-      FieldName = 'RaceType'
-      FieldLength = 4
-      DisplayWidth = 4
-      Position = 15
-    end
-    object plRacesReportppField17: TppField
-      FieldAlias = 'TypeOfRace'
-      FieldName = 'TypeOfRace'
-      FieldLength = 1
-      DisplayWidth = 1
-      Position = 16
-    end
-    object plRacesReportppField18: TppField
-      FieldAlias = 'RaceTypeDesc'
-      FieldName = 'RaceTypeDesc'
-      FieldLength = 25
-      DisplayWidth = 25
-      Position = 17
-    end
-    object plRacesReportppField19: TppField
-      FieldAlias = 'RaceDesc'
-      FieldName = 'RaceDesc'
-      FieldLength = 250
-      DisplayWidth = 250
-      Position = 18
-    end
-    object plRacesReportppField20: TppField
-      FieldAlias = 'RaceCondition'
-      FieldName = 'RaceCondition'
-      FieldLength = 0
-      DataType = dtMemo
-      DisplayWidth = 10
-      Position = 19
-      Searchable = False
-      Sortable = False
-    end
-    object plRacesReportppField21: TppField
-      FieldAlias = 'IsTurfRace'
-      FieldName = 'IsTurfRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 20
-    end
-    object plRacesReportppField22: TppField
-      FieldAlias = 'IsRouteRace'
-      FieldName = 'IsRouteRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 21
-    end
-    object plRacesReportppField23: TppField
-      FieldAlias = 'IsMaidenSpecialRace'
-      FieldName = 'IsMaidenSpecialRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 22
-    end
-    object plRacesReportppField24: TppField
-      FieldAlias = 'IsMaidenClaimingRace'
-      FieldName = 'IsMaidenClaimingRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 23
-    end
-    object plRacesReportppField25: TppField
-      FieldAlias = 'IsMaidenOrTurfRace'
-      FieldName = 'IsMaidenOrTurfRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 24
-    end
-    object plRacesReportppField26: TppField
-      FieldAlias = 'IsTwoYearOldRace'
-      FieldName = 'IsTwoYearOldRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 25
-    end
-    object plRacesReportppField27: TppField
-      FieldAlias = 'IsClaimingRace'
-      FieldName = 'IsClaimingRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 26
-    end
-    object plRacesReportppField28: TppField
-      FieldAlias = 'AgeSexRestriction'
-      FieldName = 'AgeSexRestriction'
-      FieldLength = 3
-      DisplayWidth = 3
-      Position = 27
-    end
-    object plRacesReportppField29: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Purse'
-      FieldName = 'Purse'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 28
-    end
-    object plRacesReportppField30: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'ClaimingPrice'
-      FieldName = 'ClaimingPrice'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 29
-    end
-    object plRacesReportppField31: TppField
-      FieldAlias = 'SimulcastTrkCode'
-      FieldName = 'SimulcastTrkCode'
-      FieldLength = 3
-      DisplayWidth = 3
-      Position = 30
-    end
-    object plRacesReportppField32: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'SimulcastRaceNbr'
-      FieldName = 'SimulcastRaceNbr'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 31
-    end
-    object plRacesReportppField33: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'RaceAutoInc'
-      FieldName = 'RaceAutoInc'
-      FieldLength = 0
-      DataType = dtLongint
-      DisplayWidth = 10
-      Position = 32
-    end
-    object plRacesReportppField34: TppField
-      FieldAlias = 'TimeDiff'
-      FieldName = 'TimeDiff'
-      FieldLength = 0
-      DataType = dtTime
-      DisplayWidth = 10
-      Position = 33
-    end
-    object plRacesReportppField35: TppField
-      FieldAlias = 'IsDDRace'
-      FieldName = 'IsDDRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 34
-    end
-    object plRacesReportppField36: TppField
-      FieldAlias = 'DDRaceNbr'
-      FieldName = 'DDRaceNbr'
-      FieldLength = 10
-      DisplayWidth = 10
-      Position = 35
-    end
-    object plRacesReportppField37: TppField
-      FieldAlias = 'IsPk3Race'
-      FieldName = 'IsPk3Race'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 36
-    end
-    object plRacesReportppField38: TppField
-      FieldAlias = 'Pk3RaceNbr'
-      FieldName = 'Pk3RaceNbr'
-      FieldLength = 10
-      DisplayWidth = 10
-      Position = 37
-    end
-    object plRacesReportppField39: TppField
-      FieldAlias = 'IsPk4Race'
-      FieldName = 'IsPk4Race'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 38
-    end
-    object plRacesReportppField40: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pk4RaceNbr'
-      FieldName = 'Pk4RaceNbr'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 39
-    end
-    object plRacesReportppField41: TppField
-      FieldAlias = 'IsPk6Race'
-      FieldName = 'IsPk6Race'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 40
-    end
-    object plRacesReportppField42: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'PK6RaceNbr'
-      FieldName = 'PK6RaceNbr'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 41
-    end
-    object plRacesReportppField43: TppField
-      FieldAlias = 'IsTriRace'
-      FieldName = 'IsTriRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 42
-    end
-    object plRacesReportppField44: TppField
-      FieldAlias = 'IsSuperRace'
-      FieldName = 'IsSuperRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 43
-    end
-    object plRacesReportppField45: TppField
-      FieldAlias = 'IsQuiRace'
-      FieldName = 'IsQuiRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 44
-    end
-    object plRacesReportppField46: TppField
-      FieldAlias = 'IsExaRace'
-      FieldName = 'IsExaRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 45
-    end
-    object plRacesReportppField47: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'NbrTriKey'
-      FieldName = 'NbrTriKey'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 46
-    end
-    object plRacesReportppField48: TppField
-      FieldAlias = 'IsPk3Leg1'
-      FieldName = 'IsPk3Leg1'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 47
-    end
-    object plRacesReportppField49: TppField
-      FieldAlias = 'IsPk4Leg1'
-      FieldName = 'IsPk4Leg1'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 48
-    end
-    object plRacesReportppField50: TppField
-      FieldAlias = 'IsPk6Leg1'
-      FieldName = 'IsPk6Leg1'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 49
-    end
-    object plRacesReportppField51: TppField
-      FieldAlias = 'IsPk9Leg1'
-      FieldName = 'IsPk9Leg1'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 50
-    end
-    object plRacesReportppField52: TppField
-      FieldAlias = 'IsDDLeg1'
-      FieldName = 'IsDDLeg1'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 51
-    end
-    object plRacesReportppField53: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TotalPk3Choices'
-      FieldName = 'TotalPk3Choices'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 52
-    end
-    object plRacesReportppField54: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pk3KeyType'
-      FieldName = 'Pk3KeyType'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 53
-    end
-    object plRacesReportppField55: TppField
-      FieldAlias = 'Pk3Selected'
-      FieldName = 'Pk3Selected'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 54
-    end
-    object plRacesReportppField56: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TotalTriChoices'
-      FieldName = 'TotalTriChoices'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 55
-    end
-    object plRacesReportppField57: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TotalSuperChoices'
-      FieldName = 'TotalSuperChoices'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 56
-    end
-    object plRacesReportppField58: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TotalDDChoices'
-      FieldName = 'TotalDDChoices'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 57
-    end
-    object plRacesReportppField59: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TopLastSpeed'
-      FieldName = 'TopLastSpeed'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 58
-    end
-    object plRacesReportppField60: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TopBackSpeed'
-      FieldName = 'TopBackSpeed'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 59
-    end
-    object plRacesReportppField61: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TopLastClass'
-      FieldName = 'TopLastClass'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 60
-    end
-    object plRacesReportppField62: TppField
-      FieldAlias = 'AltWager1'
-      FieldName = 'AltWager1'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 61
-    end
-    object plRacesReportppField63: TppField
-      FieldAlias = 'AltWager2'
-      FieldName = 'AltWager2'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 62
-    end
-    object plRacesReportppField64: TppField
-      FieldAlias = 'AltWager3'
-      FieldName = 'AltWager3'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 63
-    end
-    object plRacesReportppField65: TppField
-      FieldAlias = 'AltWager4'
-      FieldName = 'AltWager4'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 64
-    end
-    object plRacesReportppField66: TppField
-      FieldAlias = 'AltWager5'
-      FieldName = 'AltWager5'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 65
-    end
-    object plRacesReportppField67: TppField
-      FieldAlias = 'AltWager6'
-      FieldName = 'AltWager6'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 66
-    end
-    object plRacesReportppField68: TppField
-      FieldAlias = 'Wager1'
-      FieldName = 'Wager1'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 67
-    end
-    object plRacesReportppField69: TppField
-      FieldAlias = 'Wager2'
-      FieldName = 'Wager2'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 68
-    end
-    object plRacesReportppField70: TppField
-      FieldAlias = 'Wager3'
-      FieldName = 'Wager3'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 69
-    end
-    object plRacesReportppField71: TppField
-      FieldAlias = 'Wager4'
-      FieldName = 'Wager4'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 70
-    end
-    object plRacesReportppField72: TppField
-      FieldAlias = 'Wager5'
-      FieldName = 'Wager5'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 71
-    end
-    object plRacesReportppField73: TppField
-      FieldAlias = 'Wager6'
-      FieldName = 'Wager6'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 72
-    end
-    object plRacesReportppField74: TppField
-      FieldAlias = 'WagerFinalOrder'
-      FieldName = 'WagerFinalOrder'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 73
-    end
-    object plRacesReportppField75: TppField
-      FieldAlias = 'WagerSheetOrder'
-      FieldName = 'WagerSheetOrder'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 74
-    end
-    object plRacesReportppField76: TppField
-      FieldAlias = 'TodaysWagerOrder'
-      FieldName = 'TodaysWagerOrder'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 75
-    end
-    object plRacesReportppField77: TppField
-      FieldAlias = 'Tri'
-      FieldName = 'Tri'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 76
-    end
-    object plRacesReportppField78: TppField
-      FieldAlias = 'DD'
-      FieldName = 'DD'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 77
-    end
-    object plRacesReportppField79: TppField
-      FieldAlias = 'Super'
-      FieldName = 'Super'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 78
-    end
-    object plRacesReportppField80: TppField
-      FieldAlias = 'Exacta'
-      FieldName = 'Exacta'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 79
-    end
-    object plRacesReportppField81: TppField
-      FieldAlias = 'Quinella'
-      FieldName = 'Quinella'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 80
-    end
-    object plRacesReportppField82: TppField
-      FieldAlias = 'Pick3'
-      FieldName = 'Pick3'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 81
-    end
-    object plRacesReportppField83: TppField
-      FieldAlias = 'Pick4'
-      FieldName = 'Pick4'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 82
-    end
-    object plRacesReportppField84: TppField
-      FieldAlias = 'Pick6'
-      FieldName = 'Pick6'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 83
-    end
-    object plRacesReportppField85: TppField
-      FieldAlias = 'IsPrintedOnValueSheet'
-      FieldName = 'IsPrintedOnValueSheet'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 84
-    end
-    object plRacesReportppField86: TppField
-      FieldAlias = 'IsYoubetTrack'
-      FieldName = 'IsYoubetTrack'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 85
-    end
-    object plRacesReportppField87: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'WPSWagerAmt'
-      FieldName = 'WPSWagerAmt'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 86
-    end
-    object plRacesReportppField88: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'SfcWagerAmt'
-      FieldName = 'SfcWagerAmt'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 87
-    end
-    object plRacesReportppField89: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TriWagerAmt'
-      FieldName = 'TriWagerAmt'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 88
-    end
-    object plRacesReportppField90: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'ExaWagerAmt'
-      FieldName = 'ExaWagerAmt'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 89
-    end
-    object plRacesReportppField91: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'QuiWagerAmt'
-      FieldName = 'QuiWagerAmt'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 90
-    end
-    object plRacesReportppField92: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'DDWagerAmt'
-      FieldName = 'DDWagerAmt'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 91
-    end
-    object plRacesReportppField93: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pk3WagerAmt'
-      FieldName = 'Pk3WagerAmt'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 92
-    end
-    object plRacesReportppField94: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pk4WagerAmt'
-      FieldName = 'Pk4WagerAmt'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 93
-    end
-    object plRacesReportppField95: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pk6WagerAmt'
-      FieldName = 'Pk6WagerAmt'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 94
-    end
-    object plRacesReportppField96: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TopEarlyPace'
-      FieldName = 'TopEarlyPace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 95
-    end
-    object plRacesReportppField97: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TopMiddlePace'
-      FieldName = 'TopMiddlePace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 96
-    end
-    object plRacesReportppField98: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TopLatePace'
-      FieldName = 'TopLatePace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 97
-    end
-    object plRacesReportppField99: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TopEarlyPacePos'
-      FieldName = 'TopEarlyPacePos'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 98
-    end
-    object plRacesReportppField100: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TopMiddlePacePos'
-      FieldName = 'TopMiddlePacePos'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 99
-    end
-    object plRacesReportppField101: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TopLatePacePos'
-      FieldName = 'TopLatePacePos'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 100
-    end
-    object plRacesReportppField102: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'SecondEarlyPace'
-      FieldName = 'SecondEarlyPace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 101
-    end
-    object plRacesReportppField103: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'SecondMiddlePace'
-      FieldName = 'SecondMiddlePace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 102
-    end
-    object plRacesReportppField104: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'SecondLatePace'
-      FieldName = 'SecondLatePace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 103
-    end
-    object plRacesReportppField105: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'SecondEarlyPacePos'
-      FieldName = 'SecondEarlyPacePos'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 104
-    end
-    object plRacesReportppField106: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'SecondMiddlePacePos'
-      FieldName = 'SecondMiddlePacePos'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 105
-    end
-    object plRacesReportppField107: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'SecondLatePacePos'
-      FieldName = 'SecondLatePacePos'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 106
-    end
-    object plRacesReportppField108: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TopPower'
-      FieldName = 'TopPower'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 107
-    end
-    object plRacesReportppField109: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'SecondTopPower'
-      FieldName = 'SecondTopPower'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 108
-    end
-    object plRacesReportppField110: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'ThirdTopPower'
-      FieldName = 'ThirdTopPower'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 109
-    end
-    object plRacesReportppField111: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'FourthTopPower'
-      FieldName = 'FourthTopPower'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 110
-    end
-    object plRacesReportppField112: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'MaxWPSBet'
-      FieldName = 'MaxWPSBet'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 111
-    end
-    object plRacesReportppField113: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'MaxGimmickBet'
-      FieldName = 'MaxGimmickBet'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 112
-    end
-    object plRacesReportppField114: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'NbrStarters'
-      FieldName = 'NbrStarters'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 113
-    end
-    object plRacesReportppField115: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'NbrDebutStarters'
-      FieldName = 'NbrDebutStarters'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 114
-    end
-    object plRacesReportppField116: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'NbrDebutTwoStarters'
-      FieldName = 'NbrDebutTwoStarters'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 115
-    end
-    object plRacesReportppField117: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'NbrTurfDebutStarters'
-      FieldName = 'NbrTurfDebutStarters'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 116
-    end
-    object plRacesReportppField118: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'NbrRouteDebutStarters'
-      FieldName = 'NbrRouteDebutStarters'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 117
-    end
-    object plRacesReportppField119: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'NbrScratchedStarters'
-      FieldName = 'NbrScratchedStarters'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 118
-    end
-    object plRacesReportppField120: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'NbrRunners'
-      FieldName = 'NbrRunners'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 119
-    end
-    object plRacesReportppField121: TppField
-      FieldAlias = 'OrigSurface'
-      FieldName = 'OrigSurface'
-      FieldLength = 1
-      DisplayWidth = 1
-      Position = 120
-    end
-    object plRacesReportppField122: TppField
-      FieldAlias = 'IsPk9Place'
-      FieldName = 'IsPk9Place'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 121
-    end
-    object plRacesReportppField123: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pk9RaceNbr'
-      FieldName = 'Pk9RaceNbr'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 122
-    end
-    object plRacesReportppField124: TppField
-      FieldAlias = 'RaceCondition1'
-      FieldName = 'RaceCondition1'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 123
-    end
-    object plRacesReportppField125: TppField
-      FieldAlias = 'RaceCondition2'
-      FieldName = 'RaceCondition2'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 124
-    end
-    object plRacesReportppField126: TppField
-      FieldAlias = 'RaceCondition3'
-      FieldName = 'RaceCondition3'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 125
-    end
-    object plRacesReportppField127: TppField
-      FieldAlias = 'RaceCondition4'
-      FieldName = 'RaceCondition4'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 126
-    end
-    object plRacesReportppField128: TppField
-      FieldAlias = 'RaceCondition5'
-      FieldName = 'RaceCondition5'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 127
-    end
-    object plRacesReportppField129: TppField
-      FieldAlias = 'RaceCondition6'
-      FieldName = 'RaceCondition6'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 128
-    end
-    object plRacesReportppField130: TppField
-      FieldAlias = 'BetLine'
-      FieldName = 'BetLine'
-      FieldLength = 500
-      DisplayWidth = 500
-      Position = 129
-    end
-    object plRacesReportppField131: TppField
-      FieldAlias = 'RaceConditions'
-      FieldName = 'RaceConditions'
-      FieldLength = 15
-      DisplayWidth = 15
-      Position = 130
-    end
-    object plRacesReportppField132: TppField
-      FieldAlias = 'TrkCond'
-      FieldName = 'TrkCond'
-      FieldLength = 3
-      DisplayWidth = 3
-      Position = 131
-    end
-    object plRacesReportppField133: TppField
-      FieldAlias = 'OrigDistanceDesc'
-      FieldName = 'OrigDistanceDesc'
-      FieldLength = 20
-      DisplayWidth = 20
-      Position = 132
-    end
-    object plRacesReportppField134: TppField
-      FieldAlias = 'IsExactaMatched'
-      FieldName = 'IsExactaMatched'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 133
-    end
-    object plRacesReportppField135: TppField
-      FieldAlias = 'ExactaNbrs'
-      FieldName = 'ExactaNbrs'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 134
-    end
-    object plRacesReportppField136: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'ExactaWager'
-      FieldName = 'ExactaWager'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 135
-    end
-    object plRacesReportppField137: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'ExactaPayout'
-      FieldName = 'ExactaPayout'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 136
-    end
-    object plRacesReportppField138: TppField
-      FieldAlias = 'IsTrifectaMatched'
-      FieldName = 'IsTrifectaMatched'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 137
-    end
-    object plRacesReportppField139: TppField
-      FieldAlias = 'TrifectaNbrs'
-      FieldName = 'TrifectaNbrs'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 138
-    end
-    object plRacesReportppField140: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TrifectaWager'
-      FieldName = 'TrifectaWager'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 139
-    end
-    object plRacesReportppField141: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TrifectaPayout'
-      FieldName = 'TrifectaPayout'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 140
-    end
-    object plRacesReportppField142: TppField
-      FieldAlias = 'IsSuperfectaMatched'
-      FieldName = 'IsSuperfectaMatched'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 141
-    end
-    object plRacesReportppField143: TppField
-      FieldAlias = 'SuperfectaNbrs'
-      FieldName = 'SuperfectaNbrs'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 142
-    end
-    object plRacesReportppField144: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'SuperfectaWager'
-      FieldName = 'SuperfectaWager'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 143
-    end
-    object plRacesReportppField145: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'SuperfectaPayout'
-      FieldName = 'SuperfectaPayout'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 144
-    end
-    object plRacesReportppField146: TppField
-      FieldAlias = 'IsDailyDoubleMatchedFirstRace'
-      FieldName = 'IsDailyDoubleMatchedFirstRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 145
-    end
-    object plRacesReportppField147: TppField
-      FieldAlias = 'IsDailyDoubleMatchedLastRace'
-      FieldName = 'IsDailyDoubleMatchedLastRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 146
-    end
-    object plRacesReportppField148: TppField
-      FieldAlias = 'DDFirstRace'
-      FieldName = 'DDFirstRace'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 147
-    end
-    object plRacesReportppField149: TppField
-      FieldAlias = 'DDLastRace'
-      FieldName = 'DDLastRace'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 148
-    end
-    object plRacesReportppField150: TppField
-      FieldAlias = 'DailyDoubleNbrsFirstRace'
-      FieldName = 'DailyDoubleNbrsFirstRace'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 149
-    end
-    object plRacesReportppField151: TppField
-      FieldAlias = 'DailyDoubleNbrsLastRace'
-      FieldName = 'DailyDoubleNbrsLastRace'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 150
-    end
-    object plRacesReportppField152: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'DailyDoubleWagerFirstRace'
-      FieldName = 'DailyDoubleWagerFirstRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 151
-    end
-    object plRacesReportppField153: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'DailyDoubleWagerLastRace'
-      FieldName = 'DailyDoubleWagerLastRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 152
-    end
-    object plRacesReportppField154: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'DailyDoublePayoutFirstRace'
-      FieldName = 'DailyDoublePayoutFirstRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 153
-    end
-    object plRacesReportppField155: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'DailyDoublePayoutLastRace'
-      FieldName = 'DailyDoublePayoutLastRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 154
-    end
-    object plRacesReportppField156: TppField
-      FieldAlias = 'IsQuinellaMatched'
-      FieldName = 'IsQuinellaMatched'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 155
-    end
-    object plRacesReportppField157: TppField
-      FieldAlias = 'QuinellaNbrs'
-      FieldName = 'QuinellaNbrs'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 156
-    end
-    object plRacesReportppField158: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'QuinellaWager'
-      FieldName = 'QuinellaWager'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 157
-    end
-    object plRacesReportppField159: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'QuinellaPayout'
-      FieldName = 'QuinellaPayout'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 158
-    end
-    object plRacesReportppField160: TppField
-      FieldAlias = 'IsPick3MatchedFirstRace'
-      FieldName = 'IsPick3MatchedFirstRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 159
-    end
-    object plRacesReportppField161: TppField
-      FieldAlias = 'IsPick3MatchedLastRace'
-      FieldName = 'IsPick3MatchedLastRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 160
-    end
-    object plRacesReportppField162: TppField
-      FieldAlias = 'Pick3FirstRace'
-      FieldName = 'Pick3FirstRace'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 161
-    end
-    object plRacesReportppField163: TppField
-      FieldAlias = 'Pick3LastRace'
-      FieldName = 'Pick3LastRace'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 162
-    end
-    object plRacesReportppField164: TppField
-      FieldAlias = 'Pick3NbrsFirstRace'
-      FieldName = 'Pick3NbrsFirstRace'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 163
-    end
-    object plRacesReportppField165: TppField
-      FieldAlias = 'Pick3NbrsLastRace'
-      FieldName = 'Pick3NbrsLastRace'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 164
-    end
-    object plRacesReportppField166: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pick3WagerFirstRace'
-      FieldName = 'Pick3WagerFirstRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 165
-    end
-    object plRacesReportppField167: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pick3WagerLastRace'
-      FieldName = 'Pick3WagerLastRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 166
-    end
-    object plRacesReportppField168: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pick3PayoutFirstRace'
-      FieldName = 'Pick3PayoutFirstRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 167
-    end
-    object plRacesReportppField169: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pick3PayoutLastRace'
-      FieldName = 'Pick3PayoutLastRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 168
-    end
-    object plRacesReportppField170: TppField
-      FieldAlias = 'Pick3NbrsLeg1'
-      FieldName = 'Pick3NbrsLeg1'
-      FieldLength = 25
-      DisplayWidth = 25
-      Position = 169
-    end
-    object plRacesReportppField171: TppField
-      FieldAlias = 'Pick3NbrsLeg2'
-      FieldName = 'Pick3NbrsLeg2'
-      FieldLength = 25
-      DisplayWidth = 25
-      Position = 170
-    end
-    object plRacesReportppField172: TppField
-      FieldAlias = 'Pick3NbrsLeg3'
-      FieldName = 'Pick3NbrsLeg3'
-      FieldLength = 25
-      DisplayWidth = 25
-      Position = 171
-    end
-    object plRacesReportppField173: TppField
-      FieldAlias = 'IsPick4MatchedFirstRace'
-      FieldName = 'IsPick4MatchedFirstRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 172
-    end
-    object plRacesReportppField174: TppField
-      FieldAlias = 'IsPick4MatchedLastRace'
-      FieldName = 'IsPick4MatchedLastRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 173
-    end
-    object plRacesReportppField175: TppField
-      FieldAlias = 'Pick4FirstRace'
-      FieldName = 'Pick4FirstRace'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 174
-    end
-    object plRacesReportppField176: TppField
-      FieldAlias = 'Pick4LastRace'
-      FieldName = 'Pick4LastRace'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 175
-    end
-    object plRacesReportppField177: TppField
-      FieldAlias = 'Pick4NbrsFirstRace'
-      FieldName = 'Pick4NbrsFirstRace'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 176
-    end
-    object plRacesReportppField178: TppField
-      FieldAlias = 'Pick4NbrsLastRace'
-      FieldName = 'Pick4NbrsLastRace'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 177
-    end
-    object plRacesReportppField179: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pick4WagerFirstRace'
-      FieldName = 'Pick4WagerFirstRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 178
-    end
-    object plRacesReportppField180: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pick4WagerLastRace'
-      FieldName = 'Pick4WagerLastRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 179
-    end
-    object plRacesReportppField181: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pick4PayoutFirstRace'
-      FieldName = 'Pick4PayoutFirstRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 180
-    end
-    object plRacesReportppField182: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pick4PayoutLastRace'
-      FieldName = 'Pick4PayoutLastRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 181
-    end
-    object plRacesReportppField183: TppField
-      FieldAlias = 'Pick4NbrsLeg1'
-      FieldName = 'Pick4NbrsLeg1'
-      FieldLength = 25
-      DisplayWidth = 25
-      Position = 182
-    end
-    object plRacesReportppField184: TppField
-      FieldAlias = 'Pick4NbrsLeg2'
-      FieldName = 'Pick4NbrsLeg2'
-      FieldLength = 25
-      DisplayWidth = 25
-      Position = 183
-    end
-    object plRacesReportppField185: TppField
-      FieldAlias = 'Pick4NbrsLeg3'
-      FieldName = 'Pick4NbrsLeg3'
-      FieldLength = 25
-      DisplayWidth = 25
-      Position = 184
-    end
-    object plRacesReportppField186: TppField
-      FieldAlias = 'Pick4NbrsLeg4'
-      FieldName = 'Pick4NbrsLeg4'
-      FieldLength = 25
-      DisplayWidth = 25
-      Position = 185
-    end
-    object plRacesReportppField187: TppField
-      FieldAlias = 'IsPick6MatchedFirstRace'
-      FieldName = 'IsPick6MatchedFirstRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 186
-    end
-    object plRacesReportppField188: TppField
-      FieldAlias = 'IsPick6MatchedLastRace'
-      FieldName = 'IsPick6MatchedLastRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 187
-    end
-    object plRacesReportppField189: TppField
-      FieldAlias = 'Pick6FirstRace'
-      FieldName = 'Pick6FirstRace'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 188
-    end
-    object plRacesReportppField190: TppField
-      FieldAlias = 'Pick6LastRace'
-      FieldName = 'Pick6LastRace'
-      FieldLength = 40
-      DisplayWidth = 40
-      Position = 189
-    end
-    object plRacesReportppField191: TppField
-      FieldAlias = 'Pick6NbrsFirstRace'
-      FieldName = 'Pick6NbrsFirstRace'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 190
-    end
-    object plRacesReportppField192: TppField
-      FieldAlias = 'Pick6NbrsLastRace'
-      FieldName = 'Pick6NbrsLastRace'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 191
-    end
-    object plRacesReportppField193: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pick6WagerFirstRace'
-      FieldName = 'Pick6WagerFirstRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 192
-    end
-    object plRacesReportppField194: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pick6WagerLastRace'
-      FieldName = 'Pick6WagerLastRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 193
-    end
-    object plRacesReportppField195: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pick6PayoutFirstRace'
-      FieldName = 'Pick6PayoutFirstRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 194
-    end
-    object plRacesReportppField196: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'Pick6PayoutLastRace'
-      FieldName = 'Pick6PayoutLastRace'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 195
-    end
-    object plRacesReportppField197: TppField
-      FieldAlias = 'IsWinMatched'
-      FieldName = 'IsWinMatched'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 196
-    end
-    object plRacesReportppField198: TppField
-      FieldAlias = 'WinNbrs'
-      FieldName = 'WinNbrs'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 197
-    end
-    object plRacesReportppField199: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'WinPayout'
-      FieldName = 'WinPayout'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 198
-    end
-    object plRacesReportppField200: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'WinPlcPayout'
-      FieldName = 'WinPlcPayout'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 199
-    end
-    object plRacesReportppField201: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'WinShoPayout'
-      FieldName = 'WinShoPayout'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 200
-    end
-    object plRacesReportppField202: TppField
-      FieldAlias = 'IsPlcMatched'
-      FieldName = 'IsPlcMatched'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 201
-    end
-    object plRacesReportppField203: TppField
-      FieldAlias = 'PlcNbrs'
-      FieldName = 'PlcNbrs'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 202
-    end
-    object plRacesReportppField204: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'PlcPayout'
-      FieldName = 'PlcPayout'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 203
-    end
-    object plRacesReportppField205: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'PlcShoPayout'
-      FieldName = 'PlcShoPayout'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 204
-    end
-    object plRacesReportppField206: TppField
-      FieldAlias = 'IsShoMatched'
-      FieldName = 'IsShoMatched'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 205
-    end
-    object plRacesReportppField207: TppField
-      FieldAlias = 'ShoNbrs'
-      FieldName = 'ShoNbrs'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 206
-    end
-    object plRacesReportppField208: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'ShoPayout'
-      FieldName = 'ShoPayout'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 207
-    end
-    object plRacesReportppField209: TppField
-      FieldAlias = 'RaceShape'
-      FieldName = 'RaceShape'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 208
-    end
-    object plRacesReportppField210: TppField
-      FieldAlias = 'PostTimes'
-      FieldName = 'PostTimes'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 209
-    end
-    object plRacesReportppField211: TppField
-      FieldAlias = 'Is10CentSuperfectaRace'
-      FieldName = 'Is10CentSuperfectaRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 210
-    end
-    object plRacesReportppField212: TppField
-      FieldAlias = 'Is50CentTrifectaRace'
-      FieldName = 'Is50CentTrifectaRace'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 211
-    end
-    object plRacesReportppField213: TppField
-      FieldAlias = 'Is50CentPk3Race'
-      FieldName = 'Is50CentPk3Race'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 212
-    end
-    object plRacesReportppField214: TppField
-      FieldAlias = 'Is50CentPk4Race'
-      FieldName = 'Is50CentPk4Race'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 213
-    end
-    object plRacesReportppField215: TppField
-      FieldAlias = 'ET'
-      FieldName = 'ET'
-      FieldLength = 10
-      DisplayWidth = 10
-      Position = 214
-    end
-    object plRacesReportppField216: TppField
-      FieldAlias = 'MT'
-      FieldName = 'MT'
-      FieldLength = 10
-      DisplayWidth = 10
-      Position = 215
-    end
-    object plRacesReportppField217: TppField
-      FieldAlias = 'PT'
-      FieldName = 'PT'
-      FieldLength = 10
-      DisplayWidth = 10
-      Position = 216
-    end
-    object plRacesReportppField218: TppField
-      FieldAlias = 'IsWagerSheetSelected'
-      FieldName = 'IsWagerSheetSelected'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 217
-    end
-    object plRacesReportppField219: TppField
-      FieldAlias = 'Value'
-      FieldName = 'Value'
-      FieldLength = 10
-      DisplayWidth = 10
-      Position = 218
-    end
-    object plRacesReportppField220: TppField
-      FieldAlias = 'IsPTCTrack'
-      FieldName = 'IsPTCTrack'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 219
-    end
-    object plRacesReportppField221: TppField
-      FieldAlias = 'IsTwinSpiresTrack'
-      FieldName = 'IsTwinSpiresTrack'
-      FieldLength = 0
-      DataType = dtBoolean
-      DisplayWidth = 5
-      Position = 220
-    end
-    object plRacesReportppField222: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TodaysAltWagerWinPct'
-      FieldName = 'TodaysAltWagerWinPct'
-      FieldLength = 0
-      DataType = dtDouble
-      DisplayWidth = 10
-      Position = 221
-    end
-    object plRacesReportppField223: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'TodaysAltWagerWinPctRank'
-      FieldName = 'TodaysAltWagerWinPctRank'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 222
-    end
-    object plRacesReportppField224: TppField
-      FieldAlias = 'MudSheetOrder'
-      FieldName = 'MudSheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 223
-    end
-    object plRacesReportppField225: TppField
-      FieldAlias = 'TurfSheetOrder'
-      FieldName = 'TurfSheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 224
-    end
-    object plRacesReportppField226: TppField
-      FieldAlias = 'MaidenSheetOrder'
-      FieldName = 'MaidenSheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 225
-    end
-    object plRacesReportppField227: TppField
-      FieldAlias = 'DistanceSheetOrder'
-      FieldName = 'DistanceSheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 226
-    end
-    object plRacesReportppField228: TppField
-      FieldAlias = 'AWSheetOrder'
-      FieldName = 'AWSheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 227
-    end
-    object plRacesReportppField229: TppField
-      FieldAlias = 'TrainerSheetOrder'
-      FieldName = 'TrainerSheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 228
-    end
-    object plRacesReportppField230: TppField
-      FieldAlias = 'JockeySheetOrder'
-      FieldName = 'JockeySheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 229
-    end
-    object plRacesReportppField231: TppField
-      FieldAlias = 'OwnerSheetOrder'
-      FieldName = 'OwnerSheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 230
-    end
-    object plRacesReportppField232: TppField
-      FieldAlias = 'TrainerJockeySheetOrder'
-      FieldName = 'TrainerJockeySheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 231
-    end
-    object plRacesReportppField233: TppField
-      FieldAlias = 'ErlPaceSheetOrder'
-      FieldName = 'ErlPaceSheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 232
-    end
-    object plRacesReportppField234: TppField
-      FieldAlias = 'MidPaceSheetOrder'
-      FieldName = 'MidPaceSheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 233
-    end
-    object plRacesReportppField235: TppField
-      FieldAlias = 'LatePaceSheetOrder'
-      FieldName = 'LatePaceSheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 234
-    end
-    object plRacesReportppField236: TppField
-      FieldAlias = 'ErlPacePosSheetOrder'
-      FieldName = 'ErlPacePosSheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 235
-    end
-    object plRacesReportppField237: TppField
-      FieldAlias = 'MidPacePosSheetOrder'
-      FieldName = 'MidPacePosSheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 236
-    end
-    object plRacesReportppField238: TppField
-      FieldAlias = 'LatePacePosSheetOrder'
-      FieldName = 'LatePacePosSheetOrder'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 237
-    end
-    object plRacesReportppField239: TppField
-      FieldAlias = 'PacificTime'
-      FieldName = 'PacificTime'
-      FieldLength = 50
-      DisplayWidth = 50
-      Position = 238
-    end
-    object plRacesReportppField240: TppField
-      FieldAlias = 'PowerGapOrder'
-      FieldName = 'PowerGapOrder'
-      FieldLength = 100
-      DisplayWidth = 100
-      Position = 239
-    end
-    object plRacesReportppField241: TppField
-      FieldAlias = 'ErlPaceGapOrder'
-      FieldName = 'ErlPaceGapOrder'
-      FieldLength = 100
-      DisplayWidth = 100
-      Position = 240
-    end
-    object plRacesReportppField242: TppField
-      FieldAlias = 'MidPaceGapOrder'
-      FieldName = 'MidPaceGapOrder'
-      FieldLength = 100
-      DisplayWidth = 100
-      Position = 241
-    end
-    object plRacesReportppField243: TppField
-      FieldAlias = 'LatePaceGapOrder'
-      FieldName = 'LatePaceGapOrder'
-      FieldLength = 100
-      DisplayWidth = 100
-      Position = 242
-    end
-    object plRacesReportppField244: TppField
-      FieldAlias = 'ErlPacePosGapOrder'
-      FieldName = 'ErlPacePosGapOrder'
-      FieldLength = 100
-      DisplayWidth = 100
-      Position = 243
-    end
-    object plRacesReportppField245: TppField
-      FieldAlias = 'MidPacePosGapOrder'
-      FieldName = 'MidPacePosGapOrder'
-      FieldLength = 100
-      DisplayWidth = 100
-      Position = 244
-    end
-    object plRacesReportppField246: TppField
-      FieldAlias = 'LatePacePosGapOrder'
-      FieldName = 'LatePacePosGapOrder'
-      FieldLength = 100
-      DisplayWidth = 100
-      Position = 245
-    end
-    object plRacesReportppField247: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'EarlyPacePar'
-      FieldName = 'EarlyPacePar'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 246
-    end
-    object plRacesReportppField248: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'MiddlePacePar'
-      FieldName = 'MiddlePacePar'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 247
-    end
-    object plRacesReportppField249: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'LatePacePar'
-      FieldName = 'LatePacePar'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 248
-    end
-    object plRacesReportppField250: TppField
-      Alignment = taRightJustify
-      FieldAlias = 'SpeedPacePar'
-      FieldName = 'SpeedPacePar'
-      FieldLength = 0
-      DataType = dtInteger
-      DisplayWidth = 10
-      Position = 249
-    end
   end
   object dsEntries: TDataSource
     DataSet = tblEntries
@@ -8098,6 +6112,24 @@ object HospitalReportForm: THospitalReportForm
       DisplayWidth = 10
       Position = 575
     end
+    object plEntriesppField577: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'PSR'
+      FieldName = 'PSR'
+      FieldLength = 0
+      DataType = dtDouble
+      DisplayWidth = 10
+      Position = 576
+    end
+    object plEntriesppField578: TppField
+      Alignment = taRightJustify
+      FieldAlias = 'LateMove'
+      FieldName = 'LateMove'
+      FieldLength = 0
+      DataType = dtDouble
+      DisplayWidth = 10
+      Position = 577
+    end
   end
   object ppHospitalReport: TppReport
     AutoStop = False
@@ -8792,9 +6824,9 @@ object HospitalReportForm: THospitalReportForm
               Transparent = True
               DataPipelineName = 'plRacesReport'
               mmHeight = 3598
-              mmLeft = 5354
+              mmLeft = 4402
               mmTop = 0
-              mmWidth = 3810
+              mmWidth = 5715
               BandType = 1
             end
             object ppLabel23: TppLabel
@@ -9258,7 +7290,7 @@ object HospitalReportForm: THospitalReportForm
               mmHeight = 2074
               mmLeft = 7408
               mmTop = 16933
-              mmWidth = 20108
+              mmWidth = 19050
               BandType = 1
             end
             object ppDBText26: TppDBText
@@ -9276,7 +7308,7 @@ object HospitalReportForm: THospitalReportForm
               mmHeight = 2074
               mmLeft = 39793
               mmTop = 16933
-              mmWidth = 21167
+              mmWidth = 23283
               BandType = 1
             end
             object ppLabel16: TppLabel
@@ -9310,7 +7342,7 @@ object HospitalReportForm: THospitalReportForm
               mmHeight = 2074
               mmLeft = 97790
               mmTop = 16933
-              mmWidth = 21167
+              mmWidth = 23283
               BandType = 1
             end
             object TrainerJockeySheetOrder: TppDBText
@@ -9328,7 +7360,7 @@ object HospitalReportForm: THospitalReportForm
               mmHeight = 3006
               mmLeft = 157269
               mmTop = 21590
-              mmWidth = 11853
+              mmWidth = 13547
               BandType = 1
             end
             object ppLabel21: TppLabel
@@ -9385,6 +7417,7 @@ object HospitalReportForm: THospitalReportForm
               Font.Name = 'Courier New'
               Font.Size = 9
               Font.Style = []
+              Visible = False
               mmHeight = 3387
               mmLeft = 175472
               mmTop = 21167
@@ -9417,6 +7450,7 @@ object HospitalReportForm: THospitalReportForm
               Font.Size = 8
               Font.Style = []
               Transparent = True
+              Visible = False
               DataPipelineName = 'plRacesReport'
               mmHeight = 3006
               mmLeft = 185844
@@ -9440,7 +7474,7 @@ object HospitalReportForm: THospitalReportForm
               mmHeight = 3006
               mmLeft = 185844
               mmTop = 26035
-              mmWidth = 11853
+              mmWidth = 6773
               BandType = 1
             end
             object ppLabel17: TppLabel
@@ -9496,9 +7530,9 @@ object HospitalReportForm: THospitalReportForm
               Transparent = True
               DataPipelineName = 'plRacesReport'
               mmHeight = 2371
-              mmLeft = 57362
+              mmLeft = 58632
               mmTop = 34078
-              mmWidth = 3810
+              mmWidth = 2540
               BandType = 1
             end
             object LatePacePar: TppDBText
@@ -9680,7 +7714,7 @@ object HospitalReportForm: THospitalReportForm
               mmHeight = 2074
               mmLeft = 160867
               mmTop = 16933
-              mmWidth = 19050
+              mmWidth = 20108
               BandType = 1
             end
             object ppDBText14: TppDBText
@@ -9817,7 +7851,7 @@ object HospitalReportForm: THospitalReportForm
               mmHeight = 3006
               mmLeft = 156845
               mmTop = 31115
-              mmWidth = 11853
+              mmWidth = 8467
               BandType = 1
             end
             object ppDBText42: TppDBText
@@ -9835,7 +7869,7 @@ object HospitalReportForm: THospitalReportForm
               mmHeight = 3006
               mmLeft = 186055
               mmTop = 31115
-              mmWidth = 11853
+              mmWidth = 13547
               BandType = 1
             end
             object ppLabel54: TppLabel
@@ -10401,10 +8435,9 @@ object HospitalReportForm: THospitalReportForm
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
-              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2244
-              mmLeft = 46567
+              mmLeft = 46566
               mmTop = 0
               mmWidth = 24130
               BandType = 4
@@ -10476,10 +8509,10 @@ object HospitalReportForm: THospitalReportForm
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2328
-              mmLeft = 40852
+              mmHeight = 2244
+              mmLeft = 21802
               mmTop = 7197
-              mmWidth = 3810
+              mmWidth = 22860
               BandType = 4
             end
             object TotalTrnAftClmWinPct: TppDBText
@@ -10499,9 +8532,9 @@ object HospitalReportForm: THospitalReportForm
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2244
-              mmLeft = 83397
+              mmLeft = 60537
               mmTop = 0
-              mmWidth = 2540
+              mmWidth = 25400
               BandType = 4
             end
             object TotalTrnDebutTwoWinPct: TppDBText
@@ -10610,7 +8643,7 @@ object HospitalReportForm: THospitalReportForm
               mmHeight = 1905
               mmLeft = 131234
               mmTop = 2117
-              mmWidth = 19050
+              mmWidth = 21167
               BandType = 4
             end
             object TotalTrn2yoWinPct: TppDBText
@@ -10630,9 +8663,9 @@ object HospitalReportForm: THospitalReportForm
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2244
-              mmLeft = 71967
+              mmLeft = 52917
               mmTop = 11853
-              mmWidth = 2540
+              mmWidth = 21590
               BandType = 4
             end
             object ppLine18: TppLine
@@ -10701,10 +8734,10 @@ object HospitalReportForm: THospitalReportForm
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2328
-              mmLeft = 67098
+              mmHeight = 2244
+              mmLeft = 40216
               mmTop = 8043
-              mmWidth = 3598
+              mmWidth = 30480
               BandType = 4
             end
             object TotalTrnBlinkersOnWinPct: TppDBText
@@ -10744,10 +8777,10 @@ object HospitalReportForm: THospitalReportForm
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2328
-              mmLeft = 82762
+              mmHeight = 2244
+              mmLeft = 54187
               mmTop = 8043
-              mmWidth = 3175
+              mmWidth = 31750
               BandType = 4
             end
             object TurfIndicator: TppDBText
@@ -10784,6 +8817,7 @@ object HospitalReportForm: THospitalReportForm
               Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
+              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 2540
               mmLeft = 75353
@@ -10813,15 +8847,15 @@ object HospitalReportForm: THospitalReportForm
               Font.Color = clBlack
               Font.Name = 'Courier New'
               Font.Size = 5
-              Font.Style = []
+              Font.Style = [fsBold, fsUnderline]
               TextAlignment = taRightJustified
               Transparent = True
               Visible = False
               DataPipelineName = 'plEntries'
-              mmHeight = 1905
-              mmLeft = 102235
+              mmHeight = 2074
+              mmLeft = 94827
               mmTop = 0
-              mmWidth = 3175
+              mmWidth = 10583
               BandType = 4
             end
             object Last2Comment2: TppDBText
@@ -10839,7 +8873,7 @@ object HospitalReportForm: THospitalReportForm
               mmHeight = 1905
               mmLeft = 131234
               mmTop = 7673
-              mmWidth = 23283
+              mmWidth = 22225
               BandType = 4
             end
             object ppLine4: TppLine
@@ -11097,14 +9131,14 @@ object HospitalReportForm: THospitalReportForm
               Font.Charset = DEFAULT_CHARSET
               Font.Color = clBlack
               Font.Name = 'Courier New'
-              Font.Size = 8
+              Font.Size = 6
               Font.Style = []
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 3006
+              mmHeight = 2244
               mmLeft = 13970
-              mmTop = 6773
-              mmWidth = 6773
+              mmTop = 9525
+              mmWidth = 6350
               BandType = 4
             end
             object DamSire: TppDBText
@@ -11230,6 +9264,7 @@ object HospitalReportForm: THospitalReportForm
               Font.Size = 8
               Font.Style = []
               Transparent = True
+              Visible = False
               DataPipelineName = 'plEntries'
               mmHeight = 3006
               mmLeft = 52705
@@ -11322,9 +9357,9 @@ object HospitalReportForm: THospitalReportForm
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 1905
-              mmLeft = 92922
+              mmLeft = 93981
               mmTop = 6562
-              mmWidth = 2117
+              mmWidth = 1058
               BandType = 4
             end
             object LifeWins: TppDBText
@@ -11422,9 +9457,9 @@ object HospitalReportForm: THospitalReportForm
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2244
-              mmLeft = 32809
+              mmLeft = 13759
               mmTop = 3175
-              mmWidth = 2540
+              mmWidth = 21590
               BandType = 4
             end
             object TurfStarts: TppDBText
@@ -11462,7 +9497,7 @@ object HospitalReportForm: THospitalReportForm
               mmHeight = 1905
               mmLeft = 131234
               mmTop = 10372
-              mmWidth = 76200
+              mmWidth = 79375
               BandType = 4
             end
             object OwnerName: TppDBText
@@ -11506,10 +9541,10 @@ object HospitalReportForm: THospitalReportForm
               Font.Style = []
               TextAlignment = taRightJustified
               DataPipelineName = 'plEntries'
-              mmHeight = 2244
-              mmLeft = 17145
-              mmTop = 11007
-              mmWidth = 1270
+              mmHeight = 2328
+              mmLeft = 17780
+              mmTop = 12488
+              mmWidth = 2540
               BandType = 4
             end
             object ppLine3: TppLine
@@ -11587,9 +9622,9 @@ object HospitalReportForm: THospitalReportForm
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2244
-              mmLeft = 44027
+              mmLeft = 68157
               mmTop = 11853
-              mmWidth = 26670
+              mmWidth = 2540
               BandType = 4
             end
             object ppLabel22: TppLabel
@@ -11640,11 +9675,11 @@ object HospitalReportForm: THospitalReportForm
               Font.Color = clBlack
               Font.Name = 'Courier New'
               Font.Size = 6
-              Font.Style = [fsBold, fsUnderline]
+              Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2371
+              mmHeight = 2244
               mmLeft = 23495
               mmTop = 3175
               mmWidth = 2540
@@ -12037,11 +10072,11 @@ object HospitalReportForm: THospitalReportForm
               Font.Color = clBlack
               Font.Name = 'Courier New'
               Font.Size = 6
-              Font.Style = [fsBold, fsUnderline]
+              Font.Style = []
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
-              mmHeight = 2371
+              mmHeight = 2244
               mmLeft = 23707
               mmTop = 7197
               mmWidth = 2540
@@ -12080,14 +10115,14 @@ object HospitalReportForm: THospitalReportForm
               Font.Color = clBlack
               Font.Name = 'Courier New'
               Font.Size = 6
-              Font.Style = []
+              Font.Style = [fsBold, fsUnderline]
               TextAlignment = taRightJustified
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2328
-              mmLeft = 31538
+              mmLeft = 25823
               mmTop = 7197
-              mmWidth = 3810
+              mmWidth = 9525
               BandType = 4
             end
             object DebutIndicator: TppDBText
@@ -12121,12 +10156,12 @@ object HospitalReportForm: THospitalReportForm
               Font.Color = clBlack
               Font.Name = 'Courier New'
               Font.Size = 6
-              Font.Style = []
+              Font.Style = [fsBold, fsUnderline]
               TextAlignment = taRightJustified
               Transparent = True
               Visible = False
               DataPipelineName = 'plEntries'
-              mmHeight = 2244
+              mmHeight = 2371
               mmLeft = 48048
               mmTop = 7197
               mmWidth = 2540
@@ -12171,9 +10206,9 @@ object HospitalReportForm: THospitalReportForm
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2244
-              mmLeft = 61807
+              mmLeft = 79587
               mmTop = 11642
-              mmWidth = 20320
+              mmWidth = 2540
               BandType = 4
             end
             object ppLine24: TppLine
@@ -12243,8 +10278,29 @@ object HospitalReportForm: THospitalReportForm
               Transparent = True
               DataPipelineName = 'plEntries'
               mmHeight = 2244
-              mmLeft = 71967
+              mmLeft = 42757
               mmTop = 8043
+              mmWidth = 31750
+              BandType = 4
+            end
+            object PSR: TppDBText
+              UserName = 'PSR'
+              ShiftWithParent = True
+              AutoSize = True
+              BlankWhenZero = True
+              DataField = 'PSR'
+              DataPipeline = plEntries
+              DisplayFormat = '#00'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Courier New'
+              Font.Size = 6
+              Font.Style = []
+              TextAlignment = taRightJustified
+              DataPipelineName = 'plEntries'
+              mmHeight = 2328
+              mmLeft = 17780
+              mmTop = 6562
               mmWidth = 2540
               BandType = 4
             end
@@ -13380,7 +11436,12 @@ object HospitalReportForm: THospitalReportForm
               6465726C696E65203A3D20547275653B0D0A202020656E643B0D0A0D0A656E64
               3B0D0A0D436F6D706F6E656E744E616D650613546F74616C54726E31546F3435
               57696E506374094576656E744E616D6506074F6E5072696E74074576656E7449
-              4402200000}
+              4402200001060F5472614576656E7448616E646C65720B50726F6772616D4E61
+              6D65060A5053524F6E5072696E740B50726F6772616D54797065070B74745072
+              6F63656475726506536F75726365062670726F636564757265205053524F6E50
+              72696E743B0D0A626567696E0D0A0D0A656E643B0D0A0D436F6D706F6E656E74
+              4E616D650603505352094576656E744E616D6506074F6E5072696E7407457665
+              6E74494402200000}
           end
         end
       end
@@ -16726,6 +14787,14 @@ object HospitalReportForm: THospitalReportForm
     object tblEntriesFinalOrderValueBet: TFloatField
       FieldName = 'FinalOrderValueBet'
       Origin = 'ENTRY.FinalOrderValueBet'
+    end
+    object tblEntriesPSR: TFloatField
+      FieldName = 'PSR'
+      Origin = 'ENTRY.PSR'
+    end
+    object tblEntriesLateMove: TFloatField
+      FieldName = 'LateMove'
+      Origin = 'ENTRY.LateMove'
     end
   end
 end

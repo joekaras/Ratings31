@@ -1718,6 +1718,8 @@ begin
 
 
                   tblE.FieldByName('Power').AsFloat := atof(sTSNPowerRating);
+                  tblE.FieldByName('PSR').AsFloat := tblE.FieldByName('Power').AsFloat;
+
                   tblE.FieldByName('LastSpeed').AsInteger := atoi(sLastSpeedRating);
 
                   tblE.FieldByName('BackSpeed').AsInteger := 0;
