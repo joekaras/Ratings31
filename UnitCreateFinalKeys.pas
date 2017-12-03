@@ -282,7 +282,7 @@ begin
          end;
 
          //
-         sTodaysKey :=  GetSpeedRankTrkCodeSpeedCount(dm.tblRH, dm.tblHH);
+         sTodaysKey := GetSpeedRankTrkCodeSpeedCount(dm.tblRH, dm.tblHH);
          if (sTodaysKey <> '') then begin
             dm.tblFinalOrder.IndexName := '';
             dm.tblFinalOrder.SetKey();
@@ -327,7 +327,7 @@ begin
          end;
 
          //
-         sTodaysKey := GetMorningLineKeyTrkCodePower(dm.tblRH, dm.tblHH);
+         sTodaysKey := GetMorningLineKeyTrkCodePowerPsr(dm.tblRH, dm.tblHH);
          if (sTodaysKey <> '') then begin
             dm.tblFinalOrder.IndexName := '';
             dm.tblFinalOrder.SetKey();
@@ -347,9 +347,9 @@ begin
                dm.tblFinalOrder.Post();
             end;
          end;
-         
+
          //
-         sTodaysKey := GetMorningLineKeyPower(dm.tblRH, dm.tblHH);
+         sTodaysKey := GetMorningLineKeyPowerPsr(dm.tblRH, dm.tblHH);
          if (sTodaysKey <> '') then begin
             dm.tblFinalOrder.IndexName := '';
             dm.tblFinalOrder.SetKey();
@@ -369,12 +369,12 @@ begin
                dm.tblFinalOrder.Post();
             end;
          end;
-         
-         
+
+
          //
          sTrainer := Trim(dm.tblHH.FieldByName('Trainer').AsString);
          if (sTrainer <> '') then begin
-            sTodaysKey := GetTrainerPowerRank(dm.tblRH, dm.tblHH);
+            sTodaysKey := GetTrainerPowerPsrRank(dm.tblRH, dm.tblHH);
             if (sTodaysKey <> '') then begin
                dm.tblFinalOrder.IndexName := '';
                dm.tblFinalOrder.SetKey();
@@ -1162,7 +1162,7 @@ begin
 
    finally
       CloseTable(dm.tblFinalOrder);
-      ClearPrgStatusBars();                                                                                                                                  
+      ClearPrgStatusBars();
    end;
 end;
 

@@ -1,6 +1,6 @@
 object MainForm: TMainForm
-  Left = 580
-  Top = 498
+  Left = 363
+  Top = 304
   Width = 1589
   Height = 871
   Caption = 'KSK Ratings 3.1'
@@ -935,7 +935,7 @@ object MainForm: TMainForm
         Left = 0
         Top = 0
         Width = 236
-        Height = 728
+        Height = 731
         Align = alLeft
         TabOrder = 0
         object btnAnalysisFinalOrderForm: TButton
@@ -1219,7 +1219,7 @@ object MainForm: TMainForm
         Left = 0
         Top = 0
         Width = 228
-        Height = 736
+        Height = 731
         Align = alLeft
         TabOrder = 0
         object btnOptions: TButton

@@ -138,7 +138,7 @@ var
    sTrack: string;
    sDate: string;
    sRaceNbr: string;
-   sTSNPowerRating: string;
+   sHDWPowerRating: string;
 
    sBestTSNSpeedFastTrack: string;
    sBestTSNSpeedTurf: string;
@@ -431,6 +431,7 @@ begin
             sTrack := FastReplace(sTrack, 'OPX', 'OP');
             sTrack := FastReplace(sTrack, 'WOX', 'WO');
             sTrack := FastReplace(sTrack, 'SRX', 'SR');
+            sTrack := FastReplace(sTrack, 'CRC', 'GPW');
 
             sDate := StringListTrim(lstS[2 - 1]);
             sRaceNbr := StringListTrim(lstS[3 - 1]);
@@ -462,7 +463,7 @@ begin
             //1374      Post Times (by region)        CHARACTER X(50)     50
             sPostTimes := StringListTrim(lstS[1374 - 1]);
 
-            sTSNPowerRating := StringListTrim(lstS[251 - 1]);
+            sHDWPowerRating := StringListTrim(lstS[251 - 1]);
             sTSNLastClassRating := StringListTrim(lstS[836 - 1]);
             sTSNAvgClassRating := ' '; // StringListTrim(lstS[1146 - 1]);
 
@@ -726,8 +727,8 @@ begin
                end;
 
                fLatePace := atof(sPPlatePaceFigure);
-           //    if (fLatePace > 0) or (fLatePace < 0) then begin
-              if (fLatePace > 0) then begin
+               //    if (fLatePace > 0) or (fLatePace < 0) then begin
+               if (fLatePace > 0) then begin
                   Inc(iLatePaceLines);
 
                   SetLength(aLatePaceH, iLatePaceLines);
@@ -1716,9 +1717,8 @@ begin
 
                   tblE.FieldByName('TCPlusMinus').AsInteger := iTCPlusMinus;
 
-
-                  tblE.FieldByName('Power').AsFloat := atof(sTSNPowerRating);
-                  tblE.FieldByName('PSR').AsFloat := tblE.FieldByName('Power').AsFloat;
+                  tblE.FieldByName('Power').AsFloat := 0;
+                  tblE.FieldByName('PSR').AsFloat := atof(sHDWPowerRating);
 
                   tblE.FieldByName('LastSpeed').AsInteger := atoi(sLastSpeedRating);
 

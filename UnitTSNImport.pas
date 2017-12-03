@@ -299,7 +299,7 @@ var
    fJockeyDistanceOnTurfStarts: double;
    fJockeyDistanceOnTurfWins: double;
    fJockeyDistanceOnTurfWinPct: double;
-               
+
 
    fTotalTrnStarts: double;
    fTotalTrnWins: double;
@@ -608,15 +608,15 @@ begin
             end;
 
 
-            
+
             fjockeyDistanceOnTurfStarts := atof(StringListTrim(lstS[1368 - 1]));
             fjockeyDistanceOnTurfWins := atof(StringListTrim(lstS[1369 - 1]));
-            if (fjockeyDistanceOnTurfStarts  > 0) then begin
-               fjockeyDistanceOnTurfWinPct  := (fjockeyDistanceOnTurfWins / fjockeyDistanceOnTurfStarts) * 100;
+            if (fjockeyDistanceOnTurfStarts > 0) then begin
+               fjockeyDistanceOnTurfWinPct := (fjockeyDistanceOnTurfWins / fjockeyDistanceOnTurfStarts) * 100;
             end else begin
-               fjockeyDistanceOnTurfWinPct  := 0;
+               fjockeyDistanceOnTurfWinPct := 0;
             end;
-            
+
             fTrainerStsCurrentMeet := atof(StringListTrim(lstS[29 - 1]));
             fTrainerWinsCurrentMeet := atof(StringListTrim(lstS[30 - 1]));
             fTrainerPlacesCurrentMeet := atof(StringListTrim(lstS[31 - 1]));
@@ -1226,7 +1226,7 @@ begin
                   tblE.FieldByName('TrnTodayStarts').AsInteger := tblE.FieldByName('TotalTrnTurfStarts').AsInteger;
                   tblE.FieldByName('TrnTodayWinPct').AsFloat := tblE.FieldByName('TotalTrnTurfWinPct').AsFloat;
                end;
-               
+
 
 
                tblE.FieldByName('TotalTrn30Starts').AsFloat := fTrainerStsCurrentMeet;
@@ -1246,9 +1246,9 @@ begin
                tblE.FieldByName('TotalJkyDaysWinPct').AsFloat := fTotalJkyWinPct;
 
                tblE.FieldByName('TotalJkyTurfStarts').AsFloat := fjockeyDistanceOnTurfStarts;
-               tblE.FieldByName('TotalJkyTurfWins').AsFloat := fjockeyDistanceOnTurfWins; 
-               tblE.FieldByName('TotalJkyTurfWinPct').AsFloat := fjockeyDistanceOnTurfWinPct; 
-               
+               tblE.FieldByName('TotalJkyTurfWins').AsFloat := fjockeyDistanceOnTurfWins;
+               tblE.FieldByName('TotalJkyTurfWinPct').AsFloat := fjockeyDistanceOnTurfWinPct;
+
                tblE.FieldByName('TotalTrnStarts').AsFloat := fTotalTrnStarts;
                tblE.FieldByName('TotalTrnWins').AsFloat := fTotalTrnWins;
                tblE.FieldByName('TotalTrnWinPct').AsFloat := fTotalTrnWinPct;
@@ -1295,7 +1295,8 @@ begin
 
                tblE.FieldByName('EarlyPace').AsFloat := fEarlyPaceH;
                tblE.FieldByName('MiddlePace').AsFloat := fMiddlePaceH;
-               tblE.FieldByName('LatePace').AsFloat := fLatePaceH;
+
+               tblE.FieldByName('LatePace').AsFloat := fLatePaceH * 2;
 
 
                //
@@ -2266,3 +2267,4 @@ end;
 
 
 end.
+

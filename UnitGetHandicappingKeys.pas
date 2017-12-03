@@ -5,15 +5,15 @@ uses
    Windows, Messages, SysUtils, DateUtils, Classes, Graphics, Controls, Forms, Dialogs,
    DBISAMTb, Db, StdCtrls, ComCtrls, ExtCtrls, strMan, cxProgressBar;
 
-function GetTrainerPowerRank(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+function GetTrainerPowerPsrRank(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 function GetSpeedRankTrkCodeSurfaceDistanceSpeedCount(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 function GetSpeedRankTrkCodeSpeedCount(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 function GetPostPosKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 function GetFinalOrderKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 function GetElimKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 function GetElim2Key(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
-function GetMorningLineKeyTrkCodePower(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
-function GetMorningLineKeyPower(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+function GetMorningLineKeyTrkCodePowerPsr(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+function GetMorningLineKeyPowerPsr(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 function GetMorningLineKeyTrkCodeRaceType(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 
 //function GetDefaultOrderKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
@@ -36,9 +36,9 @@ function GetMorningLineKeyTrkCodeRaceType(tblR: TDBISAMTable; tblE: TDBISAMTable
 //function GetMiddlePaceAdvantageAllKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 //function GetMiddlePaceAdvantageTrkKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 
-//function GetLatePaceAdvantageClsKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
-//function GetLatePaceAdvantageAllKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
-//function GetLatePaceAdvantageTrkKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+//function GetPsrAdvantageClsKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+//function GetPsrAdvantageAllKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+//function GetPsrAdvantageTrkKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 
 //function GetOnlyMorningLineKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 //function GetLinerMorningLineKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
@@ -96,7 +96,7 @@ uses DatRatings, FastStrings, FastStringFuncs, ESBDates,
    stStat, ESBRtns, ESBMaths, Math, UnitDBRoutines, mlog, DatReport,
    FormMain, UnitCommonCode;
 
-function GetMorningLineKeyTrkCodePower(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+function GetMorningLineKeyTrkCodePowerPsr(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 var
    sBaseKey: string;
 begin
@@ -119,15 +119,15 @@ begin
       if ((tblE.FieldByName('PowerRank').AsInteger > 0) and
          (tblE.FieldByName('PowerRank').AsInteger <= 8)) then begin
          sBaseKey := sBaseKey + '-PL-' + sm.str(tblE.FieldByName('PowerRank').AsInteger, 2);
-         if ((tblE.FieldByName('LatePaceRank').AsInteger > 0) and
-            (tblE.FieldByName('LatePaceRank').AsInteger <= 4)) then begin
-            sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('LatePaceRank').AsInteger, 2);
+         if ((tblE.FieldByName('PsrRank').AsInteger > 0) and
+            (tblE.FieldByName('PsrRank').AsInteger <= 4)) then begin
+            sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('PsrRank').AsInteger, 2);
          end else begin
             sBaseKey := sBaseKey + '/' + sm.str(99, 2);
          end
       end else begin
          sBaseKey := sBaseKey + '/' + sm.str(99, 2);
-         sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('LatePaceRank').AsInteger, 2);
+         sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('PsrRank').AsInteger, 2);
 
       end;
 
@@ -137,7 +137,7 @@ begin
    Result := sBaseKey;
 end;
 
-function GetMorningLineKeyPower(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+function GetMorningLineKeyPowerPsr(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 var
    sBaseKey: string;
 begin
@@ -159,15 +159,15 @@ begin
       if ((tblE.FieldByName('PowerRank').AsInteger > 0) and
          (tblE.FieldByName('PowerRank').AsInteger <= 8)) then begin
          sBaseKey := sBaseKey + '-PL-' + sm.str(tblE.FieldByName('PowerRank').AsInteger, 2);
-         if ((tblE.FieldByName('LatePaceRank').AsInteger > 0) and
-            (tblE.FieldByName('LatePaceRank').AsInteger <= 4)) then begin
-            sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('LatePaceRank').AsInteger, 2);
+         if ((tblE.FieldByName('PsrRank').AsInteger > 0) and
+            (tblE.FieldByName('PsrRank').AsInteger <= 4)) then begin
+            sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('PsrRank').AsInteger, 2);
          end else begin
             sBaseKey := sBaseKey + '/' + sm.str(99, 2);
          end
       end else begin
          sBaseKey := sBaseKey + '/' + sm.str(99, 2);
-         sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('LatePaceRank').AsInteger, 2);
+         sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('PsrRank').AsInteger, 2);
       end;
    end;
 
@@ -202,7 +202,7 @@ end;
 
 
 
-function GetTrainerPowerRank(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+function GetTrainerPowerPsrRank(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 var
    sBaseKey: string;
 begin
@@ -222,18 +222,18 @@ begin
          (tblE.FieldByName('PowerRank').AsInteger < 4)) then begin
          sBaseKey := sBaseKey + tblE.FieldByName('Trainer').AsString;
          sBaseKey := sBaseKey + '-PL-' + sm.str(tblE.FieldByName('PowerRank').AsInteger, 2);
-         if ((tblE.FieldByName('LatePacePosRank').AsInteger > 0) and
-            (tblE.FieldByName('LatePacePosRank').AsInteger <= 4)) then begin
-            sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('LatePacePosRank').AsInteger, 2);
+         if ((tblE.FieldByName('PsrRank').AsInteger > 0) and
+            (tblE.FieldByName('PsrRank').AsInteger <= 4)) then begin
+            sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('PsrRank').AsInteger, 2);
          end else begin
             sBaseKey := sBaseKey + '/' + sm.str(99, 2);
          end;
       end else begin
          sBaseKey := sBaseKey + tblE.FieldByName('Trainer').AsString;
          sBaseKey := sBaseKey + '-PL-' + sm.str(99, 2);
-         if ((tblE.FieldByName('LatePacePosRank').AsInteger > 0) and
-            (tblE.FieldByName('LatePacePosRank').AsInteger <= 4)) then begin
-            sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('LatePacePosRank').AsInteger, 2);
+         if ((tblE.FieldByName('PsrRank').AsInteger > 0) and
+            (tblE.FieldByName('PsrRank').AsInteger <= 4)) then begin
+            sBaseKey := sBaseKey + '/' + sm.str(tblE.FieldByName('PsrRank').AsInteger, 2);
          end else begin
             sBaseKey := sBaseKey + '/' + sm.str(99, 2);
          end;
@@ -303,13 +303,13 @@ begin
       end;
    end;
    //
-   if (tblE.FieldByName('LatePace').AsFloat < 9999) and
-      (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
+   if (tblE.FieldByName('Psr').AsFloat < 9999) and
+      (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
       Inc(iNbrLateCnt);
    end;
 
-   if (tblE.FieldByName('LatePacePos').AsFloat < 9999) and
-      (tblE.FieldByName('LatePacePosRank').AsInteger = 1) then begin
+   if (tblE.FieldByName('Psr').AsFloat < 9999) and
+      (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
       Inc(iNbrLateCnt);
    end;
 
@@ -389,13 +389,13 @@ begin
    end;
 
    //
-   if (tblE.FieldByName('LatePace').AsFloat < 9999) and
-      (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
+   if (tblE.FieldByName('Psr').AsFloat < 9999) and
+      (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
       Inc(iNbrLateCnt);
    end;
 
-   if (tblE.FieldByName('LatePacePos').AsFloat < 9999) and
-      (tblE.FieldByName('LatePacePosRank').AsInteger = 1) then begin
+   if (tblE.FieldByName('Psr').AsFloat < 9999) and
+      (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
       Inc(iNbrLateCnt);
    end;
 
@@ -547,13 +547,13 @@ begin
       end;
    end;
 
-   if (tblE.FieldByName('LatePace').AsFloat < 9999) and
-      (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
+   if (tblE.FieldByName('Psr').AsFloat < 9999) and
+      (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
       Inc(iNbrLateCnt);
    end;
 
-   if (tblE.FieldByName('LatePacePos').AsFloat < 9999) and
-      (tblE.FieldByName('LatePacePosRank').AsInteger = 1) then begin
+   if (tblE.FieldByName('Psr').AsFloat < 9999) and
+      (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
       Inc(iNbrLateCnt);
    end;
 
@@ -733,12 +733,12 @@ begin
    //      end;
    //   end;
    //
-   //   if (tblE.FieldByName('LatePace').AsFloat < 9999) and
-   //      (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
+   //   if (tblE.FieldByName('Psr').AsFloat < 9999) and
+   //      (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
    //      Inc(iNbrLateCnt);
    //   end;
-   //   if (tblE.FieldByName('LatePacePos').AsFloat < 9999) and
-   //      (tblE.FieldByName('LatePacePosRank').AsInteger = 1) then begin
+   //   if (tblE.FieldByName('PsrPos').AsFloat < 9999) and
+   //      (tblE.FieldByName('PsrPosRank').AsInteger = 1) then begin
    //      Inc(iNbrLateCnt);
    //   end;
    //
@@ -1036,7 +1036,7 @@ begin
       end;
    end;
 
-   
+
    //
    bBadPower := False;
    if (tblE.FieldByName('Power').AsFloat > 0.00) then begin
@@ -1142,7 +1142,7 @@ begin
 
    bBadPower := True;
    bBadSpeed := True;
-   
+
    if (tblR.FieldByName('RaceType').AsString = 'MSW') or (tblR.FieldByName('RaceType').AsString = 'MCL') then begin
       if (tblE.FieldByName('DebutIndicator').AsString = '*') then begin
          sBaseKey := sBaseKey + 'SOME2';
@@ -1200,8 +1200,8 @@ begin
       end;
    end;
 
-   if (tblE.FieldByName('LatePacePos').AsFloat < 9999) and
-      (tblE.FieldByName('LatePacePosRank').AsInteger = 1) then begin
+   if (tblE.FieldByName('Psr').AsFloat < 9999) and
+      (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
       bNoLateDot := False;
    end;
 
@@ -1219,8 +1219,8 @@ begin
    end;
 
 
-   if (tblE.FieldByName('LatePace').AsFloat < 9999) and
-      (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
+   if (tblE.FieldByName('Psr').AsFloat < 9999) and
+      (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
       bNoLateLiner := False;
    end;
 
@@ -1443,12 +1443,12 @@ end.
 //      end;
 //
 //      //
-//      if (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
+//      if (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
 //         sBaseKey := sBaseKey + '-L-' + sm.Str(1, 1);
 //      end else begin
 //         sBaseKey := sBaseKey + '-L-' + sm.Str(0, 1);
 //      end;
-//      if (tblE.FieldByName('LatePacePosRank').AsInteger = 1) then begin
+//      if (tblE.FieldByName('PsrPosRank').AsInteger = 1) then begin
 //         sBaseKey := sBaseKey + '/' + sm.Str(1, 1);
 //      end else begin
 //         sBaseKey := sBaseKey + '/' + sm.Str(0, 1);
@@ -1817,8 +1817,8 @@ end.
 //      bMiddleDot := True;
 //   end;
 //
-//   if (tblE.FieldByName('LatePacePos').AsFloat < 9999) and
-//      (tblE.FieldByName('LatePacePosRank').AsInteger = 1) then begin
+//   if (tblE.FieldByName('PsrPos').AsFloat < 9999) and
+//      (tblE.FieldByName('PsrPosRank').AsInteger = 1) then begin
 //      bLateDot := True;
 //   end;
 //
@@ -1833,8 +1833,8 @@ end.
 //      bMiddleLiner := True;
 //   end;
 //
-//   if (tblE.FieldByName('LatePace').AsFloat < 9999) and
-//      (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
+//   if (tblE.FieldByName('Psr').AsFloat < 9999) and
+//      (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
 //      bLateLiner := True;
 //   end;
 //
@@ -2043,10 +2043,10 @@ end.
 //   iNbrPaceCnt := 0;
 //
 //   //If modified Change in Update Tip Selections
-//   if (tblE.FieldByName('LatePacePos').AsFloat < 9999) and
-//      (tblE.FieldByName('LatePacePosRank').AsInteger = 1) then begin
-//      if (tblE.FieldByName('LatePace').AsFloat < 9999) and
-//         (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
+//   if (tblE.FieldByName('PsrPos').AsFloat < 9999) and
+//      (tblE.FieldByName('PsrPosRank').AsInteger = 1) then begin
+//      if (tblE.FieldByName('Psr').AsFloat < 9999) and
+//         (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
 //         Inc(iNbrPaceCnt);
 //      end;
 //   end;
@@ -3035,33 +3035,33 @@ end.
 //end;
 //
 
-//function GetLatePaceAdvantageAllKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+//function GetPsrAdvantageAllKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 //var
 //   sBaseKey: string;
-//   iLatePaceAdvantage: integer;
+//   iPsrAdvantage: integer;
 //
 //begin
 //
-//   iLatePaceAdvantage := 0;
-//   if (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
-//      iLatePaceAdvantage := tblR.FieldByName('TopLatePace').AsInteger - tblR.FieldByName('SecondLatePace').AsInteger;
+//   iPsrAdvantage := 0;
+//   if (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
+//      iPsrAdvantage := tblR.FieldByName('TopPsr').AsInteger - tblR.FieldByName('SecondPsr').AsInteger;
 //   end else begin
-//      iLatePaceAdvantage := tblE.FieldByName('LatePace').AsInteger - tblR.FieldByName('TopLatePace').AsInteger;
+//      iPsrAdvantage := tblE.FieldByName('Psr').AsInteger - tblR.FieldByName('TopPsr').AsInteger;
 //   end;
 //
 //   sBaseKey := '';
-//   if (iLatePaceAdvantage >= 0) and (iLatePaceAdvantage <= 10) then begin
-//      sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + 'LatPlus:' + sm.Str(iLatePaceAdvantage, 3);
+//   if (iPsrAdvantage >= 0) and (iPsrAdvantage <= 10) then begin
+//      sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + 'LatPlus:' + sm.Str(iPsrAdvantage, 3);
 //   end;
-//   if (iLatePaceAdvantage >= 11) then begin
+//   if (iPsrAdvantage >= 11) then begin
 //      sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + 'LatPlus:11+';
 //   end;
 //
-//   if (iLatePaceAdvantage < 0) then begin
-//      if ((iLatePaceAdvantage * -1) >= 0) and ((iLatePaceAdvantage * -1) <= 10) then begin
-//         sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + 'LatMinus:' + sm.Str((iLatePaceAdvantage * -1), 3);
+//   if (iPsrAdvantage < 0) then begin
+//      if ((iPsrAdvantage * -1) >= 0) and ((iPsrAdvantage * -1) <= 10) then begin
+//         sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + 'LatMinus:' + sm.Str((iPsrAdvantage * -1), 3);
 //      end;
-//      if ((iLatePaceAdvantage * -1) >= 11) then begin
+//      if ((iPsrAdvantage * -1) >= 11) then begin
 //         sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + 'LatMinus:11+';
 //      end;
 //   end;
@@ -3070,35 +3070,35 @@ end.
 //
 //end;
 //
-//function GetLatePaceAdvantageClsKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+//function GetPsrAdvantageClsKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 //var
 //   sBaseKey: string;
-//   iLatePaceAdvantage: integer;
+//   iPsrAdvantage: integer;
 //
 //begin
 //
 //
-//   iLatePaceAdvantage := 0;
-//   if (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
-//      iLatePaceAdvantage := tblR.FieldByName('TopLatePace').AsInteger - tblR.FieldByName('SecondLatePace').AsInteger;
+//   iPsrAdvantage := 0;
+//   if (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
+//      iPsrAdvantage := tblR.FieldByName('TopPsr').AsInteger - tblR.FieldByName('SecondPsr').AsInteger;
 //   end else begin
-//      iLatePaceAdvantage := tblE.FieldByName('LatePace').AsInteger - tblR.FieldByName('TopLatePace').AsInteger;
+//      iPsrAdvantage := tblE.FieldByName('Psr').AsInteger - tblR.FieldByName('TopPsr').AsInteger;
 //   end;
 //
 //
 //   sBaseKey := '';
-//   if (iLatePaceAdvantage >= 0) and (iLatePaceAdvantage <= 10) then begin
-//      sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + Format('%-3s', [tblE.FieldByName('RaceType').AsString]) + '/LatPlus:' + sm.Str(iLatePaceAdvantage, 3);
+//   if (iPsrAdvantage >= 0) and (iPsrAdvantage <= 10) then begin
+//      sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + Format('%-3s', [tblE.FieldByName('RaceType').AsString]) + '/LatPlus:' + sm.Str(iPsrAdvantage, 3);
 //   end;
-//   if (iLatePaceAdvantage >= 11) then begin
+//   if (iPsrAdvantage >= 11) then begin
 //      sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + Format('%-3s', [tblE.FieldByName('RaceType').AsString]) + '/LatPlus:11+';
 //   end;
 //
-//   if (iLatePaceAdvantage < 0) then begin
-//      if ((iLatePaceAdvantage * -1) >= 0) and ((iLatePaceAdvantage * -1) <= 10) then begin
-//         sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + Format('%-3s', [tblE.FieldByName('RaceType').AsString]) + '/LatMinus:' + sm.Str((iLatePaceAdvantage * -1), 3);
+//   if (iPsrAdvantage < 0) then begin
+//      if ((iPsrAdvantage * -1) >= 0) and ((iPsrAdvantage * -1) <= 10) then begin
+//         sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + Format('%-3s', [tblE.FieldByName('RaceType').AsString]) + '/LatMinus:' + sm.Str((iPsrAdvantage * -1), 3);
 //      end;
-//      if ((iLatePaceAdvantage * -1) >= 11) then begin
+//      if ((iPsrAdvantage * -1) >= 11) then begin
 //         sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + Format('%-3s', [tblE.FieldByName('RaceType').AsString]) + '/LatMinus:11+';
 //      end;
 //   end;
@@ -3108,38 +3108,38 @@ end.
 //end;
 //
 
-//function GetLatePaceAdvantageTrkKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+//function GetPsrAdvantageTrkKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 //var
 //   sBaseKey: string;
-//   iLatePaceAdvantage: integer;
+//   iPsrAdvantage: integer;
 //   iPostPos: integer;
 //
 //begin
 //
 //   iPostPos := tblE.FieldByName('PostPos').AsInteger;
 //
-//   iLatePaceAdvantage := 0;
+//   iPsrAdvantage := 0;
 //
-//   if ((tblE.FieldByName('LatePace').AsInteger = 0) or
-//      (tblE.FieldByName('LatePace').AsInteger = 9999)) then begin
+//   if ((tblE.FieldByName('Psr').AsInteger = 0) or
+//      (tblE.FieldByName('Psr').AsInteger = 9999)) then begin
 //      Result := '';
 //      exit;
 //   end;
 //
-//   if (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
-//      iLatePaceAdvantage := tblR.FieldByName('TopLatePace').AsInteger -
-//         tblR.FieldByName('SecondLatePace').AsInteger;
-//      if (iLatePaceAdvantage < 0) then begin
-//         iLatePaceAdvantage := 0;
+//   if (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
+//      iPsrAdvantage := tblR.FieldByName('TopPsr').AsInteger -
+//         tblR.FieldByName('SecondPsr').AsInteger;
+//      if (iPsrAdvantage < 0) then begin
+//         iPsrAdvantage := 0;
 //      end;
 //   end else begin
-//      iLatePaceAdvantage := tblE.FieldByName('LatePace').AsInteger -
-//         tblR.FieldByName('TopLatePace').AsInteger;
+//      iPsrAdvantage := tblE.FieldByName('Psr').AsInteger -
+//         tblR.FieldByName('TopPsr').AsInteger;
 //   end;
 //
 //
 //   sBaseKey := '';
-//   if (iLatePaceAdvantage >= 0) and (iLatePaceAdvantage <= 4) then begin
+//   if (iPsrAdvantage >= 0) and (iPsrAdvantage <= 4) then begin
 //      if (iPostPos = 1) then begin
 //         sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' +
 //         Trim(tblR.FieldByName('DistanceDesc').AsString) + '  ' +
@@ -3162,7 +3162,7 @@ end.
 //      end;
 //   end;
 //
-//   if (iLatePaceAdvantage >= 5) and (iLatePaceAdvantage <= 10) then begin
+//   if (iPsrAdvantage >= 5) and (iPsrAdvantage <= 10) then begin
 //      if (iPostPos = 1) then begin
 //         sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' +
 //         Trim(tblR.FieldByName('DistanceDesc').AsString) + '  ' +
@@ -3185,7 +3185,7 @@ end.
 //      end;
 //   end;
 //
-//   if (iLatePaceAdvantage >= 11) then begin
+//   if (iPsrAdvantage >= 11) then begin
 //      if (iPostPos = 1) then begin
 //         sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' +
 //         Trim(tblR.FieldByName('DistanceDesc').AsString) + '  ' +
@@ -3208,8 +3208,8 @@ end.
 //      end;
 //   end;
 //
-//   if (iLatePaceAdvantage < 0) then begin
-//      if ((iLatePaceAdvantage * -1) >= 0) and ((iLatePaceAdvantage * -1) <= 4) then begin
+//   if (iPsrAdvantage < 0) then begin
+//      if ((iPsrAdvantage * -1) >= 0) and ((iPsrAdvantage * -1) <= 4) then begin
 //         if (iPostPos = 1) then begin
 //            sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' +
 //            Trim(tblR.FieldByName('DistanceDesc').AsString) + '  ' +
@@ -3232,7 +3232,7 @@ end.
 //         end;
 //      end;
 //
-//      if ((iLatePaceAdvantage * -1) >= 5) and ((iLatePaceAdvantage * -1) <= 10) then begin
+//      if ((iPsrAdvantage * -1) >= 5) and ((iPsrAdvantage * -1) <= 10) then begin
 //         if (iPostPos = 1) then begin
 //            sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' +
 //            Trim(tblR.FieldByName('DistanceDesc').AsString) + '  ' +
@@ -3254,7 +3254,7 @@ end.
 //               Format('%-3s', [tblE.FieldByName('TrkCode').AsString]) + '/LatMinus5-10:Post 8+';
 //         end;
 //      end;
-//      if ((iLatePaceAdvantage * -1) >= 11) then begin
+//      if ((iPsrAdvantage * -1) >= 11) then begin
 //         if (iPostPos = 1) then begin
 //            sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' +
 //            Trim(tblR.FieldByName('DistanceDesc').AsString) + '  ' +
@@ -3282,35 +3282,35 @@ end.
 //
 //end;
 //
-//function GetLatePaceAdvantageTrkKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
+//function GetPsrAdvantageTrkKey(tblR: TDBISAMTable; tblE: TDBISAMTable): string;
 //var
 //   sBaseKey: string;
-//   iLatePaceAdvantage: integer;
+//   iPsrAdvantage: integer;
 //
 //begin
 //
 //
-//   iLatePaceAdvantage := 0;
-//   if (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
-//      iLatePaceAdvantage := tblR.FieldByName('TopLatePace').AsInteger - tblR.FieldByName('SecondLatePace').AsInteger;
+//   iPsrAdvantage := 0;
+//   if (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
+//      iPsrAdvantage := tblR.FieldByName('TopPsr').AsInteger - tblR.FieldByName('SecondPsr').AsInteger;
 //   end else begin
-//      iLatePaceAdvantage := tblE.FieldByName('LatePace').AsInteger - tblR.FieldByName('TopLatePace').AsInteger;
+//      iPsrAdvantage := tblE.FieldByName('Psr').AsInteger - tblR.FieldByName('TopPsr').AsInteger;
 //   end;
 //
 //
 //   sBaseKey := '';
-//   if (iLatePaceAdvantage >= 0) and (iLatePaceAdvantage <= 10) then begin
-//      sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + Format('%-3s', [tblE.FieldByName('TrkCode').AsString]) + '/LatPlus:' + sm.Str(iLatePaceAdvantage, 3);
+//   if (iPsrAdvantage >= 0) and (iPsrAdvantage <= 10) then begin
+//      sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + Format('%-3s', [tblE.FieldByName('TrkCode').AsString]) + '/LatPlus:' + sm.Str(iPsrAdvantage, 3);
 //   end;
-//   if (iLatePaceAdvantage >= 11) then begin
+//   if (iPsrAdvantage >= 11) then begin
 //      sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + Format('%-3s', [tblE.FieldByName('TrkCode').AsString]) + '/LatPlus:11+';
 //   end;
 //
-//   if (iLatePaceAdvantage < 0) then begin
-//      if ((iLatePaceAdvantage * -1) >= 0) and ((iLatePaceAdvantage * -1) <= 10) then begin
-//         sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + Format('%-3s', [tblE.FieldByName('TrkCode').AsString]) + '/LatMinus:' + sm.Str((iLatePaceAdvantage * -1), 3);
+//   if (iPsrAdvantage < 0) then begin
+//      if ((iPsrAdvantage * -1) >= 0) and ((iPsrAdvantage * -1) <= 10) then begin
+//         sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + Format('%-3s', [tblE.FieldByName('TrkCode').AsString]) + '/LatMinus:' + sm.Str((iPsrAdvantage * -1), 3);
 //      end;
-//      if ((iLatePaceAdvantage * -1) >= 11) then begin
+//      if ((iPsrAdvantage * -1) >= 11) then begin
 //         sBaseKey := Format('%-1s', [tblR.FieldByName('Surface').AsString]) + '-' + Format('%-3s', [tblE.FieldByName('TrkCode').AsString]) + '/LatMinus:11+';
 //      end;
 //   end;
@@ -3493,11 +3493,11 @@ end.
 //   end;
 //
 //
-//      if ((tblE.FieldByName('LatePacePosRank').AsInteger = 1)) then begin
-//         if (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
+//      if ((tblE.FieldByName('PsrPosRank').AsInteger = 1)) then begin
+//         if (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
 //            Inc(iNbrLateCnt);
 //         end;
-//         if (tblE.FieldByName('LatePacePosRank').AsInteger = 1) then begin
+//         if (tblE.FieldByName('PsrPosRank').AsInteger = 1) then begin
 //            Inc(iNbrLateCnt);
 //         end;
 //      end;
@@ -3554,8 +3554,8 @@ end.
 //
 
 //
-//   if (tblE.FieldByName('LatePaceRank').AsInteger = 1) then begin
-//      if (tblE.FieldByName('LatePacePosRank').AsInteger = 1) then begin
+//   if (tblE.FieldByName('PsrRank').AsInteger = 1) then begin
+//      if (tblE.FieldByName('PsrPosRank').AsInteger = 1) then begin
 //         sBaseKey := sBaseKey + '-LL-' + sm.Str(1, 1);
 //      end else begin
 //         sBaseKey := sBaseKey + '-L-' + sm.Str(1, 1);

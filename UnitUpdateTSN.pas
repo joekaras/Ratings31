@@ -42,7 +42,7 @@ var
    iFPPos: integer;
 
    iRaceNbr: integer;
-  
+
    sFinishPos: string;
    sOfficialFinishPos: string;
 
@@ -138,7 +138,7 @@ var
    sDate: string;
    sRaceNbr: string;
    sTSNPowerRating: string;
-
+   sTSNBackClass: string;
    sBestTSNSpeedFastTrack: string;
    sBestTSNSpeedTurf: string;
    sBestTSNSpeedOffTrack: string;
@@ -533,6 +533,9 @@ begin
             sTSNPowerRating := StringListTrim(lstS[251 - 1]);
             sTSNLastClassRating := StringListTrim(lstS[836 - 1]);
             sTSNAvgClassRating := StringListTrim(lstS[1146 - 1]);
+
+
+            sTSNBackClass := StringListTrim(lstS[1375 - 1]);
 
             sBestTSNSpeedFastTrack := StringListTrim(lstS[1178 - 1]);
             sBestTSNSpeedTurf := StringListTrim(lstS[1179 - 1]);
@@ -1963,82 +1966,66 @@ begin
                      on E: Exception do hLog.AddToLog(E.Message, msevException);
                   end;
 
-                  //   if (fValueROICnt > 0) then begin
-      //                  tblE.FieldByName('ValueROI').AsFloat := fValueROI / fValueROICnt;
-      //                  tblE.FieldByName('ValueROICnt').AsFloat := fValueROICnt;
-      //               end;
 
-                //  tblE.FieldByName('TotalTrn30Starts').AsFloat := fTrainerStsCurrentMeet;
-//                  tblE.FieldByName('TotalTrn30Wins').AsFloat := fTrainerWinsCurrentMeet;
-//                  tblE.FieldByName('TotalTrn30WinPct').AsFloat := fTrainerWinPctCurrentMeet;
-//
-//                  tblE.FieldByName('TotalJky30Starts').AsFloat := fJockeyStsCurrentMeet;
-//                  tblE.FieldByName('TotalJky30Wins').AsFloat := fJockeyWinsCurrentMeet;
-//                  tblE.FieldByName('TotalJky30WinPct').AsFloat := fJockeyWinPctCurrentMeet;
-//
-//                  tblE.FieldByName('TotalJkyStarts').AsFloat := fTotalJkyStarts;
-//                  tblE.FieldByName('TotalJkyWins').AsFloat := fTotalJkyWins;
-//                  tblE.FieldByName('TotalJkyWinPct').AsFloat := fTotalJkyWinPct;
-//
-//                  tblE.FieldByName('TotalJkyDaysStarts').AsFloat := fTotalJkyStarts;
-//                  tblE.FieldByName('TotalJkyDaysWins').AsFloat := fTotalJkyWins;
-//                  tblE.FieldByName('TotalJkyDaysWinPct').AsFloat := fTotalJkyWinPct;
-//
-//                  fjockeyDistanceOnTurfStarts := atof(StringListTrim(lstS[1368 - 1]));
-//                  fjockeyDistanceOnTurfWins := atof(StringListTrim(lstS[1369 - 1]));
-//                  if (fjockeyDistanceOnTurfStarts > 0) then begin
-//                     fjockeyDistanceOnTurfWinPct := (fjockeyDistanceOnTurfWins / fjockeyDistanceOnTurfStarts) * 100;
-//                  end else begin
-//                     fjockeyDistanceOnTurfWinPct := 0;
-//                  end;
-//                  tblE.FieldByName('TotalJkyTurfStarts').AsFloat := fjockeyDistanceOnTurfStarts;
-//                  tblE.FieldByName('TotalJkyTurfWins').AsFloat := fjockeyDistanceOnTurfWins;
-//                  tblE.FieldByName('TotalJkyTurfWinPct').AsFloat := fjockeyDistanceOnTurfWinPct;
-//
-//                  tblE.FieldByName('TotalJkyOddsStarts').AsFloat := fTotalJkyStarts;
-//                  tblE.FieldByName('TotalJkyOddsWins').AsFloat := fTotalJkyWins;
-//                  tblE.FieldByName('TotalJkyOddsWinPct').AsFloat := fTotalJkyWinPct;
-//
-//
-//                  tblE.FieldByName('TotalTrnStarts').AsFloat := fTotalTrnStarts;
-//                  tblE.FieldByName('TotalTrnWins').AsFloat := fTotalTrnWins;
-//                  tblE.FieldByName('TotalTrnWinPct').AsFloat := fTotalTrnWinPct;
-//
-//                  tblE.FieldByName('TotalTrnOddsStarts').AsFloat := fTotalTrnStarts;
-//                  tblE.FieldByName('TotalTrnOddsWins').AsFloat := fTotalTrnWins;
-//                  tblE.FieldByName('TotalTrnOddsWinPct').AsFloat := fTotalTrnWinPct;
-//
-//                  tblE.FieldByName('TCPlusMinus').AsInteger := iTCPlusMinus;
+                  sDirtPedigreeRating := FastReplace(sDirtPedigreeRating, '*', '', True);
+                  sDirtPedigreeRating := FastReplace(sDirtPedigreeRating, '?', '', True);
+                  tblE.FieldByName('ClassRating').AsFloat := atof(sDirtPedigreeRating);
+                  if (tblE.FieldByName('ClassRating').AsInteger = 9999) then begin
+                     tblE.FieldByName('ClassRating').AsFloat := 0;
+                  end;
 
-                    tblE.FieldByName('PSR').AsFloat := tblE.FieldByName('Power').AsFloat;
-                    tblE.FieldByName('Power').AsFloat := atof(sTSNPowerRating);
+                  sMudPedigreeRating := FastReplace(sMudPedigreeRating, '*', '', True);
+                  sMudPedigreeRating := FastReplace(sMudPedigreeRating, '?', '', True);
+                  tblE.FieldByName('MudRating').AsFloat := atof(sMudPedigreeRating);
+                  if (tblE.FieldByName('MudRating').AsInteger = 9999) then begin
+                     tblE.FieldByName('MudRating').AsFloat := 0;
+                  end;
 
-                //  tblE.FieldByName('LastSpeed').AsInteger := atoi(sLastSpeedRating);
+                  sTurfPedigreeRating := FastReplace(sTurfPedigreeRating, '*', '', True);
+                  sTurfPedigreeRating := FastReplace(sTurfPedigreeRating, '?', '', True);
+                  tblE.FieldByName('TurfRating').AsFloat := atof(sTurfPedigreeRating);
+                  if (tblE.FieldByName('TurfRating').AsInteger = 9999) then begin
+                     tblE.FieldByName('TurfRating').AsFloat := 0;
+                  end;
 
-                 //// tblE.FieldByName('BackSpeed').AsInteger := 0;
-//                  if (tblR.FieldByName('Surface').AsString = 'T') then begin
-//                     tblE.FieldByName('BackSpeed').AsInteger := atoi(sBestTSNSpeedTurf);
-//                  end;
-//
-//                  if (tblR.FieldByName('Surface').AsString <> 'T') then begin
-//                     if atoi(sBestTSNSpeedMostRecentYr) > atoi(sBestTSNSpeed2ndMostRecentYr) then begin
-//                        tblE.FieldByName('BackSpeed').AsInteger := atoi(sBestTSNSpeedMostRecentYr);
-//                     end else begin
-//                        tblE.FieldByName('BackSpeed').AsInteger := atoi(sBestTSNSpeed2ndMostRecentYr);
-//                     end;
-//                  end;
-                  // tblE.FieldByName('BackSpeed').AsInteger := 0;
-            //                  if (tblR.FieldByName('Surface').AsString = 'T') then begin
-            //                     tblE.FieldByName('BackSpeed').AsInteger := atoi(sBestTSNSpeedTurf);
-            //                  end;
-            //
-            //                  if (tblR.FieldByName('Surface').AsString <> 'T') then begin
-            //                     if atoi(sBestTSNSpeedMostRecentYr) > atoi(sBestTSNSpeed2ndMostRecentYr) then begin
-            //                        tblE.FieldByName('BackSpeed').AsInteger := atoi(sBestTSNSpeedMostRecentYr);
-            //                     end else begin
-            //                        tblE.FieldByName('BackSpeed').AsInteger := atoi(sBestTSNSpeed2ndMostRecentYr);
-            //                     end;
-            //                  end;
+                  sDistPedigreeRating := FastReplace(sDistPedigreeRating, '*', '', True);
+                  sDistPedigreeRating := FastReplace(sDistPedigreeRating, '?', '', True);
+                  tblE.FieldByName('DistanceRating').AsFloat := atof(sDistPedigreeRating);
+                  if (tblE.FieldByName('DistanceRating').AsInteger = 9999) then begin
+                     tblE.FieldByName('DistanceRating').AsFloat := 0;
+                  end;
+
+//                  tblE.FieldByName('PSR').AsFloat := tblE.FieldByName('Power').AsFloat;
+                  tblE.FieldByName('Power').AsFloat := atof(sTSNPowerRating);
+
+                  tblE.FieldByName('AvgClass').AsFloat := atof(sTSNAvgClassRating);
+                  tblE.FieldByName('BackClass').AsFloat := atof(sTSNBackClass);
+                  //  tblE.FieldByName('LastSpeed').AsInteger := atoi(sLastSpeedRating);
+
+                   //// tblE.FieldByName('BackSpeed').AsInteger := 0;
+  //                  if (tblR.FieldByName('Surface').AsString = 'T') then begin
+  //                     tblE.FieldByName('BackSpeed').AsInteger := atoi(sBestTSNSpeedTurf);
+  //                  end;
+  //
+  //                  if (tblR.FieldByName('Surface').AsString <> 'T') then begin
+  //                     if atoi(sBestTSNSpeedMostRecentYr) > atoi(sBestTSNSpeed2ndMostRecentYr) then begin
+  //                        tblE.FieldByName('BackSpeed').AsInteger := atoi(sBestTSNSpeedMostRecentYr);
+  //                     end else begin
+  //                        tblE.FieldByName('BackSpeed').AsInteger := atoi(sBestTSNSpeed2ndMostRecentYr);
+  //                     end;
+  //                  end;
+                    // tblE.FieldByName('BackSpeed').AsInteger := 0;
+              //                  if (tblR.FieldByName('Surface').AsString = 'T') then begin
+              //                     tblE.FieldByName('BackSpeed').AsInteger := atoi(sBestTSNSpeedTurf);
+              //                  end;
+              //
+              //                  if (tblR.FieldByName('Surface').AsString <> 'T') then begin
+              //                     if atoi(sBestTSNSpeedMostRecentYr) > atoi(sBestTSNSpeed2ndMostRecentYr) then begin
+              //                        tblE.FieldByName('BackSpeed').AsInteger := atoi(sBestTSNSpeedMostRecentYr);
+              //                     end else begin
+              //                        tblE.FieldByName('BackSpeed').AsInteger := atoi(sBestTSNSpeed2ndMostRecentYr);
+              //                     end;
+              //                  end;
 
                   tblE.FieldByName('QSP1stCall').AsInteger := atoi(sEarlySpeedPoints);
                   tblE.FieldByName('QSP1stCallRunStyle').AsString := sTSNRunStyle;
@@ -2046,72 +2033,72 @@ begin
                   tblE.FieldByName('QSP2ndCall').AsInteger := atoi(sEarlySpeedPoints);
                   tblE.FieldByName('QSP2ndCallRunStyle').AsString := sTSNRunStyle;
 
-               //   tblE.FieldByName('EarlyPacePos').AsFloat := fEarlyPacePosH;
-                //  tblE.FieldByName('MiddlePacePos').AsFloat := fMiddlePacePosH;
-                  tblE.FieldByName('LatePacePos').AsFloat := fLatePacePosH;
-                  //tblE.FieldByName('FinishPacePos').AsFloat := fFinishPacePosH;
+                  //   tblE.FieldByName('EarlyPacePos').AsFloat := fEarlyPacePosH;
+                   //  tblE.FieldByName('MiddlePacePos').AsFloat := fMiddlePacePosH;
+                   //  tblE.FieldByName('LatePacePos').AsFloat := fLatePacePosH;
+                     //tblE.FieldByName('FinishPacePos').AsFloat := fFinishPacePosH;
 
-               //   tblE.FieldByName('EarlyPace').AsFloat := fEarlyPaceH;
-              //    tblE.FieldByName('MiddlePace').AsFloat := fMiddlePaceH;
+                  //   tblE.FieldByName('EarlyPace').AsFloat := fEarlyPaceH;
+                 //    tblE.FieldByName('MiddlePace').AsFloat := fMiddlePaceH;
                   tblE.FieldByName('LatePace').AsFloat := fLatePaceH * 2;
 
 
-             //     if (tblE.FieldByName('DistanceInFurlongs').AsFloat < 6.0) then begin
-//                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat;
-//                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat;
-//                  end;
-//
-//
-//                  if (tblE.FieldByName('IsFirstTimeJuice').AsBoolean = True) then begin
-//                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 1;
-//                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 1;
-//                     //tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat;
-//
-//                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
-//                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
-//                     //tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat;
-//                 end;
-//
-//                  if (tblE.FieldByName('IsBlinkersOn').AsBoolean = True) then begin
-//                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 2;
-//                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 2;
-//                     //tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat;
-//
-//                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
-//                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
-//                     //tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat;
-//                  end;
-//
-//                  if (tblE.FieldByName('IsBlinkersOff').AsBoolean = True) then begin
-//                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat - 1;
-//                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat - 1;
-//                     tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat + 1;
-//
-//                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
-//                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
-//                     tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat -0.9;
-//                  end;
-//
-//                  if (tblE.FieldByName('LifeStarts').AsInteger = 1) then begin
-//                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 3;
-//                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 3;
-//                     tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat + 2;
-//
-//                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
-//                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
-//                     tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat -0.9;
-//                  end;
-//
-//                  if (tblE.FieldByName('LifeStarts').AsInteger = 2) then begin
-//                     //tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 3;
-//                     //tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 3;
-//                     tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat + 1;
-//
-//                     //tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
-//                     //tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
-//                     tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat -0.9;
-//                  end;
-                  
+                  //     if (tblE.FieldByName('DistanceInFurlongs').AsFloat < 6.0) then begin
+     //                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat;
+     //                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat;
+     //                  end;
+     //
+     //
+     //                  if (tblE.FieldByName('IsFirstTimeJuice').AsBoolean = True) then begin
+     //                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 1;
+     //                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 1;
+     //                     //tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat;
+     //
+     //                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
+     //                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
+     //                     //tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat;
+     //                 end;
+     //
+     //                  if (tblE.FieldByName('IsBlinkersOn').AsBoolean = True) then begin
+     //                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 2;
+     //                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 2;
+     //                     //tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat;
+     //
+     //                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
+     //                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
+     //                     //tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat;
+     //                  end;
+     //
+     //                  if (tblE.FieldByName('IsBlinkersOff').AsBoolean = True) then begin
+     //                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat - 1;
+     //                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat - 1;
+     //                     tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat + 1;
+     //
+     //                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
+     //                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
+     //                     tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat -0.9;
+     //                  end;
+     //
+     //                  if (tblE.FieldByName('LifeStarts').AsInteger = 1) then begin
+     //                     tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 3;
+     //                     tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 3;
+     //                     tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat + 2;
+     //
+     //                     tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
+     //                     tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
+     //                     tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat -0.9;
+     //                  end;
+     //
+     //                  if (tblE.FieldByName('LifeStarts').AsInteger = 2) then begin
+     //                     //tblE.FieldByName('EarlyPace').AsFloat := tblE.FieldByName('EarlyPace').AsFloat + 3;
+     //                     //tblE.FieldByName('MiddlePace').AsFloat := tblE.FieldByName('MiddlePace').AsFloat + 3;
+     //                     tblE.FieldByName('LatePace').AsFloat := tblE.FieldByName('LatePace').AsFloat + 1;
+     //
+     //                     //tblE.FieldByName('EarlyPacePos').AsFloat := tblE.FieldByName('EarlyPacePos').AsFloat - 0.9;
+     //                     //tblE.FieldByName('MiddlePacePos').AsFloat := tblE.FieldByName('MiddlePacePos').AsFloat - 0.9;
+     //                     tblE.FieldByName('LatePacePos').AsFloat := tblE.FieldByName('LatePacePos').AsFloat -0.9;
+     //                  end;
+
 
                   if (tblR.FieldByName('Surface').AsString <> 'T') then begin
                      tblTC.IndexName := '';
@@ -2141,59 +2128,59 @@ begin
 
 
 
-               //   if (tblE.FieldByName('DaysLast').AsInteger > 90) then begin
-//                     tblTC.IndexName := '';
-//                     tblTC.SetKey();
-//                     tblTC.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
-//                     tblTC.FieldByName('Category').AsString := '90+ days away';
-//                     if (tblTC.GotoKey()) then begin
-//                        tblE.FieldByName('TotalTrn46To120Starts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
-//                        tblE.FieldByName('TotalTrn46To120WinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
-//                        tblE.FieldByName('TrnTodayStarts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
-//                        tblE.FieldByName('TrnTodayWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
-//                     end;
-//                  end;
+                  //   if (tblE.FieldByName('DaysLast').AsInteger > 90) then begin
+   //                     tblTC.IndexName := '';
+   //                     tblTC.SetKey();
+   //                     tblTC.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
+   //                     tblTC.FieldByName('Category').AsString := '90+ days away';
+   //                     if (tblTC.GotoKey()) then begin
+   //                        tblE.FieldByName('TotalTrn46To120Starts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
+   //                        tblE.FieldByName('TotalTrn46To120WinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
+   //                        tblE.FieldByName('TrnTodayStarts').AsInteger := tblTC.FieldByName('Starts').AsInteger;
+   //                        tblE.FieldByName('TrnTodayWinPct').AsFloat := tblTC.FieldByName('WinPct').AsFloat;
+   //                     end;
+   //                  end;
 
-               //   //
-//                  tblTJSummary.IndexName := '';
-//                  tblTJSummary.SetKey();
-//                  tblTJSummary.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
-//                  tblTJSummary.FieldByName('Jockey').Value := tblE.FieldByName('Jockey').AsString;
-//                  if (tblTJSummary.GotoKey()) then begin
-//                     tblE.FieldByName('TotalTrnJkyStarts').AsInteger := tblTJSummary.FieldByName('Starts').AsInteger;
-//                     tblE.FieldByName('TotalTrnJkyWinPct').AsFloat := tblTJSummary.FieldByName('WinPct').AsFloat;
-//                  end;
-//
-//                  //
-//                  tblTOSummary.IndexName := '';
-//                  tblTOSummary.SetKey();
-//                  tblTOSummary.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
-//                  tblTOSummary.FieldByName('Owner').Value := tblE.FieldByName('Owner').AsString;
-//                  if (tblTOSummary.GotoKey()) then begin
-//                     tblE.FieldByName('TotalTrnOwnStarts').AsInteger := tblTOSummary.FieldByName('Starts').AsInteger;
-//                     tblE.FieldByName('TotalTrnOwnWinPct').AsFloat := tblTOSummary.FieldByName('WinPct').AsFloat;
-//                  end;
-
-
-
-                  //if (tblE.FieldByName('TotalTrnJkyStarts').AsFloat > 4) then begin
-//                     tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TotalTrnJkyWinPct').AsFloat;
-//                  end else begin
-//                     tblE.FieldByName('TrainerJockeyRating').AsFloat := 0;
-//                  end;
+                  //   //
+   //                  tblTJSummary.IndexName := '';
+   //                  tblTJSummary.SetKey();
+   //                  tblTJSummary.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
+   //                  tblTJSummary.FieldByName('Jockey').Value := tblE.FieldByName('Jockey').AsString;
+   //                  if (tblTJSummary.GotoKey()) then begin
+   //                     tblE.FieldByName('TotalTrnJkyStarts').AsInteger := tblTJSummary.FieldByName('Starts').AsInteger;
+   //                     tblE.FieldByName('TotalTrnJkyWinPct').AsFloat := tblTJSummary.FieldByName('WinPct').AsFloat;
+   //                  end;
+   //
+   //                  //
+   //                  tblTOSummary.IndexName := '';
+   //                  tblTOSummary.SetKey();
+   //                  tblTOSummary.FieldByName('Trainer').AsString := tblE.FieldByName('Trainer').AsString;
+   //                  tblTOSummary.FieldByName('Owner').Value := tblE.FieldByName('Owner').AsString;
+   //                  if (tblTOSummary.GotoKey()) then begin
+   //                     tblE.FieldByName('TotalTrnOwnStarts').AsInteger := tblTOSummary.FieldByName('Starts').AsInteger;
+   //                     tblE.FieldByName('TotalTrnOwnWinPct').AsFloat := tblTOSummary.FieldByName('WinPct').AsFloat;
+   //                  end;
 
 
-//
 
-                  //tblE.FieldByName('TrainerRating').AsFloat := tblE.FieldByName('TrnTodayWinPct').AsFloat;
+                     //if (tblE.FieldByName('TotalTrnJkyStarts').AsFloat > 4) then begin
+   //                     tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TotalTrnJkyWinPct').AsFloat;
+   //                  end else begin
+   //                     tblE.FieldByName('TrainerJockeyRating').AsFloat := 0;
+   //                  end;
 
-                  //tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TJ365WinPct').AsInteger;
 
-                  //tblE.FieldByName('JockeyRating').AsFloat := tblE.FieldByName('TotalJkyWinPct').AsFloat;
+   //
 
-                  //tblE.FieldByName('OwnerRating').AsFloat := tblE.FieldByName('TotalOwnWinPct').AsFloat;
+                     //tblE.FieldByName('TrainerRating').AsFloat := tblE.FieldByName('TrnTodayWinPct').AsFloat;
 
-                //  tblE.FieldByName('Surface').AsString := tblR.FieldByName('Surface').AsString;
+                     //tblE.FieldByName('TrainerJockeyRating').AsFloat := tblE.FieldByName('TJ365WinPct').AsInteger;
+
+                     //tblE.FieldByName('JockeyRating').AsFloat := tblE.FieldByName('TotalJkyWinPct').AsFloat;
+
+                     //tblE.FieldByName('OwnerRating').AsFloat := tblE.FieldByName('TotalOwnWinPct').AsFloat;
+
+                   //  tblE.FieldByName('Surface').AsString := tblR.FieldByName('Surface').AsString;
                   tblE.Post();
                   tblE.FlushBuffers();
                end;

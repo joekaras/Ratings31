@@ -161,6 +161,9 @@ var
       tblHH.FieldByName('Power').Value := tblE.FieldByName('Power').Value;
       tblHH.FieldByName('PowerRank').Value := tblE.FieldByName('PowerRank').Value;
 
+      tblHH.FieldByName('Psr').Value := tblE.FieldByName('Psr').Value;
+      tblHH.FieldByName('PsrRank').Value := tblE.FieldByName('PsrRank').Value;
+
       tblHH.FieldByName('BackSpeed').Value := tblE.FieldByName('BackSpeed').Value;
       tblHH.FieldByName('BackSpeedRank').Value := tblE.FieldByName('BackSpeedRank').Value;
 
